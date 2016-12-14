@@ -1,0 +1,15 @@
+### classi Java
+*.class
+
+### Apple
+.DS_store
+
+### Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+### LaTeX
+*.log
+*.aux
+*.out
+*.toc
