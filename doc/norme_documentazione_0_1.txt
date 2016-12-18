@@ -1,0 +1,12 @@
+Norme sulla documentazione (o almeno... sulla documentazione che presenteremo):
+
+- ogni documento dev'essere in formato .tex (esportabile in .pdf A4)
+- ogni documento, anche se breve, deve avere una pagina di copertina con: titolo del documento, identificatore univoco (che specifichi anche la versione), nome del nostro gruppo, nome del progetto, versione, data, autori, revisori, lista di distribuzione... (magari con il nostro logo)
+- corrispondenza biunivoca tra l'identificatore del documento e il titolo del file .tex (?)
+- ogni pagina deve essere numerata e deve riportare il titolo del documento e del capitolo (e anche, magari, il nome/logo del gruppo e il nome del progetto)
+- dev'esserci un'unica struttura di sezioni, sottosezioni e paragrafi, comune a tutti i documenti [dello stesso tipo (?)]
+- i documenti lunghi o troppo tecnici devono riportare, all'inizio, un indice dei contenuti
+- nel malaugurato caso che la documentazione debba essere stampata in bianco e nero, bisogna trovare un modo per tradurre in simboli i colori dei diagrammi
+- all'interno di un documento, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata in modo da far capire che si trova nel glossario
+- mantenere i documenti in una struttura a directory che sia ben organizzata ma possibilmente non troppo profonda
+- ogni documento potrebbe includere un "diario delle modifiche" che spiega i cambiamenti rispetto alla versione precedente (?)
