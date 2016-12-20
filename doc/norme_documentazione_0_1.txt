@@ -1,5 +1,6 @@
 Norme sulla documentazione (o almeno... sulla documentazione che presenteremo):
 
+- il nome di un file non deve contenere spazi
 - ogni documento dev'essere in formato .tex (esportabile in .pdf A4)
 - ogni documento, anche se breve, deve avere una pagina di copertina con: titolo del documento, identificatore univoco (che specifichi anche la versione), nome del nostro gruppo, nome del progetto, versione, data, autori, revisori, lista di distribuzione... (magari con il nostro logo)
 - corrispondenza biunivoca tra l'identificatore del documento e il titolo del file .tex (?)
