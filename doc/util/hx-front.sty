@@ -11,6 +11,7 @@
 \newcommand*{\project}[1]{\gdef\@project{#1}}
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
 \newcommand*{\dest}[1]{\gdef\@dest{#1}}
+\newcommand*{\version}[1]{\gdef\@vers{#1}}
 \renewcommand*{\maketitle}{
 	\begin{titlepage}
 		\centering
@@ -23,7 +24,7 @@
 		{\huge \bfseries \@title \unskip \strut \par}
 		\vfill
 		\begin{tabular}{r | l}
-			\textbf{Versione}  & 0.1 \\
+			\textbf{Versione}  & \@vers  \\
 			\textbf{Ultima modifica}  & \@date \\
 			\textbf{Redazione} & \@author \\
 			\textbf{Verifica}  & \@supervisor \\
