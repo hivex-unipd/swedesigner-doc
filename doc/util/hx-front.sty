@@ -8,24 +8,25 @@
 %    \title{...}
 
 \usepackage{graphicx}
-\newcommand*{\vers}[1]{\gdef\@vers{#1}}
 \newcommand*{\creaz}[1]{\gdef\@creaz{#1}}
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
 \newcommand*{\uso}[1]{\gdef\@uso{#1}}
 \newcommand*{\dest}[1]{\gdef\@dest{#1}}
+\newcommand*{\version}[1]{\gdef\@vers{#1}}
 \renewcommand*{\maketitle}{
 	\begin{titlepage}
 		\centering
-		{\includegraphics[width=3cm]{util/unipd_logo}\par}
+		{\includegraphics[width=4cm]{util/unipd_logo}\par}
 		\vspace{1cm}
-		{\scshape\LARGE Gruppo Hivex \par}
+		{\scshape\LARGE Gruppo \hx \par}
 		\vspace{1cm}
-		{\scshape\Large SWEDesigner \unskip\strut\par}
+		{\scshape \Large \proj \unskip \strut \par}
 		\vspace{1.5cm}
-		{\huge\bfseries\@title v\@vers \unskip\strut\par}
+		{\huge \bfseries \@title \unskip \strut \par}
 		\vfill
 		\begin{tabular}{r | l}
 			\textbf{Data di creazione}  & \@creaz \\
+			\textbf{Versione}  & \@vers  \\
 			\textbf{Ultima modifica}  & \@date \\
 			\textbf{Redazione} & \@author \\
 			\textbf{Verifica}  & \@supervisor \\
@@ -34,6 +35,6 @@
 		\end{tabular}
 		\vfill
 
-		{\large \@date\par}
+		{\large \@date \par}
 	\end{titlepage}
 }

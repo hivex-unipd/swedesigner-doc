@@ -1,0 +1,96 @@
+% norme di progetto
+% da compilare con il comando pdflatex Norme_di_progetto_v_x.x.x.tex
+
+\input {util/hx-ambiente}
+\version{0.0.1}
+\creaz{24 dicembre 2016}
+\author{\GG, \MM}
+\supervisor{\LB, \AZ}
+\uso{interno}
+\dest{Tutti i membri del gruppo}
+\title{Norme di progetto}
+
+\renewcommand{\arraystretch}{1.5}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\begin{document}
+\maketitle
+\section*{Registro delle modifiche}
+\begin{figure}[htb]
+	\centering
+	\begin{tabular}{cp{3cm}cp{3cm}}
+	Versione & Autore e Ruolo       & Data       & Descrizione \\ \hline
+	0.0.2    & {\GG} Amministratore & 25/12/2016 & Iniziata la stesura dello scopo del documento e abbozzate alcune norme sulla documentazione \\ \hline
+	0.0.1    & {\MM} Amministratore & 24/12/2016 & Stesura scheletro \\ \hline
+	\end{tabular}
+\end{figure}
+\tableofcontents
+
+\section{Introduzione}
+
+\subsection{Scopo del documento}
+Questo documento (interno al gruppo) regolamenta i processi del progetto didattico e va quindi letto da ciascun membro del gruppo. Le convenzioni qui prescritte servono a:
+\begin{itemize}
+	\item garantire ordine all'interno dei documenti e delle varie parti della configurazione del prodotto;
+	\item mantenere coerenza nelle notazioni e nelle procedure;
+	\item minimizzare i conflitti tra i vari ruoli;
+	\item garantire che l'infrastruttura di lavoro sia il più possibile semplice e gestibile --- quindi fruibile;
+\end{itemize}
+
+\subsection{Scopo del prodotto}
+% [macro da utilizzare in tutti documenti, come proposto da Lucab]
+
+	\subsection{Glossario}
+	\subsection{Riferimenti}
+		\subsubsection{Normativi}
+\section{Processi di sviluppo}
+	\subsection{Studio di fattibilità}
+	\subsection{Analisi dei requisiti}
+		\subsubsection{Requisiti}
+		\subsubsection{Casi d'uso}
+	\subsection{Progettazione}
+	\subsection{Codifica}
+		\subsubsection{Formattazione del codice}
+	\subsection{Strumenti}
+		\subsubsection{PragmaDB}
+		\subsubsection{Astah}
+		\subsubsection{Ide ancora da scegliere}
+	\subsection{Tecnologie utilizzate}
+\section{Processi di supporto}
+
+\subsection{Processi di documentazione}
+Bozza.
+\begin{itemize}
+	\item il nome di un file non deve contenere spazi 
+	\item ogni documento approvato dev'essere in formato .tex (esportabile in .pdf A4)
+	\item ogni documento, anche se breve, deve avere una pagina di copertina con: titolo del documento, identificatore univoco (che specifichi anche la versione), nome del nostro gruppo, nome del progetto, versione, data, autori, revisori, lista di distribuzione... (magari con il nostro logo)
+	\item corrispondenza biunivoca tra l'identificatore del documento e il titolo del file .tex (?)
+	\item ogni pagina deve essere numerata e deve riportare il titolo del documento e del capitolo (e anche, magari, il nome/logo del gruppo e il nome del progetto)
+	\item dev'esserci un'unica struttura di sezioni, sottosezioni e paragrafi, comune a tutti i documenti [dello stesso tipo (?)]
+	\item i documenti lunghi o troppo tecnici devono riportare, all'inizio, un indice dei contenuti
+	\item nel malaugurato caso che la documentazione debba essere stampata in bianco e nero, bisogna trovare un modo per tradurre in simboli i colori dei diagrammi
+	\item all'interno di un documento, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata in modo da far capire che si trova nel glossario
+	\item mantenere i documenti in una struttura a directory che sia ben organizzata ma possibilmente non troppo profonda
+	\item ogni documento potrebbe includere un "diario delle modifiche" che spiega i cambiamenti rispetto alla versione precedente (?)
+	\item il numero di versionamento si compone di tre numeri [...] (approvazione, revisione, modifica)
+\end{itemize}
+
+		\subsubsection{Strumenti}
+		\subsubsection{Ciclo di vita di un documento}
+		\subsubsection{Documenti finali}
+			\paragraph{Studio di fattibilità}
+			\paragraph{Norme di progetto}
+			\paragraph{Piano di progetto}
+			\paragraph{Piano di qualifica}
+			\paragraph{Analisi dei requisiti}
+			\paragraph{Specifica tecnica}
+			\paragraph{Definizione di prodotto}
+			\paragraph{Glossario}
+			\paragraph{Manuale utente}
+			\paragraph{Verbali}
+	\subsection{Processi di verifica}
+	\subsection{Strumenti}
+\section{Processi organizzativi}
+	\subsection{Strumenti}
+\end{document}
