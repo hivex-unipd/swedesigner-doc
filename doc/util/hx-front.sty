@@ -8,25 +8,28 @@
 %    \title{...}
 
 \usepackage{graphicx}
-\newcommand*{\project}[1]{\gdef\@project{#1}}
+\newcommand*{\vers}[1]{\gdef\@vers{#1}}
+\newcommand*{\creaz}[1]{\gdef\@creaz{#1}}
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\uso}[1]{\gdef\@uso{#1}}
 \newcommand*{\dest}[1]{\gdef\@dest{#1}}
 \renewcommand*{\maketitle}{
 	\begin{titlepage}
-		{\raggedleft\includegraphics[width=3cm]{util/unipd_logo}\par}
-		\vspace{1cm}
 		\centering
+		{\includegraphics[width=3cm]{util/unipd_logo}\par}
+		\vspace{1cm}
 		{\scshape\LARGE Gruppo Hivex \par}
 		\vspace{1cm}
 		{\scshape\Large SWEDesigner \unskip\strut\par}
 		\vspace{1.5cm}
-		{\huge\bfseries\@title\unskip\strut\par}
+		{\huge\bfseries\@title v\@vers \unskip\strut\par}
 		\vfill
 		\begin{tabular}{r | l}
-			\textbf{Versione}  & 0.1 \\
+			\textbf{Data di creazione}  & \@creaz \\
 			\textbf{Ultima modifica}  & \@date \\
 			\textbf{Redazione} & \@author \\
 			\textbf{Verifica}  & \@supervisor \\
+			\textbf{Uso}  & \@uso \\
 			\textbf{Destinatari}  & \@dest \\
 		\end{tabular}
 		\vfill
