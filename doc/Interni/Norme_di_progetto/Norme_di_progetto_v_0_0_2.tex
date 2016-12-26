@@ -31,7 +31,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 \end{itemize}
 
 \subsection{Scopo del prodotto}
-% [macro da utilizzare in tutti documenti, come proposto da Lucab]
+\scopo % da util/hx-macro.sty
 
 	\subsection{Glossario}
 	\subsection{Riferimenti}
@@ -52,21 +52,26 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 \section{Processi di supporto}
 
 \subsection{Processi di documentazione}
-Bozza.
-\begin{itemize}
-	\item il nome di un file non deve contenere spazi 
-	\item ogni documento approvato dev'essere in formato .tex (esportabile in .pdf A4)
-	\item ogni documento, anche se breve, deve avere una pagina di copertina con: titolo del documento, identificatore univoco (che specifichi anche la versione), nome del nostro gruppo, nome del progetto, versione, data, autori, revisori, lista di distribuzione... (magari con il nostro logo)
-	\item corrispondenza biunivoca tra l'identificatore del documento e il titolo del file .tex (?)
-	\item ogni pagina deve essere numerata e deve riportare il titolo del documento e del capitolo (e anche, magari, il nome/logo del gruppo e il nome del progetto)
-	\item dev'esserci un'unica struttura di sezioni, sottosezioni e paragrafi, comune a tutti i documenti [dello stesso tipo (?)]
-	\item i documenti lunghi o troppo tecnici devono riportare, all'inizio, un indice dei contenuti
-	\item nel malaugurato caso che la documentazione debba essere stampata in bianco e nero, bisogna trovare un modo per tradurre in simboli i colori dei diagrammi
-	\item all'interno di un documento, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata in modo da far capire che si trova nel glossario
-	\item mantenere i documenti in una struttura a directory che sia ben organizzata ma possibilmente non troppo profonda
-	\item ogni documento potrebbe includere un "diario delle modifiche" che spiega i cambiamenti rispetto alla versione precedente (?)
-	\item il numero di versionamento si compone di tre numeri [...] (approvazione, revisione, modifica)
-\end{itemize}
+Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto.
+
+Enumeriamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli:
+\begin{enumerate}
+	\item I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultata essere quella in figura [figura...].
+	\item Nome ed estensione dei file sono regolati nel seguente modo:
+	\begin{enumerate}
+		\item Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
+		\item Ogni documento dev'essere in formato \LaTeX (esportabile in PDF su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX.
+		\item Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
+	\end{enumerate}
+	\item Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale.
+	\item Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. % più il nostro logo, magari
+	\item Ogni documento deve includere un “diario delle modifiche” che elenca i cambiamenti che ogni versione ha apportato rispetto alla precedente, assieme all'autore di tali cambiamenti e alla data.
+	\item Ogni pagina dev'essere numerata e deve riportare il titolo del documento e della sezione che ospita. % e magari il nome/logo del gruppo e il nome del progetto
+	\item Dev'esserci un'unica struttura di sezioni, sottosezioni e paragrafi, comune a tutti i documenti dello stesso tipo.
+	\item Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti.
+	\item Andrebbe minimizzato l'uso di colori, al fine di minimizzare le ambiguità nel caso che un documento venga stampato su carta o letto da una persona daltonica.
+	\item All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata in modo da far capire che si trova nel glossario.
+\end{enumerate}
 
 		\subsubsection{Strumenti}
 		\subsubsection{Ciclo di vita di un documento}
