@@ -2,7 +2,9 @@
 % da compilare con il comando pdflatex Interni/Norme_di_progetto/Norme_di_progetto_v_x.x.x.tex
 
 \input {util/hx-ambiente}
-\version{0.0.1}
+\usepackage{hx-macro}
+\usepackage{hx-front}
+\version{0.0.3}
 \creaz{24 dicembre 2016}
 \author{\GG, \MM}
 \supervisor{\LB, \AZ}
@@ -36,19 +38,47 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 	\subsection{Glossario}
 	\subsection{Riferimenti}
 		\subsubsection{Normativi}
+		\begin{itemize}
+		\item ISO/IEC 12207-1995: http://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf
+		\end{itemize}
 \section{Processi di sviluppo}
 	\subsection{Studio di fattibilità}
+	La fase antecedente alla realizzazione del progetto\ped{g} consiste nel fissare delle riunioni in modo che il team\ped{g} possa discutere di esso. Sarà poi compito degli analisti redigere lo \texttt{studio di fattibilità},la cui struttura è specificata a seguire: %inserire struttura studio di fattibilità
 	\subsection{Analisi dei requisiti}
+	Sarà sempre compito degli analisti al termine dello studio di fattibilità di produrre l'\texttt{analisi dei requisiti}.Questo documento conterrà i requisiti raccolti ed i casi uso individuati nelle riunioni svolte.
+	Viene elencata nelle sezioni a seguire la struttura obbligatoria di requisiti e casi d'uso.
 		\subsubsection{Requisiti}
 		\subsubsection{Casi d'uso}
+		Ogni caso d'uso viene identificato nel seguente modo:
+		\centerline{UCx}
+		Ogni macro caso d'uso sarai poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta avere altri figli).
+		Inoltre ogni caso'uso dovrà avere le seguenti proprietà:
+		\begin{itemize}
+		\item Nome che lo identifica;
+		\item Attori coinvolti in esso;
+		\item Descrizione di esso;
+		\item Precondizioni se presenti;
+		\item Postcondizioni se presenti;
+		\item Scenario principale che descrive esso tramite i casi d'uso figli;
+		\item Inclusioni se specificate;
+		\item Estensioni se specificate;
+		\item Scenari alternativi che descrive esse tramite casi d'uso non presenti tra i figli.
+		\end{itemize}
 	\subsection{Progettazione}
+	Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
+	
 	\subsection{Codifica}
 		\subsubsection{Formattazione del codice}
 	\subsection{Strumenti}
 		\subsubsection{PragmaDB}
+		Per tenere traccia dei casi d'uso e dei requisiti il team\ped{g} ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Essa è accessibile via broswer nel server dedicato tramite autenticazione.Inoltre permette l'esportazione in \latex delle tabelle.
 		\subsubsection{Astah}
 		\subsubsection{Ide ancora da scegliere}
 	\subsection{Tecnologie utilizzate}
+	\subsubsection{HTML5}
+	\subsubsection{CSS3}
+	\subsubsection{Javascript}
+	\subsubsection{Java tomcat o node.js}
 \section{Processi di supporto}
 
 \subsection{Processi di documentazione}
