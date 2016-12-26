@@ -1,11 +1,14 @@
-	% Tutti i verbali di riunione
-% da compilare con il comando pdflatex Verbali.tex
+% Tutti i verbali di riunione
+% da compilare con il comando pdflatex Esterni/Verbali/Verbali.tex
 
 \input{util/hx-ambiente}
 
+\version{0.0.2}
+\creaz{1 dicembre 2016}
 \author{\PB}
 \supervisor{\GG}
-\dest{Uso interno}
+\uso{interno}
+\dest{Tutti i membri del gruppo}
 \title{Verbali delle riunioni}
 
 \begin{document}
@@ -20,19 +23,19 @@
 	\item Orario: 13:30 - 15:30;
 	\item Durata: 2 ore;
 	\item Luogo incontro: Aula 1C150 di Torre Archimede; 
-	\item Oggetto: scelta del nome e del logo per il gruppo, scelta del capitolato d' appalto, degli strumenti per l' organizzazione e il versionamento che si andranno a utilizzare e definizione dei ruoli;
+	\item Oggetto: scelta del nome e del logo per il gruppo, scelta del capitolato d' appalto, degli strumenti per l'organizzazione e il versionamento che si andranno a utilizzare e definizione dei ruoli;
 	\item Segretario: \LB; 
 	\item Partecipanti: \AZ, \GG, \LB, \LS, \MM, \PB.
 \end{itemize}
 
 Durante la riunione sono state prese le seguenti decisioni:
-il nome e il logo del gruppo e dopo varie proposte è stato scelto all 'unanimità il nome \textit{Hivex}, dall 'inglese \textit{hive} (la casetta delle api), dato che il nostro gruppo si compone di sei persone tante quanti i lati dell' esagono; inoltre Francis Bacon scriveva, nel \textit{Novum Organum},
+il nome e il logo del gruppo e dopo varie proposte è stato scelto all 'unanimità il nome \textit{Hivex}, dall 'inglese \textit{hive} (la casetta delle api), dato che il nostro gruppo si compone di sei persone tante quanti i lati dell'esagono; inoltre Francis Bacon scriveva, nel \textit{Novum Organum},
 \begin{quote}
 	The men of experiment are like the ant, they only collect and use; the reasoners resemble spiders, who make cobwebs out of their own substance. But the bee takes the middle course, it gathers its material from the flowers of the garden and field, but transforms and digests it by a power of its own.
 \end{quote}
 
-Si è scelto il capitolato C6 “SWEDesigner” proposto dall' azienda \ZU e """”si è discusso su come distribuire i ruoli ai vari componenti del gruppo; questa decisione è stata riportata ed è consultabile nel file Ruoli.txt in Google Drive\ped{G}. “””
-Infine abbiamo scelto gli strumenti che verranno utilizzati per l' organizzazione e il versionamento: più in particolare come strumento di organizzazione abbiamo scelto di utilizzare Asana\ped{G} in quanto offre, per esempio, l' integrazione con Slack\ped{G} e si è reso necessario integrare questo strumento ad Instagantt\ped{G}, allo scopo di visualizzare in maniera immediata tramite diagrammi di Gantt\ped{G} tutti i task inseriti in Asana\ped{G}. Prima di scegliere Asana avevamo rivolto la nostra attenzione a Trello\ped{G} ma durante l' analisi delle features offerte sono sorte varie criticità. Per la comunicazione abbiamo scelto di utilizzare Slack\ped{G}: esso permette la suddivisione in diversi canali e l' integrazione di diversi servizi, come l' interfacciamento ai servizi di Asana\ped{G}. Per quanto riguarda il versionamento, abbiamo scelto di utilizzare  GitHub\ped{G} perchè offre un ottimo servizio gratuitamente.
+Si è scelto il capitolato C6 “SWEDesigner” proposto dall'azienda \ZU e """”si è discusso su come distribuire i ruoli ai vari componenti del gruppo; questa decisione è stata riportata ed è consultabile nel file Ruoli.txt in Google \gloss{Drive}. “””
+Infine abbiamo scelto gli strumenti che verranno utilizzati per l'organizzazione e il versionamento: più in particolare come strumento di organizzazione abbiamo scelto di utilizzare \gloss{Asana} in quanto offre, per esempio, l'integrazione con \gloss{Slack} e si è reso necessario integrare questo strumento ad \gloss{Instagantt}, allo scopo di visualizzare in maniera immediata tramite diagrammi di \gloss{Gantt} tutti i task inseriti in \gloss{Asana}. Prima di scegliere Asana avevamo rivolto la nostra attenzione a \gloss{Trello} ma durante l'analisi delle features offerte sono sorte varie criticità. Per la comunicazione abbiamo scelto di utilizzare \gloss{Slack}: esso permette la suddivisione in diversi canali e l'integrazione di diversi servizi, come l'interfacciamento ai servizi di \gloss{Asana}. Per quanto riguarda il versionamento, abbiamo scelto di utilizzare  \gloss{GitHub} perchè offre un ottimo servizio gratuitamente.
 
 
 
@@ -47,9 +50,9 @@ Infine abbiamo scelto gli strumenti che verranno utilizzati per l' organizzazion
 	\item Partecipanti: \AZ, \GG, \LB, \LS, \MM, \PB.
 \end{itemize}
 
-Durante la riunione si è discusso degli strumenti da utilizzare nel corso del progetto. Alcuni criteri di scelta sono stati: che gli strumenti fossero “standard”; che non fossero eccessivamente complicati da utilizzare né da imparare; che si integrassero il più possibile tra di loro. Per generare la documentazione abbiamo adottato Latex\ped{G}, al fine di ottenere una maggiore automazione e modularità. Per la gestione automatizzata dei requisiti, ci è venuta in aiuto un' interfaccia open-source PHP\ped{G}/MySQLv chiamata “PragmaDB\ped{G}”, ideata da alcuni nostri predecessori. Con Github\ped{G} si integra bene Travis\ped{G} [...] (ant, maven, gradle [...]), [Sonarqube\ped{G}, java\ped{G} o javascript\ped{G}??, javaDoc\ped{G}, IntelliJ IDEA\ped{G}...].
+Durante la riunione si è discusso degli strumenti da utilizzare nel corso del progetto. Alcuni criteri di scelta sono stati: che gli strumenti fossero “standard”; che non fossero eccessivamente complicati da utilizzare né da imparare; che si integrassero il più possibile tra di loro. Per generare la documentazione abbiamo adottato \gloss{Latex}, al fine di ottenere una maggiore automazione e modularità. Per la gestione automatizzata dei requisiti, ci è venuta in aiuto un'interfaccia open-source \gloss{PHP}/\gloss{MySQL} chiamata “\gloss{PragmaDB}”, ideata da alcuni nostri predecessori. Con \gloss{Github} si integra bene \gloss{Travis} [...] (ant, maven, gradle [...]), [\gloss{Sonarqube}, \gloss{java} o \gloss{javascript}??, \gloss{javaDoc}, IntelliJ \gloss{IDEA}...].
 
-Sono state scelte le domande da proporre circa la definizione dei requisiti del progetto. In particolare, è stato pensato di porre alcune domande basilari come la scelta del linguaggio (Java\ped{G} o Javascript\ped{G}) e la scelta della lingua (italiano o inglese); inoltre, sono stati formalizzati i dubbi sorti sulla natura stessa di questo progetto così particolare.
+Sono state scelte le domande da proporre circa la definizione dei requisiti del progetto. In particolare, è stato pensato di porre alcune domande basilari come la scelta del linguaggio (\gloss{Java} o \gloss{Javascript}) e la scelta della lingua (italiano o inglese); inoltre, sono stati formalizzati i dubbi sorti sulla natura stessa di questo progetto così particolare.
 
 
 
@@ -64,7 +67,7 @@ Sono state scelte le domande da proporre circa la definizione dei requisiti del 
 	\item Partecipanti: \GP, \AZ, \GG, \LB, \LS, \MM, \PB.
 \end{itemize}
 
-Durante la riunione sono state discusse alcune scelte prese dal gruppo riguardanti le potenzialità del software\ped{G} e suggerite altre di nuove. Abbiamo compreso che il dominio di programmi software\ped{G} che il nostro editor dovrà modellare dev' essere mirato ad un particolare ambiente applicativo. Sono stati chiariti alcuni dubbi e il proponente ha lasciato ampia libertà sul linguaggio da usare e sulla natura del software (applicazione web o desktop).
+Durante la riunione sono state discusse alcune scelte prese dal gruppo riguardanti le potenzialità del \gloss{software} e suggerite altre di nuove. Abbiamo compreso che il dominio di programmi \gloss{software} che il nostro editor dovrà modellare dev' essere mirato ad un particolare ambiente applicativo. Sono stati chiariti alcuni dubbi e il proponente ha lasciato ampia libertà sul linguaggio da usare e sulla natura del software (applicazione web o desktop).
 
 
 
@@ -76,11 +79,11 @@ Durante la riunione sono state discusse alcune scelte prese dal gruppo riguardan
 	\item Luogo incontro: Aula P4 Paolotti; 
 	\item Oggetto: scelta del dominio applicativo e analisi dei casi d' uso generali;
 	\item Segretario: \PB; 
-	\item Partecipanti: \GP, \AZ, \GG, \LB, \LS, \MM, \PB.
+	\item Partecipanti: \AZ, \GG, \LB, \LS, \MM, \PB.
 \end{itemize}
 
-Durante la riunione è stato scelto di realizzare una webapp con HTML5\ped{G},CSS3\ped{G} e JavaScript per il lato client\ped{G} che genera codice Java\ped{G} e dopo varie proposte il dominio applicativo del software\ped{G} da realizzare è risultato "giochi da tavolo". 
-Sono stati analizzati i casi d' uso generali che hanno fatto sorgere domande esposte il giorno seguente al sig.\GP.
+Durante la riunione è stato scelto di realizzare una webapp con \gloss{HTML5},\gloss{CSS3} e JavaScript per il lato \gloss{client} che genera codice \gloss{Java} e dopo varie proposte il dominio applicativo del \gloss{software} da realizzare è risultato "giochi da tavolo". 
+Sono stati analizzati i casi d' uso generali che hanno fatto sorgere domande esposte il giorno seguente al \GP.
 
 
 
@@ -89,13 +92,13 @@ Sono stati analizzati i casi d' uso generali che hanno fatto sorgere domande esp
 \begin{itemize}
 	\item Orario: 14:30 - 16:00;
 	\item Durata: 1 ore 30 minuti;
-	\item Luogo incontro:\ZU, sede di via Cittadella 7, Padova; 
+	\item Luogo incontro: \ZU, sede di via Cittadella 7, Padova; 
 	\item Oggetto: discussione del capitolato d' appalto;
 	\item Segretario: \AZ; 
 	\item Partecipanti: \GP, \AZ, \GG, \LB, \LS, \MM, \PB.
 \end{itemize}
 
-Durante la riunione è stato chiarito il concetto di stereotipo e dove poter utilizzarlo all' interno del progetto; inoltre è sorta la necessità di dover generare anche l' interfaccia del prodotto (gioco da tavolo) generato dal software\ped{G}. Il diagramma delle attività sarà ispirato al diagramma di Nassi–Shneiderman utilizzando una rappresentazione "a blocchi".
+Durante la riunione è stato chiarito il concetto di stereotipo e dove poter utilizzarlo all'interno del progetto; inoltre è sorta la necessità di dover generare anche l'interfaccia del prodotto (gioco da tavolo) generato dal \gloss{software}. Il diagramma delle attività sarà ispirato al diagramma di Nassi–Shneiderman utilizzando una rappresentazione "a blocchi".
 
 
 
@@ -107,7 +110,7 @@ Durante la riunione è stato chiarito il concetto di stereotipo e dove poter uti
 	\item Luogo incontro: 2AB45 di Torre Archimede; 
 	\item Oggetto: discussione dei casi d' uso;
 	\item Segretario: \PB; 
-	\item Partecipanti: \GP, \AZ, \GG, \LB, \LS, \MM, \PB.
+	\item Partecipanti: \AZ, \GG, \LB, \LS, \MM, \PB.
 \end{itemize}
 
 Durante la riunione sono stati analizzati una parte dei casi d' uso e dei requisiti sorti dalla riunione precedente col proponente.
