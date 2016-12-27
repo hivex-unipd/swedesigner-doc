@@ -37,6 +37,9 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}
 		\end{itemize}
 
+	\subsection{Studio di fattibilità}
+	La fase antecedente alla realizzazione del \gloss{progetto} consiste nel fissare delle riunioni in modo che il team possa discutere di esso. Sarà poi compito degli analisti redigere lo \texttt{studio di fattibilità},la cui struttura è specificata a seguire: %inserire struttura studio di fattibilità
+	\subsection{Analisi dei requisiti}
 \section{Processi primari}
 
 \subsection{Processo di sviluppo}
@@ -50,29 +53,58 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\paragraph{Casi d'uso}
 		Ogni caso d'uso viene identificato nel seguente modo:
 		\centerline{UCx}
-		Ogni macro caso d'uso sarai poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta avere altri figli).
+		Ogni macro caso d'uso sarà poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta avere altri figli).
 		Inoltre ogni caso'uso dovrà avere le seguenti proprietà:
 		\begin{itemize}
-		\item Nome che lo identifica;
-		\item Attori coinvolti in esso;
-		\item Descrizione di esso;
-		\item Precondizioni se presenti;
-		\item Postcondizioni se presenti;
-		\item Scenario principale che descrive esso tramite i casi d'uso figli;
-		\item Inclusioni se specificate;
-		\item Estensioni se specificate;
-		\item Scenari alternativi che descrive esse tramite casi d'uso non presenti tra i figli.
+		\item Nome: Nome identificativo del caso d'uso;
+		\item Attori: attori coinvolti nel caso d'uso;
+		\item Descrizione: Descrizione del caso d'uso;
+		\item Precondizioni: Condizioni da rispettare prima di eseguire il caso d'uso;%facoltative?
+		\item Postcondizioni:  Condizioni da rispettare dopo di eseguire il caso d'uso;%facoltative?
+		\item Scenario principale: descrizione del caso d'uso tramite i casi d'uso figli;
+		\item Inclusioni:Eventuali inclusioni se specificate;
+		\item Estensioni:Eventuali estensioni se specificate;
+		\item Scenari alternativi:descrizione tramite casi d'uso non appartenenti al flusso principale.
 		\end{itemize}
 	\subsubsection{Progettazione}
 	Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
-	
+	La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard uml 2.0:
+	\begin{itemize}
+		\item \gloss{Diagrammi delle classi}:desccrivono i tipi di entità(classi) e le relazioni tra loro.
+		\item \gloss{Diagrammi dei package}:raggruppa un numero di elementi uml in una sola unità di livello più alto.
+		\item \gloss{Diagrammi di attività}:descrive in dettaglio un algoritmo
+		\item \gloss{Diagrammi di sequenza}:descrive uno scenario,dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
+		\end{itemize}
 	\subsubsection{Codifica}
+	Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo stanrd di scrittura e documentazione di esso.
 		\paragraph{Formattazione del codice}
+		Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
+			\begin{itemize}
+				\item i nomi di variabili,classi,funzioni e metodi sono scritti in inglese.
+				\item I nomi composti dovranno avere la prima lettera minuscola e la lettera maiuscola ad ogni iniziale della nuova parloa che compone il nome.
+			\end{itemize}
+		\paragraph{Commenti}
+		Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
+		\begin{itemize}
+			\item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione.
+			\item Ogni commento dovrà essere relativo alla parte di codice interessata.
+			\item Ogni commetno dovrà decrivere in modo breve ma preciso la parte di codice interessata
+		\end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
-		Per tenere traccia dei casi d'uso e dei requisiti il team\ped{g} ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Essa è accessibile via broswer nel server dedicato tramite autenticazione.Inoltre permette l'esportazione in \LaTeX{} delle tabelle.
+		Per tenere traccia dei casi d'uso e dei requisiti il team\ped{g} ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Il programma è accessibile via broswer ed è possibile usarlo collegandosi al server creato dal team tramite autenticazione. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle(requisiti,glossario,...) seguendo le linee guida di struttura descritte in questo documento.
 		\paragraph{Astah}
 		\paragraph{Ide ancora da scegliere}
+	\subsubsection{Tecnologie utilizzate}
+	\paragraph{HTML5}
+	L'\gloss{html5} è un linguaggio di markup utilizzato per strutturare pagine web. Porta con se molte caratteristiche nuove rispetto al suo predecessore volte soprattutto a separare struttra,stile e contenuti,oltre a nuovi elementi che permettono di creare un sito web molto potente.
+	Esso verrà usato per la creazione della parte parte client del programma.
+	\paragraph{CSS3}
+	\gloss{Css3} è un linguaggio usato per la formattazione di documenti \gloss{html} e \gloss{xml}. Esso consente di definire l'aspetto e la formattazione della pagina. Viene utilizzato nella parte client per arricchire l'aspetto dell'applicativo client.
+	\paragraph{Javascript}
+	\gloss{Javascript} è un linguaggio orientato agli oggetti e agli eventi utilizzato comunemente per la parte cleint di un sito web. Esso permette di aggiungere effetti dinamici interattivi in base a eventi.
+	Viene utilizzato nella parte client per poter avere un edito interattivo utilizzabile.%da riscrivere quest'ultima frase 
+	\paragraph{Java tomcat o node.js}
 
 \subsection{Processo di fornitura}
 
