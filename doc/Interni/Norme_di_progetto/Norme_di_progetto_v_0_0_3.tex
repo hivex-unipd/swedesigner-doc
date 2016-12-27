@@ -1,7 +1,7 @@
 % norme di progetto
-% da compilare con il comando pdflatex Interni/Norme_di_progetto/Norme_di_progetto_v_x.x.x.tex
+% da compilare con il comando pdflatex Norme_di_progetto_v_x.x.x.tex
 
-\input {../../util/hx-ambiente}
+\input{../../util/hx-ambiente}
 
 \version{0.0.3}
 \creaz{24 dicembre 2016}
@@ -10,10 +10,6 @@
 \uso{interno}
 \dest{Tutti i membri del gruppo}
 \title{Norme di progetto}
-
-\renewcommand{\arraystretch}{1.5}
-\setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4}
 
 \begin{document}
 \maketitle
@@ -32,13 +28,13 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 \end{itemize}
 
 \subsection{Scopo del prodotto}
-\scopo % da util/hx-macro.sty
+\scopo % da ../../util/hx-macro.sty
 
 	\subsection{Glossario}
 	\subsection{Riferimenti}
 		\subsubsection{Normativi}
 		\begin{itemize}
-		\item ISO/IEC 12207-1995: http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO\_12207-1995.pdf
+		\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}
 		\end{itemize}
 \section{Processo di sviluppo}
 
@@ -94,9 +90,9 @@ Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare
 \paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
 \paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale.
 
-\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve scrivere \texttt{\\input\{util/hx-ambiente\}} all'inizio del documento.
+\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento.
 
-\subsubsection{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca i cambiamenti che ogni versione ha apportato rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti.
+\subsubsection{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca i cambiamenti apportati ad ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve includere un file intitolato \texttt{diario.tex} nella stessa cartella del documento; al suo interno, deve usare le macro \texttt{\textbackslash begin\{diario\}} e \texttt{\textbackslash end\{diario\}}.
 
 \subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in \LaTeX) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
 
@@ -108,7 +104,7 @@ Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare
 
 \subsubsection{Colori} Andrebbe minimizzato l'uso di colori, al fine di evitare ambiguità nel caso un documento venga stampato in bassa qualità.
 
-\subsubsection{Glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata con un pedice (tramite la macro \texttt{\\gloss\{termine\}}) in modo da far capire che si trova nel glossario.
+\subsubsection{Glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata con un pedice (tramite la macro \texttt{\textbackslash gloss\{termine\}}) in modo da far capire che si trova nel glossario.
 
 \subsubsection{Strumenti} \dots
 

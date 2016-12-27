@@ -1,5 +1,5 @@
 % Macro utili per uniformare il contenuto del testo
-% da usare tramite il comando \usepackage{util/hx-macro}
+% da usare tramite il comando \usepackage{../../util/hx-macro}
 
 % Progetto
 \newcommand{\proj}{SWEDesigner}
@@ -23,5 +23,17 @@
 \newcommand{\GP}{dott. Gregorio Piccoli}
 \newcommand{\ZU}{Zucchetti S.P.A.}
 
-% Glossario
+% Segnatura dei termini nel glossario
 \newcommand{\gloss}[1]{\emph{#1}\ped{$\gamma$}}
+
+% Struttura del diario delle modifiche
+\newenvironment{diario}{
+\begin{table}
+	\begin{tabular}{cp{3cm}cp{5cm}}
+		\textbf{Versione} & \textbf{Autore e Ruolo} & \textbf{Data} & \textbf{Descrizione} \\ \hline
+}
+{
+	\end{tabular}
+	\caption{Diario delle modifiche}
+\end{table}
+}
