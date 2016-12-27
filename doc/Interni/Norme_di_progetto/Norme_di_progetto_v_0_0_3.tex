@@ -2,8 +2,7 @@
 % da compilare con il comando pdflatex Interni/Norme_di_progetto/Norme_di_progetto_v_x.x.x.tex
 
 \input {util/hx-ambiente}
-\usepackage{hx-macro}
-\usepackage{hx-front}
+
 \version{0.0.3}
 \creaz{24 dicembre 2016}
 \author{\GG, \MM}
@@ -39,9 +38,10 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 	\subsection{Riferimenti}
 		\subsubsection{Normativi}
 		\begin{itemize}
-		\item ISO/IEC 12207-1995: http://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf
+		\item ISO/IEC 12207-1995: http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO\_12207-1995.pdf
 		\end{itemize}
-\section{Processi di sviluppo}
+\section{Processo di sviluppo}
+
 	\subsection{Studio di fattibilità}
 	La fase antecedente alla realizzazione del progetto\ped{g} consiste nel fissare delle riunioni in modo che il team\ped{g} possa discutere di esso. Sarà poi compito degli analisti redigere lo \texttt{studio di fattibilità},la cui struttura è specificata a seguire: %inserire struttura studio di fattibilità
 	\subsection{Analisi dei requisiti}
@@ -71,7 +71,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\subsubsection{Formattazione del codice}
 	\subsection{Strumenti}
 		\subsubsection{PragmaDB}
-		Per tenere traccia dei casi d'uso e dei requisiti il team\ped{g} ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Essa è accessibile via broswer nel server dedicato tramite autenticazione.Inoltre permette l'esportazione in \latex delle tabelle.
+		Per tenere traccia dei casi d'uso e dei requisiti il team\ped{g} ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Essa è accessibile via broswer nel server dedicato tramite autenticazione.Inoltre permette l'esportazione in \LaTeX{} delle tabelle.
 		\subsubsection{Astah}
 		\subsubsection{Ide ancora da scegliere}
 	\subsection{Tecnologie utilizzate}
@@ -79,45 +79,60 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 	\subsubsection{CSS3}
 	\subsubsection{Javascript}
 	\subsubsection{Java tomcat o node.js}
+
 \section{Processi di supporto}
+I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
-\subsection{Processi di documentazione}
-Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto.
+\subsection{Processo di documentazione}
+Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto. Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
 
-Enumeriamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli:
-\begin{enumerate}
-	\item I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultata essere quella in figura [figura...].
-	\item Nome ed estensione dei file sono regolati nel seguente modo:
-	\begin{enumerate}
-		\item Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
-		\item Ogni documento dev'essere in formato \LaTeX (esportabile in PDF su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX.
-		\item Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
-	\end{enumerate}
-	\item Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale.
-	\item Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. % più il nostro logo, magari
-	\item Ogni documento deve includere un “diario delle modifiche” che elenca i cambiamenti che ogni versione ha apportato rispetto alla precedente, assieme all'autore di tali cambiamenti e alla data.
-	\item Ogni pagina dev'essere numerata e deve riportare il titolo del documento e della sezione che ospita. % e magari il nome/logo del gruppo e il nome del progetto
-	\item Dev'esserci un'unica struttura di sezioni, sottosezioni e paragrafi, comune a tutti i documenti dello stesso tipo.
-	\item Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti.
-	\item Andrebbe minimizzato l'uso di colori, al fine di minimizzare le ambiguità nel caso che un documento venga stampato su carta o letto da una persona daltonica.
-	\item All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata in modo da far capire che si trova nel glossario.
-\end{enumerate}
+\subsubsection{Ambiente di lavoro} I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultata essere quella in figura [figura...].
 
-		\subsubsection{Strumenti}
-		\subsubsection{Ciclo di vita di un documento}
-		\subsubsection{Documenti finali}
-			\paragraph{Studio di fattibilità}
-			\paragraph{Norme di progetto}
-			\paragraph{Piano di progetto}
-			\paragraph{Piano di qualifica}
-			\paragraph{Analisi dei requisiti}
-			\paragraph{Specifica tecnica}
-			\paragraph{Definizione di prodotto}
-			\paragraph{Glossario}
-			\paragraph{Manuale utente}
-			\paragraph{Verbali}
-	\subsection{Processi di verifica}
-	\subsection{Strumenti}
+\subsubsection{Nomi ed estensioni} Nome ed estensione dei file sono regolati nel seguente modo:
+\paragraph{Nome} Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
+\paragraph{Formato} Ogni documento dev'essere in formato \LaTeX{} (esportabile in PDF su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX.
+\paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
+\paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale.
+
+\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve scrivere \texttt{\\input\{util/hx-ambiente\}} all'inizio del documento.
+
+\subsubsection{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca i cambiamenti che ogni versione ha apportato rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti.
+
+\subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in \LaTeX) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
+
+\subsubsection{Pagine} Ogni pagina dev'essere numerata e deve riportare in testata il titolo del documento e della sezione che ospita. % e magari il nome/logo del gruppo e il nome del progetto
+
+\subsubsection{Struttura} Dev'esserci un'unica struttura di sezioni, sottosezioni e paragrafi, comune a tutti i documenti dello stesso tipo.
+
+\subsubsection{Indice dei contenuti} Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti.
+
+\subsubsection{Colori} Andrebbe minimizzato l'uso di colori, al fine di evitare ambiguità nel caso un documento venga stampato in bassa qualità.
+
+\subsubsection{Glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata con un pedice (tramite la macro \texttt{\\gloss\{termine\}}) in modo da far capire che si trova nel glossario.
+
+\subsubsection{Strumenti} \dots
+
+\subsubsection{Documenti finali} Andranno redatti i seguenti documenti.
+\paragraph{Studio di fattibilità} Documento interno che vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto.
+\paragraph{Norme di progetto} Documento interno che norma i processi del progetto.
+\paragraph{Piano di progetto} \dots
+\paragraph{Piano di qualifica} \dots
+\paragraph{Analisi dei requisiti} \dots
+\paragraph{Specifica tecnica} \dots
+\paragraph{Definizione di prodotto} \dots
+\paragraph{Glossario} Documento esterno elencante specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”.
+\paragraph{Manuale utente} \dots
+\paragraph{Verbali} Documento esterno riportante i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
+
+\subsection{Processo di verifica} \dots
+
+\subsection{Strumenti} \dots
+
 \section{Processi organizzativi}
-	\subsection{Strumenti}
+
+\subsection{Processo di miglioramento} % dal documento ISO; pensavo fosse importante quindi l'ho aggiunto
+Man mano che si procede nel progetto, è bene stare attenti a non lasciare che le attività ripetitive degradino in qualità. Ogni processo, essendo un insieme di attività che si ripetono, deve quindi abbracciare il modello \gloss{PDCA}. % come? 
+
+\subsection{Strumenti}
+
 \end{document}
