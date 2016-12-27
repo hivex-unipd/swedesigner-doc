@@ -36,15 +36,21 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\begin{itemize}
 		\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}
 		\end{itemize}
-\section{Processo di sviluppo}
 
 	\subsection{Studio di fattibilità}
 	La fase antecedente alla realizzazione del \gloss{progetto} consiste nel fissare delle riunioni in modo che il team possa discutere di esso. Sarà poi compito degli analisti redigere lo \texttt{studio di fattibilità},la cui struttura è specificata a seguire: %inserire struttura studio di fattibilità
 	\subsection{Analisi dei requisiti}
+\section{Processi primari}
+
+\subsection{Processo di sviluppo}
+
+	\subsubsection{Studio di fattibilità}
+	La fase antecedente alla realizzazione del progetto\ped{g} consiste nel fissare delle riunioni in modo che il team\ped{g} possa discutere di esso. Sarà poi compito degli analisti redigere lo \texttt{studio di fattibilità},la cui struttura è specificata a seguire: %inserire struttura studio di fattibilità
+	\subsubsection{Analisi dei requisiti}
 	Sarà sempre compito degli analisti al termine dello studio di fattibilità di produrre l'\texttt{analisi dei requisiti}.Questo documento conterrà i requisiti raccolti ed i casi uso individuati nelle riunioni svolte.
 	Viene elencata nelle sezioni a seguire la struttura obbligatoria di requisiti e casi d'uso.
-		\subsubsection{Requisiti}
-		\subsubsection{Casi d'uso}
+		\paragraph{Requisiti}
+		\paragraph{Casi d'uso}
 		Ogni caso d'uso viene identificato nel seguente modo:
 		\centerline{UCx}
 		Ogni macro caso d'uso sarà poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta avere altri figli).
@@ -60,7 +66,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\item Estensioni:Eventuali estensioni se specificate;
 		\item Scenari alternativi:descrizione tramite casi d'uso non appartenenti al flusso principale.
 		\end{itemize}
-	\subsection{Progettazione}
+	\subsubsection{Progettazione}
 	Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
 	La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard uml 2.0:
 	\begin{itemize}
@@ -69,42 +75,59 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\item \gloss{Diagrammi di attività}:descrive in dettaglio un algoritmo
 		\item \gloss{Diagrammi di sequenza}:descrive uno scenario,dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 		\end{itemize}
-	\subsection{Codifica}
+	\subsubsection{Codifica}
 	Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo stanrd di scrittura e documentazione di esso.
-		\subsubsection{Formattazione del codice}
+		\paragraph{Formattazione del codice}
 		Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
 			\begin{itemize}
 				\item i nomi di variabili,classi,funzioni e metodi sono scritti in inglese.
 				\item I nomi composti dovranno avere la prima lettera minuscola e la lettera maiuscola ad ogni iniziale della nuova parloa che compone il nome.
 			\end{itemize}
-		\subsubsection{Commenti}
+		\paragraph{Commenti}
 		Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
 		\begin{itemize}
 			\item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione.
 			\item Ogni commento dovrà essere relativo alla parte di codice interessata.
 			\item Ogni commetno dovrà decrivere in modo breve ma preciso la parte di codice interessata
 		\end{itemize}
-	\subsection{Strumenti}
-		\subsubsection{PragmaDB}
+	\subsubsection{Strumenti}
+		\paragraph{PragmaDB}
 		Per tenere traccia dei casi d'uso e dei requisiti il team\ped{g} ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Il programma è accessibile via broswer ed è possibile usarlo collegandosi al server creato dal team tramite autenticazione. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle(requisiti,glossario,...) seguendo le linee guida di struttura descritte in questo documento.
-		\subsubsection{Astah}
-		\subsubsection{Ide ancora da scegliere}
-	\subsection{Tecnologie utilizzate}
-	\subsubsection{HTML5}
+		\paragraph{Astah}
+		\paragraph{Ide ancora da scegliere}
+	\subsubsection{Tecnologie utilizzate}
+	\paragraph{HTML5}
 	L'\gloss{html5} è un linguaggio di markup utilizzato per strutturare pagine web. Porta con se molte caratteristiche nuove rispetto al suo predecessore volte soprattutto a separare struttra,stile e contenuti,oltre a nuovi elementi che permettono di creare un sito web molto potente.
 	Esso verrà usato per la creazione della parte parte client del programma.
-	\subsubsection{CSS3}
+	\paragraph{CSS3}
 	\gloss{Css3} è un linguaggio usato per la formattazione di documenti \gloss{html} e \gloss{xml}. Esso consente di definire l'aspetto e la formattazione della pagina. Viene utilizzato nella parte client per arricchire l'aspetto dell'applicativo client.
-	\subsubsection{Javascript}
+	\paragraph{Javascript}
 	\gloss{Javascript} è un linguaggio orientato agli oggetti e agli eventi utilizzato comunemente per la parte cleint di un sito web. Esso permette di aggiungere effetti dinamici interattivi in base a eventi.
 	Viene utilizzato nella parte client per poter avere un edito interattivo utilizzabile.%da riscrivere quest'ultima frase 
-	\subsubsection{Java tomcat o node.js}
+	\paragraph{Java tomcat o node.js}
+
+\subsection{Processo di fornitura}
+
+[norme sullo studio di fattibilità]
 
 \section{Processi di supporto}
 I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
 \subsection{Processo di documentazione}
-Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto. Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
+Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto. I documenti che svilupperemo sono i seguenti:
+\begin{description}
+	\item[studio di fattibilità] documento interno che vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto;
+	\item[norme di progetto] documento interno che norma i processi del progetto;
+	\item[piano di progetto] \dots
+	\item[piano di qualifica] \dots
+	\item[analisi dei requisiti] \dots
+	\item[specifica tecnica] \dots
+	\item[definizione di prodotto] \dots
+	\item[glossario] Documento esterno elencante specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
+	\item[manuale utente] \dots
+	\item[verbali] Documento esterno riportante i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
+\end{description}
+Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
 
 \subsubsection{Ambiente di lavoro} I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultata essere quella in figura [figura...].
 
@@ -112,9 +135,9 @@ Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare
 \paragraph{Nome} Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
 \paragraph{Formato} Ogni documento dev'essere in formato \LaTeX{} (esportabile in PDF su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX.
 \paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
-\paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale.
+\paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni sua \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso.
 
-\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento.
+\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento e aggiustare i parametri con i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}.
 
 \subsubsection{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca i cambiamenti apportati ad ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve includere un file intitolato \texttt{diario.tex} nella stessa cartella del documento; al suo interno, deve usare le macro \texttt{\textbackslash begin\{diario\}} e \texttt{\textbackslash end\{diario\}}.
 
@@ -128,21 +151,16 @@ Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare
 
 \subsubsection{Colori} Andrebbe minimizzato l'uso di colori, al fine di evitare ambiguità nel caso un documento venga stampato in bassa qualità.
 
-\subsubsection{Glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata con un pedice (tramite la macro \texttt{\textbackslash gloss\{termine\}}) in modo da far capire che si trova nel glossario.
+\subsubsection{Glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con un pedice (\gloss{[termine in glossario]}) tramite la macro \texttt{\textbackslash gloss\{termine\}}, in modo da far capire che si trova nel glossario.
 
-\subsubsection{Strumenti} \dots
+\subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano. Il manuale utente viene anche tradotto in inglese, data la natura open-source del progetto. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
+\begin{itemize}
+	\item La punteggiatura è seguita ma non preceduta da uno spazio.
+	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{framework} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione in italiano.
+\end{itemize}
+L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
 
-\subsubsection{Documenti finali} Andranno redatti i seguenti documenti.
-\paragraph{Studio di fattibilità} Documento interno che vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto.
-\paragraph{Norme di progetto} Documento interno che norma i processi del progetto.
-\paragraph{Piano di progetto} \dots
-\paragraph{Piano di qualifica} \dots
-\paragraph{Analisi dei requisiti} \dots
-\paragraph{Specifica tecnica} \dots
-\paragraph{Definizione di prodotto} \dots
-\paragraph{Glossario} Documento esterno elencante specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”.
-\paragraph{Manuale utente} \dots
-\paragraph{Verbali} Documento esterno riportante i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
+
 
 \subsection{Processo di verifica} \dots
 
