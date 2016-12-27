@@ -80,7 +80,20 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
 \subsection{Processo di documentazione}
-Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto. Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
+Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto. I documenti che svilupperemo sono i seguenti:
+\begin{description}
+	\item[studio di fattibilità] documento interno che vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto;
+	\item[norme di progetto] documento interno che norma i processi del progetto;
+	\item[piano di progetto] \dots
+	\item[piano di qualifica] \dots
+	\item[analisi dei requisiti] \dots
+	\item[specifica tecnica] \dots
+	\item[definizione di prodotto] \dots
+	\item[glossario] Documento esterno elencante specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
+	\item[manuale utente] \dots
+	\item[verbali] Documento esterno riportante i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
+\end{description}
+Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
 
 \subsubsection{Ambiente di lavoro} I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultata essere quella in figura [figura...].
 
@@ -88,9 +101,9 @@ Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare
 \paragraph{Nome} Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
 \paragraph{Formato} Ogni documento dev'essere in formato \LaTeX{} (esportabile in PDF su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX.
 \paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
-\paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale.
+\paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni sua \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso.
 
-\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento.
+\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento e aggiustare i parametri con i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}.
 
 \subsubsection{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca i cambiamenti apportati ad ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve includere un file intitolato \texttt{diario.tex} nella stessa cartella del documento; al suo interno, deve usare le macro \texttt{\textbackslash begin\{diario\}} e \texttt{\textbackslash end\{diario\}}.
 
@@ -104,21 +117,16 @@ Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare
 
 \subsubsection{Colori} Andrebbe minimizzato l'uso di colori, al fine di evitare ambiguità nel caso un documento venga stampato in bassa qualità.
 
-\subsubsection{Glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere segnata con un pedice (tramite la macro \texttt{\textbackslash gloss\{termine\}}) in modo da far capire che si trova nel glossario.
+\subsubsection{Glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con un pedice (\gloss{[termine in glossario]}) tramite la macro \texttt{\textbackslash gloss\{termine\}}, in modo da far capire che si trova nel glossario.
 
-\subsubsection{Strumenti} \dots
+\subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano. Il manuale utente viene anche tradotto in inglese, data la natura open-source del progetto. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
+\begin{itemize}
+	\item La punteggiatura è seguita ma non preceduta da uno spazio.
+	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune.
+\end{itemize}
+L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
 
-\subsubsection{Documenti finali} Andranno redatti i seguenti documenti.
-\paragraph{Studio di fattibilità} Documento interno che vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto.
-\paragraph{Norme di progetto} Documento interno che norma i processi del progetto.
-\paragraph{Piano di progetto} \dots
-\paragraph{Piano di qualifica} \dots
-\paragraph{Analisi dei requisiti} \dots
-\paragraph{Specifica tecnica} \dots
-\paragraph{Definizione di prodotto} \dots
-\paragraph{Glossario} Documento esterno elencante specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”.
-\paragraph{Manuale utente} \dots
-\paragraph{Verbali} Documento esterno riportante i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
+
 
 \subsection{Processo di verifica} \dots
 
