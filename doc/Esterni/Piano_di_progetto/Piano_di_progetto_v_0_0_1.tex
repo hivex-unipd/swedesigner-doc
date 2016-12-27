@@ -1,7 +1,7 @@
 % piano di progetto
 % da compilare con il comando pdflatex Esterni/Piano_di_progetto/Piano_di_progetto_v_x.x.x.tex
 
-\input {util/hx-ambiente}
+\input {../../util/hx-ambiente}
 \version{0.0.1}
 \author{\LB, \PB}
 \supervisor{\GG, \MM}
@@ -18,8 +18,9 @@
 \tableofcontents
 
 \section{Introduzione}
-	\subsection{Scopo del documento}
-	Il presente documento illustra la pianificazione adottata dal gruppo {\hx} per la produzione del progetto {\proj}. [more?] In esso vi sono contenuti:
+	\subsection{Scopo del documento}.
+
+	Il presente documento illustra la pianificazione adottata dal gruppo {\hx} finalizzata alla produzione del progetto {\proj}. [more?] In esso vi sono contenuti:
 \begin{itemize}
 	\item Scelta del modello di sviluppo adottato;
 	\item Analisi dei rischi;
@@ -31,18 +32,103 @@
 	\subsection{Scopo del prodotto}
 	\scopo
 	\subsection{Glossario}
-	[idem]
+	[macro]
 	\subsection{Riferimenti}
 		\subsubsection{Normativi}
-		[idem]
+		[macro]
 		\subsubsection{Informativi}
 
 
 	\subsection{Scadenze}
-	[idem]
+	[macro]
+
 
 \section{Modello di sviluppo}
-[si sceglie incrementale]
+
+	La scelta di un modello di sviluppo è cruciale per la corretta pianificazione delle attività. Da essa infatti si deriva tutta la struttura principale con cui saranno pianificati milestone e task.
+
+	Il progetto {\proj}, come affrontato nel documento [x] e [y], presenta numerosi punti critici, analizzati nella sezione [nextsection], in particolare nella sezione [rischio tecnologico]. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software \gloss{CASE} e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. [riferimento a verbale di riunione con zucchetti?]
+
+	Un progetto dedito all'esplorazione va supportato con un adeguato modello di sviluppo; esso deve avere i seguenti requisiti:
+
+	\begin{itemize}
+		\item \textbf{Tracciabilità delle funzionalità di massima del software}, per definire gli obiettivi cardine del progetto;
+		\item Sufficiente \textbf{elasticità in fase di progettazione}, al fine di poter esplorare in modo profondo le possibili implementazioni;
+		\item Possibilità di \textbf{raffinamento dei requisiti}, in caso si volesse indirizzare la ricerca in una direzione piuttosto che un'altra;
+		\item \textbf{Validazione del software} prodotto, per poter garantire le funzionalità concordate.
+	\end{itemize}
+
+	Di seguito vengono analizzati sinteticamente punti deboli e punti di forza dei principali approcci ai processi software, nel contesto del nostro progetto.
+	
+	Va tuttavia ricordato che non è sconsigliato adottare più modelli in forma ibrida, come suggerito da Sommerville. [riferimento]
+
+	\subsection{Analisi modelli di sviluppo}
+
+		\subsubsection{Modelli di sviluppo sequenziale}
+
+			\paragraph{Modello a cascata}
+
+			Il modello a cascata (Royce, 1970) è il più antico dei modelli software analizzati e [descrizione di massima di cosa fa]
+
+			[immagine]
+
+			Questo tipo di approccio:
+\begin{itemize}
+\item Promette un prodotto finito, con grande attenzione alle deadline tracciate inizialmente;
+\item Stabilisce una architettura software iniziale stabile.
+\end{itemize}
+
+			Di contro, i svantaggi di questo approccio sono svariati:
+\begin{itemize}
+\item Le varie fasi sono a compartimenti stagni: una volta tracciati i requisiti, essi non possono più venire modificati.
+\item Il committente deve avere già inizialmente una idea molto chiara del prodotto che desidera. 
+\end{itemize}
+
+Questi ultimi punti entrano in netto contrasto con i requisiti inizialmente proposti; ciò ha portato a scartare questo modello di sviluppo. Tuttavia adotteremo una politica a deadline, a causa dei vincoli imposti dalle revisioni di {\TV} [okay, riformulare]
+
+			\paragraph{Modello evolutivo}
+
+			Il modello evolutivo, particolarmente apprezzato da Sommerville, prevede una implementazione iniziale e una forte collaborazione tra committente e fornitore allo scopo di raffinare il sistema tramite più versioni del prodotto, fino a raggiungere un sistema adeguato alle esigenze dell'utente.
+
+Ciò si può realizzare principalmente tramite due strumenti differenti: lo \textit{exploratory development} e il \textit{throwaway prototyping}.
+
+Il primo consiste nel lavorare a fianco del cliente per esplorare i suoi requisiti e infine consegnare un sistema adeguato. Mentre questo metodo di lavoro potrebbe sembrare positivo, esso presenta due grosse criticità: cambiamenti continui tendono a corrompere la struttura e l'architettura del software; inoltre aggiungere estensioni non previste diventa progressivamente più complesso e costoso. Questo rischio a parere del \gloss{team} non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
+
+La seconda possibilità invece consiste nell'avere dei prototipi usati per meglio comprendere il problema. La criticità presente riguarda il futuro di questi prototipi: sviluppare un prototipo porta valore esclusivamente nell'ambito di comprensione i requisiti del progetto, non porta un effettivo avanzamento nello sviluppo del prodotto.
+
+			\paragraph{Modello basato su componenti}
+Questo modello si basa sull'approccio orientato al riuso di componenti già esistenti, in modo da abbattere tempi e costi.
+
+[immagine+desc]
+
+Questo approccio è sicuramente interessante e, malgrado non sia stato adottato in toto, ci si riserva la possibilità di seguire i punti che prevedono il design del sistema con riuso e una modifica dei requisiti, al fine di ridurre i tempi e costi di certe componenti del sistema. Il \gloss{team} ritiene inoltre che gli svantaggi riguardo ai compromessi che nasceranno siano di gran lunga ripagati dai benefici di questo approccio; infine l'approccio è stato approvato dal committente in sede di discussione.
+
+		\subsubsection{Modelli di sviluppo iterativi}
+			\paragraph{Modello incrementale}
+			Questo modello sfrutta un approccio che vuole combinare i vantaggi del modello a cascata con il modello evolutivo. Essenzialmente si prevede che il committente identifichi le componenti più importanti e meno importanti; quindi si sviluppa una architettura di base e si fissano degli incrementi delle funzionalità del sistema in iterazioni successive.
+
+Questo modello richiede che ogni incremento:
+\begin{itemize}
+\item Apporti funzionalità tangibili;
+\item Non deve essere eccessivamente ampio (<20mila righe di codice)
+\item Sia validato singolarmente, integrato e sia validato nel complesso
+\end{itemize}
+
+I vantaggi di questo modello sono molteplici:
+\begin{itemize}
+\item Permette di sperimentare il sistema con il committente al fine di chiarificare tutti i requisiti
+\end{itemize}
+
+Vanno segnalati tuttavia i seguenti difetti:
+\begin{itemize}
+\end{itemize}
+
+In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostanziali vantaggi rispetto agli altri modelli finora analizzati. In seguito si analizzano altri modelli che sono stati presi in considerazione.
+
+			\paragraph{Modello a spirale}
+		\subsubsection{Modelli agili}
+
+
 
 
 \section{Analisi dei rischi}
@@ -53,7 +139,7 @@
 	\subsection{C}
 
 \section{Pianificazione}
-[Si rimanda a Norme di progetto v_1_0_0 per il dettaglio del funzionamento di Asana]
+[Si rimanda a Norme di progetto v100 per il dettaglio del funzionamento di Asana]
 \section{Preventivo}
 \section{Consuntivo di periodo}
 
