@@ -114,19 +114,25 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
 \subsection{Processo di documentazione}
-Per gestire la documentazione di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro repository; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione il resto delle parti della configurazione del prodotto. I documenti che svilupperemo sono i seguenti:
-\begin{description}
-	\item[studio di fattibilità] documento interno che vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto;
-	\item[norme di progetto] documento interno che norma i processi del progetto;
-	\item[piano di progetto] \dots
-	\item[piano di qualifica] \dots
-	\item[analisi dei requisiti] \dots
-	\item[specifica tecnica] \dots
-	\item[definizione di prodotto] \dots
-	\item[glossario] Documento esterno elencante specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
-	\item[manuale utente] \dots
-	\item[verbali] Documento esterno riportante i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
-\end{description}
+Per gestire la \gloss{documentazione} di progetto si è pensato, innanzitutto, di creare un ramo a parte (intitolato \texttt{doc}) a partire dal ramo \texttt{master} del nostro \gloss{repository}; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione e il resto delle parti della \gloss{configurazione} del prodotto. I documenti che svilupperemo sono i seguenti:
+\begin{itemize}
+	\item Documenti interni, rivolti ai membri del gruppo:
+	\begin{description}
+		\item[studio di fattibilità] vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto;
+		\item[norme di progetto] norma i processi del progetto.
+	\end{description}
+	\item Documenti esterni, rivolti non solo ai membri ma anche ai committenti e/o ai docenti:
+	\begin{description}
+		\item[piano di progetto] dichiara come il gruppo intende gestire le risorse umane e temporali nel corso del progetto;
+		\item[piano di qualifica] descrive come il gruppo affronta il problema di garantire la qualità del prodotto da fornire;
+		\item[analisi dei requisiti] elenca, descrive e traccia i requisiti e i casi d'uso del prodotto da fornire;
+		\item[specifica tecnica] descrive l'architettura logica del sistema da fornire, mostrando ciò che il sistema deve fare senza però fissarne i dettagli implementativi (descrive l'interfaccia di ogni componente del sistema, attraverso più livelli gerarchici di decomposizione);
+		\item[definizione di prodotto] rispetto alla specifica tecnica, decompone l'architettura in moduli a granda più fine, finché ogni modulo ha dimensione, coesione, complessità e accoppiamento tali per cui i moduli possano essere sviluppati in parallelo dai programmatori;
+		\item[glossario] riporta specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
+		\item[manuale utente] fornisce all'utente una guida completa ed esaustiva di tutte le funzionalità del prodotto;
+		\item[verbali] riporta i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
+	\end{description}
+\end{itemize}
 Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
 
 \subsubsection{Ambiente di lavoro} I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultata essere quella in figura [figura...].
@@ -137,17 +143,22 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 \paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
 \paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri: il primo viene incremementato ad ogni \textbf{approvazione} del documento; il secondo ad ogni sua \textbf{revisione}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso.
 
-\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento e aggiustare i parametri con i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}.
+\subsubsection{Frontespizio} Ogni documento, anche se breve, deve avere un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento e aggiustare i parametri con i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}; per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}.
 
-\subsubsection{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca i cambiamenti apportati ad ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve includere un file intitolato \texttt{diario.tex} nella stessa cartella del documento; al suo interno, deve usare le macro \texttt{\textbackslash begin\{diario\}} e \texttt{\textbackslash end\{diario\}}.
+\subsubsection{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca i cambiamenti apportati ad ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve includere (dopo il frontespizio) un file intitolato \texttt{diario.tex} nella stessa cartella del documento; al suo interno, deve usare le macro \texttt{\textbackslash begin\{diario\}} e \texttt{\textbackslash end\{diario\}}.
+
+\subsubsection{Indice dei contenuti} Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti. Per questo, dopo l'inclusione del diario delle modifiche va posto il comando \texttt{\textbackslash tableofcontents}.
 
 \subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in \LaTeX) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
 
 \subsubsection{Pagine} Ogni pagina dev'essere numerata e deve riportare in testata il titolo del documento e della sezione che ospita. % e magari il nome/logo del gruppo e il nome del progetto
 
-\subsubsection{Struttura} Dev'esserci un'unica struttura di sezioni, sottosezioni e paragrafi, comune a tutti i documenti dello stesso tipo.
-
-\subsubsection{Indice dei contenuti} Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti.
+\subsubsection{Struttura} Dev'esserci un'unica struttura gerarchica di sezioni comune a tutta la documentazione: il sezionamento principale si attua con \texttt{\textbackslash section\{\}}; poi si scende nello specifico con \texttt{\textbackslash subsection\{\}}, \texttt{\textbackslash subsubsection\{\}} e infine \texttt{\textbackslash paragraph\{\}}. Questi quattro livelli di sezionamento generano parti di testo che vengono tracciate dall'indice generale e sono quindi atti a contenere parti di testo leggibili “ad accesso casuale” (cioè anche senza dover rileggere parti di testo precedenti); per quelle parti di testo che, pur avendo una propria strutturazione, vanno lette in modo “sequenziale”, si usano invece gli elenchi; questi non vengono riportati nell'indice generale e possono essere di tre tipi:
+\begin{description}
+	\item[elenchi puntati] ambiente \texttt{itemize} --- elencano gli elementi di un insieme;
+	\item[elenchi numerati] ambiente \texttt{enumerate} --- elencano gli elementi di una sequenza;
+	\item[elenchi descrittivi] ambiente \texttt{description} --- elencano gli elementi di un dizionario di termini.
+\end{description}
 
 \subsubsection{Colori} Andrebbe minimizzato l'uso di colori, al fine di evitare ambiguità nel caso un documento venga stampato in bassa qualità.
 
@@ -157,6 +168,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 \begin{itemize}
 	\item La punteggiatura è seguita ma non preceduta da uno spazio.
 	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{framework} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione in italiano.
+	\item Gli elementi di un elenco sono separati da un punto e virgola (quindi iniziano con lettera minuscola), tranno l'ultimo che si conclude con un punto. Nel caso che anche un solo elemento dell'elenco si componga di più frasiseparate da segno di punteggiatura forte, tutti gli elementi dell'elenco iniziano per maiuscola e finiscono con un punto. In entrambi i casi, ogni elenco è introdotto dai due punti.
 \end{itemize}
 L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
 
