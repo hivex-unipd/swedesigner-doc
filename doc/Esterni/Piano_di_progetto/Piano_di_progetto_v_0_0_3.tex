@@ -144,29 +144,45 @@ Questo modello richiede che ogni incremento:
 
 I vantaggi di questo modello sono molteplici:
 \begin{itemize}
-\item Permette di sperimentare il sistema con il committente al fine di chiarificare tutti i requisiti
+\item Permette di sperimentare il sistema con il committente al fine di chiarificare tutti i requisiti;
+\item I primi incrementi possono essere usati come prototipi;
+\item I servizi a più alta priorità passano inevitabilmente il maggior numero di fasi di test.
 \end{itemize}
 
 Vanno segnalati tuttavia i seguenti difetti:
 \begin{itemize}
-\item a
+\item Può essere difficile trasformare i requisiti del cliente in incrementi di una misura adeguata;
+\item Non è possibile modificare i requisiti già esistenti negli incrementi successivi.
 \end{itemize}
+
+Ciò si traduce in una criticità del processo nella fase di analisi. Nella sezione [Analisi dei rischi] si analizza come questo rischio verrà trattato.
 
 In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostanziali vantaggi rispetto agli altri modelli finora analizzati. In seguito si analizzano altri modelli che sono stati presi in considerazione.
 
 			\paragraph{Modello a spirale}
-		\subsubsection{Modelli agili}
+			Il modello a spirale (Boehm, 1988) è un approccio fondamentalmente rappresentato come una sequenza di attività che si ripetono nel tempo, partendo dalla fattibilità, definizione dei requisiti, ideazione dell'archittettura, e così via.
+			
+			Le quattro operazioni ripetute all'interno della spirale sono:
+\begin{itemize}
+\item Identificazione degli obiettivi
+\item Valutazione del rischio
+\item Sviluppo e validazione
+\item Pianificazione (della fase successiva)
+\end{itemize}			 
 
+L'approccio sfrutta una metodologia fortemente \textit{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il \gloss{team}, il processo di sviluppo e le risorse.
+		\subsubsection{Modelli agili}
+[lasciamo?]
 
 
 
 \section{Analisi dei rischi}
-In questa sezione del documento vengono elencati e descritti tutti i possibili rischi che potrebbero colpire il gruppo Hivex nella realizzazione del prodotto \proj. Per gestire i rischi è stata attuata la seuente procedura che prevede:
+In questa sezione del documento vengono elencati e descritti tutti i possibili rischi che potrebbero colpire il gruppo Hivex nella realizzazione del prodotto \proj. Per gestire i rischi è stata attuata la seguente procedura che prevede:
 \begin{itemize}
 	\item \textbf{Identificazione dei rischi}: trovare i rischi potenziali che si possono presentare durante l'intero sviluppo del progetto e studiarne la natura. Tali rischi possono essere di tre tipologie:
 	\begin{enumerate}
 		\item \textbf{Progetto}: relativi a pianificazione, strumenti e risorse;
-		\item \textbf{Prodotto}: relativi a conformità e aspettative del commitente;
+		\item \textbf{Prodotto}: relativi a conformità e aspettative del committente;
 		\item \textbf{Business}: relativi a costi e concorrenza.
 	\end{enumerate}
 	\item \textbf{Analisi dei rischi}: studiare per ogni rischio le:
@@ -206,7 +222,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: alto;
 			\item \textbf{Riconoscimento}: il Responsabile ha il compito di verificare il grado di conoscenza e preparazione di ciascun componente relativo alle tecnologie adottate;
-			\item \textbf{Trattament}o: ciascun componente si impegnerà a documentarsi in maniera autonoma sulle tecnologie adottate;
+			\item \textbf{Trattamento}: ciascun componente si impegnerà a documentarsi in maniera autonoma sulle tecnologie adottate;
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
 				\item \textbf{Analisi dei requisiti}: il rischio non si è ancora verificato dato che non sono state usate tali tecnologie in questo periodo di sviluppo.
@@ -277,11 +293,11 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 	\subsection{Livello dei requisiti}
 		\subsubsection{Incomprensioni e scelte non congrue}
 		\begin{itemize}
-			\item \textbf{Descrizione}: durante la fase di analisi del capitolato, è possibile che il problema e i suoi requisiti non vengano capiti in toto, fraintesi o tralasciati dagli Analisti. Questo può provocare delle divergenze tra le aspettative del proponente e la 					visione del gruppo sul prodotto;
+			\item \textbf{Descrizione}: durante la fase di analisi del capitolato, è possibile che il problema e i suoi requisiti non vengano capiti in toto, fraintesi o tralasciati dagli Analisti. Questo può provocare delle divergenze tra le aspettative del proponente e la visione del gruppo sul prodotto;
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: alto;
 			\item \textbf{Riconoscimento}: si ritiene un'ottima strategia di controllo, l'incontro con il proponente stesso per poter discutere dei requisiti identificati, in modo da assicurare la totale concordanza sulle necessità del prodotto;
-			\item \textbf{Trattamento}: sarà necessario effettuare degli incontri con il proponente in modo da poter definire con chiarezza ogni requisito necessario al corretto sviluppo del progetto. Inoltre, sarà importante correggere tempestivamente ogni errore e 					imprecisione 	che il committente individuerà alle revisioni. 
+			\item \textbf{Trattamento}: sarà necessario effettuare degli incontri con il proponente in modo da poter definire con chiarezza ogni requisito necessario al corretto sviluppo del progetto. Inoltre, sarà importante correggere tempestivamente ogni errore e imprecisione che il committente individuerà alle revisioni. 
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
 				\item \textbf{Analisi dei requisiti}:  il rischio si è verificato durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato.
@@ -293,7 +309,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Descrizione}: è possibile che i tempi delle attività pianificate per lo svolgimento del progetto siano sovrastimate o sottostimate. Un valutazione errata di queste, può comportare una variazione sul costo preventivo presentato; 
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: medio;
-			\item \textbf{Riconoscimento}: quando un'attività occupa più tempo di quello previsto significa che è stata sottostimata. Viceversa, quando invece ne occupa considerevolmente meno, significa che è stata sovrastimata. É necessario quindi che il 						Responsabile monitori con grande attenzione il programma di project management e che faccia tempestive modiche alla pianificazione e al rendiconto dei costi; 
+			\item \textbf{Riconoscimento}: quando un'attività occupa più tempo di quello previsto significa che è stata sottostimata. Viceversa, quando invece ne occupa considerevolmente meno, significa che è stata sovrastimata. É necessario quindi che il Responsabile monitori con grande attenzione il programma di project management e che faccia tempestive modiche alla pianificazione e al rendiconto dei costi; 
 			\item \textbf{Trattamento}: è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli; 
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
