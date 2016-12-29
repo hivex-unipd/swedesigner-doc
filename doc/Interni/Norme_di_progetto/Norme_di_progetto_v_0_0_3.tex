@@ -57,60 +57,91 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 	\subsubsection{Analisi dei requisiti}
 	Sarà sempre compito degli analisti al termine dello studio di fattibilità di produrre l'\texttt{analisi dei requisiti}.Questo documento conterrà i requisiti raccolti ed i casi uso individuati nelle riunioni svolte.
 	Viene elencata nelle sezioni a seguire la struttura obbligatoria di requisiti e casi d'uso.
-		\paragraph{Requisiti}
+		\paragraph{Requisiti}%da guardare come esporta pragmadb e nel caso correggere
+		Dopo aver inviduato i requisiti tramite le varie riunioni,è compito degli analisti redarrne un elenco che dovrà seguire la seguente struttura:
+		\centerline{R[Importanza][Tipo][ID]}
+		\begin{itemize}
+			\item[Importanza]: indica se il requisito è:
+			\begin{itemize}
+				\item obbligatorio:
+				\item opzionale;
+				\item desiderabile.
+			\end{itemize}
+			\item[Tipo]: indica il tipo del requisito che puà essere:
+			\begin{itemize}
+				\item F: funzionale;
+				\item Q: di qualità;
+				\item P: prestazionale;
+				\item V: di vincolo.
+			\end{itemize}
+			\item [ID] codice identificativo univoco del requisito.
+		\end{itemize}
+	    Un requisito ha inoltre specificato:
+		\begin{itemize}
+		\item una breve descrizione di esso;
+		\item un requisito padre se presente;
+		\item la fonte da cui deriva;
+		\item se è stato effettivamente implementato.
 		\paragraph{Casi d'uso}
 		Ogni caso d'uso viene identificato nel seguente modo:
 		\centerline{UCx}
 		Ogni macro caso d'uso sarà poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta avere altri figli).
-		Inoltre ogni caso'uso dovrà avere le seguenti proprietà:
+		Inoltre ogni caso d'uso dovrà avere le seguenti proprietà:
 		\begin{itemize}
 		\item Nome: Nome identificativo del caso d'uso;
 		\item Attori: attori coinvolti nel caso d'uso;
-		\item Descrizione: Descrizione del caso d'uso;
-		\item Precondizioni: Condizioni da rispettare prima di eseguire il caso d'uso;%facoltative?
-		\item Postcondizioni:  Condizioni da rispettare dopo di eseguire il caso d'uso;%facoltative?
+		\item Descrizione: descrizione del caso d'uso;
+		\item Precondizioni: condizioni da rispettare prima di eseguire il caso d'uso;%facoltative?
+		\item Postcondizioni: condizioni da rispettare dopo di eseguire il caso d'uso;%facoltative?
 		\item Scenario principale: descrizione del caso d'uso tramite i casi d'uso figli;
-		\item Inclusioni:Eventuali inclusioni se specificate;
-		\item Estensioni:Eventuali estensioni se specificate;
-		\item Scenari alternativi:descrizione tramite casi d'uso non appartenenti al flusso principale.
+		\item Inclusioni: Eventuali inclusioni se specificate;
+		\item Estensioni: Eventuali estensioni se specificate;
+		\item Scenari alternativi: descrizione tramite casi d'uso non appartenenti al flusso principale.
 		\end{itemize}
 	\subsubsection{Progettazione}
 	Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
 	La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard uml 2.0:
 	\begin{itemize}
-		\item \gloss{Diagrammi delle classi}:desccrivono i tipi di entità(classi) e le relazioni tra loro.
+		\item \gloss{Diagrammi delle classi}:descrivono i tipi di entità(classi) e le relazioni tra loro.
 		\item \gloss{Diagrammi dei package}:raggruppa un numero di elementi uml in una sola unità di livello più alto.
 		\item \gloss{Diagrammi di attività}:descrive in dettaglio un algoritmo
 		\item \gloss{Diagrammi di sequenza}:descrive uno scenario,dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 		\end{itemize}
-	\subsubsection{Codifica}
-	Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo stanrd di scrittura e documentazione di esso.
+	\subsubsection{Codifica}%da finire qunado finalmente avremo scelto cosa usare
+	Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
 		\paragraph{Formattazione del codice}
 		Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
 			\begin{itemize}
-				\item i nomi di variabili,classi,funzioni e metodi sono scritti in inglese.
-				\item I nomi composti dovranno avere la prima lettera minuscola e la lettera maiuscola ad ogni iniziale della nuova parloa che compone il nome.
+				\item i nomi di variabili,classi,funzioni e metodi sono scritti in inglese;
+				\item i nomi composti dovranno avere la prima lettera minuscola e la lettera maiuscola ad ogni iniziale della nuova parola che compone il nome.
+				\item è opportuno scegliere il nome dei vari elementi in modo coerente con la loro funzione;
+				
 			\end{itemize}
 		\paragraph{Commenti}
 		Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
 		\begin{itemize}
-			\item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione.
-			\item Ogni commento dovrà essere relativo alla parte di codice interessata.
-			\item Ogni commetno dovrà decrivere in modo breve ma preciso la parte di codice interessata
+			\item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione;
+			\item Ogni commento dovrà essere relativo alla parte di codice interessata;
+			\item Ogni commento dovrà descrivere in modo breve ma preciso la parte di codice interessata;
+			\item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
+			\item È preferibile commentari sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
+			\item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
+			\item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc(https://github.com/jsdoc3/jsdoc) %nel caso javascript
 		\end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
-		Per tenere traccia dei casi d'uso e dei requisiti il team\ped{g} ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Il programma è accessibile via broswer ed è possibile usarlo collegandosi al server creato dal team tramite autenticazione. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle(requisiti,glossario,...) seguendo le linee guida di struttura descritte in questo documento.
+		Per tenere traccia dei casi d'uso e dei requisiti il team ha scelto di usare PragmaDB(https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Il programma è accessibile via browser ed è possibile usarlo collegandosi al server creato dal team tramite autenticazione. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle(requisiti,glossario,...) seguendo le linee guida di struttura descritte in questo documento.
 		\paragraph{Astah}
+		L'editor \gloss{uml} utilizzato è Astah,creato daChange Vision e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal team(classi,attività,sequenza e package).
 		\paragraph{Ide ancora da scegliere}
 	\subsubsection{Tecnologie utilizzate}
 	\paragraph{HTML5}
-	L'\gloss{html5} è un linguaggio di markup utilizzato per strutturare pagine web. Porta con se molte caratteristiche nuove rispetto al suo predecessore volte soprattutto a separare struttra,stile e contenuti,oltre a nuovi elementi che permettono di creare un sito web molto potente.
+	L'\gloss{html5} è un linguaggio di markup utilizzato per strutturare pagine web. Porta con se molte caratteristiche nuove rispetto al suo predecessore volte soprattutto a separare struttura, stile e contenuti, oltre a nuovi elementi che permettono di creare un sito web molto potente.
 	Esso verrà usato per la creazione della parte parte client del programma.
 	\paragraph{CSS3}
 	\gloss{Css3} è un linguaggio usato per la formattazione di documenti \gloss{html} e \gloss{xml}. Esso consente di definire l'aspetto e la formattazione della pagina. Viene utilizzato nella parte client per arricchire l'aspetto dell'applicativo client.
 	\paragraph{Javascript}
-	\gloss{Javascript} è un linguaggio orientato agli oggetti e agli eventi utilizzato comunemente per la parte cleint di un sito web. Esso permette di aggiungere effetti dinamici interattivi in base a eventi.
+	\gloss{Javascript} è un linguaggio orientato agli oggetti e agli eventi utilizzato comunemente per la parte client di un sito web. Esso permette di aggiungere effetti dinamici interattivi in base a eventi.
 	Viene utilizzato nella parte client per poter avere un edito interattivo utilizzabile.%da riscrivere quest'ultima frase 
 	\paragraph{Java tomcat o node.js}
 
