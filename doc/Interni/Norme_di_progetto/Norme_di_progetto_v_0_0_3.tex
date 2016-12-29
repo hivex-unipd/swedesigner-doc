@@ -122,7 +122,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
 \subsection{Documentazione}
-Per gestire la \gloss{documentazione} di progetto si è pensato, innanzitutto, di creare un \gloss{branch} a parte (intitolato \texttt{doc}) a partire dal branch \texttt{master} del nostro \gloss{repository}; questa scelta è stata dettata dal basso grado di dipendenza tra la documentazione e il resto delle parti della \gloss{configurazione} del prodotto. I documenti che svilupperemo sono i seguenti:
+La \gloss{documentazione} di progetto va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}. I documenti che svilupperemo sono i seguenti:
 \begin{itemize}
 	\item Documenti interni al gruppo:
 	\begin{description}
@@ -138,12 +138,12 @@ Per gestire la \gloss{documentazione} di progetto si è pensato, innanzitutto, d
 		\item[definizione di prodotto] rispetto alla specifica tecnica, decompone l'architettura in moduli a granda più fine, finché ogni modulo ha dimensione, coesione, complessità e accoppiamento tali per cui i moduli possano essere sviluppati in parallelo dai programmatori;
 		\item[glossario] riporta specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
 		\item[manuale utente] fornisce all'utente una guida completa ed esaustiva di tutte le funzionalità del prodotto;
-		\item[verbali] riporta i verbali delle riunioni del gruppo, sia quelle interne al gruppo sia quelle in presenza del committente.
+		\item[verbali] riporta i verbali delle riunioni del gruppo (sia quelle interne al gruppo sia quelle in presenza del committente), ognuna identificata univocamente dalla data.
 	\end{description}
 \end{itemize}
 Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
 
-\subsubsection{Ambiente di lavoro} I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultata essere quella in figura [figura...].
+\subsubsection{Ambiente di lavoro} I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultato essere quello in figura [figura...].
 
 \subsubsection{Nomi, formati e identificazione} Nome ed estensione dei file sono regolati nel seguente modo:
 \paragraph{Nome} Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
@@ -177,7 +177,21 @@ L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Og
 
 \subsubsection{Colori} Andrebbe minimizzato l'uso di colori, al fine di evitare ambiguità nel caso un documento venga stampato in bassa qualità.
 
-\subsection{Configurazione} \dots
+\subsection{Configurazione} \label{sec:config}
+Per gestire la configurazione del software si è scelto di utilizzare il sistema \gloss{Git}, appoggiandoci per questo alla piattaforma \gloss{Github}. Abbiamo scelto Github non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilitava ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
+\begin{description}
+	\item[\texttt{doc}] per la documentazione;
+	\item[\texttt{src}] per il codice sorgente.
+\end{description}
+
+\subsubsection{Branching} La vita di un \gloss{branch} (ramo) sottosta alle seguenti regole:
+\begin{itemize}
+	\item Il ramo \texttt{master} contiene solo elementi della configurazione approvati dal responsabile di progetto.
+	\item Il ramo \texttt{doc}, figlio di \texttt{master}, contiene documentazione non ancora approvata dal responsabile di progetto.
+	\item Il ramo \texttt{develop}, figlio di \texttt{master}, contiene codice sorgente non ancora approvato dal responsabile di progetto.
+	\item Il numero di rami va contenuto, affinché Git rimanga uno strumento e non diventi un peso per i membri del gruppo: la creazione di un nuovo ramo può avvenire solo previa autorizzazione del responsabile di progetto, che dovrà valutarne l'utilità.
+	\item Il \emph{merge} di un ramo va sottoposto ad un verificatore (tramite una \emph{merge request}) e va approvata dal responsabile di progetto.
+\end{itemize}
 
 \subsection{Qualità} \dots
 
