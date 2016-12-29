@@ -1,11 +1,13 @@
 % piano di progetto
 % da compilare con il comando pdflatex Esterni/Piano_di_progetto/Piano_di_progetto_v_x.x.x.tex
 
-\input {../../util/hx-ambiente}
-\version{0.0.1}
+\input{../../util/hx-ambiente}
+\version{0.0.5}
+\creaz{25 dicembre 2016}
 \author{\LB, \PB}
 \supervisor{\GG, \MM}
-\dest{Uso esterno}
+\uso{esterno}
+\dest{Prof. Tullio Vardanega, Zucchetti S.P.A.}
 \title{Piano di progetto}
 
 \renewcommand{\arraystretch}{1.5}
@@ -13,9 +15,10 @@
 \setcounter{secnumdepth}{4}
 
 \begin{document}
-%\maketitle
+\maketitle
 \include{diario}
 \tableofcontents
+\newpage
 
 \section{Introduzione}
 	\subsection{Scopo del documento}.
@@ -300,9 +303,82 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 				\item \textbf{Analisi dei requisiti}:  il rischio non si è mai verificato.
 			\end{itemize}
 		\end{itemize}
-\section{Pianificazione}
+\section{Pianificazione delle Attività}
 [Si rimanda a Norme di progetto v100 per il dettaglio del funzionamento di Asana]
-\section{Preventivo}
+Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha deciso di suddividere il progetto nelle seguenti fasi:
+\begin{itemize}
+	\item \textbf{Analisi dei Requisiti (AR)};
+	\item \textbf{"Consolidamento/ampliamento" dei Requisiti (C/AR)};
+	\item \textbf{Progettazione Architetturale (PA)};
+	\item \textbf{Progettazione di Dettaglio e Codifica (PDC)};
+	\item \textbf{Verifica e Validazione (VV)}.
+\end{itemize}
+In ognuna di queste fasi, vengono svolte attività di sviluppo del progetto che sono descritte più approfonditamente nel documento corrente.
+Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \gloss{diagrammi di Gantt}:"descrizione di come sono fatti in generale 
+questi diagrami(es milestone ecc)".
+\subsection{Suddivisione delle Attività}
+	\subsubsection{Analisi dei Requisiti}
+	\textbf{Periodo}: dal 29-11-2016 al 11-01-2017.
+	\\ Questo periodo inizia successivamente alla formazione del gruppo e finisce in corrispondenza della consegna dei documenti per la \textit{Revisione dei Requisiti}.
+	Questo perido prevede che vengano stilati i seguenti documenti:
+	\begin{itemize}
+		\item \textbf{Norme di Progetto}: in questo documento sono inserite tutte le norme che il \gloss{team} dovrà seguire e rispettare durante l'intero
+		svolgimento delle attività. Tale documento è redatto dall'\textit{Amministratore}, mentre il \textit{Verificatore} ha il compito di certificare che 
+		tali norme siano state rispettate da tutto il gruppo;
+		\item \textbf{Studio di Fattibilità}: in questo documento vengono analizzati i vari capitolati proposti. In ognuno di esso, è contenuta l'analisi
+		eseguita dal \gloss{team} che consiste nel "guardare il documento per scegliere cosa scrivere";
+		\item \textbf{Analisi dei Requisiti}: in questo documento sono raccolti tutti i requisiti progettuali necessari per comprendere più approfonditamente
+		il capitolato scelto con lo \textit{Studio di Fattibilità};
+		\item \textbf{Piano di Progetto}: questo documento è redatto dal \textit{Responsibile di Progetto} che organizza tutte le attività e stima le risorse,
+		costi e tempi necessari	per lo svolgimento del progetto;
+		\item \textbf{Piano di Qualifica}: questo documento è redatto dal \textit{Verificatore} che individua tutte le strategie di verifica e validazione che
+		il \gloss{team} deve adottare per il progetto per ottenere e consegnare un prodotto di qualità;
+		\item \textbf{Glossario}: questo documento viene steso da tutti i redattori in parallelo alla stesura degli altri documenti; esso contiene la 
+		spiegazione di alcuni termini presenti nei vari documenti al fine di chiarire il significato del termine stesso;
+		\item \textbf{Lettera di presentazione}: questo documento viene presentato al committente al fine di mostrare l'interesse del gruppo di partecipare
+		alla gara d'appalto.
+	\end{itemize}
+	[Gantt eccetera]
+	\subsubsection{"cons/amp" dei Requisiti}
+	\textbf{Periodo}: dal 24-01-2017 al xx-02-2017.
+	\\ Questo periodo inizia in concomitanza con la \textit{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio
+	della \textit{Progettazione Architetturale}. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare
+	l'\textit{Analisi dei Requisiti}), con le correzioni suggerite durante la \textit{Revisione dei Requisiti}.
+	[Gantt eccetera]
+	\subsubsection{Progettazione Architetturale}
+	\textbf{Periodo}: dal xx-02-2017 al 13-03-2017.	
+	\\ Questo periodo inizia subito dopo \textit{"cons/amp" dei Requisiti} e si conclude con la consegna dei documenti per la 
+	\textit{Revisione di Progettazione di "min/max"}.
+	La \textit{Progettazione Architetturale} prevede la stesura della progettazione a "basso/alto" livello e predeve lo svolgimento delle seguenti attività:
+	\begin{itemize}
+		\item \textbf{Incremento dei Documenti}: in questa attività verranno incrementati tutti i documenti della \textit{Progettazione Architetturale};
+		\item \textbf{Definizione di Prodotto/Specifica Tecnica}:............   .
+	\end{itemize}
+	[Gantt eccetera]
+	\subsubsection{Progettazione di Dettaglio e Codifica}
+	\textbf{Periodo}: dal 13-03-2017 al 18-04-2017.	
+	\\ Questo perido inizia subito dopo la \textit{Progettazione Architetturale} e si conclude con la consegna dei documenti per la \textit{Revisione di Qualifica"}.
+	La \textit{Progettazione di Dettaglio e Codifica} prevede la stesura del \textit{Definizione di Prodotto/Specifica Tecnica} e successivamente si inizierà
+	con la fase di codifica.
+	Le attività da svolgere sono le seguenti:
+	\begin{itemize}
+		\item \textbf{Incremento dei Documenti}: in questa attività verranno incrementati tutti i documenti basandosi sui risultati della \textit{Revisione di Prodotto}; 
+		\item \textbf{Deﬁnizione di Prodotto o Specifica Tecnica}: blabla;
+		\item \textbf{Codiﬁca}: in questa attività si procede allo sviluppo del codice del software da parte dei programmatori, attenendosi a quanto è riportato nella \textit{Deﬁnizione di Prodotto}; 
+		\item \textbf{Manuale Utente}: in questa attività si crea il documento destinato all'utente finale, che ha lo scopo di fornire le linee guida per il corretto utilizzo del software.
+	\end{itemize}
+	[Gantt eccetera]
+	\subsubsection{Verifica e Validazione}
+	\textbf{Periodo}: dal 18-04-2017 al 15-05-2017.
+	\\ Questo perido inizia subito dopo la \textit{Progettazione di Dettaglio e Codifica} e si conclude con la consegna del prodotto finale alla \textit{Revisione di Accettazione}.
+	In questo periodo vengono effettuati i test del sowtfare, atti a garantire un prodotto finale che soddisfi i requisiti contenuti nell'\testit{Analisi dei Requisiti}.
+	Le attività da svolgere sono:
+	\begin{itemize}
+		\item \textbf{Test}: effettuare dei test per il collaudo del sistema;
+		\item \textbf{Incremento e Verifica dei Documenti}: in questa attività verranno incrementati verificati tutti i documenti, basandosi sui risultati della \textit{Revisione di Qualifica}.
+	\end{itemize}
+	[Gantt eccetera]	
+	\section{Preventivo}
 \section{Consuntivo di periodo}
 
 \end{document}
