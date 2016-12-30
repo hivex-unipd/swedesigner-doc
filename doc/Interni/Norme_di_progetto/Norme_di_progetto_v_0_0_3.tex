@@ -227,7 +227,40 @@ Per gestire la configurazione del software si è scelto di utilizzare il sistema
 \subsection{Qualità} \dots
 
 \subsection{Verifica} \dots
-
+    L'attività di verifica consiste nel controllare i prodotti in modo che rispettino i requisiti.
+ \subsubsection{Analisi}
+	\paragraph{Statica}
+	L'analisi statica è una tecnica che permette di individuare anomalie all'interno di documenti e software durante tutto il loro ciclo di vita. È applicabile tramite due modi diversi:
+	\begin{itemize}
+		\item \texttt{\gloss{Walkthrough}}: la tecnica di \gloss{walkthrough}prevede di leggere il documento alla fine di ricercare anoamlie ed errori,senza però sapere di preciso quali cercare. È una tecnica molto utile nelle fasi inziali di sviluppo,ossia quando il team è ancora inesperto e non si conosce la natura degli errori. Viene adottata dai verificatori i quali scriveranno nella lista di controllo gli errori più frequenti. Quando questa lista sarà abbastanza grande si passera alla tecnica di \gloss{inspection}
+		\item \texttt{\gloss{Inspection}}: la tecnica di \gloss{inspection} prevede di utilizzare la lista di controllo in modo tale da eseguire una ricerca molto più mirata e dettagliata degli errori. L'efficacia di questa tecnica aumenta man mano che la lista di controllo si espande.
+	\end{itemize}
+	\paragraph{Dinamica}
+	L'analisa dinamica viene effettuata tramite dei test sul software prodotto in modo da verificarne la correttezza.
+ 
+ \subsubsection{Test}
+	\paragraph{Unità}
+		I test di unità hanno lo scopo di verificare che ogni singolo componente(unità) componente funzioni correttamente e non emergano errori.
+		Vengono identificati dalla seguente sintassi:
+		\centerline{T[Codice Test]}
+	\paragraph{Integrazione}
+		I test di integrazione consentono di controllare che più unita funzionino assieme.
+		Vengono identificati dalla seguente sintassi:
+		\centerline{TI[Codice Test]}
+	\paragraph{Sistema}
+		I test di sistema vengono eseguiti su un prodotto ritenuto completo per verificarne i requisiti.
+		Vengono identificati dalla seguente sintassi:
+		\centerline{TS[Codice Requisito]}
+	\paragraph{Regressione}
+		Il test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche.
+		Vengono identificati dalla seguente sinstassi:
+		\centerline{TR[Codice Test]}
+	\paragraph{Validazione}
+		I test di validazione vengono eseguiti con il proponente per collaudare il prodotto.
+		Vengono identificati dalla seguente sintassi:
+		\centerline{TV[Codice Requisito]}
+ \subsubsection{strumenti}
+	%ancora da discutere
 \subsection{Validazione} \dots
 
 
