@@ -11,6 +11,8 @@
 \dest{Tutti i membri del gruppo}
 \title{Norme di progetto}
 
+
+
 \begin{document}
 \maketitle
 \include{diario}
@@ -82,6 +84,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\item un requisito padre se presente;
 		\item la fonte da cui deriva;
 		\item se è stato effettivamente implementato.
+		\end{itemize}
 		\paragraph{Casi d'uso}
 		Ogni caso d'uso viene identificato nel seguente modo:
 		\centerline{UCx}
@@ -179,8 +182,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 \subsubsection{Nomi, formati e identificazione} Nome ed estensione dei file sono regolati nel seguente modo:
 \paragraph{Nome} Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
 \paragraph{Formato} Ogni documento dev'essere in formato gloss{Latex} con estensione \texttt{.tex} (esportabile in formato PDF su foglio A4); la prima \gloss{versione} di un documento può essere in altri formati ma va presto sostituita da una versione in Latex. I file Latex che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne “hx-ambiente”, per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
-\paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”).
-\paragraph{Numero di versionamento} Il numero di versionamento di un documento si compone di tre numeri separati da un punto: il primo viene incremementato ad ogni \textbf{approvazione} del documento da parte del \gloss{responsabile di progetto}; il secondo ad ogni sua \textbf{revisione} da parte di un \gloss{verificatore}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale apportata da un redattore. L'incremento di un numero azzera i numeri alla destra di esso.
+\paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”), che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
 
 \subsubsection{Struttura di un documento}
 \paragraph{Frontespizio} Ogni documento che sia più lungo di una pagina deve iniziare con un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento e aggiustare i parametri con i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}; per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}.
@@ -203,10 +205,13 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	\item La punteggiatura è seguita ma non preceduta da uno spazio.
 	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{framework} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione in italiano.
 	\item Gli elementi di un elenco sono separati da un punto e virgola (quindi iniziano con lettera minuscola), tranne l'ultimo che si conclude con un punto. Nel caso che anche un solo elemento dell'elenco si componga di più frasi separate da segno di punteggiatura forte, tutti gli elementi dell'elenco iniziano per maiuscola e finiscono con un punto. In entrambi i casi, ogni elenco è introdotto dai due punti.
+	\item Le abbreviazioni vanno scritte interamente in maiuscolo e definite nel glossario.
 \end{itemize}
 L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
 
-\subsubsection{Colori} Andrebbe minimizzato l'uso di colori, al fine di evitare ambiguità nel caso un documento venga stampato in bassa qualità.
+\subsubsection{Accessibilità per la stampa} Un documento dev'essere fruibile anche se stampato. Per questo, i collegamenti web vanno scritti esplicitamente con \texttt{\textbackslash url\{indirizzo.del.collegamento\}} anziché nascosti da una parola del testo (come in \texttt{\textbackslash href\{indirizzo.del.collegamento\}\{clicca qui\}}). Inoltre, va minimizzato l'uso di colori, al fine di evitare ambiguità se un documento viene stampato in bassa qualità.
+
+
 
 \subsection{Configurazione} \label{sec:config}
 Per gestire la configurazione del software si è scelto di utilizzare il sistema \gloss{Git}, appoggiandoci per questo alla piattaforma \gloss{Github}. Abbiamo scelto Github non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilitava ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
@@ -215,14 +220,30 @@ Per gestire la configurazione del software si è scelto di utilizzare il sistema
 	\item[\texttt{src}] per il codice sorgente.
 \end{description}
 
-\subsubsection{Branching} La vita di un \gloss{branch} (ramo) sottosta alle seguenti regole:
+\subsubsection{Identificazione e versionamento} \label{sec:idvers}
+Definiamo la configurazione del nostro software come composta dai seguenti elementi:
+\begin{itemize}
+	\item directory contenenti codice sorgente e materiale correlato;
+	\item singoli file contenenti un documento.
+\end{itemize}
+Ogni elemento della configurazione (quindi la directory per il codice e il singolo file per i documenti) deve avere un numero di versionamento, che lo identifica nel tempo. Tale numero si compone di tre numeri separati da un punto: il primo viene incremementato ad ogni \textbf{approvazione} dell'elemento da parte del \gloss{responsabile di progetto}; il secondo ad ogni sua \textbf{revisione} da parte di un \gloss{verificatore}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso. L'incremento di un numero azzera i numeri alla sua destra.
+
+\subsubsection{Controllo della configurazione} I cambiamenti \emph{sostanziali} nella configurazione del software vanno controllati e registrati; essi possono nascere dal piano di progetto o dall'iniziativa di un membro.
+\paragraph{Cambiamenti pianificati} I cambiamenti pianificati nascono dal piano di progetto. In questo caso il cambiamento è già controllato quindi basta registrarlo aggiornando il numero di versionamento dell'elemento che è cambiato nella configurazione.
+\paragraph{Cambiamenti non pianificati} I cambiamenti \emph{non} pianificati nascono dall'iniziativa di un membro. Un cambiamento di questo tipo va proposto agli altri membri del gruppo sull'apposito canale \gloss{Slack}; nel caso la maggioranza sia d'accordo e riesca a fornire una motivazione del cambiamento, il responsabile di progetto incarica un amministratore di implementarlo e motivarlo nella \gloss{documentazione}.
+\paragraph{Branching} Nel caso si debba cambiare un elemento della configurazione da cui dipendono altri elementi --- modificando quindi gli elementi dipendenti --- il membro del gruppo che è stato incaricato di tale cambiamento deve creare un \gloss{branch} nel repository. Un branch (ramo) sottosta alle seguenti regole:
 \begin{itemize}
 	\item Il ramo \texttt{master} contiene solo elementi della configurazione approvati dal responsabile di progetto.
 	\item Il ramo \texttt{doc}, figlio di \texttt{master}, contiene documentazione non ancora approvata dal responsabile di progetto.
 	\item Il ramo \texttt{develop}, figlio di \texttt{master}, contiene codice sorgente non ancora approvato dal responsabile di progetto.
 	\item Il numero di rami va contenuto, affinché Git rimanga uno strumento e non diventi un peso per i membri del gruppo: la creazione di un nuovo ramo può avvenire solo previa autorizzazione del responsabile di progetto, che dovrà valutarne l'utilità.
-	\item Il \emph{merge} di un ramo va sottoposto ad un verificatore (tramite una \emph{merge request}) e va approvata dal responsabile di progetto.
+	\item Il \emph{merge} di un ramo va sottoposto ad un verificatore (tramite una \emph{merge request}) e va approvato dal responsabile di progetto.
 \end{itemize}
+
+\subsubsection{Stato della configurazione}
+Nel ramo \texttt{master} del repository, va pubblicato lo stato attuale della configurazione, cioè va riportato il numero di versione dell'ultima approvazione formale dell'\emph{intero} software, a partire dalla versione zero (non ancora approvata).
+
+
 
 \subsection{Qualità} \dots
 
@@ -267,10 +288,10 @@ Per gestire la configurazione del software si è scelto di utilizzare il sistema
 
 %%% Processi organizzativi
 
-\section{Processi organizzativi}
+\section{Processi organizzativi} \dots
 
-\subsection{Gestione organizzativa}
+\subsection{Gestione organizzativa} \dots
 
-\subsection{Formazione}
+\subsection{Formazione} \dots
 
 \end{document}

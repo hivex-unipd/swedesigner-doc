@@ -13,4 +13,6 @@
 *.aux
 *.out
 *.toc
+*.glo
+*.ist
 *.pdf
