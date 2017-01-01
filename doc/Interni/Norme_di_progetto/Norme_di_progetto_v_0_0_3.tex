@@ -87,7 +87,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 			
 		\end{itemize}
 		
-	    Un requisito ha inoltre specificato:
+		Un requisito ha inoltre specificato:
 		\begin{itemize}
 		\item una breve descrizione di esso;
 		\item un requisito padre se presente;
@@ -203,6 +203,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	\item[elenchi numerati] ambiente \texttt{enumerate} --- elencano gli elementi di una sequenza;
 	\item[elenchi descrittivi] ambiente \texttt{description} --- elencano gli elementi di un dizionario di termini.
 \end{description}
+Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a quelli “in linea” (cioè separati solo da un punto e virgola), per aumentare la chiarezza del testo.
 \paragraph{Intestazione} Ogni pagina dev'essere numerata e deve riportare in testata il titolo del documento e della sezione che ospita. % e magari il nome/logo del gruppo e il nome del progetto
 
 \subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in Latex) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
@@ -210,7 +211,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 \subsubsection{Termini del glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con un pedice (\gloss{[termine in glossario]}) tramite la macro \texttt{\textbackslash gloss\{termine\}}, in modo da far capire che si trova nel glossario.
 
 %manuale in inglese? seriamente? 
-\subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano. Il manuale utente viene anche tradotto in inglese, data la natura open-source del progetto. I documenti in italiano osservano le usuali regole grammaticali italiane, tra cui evidenziamo:
+\subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano, con uno stile chiaro e poco articolato. Il manuale utente viene anche tradotto in inglese, data la natura open-source del progetto. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
 \begin{itemize}
 	\item La punteggiatura è seguita ma non preceduta da uno spazio.
 	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{framework} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione in italiano.
@@ -258,41 +259,48 @@ Nel ramo \texttt{master} del repository, va pubblicato lo stato attuale della co
 
 \subsection{Qualità} \dots
 
-\subsection{Verifica} \dots
-    L'attività di verifica consiste nel controllare i prodotti in modo che rispettino i requisiti.
- \subsubsection{Analisi}
-	\paragraph{Statica}
-	L'analisi statica è una tecnica che permette di individuare anomalie all'interno di documenti e software durante tutto il loro ciclo di vita. È applicabile tramite due modi diversi:
-	\begin{itemize}
-		\item \texttt{\gloss{Walkthrough}}: la tecnica di \gloss{walkthrough}prevede di leggere il documento alla fine di ricercare anoamlie ed errori,senza però sapere di preciso quali cercare. È una tecnica molto utile nelle fasi inziali di sviluppo,ossia quando il team è ancora inesperto e non si conosce la natura degli errori. Viene adottata dai verificatori i quali scriveranno nella lista di controllo gli errori più frequenti. Quando questa lista sarà abbastanza grande si passera alla tecnica di \gloss{inspection}
-		\item \texttt{\gloss{Inspection}}: la tecnica di \gloss{inspection} prevede di utilizzare la lista di controllo in modo tale da eseguire una ricerca molto più mirata e dettagliata degli errori. L'efficacia di questa tecnica aumenta man mano che la lista di controllo si espande.
-	\end{itemize}
-	\paragraph{Dinamica}
-	L'analisa dinamica viene effettuata tramite dei test sul software prodotto in modo da verificarne la correttezza.
+\subsection{Verifica}
+Il processo di verifica consiste nel controllare i prodotti in modo che rispettino i requisiti. % processi, oltre ai prodotti?
+La verifica è un processo analitico che va implementato in due passi successivi:
+\begin{enumerate}
+	\item attività di analisi statica;
+	\item attività di analisi dinamica.
+\end{enumerate}
+
+%%% ho pensato di suddividere così questa sezione:
+
+	\subsubsection{Analisi statica}
+	L'analisi statica è una tecnica che permette di individuare anomalie all'interno di documenti e software durante tutto il loro ciclo di vita. È applicabile tramite due tecniche diverse:
+	\begin{description}
+		\item[\gloss{Walkthrough}] Questa tecnica prevede di scorrere il documento alla ricerca di anomalie ed errori, senza però sapere di preciso quali cercare. È una tecnica molto utile nelle fasi inziali di sviluppo, ossia quando il gruppo è ancora inesperto e non si conosce la natura degli errori. Dev'essere adottata dai verificatori, i quali scriveranno nella lista di controllo gli errori più frequenti; quando questa lista sarà abbastanza grande si passerà alla tecnica di \gloss{inspection}.
+		\item[Inspection] Con questa tecnica, il verificatore deve utilizzare la lista di controllo in modo tale da eseguire una ricerca molto più mirata e dettagliata degli errori. L'efficacia di questa tecnica aumenta man mano che la lista di controllo si espande.
+	\end{description}
  
- \subsubsection{Test}
-	\paragraph{Unità}
-		I test di unità hanno lo scopo di verificare che ogni singolo componente(unità) componente funzioni correttamente e non emergano errori.
+	\subsubsection{Analisi dinamica}
+	L'analisa dinamica viene effettuata tramite dei test sul software prodotto in modo da verificarne la correttezza.
+	\paragraph{Test di unità}
+		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola.
 		Vengono identificati dalla seguente sintassi:
 		\centerline{T[Codice Test]}
-	\paragraph{Integrazione}
-		I test di integrazione consentono di controllare che più unita funzionino assieme.
+	\paragraph{Test di integrazione}
+		I test di integrazione consentono di controllare che più unità funzionino assieme in modo corretto.
 		Vengono identificati dalla seguente sintassi:
 		\centerline{TI[Codice Test]}
-	\paragraph{Sistema}
+	\paragraph{Test di sistema}
 		I test di sistema vengono eseguiti su un prodotto ritenuto completo per verificarne i requisiti.
 		Vengono identificati dalla seguente sintassi:
 		\centerline{TS[Codice Requisito]}
-	\paragraph{Regressione}
-		Il test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche.
+	\paragraph{Test di regressione}
+		Un test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche.
 		Vengono identificati dalla seguente sinstassi:
 		\centerline{TR[Codice Test]}
-	\paragraph{Validazione}
+	\paragraph{Test di validazione}
 		I test di validazione vengono eseguiti con il proponente per collaudare il prodotto.
 		Vengono identificati dalla seguente sintassi:
 		\centerline{TV[Codice Requisito]}
  \subsubsection{strumenti}
 	%ancora da discutere
+
 \subsection{Validazione} \dots
 
 
