@@ -35,14 +35,23 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 \end{itemize}
 
 \subsection{Scopo del prodotto}
-\scopo % da ../../util/hx-macro.sty
+\scopo
 
-	\subsection{Glossario}
-	\subsection{Riferimenti}
-		\subsubsection{Normativi}
-		\begin{itemize}
-		\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}
-		\end{itemize}
+\subsection{Glossario}
+\presgloss
+
+\subsection{Riferimenti}
+
+\subsubsection{Riferimenti normativi}
+\begin{itemize}
+	\item Capitolato d'appalto dell'azienda \ZU: \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf};
+	\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}.
+\end{itemize}
+
+\subsubsection{Riferimenti informativi}
+\begin{itemize}
+	\item \emph{L'arte di scrivere in Latex}: \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
+\end{itemize}
 
 
 
@@ -53,7 +62,8 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 \subsection{Fornitura}
 
 	\subsubsection{Studio di fattibilità}
-	La fase antecedente alla realizzazione del \gloss{progetto} consiste nel fissare delle riunioni in modo che il \gloss{team} possa discutere di esso. Sarà poi compito degli analisti redigere lo \textit{studio di fattibilità}, la cui struttura è specificata a seguire: %inserire struttura studio di fattibilità
+	La fase antecedente alla realizzazione del \gloss{progetto} consiste nel fissare delle riunioni in modo che il \gloss{team} possa discutere di esso. Sarà poi compito degli analisti redigere lo \textit{studio di fattibilità},sulla base di cosa è emerso dai dalle riunioni,come ad esempio il dominio applicativo del capitolato;
+
 
 \subsection{Sviluppo}
 	\subsubsection{Analisi dei requisiti}
@@ -62,8 +72,9 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\paragraph{Requisiti}%da guardare come esporta pragmadb e nel caso correggere
 		Dopo aver individuato i requisiti tramite le varie riunioni, è compito degli analisti redarne un elenco con la seguente struttura:
 		
-		\centerline{R[Importanza][Tipo][ID]}
-		%ma come sono allineati?
+		\begin{equation}
+			R[Importanza][Tipo][ID]
+		\end{equation}
 		\begin{itemize}
 		
 			\item[Importanza]: indica se il requisito è:
@@ -86,18 +97,19 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 			\item [ID]: codice identificativo univoco del requisito.
 			
 		\end{itemize}
-		
 		Un requisito ha inoltre specificato:
 		\begin{itemize}
-		\item una breve descrizione di esso;
-		\item un requisito padre se presente;
-		\item la fonte da cui deriva;
-		\item se è stato effettivamente implementato.
+			\item una breve descrizione di esso;
+			\item un requisito padre se presente;
+			\item la fonte da cui deriva;
+			\item se è stato effettivamente implementato.
 		\end{itemize}
 		\paragraph{Casi d'uso}
 		Ogni caso d'uso viene identificato nel seguente modo:
-		\centerline{UCx}
-		Ogni macro caso d'uso sarà poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta avere altri figli).
+		\begin{equation}
+			UC[x]
+		\end{equation}
+		Ogni macro caso d'uso sarà poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta possedere una gerarchia di figli).
 		Inoltre ogni caso d'uso dovrà avere le seguenti proprietà:
 		\begin{itemize}
 		\item Nome: Nome identificativo del caso d'uso;
@@ -111,51 +123,48 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\item Scenari alternativi: descrizione tramite casi d'uso non appartenenti al flusso principale.
 		\end{itemize}
 	\subsubsection{Progettazione}
-	Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
-	La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard UML 2.0:
-	\begin{itemize}
-		\item \gloss{Diagrammi delle classi}:descrivono i tipi di entità(classi) e le relazioni tra loro.
-		\item \gloss{Diagrammi dei package}:raggruppa un numero di elementi UML in una sola unità di livello più alto.
-		\item \gloss{Diagrammi di attività}:descrive in dettaglio un algoritmo
-		\item \gloss{Diagrammi di sequenza}:descrive uno scenario,dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
-		\end{itemize}
-	\subsubsection{Codifica}%da finire qunado finalmente avremo scelto cosa usare
-	Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
-		\paragraph{Formattazione del codice}
-		Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
-			\begin{itemize}
-				\item i nomi di variabili, classi, funzioni e metodi sono scritti in inglese;
-				\item i nomi composti dovranno avere la prima lettera minuscola e la lettera maiuscola ad ogni iniziale della nuova parola che compone il nome.
-				\item è opportuno scegliere il nome dei vari elementi in modo coerente con la loro funzione;
+	% teniamo questo per una revisione successiva
+	% Il compito dei progettisti consiste di progettare l'architettura del software.
+	% La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard UML 2.0:
+	% \begin{itemize}
+		% \item \gloss{Diagrammi delle classi}:descrivono i tipi di entità(classi) e le relazioni tra loro.
+		% \item \gloss{Diagrammi dei package}:raggruppa un numero di elementi UML in una sola unità di livello più alto.
+		% \item \gloss{Diagrammi di attività}:descrive in dettaglio un algoritmo
+		% \item \gloss{Diagrammi di sequenza}:descrive uno scenario,dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
+		% \end{itemize}
+		
+		La sezione di progettazione(norme e strumenti) verrà definita in una sezione successiva di questo documento.
+	\subsubsection{Codifica}
+	% stessa cosa di sopra
+	% Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
+		% \paragraph{Formattazione del codice}
+		% Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
+			% \begin{itemize}
+				% \item i nomi di variabili, classi, funzioni e metodi sono scritti in inglese;
+				% \item i nomi composti dovranno avere la prima lettera minuscola e la lettera maiuscola ad ogni iniziale della nuova parola che compone il nome.
+				% \item è opportuno scegliere il nome dei vari elementi in modo coerente con la loro funzione;
 				
-			\end{itemize}
-		\paragraph{Commenti}
-		Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
-		\begin{itemize}
-			\item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione;
-			\item Ogni commento dovrà essere relativo alla parte di codice interessata;
-			\item Ogni commento dovrà descrivere in modo breve ma preciso la parte di codice interessata;
-			\item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
-			\item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
-			\item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
-			\item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso javascript
-		\end{itemize}
+			% \end{itemize}
+		% \paragraph{Commenti}
+		% Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
+		% \begin{itemize}
+			% \item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione;
+			% \item Ogni commento dovrà essere relativo alla parte di codice interessata;
+			% \item Ogni commento dovrà descrivere in modo breve ma preciso la parte di codice interessata;
+			% \item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
+			% \item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
+			% \item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
+			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso javascript
+		% \end{itemize}
+		
+		La sezione di codifica(norme e strumenti) verrà definita in una sezione successiva di questo documento.
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
 		Per tenere traccia dei casi d'uso e dei requisiti il team ha scelto di usare PragmaDB (https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Il programma è accessibile via browser ed è possibile usarlo collegandosi al server creato dal team tramite autenticazione. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle(requisiti,glossario,...) seguendo le linee guida di struttura descritte in questo documento.
 		\paragraph{Astah}
 		L'editor \gloss{UML} utilizzato è \gloss{Astah}, creato da \textit{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal team(classi, attività, sequenza e package).
-		\paragraph{IDE ancora da scegliere}
-	\subsubsection{Tecnologie utilizzate}
-	\paragraph{HTML5}
-	L'\gloss{html5} è un linguaggio di markup utilizzato per strutturare pagine web. Porta con se molte caratteristiche nuove rispetto al suo predecessore volte soprattutto a separare struttura, stile e contenuti, oltre a nuovi elementi che permettono di creare un sito web molto potente.
-	Esso verrà usato per la creazione della parte parte client del programma.
-	\paragraph{CSS3}
-	\gloss{Css3} è un linguaggio usato per la formattazione di documenti \gloss{html} e \gloss{xml}. Esso consente di definire l'aspetto e la formattazione della pagina. Viene utilizzato nella parte client per arricchire l'aspetto dell'applicativo client.
-	\paragraph{Javascript}
-	\gloss{Javascript} è un linguaggio orientato agli oggetti e agli eventi utilizzato comunemente per la parte client di un sito web. Esso permette di aggiungere effetti dinamici interattivi in base a eventi.
-	Viene utilizzato nella parte client per poter avere un edito interattivo utilizzabile.%da riscrivere quest'ultima frase 
-	\paragraph{Java tomcat o node.js}
+		%visto che non specifichiamo ne codifica ne progettazione possiamo ometterlo come i leaf.
+		%\paragraph{IDE ancora da scegliere}
 
 
 
@@ -279,25 +288,31 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\subsubsection{Analisi dinamica}
 	L'analisa dinamica viene effettuata tramite dei test sul software prodotto in modo da verificarne la correttezza.
 	\paragraph{Test di unità}
-		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola.
-		Vengono identificati dalla seguente sintassi:
-		\centerline{T[Codice Test]}
+		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola. Vengono identificati dalla seguente sintassi:
+		\begin{equation}
+			T[Codice Test]
+		\end{equation}
 	\paragraph{Test di integrazione}
-		I test di integrazione consentono di controllare che più unità funzionino assieme in modo corretto.
-		Vengono identificati dalla seguente sintassi:
-		\centerline{TI[Codice Test]}
+		I test di integrazione consentono di controllare che più unità funzionino assieme in modo corretto. Vengono identificati dalla seguente sintassi:
+		\begin{equation}
+			TI[Codice Test]
+		\end{equation}
 	\paragraph{Test di sistema}
-		I test di sistema vengono eseguiti su un prodotto ritenuto completo per verificarne i requisiti.
-		Vengono identificati dalla seguente sintassi:
-		\centerline{TS[Codice Requisito]}
-	\paragraph{Test di regressione}
-		Un test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche.
-		Vengono identificati dalla seguente sinstassi:
-		\centerline{TR[Codice Test]}
+		I test di sistema vengono eseguiti su un prodotto ritenuto completo per verificarne i requisiti. Vengono identificati dalla seguente sintassi:
+		\begin{equation}
+			TS[Codice Requisito]
+		\end{equation}
+	%abbiamo detto di toglierli?
+	% \paragraph{Test di regressione}
+		% Un test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche. Vengono identificati dalla seguente sinstassi:
+		% \begin{equation}
+			% TR[Codice Test]
+		% \end{equation}
 	\paragraph{Test di validazione}
-		I test di validazione vengono eseguiti con il proponente per collaudare il prodotto.
-		Vengono identificati dalla seguente sintassi:
-		\centerline{TV[Codice Requisito]}
+		I test di validazione vengono eseguiti con il proponente per collaudare il prodotto. Vengono identificati dalla seguente sintassi:
+		\begin{equation}
+			TV[Codice Requisito]
+		\end{equation}
  \subsubsection{strumenti}
 	%ancora da discutere
 
@@ -308,6 +323,80 @@ La verifica è un processo analitico che va implementato in due passi successivi
 %%% Processi organizzativi
 
 \section{Processi organizzativi} \dots
+\subsection{Norme}
+\subsubsection{Ruoli}
+	Verrano assegnati dei ruoli corrispondenti a quelli professionali per lo sviluppo del progetto.
+	Ogni membro del team è tenuto a ricoprire almeno una volta tutti i ruoli sottoindicati. Verrà inoltre garantito che non si presentino conflitti di interesse se una persona è sia redattore che verificatore di uno stesso documento. È possibile ricoprire più ruoli contemporaneamente.
+		\paragraph{Responsabile di progetto}
+		Il \textit{responsabile di progetto} detiene la responsabilità di tutto il team ed il potere decisionale. Si occupa inoltre delle comunicazione esterne del team.
+		In particolare ha responsabilità riguardo a:
+		\begin{itemize}
+			\item Coordinamento,pianificazione e controllo delle attività;
+			\item Gestione delle risorse;
+			\item Analisi e gestione dei rischi;
+			\item Approvazione dei documenti;
+			\item Comunicazioni esterne;
+			\item Assegnazione compiti ai vari individui;
+			\item Convocazioni riunioni interne.
+		\end{itemize}
+		I suoi compiti saranno quindi:
+		\begin{itemize}
+			\item Redigere organigramma e il piano di progetto;
+			\item Collaborare nella stesura del piano di qualifica;
+			\item Assicurarsi che le sttività svolte seguano le indicazioni delle norme di progetto;
+			\item Garantire che vengano rispettati i ruoli;
+			\item Evitare conflitti di interesse tra redattori e verificatori;
+			\item Assegnare e gestire task agli altri membri del gruppo;
+			\item Approvare in modo definito i documenti.
+		\end{itemize}
+		\paragraph{Amministratore}
+		L'\textit{amministratore} ha la responsabilità sull'ambiente di lavoro.
+		I suoi compiti sono quindi:
+		\begin{itemize}
+			\item Gestione ambiente di lavoro attrezzando il team di strumenti necessari;
+			\item Aggiungere all'ambiente di lavoro strumenti di automazione del lavoro;
+			\item Gestione e versionamento della documentazione;
+			\item Controllo versioni e configurazioni del prodotto;
+			\item Risoluzione problemi riguardanti la gestione delle risorse e dei processi;
+		\end{itemize}
+		L'\textit{amministratore} è incaricato di redigere le \textit{norme di progetto},la parte del \textit{piano di qualifica} riguardante metodi e strumenti di verifica e collabora alla stesuraq del \textit{piano di progetto}.
+		\paragraph{Analista}
+		L'\textit{analista} è responsabile di tutto quello che riguarda l'analisi del problema.
+		In particolare dovrà:
+		\begin{itemize}
+			\item Studiare a fondo natura e problematiche del prodtto che si andrà a realizzare;
+			\item Classificare requisiti;
+			\item Redigere diagrammi dei casi d'uso
+			\item Produrre una specifica di progetto precisa in ogni sui punto e comprensibile dal \gloss{proponente},dal \gloss{committente} e dai progettisti.
+			\item Redigere lo studio di fattibilità e l'analisi dei requisiti.
+		\end{itemize}
+		L'analista redige lo \textit{studio di fattibilità} e l'\textit{analisi dei requisiti}.
+		\paragraph{Progettista}
+		Il \textit{progettista} è responsabile delle attività di progettazione. Si occupa più in dettaglio di:
+		\begin{itemize}
+			
+			\item effettuare scelte progettuali volte ad applicare al prodotto soluzioni note ed ottimizzate;
+			\item effettuare scelte prodedurali volte ad avere un prodotto facilmente espandibile e mantenibile;
+			\item produrre una soluzione comprensibile e soddsfacente per il committente.
+		\end{itemize}
+		Il \textit{progettista} redige la specifica tecnica,la definizione di prodotto e le sezione del \textit{piano di qualifica} riguardanti le \gloss{metriche} ative di verifica della programmazione.
+		\paragraph{Programmatore}
+		Il \textit{programmatore} è responsabile delle attività di codifica e delle comnenti ausialiarie necessari per il processo di verifica.
+		In particolare i suoi compiti sono:
+		\begin{itemize}
+			\item Implementare in modo rigoroso le soluzioni descritte dal \textit{progettista};
+			\item Scrivere codice documentato e che rispetti le convenzioni e le metriche stabilite;
+			\item Implementare i test da eseguire sul codice scritto necessari per l'attività di verifica.
+		\end{itemize}
+		Il \textit{programmatore}  ha il compito di redigere il manuale utente. 
+		\paragraph{Verificatore}
+		Il verificatore è responsabile delle attività di verifica.
+		I suoi compiti sono:
+		\begin{itemize}
+			\item Controllare la conformità del prodotto ad ogni stadio del sup ciclo di vita;
+			\item garantire che le attività attuate seguano le norme stabilite.
+		\end{itemize}
+		Il \textit{verificatore} redige la sezione del \textit{piano di qualifica} che illustra l'esito delle verifiche effettuate.
 
 \subsection{Gestione organizzativa} \dots
 
