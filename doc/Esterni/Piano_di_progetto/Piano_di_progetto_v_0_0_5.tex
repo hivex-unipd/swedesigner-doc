@@ -7,12 +7,8 @@
 \author{\LB, \PB}
 \supervisor{\GG, \MM}
 \uso{esterno}
-\dest{Prof. Tullio Vardanega, Zucchetti S.P.A.}
+\dest{\TV, \ZU}
 \title{Piano di progetto}
-
-\renewcommand{\arraystretch}{1.5}
-\setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4}
 
 \begin{document}
 \maketitle
@@ -23,42 +19,36 @@
 \section{Introduzione}
 	\subsection{Scopo del documento}.
 
-	Il presente documento illustra la pianificazione adottata dal gruppo {\hx} finalizzata alla produzione del progetto {\proj}. In esso vi sono contenuti:
+	Il presente documento illustra la pianificazione adottata dal gruppo \hx{} finalizzata alla produzione del progetto \proj{}. In esso vi sono contenuti:
 \begin{itemize}
 	\item Scelta del modello di sviluppo adottato;
 	\item Analisi e trattamento dei rischi;
 	\item Pianificazione delle attività;
 	\item Preventivo delle risorse necessarie per lo svolgimento del progetto;
-    \item Consuntivo di periodo.
+           \item Consuntivo di periodo.
 \end{itemize}
 
 	\subsection{Scopo del prodotto}
-	Lo scopo del prodotto è quello di realizzare un editor di diagrammi \gloss{UML} che implementi il diagramma delle classi e il diagramma delle attività.	Il sistema dovrà fornire le seguenti funzionalità:
-	\begin{itemize}
-		\item salvare un progetto in un file "da definire";
-		\item fornire all'utente, attraverso un interfaccia, la possibilità di realizzare i propri diagrammi;
-		\item generare un applicativo \gloss{Java} dai diagrammi forniti dall'utente;
-	\end{itemize}
-	Il software finale dunque, sarà una \gloss{Web Application} realizzata con \gloss{HTML5}, \gloss{CSS3} e \gloss{JavaScript} \gloss{lato client} e "da decidere!!!!!!!!!!!!Java o Javascript \gloss{lato server}.
+	\scopo{}
 	
 	\subsection{Glossario}
-	Al fine di evitare ogni ambiguità circa i termini tecnici dominio del progetto, gli acronimi e le parole che necessitano di ulteriori spiegazioni saranno nei vari documenti marcate con il pedice \gloss{} e quindi presenti nel documento \textit{Glossario}.
+	\presgloss{}
 	\subsection{Riferimenti}
 		\subsubsection{Normativi}
 		\begin{itemize}
-			\item \textit{Norme_di_progetto_v_1_0_0};
+			\item \emph{\NdP};
 			\item \textbf{Capitolato d'appalto C6: \proj}:
-			\\ \href{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6p.pdf}{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6p.pdf};
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6p.pdf};
 			\item \textbf{Regolamento del progetto didattico}:
-			\\ \href{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf}{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf};
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf};
 			\item \textbf{Vincoli di organigramma e dettagli tecnico-economici}:
-			\\ \href{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/PD01b.html}{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/PD01b.html}.
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/PD01b.html}.
 			\
 		\end{itemize}
 		\subsubsection{Informativi}
 		\begin{itemize}
 			\item \textbf{Slides del corso di Ingegneria del Software}:
-			\\ \href{http://www.math.unipd.it/~tullio/IS-1/2016/}{http://www.math.unipd.it/~tullio/IS-1/2016/};
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/};
 			\item \textbf{Ingegneria del Software - Ian Sommerville - Ottava Edizione}:
 			\begin{enumerate}
 				\item Capitolo 4: Software Processes;
@@ -66,7 +56,7 @@
 		\end{itemize}
 
 	\subsection{Scadenze}
-	Il gruppo \hx ha deciso di rispettare le seguenti scadenze:
+	Il gruppo \hx{} ha deciso di rispettare le seguenti scadenze:
 		\begin{itemize}
 			\item \textbf{Revisione dei Requisiti}: 24-01-2017;
 			\item \textbf{Revisione di Progettazione}: 13-03-2017 presentandosi con Revisione di Progettazione minima;
@@ -122,7 +112,7 @@ Questi ultimi punti entrano in netto contrasto con i requisiti inizialmente prop
 
 			Il modello evolutivo, particolarmente apprezzato da Sommerville, prevede una implementazione iniziale e una forte collaborazione tra committente e fornitore allo scopo di raffinare il sistema tramite più versioni del prodotto, fino a raggiungere un sistema adeguato alle esigenze dell'utente.
 
-Ciò si può realizzare principalmente tramite due strumenti differenti: lo \textit{exploratory development} e il \textit{throwaway prototyping}.
+Ciò si può realizzare principalmente tramite due strumenti differenti: lo \emph{exploratory development} e il \emph{throwaway prototyping}.
 
 Il primo consiste nel lavorare a fianco del cliente per esplorare i suoi requisiti e infine consegnare un sistema adeguato. Mentre questo metodo di lavoro potrebbe sembrare positivo, esso presenta due grosse criticità: cambiamenti continui tendono a corrompere la struttura e l'architettura del software; inoltre aggiungere estensioni non previste diventa progressivamente più complesso e costoso. Questo rischio a parere del \gloss{team} non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
 
@@ -174,14 +164,14 @@ In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostan
 \item Pianificazione (della fase successiva)
 \end{itemize}			 
 
-L'approccio sfrutta una metodologia fortemente \textit{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il \gloss{team}, il processo di sviluppo e le risorse.
+L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il \gloss{team}, il processo di sviluppo e le risorse.
 		\subsubsection{Modelli agili}
 [lasciamo?]
 
 
 
 \section{Analisi dei rischi}
-In questa sezione del documento vengono elencati e descritti tutti i possibili rischi che potrebbero colpire il gruppo Hivex nella realizzazione del prodotto \proj. Per gestire i rischi è stata attuata la seguente procedura che prevede:
+In questa sezione del documento vengono elencati e descritti tutti i possibili rischi che potrebbero colpire il gruppo \hx{} nella realizzazione del prodotto \proj. Per gestire i rischi è stata attuata la seguente procedura che prevede:
 \begin{itemize}
 	\item \textbf{Identificazione dei rischi}: trovare i rischi potenziali che si possono presentare durante l'intero sviluppo del progetto e studiarne la natura. Tali rischi possono essere di tre tipologie:
 	\begin{enumerate}
@@ -225,7 +215,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Descrizione}: le tecnologie adottate per sviluppare il prodotto sono solamente in parte note ai componenti del gruppo e ciò non toglie che vi possano essere delle mancanze;
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: alto;
-			\item \textbf{Riconoscimento}: il Responsabile ha il compito di verificare il grado di conoscenza e preparazione di ciascun componente relativo alle tecnologie adottate;
+			\item \textbf{Riconoscimento}: il \emph{Responsabile} ha il compito di verificare il grado di conoscenza e preparazione di ciascun componente relativo alle tecnologie adottate;
 			\item \textbf{Trattamento}: ciascun componente si impegnerà a documentarsi in maniera autonoma sulle tecnologie adottate;
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
@@ -238,7 +228,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Probabilità di occorrenza}: bassa;
 			\item \textbf{Grado di pericolosità}: medio;
 			\item \textbf{Riconoscimento}: ogni membro del team avrà cura dei propri strumenti hardware verificandone giornalmente il completo funzionamento;
-			\item \textbf{Trattamento}: prima di qualunque spostamento, è obbligatorio scaricare sul \gloss{server} \gloss{GitHub} i file modificati. Se ciò non fosse possibile ma per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il \gloss{server} che ospita \gloss{PragmaDB}, è previsto un sistema di \gloss{backup} automatico e in caso di malfunzionamenti sarà compito dell’Amministratore riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
+			\item \textbf{Trattamento}: prima di qualunque spostamento, è obbligatorio scaricare sul \gloss{server} \gloss{GitHub} i file modificati. Se ciò non fosse possibile ma per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il \gloss{server} che ospita \gloss{PragmaDB}, è previsto un sistema di \gloss{backup} automatico e in caso di malfunzionamenti sarà compito dell’\emph{Amministratore} riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
 				\item \textbf{Analisi dei requisiti}: il rischio non si è mai verificato.
@@ -250,8 +240,8 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Descrizione}: i componenti del gruppo sono alle prime esperienze nello sviluppo di progetti dove il numero di partecipanti è alto. Tale fattore potrebbe causare problemi quali incomprensioni tra i membri del gruppo e dissidi generando quindi un clima non proficuo;
 			\item \textbf{Probabilità di occorrenza}: bassa;
 			\item \textbf{Grado di pericolosità}: alto;
-			\item \textbf{Riconoscimento}: il Responsabile deve monitorare lo stato di collaborazione fra i vari componenti del gruppo durante le varie fasi e capire dove stia nascendo un dissidio fra uno o più membri;
-			\item \textbf{Trattamento}: il Responsabile provvederà, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li faccia collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile;
+			\item \textbf{Riconoscimento}: il \emph{Responsabile} deve monitorare lo stato di collaborazione fra i vari componenti del gruppo durante le varie fasi e capire dove stia nascendo un dissidio fra uno o più membri;
+			\item \textbf{Trattamento}: il \emph{Responsabile} provvederà, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li faccia collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile;
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
 				\item \textbf{Analisi dei requisiti}: il rischio non si è mai verificato.
@@ -262,8 +252,8 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Descrizione}: ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del \gloss{team} non sia disponibile in certi momenti.
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: medio;
-			\item \textbf{Riconoscimento}: per creare un calendario sincronizzato e condiviso del gruppo, è necessario che vengano notificati al Responsabile in maniera preventiva e tempestiva gli impegni di ognuno;
-			\item \textbf{Trattamento}: ad ogni impegno notificato, il Responsabile si prenderà la responsabilità di eseguire una nuova parte di pianificazione del periodo problematico; 
+			\item \textbf{Riconoscimento}: per creare un calendario sincronizzato e condiviso del gruppo, è necessario che vengano notificati al \emph{Responsabile} in maniera preventiva e tempestiva gli impegni di ognuno;
+			\item \textbf{Trattamento}: ad ogni impegno notificato, il \emph{Responsabile} si prenderà la responsabilità di eseguire una nuova parte di pianificazione del periodo problematico; 
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
 				\item \textbf{Analisi dei requisiti}: il rischio si è verificato un paio di volte a due membri del gruppo per problemi personali; nonostante ciò, il lavoro è stato portato al termine e non ci sono stati rallentamenti.
@@ -274,8 +264,8 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Descrizione}: l'approccio al metodo di lavoro risulta nuovo e sono richieste capacità di pianificazione e di analisi che il gruppo non possiede a causa dell'inesperienza. Inoltre, alcune conoscenze richieste richiedono tempo per poter essere apprese;
 			\item \textbf{Probabilità di occorrenza}: alta;
 			\item \textbf{Grado di pericolosità}: alto;
-			\item \textbf{Riconoscimento}: quando un componente del gruppo ritiene opportuno utilizzare una nuova tecnologia, deve segnalarlo al Responsabile che, una volta approvatone l'utilizzo nel progetto, demanderà al gruppo il compito di documentarsi su come 	impiegarlo al meglio;
-			\item \textbf{Trattamento}: ogni membro del gruppo si impegna a studiare il materiale necessario per l'utilizzo di tecnologie e strumenti richiesti durante lo svolgimento del progetto. Nel caso in cui questo non fosse sufficiente, il Responsabile dovrà preparare un piano di studi per compensare ogni tipo di lacuna;
+			\item \textbf{Riconoscimento}: quando un componente del gruppo ritiene opportuno utilizzare una nuova tecnologia, deve segnalarlo al \emph{Responsabile} che, una volta approvatone l'utilizzo nel progetto, demanderà al gruppo il compito di documentarsi su come 	impiegarlo al meglio;
+			\item \textbf{Trattamento}: ogni membro del gruppo si impegna a studiare il materiale necessario per l'utilizzo di tecnologie e strumenti richiesti durante lo svolgimento del progetto. Nel caso in cui questo non fosse sufficiente, il \emph{Responsabile} dovrà preparare un piano di studi per compensare ogni tipo di lacuna;
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
 				\item \textbf{Analisi dei requisiti}:  il rischio si è verificato soprattutto nella prima fase.
@@ -287,7 +277,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Descrizione}: durante la pianificazione è possibile che, a causa di assunzioni sbagliate, i tempi per l'esecuzione di alcune attività vengano calcolati in modo errato. Ciò potrebbe portare ad avere dei periodi di inattività o di sovraccarico di lavoro del \gloss{team};
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: alto;
-			\item \textbf{Riconoscimento}: la caratteristica dinamica del rischio impone che si debba controllare lo stato delle attività nel programma di project management periodicamente, in modo da verificare eventuali ritardi nello sviluppo delle attività; 
+			\item \textbf{Riconoscimento}: la caratteristica dinamica del rischio impone che si debba controllare lo stato delle attività nel programma di \emph{project management} periodicamente, in modo da verificare eventuali ritardi nello sviluppo delle attività; 
 			\item \textbf{Trattamento}: si è deciso di prevedere per ogni attività, un periodo maggiore di quanto normalmente richiesto e una fase di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto; 
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
@@ -297,7 +287,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 	\subsection{Livello dei requisiti}
 		\subsubsection{Incomprensioni e scelte non congrue}
 		\begin{itemize}
-			\item \textbf{Descrizione}: durante la fase di analisi del capitolato, è possibile che il problema e i suoi requisiti non vengano capiti in toto, fraintesi o tralasciati dagli Analisti. Questo può provocare delle divergenze tra le aspettative del proponente e la visione del gruppo sul prodotto;
+			\item \textbf{Descrizione}: durante la fase di analisi del capitolato, è possibile che il problema e i suoi requisiti non vengano capiti in toto, fraintesi o tralasciati dagli \emph{Analisti}. Questo può provocare delle divergenze tra le aspettative del proponente e la visione del gruppo sul prodotto;
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: alto;
 			\item \textbf{Riconoscimento}: si ritiene un'ottima strategia di controllo, l'incontro con il proponente stesso per poter discutere dei requisiti identificati, in modo da assicurare la totale concordanza sulle necessità del prodotto;
@@ -313,7 +303,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item \textbf{Descrizione}: è possibile che i tempi delle attività pianificate per lo svolgimento del progetto siano sovrastimate o sottostimate. Un valutazione errata di queste, può comportare una variazione sul costo preventivo presentato; 
 			\item \textbf{Probabilità di occorrenza}: media;
 			\item \textbf{Grado di pericolosità}: medio;
-			\item \textbf{Riconoscimento}: quando un'attività occupa più tempo di quello previsto significa che è stata sottostimata. Viceversa, quando invece ne occupa considerevolmente meno, significa che è stata sovrastimata. É necessario quindi che il \textit{Responsabile} monitori con grande attenzione il programma di project management e che faccia tempestive modiche alla pianificazione e al rendiconto dei costi; 
+			\item \textbf{Riconoscimento}: quando un'attività occupa più tempo di quello previsto significa che è stata sottostimata. Viceversa, quando invece ne occupa considerevolmente meno, significa che è stata sovrastimata. É necessario quindi che il \emph{Responsabile} monitori con grande attenzione il programma di \emph{project management} e che faccia tempestive modiche alla pianificazione e al rendiconto dei costi; 
 			\item \textbf{Trattamento}: è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli; 
 			\item \textbf{Attuazione nel periodo}:
 			\begin{itemize}
@@ -321,7 +311,6 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\end{itemize}
 		\end{itemize}
 \section{Pianificazione delle Attività}
-[Si rimanda a Norme di progetto v100 per il dettaglio del funzionamento di Asana]
 Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha deciso di suddividere il progetto nelle seguenti fasi:
 \begin{itemize}
 	\item \textbf{Analisi dei Requisiti (AR)};
@@ -336,49 +325,49 @@ questi diagrami(es milestone ecc)".
 \subsection{Suddivisione delle Attività}
 	\subsubsection{Analisi dei Requisiti}
 	\textbf{Periodo}: dal 29-11-2016 al 11-01-2017.
-	\\ Questo periodo inizia successivamente alla formazione del gruppo e finisce in corrispondenza della consegna dei documenti per la \textit{Revisione dei Requisiti}.
+	\\ Questo periodo inizia successivamente alla formazione del gruppo e finisce in corrispondenza della consegna dei documenti per la \emph{Revisione dei Requisiti}.
 	Questo perido prevede che vengano stilati i seguenti documenti:
 	\begin{itemize}
-		\item \textbf{Norme di Progetto}: in questo documento sono inserite tutte le norme che il \gloss{team} dovrà seguire e rispettare durante l'intero svolgimento delle attività. Tale documento è redatto dall'\textit{Amministratore}, mentre il \textit{Verificatore} ha il compito di certificare che tali norme siano state rispettate da tutto il gruppo;
+		\item \textbf{Norme di Progetto}: in questo documento sono inserite tutte le norme che il \gloss{team} dovrà seguire e rispettare durante l'intero svolgimento delle attività. Tale documento è redatto dall'\emph{Amministratore}, mentre il \emph{Verificatore} ha il compito di certificare che tali norme siano state rispettate da tutto il gruppo;
 		\item \textbf{Studio di Fattibilità}: in questo documento vengono analizzati i vari capitolati proposti. Per ogni capitolato, è stato analizzato il dominio applicativo/tecnologico e sono state inserite delle considerazioni in merito agli aspetti positivi e negativi;
-		\item \textbf{Analisi dei Requisiti}: in questo documento sono raccolti tutti i requisiti progettuali necessari per comprendere più approfonditamente	il capitolato scelto con lo \textit{Studio di Fattibilità};
-		\item \textbf{Piano di Progetto}: questo documento è redatto dal \textit{Responsibile di Progetto} che organizza tutte le attività e stima le risorse, costi e tempi necessari per lo svolgimento del progetto;
-		\item \textbf{Piano di Qualifica}: questo documento è redatto dal \textit{Verificatore} che individua tutte le strategie di verifica e validazione che il \gloss{team} deve adottare per il progetto per ottenere e consegnare un prodotto di qualità;
+		\item \textbf{Analisi dei Requisiti}: in questo documento sono raccolti tutti i requisiti progettuali necessari per comprendere più approfonditamente	il capitolato scelto con lo \emph{Studio di Fattibilità};
+		\item \textbf{Piano di Progetto}: questo documento è redatto dal \emph{Responsibile di Progetto} che organizza tutte le attività e stima le risorse, costi e tempi necessari per lo svolgimento del progetto;
+		\item \textbf{Piano di Qualifica}: questo documento è redatto dal \emph{Verificatore} che individua tutte le strategie di verifica e validazione che il \gloss{team} deve adottare per il progetto per ottenere e consegnare un prodotto di qualità;
 		\item \textbf{Glossario}: questo documento viene steso da tutti i redattori in parallelo alla stesura degli altri documenti; esso contiene la spiegazione di alcuni termini presenti nei vari documenti al fine di chiarire il significato del termine stesso;
 		\item \textbf{Lettera di presentazione}: questo documento viene presentato al committente al fine di mostrare l'interesse del gruppo di partecipare alla gara d'appalto.
 	\end{itemize}
 	[Gantt eccetera]
 	\subsubsection{Analisi dei Requisiti Incrementale}
 	\textbf{Periodo}: dal 24-01-2017 al 03-02-2017.
-	\\ Questo periodo inizia in concomitanza con la \textit{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio della \textit{Progettazione Architetturale}. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\textit{Analisi dei Requisiti}), con le correzioni suggerite durante la \textit{Revisione dei Requisiti}.
+	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio della \emph{Progettazione Architetturale}. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\emph{Analisi dei Requisiti}), con le correzioni suggerite durante la \emph{Revisione dei Requisiti}.
 	[Gantt eccetera]
 	\subsubsection{Progettazione Architetturale}
 	\textbf{Periodo}: dal 03-02-2017 al 06-03-2017.	
-	\\ Questo periodo inizia subito dopo \textit{Analisi dei Requisiti Incrementale} e si conclude con la consegna dei documenti per la \textit{Revisione di Progettazione}. La \textit{Progettazione Architetturale} prevede la stesura della progettazione ad alto  livello e predeve lo svolgimento delle seguenti attività:
+	\\ Questo periodo inizia subito dopo \emph{Analisi dei Requisiti Incrementale} e si conclude con la consegna dei documenti per la \emph{Revisione di Progettazione}. La \emph{Progettazione Architetturale} prevede la stesura della progettazione ad alto  livello e predeve lo svolgimento delle seguenti attività:
 	\begin{itemize}
-		\item \textbf{Incremento dei Documenti}: in questa attività verranno incrementati tutti i documenti della \textit{Progettazione Architetturale};
+		\item \textbf{Incremento dei Documenti}: in questa attività verranno incrementati tutti i documenti della \emph{Progettazione Architetturale};
 		\item \textbf{Specifica Tecnica}: in questa attività viene stilato questo documento che descrive le scelte progettuali ad alto livello che il prodotto dovrà rispettare.
 	\end{itemize}
 	[Gantt eccetera]
 	\subsubsection{Progettazione di Dettaglio e Codifica}
 	\textbf{Periodo}: dal 06-03-2017 al 11-04-2017.	
-	\\ Questo perido inizia subito dopo la \textit{Progettazione Architetturale} e si conclude con la consegna dei documenti per la \textit{Revisione di Qualifica"}. La \textit{Progettazione di Dettaglio e Codifica} prevede la stesura del \textit{Definizione di Prodotto} e successivamente si inizierà con la fase di codifica. Le attività da svolgere sono le seguenti:
+	\\ Questo perido inizia subito dopo la \emph{Progettazione Architetturale} e si conclude con la consegna dei documenti per la \emph{Revisione di Qualifica"}. La \emph{Progettazione di Dettaglio e Codifica} prevede la stesura del \emph{Definizione di Prodotto} e successivamente si inizierà con la fase di codifica. Le attività da svolgere sono le seguenti:
 	\begin{itemize}
-		\item \textbf{Incremento dei Documenti}: in questa attività verranno incrementati tutti i documenti basandosi sui risultati della \textit{Revisione di Prodotto}; 
+		\item \textbf{Incremento dei Documenti}: in questa attività verranno incrementati tutti i documenti basandosi sui risultati della \emph{Revisione di Prodotto}; 
 
-		\item \textbf{Definizione di Prodotto}: in questa attività viene stilato questo documento che contiene la struttura e la relazione tra i vari componenti del prodotto, in base a quanto riportato nel documento \textit{Specifica Tecnica};
+		\item \textbf{Definizione di Prodotto}: in questa attività viene stilato questo documento che contiene la struttura e la relazione tra i vari componenti del prodotto, in base a quanto riportato nel documento \emph{Specifica Tecnica};
 		
-		\item \textbf{Codifica}: in questa attività si procede allo sviluppo del codice del software da parte dei programmatori, attenendosi a quanto è riportato nella \textit{Definizione di Prodotto}; 
+		\item \textbf{Codifica}: in questa attività si procede allo sviluppo del codice del software da parte dei programmatori, attenendosi a quanto è riportato nella \emph{Definizione di Prodotto}; 
 		\item \textbf{Manuale Utente}: in questa attività si crea il documento destinato all'utente finale, che ha lo scopo di fornire le linee guida per il corretto utilizzo del software.
 	\end{itemize}
 	[Gantt eccetera]
 	\subsubsection{Verifica e Validazione}
 
 	\textbf{Periodo}: dal 11-04-2017 al 14-05-2017.
-	\\ Questo perido inizia subito dopo la \textit{Progettazione di Dettaglio e Codifica} e si conclude con la consegna del prodotto finale alla \textit{Revisione di Accettazione}. In questo periodo vengono effettuati i test del software, atti a garantire un prodotto finale che soddisfi i requisiti contenuti nell'\textit{Analisi dei Requisiti}. Le attività da svolgere sono:
+	\\ Questo perido inizia subito dopo la \emph{Progettazione di Dettaglio e Codifica} e si conclude con la consegna del prodotto finale alla \emph{Revisione di Accettazione}. In questo periodo vengono effettuati i test del software, atti a garantire un prodotto finale che soddisfi i requisiti contenuti nell'\emph{Analisi dei Requisiti}. Le attività da svolgere sono:
 	\begin{itemize}
 		\item \textbf{Test}: effettuare dei test per il collaudo del sistema;
-		\item \textbf{Incremento e Verifica dei Documenti}: in questa attività verranno incrementati verificati tutti i documenti, basandosi sui risultati della \textit{Revisione di Qualifica}.
+		\item \textbf{Incremento e Verifica dei Documenti}: in questa attività verranno incrementati verificati tutti i documenti, basandosi sui risultati della \emph{Revisione di Qualifica}.
 	\end{itemize}
 	[Gantt eccetera]	
 	\section{Preventivo}
