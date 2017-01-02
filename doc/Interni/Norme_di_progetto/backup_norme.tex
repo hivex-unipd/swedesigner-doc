@@ -62,7 +62,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 \subsection{Fornitura}
 
 	\subsubsection{Studio di fattibilità}
-	La fase antecedente alla realizzazione del \gloss{progetto} consiste nel fissare delle riunioni in modo che il gruppo possa discutere di esso. Sarà poi compito degli analisti redigere lo \textit{studio di fattibilità},sulla base di cosa è emerso dai dalle riunioni, come ad esempio il dominio applicativo del capitolato;
+	La fase antecedente alla realizzazione del \gloss{progetto} consiste nel fissare delle riunioni in modo che il \gloss{team} possa discutere di esso. Sarà poi compito degli analisti redigere lo \textit{studio di fattibilità},sulla base di cosa è emerso dai dalle riunioni, come ad esempio il dominio applicativo del capitolato;
 
 \subsection{Sviluppo}
 	\subsubsection{Analisi dei requisiti}
@@ -230,7 +230,7 @@ L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Og
 
 
 \subsection{Configurazione} \label{sec:config}
-Per gestire la configurazione del software va utilizzato il sistema \gloss{Git}, appoggiandosi alla piattaforma \gloss{GitHub}. Abbiamo scelto GitHub non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilita ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
+Per gestire la configurazione del software va utilizzato il sistema \gloss{Git}, appoggiandosi alla piattaforma \gloss{Github}. Abbiamo scelto Github non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilita ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
 \begin{description}
 	\item[\texttt{doc}] per la documentazione;
 	\item[\texttt{src}] per il codice sorgente.
@@ -337,67 +337,9 @@ Ogni verifica di una parte della configurazione dev'essere vagliata dal \gloss{r
 \section{Processi organizzativi}
 I processi normati in questa sezione servono all'organizzazione che li istanzia a progetto, cioè servono al gruppo.
 
+\subsection{Gestione organizzativa}
 
-
-\subsection{Strumenti}
-
-\subsubsection{Strumenti per la pianificazione}
-La pianificazione di progetto è uno dei compiti del \gloss{responsabile di progetto}. Il gruppo ha valutato diversi strumenti per gestire la pianificazione. È stata subito scartata l'idea di usare un foglio di calcolo, per i seguenti motivi:
-\begin{itemize}
-	\item l'attività di pianificazione deve poter essere modificata da ogni responsabile di progetto;
-	\item è necessario tracciare le ore-persona assegnate ad ogni singolo task e come esse sono ripartite tra i vari membri del gruppo;
-	\item è desiderabile avere una schermata automatica contenente tutte le ore di lavoro assegnate ad ogni persona durante tutta la durata del progetto;
-	\item è desiderabile poter visualizzare come le stime differiscano dal lavoro effettivamente svolto.
-\end{itemize}
-Inizialmente è stata rivolta l'attenzione a \gloss{Trello}, accoppiato ad un servizio esterno chiamato \gloss{EleGantt}; tuttavia nel suo uso iniziale sono sorte diverse criticità:
-\begin{itemize}
-	\item principalmente, la \textbf{mancanza di struttura} che dovrebbe permettere a Trello un lavoro più agile si è rivelata inefficace in fase di pianificazione;
-	\item lo strumento EleGantt, usato per stendere dei \gloss{diagrammi di Gantt} (non nativi in Trello) era troppo limitato nella sua versione gratuita.
-\end{itemize}
-Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \gloss{InstaGantt} (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
-\begin{itemize}
-	\item creazione di \gloss{task};
-	\item organizzazione dei task;
-	\item disegno di diagrammi di pianificazione.
-\end{itemize}
-
-\subsubsection{Comunicazione intra-gruppo} 
-Una comunicazione tra i membri del gruppo è essenziale per la buona riuscita di ogni progetto. Il gruppo ritiene che un buon sistema di comunicazione debba possedere le seguenti caratteristiche:
-\begin{itemize}
-	\item invio e ricezione istantanea di messaggi;
-	\item storico dei messaggi inviati;
-	\item possibilità di avere notifiche \gloss{push} sia in ambiente desktop che smartphone;
-	\item comunicazione tra tutti i membri del gruppo.
-\end{itemize}
-Tra i prodotti valutati, la scelta è ricaduta su \gloss{Slack}, una piattaforma di comunicazione pensata appositamente per gruppi di lavoro, in grado di soddisfare ampiamente le richieste sopra elencate. Tra le funzionalità offerte più interessanti notiamo:
-\begin{itemize}
-	\item suddivisione delle conversazioni del gruppo in canali;
-	\item messaggi privati tra due utenti;
-	\item chiamate tra i membri del gruppo; 
-	\item condivisione file tramite drag and drop;
-	\item esistenza di app per smartphone e desktop;
-	\item integrazione con servizi esterni (ad esempio con GitHub).
-\end{itemize}
-\paragraph{Canali} La possibilità di suddividere le conversazioni in canali è molto potente ma potenzialmente anche dispersiva: avere troppi canali porta a riversare tutta la comunicazione sul canale principale, intasandolo e rendendo la lettura dello storico più complicata. Sono quindi previsti i seguenti canali, con i seguenti scopi:
-\begin{itemize}
-	\item[\#documents] come strutturare i documenti e problematiche relative all'uso di Latex;
-	\item[\#feasibility] discussione sulla fattibilità dei capitolati;
-	\item[\#general] annunci e comunicazioni riguardanti l'intero gruppo;
-	\item[\#github] problematiche nell'uso di Git, integrazione con GitHub (vedi prossimo paragrafo);
-	\item[\#meta] strutturazione canali di Slack;
-	\item[\#project-planning] pianificazione del progetto;
-	\item[\#random] discussioni non inerenti al progetto;
-	\item[\#requirements] problematiche su requisiti e sull'utilizzo di \gloss{PragmaDB}
-	\item[\#test-slack] canale di prova;
-\end{itemize}
-Il numero di canali non dev'essere più di tre volte il numero di componenti del gruppo; la creazione di canali ulteriori è possibile solo previa archiviazione di canali non più utilizzati.
-\paragraph{Integrazione con GitHub} Slack offre, nella sua versione gratuita, l'integrazione di un massimo di 10 servizi esterni. Un servizio che si è rivelato utile è stato l'integrazione con GitHub: questa crea un bot, inserito nel canale \#github, il quale invia notifiche relative a \gloss{commit}, \gloss{pull request} e attività nei \gloss{GitHub Issues}.
-
-
-
-\subsection{Amministrazione}
-
-\subsubsection{Ruoli} \label{sec:ruoli}
+\subsubsection{Ruoli}
 	Verrano assegnati dei ruoli corrispondenti a quelli professionali per lo sviluppo del progetto.
 	Ogni membro del team è tenuto a ricoprire almeno una volta tutti i ruoli sottoindicati. Verrà inoltre garantito che non si presentino conflitti di interesse se una persona è sia redattore che verificatore di uno stesso documento. È possibile ricoprire più ruoli contemporaneamente.
 		\paragraph{Responsabile di progetto}
@@ -470,26 +412,46 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 		\end{itemize}
 		Il \textit{verificatore} redige la sezione del \textit{piano di qualifica} che illustra l'esito delle verifiche effettuate.
 
-
 \subsubsection{Pianificazione}
-\paragraph{Task} Per ogni task bisogna indicare:
-\begin{description}
-	\item[nome] ogni task e sottotask dovrà avere un nome univoco per poter essere meglio tracciato;
-	\item[descrizione] è possibile allegare una descrizione, dei file e dei riferimenti che non necessitino di essere tracciati nel \gloss{repository};
-	\item[persona assegnata] ogni task può avere al massimo una persona assegnata, secondo il principio \gloss{DRI}; % DRY? <<<<<
-	\item[data di completamento prevista]
-	\item[data di inizio prevista] (da InstaGantt)
-	\item[sottotask] qualora il task non possa essere assegnato esclusivamente ad una persona ma richieda una collaborazione, si spezza il lavoro in frammenti più contenuti, chiamati sottotask. Questi sottotask possono avere a loro volta sottotask ulteriori. L'obiettivo di questa suddivisione è raggiungere una corretta \gloss{WBS}, il più possibile quantificabile;
-	\item[dipendenze tra task] (da InstaGantt) ogni task può necessitare il completamento di un altro task per poterlo iniziare;
-	\item[ore previste] (da InstaGantt)
-	\item[ore effettive] (da InstaGantt)
-	\item[tag] per tematizzare il task.
-\end{description}
-\paragraph{Organizzazione dei task} Si è adottato il modello \emph{Board}: esso permette di raggruppare i task in colonne, in modo da avere una visione immediata dello stato di ogni documento o codice che è necessario produrre.
+La pianificazione di progetto è uno dei compiti del \gloss{responsabile di progetto}. È chiaro che non è possibile affidarsi ad un foglio di calcolo per una attività così estesa, per i seguenti motivi:
+\begin{itemize}
+	\item L'attività di pianificazione deve poter essere modificata da ogni Responsabile di Progetto;
+	\item è necessario tracciare le ore-persona assegnate ad ogni singolo task e come esse sono ripartite tra i vari membri del team;
+	\item è desiderabile avere una schermata automatica contenente tutti le ore di lavoro assegnate ad ogni persona durante tutta la durata del progetto
+	\item è desiderabile poter visualizzare come le stime differiscano dal lavoro effettivamente svolto.
+\end{itemize}
+
+Inizialmente è stata rivolta attenzione a Trello accoppiato ad un servizio esterno chiamato EleGantt; tuttavia nel suo uso iniziale sono sorte diverse criticità:
+\begin{itemize}
+	\item Principalmente, la \textbf{mancanza di struttura} che dovrebbe permettere a Trello un lavoro più agile si è rivelata inefficace in fase di pianificazione;
+	\item Lo strumento EleGantt, usato per stendere dei diagrammi di Gantt (non nativi nella piattaforma) era troppo limitato nella sua versione free. Sono stati valutati altri strumenti ma non offrivano funzionalità chiave per la pianificazione efficace del progetto.
+\end{itemize}
+
+è stata rivolta dunque attenzione ai servizi offerti da Asana, accoppiato ad InstaGantt, un servizio esterno molto ben integrato ad Asana.
+
+Questa piattaforma offre queste principali funzionalità:
+\paragraph{Creazione di \gloss{task}} 
+È possibile indicarne:
+\begin{itemize}
+	\item[Nome]: ogni task e sottotask dovrà avere un nome univoco per poter essere meglio tracciato;
+	\item[Descrizione]: è possibile allegare una descrizione, dei file e dei riferimenti che non necessitano tracciamento da \gloss{Git};
+	\item[Persona assegnata]: ogni task può avere al massimo una persona assegnata, secondo il principio \gloss{DRI};
+	\item Data di completamento prevista;
+	\item Data di inizio prevista (da InstaGantt);
+	\item[Sottotask]: qualora il task non possa essere assegnato esclusivamente ad una persona, ma richiede una collaborazione, si spezza il lavoro in frammenti più contenuti, chiamati sottotask. Questi sottotask possono avere a loro volta sottotask ulteriori.
+
+L'obiettivo di questa suddivisione è raggiungere una corretta \gloss{WBS}, il più possibile quantificabile;
+	\item[Dipendenze tra task (da InstaGantt)]: ogni task può necessitare il completamento di un altro task per poterlo iniziare;
+	\item Ore previste (da InstaGantt);
+	\item Ore effettive (da InstaGantt);
+	\item Tag.
+\end{itemize}
+
+\paragraph{Organizzazione dei task} Si è adottato il modello Board: esso permette di raggruppare i task in colonne, in modo da avere una visione immediata dello stato di ogni documento o codice che è necessario produrre.
 Attualmente sono state create le seguenti colonne:
-\begin{description}
-	\item[Milestone] contiene le milestone decise dal gruppo e quelle obbligatorie, definite dal \TV;
-	\item[Ambiente di sviluppo] contiene dei task assegnati per indagare i migliori strumenti di sviluppo che sono stati adottati dal gruppo;
+\begin{itemize}
+	\item[Milestone] contiene le milestone decise dal \gloss{team} e quelle obbligatorie, definite dal \TV;
+	\item[Ambiente di sviluppo] contiene dei task assegnati per indagare i migliori strumenti di sviluppo che sono stati adottati dal \gloss{team};
 	\item[Analisi dei Requisiti] documento richiesto;
 	\item[Piano di Qualifica] documento richiesto;
 	\item[Piano di Progetto] documento richiesto;
@@ -504,25 +466,97 @@ Attualmente sono state create le seguenti colonne:
 	\item[Codifica] attività di codifica da effettuare;
 	\item[Manuale Utente] documento richiesto;
 	\item[Test di sistema] attività di verifica da effettuare.
-\end{description}
+\end{itemize}
+
 \paragraph{Diagrammi di pianificazione}
 InstaGantt permette di visualizzare i vari task in un asse temporale, producendo così un \gloss{diagramma di Gantt}. 
-Vanno rispettate le seguenti convenzioni:
+Sono state scelte le seguenti convenzioni:
 \begin{itemize}
-	\item Il nome di ogni task o sottotask deve essere univoco; per alcuni task ripetuti, come ad esempio l'incremento di un certo documento, si inserisce in coda la revisione che lo richiede (ad esempio “Incremento Piano di Qualifica [RP]” significa che il piano di qualifica è stato incrementato a causa della deadline della revisione di progettazione del \TV).
-	\item Ogni task di livello più basso dev'essere contrassegnato da un tag che sancisce il ruolo che una persona adotta per quel task; i ruoli sono quelli in sezione \ref{sec:ruoli}, identici a quelli definiti in \PdP.
-	\item Ogni task di livello superiore che produce un documento possiede il tag \texttt{Documento}; questo task è assegnato all'utente virtuale \texttt{Hivex Team}.
-	\item I vari cicli di incremento vanno pianificati come task appartenenti allo stesso livello.
-\end{itemize}
-La sezione \emph{Workload} in InstaGantt permette di visualizzare i vari task assegnati ad ogni persona; grazie a questo si può analizzare il quantitativo di ore di lavoro impiegato giornalmente, con la possibilità di filtrarlo per ruolo, attraverso l'uso dei tag. Per questo, il responsabile di progetto è tenuto a:
+	\item Ogni nome di ogni task o sottotask deve essere univoco. Per alcuni task ripetuti, come ad esempio l'incremento di un certo documento, si inserisce in coda la revisione che lo richiede (es: Incremento Piano di Qualifica [RP] significa che il Piano di Qualifica è stato incrementato a causa della deadline della Revisione di Progettazione di \TV.)
+	\item Ogni task di livello più basso deve essere contrassegnato da un tag che sancisce il ruolo che una persona per quel task adotta: questi ruoli sono chiamati:
 \begin{itemize}
-	\item riallocare task assegnati in caso di indisposizione di uno dei membri;
-	\item controllare la presenza di task non assegnati.
+	\item Amministratore;
+	\item Analista;
+	\item Progettista;
+	\item Programmatore;
+	\item Responsabile di Progetto;
+	\item Verificatore.
 \end{itemize}
 
-\paragraph{Baseline} Infine è compito del \gloss{Responsabile di Progetto} salvare una \emph{baseline} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
+Questi ruoli sono identici a quelli definiti nel [Piano di Progetto];
 
-\paragraph{\gloss{diagrammi di Gantt}} Non si ritiene inoltre che i \gloss{diagrammi PERT} possano essere efficaci per una rappresentazione immediata dei rischi della pianificazione. Il responsabile di progetto deve, invece, fornire solamente i diagrammi di Gantt con le relative date effettive di completamento.
+	\item Ogni task di livello superiore che produce un documento possiede il tag \texttt{Documento}. Questo task è assegnato all'utente virtuale \texttt{Hivex Team};
+
+	\item I vari cicli di incremento sono stati pianificati come task appartenenti allo stesso livello;
+\end{itemize}
+
+Molto interessante è la sezione \textit{Workload} in InstaGantt.
+Essa permette di visualizzare i vari task assegnati ad ogni persona in modo da analizzare il quantitativo di ore di lavoro impiegato giornalmente, con la possibilità di filtrarlo per ruolo, attraverso l'uso dei tag.
+In questo modo è possibile:
+\begin{itemize}
+	\item Avere una visione di massima del lavoro svolto da ciascuno;
+	\item Riallocare task assegnati in caso di indisposizione di uno dei membri;
+	\item Controllare la presenza di task non assegnati.
+\end{itemize}
+
+Infine sarà compito del \gloss{Responsabile di Progetto} salvare una \textit{baseline} del progetto ad ogni milestone raggiunta: in questo modo sarà possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consultivo.
+
+Non si ritiene inoltre che i diagrammi \gloss{PERT} possano essere efficaci per una rappresentazione immediata dei rischi della pianificazione. Si preferisce indicare solamente i diagrammi \gloss{Gantt} con le relative date effettive di completamento.
+
+\subsubsection{Comunicazione inter-team} 
+
+Una comunicazione tra i membri del team è essenziale per la buona riuscita di ogni progetto.
+
+Il \gloss{team} ritiene che un buon sistema di comunicazione debba possedere le seguenti caratteristiche:
+
+\begin{itemize}
+	\item Invio e ricezione istantanea di messaggi;
+	\item Storico dei messaggi inviati;
+	\item Possibilità di avere notifiche \gloss{push} sia in ambiente desktop che smartphone;
+	\item Comunicazione tra tutti i membri del team.
+\end{itemize}
+
+Tra i prodotti valutati, la scelta è ricaduta su \gloss{Slack}, una piattaforma di comunicazione pensata appositamente per team di lavoro, in grado di soddisfare ampiamente le richieste sopra elencate.
+
+Tra le features offerte più interessanti si trova:
+
+\begin{itemize}
+	\item Suddivisione delle conversazioni del team in canali;
+	\item Messaggi privati tra due utenti;
+	\item Chiamate tra i membri del team; 
+	\item Condivisione file tramite drag and drop;
+	\item Presenza di app per smartphone e desktop;
+	\item Integrazione con servizi esterni.
+\end{itemize}
+
+\paragraph{Canali}
+La possibilità di suddividere le conversazioni in canali è molto potente ma è stato subito riscontrato essere potenzialmente molto dispersiva. Infatti avere troppi canali porta a riversare tutta la comunicazione sul canale principale, intasandolo e rendendo la lettura dello storico più complicata.
+
+Sono stati quindi previsti i seguenti canali, con i seguenti scopi:
+
+\begin{itemize}
+	\item[\#documents] Come strutturare i documenti, problematiche relative all'uso di \LaTeX{};
+	\item[\#feasibility] Discussione sulla fattibilità dei capitolati;
+	\item[\#general] Annunci e comunicazioni riguardanti l'intero team;
+	\item[\#github] Problematiche nell'uso di git, integrazione con GitHub (vedi prossimo paragrafo);
+	\item[\#meta] Strutturazione canali di Slack;
+	\item[\#project-planning] Pianificazione del team;
+	\item[\#random] Discussioni non inerenti al progetto;
+	\item[\#requirements] Problematiche su requisiti e sull'utilizzo di \gloss{PragmaDB}
+	\item[\#test-slack] Canale di prova;
+\end{itemize}
+
+Si ritiene che il numero massimo di canali gestibili senza dispersione sia pari a tre volte il numero di componenti del team. La creazione di canali ulteriori è possibile previa archiviazione di canali non più utilizzati. 
+
+\paragraph{Integrazione con GitHub}
+Slack dispone, nella sua versione free, l'integrazione di un massimo di 10 servizi esterni.
+
+Un servizio che si è rivelato davvero utile è stato l'integrazione con GitHub: questa crea un bot, inserito nel canale \#github, il quale invierà notifiche di \gloss{commit}, \gloss{pull request}, e attività nei \gloss{GitHub Issues}.
+
+\paragraph{Integrazione con Asana}
+Un altro servizio offerto blablabala
+Quindi è stato deciso di non integrare Asana con Slack.
+
 
 
 
