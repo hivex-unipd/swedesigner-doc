@@ -9,48 +9,48 @@ echo "" >> util/hx-vers.sty
 
 
 
-echo -n "\newcommand{\NdP}{" >> util/hx-vers.sty
+echo -n "\newcommand{\NdP}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Interni/*/Norme*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 
-echo -n "\newcommand{\Verbali}{" >> util/hx-vers.sty
+echo -n "\newcommand{\Verbali}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Verbali*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 
-echo -n "\newcommand{\AdR}{" >> util/hx-vers.sty
+echo -n "\newcommand{\AdR}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Analisi*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 
-echo -n "\newcommand{\SdF}{" >> util/hx-vers.sty
+echo -n "\newcommand{\SdF}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Interni/*/Studio*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 
-echo -n "\newcommand{\PdP}{" >> util/hx-vers.sty
+echo -n "\newcommand{\PdP}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Piano_di_progetto*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 
-echo -n "\newcommand{\PdQ}{" >> util/hx-vers.sty
+echo -n "\newcommand{\PdQ}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Piano_di_qualifica*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 
-echo -n "\newcommand{\Glossario}{" >> util/hx-vers.sty
+echo -n "\newcommand{\Glossario}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Glossario*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 
 if [[ -f Esterni/*/Specifica_tecnica*.tex ]]; then
-echo -n "\newcommand{\ST}{" >> util/hx-vers.sty
+echo -n "\newcommand{\ST}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Specifica_tecnica*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 fi
 
 if [[ -f Esterni/*/Definizione*.tex ]]; then
-echo -n "\newcommand{\DdP}{" >> util/hx-vers.sty
+echo -n "\newcommand{\DdP}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Definizione*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 fi
 
 if [[ -f Esterni/*/Manuale*.tex ]]; then
-echo -n "\newcommand{\MU}{" >> util/hx-vers.sty
+echo -n "\newcommand{\MU}{\emph{" >> util/hx-vers.sty
 OUTPUT="$(basename Esterni/*/Manuale*.tex | sed 's/\(.*\)\..*/\1/' | sed 's/_/\\_/g')"
-echo "${OUTPUT}.pdf}" >> util/hx-vers.sty
+echo "${OUTPUT}.pdf}}" >> util/hx-vers.sty
 fi
