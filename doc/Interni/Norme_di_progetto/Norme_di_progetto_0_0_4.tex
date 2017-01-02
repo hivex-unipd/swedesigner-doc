@@ -128,7 +128,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 		\item \gloss{Diagrammi di attività}:descrive in dettaglio un algoritmo
 		\item \gloss{Diagrammi di sequenza}:descrive uno scenario,dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 		\end{itemize}
-	\subsubsection{Codifica}%da finire qunado finalmente avremo scelto cosa usare
+	\subsubsection{Codifica} \label{sec:cod} %da finire qunado finalmente avremo scelto cosa usare
 	Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
 		\paragraph{Formattazione del codice}
 		Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
@@ -173,7 +173,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 \section{Processi di supporto}
 I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
-\subsection{Documentazione}
+\subsection{Documentazione} \label{sec:doc}
 La \gloss{documentazione} di progetto va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}. I documenti che svilupperemo sono i seguenti:
 \begin{itemize}
 	\item Documenti interni al gruppo:
@@ -234,7 +234,7 @@ L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Og
 
 
 \subsection{Configurazione} \label{sec:config}
-Per gestire la configurazione del software si è scelto di utilizzare il sistema \gloss{Git}, appoggiandoci per questo alla piattaforma \gloss{Github}. Abbiamo scelto Github non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilita ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
+Per gestire la configurazione del software va utilizzato il sistema \gloss{Git}, appoggiandosi alla piattaforma \gloss{Github}. Abbiamo scelto Github non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilita ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
 \begin{description}
 	\item[\texttt{doc}] per la documentazione;
 	\item[\texttt{src}] per il codice sorgente.
@@ -276,21 +276,32 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\item attività di analisi dinamica.
 \end{enumerate}
 
-%%% ho pensato di suddividere così questa sezione:
-
 	\subsubsection{Analisi statica}
-	L'analisi statica è una tecnica che permette di individuare anomalie all'interno di documenti e software durante tutto il loro ciclo di vita. È applicabile tramite due tecniche diverse:
+	L'analisi statica è una tecnica che permette di individuare anomalie all'interno di documenti e codice sorgente durante tutto il loro ciclo di vita. È applicabile tramite due tecniche diverse:
 	\begin{description}
-		\item[\gloss{Walkthrough}] Questa tecnica prevede di scorrere il documento alla ricerca di anomalie ed errori, senza però sapere di preciso quali cercare. È una tecnica molto utile nelle fasi inziali di sviluppo, ossia quando il gruppo è ancora inesperto e non si conosce la natura degli errori. Dev'essere adottata dai verificatori, i quali scriveranno nella lista di controllo gli errori più frequenti; quando questa lista sarà abbastanza grande si passerà alla tecnica di \gloss{inspection}.
-		\item[Inspection] Con questa tecnica, il verificatore deve utilizzare la lista di controllo in modo tale da eseguire una ricerca molto più mirata e dettagliata degli errori. L'efficacia di questa tecnica aumenta man mano che la lista di controllo si espande.
+		\item[\gloss{Walkthrough}] Questa tecnica prevede che un verificatore scorra il documento alla ricerca di anomalie ed errori, senza però sapere di preciso quali cercare. È molto utile nelle fasi inziali di sviluppo, quando il gruppo è ancora inesperto e non si conosce la natura degli errori. Dev'essere adottata dai verificatori, i quali scrivono nella lista di controllo (definita più avanti in questa sezione) gli errori più frequenti; ognuno di questi errori dev'essere cercato tramite \gloss{inspection}.
+		\item[Inspection] Con questa tecnica, il verificatore deve utilizzare la lista di controllo in modo tale da eseguire una ricerca molto più mirata e dettagliata degli errori. Quando possibile, il verificatore deve avvalersi degli strumenti automatici che il gruppo sceglierà dopo aver deciso il linguaggio di programmazione da utilizzare.
+	\end{description}
+	La lista di controllo per i verificatori viene mantenuta e aggiornata nel presente documento; ogni suo elemento è identificato da un'espressione che lo descrive.
+	\paragraph{Lista di controllo per la documentazione} Gli elementi da verificare per la documentazione sono i seguenti:
+	\begin{description} %%% DA RIEMPIRE MAN MANO
+		\item[norme sulla documentazione] i documenti devono rispettare tutte le norme descritte nella sezione \ref{sec:doc};
+		\item[completezza] ogni documento deve riportare tutto il necessario per adempiere al suo scopo, riportato nella sua introduzione;
+		\item[sintassi Latex] il documento deve usare le macroistruzioni definite nei file della directory \texttt{util} del ramo \texttt{doc} del nostro gloss{repository};
+		\item[coerenza] le asserzioni di un documento non devono contraddirsi l'un l'altra né contraddire quelle del resto della documentazione.
+	\end{description}
+	\paragraph{Lista di controllo per il codice} Gli elementi da verificare per il codice sorgente sono i seguenti:
+	\begin{description} %%% DA RIEMPIRE MAN MANO
+		\item[norme sulla codifica] il codice deve rispettare tutte le norme descritte nella sezione \ref{sec:cod};
+		\item[tracciabilità] l'esistenza di ogni unità del codice dev'essere tracciabile in riferimento alla progettazione.
 	\end{description}
  
 	\subsubsection{Analisi dinamica}
-	L'analisa dinamica viene effettuata tramite dei test sul software prodotto in modo da verificarne la correttezza.
+	L'analisa dinamica viene effettuata tramite dei test sul software prodotto. Questi test devono verificare la correttezza del software e devono essere ripetibili.
 	\paragraph{Test di unità}
 		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola. Vengono identificati dalla seguente sintassi:
 		\begin{equation}
-			T[Codice Test]
+			TU[Codice Test]
 		\end{equation}
 	\paragraph{Test di integrazione}
 		I test di integrazione consentono di controllare che più unità funzionino assieme in modo corretto. Vengono identificati dalla seguente sintassi:
@@ -312,10 +323,16 @@ La verifica è un processo analitico che va implementato in due passi successivi
 		\begin{equation}
 			TV[Codice Requisito]
 		\end{equation}
- \subsubsection{strumenti}
-	%ancora da discutere
 
-\subsection{Validazione} \dots
+	\subsubsection{Strumenti}
+	La verifica va automatizzata il più possibile, per garantirne l'obiettività e l'efficacia. % DA IMPLEMENTARE...
+
+\subsection{Validazione}
+Ogni verifica di una parte della configurazione dev'essere vagliata dal \gloss{responsabile di progetto}; per questo, il responsabile deve controllare i risultati dei test. Egli può approvarli oppure chiedere ai verificatori di ripeterli. L'approvazione determina:
+\begin{itemize}
+	\item l'incremento del numero di versione, secondo le norme in sezione \ref{sec:idvers};
+	\item la pubblicazione dei componenti validati e dei test eseguiti sul ramo \texttt{master} del repository.
+\end{itemize}
 
 
 
