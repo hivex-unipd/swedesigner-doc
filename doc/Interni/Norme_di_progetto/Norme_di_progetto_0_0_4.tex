@@ -15,6 +15,7 @@
 
 \begin{document}
 \maketitle
+\setcounter{page}{2}
 \include{diario}
 \tableofcontents
 \newpage
@@ -118,7 +119,7 @@ Il presente documento si divide in tre sezioni principali:
 		\paragraph{Casi d'uso}
 		L'analista deve identificare ogni caso d'uso nel modo seguente:
 			\[UC[x]\]
-		Ogni macro caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UC[p].[f]$ dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
+		Ogni macro caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UC[p.f]$ dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
 		\begin{description}
 			\item[nome] nome identificativo del caso d'uso;
 			\item[attori] attori coinvolti nel caso d'uso;
@@ -215,7 +216,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	\item[elenchi descrittivi] ambiente \texttt{description} --- elencano gli elementi di un dizionario di termini.
 \end{description}
 Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a quelli “in linea” (cioè separati solo da un punto e virgola), per aumentare la chiarezza del testo.
-\paragraph{Intestazione} Ogni pagina dev'essere numerata e deve riportare in testata il titolo del documento e della sezione che ospita. % e magari il nome/logo del gruppo e il nome del progetto
+\paragraph{Intestazione} Ogni pagina dev'essere numerata, tranne il frontespizio.
 
 \subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in Latex) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
 
@@ -376,7 +377,7 @@ Tra i prodotti valutati, la scelta è ricaduta su \gloss{Slack}, una piattaforma
 	\item integrazione con servizi esterni (ad esempio con GitHub).
 \end{itemize}
 \paragraph{Canali} La possibilità di suddividere le conversazioni in canali è molto potente ma potenzialmente anche dispersiva: avere troppi canali porta a riversare tutta la comunicazione sul canale principale, intasandolo e rendendo la lettura dello storico più complicata. Sono quindi previsti i seguenti canali, con i seguenti scopi:
-\begin{itemize}
+\begin{description}
 	\item[\#documents] come strutturare i documenti e problematiche relative all'uso di Latex;
 	\item[\#feasibility] discussione sulla fattibilità dei capitolati;
 	\item[\#general] annunci e comunicazioni riguardanti l'intero gruppo;
@@ -386,7 +387,7 @@ Tra i prodotti valutati, la scelta è ricaduta su \gloss{Slack}, una piattaforma
 	\item[\#random] discussioni non inerenti al progetto;
 	\item[\#requirements] problematiche su requisiti e sull'utilizzo di \gloss{PragmaDB}
 	\item[\#test-slack] canale di prova;
-\end{itemize}
+\end{description}
 Il numero di canali non dev'essere più di tre volte il numero di componenti del gruppo; la creazione di canali ulteriori è possibile solo previa archiviazione di canali non più utilizzati.
 \paragraph{Integrazione con GitHub} Slack offre, nella sua versione gratuita, l'integrazione di un massimo di 10 servizi esterni. Un servizio che si è rivelato utile è stato l'integrazione con GitHub: questa crea un bot, inserito nel canale \#github, il quale invia notifiche relative a \gloss{commit}, \gloss{pull request} e attività nei \gloss{GitHub Issues}.
 
