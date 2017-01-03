@@ -90,9 +90,7 @@ Il presente documento si divide in tre sezioni principali:
 	Viene elencata nelle sezioni seguenti la struttura obbligatoria di requisiti e casi d'uso.
 		\paragraph{Requisiti} % da guardare come esporta pragmadb e nel caso correggere
 		Dopo aver individuato i requisiti tramite le varie riunioni, è compito degli analisti redarne un elenco con la seguente struttura:
-		\begin{equation}
-			R[Importanza][Tipo][ID]
-		\end{equation}
+			\[R[Importanza][Tipo][ID]\]
 		dove:
 		\begin{description}
 			\item[Importanza] indica se il requisito è:
@@ -118,23 +116,20 @@ Il presente documento si divide in tre sezioni principali:
 			\item se è stato effettivamente implementato.
 		\end{itemize}
 		\paragraph{Casi d'uso}
-		Ogni caso d'uso viene identificato nel seguente modo:
-		\begin{equation}
-			UC[x]
-		\end{equation}
-		Ogni macro caso d'uso sarà poi analizzato in modo più specifico ed identificato da UC[p].[f] dove p indica il il caso d'uso padre e f il figlio(ogni figlio potrà a sua volta avere altri figli).
-		Inoltre ogni caso d'uso dovrà avere le seguenti proprietà:
-		\begin{itemize}
-		\item Nome: Nome identificativo del caso d'uso;
-		\item Attori: attori coinvolti nel caso d'uso;
-		\item Descrizione: descrizione del caso d'uso;
-		\item Precondizioni: condizioni da rispettare prima di eseguire il caso d'uso;%facoltative?
-		\item Postcondizioni: condizioni da rispettare dopo di eseguire il caso d'uso;%facoltative?
-		\item Scenario principale: descrizione del caso d'uso tramite i casi d'uso figli;
-		\item Inclusioni: Eventuali inclusioni se specificate;
-		\item Estensioni: Eventuali estensioni se specificate;
-		\item Scenari alternativi: descrizione tramite casi d'uso non appartenenti al flusso principale.
-		\end{itemize}
+		L'analista deve identificare ogni caso d'uso nel modo seguente:
+			\[UC[x]\]
+		Ogni macro caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UC[p].[f]$ dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
+		\begin{description}
+			\item[nome] nome identificativo del caso d'uso;
+			\item[attori] attori coinvolti nel caso d'uso;
+			\item[descrizione] descrizione del caso d'uso;
+			\item[precondizioni] condizioni che devono valere prima del caso d'uso;%facoltative?
+			\item[postcondizioni] condizioni che devono valere dopo il caso d'uso;%facoltative?
+			\item[scenario principale] descrizione del caso d'uso tramite i casi d'uso figli;
+			\item[inclusioni] eventuali inclusioni, se specificate;
+			\item[estensioni] eventuali estensioni, se specificate;
+			\item[scenari alternativi] descrizione tramite casi d'uso non appartenenti al flusso principale.
+		\end{description}
 	\subsubsection{Progettazione}
 	% teniamo questo per una revisione successiva
 	% Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
@@ -309,29 +304,19 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	L'analisa dinamica viene effettuata tramite dei test sul software prodotto. Questi test devono verificare la correttezza del software e devono essere ripetibili.
 	\paragraph{Test di unità}
 		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola. Vengono identificati dalla seguente sintassi:
-		\begin{equation}
-			TU[Codice Test]
-		\end{equation}
+			\[TU[Codice Test]\]
 	\paragraph{Test di integrazione}
 		I test di integrazione consentono di controllare che più unità funzionino assieme in modo corretto. Vengono identificati dalla seguente sintassi:
-		\begin{equation}
-			TI[Codice Test]
-		\end{equation}
+			\[TI[Codice Test]\]
 	\paragraph{Test di sistema}
 		I test di sistema vengono eseguiti su un prodotto ritenuto completo per verificarne i requisiti. Vengono identificati dalla seguente sintassi:
-		\begin{equation}
-			TS[Codice Requisito]
-		\end{equation}
+			\[TS[Codice Requisito]\]
 	\paragraph{Test di regressione}
 		Un test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche. Vengono identificati dalla seguente sinstassi:
-		\begin{equation}
-			TR[Codice Test]
-		\end{equation}
+			\[TR[Codice Test]\]
 	\paragraph{Test di validazione}
 		I test di validazione vengono eseguiti con il proponente per collaudare il prodotto. Vengono identificati dalla seguente sintassi:
-		\begin{equation}
-			TV[Codice Requisito]
-		\end{equation}
+			\[TV[Codice Requisito]\]
 
 	\subsubsection{Strumenti}
 	La verifica va automatizzata il più possibile, per garantirne l'obiettività e l'efficacia. % DA IMPLEMENTARE...
