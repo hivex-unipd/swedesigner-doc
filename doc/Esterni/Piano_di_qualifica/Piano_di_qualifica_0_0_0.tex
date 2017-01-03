@@ -217,10 +217,10 @@ Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi
 		\subsubsection{Obiettivi di qualità del prodotto}
 		Gli obiettivi di qualità del software che il gruppo \hx{} desidera raggiungere nell'arco del progetto sono un sottoinsieme di quelli enunciati nello standard ISO/IEC 9126:2001:
 		\begin{itemize}
-			\item il prodotto possiede le funzionalità descritte all'interno dei requisiti obbligatori e gran parte di funzionalità descritte all'interno dei requisiti desiderabili - \ref{S1};
-			\item il prodotto è testato negli aspetti più importanti e in determinate situazioni nelle quali esso si può trovare - \ref{S2};
-			\item il prodotto presenta codice senza elevati gradi di complessità relativamente ad alcuni vincoli definiti – \ref{S3};
-			\item il codice risulta manutenibile e facilmente comprensibile – \ref{S4};
+			\item il prodotto possiede le funzionalità descritte all'interno dei requisiti obbligatori e gran parte di funzionalità descritte all'interno dei requisiti desiderabili - Sezione \ref{S1};
+			\item il prodotto è testato negli aspetti più importanti e in determinate situazioni nelle quali esso si può trovare - Sezione \ref{S2};
+			\item il prodotto presenta codice senza elevati gradi di complessità relativamente ad alcuni vincoli definiti – Sezione \ref{S3};
+			\item il codice risulta manutenibile e facilmente comprensibile – Sezione \ref{S4};
 		\end{itemize}
 	\subsection{Scadenze temporali}
 	Le scadenze temporali stabilite dal gruppo sono definite in dettaglio nel documento \PdP.
@@ -363,21 +363,25 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 	\subsection{Metriche per il prodotto}
 		\subsubsection{Funzionalità \label{S1}}
 		Per quanto riguarda l'aspetto funzionale del software, si è scelto di seguire determinate metriche riguardanti il rispetto dei requisiti, obbligatori e desiderabili.
-			\paragraph{Copertura Requisiti obbligatori}
+			\paragraph{Copertura Requisiti Obbligatori}
 			Questa metrica permette di verificare in ogni momento lo stato dei requisiti obbligatori coperti. Essa rappresenta il rapporto tra i requisiti obbligatori soddisfatti e il numero totale di requisiti obbligatori ricavati.
-			La misura viene effettuata nel modo seguente:
-			% EQUAZIONE
-			I range stabiliti per la metrica sono i seguenti:
+			\\La misura viene effettuata nel modo seguente:
+			\begin{equation}
+			\frac{~numero~requisiti~obbligatori~soddisfatti}{~numero~requisiti~obbligatori~totali}\times{100}
+			\end{equation}
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
 			\end{itemize}
 			
-			\paragraph{Copertura Requisiti desiderabili}
+			\paragraph{Copertura Requisiti Desiderabili}
 			Tale metrica permette di verificare in ogni momento lo stato dei requisiti desiderabili coperti. Essa rappresenta il rapporto tra i requisiti desiderabili soddisfatti e il numero totale di requisiti desiderabili ricavati.
-			La misura viene effettuata nel modo seguente:
-			% EQUAZIONE
-			I range stabiliti per la metrica sono i seguenti:
+			\\La misura viene effettuata nel modo seguente:
+			\begin{equation}
+			\frac{~numero~requisiti~desiderabili~soddisfatti}{~numero~requisiti~desiderabili~totali}\times{100}
+			\end{equation}
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -386,9 +390,11 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 		Per quanto concerne l'affidabilità del prodotto software, il gruppo ha ritenuto importante la valutazione dei test, i quali ricoprono quindi un ruolo essenziale nel ciclo di vita del software.
 			\paragraph{Test superati}
 			Tale metrica indica la percentuale di test superati.
-			La misura viene effettuata nel modo seguente:
-			% EQUAZIONE
-			I range stabiliti per la metrica sono i seguenti:
+			\\La misura viene effettuata nel modo seguente:
+			\begin{equation}
+			\frac{~numero~test~eseguiti}{~numero~test~pianificati}\times{100}
+			\end{equation}
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -397,7 +403,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 		Il gruppo \hx{} ha deciso di seguire metriche relative all'efficienza del software riguardanti taluni vincoli che il codice deve rispettare.
 			\paragraph{Profondità di annidamento}
 			Tale metrica è una misura della profondità di annidamento delle istruzioni \textit{if}/cicli \textit{for} in un programma. Istruzioni \textit{if}/cicli \textit{for} profondamente annidati sono difficili da comprendere e portano potenzialmente all'errore.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -405,7 +411,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Chiamate innestate di metodi}
 			Tale metrica è una misura del numero di chiamate innestate di metodi in un particolare metodo. Un grande numero di chiamate innestate di metodi può portare alla saturazione dello stack, soprattutto in caso di un grande numero di parametri, quindi è necessario limitarne il numero.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -414,7 +420,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 		Per garantire un elevato grado di manutenibilità, si è deciso adottare un discreto numero di metriche che spaziano in diversi aspetti del programma.
 			\paragraph{Numero di statement per metodo}
 			Tale metrica è una misura del numero di statement di un particolare metodo. Avere un numero di statement per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -422,7 +428,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Numero di parametri per metodo}
 			La metrica è la misura del numero totale di parametri formali in ingresso di un particolare metodo. Se il numero di parametri è elevato, lo stack del programma può essere riempito rapidamente in caso di multiple chiamate innestate e il metodo può risultare difficilmente comprensibile e manutenibile; inoltre ciò potrebbe indicare un metodo troppo complesso e non efficacemente suddiviso in sotto-metodi.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -430,7 +436,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Numero di campi dati per classe}
 			La metrica permette di verificare che il numero di campi dati appartenenti ad una determinata classe rientri tra i valori stabiliti. Questo consente di stimare il grado di manutenibilità e comprensibilità del codice e verificane l'accettabilità.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -438,7 +444,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Numero di metodi per classe}
 			Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. 
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -446,7 +452,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Grado di accoppiamento}
 			Tale metrica è una misura del numero di dipendenze di una classe con le altre contenute all'interno del suo stesso package. Avere poche dipendenze tra classi implica che ci sia un maggiore grado di disaccoppiamento. Questo aumenta molto la manutenibilità e la comprensibilità del codice.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -454,11 +460,15 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Complessità ciclomatica}
 			La metrica rappresenta la complessità di funzioni, moduli, metodi o classi di un programma. Essa esprime il numero di cammini linearmente indipendenti presenti all'interno del codice. Alti valori di complessità ciclomatica sottintendono una ridotta manutenibilità del codice. Valori bassi di complessità ciclomatica potrebbero delineare una scarsa efficienza dei metodi.
-			La misura viene effettuata nel modo seguente:
-			%Cyclomatic Number = e − n + 2p
-			%e = numero di archi;
-			%n = numero di nodi;
-			%p = numero di componenti connesse.
+			\\La misura viene effettuata nel modo seguente:
+			\begin{equation}
+			Cyclomatic \ Number = e - n + 2p
+			\end{equation}
+			\begin{itemize}
+				\item e = numero di archi;
+				\item n = numero di nodi;
+				\item p = numero di componenti connesse.
+		    \end{itemize}
 			I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
@@ -467,7 +477,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Lunghezza media di un modulo}
 			La metrica è una misura della dimensione media di un particolare modulo in termini di linee di codice. Difatti avere moduli di grandi dimensioni rende difficoltosa la manutenibilità e la comprensibilità del codice.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -476,7 +486,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			\paragraph{Fan-in}
 			Tale metrica è una misura del numero di funzioni o di metodi che chiamano una certa funzione o metodo.
 			Un alto valore di fan-in per una certa funzione implica che essa è strettamente legata al resto del progetto e che sue eventuali modifiche avranno ampi effetti a catena.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -484,7 +494,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Fan-out}
 			Tale metrica è una misura del numero di funzioni o metodi che sono chiamati da una certa funzione o metodo. Un alto valore di fan-out per una certa funzione suggerisce che la sua complessità generale può essere alta a causa della complessità della logica di controllo necessaria per coordinare i componenti chiamati.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -493,7 +503,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			\paragraph{Rapporto linee di commento su linee di codice}
 			Tale metrica indica il rapporto tra linee di commento e linee di codice (escludendo le linee vuote).
 			Essa risulta utile per stimare la manutenibilità del codice dal momento che un'adeguata documentazione del codice ne permette una maggiore e più rapida comprensione.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
@@ -501,12 +511,32 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 			
 			\paragraph{Validazione W3C}
 			L'applicazione web deve superare correttamente il test di validazione offerto da W3C con un numero di errori gravi pari a zero. Gli avvisi e le inesattezze che non compromettono la funzionalità del sito sono accettate fino a un massimo di 20 per pagina.
-			I range stabiliti per la metrica sono i seguenti:
+			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale:;
 				\item Range di accettazione:;
 			\end{itemize}
+	
+	\newpage
+	\begin{table}
+	\begin{tabular}{l|l|l|}
+	\hline
+	Metriche & Range Accettazione & Range Ottimale \\
+	\hline
+	Schedule Variance & 0 & 1 \\
+	\end{tabular}
+	\caption{Riepilogo delle metriche e dei range di accettazione e ottimali}
+	\end{table}
+	
 \newpage
 \section{Test}
+	\subsection{Tipi di test}
+	Sono stati individuati quattro tipologie di test:
+	\begin{itemize}
+		\item \textbf{Test di unità [TU]}: test con i quali si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore, quali metodi e funzioni scritte;
+		\item \textbf{Test di integrazione [TI]}: test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari package prodotti, singolarmente o nel loro insieme;
+		\item \textbf{Test di sistema [TS]}: test con i quali si tenta di verificare che il funzionamento e il comportamento dell’architettura siano corretti;
+		\item \textbf{Test di accettazione [TA]}: test per verificare che il prodotto soddisfi le richieste del proponente.
+	\end{itemize}
 
 \end{document}
