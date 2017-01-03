@@ -1,5 +1,5 @@
-% norme di progetto
-% da compilare con il comando pdflatex Norme_di_progetto_v_x.x.x.tex
+% Norme di progetto
+% da compilare con il comando pdflatex Norme_di_progetto_x.x.x.tex
 
 \input{../../util/hx-ambiente}
 
@@ -33,6 +33,26 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 	\item minimizzare i conflitti tra i vari ruoli;
 	\item garantire che l'infrastruttura di lavoro sia il più possibile semplice e gestibile --- quindi fruibile;
 \end{itemize}
+Il presente documento si divide in tre sezioni principali:
+\begin{description}
+	\item[sezione \ref{sec:primari}] Regola i due processi primari di:
+	\begin{description}
+		\item[fornitura] descritto in §5.2 in ISO/IEC 12207-1995;
+		\item[sviluppo] descritto in §5.3 in ISO/IEC 12207-1995.
+	\end{description}
+	\item[sezione \ref{sec:supporto}] Regola i processi di supporto:
+	\begin{description}
+		\item[documentazione] descritto in §6.1 in ISO/IEC 12207-1995;
+		\item[configurazione] descritto in §6.2 in ISO/IEC 12207-1995;
+		\item[verifica] descritto in §6.4 in ISO/IEC 12207-1995;
+		\item[validazione] descritto in §6.5 in ISO/IEC 12207-1995.
+	\end{description}
+	\item[sezione \ref{sec:organizzativi}] Regola i processi organizzativi:
+	\begin{description}
+		\item[strumenti] descritto in §7.2 in ISO/IEC 12207-1995;
+		\item[amministrazione] descritto in §7.1 in ISO/IEC 12207-1995.
+	\end{description}
+\end{description}
 
 \subsection{Scopo del prodotto}
 \scopo
@@ -44,8 +64,8 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 
 \subsubsection{Riferimenti normativi}
 \begin{itemize}
-	\item Capitolato d'appalto dell'azienda \ZU: \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf};
-	\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}.
+	\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf};
+	\item Capitolato d'appalto dell'azienda \ZU: \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}. % normativo o informativo?
 \end{itemize}
 
 \subsubsection{Riferimenti informativi}
@@ -57,7 +77,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 
 %%% Processi primari
 
-\section{Processi primari}
+\section{Processi primari} \label{sec:primari}
 
 \subsection{Fornitura}
 
@@ -166,7 +186,7 @@ Questo documento (interno al gruppo) regolamenta i processi del progetto didatti
 
 %%% Processi di supporto
 
-\section{Processi di supporto}
+\section{Processi di supporto} \label{sec:supporto}
 I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
 \subsection{Documentazione} \label{sec:doc}
@@ -262,7 +282,9 @@ Nel ramo \texttt{master} del repository, va pubblicato lo stato attuale della co
 
 
 
-\subsection{Qualità} \dots
+% \subsection{Qualità} \dots % da aggiungere?
+
+
 
 \subsection{Verifica}
 Il processo di verifica consiste nel controllare i prodotti in modo che rispettino i requisiti. % processi, oltre ai prodotti?
@@ -334,7 +356,7 @@ Ogni verifica di una parte della configurazione dev'essere vagliata dal \gloss{r
 
 %%% Processi organizzativi
 
-\section{Processi organizzativi}
+\section{Processi organizzativi} \label{sec:organizzativi}
 I processi normati in questa sezione servono all'organizzazione che li istanzia a progetto, cioè servono al gruppo.
 
 
