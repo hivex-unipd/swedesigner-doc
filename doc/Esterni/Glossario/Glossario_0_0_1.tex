@@ -2,9 +2,6 @@
 % da compilare con il comando pdflatex Glossario_x.x.x.tex
 
 \input{../../util/hx-ambiente}
-\usepackage{glossaries}
-%\usepackage[xindy]{glossaries} % meglio?
-\makeglossaries
 
 \version{0.0.1}
 \creaz{27 dicembre 2016}
@@ -16,10 +13,13 @@
 
 \begin{document}
 \maketitle
+\setcounter{page}{2}
 \include{diario}
 \tableofcontents
 \newpage
 
-\input{terminiGlossario}
+\begin{description}
+	\input{terminiGlossario}
+\end{description}
 
 \end{document}
