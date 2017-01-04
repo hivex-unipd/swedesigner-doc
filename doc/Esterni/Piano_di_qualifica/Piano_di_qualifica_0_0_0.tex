@@ -11,6 +11,10 @@
 \dest{\TV, \ZU}
 \title{Piano di Qualifica}
 
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+
 \begin{document}
 \maketitle
 \include{diario}
@@ -519,11 +523,41 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 	
 	\newpage
 	\begin{table}
-	\begin{tabular}{l|l|l|}
+	\begin{tabular}{|l|l|l|}
 	\hline
-	Metriche & Range Accettazione & Range Ottimale \\
+	\textbf{Metriche} & \textbf{Range Accettazione} & \textbf{Range Ottimale} \\
 	\hline
-	Schedule Variance & 0 & 1 \\
+	\textbf{Metriche di Processo}&&\\
+	\hline
+	~~Schedule Variance &$\geq{-10}$\% &$\geq{0}$\\
+	~~Budget Variance &$\geq{-10}$\% &$\geq{0}$\\
+	~~Produttività di codifica &$\geq{10}$ &$\geq{3}$\\
+	~~Test di unità eseguiti&85-100&100-100\\
+	~~Test di integrazione eseguiti&55-100&70-100\\
+	~~Test di sistema eseguiti&70-100&80-100\\
+	~~Test di accettazione eseguiti&90-100&100-100\\
+	~~Indice Gulpease&40-100&50-100\\
+	~~Copertura del codice&40-100&60-100\\
+	\hline
+	\textbf{Metriche di prodotto}&&\\
+	\hline
+	~~Copertura Requisiti Obbligatori&100-100&100-100\\
+	~~Copertura Requisiti Desiderabili&40-100&80-100\\
+	~~Test superati&90-100&100-100\\
+	~~Profondità annidamento&0-10&0-4\\
+	~~Chiamate innestate di metodi&0-10&0-5\\
+	~~Numero di statement per metodo&0-50&0-30\\
+	~~Numero di parametri per metodo&0-10&0-4\\
+	~~Numero di campi dati per classe&0-25&0-10\\
+	~~Numero di metodi per classe&0-30&0-15\\
+	~~Gradi di accoppiamento&0-7&0-3\\
+	~~Complessità ciclomatica&1-15&1-10\\
+	~~Lunghezza media di un'unità&100-500&100-300\\
+	~~Fan-in&0-20&0-5\\
+	~~Fan-out&0-20&0-5\\
+	~~Rapporto linee di commento su linee di codice&$\geq{20}$&$\geq{30}$\\
+	~~Validazione W3C&0-20&0-0\\
+	\hline
 	\end{tabular}
 	\caption{Riepilogo delle metriche e dei range di accettazione e ottimali}
 	\end{table}
@@ -535,7 +569,7 @@ Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione
 	\begin{itemize}
 		\item \textbf{Test di unità [TU]}: test con i quali si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore, quali metodi e funzioni scritte;
 		\item \textbf{Test di integrazione [TI]}: test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari package prodotti, singolarmente o nel loro insieme;
-		\item \textbf{Test di sistema [TS]}: test con i quali si tenta di verificare che il funzionamento e il comportamento dell’architettura siano corretti;
+		\item \textbf{Test di sistema [TS]}: test con i quali si tenta di verificare che il funzionamento e il comportamento dell'architettura siano corretti;
 		\item \textbf{Test di accettazione [TA]}: test per verificare che il prodotto soddisfi le richieste del proponente.
 	\end{itemize}
 
