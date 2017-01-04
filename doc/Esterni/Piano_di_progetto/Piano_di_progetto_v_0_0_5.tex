@@ -315,8 +315,14 @@ Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha de
 	\item[Verifica e Validazione](sezione \ref{sec:VV}).
 \end{description}
 In ognuna di queste fasi, vengono svolte attività di sviluppo del progetto che sono descritte più approfonditamente nel documento corrente.
-Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \gloss{diagrammi di Gantt}:"descrizione di come sono fatti in generale 
+Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \gloss{diagrammi di Gantt}:
+"descrizione di come sono fatti in generale 
 questi diagrami(es milestone ecc)".
+
+
+{\includegraphics[width=15cm]{img/ganttweeks.jpg}\par}
+
+
 \subsection{Suddivisione delle Attività}
 	\subsubsection{Analisi dei Requisiti} \label{sec:AR}
 	\textbf{Periodo}: dal 29-11-2016 al 11-01-2017.
@@ -331,29 +337,44 @@ questi diagrami(es milestone ecc)".
 		\item[Glossario] questo documento viene steso da tutti i redattori in parallelo alla stesura degli altri documenti; esso contiene la spiegazione di alcuni termini presenti nei vari documenti al fine di chiarire il significato del termine stesso;
 		\item[Lettera di presentazione] questo documento viene presentato al committente al fine di mostrare l'interesse del gruppo di partecipare alla gara d'appalto.
 	\end{description}
+	
+	
+	{\includegraphics[width=16cm]{img/ganttan.jpg}\par}
+		
+		
 	[Gantt eccetera]
 	\subsubsection{Analisi dei Requisiti Incrementale} \label{sec:ARI}
 	\textbf{Periodo}: dal 24-01-2017 al 03-02-2017.
 	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio della \emph{Progettazione Architetturale}. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\emph{Analisi dei Requisiti}), con le correzioni suggerite durante la \emph{Revisione dei Requisiti}.
+
 	[Gantt eccetera]
+	{\includegraphics[width=15cm]{img/ganttari.png}\par}
+
+	
 	\subsubsection{Progettazione Architetturale} \label{sec:PA}
 	\textbf{Periodo}: dal 03-02-2017 al 06-03-2017.	
-	\\ Questo periodo inizia subito dopo \emph{Analisi dei Requisiti Incrementale} e si conclude con la consegna dei documenti per la \emph{Revisione di Progettazione}. La \emph{Progettazione Architetturale} prevede la stesura della progettazione ad alto  livello e predeve lo svolgimento delle seguenti attività:
+	\\ Questo periodo inizia subito dopo \emph{Analisi dei Requisiti Incrementale} e si conclude con la consegna dei documenti per la \emph{Revisione di Progettazione}. La \emph{Progettazione Architetturale} prevede la stesura della progettazione ad alto  livello e prevede lo svolgimento delle seguenti attività:
 	\begin{description}
 		\item[Incremento dei Documenti] in questa attività verranno incrementati tutti i documenti della \emph{Progettazione Architetturale};
 		\item[Specifica Tecnica] in questa attività viene stilato questo documento che descrive le scelte progettuali ad alto livello che il prodotto dovrà rispettare.
 	\end{description}
 	[Gantt eccetera]
+	
+	{\includegraphics[width=15cm]{img/ganttpa.png}\par}
+
 	\subsubsection{Progettazione di Dettaglio e Codifica} \label{sec:PDC}
 	\textbf{Periodo}: dal 06-03-2017 al 11-04-2017.	
 	\\ Questo perido inizia subito dopo la \emph{Progettazione Architetturale} e si conclude con la consegna dei documenti per la \emph{Revisione di Qualifica"}. La \emph{Progettazione di Dettaglio e Codifica} prevede la stesura del \emph{Definizione di Prodotto} e successivamente si inizierà con la fase di codifica. Le attività da svolgere sono le seguenti:
 	\begin{description}
-		\item[Incremento dei Documenti] in questa attività verranno incrementati tutti i documenti basandosi sui risultati della \emph{Revisione di Prodotto}; 
+		\item[Incremento dei Documenti] in questa attività verranno incrementati tutti i documenti basandosi sui risultati della \emph{Revisione di Progettazione}; 
 		\item[Definizione di Prodotto] in questa attività viene stilato questo documento che contiene la struttura e la relazione tra i vari componenti del prodotto, in base a quanto riportato nel documento \emph{Specifica Tecnica};
 		\item[Codifica] in questa attività si procede allo sviluppo del codice del software da parte dei programmatori, attenendosi a quanto è riportato nella \emph{Definizione di Prodotto}; 
 		\item[Manuale Utente] in questa attività si crea il documento destinato all'utente finale, che ha lo scopo di fornire le linee guida per il corretto utilizzo del software.
 	\end{description}
 	[Gantt eccetera]
+	
+	{\includegraphics[width=15cm]{img/ganttpdc.png}\par}
+
 	\subsubsection{Verifica e Validazione} \label{sec:VV}
 
 	\textbf{Periodo}: dal 11-04-2017 al 14-05-2017.
@@ -363,6 +384,212 @@ questi diagrami(es milestone ecc)".
 		\item[Incremento e Verifica dei Documenti] in questa attività verranno incrementati verificati tutti i documenti, basandosi sui risultati della \emph{Revisione di Qualifica}.
 	\end{description}
 	[Gantt eccetera]	
+	
+	{\includegraphics[width=15cm]{img/ganttva.png}\par}
+
+	
+\section{Suddivisione delle ore lavorative}
+Di seguito è riportata la pianificazione di dettaglio delle attività, suddivisa nei periodi descritti precedentemente. Ad ogni periodo è descritto in forma tabulare e grafica il quantitativo di ore impiegato da ciascun componente, e la sua retribuzione, per ogni diverso tipo di ruolo svolti.
+A conclusione, è illustrato un quadro riassuntivo.
+
+
+\newcommand{\roww}[7]{
+	#1 & #2 & #3 & #4 & #5 & #6 & #7
+}
+
+\newcommand{\x}[7]{
+
+\begin{center}
+  \begin{tabular}{ | l | c | c | c | c | c | c | r   }
+    \hline
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Totale ore per persona \\ \hline
+    \PB & \roww[#1] \\ \hline
+    \LB & \roww[#2] \\ \hline
+    \GG & \roww[#3] \\ \hline
+    \MM & \roww[#4] \\ \hline
+    \LS & \roww[#5] \\ \hline
+    \AZ & \roww[#6] \\ \hline
+    Totale ore per ruolo & \roww[#7] \\ \hline
+    
+  \end{tabular}
+\end{center} 
+}
+
+
+\subsection{\AR}
+texttexttext
+
+\begin{center}
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 7 & 3 & 14 & 0 & 0 & 7 & 31 \\ \hline
+    \LB & 12 & 11 & 6 & 0 & 0 & 6 & 35 \\ \hline
+    \GG & 0 & 24 & 8 & 0 & 0 & 3 & 35 \\ \hline
+    \MM & 0 & 20 & 8 & 0 & 0 & 4 & 32\\ \hline
+    \LS & 0 & 2 & 12 & 0 & 0 & 17 & 31\\ \hline
+    \AZ & 1 & 4 & 13 & 0 & 0 & 12 & 30 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 20 & 64 & 61 & 0 & 0 & 49 & 194 \\ \hline
+    
+  \end{tabular}
+\end{center} 
+% i colori danno problemi di visualizzazione alle linee
+
+	{\includegraphics[width=15cm]{img/orear1.png}\par}
+
+	{\includegraphics[width=15cm]{img/orear2.png}\par}
+
+	{\includegraphics[width=15cm]{img/costoar.png}\par}
+
+%\x
+%{\roww{7}{3}{14}{0}{0}{7}{31}}
+%{\roww{12}{11}{6}{0}{0}{6}{35}}
+%{\roww{0}{24}{8}{0}{0}{3}{35}}
+%{\roww{0}{20}{8}{0}{0}{4}{32}}
+%{\roww{0}{2}{12}{0}{0}{17}{31}}
+%{\roww{1}{4}{13}{0}{0}{12}{30}}
+%{\roww{20}{64}{61}{0}{0}{49}{194}}
+
+
+\subsection{\ARI}
+texttexttext
+
+\begin{center}
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \GG & 0 & 0 & 0 & 0 & 0 & 0 & 2 \\ \hline
+    \MM & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LS & 0 & 0 & 5 & 0 & 0 & 0 & 5 \\ \hline
+    \AZ & 0 & 0 & 8 & 0 & 0 & 0 & 8 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 0 & 0 & 13 & 0 & 0 & 2 & 15 \\ \hline
+    
+  \end{tabular}
+\end{center} 
+% i colori danno problemi di visualizzazione alle linee
+
+	{\includegraphics[width=15cm]{img/oreari1.png}\par}
+
+	{\includegraphics[width=15cm]{img/oreari2.png}\par}
+
+	{\includegraphics[width=15cm]{img/costoari.png}\par}
+
+
+\subsection{\PA}
+texttexttext
+
+\begin{center}
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 0 & 0 & 0 & 30 & 0 & 6 & 36 \\ \hline
+    \LB & 0 & 3 & 0 & 38 & 0 & 1 & 42 \\ \hline
+    \GG & 3 & 0 & 0 & 35 & 0 & 1 & 39 \\ \hline
+    \MM & 0 & 0 & 0 & 45 & 0 & 4 & 49 \\ \hline
+    \LS & 2 & 0 & 0 & 40 & 0 & 6 & 48 \\ \hline
+    \AZ & 0 & 3 & 0 & 36 & 0 & 4 & 40 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 5 & 3 & 0 & 224 & 0 & 22 & 254 \\ \hline
+    
+  \end{tabular}
+\end{center} 
+% i colori danno problemi di visualizzazione alle linee
+
+	{\includegraphics[width=15cm]{img/orepa1.png}\par}
+
+	{\includegraphics[width=15cm]{img/orepa2.png}\par}
+
+	{\includegraphics[width=15cm]{img/costopa.png}\par}
+
+
+\subsection{\PDC}
+texttexttext
+
+\begin{center}
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 0 & 0 & 0 & 18 & 30 & 7 & 55 \\ \hline
+    \LB & 0 & 5 & 0 & 8 & 30 & 13 & 56 \\ \hline
+    \GG & 0 & 5 & 0 & 10 & 30 & 3 & 48 \\ \hline
+    \MM & 2 & 0 & 0 & 0 & 30 & 8 & 40 \\ \hline
+    \LS & 0 & 3 & 0 & 10 & 30 & 9 & 52 \\ \hline
+    \AZ & 2 & 5 & 0 & 10 & 30 & 10 & 57 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 4 & 18 & 0 & 56 & 180 & 50 & 308 \\ \hline
+    
+  \end{tabular}
+\end{center} 
+% i colori danno problemi di visualizzazione alle linee
+
+	{\includegraphics[width=15cm]{img/orepdc1.png}\par}
+
+	{\includegraphics[width=15cm]{img/orepdc2.png}\par}
+
+	{\includegraphics[width=15cm]{img/costopdc.png}\par}
+
+
+\subsection{\VV}
+texttexttext
+
+\begin{center}
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 3 & 8 & 0 & 0 & 0 & 5 & 16 \\ \hline
+    \LB & 3 & 0 & 0 & 0 & 0 & 2 & 5 \\ \hline
+    \GG & 0 & 0 & 0 & 0 & 0 & 14 & 14 \\ \hline
+    \MM & 0 & 0 & 2 & 0 & 0 & 15 & 17 \\ \hline
+    \LS & 0 & 0 & 0 & 0 & 0 & 2 & 2 \\ \hline
+    \AZ & 0 & 0 & 0 & 0 & 0 & 3 & 3 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 6 & 8 & 2 & 0 & 0 & 41 & 57 \\ \hline
+    
+  \end{tabular}
+\end{center} 
+% i colori danno problemi di visualizzazione alle linee
+
+	{\includegraphics[width=15cm]{img/orevv1.png}\par}
+
+	{\includegraphics[width=15cm]{img/orevv2.png}\par}
+
+	{\includegraphics[width=15cm]{img/costovv.png}\par}
+
+
 \section{Preventivo} \label{sec:preventivo}
 \section{Consuntivo di periodo} \label{sec:consuntivo}
 
