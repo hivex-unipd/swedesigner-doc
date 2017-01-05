@@ -41,7 +41,7 @@
 			\item[Regolamento del progetto didattico]\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf};
 			\item[Vincoli di organigramma e dettagli tecnico-economici]\url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/PD01b.html}.
 		\end{description}
-		\subsubsection{Informativi}
+		\subsubsection{Informativi} \label{sec:ref}
 		\begin{description}
 			\item[Slides del corso di Ingegneria del Software]\url{http://www.math.unipd.it/~tullio/IS-1/2016/};
 			\item[Ingegneria del Software - Ian Sommerville - Ottava Edizione]
@@ -64,7 +64,7 @@
 
 	La scelta di un modello di sviluppo è cruciale per la corretta pianificazione delle attività. Da essa infatti si deriva tutta la struttura principale con cui saranno pianificati milestone e task.
 
-	Il progetto {\proj}, come affrontato nel documento [x] e [y], presenta numerosi punti critici, analizzati nella sezione [nextsection], in particolare nella sezione [rischio tecnologico]. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software \gloss{CASE} e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
+	Il progetto {\proj}, come affrontato nei documenti {\SdF} e {\PdQ}, presenta numerosi punti critici, analizzati nella sezione {\ref{sec:analisi}}, in particolare nella sezione {\ref{sec:tec}}, in cui sono analizzati i rischi tecnologici. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software \gloss{CASE} e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
 
 	Un progetto dedito all'esplorazione va supportato con un adeguato modello di sviluppo; esso deve avere i seguenti requisiti:
 
@@ -77,7 +77,7 @@
 
 	Di seguito vengono analizzati sinteticamente punti deboli e punti di forza dei principali approcci ai processi software, nel contesto del nostro progetto.
 	
-	Va tuttavia ricordato che non è sconsigliato adottare più modelli in forma ibrida, come suggerito da Sommerville. [riferimento]
+	Va tuttavia ricordato che non è sconsigliato adottare più modelli in forma ibrida, come suggerito da Sommerville (vedi \ref{sec:ref}).
 
 	\subsection{Analisi modelli di sviluppo}
 
@@ -101,7 +101,7 @@
 \item Il committente deve avere già inizialmente una idea molto chiara del prodotto che desidera. 
 \end{itemize}
 
-Questi ultimi punti entrano in netto contrasto con i requisiti inizialmente proposti; ciò ha portato a scartare questo modello di sviluppo. Tuttavia adotteremo una politica a deadline, a causa dei vincoli imposti dalle revisioni di {\TV} [okay, riformulare]
+Questi ultimi punti entrano in netto contrasto con i requisiti inizialmente proposti; ciò ha portato a scartare questo modello di sviluppo. Tuttavia adotteremo una politica a deadline, anche a causa dei vincoli imposti dalle revisioni del {\TV}.
 
 			\paragraph{Modello evolutivo}
 
@@ -109,7 +109,12 @@ Questi ultimi punti entrano in netto contrasto con i requisiti inizialmente prop
 
 Ciò si può realizzare principalmente tramite due strumenti differenti: lo \emph{exploratory development} e il \emph{throwaway prototyping}.
 
-Il primo consiste nel lavorare a fianco del cliente per esplorare i suoi requisiti e infine consegnare un sistema adeguato. Mentre questo metodo di lavoro potrebbe sembrare positivo, esso presenta due grosse criticità: cambiamenti continui tendono a corrompere la struttura e l'architettura del software; inoltre aggiungere estensioni non previste diventa progressivamente più complesso e costoso. Questo rischio a parere del \gloss{team} non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
+Il primo consiste nel lavorare a fianco del cliente per esplorare i suoi requisiti e infine consegnare un sistema adeguato. Mentre questo metodo di lavoro potrebbe sembrare positivo, esso presenta due grosse criticità: 
+\begin{itemize}
+\item Cambiamenti continui tendono a corrompere la struttura e l'architettura del software;
+\item Aggiungere estensioni non previste diventa progressivamente più complesso e costoso. 
+\end{itemize}
+Questo rischio a parere del \gloss{team} non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
 
 La seconda possibilità invece consiste nell'avere dei prototipi usati per meglio comprendere il problema. La criticità presente riguarda il futuro di questi prototipi: sviluppare un prototipo porta valore esclusivamente nell'ambito di comprensione i requisiti del progetto, non porta un effettivo avanzamento nello sviluppo del prodotto.
 
@@ -144,12 +149,12 @@ Vanno segnalati tuttavia i seguenti difetti:
 \item Non è possibile modificare i requisiti già esistenti negli incrementi successivi.
 \end{itemize}
 
-Ciò si traduce in una criticità del processo nella fase di analisi. Nella sezione [Analisi dei rischi] si analizza come questo rischio verrà trattato.
+Ciò si traduce in una criticità del processo nella fase di analisi. Nella sezione {\ref{sec:analisi}} (Analisi dei rischi) si analizza come questo rischio verrà trattato.
 
 In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostanziali vantaggi rispetto agli altri modelli finora analizzati. In seguito si analizzano altri modelli che sono stati presi in considerazione.
 
 			\paragraph{Modello a spirale}
-			Il modello a spirale (Boehm, 1988) è un approccio fondamentalmente rappresentato come una sequenza di attività che si ripetono nel tempo, partendo dalla fattibilità, definizione dei requisiti, ideazione dell'archittettura, e così via.
+			Il modello a spirale (Boehm, 1988) è un approccio fondamentalmente rappresentato come una sequenza di attività che si ripetono nel tempo, partendo dalla fattibilità, definizione dei requisiti, ideazione dell'architettura, e così via.
 			
 			Le quattro operazioni ripetute all'interno della spirale sono:
 \begin{itemize}
@@ -160,9 +165,6 @@ In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostan
 \end{itemize}			 
 
 L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il \gloss{team}, il processo di sviluppo e le risorse.
-		\subsubsection{Modelli agili}
-[lasciamo?]
-
 
 
 \section{Analisi dei rischi} \label{sec:analisi}
