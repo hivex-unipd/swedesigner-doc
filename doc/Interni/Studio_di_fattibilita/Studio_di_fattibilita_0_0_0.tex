@@ -1,0 +1,162 @@
+% Studio di Fattibilita
+% da compilare con il comando pdflatex Studio_di_Fattibilita_x.x.x.tex
+
+\input{../../util/hx-ambiente}
+
+\version{0.0.1}
+\creaz{20 dicembre 2016}
+\author{\AZ}
+\supervisor{\LS}
+\uso{interno}
+\dest{\TV, \ZU}
+\title{Studio di Fattibilità}
+
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\begin{document}
+\maketitle
+\include{diario}
+\tableofcontents
+\newpage
+
+\section{Introduzione}
+	\subsection{Scopo del documento}
+	%da fare
+	
+	\subsection{Scopo del prodotto}
+	\scopo{}
+	
+	\subsection{Glossario}
+	\presgloss{}
+	
+	\subsection{Riferimenti}
+		\subsubsection{Normativi}
+		\begin{itemize}
+			\item \textbf{Norme di Progetto: } \emph{\NdP};
+		\end{itemize}
+		\subsubsection{Informativi}
+		\begin{itemize}
+			\item \textbf{Glossario: }\emph{\Glossario};
+			\item \textbf{Capitolato d'Appalto C1: } \emph{APIM}: An API Market Platform
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf};
+			\item \textbf{Capitolato d'Appalto C2: } \emph{AtAVi}: Accoglienza tramite Assistente Virtuale
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C2.pdf};
+			\item \textbf{Capitolato d'Appalto C3: } \emph{DeGeOP}: A Designer and Geo-localizer Web App for Organizational Plants
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C3.pdf};
+			\item \textbf{Capitolato d'Appalto C4: } \emph{eBread}: applicazione di lettura per dislessici
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C4.pdf};
+			\item \textbf{Capitolato d'Appalto C5: } \emph{Monolith}: an interactive bubble provider
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C5.pdf};
+			\item \textbf{Capitolato d'Appalto C6: } \emph{SWEDesigner}: editor di diagrammi UML con generazione di codice
+			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf};
+		\end{itemize}
+\newpage
+	
+\section{Studio di fattibilità del capitolato scelto\\ \emph{SWEDesigner}: editor di diagrammi UML con generazione di codice}
+	\subsection{Descrizione}
+	\subsection{Studio del dominio}
+		\subsubsection{Dominio applicativo}
+		\subsubsection{Dominio tecnologico}
+	\subsection{Aspetti positivi e negativi}
+	\subsection{Valutazione finale}
+\newpage
+
+\section{Studio di fattibilità degli altri capitolati}
+	\subsection{Capitolato C1: \emph{APIM}: An API Market Platform}
+		\subsubsection{Descrizione}
+		Lo scopo di questo capitolato è quello di creare un'applicazione web che rappresenti una sorta di marketplace per la consultazione e 
+		condivisione di microservizi. Tra le funzionalità che il prodotto software dovrebbe fornire vi sono la possibilità di registrare le API 
+		di un microservizio, consultarle e ritrovare la relativa documentazione e visualizzare i relativi dati tecnici; inoltre è richiesta la 
+		funzionalità di associare ad ogni API diverse chiavi d'uso, monitorare il suo utilizzo, limitare il suo uso da parte di utenti in possesso 
+		di chiavi scadute o non valide.
+		\subsubsection{Studio del dominio}
+			\paragraph{Dominio applicativo}
+			Come stanno facendo anche grandi aziende operanti nel settore della tecnologia digitale (Netflix ed Amazon, che hanno iniziato ad usare 
+			in modo estensivo i microservizi), il team di ItalianaSoftware sta focalizzando i propri sforzi su una nuova visione dell'architettura 
+			dei programmi basata non su grandi moduli funzionali bensì su unità minimali - microservizi - in grado di comporsi e cooperare in modo 
+			tale da formare aggregati sempre più complessi fino ad arrivare ad un'unica applicazione monolitica. Un'innovazione, questa, che potrebbe 
+			trasformare completamente la struttura dei sistemi informativi: da monolitici, con processi e dati difficilmente modificabili, diventerebbero 
+			adattivi e flessibili in quanto composti da tanti componenti interdipendenti, ciascuno dei quali offre funzionalità ben delineate.
+			\paragraph{Dominio tecnologico}
+			Per quanto riguarda il set di tecnologie da utilizzarsi, ItalianaSoftware consente al gruppo (ai gruppi) impegnato sul progetto un buon 
+			margine di libertà. Il front end della web application è da svilupparsi con l'ausilio della terna JavaScript, HTML e CSS3 mentre a 
+			livello di database è garantita la possibilità di scegliere tra una base di dati SQL o NoSQL.\\
+			Inevitabilmente il vincolo principale risiede nel forte suggerimento di utilizzare il linguaggio orientato ai microservizi sviluppato 
+			dall'azienda stessa - Jolie - per la rappresentazione delle interfacce e per la creazione dell'API Gateway.
+		\subsubsection{Aspetti positivi e negativi}
+		Fra le note positive emerse nell'analisi del capitolato vi è innanzitutto la motivazione di confrontarsi con quella che potrebbe essere 
+		a tutti gli effetti una vera e propria rivoluzione nell'intendere l'architettura dei sistemi informativi, composti da moduli unitari 
+		componibili, riusabili e scalabili.\\
+		Inoltre l'azienda, a cui si deve riconoscere un grande coraggio nello spingere verso l'innovazione, si è detta pronta a collaborare attivamente 
+		con i team impegnati nel progetto soprattutto nel garantire formazione a proposito del linguaggio proprietario Jolie.\\
+		Uno dei fattori chiave nella decisione se partecipare o meno all'appalto di tale progetto è proprio il suo uso; da un lato la necessità di 
+		imparare un nuovo linguaggio di programmazione ha sempre un importante valore a livello formativo, dall'altro, però, non è ancora ben chiaro 
+		quali siano le reali potenzialità di Jolie per affermarsi nel sovraffollato panorama tecnologico odierno.
+		
+		\subsubsection{Valutazione finale}
+		Il gruppo \hx{} ha ritenuto opportuno scegliere un capitolato che permettesse il confronto con tecnologie che per i membri fossero nuove,
+		ma al contempo già pienamente affermate in quanto a utilizzo, funzionalità, potenzialità. Tale scelta non trova riscontro in questo capitolato.
+		
+	\subsection{Capitolato C2: \emph{AtAVi}: Accoglienza tramite Assistente Virtuale}
+		\subsubsection{Descrizione}
+		Lo scopo di questo capitolato è quello di realizzare un applicativo web che permetta una prima accoglienza degli ospiti in visita all'ufficio 
+		dell'azienda zero12. Il progetto dovrebbe comporsi di tre parti ben distinte: un'interfaccia web per permettere all'utente di interagire con 
+		l'utilizzatore del sistema, un'interfaccia per trasmettere informazioni attraverso il canale comunicativo aziendale - Slack - e un sistema che 
+		sfrutti i servizi AWS Lambda per l'interazione con le API dell'assistente virtuale scelto.
+		\subsubsection{Studio del dominio}
+			\paragraph{Dominio applicativo}
+			Il progetto proposto si inserisce all'interno di un quadro di ampio respiro quale la trasformazione digitale dei sistemi aziendali e la 
+			presenza sempre più pregnante nella vita quotidiana di applicativi basati proprio sull'interazione con assistenti virtuali, in grado di 
+			organizzare e gestire i nostri impegni e adattarsi alle nostre preferenze e richieste.\\
+			Il capitolato si configura pertanto sia come un'indagine su ulteriori ambiti di integrazione di tali tecnologie, sia come la dimostrazione 
+			di come anche in ambito aziendale esse possano contribuire a rendere più efficiente e moderno l'ambiente lavorativo.
+			\paragraph{Dominio tecnologico}
+			Fra le tecnologie con cui è richiesto confrontarsi per la realizzazione di tale progetto vi sono:
+			\begin{itemize}
+				\item I servizi offerti dall'infrastruttura degli Amazon Web Services, ed in particolare le innovazioni fornite dalla Lambda expressions 
+				di AWS che consentono di implementare un servizio di elaborazione servless;
+				\item Database NoSQL come MongoDN o DynamoDB (per la memorizzazione e l'analisi delle informazioni raccolte nel corso delle interazioni con il cliente);
+				\item Linguaggio di programmazione NOdeJS;
+				\item Il sistema di comunicazione aziendale Slack;
+				\item SDK dei principali assistenti virtuali sul mercato (Cortana, Siri, Google Home).
+			\end{itemize}
+		\subsubsection{Aspetti positivi e negativi}
+		Fra i lati positivi del capitolato figurano l'offerta di formazione da parte dell'azienda sulle principali tecnologie e la possibilità di 
+		lavorare con il supporto di un server dedicato configurato tramite i servizi AWS.\\
+		Tuttavia si è sottolineato come lo scopo del capitolato consista più nel trovare un modo per concertare e coordinare fra loro diversi sistemi 
+		esistenti più che nell'elaborare qualcosa di effettivamente nuovo nell'ambito applicativo.\\
+		Fra le criticità individuate dai membri del team vi è inoltre la necessità di confrontarsi con un vasto assortimento di tecnologie non ben 
+		conosciute e da riuscire ad indagare a fondo, alcune delle quali - librerie di sviluppo degli assistenti virtuali in primis - di indubbia 
+		complessità; tale mancanza di esperienza avrebbe potuto togliere ampio spazio ad una riflessione più approfondita sulle funzionalità e sulla 
+		struttura del progetto stesso.\\
+		A ciò si aggiunge una mancanza di chiarezza a livello dell'architettura software da realizzare considerata particolarmente problematica da 
+		parte di alcuni membri del gruppo.
+		\subsubsection{Valutazione finale}
+		%da fare
+		
+	\subsection{Capitolato C3: \emph{DeGeOP}: A Designer and Geo-localizer Web App for Organizational Plants}
+		\subsubsection{Descrizione}
+		\subsubsection{Studio del dominio}
+			\paragraph{Dominio applicativo}
+			\paragraph{Dominio tecnologico}
+		\subsubsection{Aspetti positivi e negativi}
+		\subsubsection{Valutazione finale}
+		
+	\subsection{Capitolato C4: \emph{eBread}: applicazione di lettura per dislessici}
+		\subsubsection{Descrizione}
+		\subsubsection{Studio del dominio}
+			\paragraph{Dominio applicativo}
+			\paragraph{Dominio tecnologico}
+		\subsubsection{Aspetti positivi e negativi}
+		\subsubsection{Valutazione finale}
+		
+	\subsection{Capitolato C5: \emph{Monolith}: an interactive bubble provider}
+		\subsubsection{Descrizione}
+		\subsubsection{Studio del dominio}
+			\paragraph{Dominio applicativo}
+			\paragraph{Dominio tecnologico}
+		\subsubsection{Aspetti positivi e negativi}
+		\subsubsection{Valutazione finale}
+		
+\end{document}
