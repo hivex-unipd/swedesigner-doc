@@ -416,11 +416,23 @@ A conclusione, è illustrato un quadro riassuntivo.
 \end{figure} 
 }
 
+\newcommand{\intropreventivo}[1]
+{
+Di seguito si riporta la divisione oraria pianificata nella fase di #1.
+
+Successivamente sono evidenziate graficamente la divisione delle ore per persona e per ruolo. 
+}
+
+
+\newcommand{\introcosto}[1]
+{
+Di seguito si riporta il costo della #1.
+}
 
 \pagebreak[4]
 \subsection{\AR}
-texttexttext
 
+\intropreventivo{\AR}
 % i colori danno problemi di visualizzazione alle linee
 \begin{figure}[H]
 \makebox[\textwidth][c]
@@ -473,11 +485,47 @@ texttexttext
 
 \subsubsection{Costo \AR}
 	
+\introcosto{\AR}
+Questo costo viene fornito rappresenta l'investimento effettuato da {\hx} prima dell'aggiudicazione dell'appalto e perciò tale periodo \textbf{non è a carico del cliente}. 
+
+Gli sforzi maggiori si evidenziano nel ruolo di:
+\begin{itemize}
+\item {\AMx} a causa dell'impegno aggiuntivo dedicato alla creazione di un proprio \gloss{Way of Working};
+\item {\ANx} per gli sforzi impiegati a raggiungere una comprensione profonda del progetto affrontato.
+\end{itemize}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 210 & 60 & 350 & 0 & 0 & 105 & 725 \\ \hline
+    \LB & 360 & 220 & 150 & 0 & 0 & 90 & 820 \\ \hline
+    \GG & 0 & 480 & 200 & 0 & 0 & 45 & 725 \\ \hline
+    \MM & 0 & 400 & 200 & 0 & 0 & 60 & 660 \\ \hline
+    \LS & 0 & 40 & 300 & 0 & 0 & 255 & 595 \\ \hline
+    \AZ & 30 & 80 & 325 & 0 & 0 & 180 & 615 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 600 & 1280 & 1525 & 0 & 0 & 735 & 4140 \\ \hline
+  \end{tabular}
+  
+}\label{tab:car}
+
+  \caption{Tabella costo {\AR} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/costoar.png}\par
+\includegraphics[width=1.05\textwidth]{img/costoar.png}\par
 }
-\caption{Caption}
+\caption{Costo {\AR} per ruolo, valori in euro}
 \label{fig:car}
 \end{figure}
 
@@ -495,11 +543,13 @@ texttexttext
 
 \pagebreak[4]
 \subsection{\ARI}
+\intropreventivo{\ARI}
 
-
-texttexttext
 
 \begin{figure}[H]
+
+\makebox[\textwidth][c]
+{
 \definecolor{white2}{rgb}{0.95,0.95,0.95}
 \definecolor{white3}{rgb}{0.9,0.9,0.9}
 %\rowcolors{1}{white}{white2}
@@ -519,13 +569,15 @@ texttexttext
     Totale ore/ruolo & 0 & 0 & 13 & 0 & 0 & 2 & 15 \\ \hline
     
   \end{tabular}
+}
 \end{figure} 
 % i colori danno problemi di visualizzazione alle linee
+\pagebreak
 
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.5\textwidth]{img/oreari1.png}}
+\includegraphics[width=1.15\textwidth]{img/oreari1.png}}
 \caption{Ore/ruolo per persona nella fase di \ARI.}
 \label{fig:ari}
 
@@ -533,11 +585,14 @@ texttexttext
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/oreari2.png}}
+\includegraphics[width=1.15\textwidth]{img/oreari2.png}}
 \caption{Ore/persona per ruolo nella fase di \ARI.}
 \label{fig:ari2}
 
 \end{figure}
+
+\subsubsection{Costo \ARI}
+\introcosto{\ARI}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
@@ -546,14 +601,17 @@ texttexttext
 \end{figure}
 
 \pagebreak[4]
+
 \subsection{\PA}
-texttexttext
+\intropreventivo{\PA}
 
 \begin{figure}[H]
 \definecolor{white2}{rgb}{0.95,0.95,0.95}
 \definecolor{white3}{rgb}{0.9,0.9,0.9}
 %\rowcolors{1}{white}{white2}
 
+\makebox[\textwidth][c]
+{
   \begin{tabular}{ | l | c | c | c | c | c | c | r |}
     \hline
     \rowcolor[gray]{.9}
@@ -569,13 +627,13 @@ texttexttext
     Totale ore/ruolo & 5 & 3 & 0 & 224 & 0 & 22 & 254 \\ \hline
     
   \end{tabular}
+}
 \end{figure} 
 % i colori danno problemi di visualizzazione alle linee
 
-
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.5\textwidth]{img/orepa1.png}}
+\includegraphics[width=1.2\textwidth]{img/orepa1.png}}
 \caption{Ore/ruolo per persona nella fase di \PA.}
 \label{fig:pa1}
 
@@ -589,6 +647,10 @@ texttexttext
 
 \end{figure}
 
+
+\subsubsection{Costo \PA}
+\introcosto{\PA}
+
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/costopa.png}}
@@ -596,13 +658,15 @@ texttexttext
 
 \pagebreak[4]
 \subsection{\PDC}
-texttexttext2
+\intropreventivo{\PDC}
 
 \begin{figure}[H]
 \definecolor{white2}{rgb}{0.95,0.95,0.95}
 \definecolor{white3}{rgb}{0.9,0.9,0.9}
 %\rowcolors{1}{white}{white2}
 
+\makebox[\textwidth][c]
+{
   \begin{tabular}{ | l | c | c | c | c | c | c | r |}
     \hline
     \rowcolor[gray]{.9}
@@ -618,13 +682,14 @@ texttexttext2
     Totale ore/ruolo & 4 & 18 & 0 & 56 & 180 & 50 & 308 \\ \hline
     
   \end{tabular}
+  }
 \end{figure} 
 % i colori danno problemi di visualizzazione alle linee
 
 
 % USARE QUESTO PER IMMAGINI
 \begin{figure}[H]
-  \makebox[\textwidth][c]{\includegraphics[width=1.5\textwidth]{img/orepdc1.png}}
+  \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{img/orepdc1.png}}
   \caption{Ore/ruolo per persona nella fase di \PDC.}
 \label{fig:pdc1}
 
@@ -640,6 +705,10 @@ texttexttext2
 
 \end{figure}
 
+
+\subsubsection{Costo \PDC}
+\introcosto{\PDC}
+
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/costopdc.png}}
@@ -647,14 +716,16 @@ texttexttext2
 
 \pagebreak[4]
 \subsection{\VV}
-texttexttext
+\intropreventivo{\VV}
 
 \begin{figure}[H]
 \definecolor{white2}{rgb}{0.95,0.95,0.95}
 \definecolor{white3}{rgb}{0.9,0.9,0.9}
 %\rowcolors{1}{white}{white2}
 
-  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+\makebox[\textwidth][c]
+{
+  \begin{tabular}[width=1.2\textwidth]{ | l | c | c | c | c | c | c | r |}
     \hline
     \rowcolor[gray]{.9}
     Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
@@ -669,12 +740,13 @@ texttexttext
     Totale ore/ruolo & 6 & 8 & 2 & 0 & 0 & 41 & 57 \\ \hline
     
   \end{tabular}
+  }
 \end{figure} 
 % i colori danno problemi di visualizzazione alle linee
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.5\textwidth]{img/orevv1.png}}
+\includegraphics[width=1.2\textwidth]{img/orevv1.png}}
 \caption{Ore/ruolo per persona nella fase di \VV.}
 \label{fig:vv1}
 
@@ -688,6 +760,9 @@ texttexttext
 \label{fig:vv2}
 
 \end{figure}
+
+\subsubsection{Costo \VV}
+\introcosto{\VV}
 
 
 \begin{figure}[H]
