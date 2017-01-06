@@ -125,12 +125,12 @@
 		\end{itemize}
 
 		\subsubsection{Procedure per il controllo della qualità di processo}
-		L'adozione dello standard \gloss{SPICE}, in combinazione con l'approccio automigliorativo del 		ciclo \gloss{PDCA}, è alla base della strategia prevista del gruppo per garantire una sempre maggiore qualità dei processi in atto e dei prodotti risultanti.
+		L'adozione dello standard \gloss{SPICE}, in combinazione con l'approccio automigliorativo del ciclo \gloss{PDCA}, è alla base della strategia prevista del gruppo per garantire una sempre maggiore qualità dei processi in atto e dei prodotti risultanti.
 		\\Il documento \PdP stabilisce gli obiettivi del gruppo in relazione alla pianificazione in dettaglio dei vari processi e alla ripartizione delle risorse ad essi assegnate per un efficacie svolgimento. Altri obiettivi di qualità sono illustrati successivamente in questo documento.
 		\\Le metriche utilizzate dal gruppo per valutare la qualità dei processi, commisurarla agli obiettivi stabiliti e stabilire eventuali azioni correttive di miglioramento sono definiti in dettaglio nella sezione \ref{S5} del seguente documento. Da sottolineare che anche le metriche relative alla qualità del prodotto software costituiscono un'indicazione preziosa per valutare la qualità dei processi in atto: infatti un prodotto di bassa qualità è indicativo di un processo da migliorarsi.
 
 		\subsubsection{Obiettivi di qualità di processo}
-		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard \gloss{SPICE} e per ognuno di essi gli obiettivi di qualità perseguiti.
+		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard ISO/IEC 12207:2008 e per ognuno di essi gli obiettivi di qualità perseguiti.
 			\paragraph{Pianificazione di Progetto e Processo di Verifica e Controllo }
 			Questo macro-processo, derivato dall'unione dei processi 6.3.1 e 6.3.2 previsti dallo standard ISO/IEC 12207:2008, ha lo scopo di pianificare le attività richieste dal progetto.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
@@ -141,7 +141,7 @@
 				I costi di ogni processo dovranno rientrare nel budget previsto dal documento \PdP.
 				
 			\paragraph{Processo di costruzione del software}
-			Il processo definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
+			Il processo, corrispondente al processo 7.1.5 previsto dallo standard ISO/IEC 12207:2008, definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 
 				\subparagraph{Rispetto della produttività di codifica}
@@ -201,9 +201,9 @@
 				Gli attributi presenti nel modello relativo alla qualità del software in uso sono rappresentati da quattro grandi categorie:
 				\begin{itemize}
 					\item \textbf{efficacia}: è la capacità di consentire all'utente di raggiungere obiettivi specifici con precisione e completezza.
-					\item \textbf{produttività}: la produttività di un prodotto software rappresenta la capacità di permettere all'utente di utilizzare un numero stabilito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo.
-					\item \textbf{sicurezza fisica}: la sicurezza fisica di un prodotto software è la capacità di raggiungere un livello accettabile di rischio di danni a dati, persone, proprietà o ambienti.
-					\item \textbf{soddisfazione}: la soddisfazione di un prodotto software rappresenta la capacità di soddisfare gli utenti.
+					\item \textbf{produttività}: rappresenta la capacità di permettere all'utente di utilizzare un numero stabilito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo.
+					\item \textbf{sicurezza fisica}: è la capacità di raggiungere un livello accettabile di rischio di danni a dati, persone, proprietà o ambienti.
+					\item \textbf{soddisfazione}: rappresenta la capacità di soddisfare gli utenti.
 				\end{itemize}
 			\paragraph{Metriche per la qualità del software}
 			Nelle restanti tre parti vengono trattate le metriche per la qualità esterna, interna e in uso.
@@ -266,8 +266,8 @@
 			\\Da sottolineare che l'utilizzo di periodi di \gloss{slack} aumenta la possibilità che la schedule variance assuma valori positivi.
 			\\I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
-					\item Range ottimale: $\geq{-10}$\%;
-					\item Range di accettazione: $\geq{0}$;
+					\item Range ottimale: $\geq{0}$;
+					\item Range di accettazione: $\geq{-10}$\%;
 				\end{itemize}
 
 			\paragraph{Budget Variance}
@@ -287,8 +287,8 @@
 				\end{equation}
 			I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
-					\item Range ottimale: $\geq{3}$;
-					\item Range di accettazione: $\geq{10}$;
+					\item Range ottimale: $\geq{10}$;
+					\item Range di accettazione: $\geq{3}$;
 				\end{itemize}
 				
 			\paragraph{Test di Unità eseguiti}
@@ -347,19 +347,19 @@
 				\end{equation}
 			Il risultato è un valore compreso nell'intervallo [0,100], dove il valore 100 indica la più alta leggibilità, mentre 0 la più bassa. In generale risulta che testi con indice:
 				\begin{itemize}
-					\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare
-					\item inferiore a 60 sono difficili da leggere per chi ha la licenza media
-					\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore	
+					\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+					\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+					\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.	
 				\end{itemize}
-			Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione siano relativamente bassi; tuttavia non bisogna dimenticare che la documentazione prodotta relativamente al progetto corrente è inevitabilmente ricca di tecnicismi e terminologie tecniche ed è rivolta a lettori con un significativo grado di istruzione e una certa familiarità con gli ambiti affrontati.
+			Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione siano relativamente bassi; tuttavia non bisogna dimenticare che la documentazione prodotta relativamente al progetto corrente è inevitabilmente ricca di terminologie tecniche ed è rivolta a lettori con un significativo grado di istruzione e una certa familiarità con gli ambiti affrontati.
 			\\I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
 					\item Range ottimale: 60-100;
 					\item Range di accettazione: 40-100;
 				\end{itemize}
 				
-			\paragraph{Copertura Codice}
-			Indica la percentuale di istruzioni che sono eseguite durante i test. Una maggiore percentuale di istruzioni coperte dai test eseguiti rappresenta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può ridurre tale indice tramite l'utilizzo di metodi semplici che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
+			\paragraph{Copertura del Codice}
+			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può ridurre tale indice tramite l'utilizzo di metodi semplici che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
 			I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
 					\item Range ottimale: 60-100;
@@ -393,7 +393,7 @@
 				\item Range di accettazione: 40-100;
 			\end{itemize}
 		\subsubsection{Affidabilità \label{S2}}
-		Per quanto concerne l'affidabilità del prodotto software, il gruppo ha ritenuto importante la valutazione dei test, i quali ricoprono quindi un ruolo essenziale nel ciclo di vita del software.
+		Per quanto concerne l'affidabilità del prodotto software, il gruppo ha ritenuto importante la valutazione dei test, i quali ricoprono un ruolo essenziale nel ciclo di vita del software.
 			\paragraph{Test superati}
 			Tale metrica indica la percentuale di test superati.
 			\\La misura viene effettuata nel modo seguente:
@@ -423,7 +423,7 @@
 				\item Range di accettazione: 0-10;
 			\end{itemize}
 		\subsubsection{Manutenibilità \label{S4}}
-		Per garantire un elevato grado di manutenibilità, si è deciso adottare un discreto numero di metriche che spaziano in diversi aspetti del programma.
+		Per garantire un elevato grado di manutenibilità, si è deciso adottare un discreto numero di metriche che spaziano su diversi aspetti del programma.
 			\paragraph{Numero di statement per metodo}
 			Tale metrica è una misura del numero di statement di un particolare metodo. Avere un numero di statement per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
 			\\I range stabiliti per la metrica sono i seguenti:
@@ -441,7 +441,7 @@
 			\end{itemize}
 			
 			\paragraph{Numero di campi dati per classe}
-			La metrica permette di verificare che il numero di campi dati appartenenti ad una determinata classe rientri tra i valori stabiliti. Questo consente di stimare il grado di manutenibilità e comprensibilità del codice e verificane l'accettabilità.
+			La metrica permette di verificare che il numero di campi dati appartenenti ad una determinata classe rientri tra i valori stabiliti. Questo consente di stimare il grado di manutenibilità e comprensibilità del codice.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-10;
@@ -449,7 +449,7 @@
 			\end{itemize}
 			
 			\paragraph{Numero di metodi per classe}
-			Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi textit{setter} e textit{getter}.
+			Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi \textit{setter} e \textit{getter}.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-15;
@@ -482,7 +482,7 @@
 			\end{itemize}
 			
 			\paragraph{Lunghezza media di un'unità}
-			La metrica è una misura della dimensione media di una particolare unità in termini di linee di codice. Difatti avere unità di grandi dimensioni rende difficoltosa la manutenibilità e la comprensibilità del codice.
+			La metrica è una misura della dimensione media di una particolare unità in termini di linee di codice. Avere unità di grandi dimensioni rende infatti difficoltosa la manutenibilità e la comprensibilità del codice.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
 				\frac{\sum(numero~linee~di~codice~dell'~unità~i)}{numero~totale~di~unità}
@@ -542,10 +542,10 @@
 	~~Schedule Variance &$\geq{-10}$\% &$\geq{0}$\\
 	~~Budget Variance &$\geq{-10}$\% &$\geq{0}$\\
 	~~Produttività di codifica &$\geq{10}$ &$\geq{3}$\\
-	~~Test di unità eseguiti&85-100&100-100\\
-	~~Test di integrazione eseguiti&55-100&70-100\\
-	~~Test di sistema eseguiti&70-100&80-100\\
-	~~Test di accettazione eseguiti&90-100&100-100\\
+	~~Test di Unità eseguiti&85-100&100-100\\
+	~~Test di Integrazione eseguiti&55-100&70-100\\
+	~~Test di Sistema eseguiti&70-100&80-100\\
+	~~Test di Accettazione eseguiti&90-100&100-100\\
 	~~Indice Gulpease&40-100&50-100\\
 	~~Copertura del codice&40-100&60-100\\
 	\hline
