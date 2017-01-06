@@ -390,7 +390,7 @@ questi diagrami(es milestone ecc)".
 	{\includegraphics[width=15cm]{img/ganttva.png}\par}
 
 	
-\section{Suddivisione delle ore lavorative}
+\section{Suddivisione delle ore lavorative e preventivo}
 Di seguito è riportata la pianificazione di dettaglio delle attività, suddivisa nei periodi descritti precedentemente. Ad ogni periodo è descritto in forma tabulare e grafica il quantitativo di ore impiegato da ciascun componente, e la sua retribuzione, per ogni diverso tipo di ruolo svolti.
 A conclusione, è illustrato un quadro riassuntivo.
 
@@ -486,12 +486,12 @@ Di seguito si riporta il costo della #1.
 \subsubsection{Costo \AR}
 	
 \introcosto{\AR}
-Questo costo viene fornito rappresenta l'investimento effettuato da {\hx} prima dell'aggiudicazione dell'appalto e perciò tale periodo \textbf{non è a carico del cliente}. 
+Questo costo viene fornito a scopo informativo e rappresenta l'investimento effettuato da {\hx} prima dell'aggiudicazione dell'appalto e perciò tale periodo \textbf{non è a carico del cliente}. 
 
 Gli sforzi maggiori si evidenziano nel ruolo di:
 \begin{itemize}
 \item {\AMx} a causa dell'impegno aggiuntivo dedicato alla creazione di un proprio \gloss{Way of Working};
-\item {\ANx} per gli sforzi impiegati a raggiungere una comprensione profonda del progetto affrontato.
+\item {\ANx} per gli sforzi impiegati a raggiungere una comprensione profonda dei requisiti del progetto affrontato.
 \end{itemize}
 
 \begin{figure}[H]
@@ -592,7 +592,43 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 \end{figure}
 
 \subsubsection{Costo \ARI}
+
 \introcosto{\ARI}
+Questo costo rappresenta gli sforzi che {\hx} affronterà al fine di consolidare la comprensione dei requisiti del progetto.
+
+Tale periodo è ridotto rispetto a quanto desiderato in quanto coincidente con la sessione d'esami dell'Università degli studi di Padova. % togliere?
+
+Gli sforzi maggiori si evidenziano nel ruolo di:
+\begin{itemize}
+\item {\ANx} per gli sforzi impiegati a raggiungere una comprensione profonda dei requisiti del progetto affrontato.
+\end{itemize}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \GG & 0 & 0 & 0 & 0 & 0 & 30 & 30 \\ \hline
+    \MM & 0 & 0 & 125 & 0 & 0 & 0 & 0 \\ \hline
+    \LS & 0 & 0 & 200 & 0 & 0 & 0 & 125 \\ \hline
+    \AZ & 0 & 0 & 325 & 0 & 0 & 30 & 200 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 0 & 0 & 325 & 0 & 0 & 30 & 355 \\ \hline
+  \end{tabular}
+  
+}\label{tab:cari}
+
+  \caption{Tabella costo {\ARI} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
@@ -630,10 +666,11 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 }
 \end{figure} 
 % i colori danno problemi di visualizzazione alle linee
+\pagebreak
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/orepa1.png}}
+\includegraphics[width=1.1\textwidth]{img/orepa1.png}}
 \caption{Ore/ruolo per persona nella fase di \PA.}
 \label{fig:pa1}
 
@@ -641,7 +678,7 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/orepa2.png}}
+\includegraphics[width=1.1\textwidth]{img/orepa2.png}}
 \caption{Ore/persona per ruolo nella fase di \PA.}
 \label{fig:pa2}
 
@@ -650,6 +687,39 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \subsubsection{Costo \PA}
 \introcosto{\PA}
+Questa fase mira a consolidare la creazione di una solida base architetturale per \proj.
+
+Gli sforzi maggiori si evidenziano nel ruolo di:
+\begin{itemize}
+\item {\PJx} per la creazione del documento di \emph{Specifica Tecnica} e parte del primo incremento della \emph{Definizione di Prodotto}.
+\end{itemize}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 0 & 0 & 0 & 660 & 0 & 90 & 750 \\ \hline
+    \LB & 0 & 60 & 0 & 836 & 0 & 15 & 911 \\ \hline
+    \GG & 90 & 0 & 0 & 770 & 0 & 15 & 875 \\ \hline
+    \MM & 0 & 0 & 0 & 0 & 990 & 60 & 1050 \\ \hline
+    \LS & 60 & 0 & 0 & 0 & 880 & 90 & 1030 \\ \hline
+    \AZ & 0 & 0 & 0 & 0 & 792 & 60 & 852 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 150 & 60 & 0 & 4928 & 0 & 330 & 5468 \\ \hline
+  \end{tabular}
+  
+}\label{tab:cpa}
+
+  \caption{Tabella costo {\PA} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
@@ -686,20 +756,23 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 \end{figure} 
 % i colori danno problemi di visualizzazione alle linee
 
+\pagebreak[4]
 
 % USARE QUESTO PER IMMAGINI
 \begin{figure}[H]
-  \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{img/orepdc1.png}}
+  \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{img/orepdc1.png}}
   \caption{Ore/ruolo per persona nella fase di \PDC.}
 \label{fig:pdc1}
 
 \end{figure}
 
+
+
 %	{\includegraphics[width=15cm]{img/orepdc1.png}\par}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/orepdc2.png}}
+\includegraphics[width=1.1\textwidth]{img/orepdc2.png}}
 \caption{Ore/persona per ruolo nella fase di \PDC.}
 \label{fig:pdc2}
 
@@ -708,10 +781,47 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \subsubsection{Costo \PDC}
 \introcosto{\PDC}
+Questa fase mira a completare la \emph{Definizione di Prodotto} tramite incrementi e completare l'attività di codifica.
 
+Gli sforzi maggiori si evidenziano nel ruolo di:
+\begin{itemize}
+\item {\PJx} per l'incremento della \emph{Definizione di Prodotto};
+\item {\PGx} per l'attività di codifica;
+\item {\Vx} per il controllo e la verifica del codice e dei documenti prodotti.
+\end{itemize}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 0 & 0 & 0 & 396 & 450 & 105 & 951 \\ \hline
+    \LB & 0 & 100 & 0 & 176 & 450 & 195 & 921 \\ \hline
+    \GG & 0 & 100 & 0 & 220 & 450 & 45 & 815 \\ \hline
+    \MM & 60 & 0 & 0 & 0 & 450 & 120 & 630 \\ \hline
+    \LS & 0 & 60 & 0 & 220 & 450 & 150 & 980 \\ \hline
+    \AZ & 60 & 100 & 0 & 220 & 450 & 150 & 980 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 120 & 360 & 0 & 1232 & 2700 & 750 & 5162 \\ \hline
+  \end{tabular}
+  
+}\label{tab:cpdc}
+
+  \caption{Tabella costo {\PDC} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/costopdc.png}}
+\label{tab:cpdc}
+
+  \caption{Tabella costo {\PDC} per ruolo e per persona, valori in euro (\euro).}
 \end{figure}
 
 \pagebreak[4]
@@ -744,18 +854,19 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 \end{figure} 
 % i colori danno problemi di visualizzazione alle linee
 
+\pagebreak
+
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/orevv1.png}}
+\includegraphics[width=1.1\textwidth]{img/orevv1.png}}
 \caption{Ore/ruolo per persona nella fase di \VV.}
 \label{fig:vv1}
 
 \end{figure}
 
-
 \begin{figure}[H]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/orevv2.png}}
+\includegraphics[width=1.1\textwidth]{img/orevv2.png}}
 \caption{Ore/persona per ruolo nella fase di \VV.}
 \label{fig:vv2}
 
@@ -763,17 +874,179 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \subsubsection{Costo \VV}
 \introcosto{\VV}
+Questa fase mira a completare tutte le attività di qualifica prefissate da {\hx}.
 
+Gli sforzi maggiori si evidenziano nel ruolo di:
+\begin{itemize}
+\item {\Vx} per la verifica e validazione del prodotto creato.
+\end{itemize}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 90 & 160 & 0 & 0 & 0 & 75 & 325 \\ \hline
+    \LB & 90 & 0 & 0 & 0 & 0 & 30 & 120 \\ \hline
+    \GG & 0 & 0 & 0 & 0 & 0 & 210 & 210 \\ \hline
+    \MM & 0 & 0 & 50 & 0 & 0 & 225 & 275 \\ \hline
+    \LS & 0 & 0 & 0 & 0 & 0 & 30 & 30 \\ \hline
+    \AZ & 0 & 0 & 0 & 0 & 0 & 45 & 45 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 180 & 160 & 50 & 0 & 0 & 615 & 1005 \\ \hline
+  \end{tabular}
+  
+}\label{tab:vv}
+
+  \caption{Tabella costo {\VV} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/costovv.png}}
+\label{tab:cvv}
 
+  \caption{Tabella costo {\VV} per ruolo e per persona, valori in euro (\euro).}
 \end{figure}
 
 \pagebreak[4]
 
-\section{Preventivo} \label{sec:preventivo}
+\subsection{Ore totali del progetto}
+Di seguito si riporta la divisione oraria pianificata generale.
+
+Successivamente sono evidenziate graficamente la divisione delle ore per persona e ruolo.
+
+Questo quadro riassuntivo include il periodo di {\AR}, il quale \textbf{non è a carico del cliente}.
+
+{\hx} complessivamente ritiene di aver diviso equamente il carico di lavoro. Ogni disparità a livello di periodo è bilanciata nei periodi successivi. 
+
+Il quantitativo preventivato a persona è fissato in \textbf{138 ore} e il quantitativo di ore preventivate totali è fissato a \textbf{828 ore}.
+
+Si è raggiunto l'obiettivo prefissato di assegnare ogni ruolo a ciascun componente di {\hx} almeno una volta. Disparità in questo senso sono inevitabili: inevitabilmente è necessaria una o più "figure di riferimento" per ogni ruolo, che impieghino più risorse per raggiungere gli incarichi più gravosi.
+
+
+\begin{figure}[H]
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+\makebox[\textwidth][c]
+{
+  \begin{tabular}[width=1.2\textwidth]{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 10 & 11 & 14 & 48 & 30 & 25 & 138 \\ \hline
+    \LB & 15 & 19 & 6 & 46 & 30 & 22 & 138 \\ \hline
+    \GG & 3 & 29 & 8 & 45 & 30 & 23 & 138 \\ \hline
+    \MM & 2 & 20 & 10 & 45 & 30 & 31 & 138 \\ \hline
+    \LS & 2 & 5 & 17 & 50 & 30 & 34 & 138 \\ \hline
+    \AZ & 3 & 9 & 21 & 46 & 30 & 29 & 138 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 35 & 93 & 76 & 280 & 180 & 164 & 828 \\ \hline
+    
+  \end{tabular}
+  }
+  
+  \label{tab:gen}
+
+  \caption{Tabella costo generale per ruolo e per persona, valori in euro (\euro).}
+\end{figure} 
+% i colori danno problemi di visualizzazione alle linee
+
+
+È possibile ricavare interessanti statistiche dalla tabella (\ref{tab:gen}) e dal grafico di ripartizione oraria (\ref{fig:gen2}): % che riferimento ha inserito latex?
+\begin{itemize}
+\item Il ruolo {\Rx} richiede il quantitativo di ore minimo rispetto alle altre mansioni: inizialmente è richiesto uno sforzo maggiore per la stesura del \emph{Piano di Progetto}, ma superata la fase di {\AR} questo ruolo è richiesto in misura minore.
+\item Il ruolo {\AMx} richiede una buona quantità di ore soprattutto in fase di {\AR} per definire un ambiente di sviluppo ideale. Completata questa fase il ruolo è richiesto in misura minore.
+\item Il ruolo {\ANx} richiede anch'esso la maggior parte delle ore in fase di {\AR} e successivamente sono ammessi solo incrementi del documento di {\AR}.
+\item Il ruolo {\PJx} è ritenuto da {\hx} cruciale, dunque ne è stato assegnato il quantitativo maggiore di ore.
+\item Il ruolo {\PGx} richiede una quantità di tempo pari a circa due terzi delle ore impiegate in fase di progettazione. Questa divisione a livello di preventivo è stata ritenuta accettabile, ma {\hx} si riserva di effettuare nuovamente questa analisi alla consegna del consuntivo finale.
+\item Il ruolo {\Vx} richiede una quantità di tempo simile a quella riservata per il ruolo di {\PGx} e questa assegnazione è sembrata accettabile a livello di preventivo. {\hx} si riserva di effettuare nuovamente questa analisi alla consegna del consuntivo finale.
+\end{itemize}
+
+
+
+\pagebreak
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.1\textwidth]{img/oretotali1.png}}
+\caption{Ore/ruolo per persona per il progetto {\proj}.}
+\label{fig:gen1}
+
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.1\textwidth]{img/oretotali2.png}}
+\caption{Ore/persona per ruolo per il progetto {\proj}.}
+\label{fig:gen2}
+
+\end{figure}
+
+
+\subsubsection{Costo ore totali del progetto}
+Di seguito si riporta il costo delle ore totali, suddiviso per persona e ruolo.
+
+Questo quadro riassuntivo include il periodo di {\AR}, il quale \textbf{non è a carico del cliente}.
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 330 & 220 & 350 & 1056 & 450 & 375 & 2751 \\ \hline
+    \LB & 450 & 380 & 150 & 1012 & 450 & 330 & 2772 \\ \hline
+    \GG & 90 & 580 & 200 & 990 & 450 & 345 & 2655 \\ \hline
+    \MM & 60 & 400 & 250 & 990 & 450 & 465 & 2615 \\ \hline
+    \LS & 60 & 100 & 425 & 1100 & 450 & 510 & 2645 \\ \hline
+    \AZ & 90 & 180 & 525 & 1012 & 450 & 435 & 2692 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 1050 & 1860 & 1900 & 6160 & 2700 & 2460 & 16130 \\ \hline
+  \end{tabular}
+  
+}\label{tab:cgen}
+
+  \caption{Tabella costo totale per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/costototale.png}}
+\label{tab:cgen1}
+
+  \caption{Costo totale per il progetto {\proj} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
+
+%si riporta pure oretotali4.png?
+\pagebreak[4]
+
+
+
+\subsection{Ore rendicontate del progetto}
+%stessa cosa della sezione precedente
+\subsubsection{Costo ore rendicontate del progetto}
+%idem
+
 \section{Consuntivo di periodo} \label{sec:consuntivo}
+%da fare
+
 
 \end{document}
