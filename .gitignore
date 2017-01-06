@@ -15,4 +15,7 @@
 *.toc
 *.glo
 *.ist
+*.synctex.gz
+
+### PDF
 *.pdf
