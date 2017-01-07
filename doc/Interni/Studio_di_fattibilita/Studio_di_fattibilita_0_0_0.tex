@@ -22,7 +22,8 @@
 
 \section{Introduzione}
 	\subsection{Scopo del documento}
-	%da fare
+	Lo scopo del documento è quello di presentare le motivazioni che hanno spinto il gruppo \hx{} a scegliere il capitolato d'appalto C6. 
+	Inoltre sarà presente una descrizione degli altri capitolati con le ragioni che hanno portato il gruppo ad escluderli dalla scelta.
 	
 	\subsection{Scopo del prodotto}
 	\scopo{}
@@ -38,28 +39,61 @@
 		\subsubsection{Informativi}
 		\begin{itemize}
 			\item \textbf{Glossario: }\emph{\Glossario};
-			\item \textbf{Capitolato d'Appalto C1: } \emph{APIM}: An API Market Platform
+			\item \textbf{Capitolato d'Appalto C1:} \emph{APIM}: An API Market Platform
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf};
-			\item \textbf{Capitolato d'Appalto C2: } \emph{AtAVi}: Accoglienza tramite Assistente Virtuale
+			\item \textbf{Capitolato d'Appalto C2:} \emph{AtAVi}: Accoglienza tramite Assistente Virtuale
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C2.pdf};
-			\item \textbf{Capitolato d'Appalto C3: } \emph{DeGeOP}: A Designer and Geo-localizer Web App for Organizational Plants
+			\item \textbf{Capitolato d'Appalto C3:} \emph{DeGeOP}: A Designer and Geo-localizer Web App for Organizational Plants
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C3.pdf};
-			\item \textbf{Capitolato d'Appalto C4: } \emph{eBread}: applicazione di lettura per dislessici
+			\item \textbf{Capitolato d'Appalto C4:} \emph{eBread}: applicazione di lettura per dislessici
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C4.pdf};
-			\item \textbf{Capitolato d'Appalto C5: } \emph{Monolith}: an interactive bubble provider
+			\item \textbf{Capitolato d'Appalto C5:} \emph{Monolith}: an interactive bubble provider
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C5.pdf};
-			\item \textbf{Capitolato d'Appalto C6: } \emph{SWEDesigner}: editor di diagrammi UML con generazione di codice
+			\item \textbf{Capitolato d'Appalto C6:} \emph{SWEDesigner}: editor di diagrammi UML con generazione di codice
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf};
 		\end{itemize}
 \newpage
 	
-\section{Studio di fattibilità del capitolato scelto\\ \emph{SWEDesigner}: editor di diagrammi UML con generazione di codice}
-	\subsection{Descrizione}
-	\subsection{Studio del dominio}
-		\subsubsection{Dominio applicativo}
-		\subsubsection{Dominio tecnologico}
-	\subsection{Aspetti positivi e negativi}
-	\subsection{Valutazione finale}
+\section{Studio di fattibilità del capitolato scelto}
+	\subsection{\emph{SWEDesigner}: editor di diagrammi UML con generazione di codice}
+		\subsubsection{Descrizione}
+		Lo scopo del capitolato è quello di realizzare un'applicazione web (o all'occorrenza anche un programma Desktop) composta da almeno due disegnatori
+		ed un coordinatore, che permetta all'utente di costruire diagrammi UML rappresentativi del prodotto da svilupparsi e generi a partire da essi codice 
+		Java o Javascript.
+		In particolare l'editor dovrebbe concentrarsi su uno specifico dominio applicativo (l'esempio fornito nel capitolato d'appalto è relativo ai software 
+		di giochi da tavolo) per andare a costituire una sorta di framework per la produzione della relativa famiglia di prodotti.
+		\subsubsection{Studio del dominio}
+			\paragraph{Dominio applicativo}
+			L'ambito e le problematiche che il progetto si propone di affrontare sono indubbiamente di grande interesse. Da un lato affronta la necessità di 
+			creare strumenti che regimentino il processo di sviluppo per facilitare la produzione di codice di qualità e che permettano di fattorizzare gli 
+			aspetti comuni ad una certa famiglia di prodotti software per rendere più agile e standardizzato il relativo sviluppo.
+			Dall'altro esplora la possibilità di generare codice in uno specifico linguaggio di programmazione a partire dalla rappresentazione dell'architettura 
+			software una serie di convenzioni di modellazione.
+			\\In particolare lo scopo profondo del capitolato è quello di analizzare quali diagrammi UML siano i più adatti allo scopo di descrivere l'architettura 
+			e le componenti funzionali di un progetto e come si possa concertare una loro integrazione per arrivare a produrre un eseguibile vero e proprio. 
+			Odiernamente, infatti, UML non è altro che un grande aggregato di convenzioni rappresentative che sì coprono a diversi livelli di raffinamento diverse 
+			fasi e aspetti dello sviluppo di prodotti software (architettura ad alto livello ed in dettaglio, funzionamento di metodi ...) ma al contempo risultano 
+			a tal punto eterogenei l'uno rispetto all'altro da non risultare integrabili e componibili. 
+			La richiesta è quindi quella di indagare come si potrebbe superare la debolezza intrinseca dell'Unified Modeling Language nella sincronizazione tra 
+			codice e quanto disegnato nei diagrammi stessi e sperimentare con la possibilità di avvicinare le due fasi di progettazione e codifica, esplorando le 
+			interazioni e le eventuali estensioni necessarie a legare fra loro queste due fasi.
+			\paragraph{Dominio tecnologico}
+			Il capitolato richiede che il sistema sia realizzato con tecnologie Web. In particolare la parte server deve essere realizzata in Java con il server 
+			Tomcat o in Javascript con il server Node.Js. La parte client, invece, deve essere eseguibile in un browser HTML5 ed utilizzare fogli di stile CSS per 
+			l'aspetto estetico e Javascript per la parte attiva.
+		\subsubsection{Aspetti positivi e negativi}
+		Molti sono stati riconosciuti dal gruppo come gli aspetti positivi di tale progetto.
+		\\Prima di tutto le problematiche affrontate dal capitolato hanno suscitato in tutti i membri una forte motivazione, legata alla necessità di confrontarsi 
+		con problemi - quello della generazione automatica di codice e del raffinamento dell'UML – ancora vivi nell'ambito informatico. In secondo luogo hanno giocato 
+		a favore della scelta la chiarezza e precisione con cui le caratteristiche e i requisiti del progetto sono stati elencati e descritti oltre che l'indiscutibile 
+		autorevolezza e prestigio dell'azienda proponente. Preziosa, inoltre, è stata considerata la possibilità di collaborare attivamente con quella che è considerata 
+		la prima software house italiana e con un esponente di essa legato da così tanto tempo al mondo della programmazione.
+		\\Un altro punto a favore del capitolato è la possibilità di operare con un set di tecnologie assodato, parte integrante del programma di studio e di ampia diffusione.
+		\\Fra le criticità discusse la più sentita riguarda la vastità e la complessità del problema da affrontare, certamente non banale e necessitante di una riflessione 
+		estremamente approfondita e ponderata. A ciò si aggiunge la necessità di conoscere al meglio i costrutti e le astrazioni del linguaggio di generazione del codice, 
+		in modo tale da garantire una buona integrazione fra le due fasi di architettura e scrittura di codice.
+		\subsubsection{Valutazione finale}
+	
 \newpage
 
 \section{Studio di fattibilità degli altri capitolati}
@@ -93,7 +127,6 @@
 		Uno dei fattori chiave nella decisione se partecipare o meno all'appalto di tale progetto è proprio il suo uso; da un lato la necessità di 
 		imparare un nuovo linguaggio di programmazione ha sempre un importante valore a livello formativo, dall'altro, però, non è ancora ben chiaro 
 		quali siano le reali potenzialità di Jolie per affermarsi nel sovraffollato panorama tecnologico odierno.
-		
 		\subsubsection{Valutazione finale}
 		Il gruppo \hx{} ha ritenuto opportuno scegliere un capitolato che permettesse il confronto con tecnologie che per i membri fossero nuove,
 		ma al contempo già pienamente affermate in quanto a utilizzo, funzionalità, potenzialità. Tale scelta non trova riscontro in questo capitolato.
@@ -133,30 +166,106 @@
 		A ciò si aggiunge una mancanza di chiarezza a livello dell'architettura software da realizzare considerata particolarmente problematica da 
 		parte di alcuni membri del gruppo.
 		\subsubsection{Valutazione finale}
-		%da fare
 		
 	\subsection{Capitolato C3: \emph{DeGeOP}: A Designer and Geo-localizer Web App for Organizational Plants}
 		\subsubsection{Descrizione}
+		Lo scopo del capitolato in esame è quello di creare un'interfaccia di tipo web app utilizzabile anche su mobile, per visualizzare su di una 
+		mappa geografica gli elementi costitutivi del processo produttivo di una particolare azienda (macchinari, magazzini, fornitori, distributori, etc.).
+		\\Tale web app deve permettere di:
+		\begin{itemize}
+			\item definire la struttura organizzativa di un'azienda;
+			\item riportare tale struttura a livello di mappa geografica;
+			\item disegnare gli scenari di danno che possono colpire l'azienda;
+			\item ottenere dei risultati di analisi relativamente a tali scenari di rischio utilizzando il database per le situazioni di danno dell'azienda e il loro server di analisi che opera utilizzando un algoritmo proprietario;
+		\end{itemize}
+		L'applicazione deve inoltre garantire un corretto funzionamento su desktop, tablet e dispositivi mobile e utilizzare API e database proprietari dell'azienda;
 		\subsubsection{Studio del dominio}
 			\paragraph{Dominio applicativo}
+			Esso costituisce una realtà di attuale interesse, soprattutto in un paese come il nostro dove sempre più spesso le catastrofi climatiche 
+			(terremoti, inondazioni, trombe d'aria) mettono in difficoltà intere aziende. Data pertanto la mancanza di una piena consapevolezza 
+			riguardo a tale problematica (il rischio relativo alle interruzioni di lavoro è poco conosciuto) e la frequenza con cui questa si presenta 
+			il contributo di tale applicazione potrà essere in futuro estremamente significativo.
+			\\Un altro punto a favore è costituito dalle aziende che si appoggiano al servizio RiskApp, alcune di notevole importanza nel ramo assicurazioni.
+			\\Il servizio offerto dall'applicativo andrebbe inoltre a coprire un vuoto: le aziende di assicurazioni, infatti, non hanno ora strumenti 
+			adeguati per valutare il rischio legato all'interruzione dei lavori per cause esterne.
 			\paragraph{Dominio tecnologico}
+			Nonostante la relativa libertà nell'utilizzo dello stack tecnologico le tecnologie proposte sono:
+			\begin{itemize}
+				\item Amazon WS, come servizio per l'organizzazione di un server entro cui far operare l'applicativo;
+				\item Django, come framework in Python per la realizzazione del front-end dell'applicativo;
+				\item PostgreSQL, per la realizzazione del database di appoggio del software;
+				\item Librerie e framework quali Bootstrap e React.js per la creazione di interfacce utente, hammer.js e Yeoman.
+				\item Html, Css e JavaScript per la realizzazione dell'interfaccia utente.
+			\end{itemize}
 		\subsubsection{Aspetti positivi e negativi}
 		\subsubsection{Valutazione finale}
+		Nessun membro del gruppo ha dimostrato particolare interesse o motivazione per il progetto in esame; pertanto sia per la poca chiarezza e 
+		nebulosità nella descrizione e nei requisiti del progetto, sia per la presenza di altri capitolati in grado di stimolare una maggiore 
+		motivazione, si è deciso di non procedere troppo oltre nell'esame delle caratteristiche di tale proposta.
 		
 	\subsection{Capitolato C4: \emph{eBread}: applicazione di lettura per dislessici}
 		\subsubsection{Descrizione}
+		Il progetto prevede la realizzazione di un'applicazione per dispositivi mobili - smartphone e tablet - in ambiente Android che agevoli la 
+		lettura da parte di una persona affetta da dislessia grazie all'uso di appropriate tecnologie. La proposta richiede inoltre che l'applicativo, 
+		indifferentemente un lettore di ebook o un client di messaggistica, utilizzi un motore di sintesi vocale come ausilio alla lettura, evidenziando 
+		le parole del testo, in modo sincronizzato con l'audio sintetizzato. Un'ulteriore funzionalità da fornirsi consiste nella la possibilità di 
+		modificare la visualizzazione del contenuto da leggersi attraverso particolari sistemi di colori, spaziature fra lettere, differenti dimensioni 
+		e tipo dei caratteri e layout di visualizzazione - tutte agevolazioni preziose per persone affette da dislessia.
 		\subsubsection{Studio del dominio}
 			\paragraph{Dominio applicativo}
+			Le problematiche che il progetto proposto dal capitolato si prevede di affrontare sono sicuramente di grande attualità. Da un lato la 
+			dislessia, che nel nostro paese al giorno d'oggi rappresenta il disturbo dell'apprendimento più diffuso e che incide non poco nella 
+			vita delle persone che ne sono affette in quanto rende difficoltosa una delle attività fondamentali della routine quotidiana: la lettura. 
+			Dall'altro si spinge il gruppo fornitore a confrontarsi con una delle tecnologie che sta avendo negli ultimi tempi una diffusione sempre 
+			maggiore, quella del Text-to-Speech, alla base di applicazioni di grande importanza quali screenreader, lettori di messaggi, voci di 
+			assistenti virtuali e probabilmente futura interfaccia per tutte quelle attività in cui è precluso, o comunque limitato, l'utilizzo della vista.
 			\paragraph{Dominio tecnologico}
+			Viene lasciato un ampio margine di libertà per quanto riguarda le tecnologie da impiegarsi, purché risultino adeguate allo scopo. 
+			Gli unici due vincoli principali in questo senso sono la realizzazione di una applicazione per dispositivi mobili, preferibilmente per 
+			sistema operativo Android, e l'utilizzo di un servizio di sintesi vocale, con consiglio per il motore di sintesi “Flexible and Adaptive 
+			Text-To-Speech”.
+			\\Nel caso si proceda allo sviluppo di un ebook reader il proponente consiglia di utilizzare una libreria di terze parti preferibilmente 
+			open-source per accedere al contenuto; allo stesso modo, nel caso in cui si decida di estendere le funzionalità di un client di messaggistica, 
+			si suggerisce di partire da uno già esistente, possibilmente open-source (come Telegram).
 		\subsubsection{Aspetti positivi e negativi}
 		\subsubsection{Valutazione finale}
+		Complice una presentazione del progetto forse sottotono e nebulosa ed una tematica, anche se attuale e viva soprattutto negli ambienti 
+		educativi della società odierna, non capace di spingere la motivazione dei membri del team, si è scelto di procedere all'appalto di un 
+		differente capitolato.
 		
 	\subsection{Capitolato C5: \emph{Monolith}: an interactive bubble provider}
 		\subsubsection{Descrizione}
+		Lo scopo del capitolato è quello di realizzare un framework che consenta agli sviluppatori di creare in modo relativamente semplice delle 
+		interactive bubbles in grado di integrarsi con l'ambiente Rocket.chat e che a scopo dimostrativo includa delle bolle interattive predefinite 
+		pronte da essere utilizzate da parte degli utenti finali.
+		\\Una interactive bubble viene intesa dal proponente come una sorta di mini-applicativo autonomo all'interno del canale di comunicazione 
+		che consente di arricchire di funzionalità il client di messaggistica in uso e condividere informazioni complesse e strutturate.
+
 		\subsubsection{Studio del dominio}
 			\paragraph{Dominio applicativo}
+			Le problematiche affrontate dal presente capitolato risultano sicuramente interessanti ed attuali; si riconosce prima di tutto che al 
+			giorno d'oggi il più importante canale comunicativo è costituito dalle applicazioni di chat, utilizzate in ogni ambito della vita 
+			quotidiana: per relazionarci con gli amici, per collaborare in ambito lavorativo, per rimanere connessi a distanza. Inoltre sempre 
+			più stringente è la necessità di scambiarsi all'interno di tali contesti informazioni più complesse e strutturate di singoli messaggi 
+			(come ad esempio dati relativi ad un volo aereo, alla prenotazione in un certo locale, etc.) che rimangano aggiornate e coerenti con 
+			le fonti da cui sono state tratte. Le interactive bubbles rappresenterebbero la soluzione ideale a tale problematica, che al giorno 
+			d'oggi si risolver invece uno scambio intensivo di numerosi messaggi singoli. 
 			\paragraph{Dominio tecnologico}
+			Le tecnologie da utilizzarsi nel progetto sono le seguenti:
+			\begin{itemize}
+				\item Javascript versione 6 per la versione dimostrativa da mostrare al proponente e il framework finale;
+				\item Framework quali Angular.js e React.js sono consigliati per la realizzazione del front-end dell'applicazione;
+				\item SCSS per l'interfaccia utente.
+			\end{itemize}
+			Viene inoltre richiesto che il codice sorgente di Monolith e la relativa versione dimostrativa siano pubblicate e versionate utilizzando 
+			GitHub o Bitbucket.
 		\subsubsection{Aspetti positivi e negativi}
+		L'ambito applicativo del progetto risulta sicuramente ricco di spunti interessanti, soprattutto per l'importanza cruciale che i client di 
+		messaggistica odierni hanno assunto nello scambio di informazioni.
+		\\Un aspetto negativo è rappresentato dalla lontananza dei proponenti che potrebbe incidere su una comunicazione proficua con l'azienda 
+		proponente.
 		\subsubsection{Valutazione finale}
-		
+		La maggior parte dei membri del gruppo non ha dimostrato grande interesse in merito alla proposta, e pertanto si è scelto di procedere 
+		all'appalto di un differente capitolato.
+
 \end{document}
