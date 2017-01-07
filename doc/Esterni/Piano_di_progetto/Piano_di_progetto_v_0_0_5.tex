@@ -1120,9 +1120,120 @@ Il costo totale del progetto {\proj} preventivato è arrotondato a \textbf{12000
 
   \caption{Costo totale per il progetto {\proj} per ruolo e per persona, valori in euro (\euro).}
 \end{figure}
-\section{Consuntivo di periodo} \label{sec:consuntivo}
-%da fare
 
+
+\section{Consuntivo di periodo} \label{sec:consuntivo}
+In questa sezione sono indicate le spese affrontate a termine di ogni \gloss{milestone} interna. Queste andranno a sommarsi per infine stilare il consuntivo finale.
+
+
+
+\newcommand{\introconsuntivo}[1]
+{
+Di seguito si riporta la divisione oraria effettivamente adottata nella fase di #1.
+
+Successivamente sono evidenziate graficamente la divisione delle ore per persona e per ruolo. 
+
+È inoltre riportata la variazione riportata rispetto alla \gloss{baseline} inizialmente stilata e infine l'eventuale variazione di costo rispetto al preventivo.
+}
+
+\subsection{Consuntivo \AR}
+\introconsuntivo{\AR}
+
+Si ricorda che questo costo viene fornito a scopo informativo e rappresenta l'investimento effettuato da {\hx} prima dell'aggiudicazione dell'appalto e perciò tale periodo \textbf{non è a carico del cliente}. 
+
+\subsubsection{Variazioni nella pianificazione}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttarc1.png}}
+\label{tab:cgen1}
+
+  \caption{Variazione rispetto alla pianificazione per fase di \AR, diagramma di Gantt (parte 1)}
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttarc2.png}}
+\label{tab:cgen1}
+
+  \caption{Variazione rispetto alla pianificazione per fase di \AR, diagramma di Gantt (parte 2)}
+\end{figure}
+
+Si è verificato un ritardo nella stesura del presente documento a causa di una influenza di un membro del gruppo in data 30-12-2016.
+
+Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla \gloss{baseline}; tuttavia il task, non presentando dipendenze, non ha portato ritardi se non all'attività di verifica relativa al documento stesso.
+
+\subsubsection{Variazione nei costi}
+\begin{itemize}
+
+\item Non sono state rilevate variazioni nei costi.
+
+\item Non si riportano i grafici di variazione oraria.
+
+\item Si riportano le tabelle di divisione oraria effettive e i relativi costi.
+
+\end{itemize}
+% i colori danno problemi di visualizzazione alle linee
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 7 & 3 & 14 & 0 & 0 & 7 & 31 \\ \hline
+    \LB & 12 & 11 & 6 & 0 & 0 & 6 & 35 \\ \hline
+    \GG & 0 & 24 & 8 & 0 & 0 & 3 & 35 \\ \hline
+    \MM & 0 & 20 & 8 & 0 & 0 & 4 & 32\\ \hline
+    \LS & 0 & 2 & 12 & 0 & 0 & 17 & 31\\ \hline
+    \AZ & 1 & 4 & 13 & 0 & 0 & 12 & 30 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 20 & 64 & 61 & 0 & 0 & 49 & 194 \\ \hline
+    
+  \end{tabular}
+}
+\label{tab:car}
+\caption{Tabella ore effettive {\AR} per ruolo e per persona.}
+
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 210 & 60 & 350 & 0 & 0 & 105 & 725 \\ \hline
+    \LB & 360 & 220 & 150 & 0 & 0 & 90 & 820 \\ \hline
+    \GG & 0 & 480 & 200 & 0 & 0 & 45 & 725 \\ \hline
+    \MM & 0 & 400 & 200 & 0 & 0 & 60 & 660 \\ \hline
+    \LS & 0 & 40 & 300 & 0 & 0 & 255 & 595 \\ \hline
+    \AZ & 30 & 80 & 325 & 0 & 0 & 180 & 615 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 600 & 1280 & 1525 & 0 & 0 & 735 & 4140 \\ \hline
+  \end{tabular}
+  
+}
+\label{tab:car}
+\caption{Tabella costo effettivo {\AR} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
+
+
+\pagebreak
 \section{Organigramma}	\label{sec:organigramma}
 \subsection{Redazione}
 \begin{table}[htbp]
