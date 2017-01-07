@@ -317,11 +317,29 @@ Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha de
 	\item[\PDC](sezione \ref{sec:PDC});
 	\item[\VV](sezione \ref{sec:VV}).
 \end{description}
+
 In ognuna di queste fasi, vengono svolte attività di sviluppo del progetto che sono descritte più approfonditamente nel documento corrente.
+
 Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \gloss{diagrammi di Gantt} di ognuna: ogni diagramma presenta delle \gloss{milestone} stabilite e le varie suddivisioni dei periodi in sotto-attività.
 
+I diagrammi presentano una visualizzazione ridotta e a volte su più pagine per esigenze tipografiche. Qualora non sia chiara la dipendenza tra più task, essa sarà specificata testualmente.
 
-{\includegraphics[width=15cm]{img/ganttweeks.jpg}\par}
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttweeks1.png}}
+\label{tab:genweeks}
+\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 1)}
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttweeks2.png}}
+\label{tab:genweeks}
+\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 2)}
+\end{figure}
+
+
 
 
 \subsection{Suddivisione delle Attività}
@@ -340,15 +358,40 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 	\end{description}
 	
 	
-	{\includegraphics[width=16cm]{img/ganttan.jpg}\par}
-		
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttan1.png}}
+\label{img:genweeks1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 1)}
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttan2.png}}
+\label{tab:genweeks2}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 2)}
+
+Note:
+\begin{itemize}
+\item l'attività \emph{Redazione Analisi dei Requisiti} ha una dipendenza verso l'attività \emph{PragmaDB} appartenente all'attività \emph{Database tracciamento requisiti};
+\item le attività \emph{Redazione Piano di Progetto}, \emph{Redazione Piano di Qualifica} e \emph{Redazione Analisi dei Requisiti} hanno una dipendenza verso l'attività \emph{Redazione Studio di Fattibilità}.
+\end{itemize} 
+\end{figure}
 		
 	\subsubsection{\ARI} \label{sec:ARI}
 	\textbf{Periodo}: dal 24-01-2017 al 03-02-2017.
 	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio della \PA. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\AR), con le correzioni suggerite durante la \emph{Revisione dei Requisiti}.
 
 
-	{\includegraphics[width=15cm]{img/ganttari.png}\par}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttari.png}}
+\label{tab:genweeks}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \ARI, in giorni}
+\end{figure}
 
 	
 	\subsubsection{\PA} \label{sec:PA}
@@ -359,7 +402,26 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 		\item[Specifica Tecnica] in questa attività viene stilato questo documento che descrive le scelte progettuali ad alto livello che il prodotto dovrà rispettare.
 	\end{description}
 	
-	{\includegraphics[width=15cm]{img/ganttpa.png}\par}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpa1.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 1)}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpa2.png}}
+\label{tab:ganttpa2}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 2)}
+
+Note:
+\begin{itemize}
+\item Per raggiungere il completamento della fase successiva in tempo per la \emph{Revisione di Qualifica} si prevede di usare parte del tempo prima della scadenza del 06-03-2017 per la stesura della \emph{Definizione di Prodotto}.
+\end{itemize} 
+\end{figure}
+
 
 	\subsubsection{\PDC} \label{sec:PDC}
 	\textbf{Periodo}: dal 06-03-2017 al 11-04-2017.	
@@ -371,7 +433,20 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 		\item[Manuale Utente] in questa attività si crea il documento destinato all'utente finale, che ha lo scopo di fornire le linee guida per il corretto utilizzo del software.
 	\end{description}
 	
-	{\includegraphics[width=15cm]{img/ganttpdc.png}\par}
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpdc1.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 1)}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpdc2.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 2)}
+\end{figure}
+
 
 	\subsubsection{Verifica e Validazione} \label{sec:VV}
 
@@ -383,8 +458,14 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 		\item[Incremento e Verifica dei Documenti] in questa attività verranno incrementati verificati tutti i documenti, basandosi sui risultati della \emph{Revisione di Qualifica}.
 	\end{description}		
 	
-	{\includegraphics[width=15cm]{img/ganttva.png}\par}
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttva.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \VV, in giorni}
+\end{figure}
 
+\pagebreak
 	
 \section{Suddivisione delle ore lavorative e preventivo} \label{sec:preventivo}
 Di seguito è riportata la pianificazione di dettaglio delle attività, suddivisa nei periodi descritti precedentemente. Per ogni periodo, sono presenti una tabella e dei grafi che descrivono e rappresentano i ruoli assunti da ciascun componente, il relativo quantitativo di ore impiegato e la rispettiva retribuzione.
@@ -478,7 +559,7 @@ Di seguito si riporta il costo della #1.
 \label{fig:ar2}
 \end{figure}
 	
-
+\pagebreak
 \subsubsection{Costo \AR}
 	
 \introcosto{\AR}
@@ -587,6 +668,8 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \end{figure}
 
+\pagebreak
+
 \subsubsection{Costo \ARI}
 
 \introcosto{\ARI}
@@ -680,7 +763,7 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \end{figure}
 
-
+\pagebreak
 \subsubsection{Costo \PA}
 \introcosto{\PA}
 Questa fase mira a consolidare la creazione di una solida base architetturale per \proj.
@@ -774,7 +857,7 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \end{figure}
 
-
+\pagebreak
 \subsubsection{Costo \PDC}
 \introcosto{\PDC}
 Questa fase mira a completare la \emph{Definizione di Prodotto} tramite incrementi e completare l'attività di codifica.
@@ -867,6 +950,9 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 \label{fig:vv2}
 
 \end{figure}
+
+
+\pagebreak
 
 \subsubsection{Costo \VV}
 \introcosto{\VV}
@@ -1121,7 +1207,7 @@ Il costo totale del progetto {\proj} preventivato è arrotondato a \textbf{12000
   \caption{Costo totale per il progetto {\proj} per ruolo e per persona, valori in euro (\euro).}
 \end{figure}
 
-
+\pagebreak
 \section{Consuntivo di periodo} \label{sec:consuntivo}
 In questa sezione sono indicate le spese affrontate a termine di ogni \gloss{milestone} interna. Queste andranno a sommarsi per infine stilare il consuntivo finale.
 
