@@ -3,7 +3,7 @@
 
 \input{../../util/hx-ambiente}
 
-\version{0.0.5}
+\version{0.1.0}
 \creaz{24 dicembre 2016}
 \author{\GG, \MM}
 \supervisor{\LB, \AZ}
@@ -26,13 +26,19 @@
 \section{Introduzione}
 
 \subsection{Scopo del documento}
-Questo documento (interno al gruppo) regolamenta i processi del progetto didattico e va quindi letto da ciascun membro del gruppo. Le convenzioni qui prescritte servono a:
+Questo documento, ad uso interno del gruppo, ha lo scopo di definire le norme che i suoi membri sono tenuti a seguire nel corso dello svolgimento del progetto didattico \proj.
+
+Ogni membro ha pertanto l'obbligo di prenderne visione e di rispettare le indicazioni in esso contenute al fine di rendere maggiormente efficiente il lavoro svolto e garantire l'uniformità dei prodotti realizzati.
+
+Le convenzioni qui riportate hanno lo scopo di:
 \begin{itemize}
 	\item garantire ordine all'interno dei documenti e delle varie parti della configurazione del prodotto;
 	\item mantenere coerenza nelle notazioni e nelle procedure;
 	\item minimizzare i conflitti tra i vari ruoli;
-	\item garantire che l'infrastruttura di lavoro sia il più possibile semplice e gestibile --- quindi fruibile;
+	\item garantire che l'infrastruttura di lavoro sia il più possibile semplice e gestibile --- quindi fruibile.
 \end{itemize}
+
+\subsection{Struttura del documento}
 Il presente documento si divide in tre sezioni principali:
 \begin{description}
 	\item[sezione \ref{sec:primari}] Regola i due processi primari di:
@@ -82,11 +88,20 @@ Il presente documento si divide in tre sezioni principali:
 \subsection{Fornitura}
 
 	\subsubsection{Studio di fattibilità}
-	La fase antecedente alla realizzazione del \gloss{progetto} consiste nel fissare delle riunioni in modo che il gruppo possa discutere di esso. È poi compito degli analisti redigere lo studio di fattibilità, sulla base di ciò che è emerso dalle riunioni (come ad esempio il dominio applicativo del capitolato).
+	La fase antecedente alla realizzazione del progetto consiste nel fissare delle riunioni in modo che il gruppo possa discutere di esso. È poi compito degli analisti redigere lo studio di fattibilità (\SdF), sulla base di ciò che è emerso dalle riunioni (come ad esempio il dominio applicativo del capitolato).
+
+	Lo studio di fattibilità deve presentare l'analisi svolta dai membri del gruppo riguardo ad ogni capitolato. Per ogni capitolato, gli analisti devono inserire le seguenti sezioni:
+	\begin{description}
+		\item[Descrizione] breve presentazione della proposta di capitolato; 
+		\item[Dominio applicativo] analisi dell'ambito applicativo della proposta di capitolato; 
+		\item[Dominio tecnologico] insieme di tecnologie richieste e consigliate per lo sviluppo del progetto;
+		\item[Aspetti negativi e positivi] analisi delle criticità e delle potenzialità del progetto in esame;
+		\item[Valutazione finale] sunto dei principali motivi alla base dell'accettazione o del rigetto del capitolato in esame.
+	\end{description}
 
 \subsection{Sviluppo}
 	\subsubsection{Analisi dei requisiti}
-	Al termine dello studio di fattibilità, è compito degli analisti elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di analisi dei requisiti; questo documento contiene i requisiti raccolti e i casi uso individuati nelle riunioni svolte.
+	Al termine dello studio di fattibilità, è compito degli analisti elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di analisi dei requisiti (\AdR); questo documento contiene i requisiti e i casi d'uso individuati nelle riunioni svolte.
 	Viene elencata nelle sezioni seguenti la struttura obbligatoria di requisiti e casi d'uso.
 		\paragraph{Requisiti} % da guardare come esporta pragmadb e nel caso correggere
 		Dopo aver individuato i requisiti tramite le varie riunioni, è compito degli analisti redarne un elenco con la seguente struttura:
@@ -95,30 +110,35 @@ Il presente documento si divide in tre sezioni principali:
 		\begin{description}
 			\item[Importanza] indica se il requisito è:
 			\begin{itemize}
-				\item obbligatorio;
-				\item opzionale;
-				\item desiderabile.
+				\item \textbf{OB}: obbligatorio;
+				\item \textbf{DE}: desiderabile;
+				\item \textbf{OP}: opzionale.
 			\end{itemize}
 			\item[Tipo] indica il tipo del requisito, che può essere:
-			\begin{description}
-				\item[F] funzionale;
-				\item[Q] di qualità;
-				\item[P] prestazionale;
-				\item[V] di vincolo.
-			\end{description}
+			\begin{itemize}
+				\item \textbf{F}: funzionale;
+				\item \textbf{Q}: di qualità;
+				\item \textbf{P}: prestazionale;
+				\item \textbf{V}: di vincolo.
+			\end{itemize}
 			\item[ID] identifica univocamente il requisito.
 		\end{description}
 		Inoltre, per ogni requisito l'analista deve specificare:
 		\begin{itemize}
 			\item una breve descrizione di esso;
 			\item un requisito padre (se presente);
-			\item la fonte da cui deriva;
+			\item la fonte da cui deriva:
+			\begin{itemize}
+				\item Capitolato: il requisito è derivabile direttamente dalla lettura del relativo capitolato d'appalto;
+				\item Verbale: il requisito deriva a una riunione messa a verbale;
+				\item Casi d'uso: il requisito deriva da uno o più casi d'uso identificati.
+			\end{itemize}
 			\item se è stato effettivamente implementato.
 		\end{itemize}
 		\paragraph{Casi d'uso}
 		L'analista deve identificare ogni caso d'uso nel modo seguente:
-			\[UC[x]\]
-		Ogni macro caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UC[p.f]$ dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
+			\[UCx\]
+		dove $x$ è un numero che identifica il caso d'uso. Ogni macro-caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UCp.f$, dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
 		\begin{description}
 			\item[nome] nome identificativo del caso d'uso;
 			\item[attori] attori coinvolti nel caso d'uso;
@@ -165,9 +185,9 @@ Il presente documento si divide in tre sezioni principali:
 		% \end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
-		Per tenere traccia dei casi d'uso e dei requisiti il team ha scelto di usare PragmaDB (https://github.com/StefanoMunari/PragmaDB) creato da studenti degli anni passati. Il programma è accessibile via browser ed è possibile usarlo collegandosi al server creato dal team tramite autenticazione. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle(requisiti,glossario,...) seguendo le linee guida di struttura descritte in questo documento.
+		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Gli analisti possono accedervi via browser collegandosi al server creato dal gruppo all'indirizzo \url{http://ec2-54-93-172-72.eu-central-1.compute.amazonaws.com}, tramite autenticazione. Consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
 		\paragraph{Astah}
-		L'editor \gloss{UML} utilizzato è \gloss{Astah}, creato da \textit{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal team(classi, attività, sequenza e package).
+		L'editor \gloss{UML} che gli analisti dovranno usare è \gloss{Astah}, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
 
 
 %%% Processi di supporto
@@ -176,50 +196,103 @@ Il presente documento si divide in tre sezioni principali:
 I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
 
 \subsection{Documentazione} \label{sec:doc}
-La \gloss{documentazione} di progetto va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}. I documenti che svilupperemo sono i seguenti:
+La \gloss{documentazione} di progetto va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}.
+
+I documenti che svilupperemo sono i seguenti:
 \begin{itemize}
 	\item Documenti interni al gruppo:
-	\begin{description}
-		\item[studio di fattibilità] vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto;
-		\item[norme di progetto] norma i processi del progetto.
-	\end{description}
+	\begin{itemize}
+		\item \textbf{Studio di fattibilità}: vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto;
+		\item \textbf{Norme di progetto}: norma i processi del progetto.
+	\end{itemize}
 	\item Documenti rivolti non solo al gruppo ma anche ai committenti e/o ai docenti:
-	\begin{description}
-		\item[piano di progetto] dichiara come il gruppo intende gestire le risorse umane e temporali nel corso del progetto;
-		\item[piano di qualifica] descrive come il gruppo affronta il problema di garantire la qualità del prodotto da fornire;
-		\item[analisi dei requisiti] elenca, descrive e traccia i requisiti e i casi d'uso del prodotto da fornire;
-		\item[specifica tecnica] descrive l'architettura logica del sistema da fornire, mostrando ciò che il sistema deve fare senza però fissarne i dettagli implementativi (descrive l'interfaccia di ogni componente del sistema, attraverso più livelli gerarchici di decomposizione);
-		\item[definizione di prodotto] rispetto alla specifica tecnica, decompone l'architettura in moduli a granda più fine, finché ogni modulo ha dimensione, coesione, complessità e accoppiamento tali per cui i moduli possano essere sviluppati in parallelo dai programmatori;
-		\item[glossario] riporta specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
-		\item[manuale utente] fornisce all'utente una guida completa ed esaustiva di tutte le funzionalità del prodotto;
-		\item[verbali] riporta i verbali delle riunioni del gruppo (sia quelle interne al gruppo sia quelle in presenza del committente), ognuna identificata univocamente dalla data.
-	\end{description}
+	\begin{itemize}
+		\item \textbf{Piano di progetto}: dichiara come il gruppo intende gestire le risorse umane e temporali nel corso del progetto;
+		\item \textbf{Piano di qualifica}: descrive come il gruppo affronta il problema di garantire la qualità del prodotto da fornire;
+		\item \textbf{Analisi dei requisiti}: elenca, descrive e traccia i requisiti e i casi d'uso del prodotto da fornire;
+		\item \textbf{Specifica tecnica}: descrive l'architettura logica del sistema da fornire, mostrando ciò che il sistema deve fare senza però fissarne i dettagli implementativi (descrive l'interfaccia di ogni componente del sistema, attraverso più livelli gerarchici di decomposizione);
+		\item \textbf{Definizione di prodotto}: rispetto alla specifica tecnica, decompone l'architettura in moduli a granda più fine, finché ogni modulo ha dimensione, coesione, complessità e accoppiamento tali per cui i moduli possano essere sviluppati in parallelo dai programmatori;
+		\item \textbf{Glossario}: riporta specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
+		\item \textbf{Manuale utente}: fornisce all'utente una guida completa ed esaustiva di tutte le funzionalità del prodotto;
+		\item \textbf{Verbali}: riporta i verbali delle riunioni del gruppo (sia quelle interne al gruppo sia quelle in presenza del committente), ognuna identificata univocamente dalla data.
+	\end{itemize}
 \end{itemize}
 Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
 
-\subsubsection{Ambiente di lavoro} I documenti andranno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultato essere quello in figura [figura...].
+\subsubsection{Ambiente di lavoro} I documenti vanno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultato essere il seguente:
+\begin{itemize}
+	\item \texttt{util} contiene librerie utili al gruppo per lo sviluppo della documentazione:
+	\begin{itemize}
+		\item \texttt{hx-ambiente.tex};
+		\item \texttt{hx-front.sty};
+		\item \texttt{hx-macro.sty};
+		\item \texttt{hx-vers.sty}.
+	\end{itemize}
+	\item \texttt{Interni} contiene cartelle con i documenti ad uso interno del gruppo:
+	\begin{itemize}
+		\item \texttt{Norme_di_progetto};
+		\item \texttt{Studio_di_fattibilita}.
+	\end{itemize}
+	\item \texttt{Esterni} contiene cartelle con i documenti ad uso esterno:
+	\begin{itemize}
+		\item \texttt{Analisi_dei_requisiti};
+		\item \texttt{Glossario};
+		\item \texttt{Piano_di_progetto};
+		\item \texttt{Piano_di_qualifica};
+		\item \texttt{Verbali}.
+	\end{itemize}
+\end{itemize}
 
-\subsubsection{Nomi, formati e identificazione} Nome ed estensione dei file sono regolati nel seguente modo:
-\paragraph{Nome} Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando.
+\subsubsection{Nomi, formati e identificazione} Nome ed estensione dei file sono regolati come segue.
+\paragraph{Nome} Il nome di un file o di una directory non dovrebbe contenere spazi, al fine di facilitare operazioni da riga di comando. Inoltre deve indicare in modo quanto più chiaro e non ambiguo il contenuto del documento stesso. In particolare:
+\begin{itemize}
+	\item I documenti formali da consegnare avranno un nome composto nel formato
+	\begin{center}
+		Nome\_Del\_Documento\_x\_y\_z
+	\end{center}
+	dove $x.y.z$ è il numero di versionamento: ogni versione di un documento è identificata univocamente dal nome del file e da una seconda stringa con il numero di versionamento che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
+	\item I file Latex che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo).
+\end{itemize}
 \paragraph{Formato} Ogni documento dev'essere in formato gloss{Latex} con estensione \texttt{.tex} (esportabile in formato PDF su foglio A4); la prima \gloss{versione} di un documento può essere in altri formati ma va presto sostituita da una versione in Latex. I file Latex che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne “hx-ambiente”, per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
-\paragraph{Identificazione} Ogni versione di un documento è identificata univocamente dal nome del file, composto di una prima stringa esprimente la sua funzione (ad esempio “Piano\_di\_progetto”) e una seconda stringa con il numero di versionamento (ad esempio “\_0.0.2”), che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
 
 \subsubsection{Struttura di un documento}
-\paragraph{Frontespizio} Ogni documento che sia più lungo di una pagina deve iniziare con un frontespizio recante: titolo del documento, versione, nome del nostro gruppo, nome del progetto, data, autori, revisori, uso (interno o esterno), lista di distribuzione. Per fare questo, il redattore deve inserire \texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento e aggiustare i parametri con i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}; per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}.
-\paragraph{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca, dal più recente al più vecchio, i cambiamenti apportati a ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve includere (dopo il frontespizio) un file intitolato \texttt{diario.tex} nella stessa cartella del documento; al suo interno, deve usare le macro \texttt{\textbackslash begin\{diario\}} e \texttt{\textbackslash end\{diario\}}.
+\paragraph{Frontespizio} Ogni documento che sia più lungo di una pagina deve iniziare con un frontespizio recante: 
+\begin{itemize}
+	\item logo del gruppo;
+	\item nome del gruppo;
+	\item nome del progetto;
+	\item nome del documento;
+	\item versione del documento;
+	\item data di creazione del documento;
+	\item data di ultima modifica del documento;
+	\item nome e cognome dei membri del gruppo incaricati della redazione del documento;
+	\item nome e cognome dei membri del gruppo incaricati della verifica del documento;
+	\item destinazione d'uso del documento;
+	\item destinatari del documento;
+	\item mail del gruppo;
+	\item riferimento al \gloss{repository} pubblico di \gloss{GitHub}.
+\end{itemize} 
+Per rispettare tale struttura il redattore del documento deve inserire \\\texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento; a seguire deve inserire i comandi i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}} e all'interno delle parentesi graffe di ognuno le informazioni corrette per quel documento. Per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}, da inserirsi preferibilmente subito dopo l'istruzione \texttt{\textbackslash begin\{document\}}.
+\paragraph{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca, dal più recente al più datato, i cambiamenti apportati a ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve inserire dopo l'istruzione \texttt{\textbackslash maketitle} il comando \texttt{\textbackslash include\{diario\}} allo scopo di includere un file intitolato \texttt{diario.tex} posto nella stessa cartella del documento; al suo interno, deve usare le macro \texttt{\textbackslash begin\{diario\}} e \texttt{\textbackslash end\{diario\}}. Ogni riga della tabella del diario delle modifiche dev'essere così strutturata:
+\begin{itemize}
+ \item Versione: versione del documento dopo la modifica;
+ \item Autore e Ruolo: autore della modifica e ruolo che esso ricopre;
+ \item Data: data della modifica apportata;
+ \item Descrizione: descrizione della modifica apportata.
+\end{itemize}
 \paragraph{Indice dei contenuti} Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti. Per questo, dopo l'inclusione del diario delle modifiche va posto il comando \texttt{\textbackslash tableofcontents}.
 \paragraph{Sezionamento} Dev'esserci un'unica struttura gerarchica di sezioni comune a tutta la documentazione: il sezionamento principale si attua con \texttt{\textbackslash section\{\}}; poi si scende nello specifico con \texttt{\textbackslash subsection\{\}}, \texttt{\textbackslash subsubsection\{\}} e infine \texttt{\textbackslash paragraph\{\}}. Questi quattro livelli di sezionamento generano parti di testo che vengono tracciate dall'indice generale e sono quindi atti a contenere parti di testo leggibili “ad accesso casuale” (cioè anche senza dover rileggere parti di testo precedenti); per quelle parti di testo che, pur avendo una propria strutturazione, vanno lette in modo “sequenziale”, si usano invece gli elenchi; questi non vengono riportati nell'indice generale e possono essere di tre tipi:
 \begin{description}
-	\item[elenchi puntati] ambiente \texttt{itemize} --- elencano gli elementi di un insieme;
-	\item[elenchi numerati] ambiente \texttt{enumerate} --- elencano gli elementi di una sequenza;
-	\item[elenchi descrittivi] ambiente \texttt{description} --- elencano gli elementi di un dizionario di termini.
+	\item[elenchi puntati] elencano gli elementi di un insieme (ambiente \texttt{itemize});
+	\item[elenchi numerati] elencano gli elementi di una sequenza (ambiente \texttt{enumerate});
+	\item[elenchi descrittivi] elencano gli elementi di un dizionario di termini (ambiente \texttt{description}).
 \end{description}
 Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a quelli “in linea” (cioè separati solo da un punto e virgola), per aumentare la chiarezza del testo.
-\paragraph{Intestazione} Ogni pagina dev'essere numerata, tranne il frontespizio.
+\paragraph{Intestazione} Ogni pagina dev'essere numerata, tranne il frontespizio. % Credo sia bene modificare questa cosa grafica più avanti: ora siamo presi con le bombe!
 
 \subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in Latex) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
 
-\subsubsection{Termini del glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con un pedice (\gloss{[termine in glossario]}) tramite la macro \texttt{\textbackslash gloss\{termine\}}, in modo da far capire che si trova nel glossario.
+\subsubsection{Termini del glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con un pedice (\gloss{[termine in glossario]}) tramite la macro \texttt{\textbackslash gloss\{termine\}}, per indicare al lettore di ricercarne il significato nel glossario.
 
 %manuale in inglese? seriamente? 
 \subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano, con uno stile chiaro e poco articolato. Il manuale utente viene anche tradotto in inglese, data la natura open-source del progetto. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
@@ -230,6 +303,28 @@ Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a 
 	\item Le abbreviazioni vanno scritte interamente in maiuscolo e definite nel glossario.
 \end{itemize}
 L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
+
+\subsubsection{Macro-istruzioni Latex}
+Inoltre, per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istruzioni Latex, definite nelle librerie della directory \texttt{util}:
+\begin{itemize}
+	\item \texttt{\textbackslash proj}, il nome del progetto;
+	\item \texttt{\textbackslash hx}, il nome del gruppo;
+	\item \texttt{\textbackslash repo}, l'indirizzo web del repository;
+	\item \texttt{\textbackslash email}, l'indirizzo e-mail del gruppo;
+	\item \texttt{\textbackslash scopo}, il testo contenenete lo scopo del prodotto (da riportare nell'introduzione di ogni documento);
+	\item \texttt{\textbackslash presgloss}, il testo contenenete le istruzioni per l'uso del glossario (da riportare nell'introduzione di ogni documento);
+	\item \texttt{\textbackslash PB}, \PB;
+	\item \texttt{\textbackslash LB}, \LB;
+	\item \texttt{\textbackslash GG}, \GG;
+	\item \texttt{\textbackslash MM}, \MM;
+	\item \texttt{\textbackslash LS}, \LS;
+	\item \texttt{\textbackslash AZ}, \AZ;
+	\item \texttt{\textbackslash ALL}, \ALL;
+	\item \texttt{\textbackslash TV}, \TV;
+	\item \texttt{\textbackslash RC}, \RC;
+	\item \texttt{\textbackslash GP}, \GP;
+	\item \texttt{\textbackslash ZU}, \ZU.
+\end{itemize}
 
 \subsubsection{Accessibilità per la stampa} Un documento dev'essere fruibile anche se stampato. Per questo, i collegamenti web vanno scritti esplicitamente con \texttt{\textbackslash url\{indirizzo.del.collegamento\}} anziché nascosti da una parola del testo (come in \texttt{\textbackslash href\{indirizzo.del.collegamento\}\{clicca qui\}}). Inoltre, va minimizzato l'uso di colori, al fine di evitare ambiguità se un documento viene stampato in bassa qualità.
 
