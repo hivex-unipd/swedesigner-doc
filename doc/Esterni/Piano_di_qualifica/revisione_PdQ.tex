@@ -1,0 +1,54 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{../../util/hx-macro}
+\title{Revisione PdQ}
+\author{\GG}
+
+\begin{document}
+\maketitle
+
+\paragraph{}
+Mi mancano da leggere le ultime otto pagine. Intanto, in tabella trovate le correzioni che consiglierei di apportare. Invece ho corretto gli errori di battitura “banali” direttamente nel file sorgente.
+
+\paragraph{}
+\begin{center}
+\begin{tabular}{| p{4cm} | p{7cm} |}
+	\hline
+	\textbf{dove} & \textbf{correzione} \\ \hline
+	\hline
+	§ “Obiettivi di qualità” & “team” non è più in glossario. \\ \hline
+	§ “Obiettivi di qualità di processo” & Piuttosto di \texttt{subparagraph}, usare l'ambiente \texttt{description} per ogni obiettivo di qualità; in questo caso mi sembra (anche graficamente) la scelta migliore. \\ \hline
+	§ “Standard adottato”, sotto “Qualità del prodotto” & Cambiare “dal lato dell’utilizzatore che utilizza tale prodotto [\dots]” in “dal lato di chi utilizza tale prodotto [\dots]”. \\ \hline
+	§ “Modello della qualità esterna ed interna” & Esplicitare “[\dots] è suddiviso nelle seguenti sei caratteristiche generali [\dots]”, anziché solo “è suddiviso in sei caratteristiche generali [\dots]” \\ \hline
+	§ “Risorse” (in § “La strategia di gestione della qualità nel dettaglio”) & Piuttosto dei paragrafi, usare un elenco: questi paragrafi sono abbastanza brevi (quindi va bene un elenco) e non credo debbano essere indicizzati nell'indice generale. \\ \hline
+	§ “Risorse disponibili” & Cambiare “Le risorse software disponibili sono costituite dagli editor di testo latex e utilizzati per la stesura dei documenti, gli \gloss{IDE} [\dots]” in “Le risorse software disponibili sono costituite dagli editor di testo utilizzati per la stesura dei documenti in Latex, gli \gloss{IDE} [\dots]” \\ \hline
+	§ “Misure” (in § “Misure e Metriche”) & Propongo di scegliere uno solo tra \emph{range} e \emph{intervallo}, che hanno lo stesso significato. \\ \hline
+	§ “Misure” (in § “Misure e Metriche”) & Nel range ottimale non bisognerebbe scrivere “risulta ottimale”, anziché “risulta accettabile”? Ma può darsi che mi sbagli io. \\ \hline
+	§ “Misure” (in § “Misure e Metriche”) & Nel range accettabile, spezzare la frase lunga sei righe in: “Risulta implicito che valori non rientranti nell'intervallo di accettabilità sono eccessivamente bassi e non possono quindi essere accettati; essi richiedono immediate strategie correttive [\dots da qui in poi tutto ok]” \\ \hline
+	§ “Metriche per i processi” & Mettere \emph{schedule variance} in corsivo; ci sono solo quattro occorrenze nel testo, quindi il corsivo non dovrebbe essere pesante da leggere. \\ \hline
+	§ “Schedule Variance” & Sostiruire “[\dots] la differenza fra la data pianificata di fine di un’attività e la data di fine reale di quell'attività” con “[\dots] la differenza fra la data pianificata di fine di un’attività e la data reale di fine di quell'attività” \\ \hline
+	§ “Schedule Variance” & Sostiruire “periodi di \gloss{slack}” con “\gloss{periodi di slack}”, per non confonderli con l'applicazione Slack. \\ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{}
+Osservazioni generali:
+\begin{itemize}
+	\item Nelle liste, eviterei di mettere i due punti (:) in grassetto; meglio evidenziare solo il termine che si vuole evidenziare, senza la punteggiatura:
+	\begin{itemize}
+		\item \textbf{Termine}: così;
+		\item \textbf{Termine:} non così.
+	\end{itemize}
+	\item Da quel che ho capito, sarebbe meglio usare un nuovo paragrafo anonimo (andando a capo due volte) anziché usare il doppio backslash.
+	\item Aggiungerei qualche virgola, per dare più respiro alle frasi lunghe.
+	\item All'interno degli elementi di una lista, vi consiglio di preferire il punto e virgola al punto fermo.
+	\item Per fare l'inciso, in Latex, si usano tre trattini attaccati --- mi sono permesso di correggere direttamente nel sorgente anche questo aspetto, che è standard nell'utilizzo di Latex.
+	\item In italiano non si alzano le iniziali con troppa generosità: terrei bassi i nomi dei ruoli e soprattutto quelli dei processi (ad es. “verifica”).
+	\item 
+\end{itemize}
+
+\end{document}
