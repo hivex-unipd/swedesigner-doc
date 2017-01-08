@@ -152,7 +152,7 @@ Il presente documento si divide in tre sezioni principali:
 		\end{description}
 	\subsubsection{Progettazione}
 	% teniamo questo per una revisione successiva
-	La sezione sulla progettazione (norme e strumenti) verrà stesa in una versione successiva di questo documento.
+	La sezione sulla progettazione (norme e strumenti) verrà stesa nella prossima una versione successiva di questo documento.
 	% Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
 	% La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard UML 2.0:
 	% \begin{itemize}
@@ -163,7 +163,7 @@ Il presente documento si divide in tre sezioni principali:
 	% \end{itemize}
 	\subsubsection{Codifica} \label{sec:cod}
 	% stessa cosa di sopra
-	La sezione sulla codifica (norme e strumenti) verrà stesa in una versione successiva di questo documento.
+	La sezione sulla codifica (norme e strumenti) verrà stesa nella prossima versione successiva di questo documento.
 	% Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
 		% \paragraph{Formattazione del codice}
 		% Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
@@ -185,7 +185,9 @@ Il presente documento si divide in tre sezioni principali:
 		% \end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
-		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Gli analisti possono accedervi via browser collegandosi al server creato dal gruppo all'indirizzo \url{http://ec2-54-93-172-72.eu-central-1.compute.amazonaws.com}, tramite autenticazione. Consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
+		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. %Gli analisti possono accedervi via browser collegandosi al server creato dal gruppo all'indirizzo \url{http://ec2-54-93-172-72.eu-central-1.compute.amazonaws.com} tramite autenticazione.
+		
+		Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
 		\paragraph{Astah}
 		L'editor \gloss{UML} che gli analisti dovranno usare è \gloss{Astah}, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
 
@@ -193,7 +195,7 @@ Il presente documento si divide in tre sezioni principali:
 %%% Processi di supporto
 
 \section{Processi di supporto} \label{sec:supporto}
-I processi normati in questa sezione hanno la funzione di aiutare gli altri processi.
+I processi normati in questa sezione hanno la funzione di supportare gli altri processi, fornendo istruzioni utili alla stesura dei documenti e alla loro verifica.
 
 \subsection{Documentazione} \label{sec:doc}
 La \gloss{documentazione} di progetto va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}.
@@ -202,7 +204,7 @@ I documenti che svilupperemo sono i seguenti:
 \begin{itemize}
 	\item Documenti interni al gruppo:
 	\begin{itemize}
-		\item \textbf{Studio di fattibilità}: vaglia i \emph{pro} e i \emph{contra} di ogni capitolato d'appalto;
+		\item \textbf{Studio di fattibilità}: vaglia i \emph{pro} e i \emph{contro} di ogni capitolato d'appalto;
 		\item \textbf{Norme di progetto}: norma i processi del progetto.
 	\end{itemize}
 	\item Documenti rivolti non solo al gruppo ma anche ai committenti e/o ai docenti:
@@ -211,8 +213,8 @@ I documenti che svilupperemo sono i seguenti:
 		\item \textbf{Piano di qualifica}: descrive come il gruppo affronta il problema di garantire la qualità del prodotto da fornire;
 		\item \textbf{Analisi dei requisiti}: elenca, descrive e traccia i requisiti e i casi d'uso del prodotto da fornire;
 		\item \textbf{Specifica tecnica}: descrive l'architettura logica del sistema da fornire, mostrando ciò che il sistema deve fare senza però fissarne i dettagli implementativi (descrive l'interfaccia di ogni componente del sistema, attraverso più livelli gerarchici di decomposizione);
-		\item \textbf{Definizione di prodotto}: rispetto alla specifica tecnica, decompone l'architettura in moduli a granda più fine, finché ogni modulo ha dimensione, coesione, complessità e accoppiamento tali per cui i moduli possano essere sviluppati in parallelo dai programmatori;
-		\item \textbf{Glossario}: riporta specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
+		\item \textbf{Definizione di prodotto}: rispetto alla specifica tecnica, decompone l'architettura in moduli ad un livello più fine, affinché ogni modulo possegga dimensione, coesione, complessità e accoppiamento tali per cui i moduli possano essere sviluppati in parallelo dai programmatori;
+		\item \textbf{Glossario}: riporta specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura "tecnica";
 		\item \textbf{Manuale utente}: fornisce all'utente una guida completa ed esaustiva di tutte le funzionalità del prodotto;
 		\item \textbf{Verbali}: riporta i verbali delle riunioni del gruppo (sia quelle interne al gruppo sia quelle in presenza del committente), ognuna identificata univocamente dalla data.
 	\end{itemize}
@@ -251,9 +253,9 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 		Nome\_Del\_Documento\_x\_y\_z
 	\end{center}
 	dove $x.y.z$ è il numero di versionamento: ogni versione di un documento è identificata univocamente dal nome del file e da una seconda stringa con il numero di versionamento che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
-	\item I file Latex che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo).
+	\item I file \LaTeX{} che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla "hx-" (per rimarcare che sono librerie create dal gruppo).
 \end{itemize}
-\paragraph{Formato} Ogni documento dev'essere in formato gloss{Latex} con estensione \texttt{.tex} (esportabile in formato PDF su foglio A4); la prima \gloss{versione} di un documento può essere in altri formati ma va presto sostituita da una versione in Latex. I file Latex che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne “hx-ambiente”, per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
+\paragraph{Formato} Ogni documento dev'essere in formato \LaTeX{} con estensione \texttt{.tex} (esportabile in formato PDF su foglio A4); la prima \gloss{versione} di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX. I file \LaTeX che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla "hx-" (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne "hx-ambiente", per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
 
 \subsubsection{Struttura di un documento}
 \paragraph{Frontespizio} Ogni documento che sia più lungo di una pagina deve iniziare con un frontespizio recante: 
@@ -281,21 +283,21 @@ Per rispettare tale struttura il redattore del documento deve inserire \\\texttt
  \item Descrizione: descrizione della modifica apportata.
 \end{itemize}
 \paragraph{Indice dei contenuti} Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti. Per questo, dopo l'inclusione del diario delle modifiche va posto il comando \texttt{\textbackslash tableofcontents}.
-\paragraph{Sezionamento} Dev'esserci un'unica struttura gerarchica di sezioni comune a tutta la documentazione: il sezionamento principale si attua con \texttt{\textbackslash section\{\}}; poi si scende nello specifico con \texttt{\textbackslash subsection\{\}}, \texttt{\textbackslash subsubsection\{\}} e infine \texttt{\textbackslash paragraph\{\}}. Questi quattro livelli di sezionamento generano parti di testo che vengono tracciate dall'indice generale e sono quindi atti a contenere parti di testo leggibili “ad accesso casuale” (cioè anche senza dover rileggere parti di testo precedenti); per quelle parti di testo che, pur avendo una propria strutturazione, vanno lette in modo “sequenziale”, si usano invece gli elenchi; questi non vengono riportati nell'indice generale e possono essere di tre tipi:
+\paragraph{Sezionamento} Dev'esserci un'unica struttura gerarchica di sezioni comune a tutta la documentazione: il sezionamento principale si attua con \texttt{\textbackslash section\{\}}; poi si scende nello specifico con \texttt{\textbackslash subsection\{\}}, \texttt{\textbackslash subsubsection\{\}} e infine \texttt{\textbackslash paragraph\{\}}. Questi quattro livelli di sezionamento generano parti di testo che vengono tracciate dall'indice generale e sono quindi atti a contenere parti di testo leggibili "ad accesso casuale" (cioè anche senza dover rileggere parti di testo precedenti); per quelle parti di testo che, pur avendo una propria strutturazione, vanno lette in modo "sequenziale", si usano invece gli elenchi; questi non vengono riportati nell'indice generale e possono essere di tre tipi:
 \begin{description}
 	\item[elenchi puntati] elencano gli elementi di un insieme (ambiente \texttt{itemize});
 	\item[elenchi numerati] elencano gli elementi di una sequenza (ambiente \texttt{enumerate});
 	\item[elenchi descrittivi] elencano gli elementi di un dizionario di termini (ambiente \texttt{description}).
 \end{description}
-Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a quelli “in linea” (cioè separati solo da un punto e virgola), per aumentare la chiarezza del testo.
+Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a quelli "in linea" (cioè separati solo da un punto e virgola), per aumentare la chiarezza del testo.
 \paragraph{Intestazione} Ogni pagina dev'essere numerata, tranne il frontespizio. % Credo sia bene modificare questa cosa grafica più avanti: ora siamo presi con le bombe!
 
-\subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in Latex) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
+\subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in \LaTeX) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al \gloss{responsabile di progetto} --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
 
 \subsubsection{Termini del glossario} All'interno di una sezione, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con un pedice (\gloss{[termine in glossario]}) tramite la macro \texttt{\textbackslash gloss\{termine\}}, per indicare al lettore di ricercarne il significato nel glossario.
 
 %manuale in inglese? seriamente? 
-\subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano, con uno stile chiaro e poco articolato. Il manuale utente viene anche tradotto in inglese, data la natura open-source del progetto. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
+\subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano, con uno stile chiaro e poco articolato. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
 \begin{itemize}
 	\item La punteggiatura è seguita ma non preceduta da uno spazio.
 	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{framework} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione in italiano.
@@ -304,8 +306,8 @@ Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a 
 \end{itemize}
 L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
 
-\subsubsection{Macro-istruzioni Latex}
-Inoltre, per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istruzioni Latex, definite nelle librerie della directory \texttt{util}:
+\subsubsection{Macro-istruzioni \LaTeX}
+Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istruzioni \LaTeX, definite nelle librerie della directory \texttt{util}:
 \begin{itemize}
 	\item \texttt{\textbackslash proj}, il nome del progetto;
 	\item \texttt{\textbackslash hx}, il nome del gruppo;
@@ -326,7 +328,7 @@ Inoltre, per uniformare il testo, i redattori sono tenuti a usare le seguenti ma
 	\item \texttt{\textbackslash ZU}, \ZU.
 \end{itemize}
 
-\subsubsection{Accessibilità per la stampa} Un documento dev'essere fruibile anche se stampato. Per questo, i collegamenti web vanno scritti esplicitamente con \texttt{\textbackslash url\{indirizzo.del.collegamento\}} anziché nascosti da una parola del testo (come in \texttt{\textbackslash href\{indirizzo.del.collegamento\}\{clicca qui\}}). Inoltre, va minimizzato l'uso di colori, al fine di evitare ambiguità se un documento viene stampato in bassa qualità.
+\subsubsection{Accessibilità per la stampa} Un documento dev'essere fruibile anche se stampato. Per questo, i collegamenti web vanno scritti esplicitamente con \texttt{\textbackslash url\{indirizzo.del.collegamento\}} anziché nascosti da una parola del testo (come in \texttt{\textbackslash href\{indirizzo.del.collegamento\}\{clicca qui\}}). Inoltre, va minimizzato l'uso di colori, al fine di evitare ambiguità se un documento viene stampato in bassa qualità. Ogni immagine che fornisce informazioni tramite 
 
 
 
@@ -343,7 +345,7 @@ Definiamo la configurazione del nostro software come composta dai seguenti eleme
 	\item directory contenenti codice sorgente e materiale correlato;
 	\item singoli file contenenti un documento.
 \end{itemize}
-Ogni elemento della configurazione (quindi la directory per il codice e il singolo file per i documenti) deve avere un numero di versionamento, che lo identifica nel tempo. Tale numero si compone di tre numeri separati da un punto: il primo viene incremementato ad ogni \textbf{approvazione} dell'elemento da parte del \gloss{responsabile di progetto}; il secondo ad ogni sua \textbf{revisione} da parte di un \gloss{verificatore}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso. L'incremento di un numero azzera i numeri alla sua destra.
+Ogni elemento della configurazione (quindi la directory per il codice e il singolo file per i documenti) deve avere un numero di versionamento, che lo identifica nel tempo. Tale numero si compone di tre numeri separati da un punto: il primo viene incrementato ad ogni \textbf{approvazione} dell'elemento da parte del \gloss{responsabile di progetto}; il secondo ad ogni sua \textbf{revisione} da parte di un \gloss{verificatore}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso. L'incremento di un numero azzera i numeri alla sua destra.
 
 \subsubsection{Controllo della configurazione} I cambiamenti \emph{sostanziali} nella configurazione del software vanno controllati e registrati; essi possono nascere dal piano di progetto o dall'iniziativa di un membro.
 \paragraph{Cambiamenti pianificati} I cambiamenti pianificati nascono dal piano di progetto. In questo caso il cambiamento è già controllato quindi basta registrarlo aggiornando il numero di versionamento dell'elemento che è cambiato nella configurazione.
@@ -377,7 +379,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\subsubsection{Analisi statica}
 	L'analisi statica è una tecnica che permette di individuare anomalie all'interno di documenti e codice sorgente durante tutto il loro ciclo di vita. È applicabile tramite due tecniche diverse:
 	\begin{description}
-		\item[\gloss{Walkthrough}] Questa tecnica prevede che un verificatore scorra il documento alla ricerca di anomalie ed errori, senza però sapere di preciso quali cercare. È molto utile nelle fasi inziali di sviluppo, quando il gruppo è ancora inesperto e non si conosce la natura degli errori. Dev'essere adottata dai verificatori, i quali scrivono nella lista di controllo (definita più avanti in questa sezione) gli errori più frequenti; ognuno di questi errori dev'essere cercato tramite \gloss{inspection}.
+		\item[\gloss{Walkthrough}] Questa tecnica prevede che un verificatore scorra il documento alla ricerca di anomalie ed errori, senza però sapere di preciso quali cercare. È molto utile nelle fasi iniziali di sviluppo, quando il gruppo è ancora inesperto e non si conosce la natura degli errori. Dev'essere adottata dai verificatori, i quali scrivono nella lista di controllo (definita più avanti in questa sezione) gli errori più frequenti; ognuno di questi errori dev'essere cercato tramite \gloss{inspection}.
 		\item[Inspection] Con questa tecnica, il verificatore deve utilizzare la lista di controllo in modo tale da eseguire una ricerca molto più mirata e dettagliata degli errori. Quando possibile, il verificatore deve avvalersi degli strumenti automatici che il gruppo sceglierà dopo aver deciso il linguaggio di programmazione da utilizzare.
 	\end{description}
 	La lista di controllo per i verificatori viene mantenuta e aggiornata nel presente documento; ogni suo elemento è identificato da un'espressione che lo descrive.
@@ -385,7 +387,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\begin{description} %%% DA RIEMPIRE MAN MANO
 		\item[norme sulla documentazione] i documenti devono rispettare tutte le norme descritte nella sezione \ref{sec:doc};
 		\item[completezza] ogni documento deve riportare tutto il necessario per adempiere al suo scopo, riportato nella sua introduzione;
-		\item[sintassi Latex] il documento deve usare le macroistruzioni definite nei file della directory \texttt{util} del ramo \texttt{doc} del nostro gloss{repository};
+		\item[sintassi \LaTeX] il documento deve usare le macroistruzioni definite nei file della directory \texttt{util} del ramo \texttt{doc} del nostro gloss{repository};
 		\item[coerenza] le asserzioni di un documento non devono contraddirsi l'un l'altra né contraddire quelle del resto della documentazione.
 	\end{description}
 	\paragraph{Lista di controllo per il codice} Gli elementi da verificare per il codice sorgente sono i seguenti:
@@ -395,7 +397,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\end{description}
  
 	\subsubsection{Analisi dinamica}
-	L'analisa dinamica viene effettuata tramite dei test sul software prodotto. Questi test devono verificare la correttezza del software e devono essere ripetibili.
+	L'analisi dinamica viene effettuata tramite dei test sul software prodotto. Questi test devono verificare la correttezza del software e devono essere ripetibili.
 	\paragraph{Test di unità}
 		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola. Vengono identificati dalla seguente sintassi:
 			\[TU[Codice Test]\]
@@ -406,7 +408,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 		I test di sistema vengono eseguiti su un prodotto ritenuto completo per verificarne i requisiti. Vengono identificati dalla seguente sintassi:
 			\[TS[Codice Requisito]\]
 	\paragraph{Test di regressione}
-		Un test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche. Vengono identificati dalla seguente sinstassi:
+		Un test di regressione ha lo scopo di verificare nuovamente i componenti rieseguendo i loro test dopo che hanno subito modifiche. Vengono identificati dalla seguente sintassi:
 			\[TR[Codice Test]\]
 	\paragraph{Test di validazione}
 		I test di validazione vengono eseguiti con il proponente per collaudare il prodotto. Vengono identificati dalla seguente sintassi:
@@ -453,13 +455,13 @@ Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \g
 	\item disegno di diagrammi di pianificazione.
 \end{itemize}
 \subsubsection{Riunioni}
-			Spetta al \textit{responsabile di progetto} convocare le riunioni quando lo ritiene necessario.È possibile da una qualsiasi persona del team fare richiesta di una riunione al \textit{responsabile di progetto}.Quest'ultimo poi ha il compito di decidere se è utile svolgerla.  Per informare i membri della riunione si utilizza la piattaforma di comunicazione \textit{Slack},proponendo una data,un luogo, l'ordine del giorno e chu ha chiesto la riunione. I membri del gruppo devono quindi rispondere tempestivamente per poter confermare la presenza.
+			Spetta al \textit{responsabile di progetto} convocare le riunioni quando lo ritiene necessario. È possibile da una qualsiasi persona del team fare richiesta di una riunione al \textit{responsabile di progetto}. Quest'ultimo poi ha il compito di decidere se è utile svolgerla.  Per informare i membri della riunione si utilizza la piattaforma di comunicazione \textit{Slack},proponendo una data, un luogo, l'ordine del giorno e chi ha chiesto la riunione. I membri del gruppo devono quindi rispondere tempestivamente per poter confermare la presenza.
 			\paragraph{Riunioni interne}
-				Viene nominato un segretario ad inizio di ogni riunione che ha il compito di scrivere la minuta dell'incontro. A fine riunione deve inoltre redigere un verbale,il quale viene caricato nella repository insieme aglia trli documenti per essere disponibile per la lettura ai membri. I partecipanti devono tenere un comportamento adeguato a fovore la discussione dell'ordine del giorno.
+				Viene nominato un segretario ad inizio di ogni riunione che ha il compito di scrivere la minuta dell'incontro. A fine riunione deve inoltre redigere un verbale,il quale viene caricato nella repository insieme agli altri documenti per essere disponibile per la lettura ai membri. I partecipanti devono tenere un comportamento adeguato a favore la discussione dell'ordine del giorno.
 			\paragraph{Riunioni esterne}
 				Il \textit{responsabile di progetto} fissa le riunioni esterne contattando il committente tramite posta elettronica,accordandosi per la data e il luogo da poi riferire ai membri del gruppo.
-				Ad ogni riunione viene chiesto al committente di poter registrare la riunione in modo da poter redigere un verbale accurato e dare la possibilità di riascoltarla anche ad eventuali membri non presenti.Viene nominato anche qui un segretario che scriverà il verbale. Nel caso non fosse stato possibile regstrare la riunione il verbale sarà redatto da tutto il team in modo da tralasciare il meno possibile contenuti.
-			\paragraph{verbali}
+				Ad ogni riunione viene chiesto al committente di poter registrare la riunione in modo da poter redigere un verbale accurato e dare la possibilità di riascoltarla anche ad eventuali membri non presenti.Viene nominato anche qui un segretario che scriverà il verbale. Nel caso non fosse stato possibile registrare la riunione il verbale sarà redatto da tutto il team in modo da tralasciare il meno possibile contenuti.
+			\paragraph{Verbali}
 				I verbali che vengono redatti dal segretario(o dal tutto il team in mancanza di registrazione audio) riassumono in modo sintetico ma preciso cosa o stato discusso nella riunione. 
 				In particolare specificano:
 				\begin{itemize}
@@ -470,9 +472,9 @@ Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \g
 					\item il segretario;
 					\item i partecipanti alla riunione;
 				\end{itemize}
-				Sotto poi è presente un riassunto esaustivo riguardo le decisione prese rispetto agli argomenti trattati,eventuali dubbi e problemi ed eventuali compit assegnati.
-		\subsubsection{communicazioni esterne}
-			Per le comunicazioni esterne il gruppo ha crato un indirizzo di posta elettronica \url{mailto:hivex.team@gmail.com}.
+				Sotto poi è presente un riassunto esaustivo riguardo le decisione prese rispetto agli argomenti trattati,eventuali dubbi e problemi ed eventuali compiti assegnati.
+		\subsubsection{comunicazioni esterne}
+			Per le comunicazioni esterne il gruppo ha creato un indirizzo di posta elettronica \url{mailto:hivex.team@gmail.com}.
 			È compito del \textit{responsabile di progetto} comunicare con il committente e l'università e informare i restanti membri di cosa si è discusso. %magari si può anche dire che abbiamo l'inoltro automatico per infomare gli altri.
 
 \subsubsection{Comunicazione intra-gruppo} 
@@ -494,7 +496,7 @@ Tra i prodotti valutati, la scelta è ricaduta su \gloss{Slack}, una piattaforma
 \end{itemize}
 \paragraph{Canali} La possibilità di suddividere le conversazioni in canali è molto potente ma potenzialmente anche dispersiva: avere troppi canali porta a riversare tutta la comunicazione sul canale principale, intasandolo e rendendo la lettura dello storico più complicata. Sono quindi previsti i seguenti canali, con i seguenti scopi:
 \begin{description}
-	\item[\#documents] come strutturare i documenti e problematiche relative all'uso di Latex;
+	\item[\#documents] come strutturare i documenti e problematiche relative all'uso di \LaTeX;
 	\item[\#feasibility] discussione sulla fattibilità dei capitolati;
 	\item[\#general] annunci e comunicazioni riguardanti l'intero gruppo;
 	\item[\#github] problematiche nell'uso di Git, integrazione con GitHub (vedi prossimo paragrafo);
@@ -512,13 +514,13 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 \subsection{Gestione di progetto}
 
 \subsubsection{Ruoli} \label{sec:ruoli}
-	Verrano assegnati dei ruoli corrispondenti a quelli professionali per lo sviluppo del progetto.
-	Ogni membro del team è tenuto a ricoprire almeno una volta tutti i ruoli sottoindicati. Verrà inoltre garantito che non si presentino conflitti di interesse se una persona è sia redattore che verificatore di uno stesso documento. È possibile ricoprire più ruoli contemporaneamente.
+	Verranno assegnati dei ruoli corrispondenti a quelli professionali per lo sviluppo del progetto.
+	Ogni membro del team è tenuto a ricoprire almeno una volta tutti i ruoli sotto indicati. Sarà inoltre garantito che non si presentino conflitti di interesse se una persona è sia redattore che verificatore di uno stesso documento. È possibile ricoprire più ruoli contemporaneamente.
 		\paragraph{Responsabile di progetto}
 		Il \textit{responsabile di progetto} detiene la responsabilità di tutto il team ed il potere decisionale. Si occupa inoltre delle comunicazione esterne del team.
 		In particolare ha responsabilità riguardo a:
 		\begin{itemize}
-			\item Coordinamento,pianificazione e controllo delle attività;
+			\item Coordinamento, pianificazione e controllo delle attività;
 			\item Gestione delle risorse;
 			\item Analisi e gestione dei rischi;
 			\item Approvazione dei documenti;
@@ -530,7 +532,7 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 		\begin{itemize}
 			\item Redigere organigramma e il piano di progetto;
 			\item Collaborare nella stesura del piano di qualifica;
-			\item Assicurarsi che le sttività svolte seguano le indicazioni delle norme di progetto;
+			\item Assicurarsi che le attività svolte seguano le indicazioni delle norme di progetto;
 			\item Garantire che vengano rispettati i ruoli;
 			\item Evitare conflitti di interesse tra redattori e verificatori;
 			\item Assegnare e gestire task agli altri membri del gruppo;
@@ -546,12 +548,12 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 			\item Controllo versioni e configurazioni del prodotto;
 			\item Risoluzione problemi riguardanti la gestione delle risorse e dei processi;
 		\end{itemize}
-		L'\textit{amministratore} è incaricato di redigere le \textit{norme di progetto},la parte del \textit{piano di qualifica} riguardante metodi e strumenti di verifica e collabora alla stesuraq del \textit{piano di progetto}.
+		L'\textit{amministratore} è incaricato di redigere le \textit{norme di progetto},la parte del \textit{piano di qualifica} riguardante metodi e strumenti di verifica e collabora alla stesura del \textit{piano di progetto}.
 		\paragraph{Analista}
 		L'\textit{analista} è responsabile di tutto quello che riguarda l'analisi del problema.
 		In particolare dovrà:
 		\begin{itemize}
-			\item Studiare a fondo natura e problematiche del prodtto che si andrà a realizzare;
+			\item Studiare a fondo natura e problematiche del prodotto che si andrà a realizzare;
 			\item Classificare requisiti;
 			\item Redigere diagrammi dei casi d'uso
 			\item Produrre una specifica di progetto precisa in ogni sui punto e comprensibile dal \gloss{proponente},dal \gloss{committente} e dai progettisti.
@@ -562,12 +564,12 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 		Il \textit{progettista} è responsabile delle attività di progettazione. Si occupa più in dettaglio di:
 		\begin{itemize}
 			\item effettuare scelte progettuali volte ad applicare al prodotto soluzioni note ed ottimizzate;
-			\item effettuare scelte prodedurali volte ad avere un prodotto facilmente espandibile e mantenibile;
-			\item produrre una soluzione comprensibile e soddsfacente per il committente.
+			\item effettuare scelte procedurali volte ad avere un prodotto facilmente espandibile e mantenibile;
+			\item produrre una soluzione comprensibile e soddisfacente per il committente.
 		\end{itemize}
-		Il \textit{progettista} redige la specifica tecnica,la definizione di prodotto e le sezione del \textit{piano di qualifica} riguardanti le \gloss{metriche} ative di verifica della programmazione.
+		Il \textit{progettista} redige la specifica tecnica, la definizione di prodotto e le sezione del \textit{piano di qualifica} riguardanti le \gloss{metriche} attività di verifica della programmazione.
 		\paragraph{Programmatore}
-		Il \textit{programmatore} è responsabile delle attività di codifica e delle comnenti ausialiarie necessari per il processo di verifica.
+		Il \textit{programmatore} è responsabile delle attività di codifica e delle commenti ausiliarie necessari per il processo di verifica.
 		In particolare i suoi compiti sono:
 		\begin{itemize}
 			\item Implementare in modo rigoroso le soluzioni descritte dal \textit{progettista};
@@ -590,7 +592,7 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 \begin{description}
 	\item[nome] ogni task e sottotask dovrà avere un nome univoco per poter essere meglio tracciato;
 	\item[descrizione] è possibile allegare una descrizione, dei file e dei riferimenti che non necessitino di essere tracciati nel \gloss{repository};
-	\item[persona assegnata] ogni task può avere al massimo una persona assegnata, secondo il principio \gloss{DRI}; % DRY? <<<<<
+	\item[persona assegnata] ogni task può avere al massimo una persona assegnata, secondo il principio \gloss{DRI}; 
 	\item[data di completamento prevista]
 	\item[data di inizio prevista] (da InstaGantt)
 	\item[sottotask] qualora il task non possa essere assegnato esclusivamente ad una persona ma richieda una collaborazione, si spezza il lavoro in frammenti più contenuti, chiamati sottotask. Questi sottotask possono avere a loro volta sottotask ulteriori. L'obiettivo di questa suddivisione è raggiungere una corretta \gloss{WBS}, il più possibile quantificabile;
@@ -623,7 +625,7 @@ Attualmente sono state create le seguenti colonne:
 InstaGantt permette di visualizzare i vari task in un asse temporale, producendo così un \gloss{diagramma di Gantt}. 
 Vanno rispettate le seguenti convenzioni:
 \begin{itemize}
-	\item Il nome di ogni task o sottotask deve essere univoco; per alcuni task ripetuti, come ad esempio l'incremento di un certo documento, si inserisce in coda la revisione che lo richiede (ad esempio “Incremento Piano di Qualifica [RP]” significa che il piano di qualifica è stato incrementato a causa della deadline della revisione di progettazione del \TV).
+	\item Il nome di ogni task o sottotask deve essere univoco; per alcuni task ripetuti, come ad esempio l'incremento di un certo documento, si inserisce in coda la revisione che lo richiede (ad esempio "Incremento Piano di Qualifica [RP]" significa che il piano di qualifica è stato incrementato a causa della deadline della revisione di progettazione del \TV).
 	\item Ogni task di livello più basso dev'essere contrassegnato da un tag che sancisce il ruolo che una persona adotta per quel task; i ruoli sono quelli in sezione \ref{sec:ruoli}, identici a quelli definiti in \PdP.
 	\item Ogni task di livello superiore che produce un documento possiede il tag \texttt{Documento}; questo task è assegnato all'utente virtuale \texttt{Hivex Team}.
 	\item I vari cicli di incremento vanno pianificati come task appartenenti allo stesso livello.
