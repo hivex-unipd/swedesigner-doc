@@ -20,15 +20,16 @@
 	\subsection{Scopo del documento}.
 
 	Il presente documento illustra la pianificazione adottata dal gruppo \hx{} finalizzata alla produzione del progetto \proj{}.
-	{\color{blue}\\Come detto da Alberto nelle norme di progetto(e guardando gli altri gruppi) sarebbe da spostare la struttura del documento da uqalche altra parte e piuttosto fare una descrizione puntata dello scopo di questo docuento del tipo:}
+	{\color{blue}\\Credo sia meglio fare una descrizione puntata dello scopo di questo documento e separare la struttura del documento del tipo:
 	\\In particolare, questo documento si appresta a:
 	\begin{itemize}
 		\item analizzare e trattare i rischi;
 		\item preventivare le risorse necessarie;
-		\item pianificare le atticità da svolgere;
+		\item pianificare le attività da svolgere;
 		\item fornire un consuntivo del lavoro svolto.
 	\end{itemize}
-	{\color{blue}fine proposte}
+	\subsection{Struttura del documento}
+	}
 	Esso è suddiviso nelle seguenti sezioni:
 \begin{description}
 	\item[sezione \ref{sec:modello}] Scelta del modello di sviluppo adottato;
@@ -46,19 +47,21 @@
 	\presgloss{}
 	\subsection{Riferimenti}
 		\subsubsection{Normativi}
+		
 		\begin{description}
-			\item \emph{\NdP};
+			\item \NdP;
 			\item[Capitolato d'appalto C6: \proj]\url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6p.pdf};
 			\item[Regolamento del progetto didattico]\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf};
 			\item[Vincoli di organigramma e dettagli tecnico-economici]\url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/PD01b.html}.
 		\end{description}
 		\subsubsection{Informativi} \label{sec:ref}
+		
 		\begin{description}
 			\item[Slides del corso di Ingegneria del Software]\url{http://www.math.unipd.it/~tullio/IS-1/2016/};
 			\item[Ingegneria del Software - Ian Sommerville - Ottava Edizione]
-			\begin{itemize}
+			\begin{description}
 				\item Capitolo 4: Software Processes;
-			\end{itemize}
+			\end{description}
 		\end{description}
 
 	\subsection{Scadenze}
@@ -70,13 +73,12 @@
 			\item[Revisione di Accettazione] 15-05-2017.
 		\end{description}
 
-
+{\color{blue} OK sezione non presente dagli altri la grammatica mi sembra ok ma di quello che cè scritto mi fido\\}
 \section{Modello di sviluppo} \label{sec:modello}
-{\color{blue} ok non c'è su quello degli altri gruppi sta roba. Io l'ho letta ma mi fido e basta di quello che è effettivamente spiegato}
 
 	La scelta di un modello di sviluppo è cruciale per la corretta pianificazione delle attività. Da essa infatti si deriva tutta la struttura principale con cui saranno pianificati milestone e task.
 
-	Il progetto {\proj}, come affrontato nei documenti {\SdF} e {\PdQ}, presenta numerosi punti critici, analizzati nella sezione {\ref{sec:analisi}}, in particolare nella sezione {\ref{sec:tec}}, in cui sono analizzati i rischi tecnologici. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software \gloss{CASE} e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
+	Il progetto {\proj}, come affrontato nei documenti \emph{Studio di fattibilità} e \emph{Piano di Qualifica}, presenta numerosi punti critici, analizzati nella sezione {\ref{sec:analisi}}, in particolare nella sezione {\ref{sec:tec}}, in cui sono analizzati i rischi tecnologici. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software \gloss{CASE} e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
 
 	Un progetto dedito all'esplorazione va supportato con un adeguato modello di sviluppo; esso deve avere i seguenti requisiti:
 
@@ -170,42 +172,44 @@ In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostan
 			
 			Le quattro operazioni ripetute all'interno della spirale sono:
 \begin{itemize}
-\item Identificazione degli obiettivi
-\item Valutazione del rischio
-\item Sviluppo e validazione
-\item Pianificazione (della fase successiva)
+\item Identificazione degli obiettivi;
+\item Valutazione del rischio;
+\item Sviluppo e validazione;
+\item Pianificazione (della fase successiva).
 \end{itemize}			 
 
 L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il \gloss{team}, il processo di sviluppo e le risorse.
 
 
 \newpage \section{Analisi dei rischi} \label{sec:analisi}
-{\color{blue} OK perdonatemi perché rompo le scatole pure io alcune volte...ma preferiscono fare un misto tra tipo leaf e thefellowship per le parole di alcune frasi...ah e penso che metterò i due punti agli elenchi}
-La seguente sezione elenca e descrive i possibili rischi che possono andare ad inficiare sul lavoro del gruppo.
-La gestione dei rischi è divisa in cinque sottofasi:
+{\color{blue} OK perdonatemi perché rompo le scatole pure io alcune volte...ma preferiscono fare un misto tra tipo leaf e thefellowship per le parole di alcune frasi...segno in blu le robe nuove e in rosso quelle tolte\\}
+{\color{blue}La seguente sezione elenca e descrive i possibili rischi che possono andare ad inficiare sul lavoro del gruppo.
+La gestione dei rischi è divisa in cinque sottofasi:\\}
+{\color{red}In questa sezione del documento vengono elencati e descritti tutti i possibili rischi che potrebbero colpire il gruppo \hx{} nella realizzazione del prodotto \proj. Per gestire tali rischi, è stata attuata la seguente procedura che prevede:}
 \begin{description}
-	\item[Identificazione dei rischi]: individuare i rischi potenziali che si possono presentare durante lo sviluppo del progetto e capirne le cause. Si possono identificare tre diverse tipologie di rischio:
-	\begin{description}
+	\item[Identificazione dei rischi] {\color{blue}individuare i rischi potenziali che si possono presentare durante lo sviluppo del progetto e capirne le cause. Si possono identificare tre diverse tipologie di rischio:}{\color{red}trovare i rischi potenziali che si possono presentare durante l'intero sviluppo del progetto e studiarne la natura. Essi possono essere di tre tipologie:}
+	{\color{blue} itemize e due punti qua sotto per un pò di roba}
+	\begin{itemize}
 		\item[Progetto]: relativi a pianificazione, strumenti e risorse;
 		\item[Prodotto]: relativi a conformità e aspettative del committente;
 		\item[Business]: relativi a costi e concorrenza.
-	\end{description}
-	\item[Analisi dei rischi] per ogni rischio si deve stimare le:
-	\begin{description}
+	\end{itemize}
+	\item[Analisi dei rischi]{\color{blue} per ogni rischio si deve stimare le:}{\color{red} studiare per ogni rischio le:}
+	\begin{itemize}
 		\item[Probabilità di occorrenza];
-		\item[Conseguenze]: determinarne l'impatto sul progetto per comprenderne le criticità.
-	\end{description}
-	\item[Pianificazione di controllo]: definire metodi di controllo per i rischi, in modo da poterli evitare tramite:
-	\begin{description}
+		\item[Conseguenze]:{\color{blue} determinarne l'impatto sul progetto per comprenderne le criticità.}{\color{red} comprendere che peso hanno sul progetto per comprenderne le criticità.}
+	\end{itemize}
+	\item[Pianificazione di controllo e mitigazione]{\color{blue}definire metodi di controllo per i rischi, in modo da poterli evitare tramite:} {\color{red}istituire metodi di controllo per i rischi, così da poterli evitare facendo:}
+	\begin{itemize}
 		\item[Verifica costante del livello di rischio];
 		\item[Riconoscimento e trattamento].
-	\end{description}
-	\item[Mitigazione]: minimizzare i danni nel caso si fossero verificati tramite:
-	\begin{description}
-		\item[Piano di contingenza]
-	\end{description}
-	 
-	\item[Attuazione nel periodo]: viene progressivamente descritto se il rischio si è verificato e in tal caso, in che modo il gruppo ha reagito e cosa ha comportato.
+	\end{itemize}
+	{\color{blue}\item[Mitigazione] minimizzare i danni nel caso si fossero verificati tramite:
+	\begin{itemize}
+		\item[Piano di contingenza];
+	\end{itemize}
+	}
+	\item[Attuazione nel periodo] viene progressivamente descritto se il rischio si è verificato e in tal caso, in che modo il gruppo ha reagito e cosa ha comportato.
 \end{description}
 Ciascun rischio viene identificato a:
 \begin{description}
@@ -215,133 +219,152 @@ Ciascun rischio viene identificato a:
 	\item[Livello dei requisiti](sezione \ref{sec:req});
 	\item[Livello di valutazione dei costi](sezione \ref{sec:val}).
 \end{description}
-Ogni rischio è caratterizzato da un elenco di informazioni che comprende:
-\begin{description}
+{\color{blue}Ogni rischio è caratterizzato da un elenco di informazioni che comprende:}{\color{red}
+Per ogni rischio viene fornito un elenco di informazioni, necessario per comprenderne la natura. Esso comprende:}
+\begin{itemize}
 	\item[Nome];
 	\item[Descrizione];
 	\item[Probabilità di occorrenza];
-	\item[Livello di pericolosità];
+	\item[Grado di pericolosità];
 	\item[Riconoscimento];
 	\item[Trattamento];
 	\item[Attuazione nel periodo].
-\end{description}
+\end{itemize}
 	\subsection{Livello tecnologico} \label{sec:tec}
 		\subsubsection{Tecnologie adottate}
 		\begin{description}
-			\item[Descrizione]: le tecnologie adottate per sviluppare il prodotto sono solamente in parte note ai componenti del gruppo e ciò non toglie che vi possano essere delle mancanze;
-			\item[Probabilità di occorrenza]: media;
-			\item[Livello di pericolosità]: alto;
-			\item[Riconoscimento]: il \R{} ha il compito di verificare il grado di conoscenza e preparazione di ciascun componente relativo alle tecnologie adottate;
-			\item[Trattamento]: ciascun componente si impegnerà a documentarsi in maniera autonoma sulle tecnologie adottate;
+			\item[Descrizione] le tecnologie adottate per sviluppare il prodotto sono solamente in parte note ai componenti del gruppo e ciò non toglie che vi possano essere delle mancanze;
+			\item[Probabilità di occorrenza] media;
+			\item[Grado di pericolosità] alto;
+			\item[Riconoscimento] il \Rx{} ha il compito di verificare il grado di conoscenza e preparazione di ciascun componente relativo alle tecnologie adottate;
+			\item[Trattamento] ciascun componente si impegnerà a documentarsi in maniera autonoma sulle tecnologie adottate;
 			\item[Attuazione nel periodo]:
 			 \begin{description}
-				\item[Analisi dei requisiti]: il rischio non si è ancora verificato dato che non sono state usate tali tecnologie in questo periodo di sviluppo.
+				\item[Analisi dei requisiti] il rischio non si è ancora verificato dato che non sono state usate tali tecnologie in questo periodo di sviluppo.
 			\end{description}
 		\end{description}
 		\subsubsection{Rotture Hardware}
 		\begin{description}
-			\item[Descrizione]: la strumentazione hardware e software usata dal gruppo può essere soggetta a rotture e malfunzionamenti durante lo svogimento del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare 				\gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero \gloss{team}, rendendo così più difficile l'avanzamento;
-			\item[Probabilità di occorrenza]: bassa;
-			\item[Livello di pericolosità]: medio;
-			\item[Riconoscimento]: ogni membro del team avrà cura dei propri strumenti hardware verificandone giornalmente il completo funzionamento;
-			{\color{blue} non mi piace la frase scaricare sul server github. Direi piuttosto sincronizzare o caricare più che scaricare. Al massimo se avete altre idee al momento sistemate voi}
-			\item[Trattamento]: prima di qualunque spostamento, è obbligatorio sincronizzare sul \gloss{server} \gloss{GitHub} i file modificati. Se ciò non fosse possibile per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il \gloss{server} che ospita \gloss{PragmaDB}, è previsto un sistema di \gloss{backup} automatico ogni 7 giorni e in caso di malfunzionamenti sarà compito dell’\AM{} riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
+			\item[Descrizione]{\color{blue} la strumentazione hardware e software usata dal gruppo}{\color{red}la strumentazione usata dal gruppo quale computer portatili,} può essere soggetta a rotture e malfunzionamenti durante lo sviluppo del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare 				\gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero \gloss{team}, rendendo così più difficile l'avanzamento;
+			\item[Probabilità di occorrenza] bassa;
+			\item[Grado di pericolosità] medio;
+			\item[Riconoscimento] ogni membro del team avrà cura dei propri strumenti hardware verificandone giornalmente il completo funzionamento;
+			\item[Trattamento] prima di qualunque spostamento, è obbligatorio {\color{blue}sincronizzare}{\color{red}scaricare} sul \gloss{server} \gloss{GitHub} i file modificati. Se ciò non fosse possibile per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il \gloss{server} che ospita \gloss{PragmaDB}, è previsto un sistema di \gloss{backup} automatico ogni 7 giorni e in caso di malfunzionamenti sarà compito dell’\AM{} riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti]: il rischio non si è mai verificato.
+				\item[Analisi dei requisiti] il rischio non si è mai verificato.
 			\end{description}
 		\end{description}
 	\subsection{Livello del personale} \label{sec:per}
 		\subsubsection{Problemi tra componenti del team}
 		\begin{description}
-			\item[Descrizione]: i componenti del gruppo sono alle prime esperienze nello sviluppo di progetti dove il numero di partecipanti è alto. Questo potrebbe portare ad incomprensioni e dissidi tra i membri del gruppo, generando quindi un clima non proficuo;
-			\item[Probabilità di occorrenza]: bassa;
-			\item[Livello di pericolosità]: alto;
-			\item[Riconoscimento]: il \R{} deve monitorare lo stato di collaborazione fra i vari componenti del gruppo durante le varie fasi e capire dove stia eventualmente nascendo un dissidio fra uno o più membri;
-			\item[Trattamento]: il \R{} provvederà, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li faccia collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile;
+			\item[Descrizione] i componenti del gruppo sono alle prime esperienze nello sviluppo di progetti dove il numero di partecipanti è alto. {\color{blue} Questo potrebbe portare ad incomprensioni e dissidi tra i membri del gruppo, generando quindi un clima non proficuo;}{\color{red}Tale fattore potrebbe causare problemi quali incomprensioni tra i membri del gruppo e dissidi, generando quindi un clima non proficuo;}
+			\item[Probabilità di occorrenza] bassa;
+			\item[Grado di pericolosità] alto;
+			\item[Riconoscimento] il \Rx{} deve monitorare lo stato di collaborazione fra i vari componenti del gruppo durante le varie fasi e capire dove stia eventualmente nascendo un dissidio fra uno o più membri;
+			\item[Trattamento] il \Rx{} provvederà, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li faccia collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile;
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti]: il rischio non si è mai verificato.
+				\item[Analisi dei requisiti] il rischio non si è mai verificato.
 			\end{description}
 		\end{description}
 		\subsubsection{Problemi personali dei componenti del team}
 		\begin{description}
-			\item[Descrizione]: ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del \gloss{team} non sia disponibile in certi momenti.
-			\item[Probabilità di occorrenza]: media;
-			\item[Livello di pericolosità]: medio;
-			\item[Riconoscimento]: ognuno è tenuto a comunicare tempestivamente i propri impegni al \R{} in modo da create un calendario sincronizzato e condiviso del gruppo;
-			\item[Trattamento]: ad ogni impegno notificato, il \R{} si prenderà la responsabilità di eseguire una nuova parte di pianificazione del periodo problematico; 
+			\item[Descrizione] ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del \gloss{team} non sia disponibile in certi momenti.
+			\item[Probabilità di occorrenza] media;
+			\item[Grado di pericolosità] medio;
+			\item[Riconoscimento] {\color{blue}ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso del gruppo;}{\color{red}per creare un calendario sincronizzato e condiviso del gruppo, è necessario che vengano notificati al \Rx{} in maniera preventiva e tempestiva gli impegni di ognuno;}
+			\item[Trattamento] ad ogni impegno notificato, il \Rx{} si prenderà la responsabilità di eseguire una nuova parte di pianificazione del periodo problematico; 
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti]: il rischio si è verificato un paio di volte a due membri del gruppo per problemi personali; nonostante ciò, il lavoro è stato portato al termine e non ci sono stati rallentamenti.
+				\item[Analisi dei requisiti]{\color{blue}il rischio si è verificato  a due membri del gruppo che hanno dovuto abbandonare la riunione prima della conclusione per problemi personali;} {\color{red}il rischio si è verificato un paio di volte a due membri del gruppo per problemi personali; nonostante ciò, il lavoro è stato portato al termine e non ci sono stati rallentamenti.}
 			\end{description}
 		\end{description}
 		\subsubsection{Problemi di inesperienza}
 		\begin{description}
-			\item[Descrizione]: l'approccio al metodo di lavoro risulta nuovo e sono richieste capacità di pianificazione e di analisi che il gruppo non possiede a causa dell'inesperienza. Inoltre, alcune conoscenze richieste, necessitano di un po' di tempo per poter essere apprese;
-			\item[Probabilità di occorrenza]: alta;
-			\item[Livello di pericolosità]: alto;
-			\item[Riconoscimento]: quando un componente del gruppo ritiene opportuno utilizzare una nuova tecnologia, deve segnalarlo al \R{} che, una volta approvatone l'utilizzo nel progetto, demanderà al gruppo il compito di documentarsi su come 	impiegarlo al meglio;
-			\item[Trattamento]: ogni membro del gruppo si impegna a studiare il materiale necessario per l'utilizzo di tecnologie e strumenti richiesti durante lo svolgimento del progetto. Nel caso in cui questo non fosse sufficiente, il \R{} dovrà preparare un piano di studi per compensare ogni tipo di lacuna;
+			\item[Descrizione] l'approccio al metodo di lavoro risulta nuovo e sono richieste capacità di pianificazione e di analisi che il gruppo non possiede a causa dell'inesperienza. Inoltre, alcune conoscenze richieste, necessitano di un po' di tempo per poter essere apprese;
+			\item[Probabilità di occorrenza] alta;
+			\item[Grado di pericolosità] alto;
+			\item[Riconoscimento] {\color{blue} È compito del \Rx{} verificare il livello di conoscenza del gruppo riguardo le tecnologie necessarie allo svoglimento del progetto} {\color{red}quando un componente del gruppo ritiene opportuno utilizzare una nuova tecnologia, deve segnalarlo al \Rx{} che, una volta approvatone l'utilizzo nel progetto, demanderà al gruppo il compito di documentarsi su come 	impiegarlo al meglio;}
+			\item[Trattamento]{\color{blue} ogni membro del gruppo ha il compito di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto. Nel caso in cui questo non fosse sufficiente, il \Rx{} dovrà preparare un piano di studi per compensare ogni tipo di lacuna;}
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti]:  il rischio si è verificato soprattutto nella prima fase.
+				\item[Analisi dei requisiti]  il rischio si è verificato soprattutto nella prima fase.
 			\end{description}
 		\end{description}
 	\subsection{Livello organizzativo} \label{sec:org}
 		\subsubsection{Pianificazione Errata}
 		\begin{description}
-			\item[Descrizione]: durante la pianificazione è possibile che, a causa di assunzioni sbagliate, i tempi per l'esecuzione di alcune attività vengano calcolati in modo errato. Ciò potrebbe portare ad avere dei periodi di inattività o di sovraccarico di lavoro del \gloss{team};
-			\item[Probabilità di occorrenza]: media;
-			\item[Livello di pericolosità]: alto;
-			\item[Riconoscimento]: è necessario controllare lo stato delle attività nel programma di \emph{project management} periodicamente, in modo da verificare eventuali ritardi nello sviluppo delle attività; 
-			\item[Trattamento]: si è deciso di prevedere per ogni attività, un periodo maggiore di quanto normalmente richiesto e una fase di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto; 
+			\item[Descrizione] durante la pianificazione è possibile che, a causa di assunzioni sbagliate, i tempi per l'esecuzione di alcune attività vengano calcolati in modo errato. Ciò potrebbe portare ad avere dei periodi di inattività o di sovraccarico di lavoro del \gloss{team};
+			\item[Probabilità di occorrenza] media;
+			\item[Grado di pericolosità] alto;
+			\item[Riconoscimento] è necessario controllare lo stato delle attività nel programma di \emph{project management} periodicamente, in modo da verificare eventuali ritardi nello sviluppo delle attività; 
+			\item[Trattamento] si è deciso di prevedere per ogni attività, un periodo maggiore di quanto normalmente richiesto e una fase di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto;
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti]:  il rischio non si è mai verificato.
+				\item[Analisi dei requisiti]  il rischio non si è mai verificato.
 			\end{description}
 		\end{description}
 	\subsection{Livello dei requisiti} \label{sec:req}
 		\subsubsection{Incomprensioni e scelte non congrue}
 		\begin{description}
-			\item[Descrizione]: durante la fase di analisi del capitolato, è possibile che il problema e i suoi requisiti non vengano capiti in toto, fraintesi o tralasciati dagli \emph{Analisti}. Questo può provocare delle divergenze tra le aspettative del proponente e la visione del gruppo sul prodotto;
-			\item[Probabilità di occorrenza]: media;
-			\item[Livello di pericolosità]: alto;
-			\item[Riconoscimento]: si ritiene un'ottima strategia di controllo, l'incontro con il proponente stesso per poter discutere dei requisiti identificati, in modo da assicurare la totale concordanza sulle necessità del prodotto;
-			\item[Trattamento]: sarà necessario effettuare degli incontri con il proponente in modo da poter definire con chiarezza ogni requisito necessario al corretto sviluppo del progetto. Inoltre, sarà importante correggere tempestivamente ogni errore e imprecisione che il committente individuerà alle revisioni. 
+			\item[Descrizione] durante la fase di analisi del capitolato, è possibile che il problema e i suoi requisiti non vengano capiti in toto, fraintesi o tralasciati dagli \emph{Analisti}. Questo può provocare delle divergenze tra le aspettative del proponente e la visione del gruppo sul prodotto;
+			\item[Probabilità di occorrenza] media;
+			\item[Grado di pericolosità] alto;
+			\item[Riconoscimento] si ritiene un'ottima strategia di controllo, l'incontro con il proponente stesso per poter discutere dei requisiti identificati, in modo da assicurare la totale concordanza sulle necessità del prodotto;
+			\item[Trattamento] sarà necessario effettuare degli incontri con il proponente in modo da poter definire con chiarezza ogni requisito necessario al corretto sviluppo del progetto. Inoltre, sarà importante correggere tempestivamente ogni errore e imprecisione che il committente individuerà alle revisioni. 
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti]:  il rischio si è verificato durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato.
+				\item[Analisi dei requisiti]  il rischio si è verificato durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato.
 			\end{description}
 		\end{description}
 	\subsection{Livello della valutazione dei costi} \label{sec:val}
 		\subsubsection{Errore nelle previsioni}
 		\begin{description}
-			\item[Descrizione]: è possibile che i tempi delle attività pianificate per lo svolgimento del progetto siano sovrastimate o sottostimate. Un valutazione errata di queste, può comportare una variazione sul costo preventivo presentato; 
-			\item[Probabilità di occorrenza]: media;
-			\item[Livello di pericolosità]: medio;
-			\item[Riconoscimento]: quando un'attività occupa più tempo di quello previsto significa che è stata sottostimata. Viceversa, quando invece ne occupa considerevolmente meno, significa che è stata sovrastimata. É necessario quindi che il \R{} monitori con grande attenzione il programma di \emph{project management} e che faccia tempestive modiche alla pianificazione e al rendiconto dei costi; 
-			\item[Trattamento]: è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli; 
+			\item[Descrizione] è possibile che i tempi delle attività pianificate per lo svolgimento del progetto siano sovrastimate o sottostimate. Un valutazione errata di queste, può comportare una variazione sul costo preventivo presentato; 
+			\item[Probabilità di occorrenza] media;
+			\item[Grado di pericolosità] medio;
+			\item[Riconoscimento] quando un'attività occupa più tempo di quello previsto significa che è stata sottostimata. Viceversa, quando invece ne occupa considerevolmente meno, significa che è stata sovrastimata. É necessario quindi che il \Rx{} monitori con grande attenzione il programma di \emph{project management} e che faccia tempestive modiche alla pianificazione e al rendiconto dei costi; 
+			\item[Trattamento] è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli; 
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti]:  il rischio non si è mai verificato.
+				\item[Analisi dei requisiti]  il rischio non si è mai verificato.
 			\end{description}
 		\end{description}
-		{\color{blue} fine verifica per ora}
 \section{Pianificazione delle Attività} \label{sec:pianificazione}
 Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha deciso di suddividere il progetto nelle seguenti fasi:
 \begin{description}
-	\item[\AR]:(sezione \ref{sec:AR});
-	\item[\ARI]:(sezione \ref{sec:ARI});
-	\item[\PA]:(sezione \ref{sec:PA});
-	\item[\PDC]:(sezione \ref{sec:PDC});
-	\item[\VV]:(sezione \ref{sec:VV}).
+	\item[\AR](sezione \ref{sec:AR});
+	\item[\ARI](sezione \ref{sec:ARI});
+	\item[\PA](sezione \ref{sec:PA});
+	\item[\PDC](sezione \ref{sec:PDC});
+	\item[\VV](sezione \ref{sec:VV}).
 \end{description}
+
 In ognuna di queste fasi, vengono svolte attività di sviluppo del progetto che sono descritte più approfonditamente nel documento corrente.
+
 Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \gloss{diagrammi di Gantt} di ognuna: ogni diagramma presenta delle \gloss{milestone} stabilite e le varie suddivisioni dei periodi in sotto-attività.
 
+I diagrammi presentano una visualizzazione ridotta e a volte su più pagine per esigenze tipografiche. Qualora non sia chiara la dipendenza tra più task, essa sarà specificata testualmente.
 
-{\includegraphics[width=15cm]{img/ganttweeks.jpg}\par}
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttweeks1.png}}
+\label{tab:genweeks}
+\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 1)}
+
+Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme di Progetto} e \emph{Redazione Studio di Fattibilità} non esiste (vedi prossimi diagrammi in giorni).
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttweeks2.png}}
+\label{tab:genweeks}
+\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 2)}
+\end{figure}
+
+
 
 
 \subsection{Suddivisione delle Attività}
@@ -350,25 +373,50 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 	\\ Questo periodo inizia successivamente alla formazione del gruppo e finisce in corrispondenza della consegna dei documenti per la \emph{Revisione dei Requisiti}.
 	Questo perido prevede che vengano stilati i seguenti documenti:
 	\begin{description}
-		\item[Norme di Progetto] in questo documento sono inserite tutte le norme che il \gloss{team} dovrà seguire e rispettare durante l'intero svolgimento delle attività. Tale documento è redatto dall'\AM{}, mentre il \V{} ha il compito di certificare che tali norme siano state rispettate da tutto il gruppo;
+		\item[Norme di Progetto] in questo documento sono inserite tutte le norme che il \gloss{team} dovrà seguire e rispettare durante l'intero svolgimento delle attività. Tale documento è redatto dall'\AMx{}, mentre il \Vx{} ha il compito di certificare che tali norme siano state rispettate da tutto il gruppo;
 		\item[Studio di Fattibilità] in questo documento vengono analizzati i vari capitolati proposti. Per ogni capitolato, è stato analizzato il dominio applicativo/tecnologico e sono state inserite delle considerazioni in merito agli aspetti positivi e negativi;
 		\item[Analisi dei requisiti] in questo documento sono raccolti tutti i requisiti progettuali necessari per comprendere più approfonditamente	il capitolato scelto con lo \emph{Studio di Fattibilità};
 		\item[Piano di Progetto] questo documento è redatto dal \emph{Responsibile di Progetto} che organizza tutte le attività e stima le risorse, costi e tempi necessari per lo svolgimento del progetto;
-		\item[Piano di Qualifica] questo documento è redatto dal \V{} che individua tutte le strategie di verifica e validazione che il \gloss{team} deve adottare per il progetto per ottenere e consegnare un prodotto di qualità;
+		\item[Piano di Qualifica] questo documento è redatto dal \Vx{} che individua tutte le strategie di verifica e validazione che il \gloss{team} deve adottare per il progetto per ottenere e consegnare un prodotto di qualità;
 		\item[Glossario] questo documento viene steso da tutti i redattori in parallelo alla stesura degli altri documenti; esso contiene la spiegazione di alcuni termini presenti nei vari documenti al fine di chiarire il significato del termine stesso;
 		\item[Lettera di presentazione] questo documento viene presentato al committente al fine di mostrare l'interesse del gruppo di partecipare alla gara d'appalto.
 	\end{description}
 	
 	
-	{\includegraphics[width=16cm]{img/ganttan.jpg}\par}
-		
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttan1.png}}
+\label{img:genweeks1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 1)}
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttan2.png}}
+\label{tab:genweeks2}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 2)}
+
+Note:
+\begin{itemize}
+\item l'attività \emph{Redazione Analisi dei Requisiti} ha una dipendenza verso l'attività \gloss{PragmaDB} appartenente all'attività \emph{Database tracciamento requisiti};
+\item le attività \emph{Redazione Piano di Progetto}, \emph{Redazione Piano di Qualifica} e \emph{Redazione Analisi dei Requisiti} hanno una dipendenza verso l'attività \emph{Redazione Studio di Fattibilità}.
+\end{itemize} 
+\end{figure}
 		
 	\subsubsection{\ARI} \label{sec:ARI}
 	\textbf{Periodo}: dal 24-01-2017 al 03-02-2017.
 	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio della \PA. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\AR), con le correzioni suggerite durante la \emph{Revisione dei Requisiti}.
 
 
-	{\includegraphics[width=15cm]{img/ganttari.png}\par}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttari.png}}
+\label{tab:genweeks}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \ARI, in giorni}
+\end{figure}
 
 	
 	\subsubsection{\PA} \label{sec:PA}
@@ -379,7 +427,26 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 		\item[Specifica Tecnica] in questa attività viene stilato questo documento che descrive le scelte progettuali ad alto livello che il prodotto dovrà rispettare.
 	\end{description}
 	
-	{\includegraphics[width=15cm]{img/ganttpa.png}\par}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpa1.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 1)}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpa2.png}}
+\label{tab:ganttpa2}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 2)}
+
+Note:
+\begin{itemize}
+\item Per raggiungere il completamento della fase successiva in tempo per la \emph{Revisione di Qualifica} si prevede di usare parte del tempo prima della scadenza del 06-03-2017 per la stesura della \emph{Definizione di Prodotto}.
+\end{itemize} 
+\end{figure}
+
 
 	\subsubsection{\PDC} \label{sec:PDC}
 	\textbf{Periodo}: dal 06-03-2017 al 11-04-2017.	
@@ -391,7 +458,20 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 		\item[Manuale Utente] in questa attività si crea il documento destinato all'utente finale, che ha lo scopo di fornire le linee guida per il corretto utilizzo del software.
 	\end{description}
 	
-	{\includegraphics[width=15cm]{img/ganttpdc.png}\par}
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpdc1.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 1)}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttpdc2.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 2)}
+\end{figure}
+
 
 	\subsubsection{Verifica e Validazione} \label{sec:VV}
 
@@ -403,8 +483,14 @@ Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \g
 		\item[Incremento e Verifica dei Documenti] in questa attività verranno incrementati verificati tutti i documenti, basandosi sui risultati della \emph{Revisione di Qualifica}.
 	\end{description}		
 	
-	{\includegraphics[width=15cm]{img/ganttva.png}\par}
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttva.png}}
+\label{tab:ganttpa1}
+\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \VV, in giorni}
+\end{figure}
 
+\pagebreak
 	
 \section{Suddivisione delle ore lavorative e preventivo} \label{sec:preventivo}
 Di seguito è riportata la pianificazione di dettaglio delle attività, suddivisa nei periodi descritti precedentemente. Per ogni periodo, sono presenti una tabella e dei grafi che descrivono e rappresentano i ruoli assunti da ciascun componente, il relativo quantitativo di ore impiegato e la rispettiva retribuzione.
@@ -498,7 +584,7 @@ Di seguito si riporta il costo della #1.
 \label{fig:ar2}
 \end{figure}
 	
-
+\pagebreak
 \subsubsection{Costo \AR}
 	
 \introcosto{\AR}
@@ -607,6 +693,8 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \end{figure}
 
+\pagebreak
+
 \subsubsection{Costo \ARI}
 
 \introcosto{\ARI}
@@ -633,9 +721,9 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
     \PB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
     \LB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
     \GG & 0 & 0 & 0 & 0 & 0 & 30 & 30 \\ \hline
-    \MM & 0 & 0 & 125 & 0 & 0 & 0 & 0 \\ \hline
-    \LS & 0 & 0 & 200 & 0 & 0 & 0 & 125 \\ \hline
-    \AZ & 0 & 0 & 325 & 0 & 0 & 30 & 200 \\ \hline
+    \MM & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LS & 0 & 0 & 125 & 0 & 0 & 0 & 125 \\ \hline
+    \AZ & 0 & 0 & 200 & 0 & 0 & 30 & 200 \\ \hline
     \rowcolor[gray]{.9}
 
     Totale euro/ruolo & 0 & 0 & 325 & 0 & 0 & 30 & 355 \\ \hline
@@ -673,7 +761,7 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
     \GG & 3 & 0 & 0 & 35 & 0 & 1 & 39 \\ \hline
     \MM & 0 & 0 & 0 & 45 & 0 & 4 & 49 \\ \hline
     \LS & 2 & 0 & 0 & 40 & 0 & 6 & 48 \\ \hline
-    \AZ & 0 & 3 & 0 & 36 & 0 & 4 & 40 \\ \hline
+    \AZ & 0 & 0 & 0 & 36 & 0 & 4 & 40 \\ \hline
     \rowcolor[gray]{.9}
 
     Totale ore/ruolo & 5 & 3 & 0 & 224 & 0 & 22 & 254 \\ \hline
@@ -700,7 +788,7 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \end{figure}
 
-
+\pagebreak
 \subsubsection{Costo \PA}
 \introcosto{\PA}
 Questa fase mira a consolidare la creazione di una solida base architetturale per \proj.
@@ -724,9 +812,9 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
     \PB & 0 & 0 & 0 & 660 & 0 & 90 & 750 \\ \hline
     \LB & 0 & 60 & 0 & 836 & 0 & 15 & 911 \\ \hline
     \GG & 90 & 0 & 0 & 770 & 0 & 15 & 875 \\ \hline
-    \MM & 0 & 0 & 0 & 0 & 990 & 60 & 1050 \\ \hline
-    \LS & 60 & 0 & 0 & 0 & 880 & 90 & 1030 \\ \hline
-    \AZ & 0 & 0 & 0 & 0 & 792 & 60 & 852 \\ \hline
+    \MM & 0 & 0 & 0 & 990 & 0 & 60 & 1050 \\ \hline
+    \LS & 60 & 0 & 0 & 880 & 0 & 90 & 1030 \\ \hline
+    \AZ & 0 & 0 & 0 & 792 & 0 & 60 & 852 \\ \hline
     \rowcolor[gray]{.9}
 
     Totale euro/ruolo & 150 & 60 & 0 & 4928 & 0 & 330 & 5468 \\ \hline
@@ -794,7 +882,7 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 
 \end{figure}
 
-
+\pagebreak
 \subsubsection{Costo \PDC}
 \introcosto{\PDC}
 Questa fase mira a completare la \emph{Definizione di Prodotto} tramite incrementi e completare l'attività di codifica.
@@ -821,7 +909,7 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
     \LB & 0 & 100 & 0 & 176 & 450 & 195 & 921 \\ \hline
     \GG & 0 & 100 & 0 & 220 & 450 & 45 & 815 \\ \hline
     \MM & 60 & 0 & 0 & 0 & 450 & 120 & 630 \\ \hline
-    \LS & 0 & 60 & 0 & 220 & 450 & 150 & 980 \\ \hline
+    \LS & 0 & 60 & 0 & 220 & 450 & 135 & 865 \\ \hline
     \AZ & 60 & 100 & 0 & 220 & 450 & 150 & 980 \\ \hline
     \rowcolor[gray]{.9}
 
@@ -887,6 +975,9 @@ Gli sforzi maggiori si evidenziano nel ruolo di:
 \label{fig:vv2}
 
 \end{figure}
+
+
+\pagebreak
 
 \subsubsection{Costo \VV}
 \introcosto{\VV}
@@ -1056,7 +1147,8 @@ Questo quadro riassuntivo include il periodo di {\AR}, il quale \textbf{non è a
 
 
 
-\subsection{Ore rendicontate del progetto}
+\subsection{Ore rendicontate del progetto} 
+\label{sec:orerend}
 %stessa cosa della sezione precedente
 Di seguito si riporta la divisione oraria pianificata generale delle sole ore rendicontate.
 
@@ -1087,7 +1179,7 @@ Il quantitativo rendicontato a preventivo a persona varia tra le \textbf{103} e 
     \AZ & 2 & 5 & 8 & 46 & 30 & 17 & 108 \\ \hline
     \rowcolor[gray]{.9}
 
-    Totale ore/ruolo & 35 & 93 & 76 & 280 & 180 & 164 & 828 \\ \hline
+    Totale ore/ruolo & 15 & 29 & 15 & 280 & 180 & 115 & 634 \\ \hline
     
   \end{tabular}
   }
@@ -1140,80 +1232,185 @@ Il costo totale del progetto {\proj} preventivato è arrotondato a \textbf{12000
 
   \caption{Costo totale per il progetto {\proj} per ruolo e per persona, valori in euro (\euro).}
 \end{figure}
-\section{Consuntivo di periodo} \label{sec:consuntivo}
-%da fare
 
+\pagebreak
+\section{Consuntivo di periodo} \label{sec:consuntivo}
+In questa sezione sono indicate le spese affrontate a termine di ogni \gloss{milestone} interna. Queste andranno a sommarsi per infine stilare il consuntivo finale.
+
+
+
+\newcommand{\introconsuntivo}[1]
+{
+Di seguito si riporta la divisione oraria effettivamente adottata nella fase di #1.
+
+Successivamente sono evidenziate graficamente la divisione delle ore per persona e per ruolo. 
+
+È inoltre riportata la variazione riportata rispetto alla \gloss{baseline} inizialmente stilata e infine l'eventuale variazione di costo rispetto al preventivo.
+}
+
+\subsection{Consuntivo \AR}
+\introconsuntivo{\AR}
+
+Si ricorda che questo costo viene fornito a scopo informativo e rappresenta l'investimento effettuato da {\hx} prima dell'aggiudicazione dell'appalto e perciò tale periodo \textbf{non è a carico del cliente}. 
+
+\subsubsection{Variazioni nella pianificazione}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttarc1.png}}
+\label{tab:cgen1}
+
+  \caption{Variazione rispetto alla pianificazione per fase di \AR, diagramma di Gantt (parte 1)}
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/ganttarc2.png}}
+\label{tab:cgen1}
+
+  \caption{Variazione rispetto alla pianificazione per fase di \AR, diagramma di Gantt (parte 2)}
+\end{figure}
+
+Si è verificato un ritardo nella stesura del presente documento a causa di una influenza di un membro del gruppo in data 30-12-2016.
+
+Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla \gloss{baseline}; tuttavia il task, non presentando dipendenze, non ha portato ritardi se non all'attività di verifica relativa al documento stesso.
+
+\subsubsection{Variazione nei costi}
+\begin{itemize}
+
+\item Non sono state rilevate variazioni nei costi.
+
+\item Non si riportano i grafici di variazione oraria.
+
+\item Si riportano le tabelle di divisione oraria effettive e i relativi costi.
+
+\end{itemize}
+% i colori danno problemi di visualizzazione alle linee
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 7 & 3 & 14 & 0 & 0 & 7 & 31 \\ \hline
+    \LB & 12 & 11 & 6 & 0 & 0 & 6 & 35 \\ \hline
+    \GG & 0 & 24 & 8 & 0 & 0 & 3 & 35 \\ \hline
+    \MM & 0 & 20 & 8 & 0 & 0 & 4 & 32\\ \hline
+    \LS & 0 & 2 & 12 & 0 & 0 & 17 & 31\\ \hline
+    \AZ & 1 & 4 & 13 & 0 & 0 & 12 & 30 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 20 & 64 & 61 & 0 & 0 & 49 & 194 \\ \hline
+    
+  \end{tabular}
+}
+\label{tab:car}
+\caption{Tabella ore effettive {\AR} per ruolo e per persona.}
+
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 210 & 60 & 350 & 0 & 0 & 105 & 725 \\ \hline
+    \LB & 360 & 220 & 150 & 0 & 0 & 90 & 820 \\ \hline
+    \GG & 0 & 480 & 200 & 0 & 0 & 45 & 725 \\ \hline
+    \MM & 0 & 400 & 200 & 0 & 0 & 60 & 660 \\ \hline
+    \LS & 0 & 40 & 300 & 0 & 0 & 255 & 595 \\ \hline
+    \AZ & 30 & 80 & 325 & 0 & 0 & 180 & 615 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 600 & 1280 & 1525 & 0 & 0 & 735 & 4140 \\ \hline
+  \end{tabular}
+  
+}
+\label{tab:car}
+\caption{Tabella costo effettivo {\AR} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
+\subsubsection{Preventivo a finire}
+Siccome non sono state rilevate variazioni nei costi, il preventivo a finire (a carico del cliente) è pari a quelle riportate nella sezione \ref{sec:orerend} \nameref{sec:orerend}.
+
+\pagebreak
 \section{Organigramma}	\label{sec:organigramma}
 \subsection{Redazione}
-\begin{table}[htbp]
-	\begin{center}
-		\setlength{\extrarowheight}{\jot}
-		\begin{tabular}{|c|c|p{5cm}|}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+  \begin{tabular}{ | c | c | c |}
 			\hline
-			\textbf{Nominativo} & \textbf{Data di redazione} & \textbf{Firma} \\[1ex]
+			\textbf{Nominativo} & \textbf{Data di redazione} & \textbf{Firma} \\
 			\hline
-			\LB & 25-12-2016 %& \myincludegraphics{path firma}
-			 \\[1ex]
+			\LB & 25-12-2016 &   \myincludegraphics{img/firmalb.jpg}\\
 			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Redazione}
-\end{table}
+  \end{tabular}
+}
+\caption{Redazione}
+\end{figure}
 
 \subsection{Approvazione}
-\begin{table}[htbp]
-	\begin{center}
-		\setlength{\extrarowheight}{\jot}
-		\begin{tabular}{|c|c|p{5cm}|}
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+  \begin{tabular}{ | c | c | c |}
 			\hline
-			\textbf{Nominativo}     & \textbf{Data di approvazione} & \textbf{Firma}  \\[1ex]
+			\textbf{Nominativo}     & \textbf{Data di approvazione} & \textbf{Firma}  \\
 			\hline
-			\LB		& 24-01-2017					%& \myincludegraphics{path firma}			
-			\\[1ex]
+			\LB		& 24-01-2017	&  \myincludegraphics{img/firmalb.jpg}	\\
 			\hline
-			\TV	&								&			\\[1ex]
+			\TV	          &		           &			\\
 			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Approvazione}
-\end{table}
+\end{tabular}
+}
+\caption{Approvazione}
+\end{figure}
 
 \subsection{Accettazione dei componenti}
-\begin{table}[htbp]
-	\begin{center}
-		\setlength{\extrarowheight}{\jot}
-		\begin{tabular}{|c|p{3.5cm}|p{6cm}|}
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+  \begin{tabular}{ | c | c | c |}
 			\hline
-			\textbf{Nominativo} & \textbf{Data di accettazione} & \textbf{Firma} \\[1ex]
+			\textbf{Nominativo} & \textbf{Data} & \textbf{Firma} \\
 			\hline
-			\AZ	&	24-01-2017	%& \myincludegraphics{path firma}	
-			\\[1ex]
+			\AZ		&	24-01-2017	&  \myincludegraphics{img/firmaaz.jpg}	\\
 			\hline
-			\GG		&	24-01-2017	%& \myincludegraphics{path firma}		
-			\\[1ex]
+			\GG		&	24-01-2017   &  \myincludegraphics[scale=0.75]{img/firmagg.png}	\\
 			\hline
-			\LB		&	24-01-2017	%& \myincludegraphics{path firma}		
-			\\[1ex]
+			\LB		&	24-01-2017	&  \myincludegraphics{img/firmalb.jpg}		\\
 			\hline
-			\LS		&	24-01-2017	%& \myincludegraphics{path firma}		
-			\\[1ex]
+			\LS		&	24-01-2017	&  \myincludegraphics{img/firmals.jpg}		\\
 			\hline
-			\MM		&	24-01-2017	%& \myincludegraphics{path firma}		
-			\\[1ex]
+			\MM		&	24-01-2017	&  \myincludegraphics{img/firmamm.png}		\\
 			\hline
-			\PB		&	24-01-2017	%& \myincludegraphics{path firma}		
-			\\[1ex]
+			\PB		&	24-01-2017	&  \myincludegraphics{img/firmapb.png}		\\
 			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Accettazione}
-\end{table}
+\end{tabular}
+}
+\caption{Accettazione}
+\end{figure}
 
 \subsection{Componenti}
-\begin{table}[H]
-	\begin{center}
-		\setlength{\extrarowheight}{\jot}
-		\begin{tabular}{|c|c|p{6cm}|p{4.3cm}|}
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+  \begin{tabular}{ | c | c | c | c |}
 			\hline
 			\textbf{Nominativo} & \textbf{Matricola} & \raggedright \textbf{Indirizzo di posta elettronica} & \textbf{Ruoli} \\[1ex]
 			\hline
@@ -1229,9 +1426,9 @@ Il costo totale del progetto {\proj} preventivato è arrotondato a \textbf{12000
 			\hline
 			\PB		& 1097928	& \href{mailto:paolo.baracco.1@studenti.unipd.it}{paolo.baracco.1@studenti.unipd.it} 	&  \AN, \R, \V 	\\[1ex]
 			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Componenti}
-\end{table}
+\end{tabular}
+}
+\caption{Componenti}
+\end{figure}
 
 \end{document}
