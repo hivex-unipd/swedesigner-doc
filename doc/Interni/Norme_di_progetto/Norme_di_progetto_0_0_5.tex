@@ -350,7 +350,7 @@ Ogni elemento della configurazione (quindi la directory per il codice e il singo
 \subsubsection{Controllo della configurazione} I cambiamenti \emph{sostanziali} nella configurazione del software vanno controllati e registrati; essi possono nascere dal piano di progetto o dall'iniziativa di un membro.
 \paragraph{Cambiamenti pianificati} I cambiamenti pianificati nascono dal piano di progetto. In questo caso il cambiamento è già controllato quindi basta registrarlo aggiornando il numero di versionamento dell'elemento che è cambiato nella configurazione.
 \paragraph{Cambiamenti non pianificati} I cambiamenti \emph{non} pianificati nascono dall'iniziativa di un membro. Un cambiamento di questo tipo va proposto agli altri membri del gruppo sull'apposito canale \gloss{Slack}; nel caso la maggioranza sia d'accordo e riesca a fornire una motivazione del cambiamento, il responsabile di progetto incarica un amministratore di implementarlo e motivarlo nella \gloss{documentazione}.
-\paragraph{Branching} Nel caso si debba cambiare un elemento della configurazione da cui dipendono altri elementi --- modificando quindi gli elementi dipendenti --- il membro del gruppo che è stato incaricato di tale cambiamento deve creare un \gloss{branch} nel repository. Un branch (ramo) sottosta alle seguenti regole:
+\paragraph{Branching} Nel caso si debba cambiare un elemento della configurazione da cui dipendono altri elementi --- modificando quindi gli elementi dipendenti --- il membro del gruppo che è stato incaricato di tale cambiamento deve creare un \gloss{branch} nel repository. Un \gloss{branch} (ramo) sottosta alle seguenti regole:
 \begin{itemize}
 	\item Il ramo \texttt{master} contiene solo elementi della configurazione approvati dal responsabile di progetto.
 	\item Il ramo \texttt{doc}, figlio di \texttt{master}, contiene documentazione non ancora approvata dal responsabile di progetto.
@@ -360,7 +360,7 @@ Ogni elemento della configurazione (quindi la directory per il codice e il singo
 \end{itemize}
 
 \subsubsection{Stato della configurazione}
-Nel ramo \texttt{master} del repository, va pubblicato lo stato attuale della configurazione, cioè va riportato il numero di versione dell'ultima approvazione formale dell'\emph{intero} software, a partire dalla versione zero (non ancora approvata).
+Nel ramo \texttt{master} del repository va pubblicato lo stato attuale della configurazione, cioè va riportato il numero di versione dell'ultima approvazione formale dell'\emph{intero} software, a partire dalla versione zero (non ancora approvata).
 
 
 
@@ -450,12 +450,12 @@ Inizialmente è stata rivolta l'attenzione a \gloss{Trello}, accoppiato ad un se
 \end{itemize}
 Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \gloss{InstaGantt} (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
 \begin{itemize}
-	\item creazione di \gloss{task};
+	\item creazione di task (compiti);
 	\item organizzazione dei task;
 	\item disegno di diagrammi di pianificazione.
 \end{itemize}
 \subsubsection{Riunioni}
-			Spetta al responsabile di progetto convocare le riunioni quando lo ritiene necessario. È possibile da una qualsiasi persona del team fare richiesta di una riunione al responsabile di progetto. Quest'ultimo poi ha il compito di decidere se è utile svolgerla.  Per informare i membri della riunione si utilizza la piattaforma di comunicazione \textit{Slack},proponendo una data, un luogo, l'ordine del giorno e chi ha chiesto la riunione. I membri del gruppo devono quindi rispondere tempestivamente per poter confermare la presenza.
+			Spetta al responsabile di progetto convocare le riunioni quando lo ritiene necessario. È possibile da una qualsiasi persona del team fare richiesta di una riunione al responsabile di progetto. Quest'ultimo poi ha il compito di decidere se è utile svolgerla.  Per informare i membri della riunione si utilizza la piattaforma di comunicazione \gloss{Slack},proponendo una data, un luogo, l'ordine del giorno e chi ha chiesto la riunione. I membri del gruppo devono quindi rispondere tempestivamente per poter confermare la presenza.
 			\paragraph{Riunioni interne}
 				Viene nominato un segretario ad inizio di ogni riunione che ha il compito di scrivere la minuta dell'incontro. A fine riunione deve inoltre redigere un verbale,il quale viene caricato nella repository insieme agli altri documenti per essere disponibile per la lettura ai membri. I partecipanti devono tenere un comportamento adeguato a favore la discussione dell'ordine del giorno.
 			\paragraph{Riunioni esterne}
@@ -556,7 +556,7 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 			\item Studiare a fondo natura e problematiche del prodotto che si andrà a realizzare;
 			\item Classificare requisiti;
 			\item Redigere diagrammi dei casi d'uso
-			\item Produrre una specifica di progetto precisa in ogni sui punto e comprensibile dal \gloss{proponente},dal \gloss{committente} e dai progettisti.
+			\item Produrre una specifica di progetto precisa in ogni sui punto e comprensibile dal proponente, dal committente e dai progettisti.
 			\item Redigere lo studio di fattibilità e l'analisi dei requisiti.
 		\end{itemize}
 		L'analista redige lo studio di fattibilità e l'analisi dei requisiti.
@@ -567,7 +567,7 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 			\item effettuare scelte procedurali volte ad avere un prodotto facilmente espandibile e mantenibile;
 			\item produrre una soluzione comprensibile e soddisfacente per il committente.
 		\end{itemize}
-		Il progettista redige la specifica tecnica, la definizione di prodotto e le sezioni del piano di qualifica riguardanti le \gloss{metriche} delle attività di verifica della programmazione.
+		Il progettista redige la specifica tecnica, la definizione di prodotto e le sezioni del piano di qualifica riguardanti le metriche delle attività di verifica della programmazione.
 		\paragraph{Programmatore}
 		Il programmatore è responsabile delle attività di codifica e delle commenti ausiliarie necessari per il processo di verifica.
 		In particolare i suoi compiti sono:
@@ -588,7 +588,7 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 
 
 \subsubsection{Pianificazione}
-\paragraph{Task} Per ogni task bisogna indicare:
+\paragraph{Task} Per ogni task (cioè compito) bisogna indicare:
 \begin{description}
 	\item[nome] ogni task e sottotask dovrà avere un nome univoco per poter essere meglio tracciato;
 	\item[descrizione] è possibile allegare una descrizione, dei file e dei riferimenti che non necessitino di essere tracciati nel \gloss{repository};
