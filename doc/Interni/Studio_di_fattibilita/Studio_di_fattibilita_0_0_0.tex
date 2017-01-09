@@ -11,9 +11,6 @@
 \dest{\TV, \RC}
 \title{Studio di Fattibilità}
 
-\usepackage{hyperref}
-\hypersetup{hidelinks}
-
 \begin{document}
 \maketitle
 \include{diario}
@@ -49,17 +46,17 @@
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C4.pdf};
 			\item \textbf{Capitolato d'Appalto C5:} \emph{Monolith}: an interactive bubble provider
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C5.pdf};
-			\item \textbf{Capitolato d'Appalto C6:} \emph{SWEDesigner}: editor di diagrammi UML con generazione di codice
+			\item \textbf{Capitolato d'Appalto C6:} \emph{SWEDesigner}: editor di diagrammi \gloss{UML} con generazione di codice
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf};
 		\end{itemize}
 \newpage
 	
 \section{Studio di fattibilità del capitolato scelto}
-	\subsection{\emph{SWEDesigner}: editor di diagrammi UML con generazione di codice}
+	\subsection{\emph{SWEDesigner}: editor di diagrammi \gloss{UML} con generazione di codice}
 		\subsubsection{Descrizione}
-		Lo scopo del capitolato è quello di realizzare un'applicazione web composta da almeno due disegnatori
-		ed un coordinatore, che permetta all'utente di costruire diagrammi UML rappresentativi del prodotto da svilupparsi e generi a partire da essi codice 
-		Java o Javascript.
+		Lo scopo del capitolato è quello di realizzare un'\gloss{applicazione web} composta da almeno due disegnatori
+		ed un coordinatore, che permetta all'utente di costruire diagrammi \gloss{UML} rappresentativi del prodotto da svilupparsi e generi a partire da essi codice 
+		\gloss{Java} o \gloss{Javascript}.
 		\\In particolare l'editor dovrebbe concentrarsi su uno specifico dominio applicativo (l'esempio fornito nel capitolato d'appalto è relativo ai software 
 		di giochi da tavolo) per andare a costituire una sorta di framework per la produzione della relativa famiglia di prodotti.
 		\subsubsection{Studio del dominio}
@@ -70,22 +67,22 @@
 			aspetti comuni ad una certa famiglia di prodotti software per rendere più agile e standardizzato il relativo sviluppo.
 			\\Dall'altro esplora la possibilità di generare codice in uno specifico linguaggio di programmazione a partire dalla rappresentazione dell'architettura 
 			software una serie di convenzioni di modellazione.
-			\\In particolare lo scopo profondo del capitolato è quello di analizzare quali diagrammi UML siano i più adatti allo scopo di descrivere l'architettura 
+			\\In particolare lo scopo profondo del capitolato è quello di analizzare quali diagrammi \gloss{UML} siano i più adatti allo scopo di descrivere l'architettura 
 			e le componenti funzionali di un progetto software e come si possa concertare una loro integrazione per arrivare a produrre un eseguibile vero e proprio. 
-			\\Attualmente, infatti, UML non è altro che un grande aggregato di convenzioni di modellazione che coprono, sì, a diversi livelli di raffinamento differenti 
+			\\Attualmente, infatti, \gloss{UML} non è altro che un grande aggregato di convenzioni di modellazione che coprono, sì, a diversi livelli di raffinamento differenti 
 			fasi e aspetti dello sviluppo di prodotti software, ma al contempo risultano 
 			a tal punto eterogenei l'uno rispetto all'altro da non risultare integrabili e componibili. 
 			\\La richiesta è quindi quella di indagare come si potrebbe superare la debolezza intrinseca dell'Unified Modeling Language nella sincronizzazione tra 
 			codice e quanto disegnato nei diagrammi stessi e sperimentare la possibilità di avvicinare le due fasi di progettazione e codifica, esplorando le 
 			interazioni e le eventuali estensioni necessarie a legare fra loro queste due fasi.
 			\paragraph{Dominio tecnologico}
-			Il capitolato richiede che il sistema sia realizzato con tecnologie Web. In particolare la parte server deve essere realizzata in Java con il server 
-			Tomcat o in Javascript con il server Node.Js. La parte client, invece, deve essere eseguibile in un browser HTML5 ed utilizzare fogli di stile CSS per 
-			l'aspetto estetico e JavaScript per la parte attiva.
+			Il capitolato richiede che il sistema sia realizzato con tecnologie Web. In particolare la parte server deve essere realizzata in \gloss{Java} con il server 
+			Tomcat o in \gloss{Javascript} con il server Node.Js. La parte client, invece, deve essere eseguibile in un browser \gloss{HTML5} ed utilizzare fogli di stile CSS per 
+			l'aspetto estetico e \gloss{JavaScript} per la parte attiva.
 		\subsubsection{Aspetti positivi e negativi}
 		Molti sono stati riconosciuti dal gruppo come gli aspetti positivi di tale progetto.
 		\\Prima di tutto le problematiche affrontate dal capitolato hanno suscitato in tutti i membri una forte motivazione, legata alla necessità di confrontarsi 
-		con problemi quali la generazione automatica di codice e il raffinamento dell'UML, ancora vivi nell'ambito informatico.
+		con problemi quali la generazione automatica di codice e il raffinamento dell'\gloss{UML}, ancora vivi nell'ambito informatico.
 		\\In secondo luogo hanno giocato 
 		a favore della scelta la chiarezza e precisione con cui le caratteristiche e i requisiti del progetto sono stati elencati e descritti, oltre che l'indiscutibile 
 		autorevolezza e prestigio dell'azienda proponente. 
@@ -103,7 +100,7 @@
 \section{Studio di fattibilità degli altri capitolati}
 	\subsection{Capitolato C1: \emph{APIM}: An API Market Platform}
 		\subsubsection{Descrizione}
-		Lo scopo di questo capitolato è quello di creare un'applicazione web che rappresenti una sorta di marketplace per la consultazione e 
+		Lo scopo di questo capitolato è quello di creare un'\gloss{applicazione web} che rappresenti una sorta di marketplace per la consultazione e 
 		condivisione di microservizi. Tra le funzionalità che il prodotto software dovrebbe fornire vi sono la possibilità di registrare le API 
 		di un microservizio, consultarle e ritrovare la relativa documentazione e visualizzare i relativi dati tecnici; inoltre è richiesta la 
 		funzionalità di associare ad ogni API diverse chiavi d'uso, monitorare il suo utilizzo, limitare il suo uso da parte di utenti in possesso 
@@ -118,7 +115,7 @@
 			adattivi e flessibili in quanto composti da tanti componenti interdipendenti, ciascuno dei quali offre funzionalità ben delineate.
 			\paragraph{Dominio tecnologico}
 			Per quanto riguarda il set di tecnologie da utilizzarsi, ItalianaSoftware consente al gruppo (ai gruppi) impegnato sul progetto un buon 
-			margine di libertà. Il front end della web application è da svilupparsi con l'ausilio della terna JavaScript, HTML e CSS3 mentre a 
+			margine di libertà. Il front end della web application è da svilupparsi con l'ausilio della terna \gloss{JavaScript}, \gloss{HTML5} e \gloss{CSS3} mentre a 
 			livello di database è garantita la possibilità di scegliere tra una base di dati SQL o NoSQL.\\
 			Inevitabilmente il vincolo principale risiede nel forte suggerimento di utilizzare il linguaggio orientato ai microservizi sviluppato 
 			dall'azienda stessa - Jolie - per la rappresentazione delle interfacce e per la creazione dell'API Gateway.
@@ -140,7 +137,7 @@
 		Lo scopo di questo capitolato è quello di realizzare un applicativo web che permetta una prima accoglienza degli ospiti in visita all'ufficio 
 		dell'azienda zero12. Il progetto dovrebbe comporsi di tre parti ben distinte: un'interfaccia web per permettere all'utente di interagire con 
 		l'utilizzatore del sistema, un'interfaccia per trasmettere informazioni attraverso il canale comunicativo aziendale - Slack - e un sistema che 
-		sfrutti i servizi AWS Lambda per l'interazione con le API dell'assistente virtuale scelto.
+		sfrutti i servizi \gloss{AWS} Lambda per l'interazione con le API dell'assistente virtuale scelto.
 		\subsubsection{Studio del dominio}
 			\paragraph{Dominio applicativo}
 			Il progetto proposto si inserisce all'interno di un quadro di ampio respiro quale la trasformazione digitale dei sistemi aziendali e la 
@@ -152,7 +149,7 @@
 			Fra le tecnologie con cui è richiesto confrontarsi per la realizzazione di tale progetto vi sono:
 			\begin{itemize}
 				\item I servizi offerti dall'infrastruttura degli Amazon Web Services, ed in particolare le innovazioni fornite dalla Lambda expressions 
-				di AWS che consentono di implementare un servizio di elaborazione servless;
+				di \gloss{AWS} che consentono di implementare un servizio di elaborazione servless;
 				\item Database NoSQL come MongoDN o DynamoDB (per la memorizzazione e l'analisi delle informazioni raccolte nel corso delle interazioni con il cliente);
 				\item Linguaggio di programmazione NOdeJS;
 				\item Il sistema di comunicazione aziendale Slack;
@@ -160,7 +157,7 @@
 			\end{itemize}
 		\subsubsection{Aspetti positivi e negativi}
 		Fra i lati positivi del capitolato figurano l'offerta di formazione da parte dell'azienda sulle principali tecnologie e la possibilità di 
-		lavorare con il supporto di un server dedicato configurato tramite i servizi AWS.\\
+		lavorare con il supporto di un server dedicato configurato tramite i servizi \gloss{AWS}.\\
 		Tuttavia si è sottolineato come lo scopo del capitolato consista più nel trovare un modo per concertare e coordinare fra loro diversi sistemi 
 		esistenti più che nell'elaborare qualcosa di effettivamente nuovo nell'ambito applicativo.\\
 		Fra le criticità individuate dai membri del team vi è inoltre la necessità di confrontarsi con un vasto assortimento di tecnologie non ben 
@@ -195,11 +192,11 @@
 			\paragraph{Dominio tecnologico}
 			Nonostante la relativa libertà nell'utilizzo dello stack tecnologico le tecnologie proposte sono:
 			\begin{itemize}
-				\item Amazon WS, come servizio per l'organizzazione di un server entro cui far operare l'applicativo;
+				\item \gloss{AWS}, come servizio per l'organizzazione di un server entro cui far operare l'applicativo;
 				\item Django, come framework in Python per la realizzazione del front-end dell'applicativo;
 				\item PostgreSQL, per la realizzazione del database di appoggio del software;
 				\item Librerie e framework quali Bootstrap e React.js per la creazione di interfacce utente, hammer.js e Yeoman.
-				\item Html, Css e JavaScript per la realizzazione dell'interfaccia utente.
+				\item HTML, CSS e \gloss{JavaScript} per la realizzazione dell'interfaccia utente.
 			\end{itemize}
 		\subsubsection{Aspetti positivi e negativi}
 		\subsubsection{Valutazione finale}
@@ -257,7 +254,7 @@
 			\paragraph{Dominio tecnologico}
 			Le tecnologie da utilizzarsi nel progetto sono le seguenti:
 			\begin{itemize}
-				\item Javascript versione 6 per la versione dimostrativa da mostrare al proponente e il framework finale;
+				\item \gloss{Javascript} versione 6 per la versione dimostrativa da mostrare al proponente e il framework finale;
 				\item Framework quali Angular.js e React.js sono consigliati per la realizzazione del front-end dell'applicazione;
 				\item SCSS per l'interfaccia utente.
 			\end{itemize}
