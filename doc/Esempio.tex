@@ -1,0 +1,38 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{util/hx-macro}
+\title{Esempio d'uso di \proj}
+\author{\LB\\\GG}
+\date{}
+
+\begin{document}
+\maketitle
+
+Riportiamo un esempio d'uso della nostra applicazione --- in prima persona, affinché lo stile sia più scorrevole:
+\begin{enumerate}
+	\item Accedo all'\gloss{applicazione web} e posso subito scegliere se creare un nuovo gioco o importarne uno.
+	\item Creo un nuovo gioco.
+	\item Mi viene chiesto il nome: inserisco “ScacchiSpeciali”.
+	\item Il diagramma delle classi si popola di una nuova classe \texttt{ScacchiSpeciali}, vuota.
+	\item Per risparmiarmi un po' di lavoro, clicco (in alto) su “importa libreria” e seleziono \texttt{com.hivex.chess}; questa fornisce \textbf{classi}, \textbf{interfacce} e \textbf{prototipi} scritti appositamente per progettare giochi su scacchiere in \proj.
+	\item Ora mi si presenta una barra laterale con un po' di icone. Clicco su quella con il simbolo della scacchiera e la trascino nel mio diagramma delle classi.
+	\item L'iconcina che ho trascinato era uno \emph{stereotipo} che nascondeva tre classi, collegate secondo il tipico pattern dei giochi su scacchiera: \texttt{Board} (la scacchiera), \texttt{Player} e \texttt{Piece}.
+	\item Compaiono dunque queste tre classi; \texttt{Board} ha già due membri di tipo \texttt{Player} e 32 membri di tipo \texttt{Piece}. Inoltre, il costruttore di \texttt{Board} si occupa di istanziare i 32 pezzi con degli opportuni \texttt{new Pawn()}, \texttt{new Queen()} e quant'altro. (Le due righe di pedoni sono generate con un ciclo for.)
+	\item Il mio \emph{ScacchiSpeciali} funzionerà come gli scacchi, con la regola aggiuntiva che quattro caselle speciali (colorate in rosso) comportano l'eliminazione di chiunque vi passi sopra; queste caselle saranno C4, C5, F4 e F5.
+	\item Ho quindi due cose da fare: implementare la colorazione delle quattro caselle e aggiungere la regola di eliminazione alle regole del gioco.
+	\item Inizio dalla colorazione: clicco sulla mia classe \texttt{ScacchiSpeciali} e 
+	\item 
+	\item 
+	\item 
+	\item 
+	\item 
+	\item 
+	\item 
+	\item 
+\end{enumerate}
+
+\end{document}
