@@ -77,3 +77,11 @@ Per rendere più facile la lettura, i termini presenti nel glossario saranno mar
 \newcommand{\PGx}{\emph{Programmatore}}
 \newcommand{\Rx}{\emph{Responsabile di Progetto}}
 \newcommand{\AMx}{\emph{Amministratore}}
+
+% per organigramma
+\newcommand{\myincludegraphics}[2][]{
+	\setbox0=\hbox{\phantom{X}}
+	\vtop{
+		\hbox{\phantom{X}}
+		\vskip-\ht0
+		\hbox{\includegraphics[#1]{#2}}}}
