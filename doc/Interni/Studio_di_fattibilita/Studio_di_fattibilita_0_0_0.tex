@@ -8,7 +8,7 @@
 \author{\AZ}
 \supervisor{\LS}
 \uso{interno}
-\dest{\TV, \ZU}
+\dest{\TV, \RC}
 \title{Studio di Fattibilità}
 
 \usepackage{hyperref}
@@ -57,40 +57,44 @@
 \section{Studio di fattibilità del capitolato scelto}
 	\subsection{\emph{SWEDesigner}: editor di diagrammi UML con generazione di codice}
 		\subsubsection{Descrizione}
-		Lo scopo del capitolato è quello di realizzare un'applicazione web (o all'occorrenza anche un programma Desktop) composta da almeno due disegnatori
+		Lo scopo del capitolato è quello di realizzare un'applicazione web composta da almeno due disegnatori
 		ed un coordinatore, che permetta all'utente di costruire diagrammi UML rappresentativi del prodotto da svilupparsi e generi a partire da essi codice 
 		Java o Javascript.
-		In particolare l'editor dovrebbe concentrarsi su uno specifico dominio applicativo (l'esempio fornito nel capitolato d'appalto è relativo ai software 
+		\\In particolare l'editor dovrebbe concentrarsi su uno specifico dominio applicativo (l'esempio fornito nel capitolato d'appalto è relativo ai software 
 		di giochi da tavolo) per andare a costituire una sorta di framework per la produzione della relativa famiglia di prodotti.
 		\subsubsection{Studio del dominio}
 			\paragraph{Dominio applicativo}
-			L'ambito e le problematiche che il progetto si propone di affrontare sono indubbiamente di grande interesse. Da un lato affronta la necessità di 
+			L'ambito e le problematiche che il progetto si propone di affrontare sono indubbiamente di grande interesse. 
+			\\Da un lato affronta la necessità di 
 			creare strumenti che regimentino il processo di sviluppo per facilitare la produzione di codice di qualità e che permettano di fattorizzare gli 
 			aspetti comuni ad una certa famiglia di prodotti software per rendere più agile e standardizzato il relativo sviluppo.
-			Dall'altro esplora la possibilità di generare codice in uno specifico linguaggio di programmazione a partire dalla rappresentazione dell'architettura 
+			\\Dall'altro esplora la possibilità di generare codice in uno specifico linguaggio di programmazione a partire dalla rappresentazione dell'architettura 
 			software una serie di convenzioni di modellazione.
 			\\In particolare lo scopo profondo del capitolato è quello di analizzare quali diagrammi UML siano i più adatti allo scopo di descrivere l'architettura 
-			e le componenti funzionali di un progetto e come si possa concertare una loro integrazione per arrivare a produrre un eseguibile vero e proprio. 
-			Odiernamente, infatti, UML non è altro che un grande aggregato di convenzioni rappresentative che sì coprono a diversi livelli di raffinamento diverse 
-			fasi e aspetti dello sviluppo di prodotti software (architettura ad alto livello ed in dettaglio, funzionamento di metodi ...) ma al contempo risultano 
+			e le componenti funzionali di un progetto software e come si possa concertare una loro integrazione per arrivare a produrre un eseguibile vero e proprio. 
+			\\Attualmente, infatti, UML non è altro che un grande aggregato di convenzioni di modellazione che coprono, sì, a diversi livelli di raffinamento differenti 
+			fasi e aspetti dello sviluppo di prodotti software, ma al contempo risultano 
 			a tal punto eterogenei l'uno rispetto all'altro da non risultare integrabili e componibili. 
-			La richiesta è quindi quella di indagare come si potrebbe superare la debolezza intrinseca dell'Unified Modeling Language nella sincronizazione tra 
-			codice e quanto disegnato nei diagrammi stessi e sperimentare con la possibilità di avvicinare le due fasi di progettazione e codifica, esplorando le 
+			\\La richiesta è quindi quella di indagare come si potrebbe superare la debolezza intrinseca dell'Unified Modeling Language nella sincronizzazione tra 
+			codice e quanto disegnato nei diagrammi stessi e sperimentare la possibilità di avvicinare le due fasi di progettazione e codifica, esplorando le 
 			interazioni e le eventuali estensioni necessarie a legare fra loro queste due fasi.
 			\paragraph{Dominio tecnologico}
 			Il capitolato richiede che il sistema sia realizzato con tecnologie Web. In particolare la parte server deve essere realizzata in Java con il server 
 			Tomcat o in Javascript con il server Node.Js. La parte client, invece, deve essere eseguibile in un browser HTML5 ed utilizzare fogli di stile CSS per 
-			l'aspetto estetico e Javascript per la parte attiva.
+			l'aspetto estetico e JavaScript per la parte attiva.
 		\subsubsection{Aspetti positivi e negativi}
 		Molti sono stati riconosciuti dal gruppo come gli aspetti positivi di tale progetto.
 		\\Prima di tutto le problematiche affrontate dal capitolato hanno suscitato in tutti i membri una forte motivazione, legata alla necessità di confrontarsi 
-		con problemi - quello della generazione automatica di codice e del raffinamento dell'UML – ancora vivi nell'ambito informatico. In secondo luogo hanno giocato 
-		a favore della scelta la chiarezza e precisione con cui le caratteristiche e i requisiti del progetto sono stati elencati e descritti oltre che l'indiscutibile 
-		autorevolezza e prestigio dell'azienda proponente. Preziosa, inoltre, è stata considerata la possibilità di collaborare attivamente con quella che è considerata 
-		la prima software house italiana e con un esponente di essa legato da così tanto tempo al mondo della programmazione.
-		\\Un altro punto a favore del capitolato è la possibilità di operare con un set di tecnologie assodato, parte integrante del programma di studio e di ampia diffusione.
+		con problemi quali la generazione automatica di codice e il raffinamento dell'UML, ancora vivi nell'ambito informatico.
+		\\In secondo luogo hanno giocato 
+		a favore della scelta la chiarezza e precisione con cui le caratteristiche e i requisiti del progetto sono stati elencati e descritti, oltre che l'indiscutibile 
+		autorevolezza e prestigio dell'azienda proponente. 
+		\\Preziosa, inoltre, è stata considerata la possibilità di collaborare attivamente con quella che è considerata 
+		la prima \emph{software house} italiana e con un esponente di essa legato da tanto tempo al mondo della programmazione.
+		\\Un altro punto a favore del capitolato è la possibilità di operare con un insieme di tecnologie assodato, parte integrante del programma di studio e di ampia diffusione.
 		\\Fra le criticità discusse la più sentita riguarda la vastità e la complessità del problema da affrontare, certamente non banale e necessitante di una riflessione 
-		estremamente approfondita e ponderata. A ciò si aggiunge la necessità di conoscere al meglio i costrutti e le astrazioni del linguaggio di generazione del codice, 
+		estremamente approfondita e ponderata.
+		\\A ciò si aggiunge la necessità di conoscere al meglio i costrutti e le astrazioni del linguaggio di generazione del codice, 
 		in modo tale da garantire una buona integrazione fra le due fasi di architettura e scrittura di codice.
 		\subsubsection{Valutazione finale}
 	
