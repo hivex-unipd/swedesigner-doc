@@ -1,5 +1,5 @@
 % piano di progetto
-% da compilare con il comando pdflatex Esterni/Piano_di_progetto/Piano_di_progetto_v_x.x.x.tex
+% da compilare con il comando pdflatex Esterni/Piano_di_progetto/Piano_di_progetto_x.x.x.tex
 
 \input{../../util/hx-ambiente}
 \version{0.0.5}
@@ -30,10 +30,11 @@
 \end{description}
 
 	\subsection{Scopo del prodotto}
-	\scopo{}
+	\scopo
 	
 	\subsection{Glossario}
-	\presgloss{}
+	\presgloss
+
 	\subsection{Riferimenti}
 		\subsubsection{Normativi}
 		\begin{description}
@@ -47,7 +48,7 @@
 			\item[Slides del corso di Ingegneria del Software]\url{http://www.math.unipd.it/~tullio/IS-1/2016/};
 			\item[Ingegneria del Software - Ian Sommerville - Ottava Edizione]
 			\begin{itemize}
-				\item Capitolo 4: Software Processes;
+				\item Capitolo 4: Software Processes.
 			\end{itemize}
 		\end{description}
 
@@ -115,7 +116,7 @@ Il primo consiste nel lavorare a fianco del cliente per esplorare i suoi requisi
 \item Cambiamenti continui tendono a corrompere la struttura e l'architettura del software;
 \item Aggiungere estensioni non previste diventa progressivamente più complesso e costoso. 
 \end{itemize}
-Questo rischio a parere del \gloss{team} non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
+Questo rischio a parere del team non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
 
 La seconda possibilità invece consiste nell'avere dei prototipi usati per meglio comprendere il problema. La criticità presente riguarda il futuro di questi prototipi: sviluppare un prototipo porta valore esclusivamente nell'ambito di comprensione i requisiti del progetto, non porta un effettivo avanzamento nello sviluppo del prodotto.
 
@@ -124,7 +125,7 @@ Questo modello si basa sull'approccio orientato al riuso di componenti già esis
 
 [immagine+desc]
 
-Questo approccio è sicuramente interessante e, malgrado non sia stato adottato in toto, ci si riserva la possibilità di seguire i punti che prevedono il design del sistema con riuso e una modifica dei requisiti, al fine di ridurre i tempi e costi di certe componenti del sistema. Il \gloss{team} ritiene inoltre che gli svantaggi riguardo ai compromessi che nasceranno siano di gran lunga ripagati dai benefici di questo approccio; infine l'approccio è stato approvato dal committente in sede di discussione.
+Questo approccio è sicuramente interessante e, malgrado non sia stato adottato in toto, ci si riserva la possibilità di seguire i punti che prevedono il design del sistema con riuso e una modifica dei requisiti, al fine di ridurre i tempi e costi di certe componenti del sistema. Il team ritiene inoltre che gli svantaggi riguardo ai compromessi che nasceranno siano di gran lunga ripagati dai benefici di questo approccio; infine l'approccio è stato approvato dal committente in sede di discussione.
 
 		\subsubsection{Modelli di sviluppo iterativi}
 			\paragraph{Modello incrementale}
@@ -152,7 +153,7 @@ Vanno segnalati tuttavia i seguenti difetti:
 
 Ciò si traduce in una criticità del processo nella fase di analisi. Nella sezione {\ref{sec:analisi}} (Analisi dei rischi) si analizza come questo rischio verrà trattato.
 
-In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostanziali vantaggi rispetto agli altri modelli finora analizzati. In seguito si analizzano altri modelli che sono stati presi in considerazione.
+In complesso, il team ritiene che il modello incrementale apporti sostanziali vantaggi rispetto agli altri modelli finora analizzati. In seguito si analizzano altri modelli che sono stati presi in considerazione.
 
 			\paragraph{Modello a spirale}
 			Il modello a spirale (Boehm, 1988) è un approccio fondamentalmente rappresentato come una sequenza di attività che si ripetono nel tempo, partendo dalla fattibilità, definizione dei requisiti, ideazione dell'architettura, e così via.
@@ -165,7 +166,7 @@ In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostan
 \item Pianificazione (della fase successiva)
 \end{itemize}			 
 
-L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il \gloss{team}, il processo di sviluppo e le risorse.
+L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il team, il processo di sviluppo e le risorse.
 
 
 \newpage \section{Analisi dei rischi} \label{sec:analisi}
@@ -198,15 +199,15 @@ Ciascun rischio viene identificato a:
 	\item[Livello di valutazione dei costi](sezione \ref{sec:val}).
 \end{description}
 Per ogni rischio viene fornito un elenco di informazioni, necessario per comprenderne la natura. Esso comprende:
-\begin{description}
-	\item[Nome];
-	\item[Descrizione];
-	\item[Probabilità di occorrenza];
-	\item[Grado di pericolosità];
-	\item[Riconoscimento];
-	\item[Trattamento];
-	\item[Attuazione nel periodo].
-\end{description}
+\begin{itemize}
+	\item Nome;
+	\item Descrizione;
+	\item Probabilità di occorrenza;
+	\item Grado di pericolosità;
+	\item Riconoscimento;
+	\item Trattamento;
+	\item Attuazione nel periodo.
+\end{itemize}
 	\subsection{Livello tecnologico} \label{sec:tec}
 		\subsubsection{Tecnologie adottate}
 		\begin{description}
@@ -222,7 +223,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 		\end{description}
 		\subsubsection{Rotture Hardware}
 		\begin{description}
-			\item[Descrizione] la strumentazione usata dal gruppo quale computer portatili, può essere soggetta a rotture e malfunzionamenti durante lo sviluppo del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare 				\gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero \gloss{team}, rendendo così più difficile l'avanzamento;
+			\item[Descrizione] la strumentazione usata dal gruppo quale computer portatili, può essere soggetta a rotture e malfunzionamenti durante lo sviluppo del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare 				\gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero team, rendendo così più difficile l'avanzamento;
 			\item[Probabilità di occorrenza] bassa;
 			\item[Grado di pericolosità] medio;
 			\item[Riconoscimento] ogni membro del team avrà cura dei propri strumenti hardware verificandone giornalmente il completo funzionamento;
@@ -247,7 +248,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 		\end{description}
 		\subsubsection{Problemi personali dei componenti del team}
 		\begin{description}
-			\item[Descrizione] ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del \gloss{team} non sia disponibile in certi momenti.
+			\item[Descrizione] ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del team non sia disponibile in certi momenti.
 			\item[Probabilità di occorrenza] media;
 			\item[Grado di pericolosità] medio;
 			\item[Riconoscimento] per creare un calendario sincronizzato e condiviso del gruppo, è necessario che vengano notificati al \Rx{} in maniera preventiva e tempestiva gli impegni di ognuno;
@@ -272,7 +273,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 	\subsection{Livello organizzativo} \label{sec:org}
 		\subsubsection{Pianificazione Errata}
 		\begin{description}
-			\item[Descrizione] durante la pianificazione è possibile che, a causa di assunzioni sbagliate, i tempi per l'esecuzione di alcune attività vengano calcolati in modo errato. Ciò potrebbe portare ad avere dei periodi di inattività o di sovraccarico di lavoro del \gloss{team};
+			\item[Descrizione] durante la pianificazione è possibile che, a causa di assunzioni sbagliate, i tempi per l'esecuzione di alcune attività vengano calcolati in modo errato. Ciò potrebbe portare ad avere dei periodi di inattività o di sovraccarico di lavoro del team;
 			\item[Probabilità di occorrenza] media;
 			\item[Grado di pericolosità] alto;
 			\item[Riconoscimento] è necessario controllare lo stato delle attività nel programma di \emph{project management} periodicamente, in modo da verificare eventuali ritardi nello sviluppo delle attività; 
@@ -309,7 +310,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\end{description}
 		\end{description}
 \section{Pianificazione delle Attività} \label{sec:pianificazione}
-Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha deciso di suddividere il progetto nelle seguenti fasi:
+Per eseguire una più accurata pianificazione progettuale, il team ha deciso di suddividere il progetto nelle seguenti fasi:
 \begin{description}
 	\item[\AR](sezione \ref{sec:AR});
 	\item[\ARI](sezione \ref{sec:ARI});
@@ -350,11 +351,11 @@ Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme
 	\\ Questo periodo inizia successivamente alla formazione del gruppo e finisce in corrispondenza della consegna dei documenti per la \emph{Revisione dei Requisiti}.
 	Questo perido prevede che vengano stilati i seguenti documenti:
 	\begin{description}
-		\item[Norme di Progetto] in questo documento sono inserite tutte le norme che il \gloss{team} dovrà seguire e rispettare durante l'intero svolgimento delle attività. Tale documento è redatto dall'\AMx{}, mentre il \Vx{} ha il compito di certificare che tali norme siano state rispettate da tutto il gruppo;
+		\item[Norme di Progetto] in questo documento sono inserite tutte le norme che il team dovrà seguire e rispettare durante l'intero svolgimento delle attività. Tale documento è redatto dall'\AMx{}, mentre il \Vx{} ha il compito di certificare che tali norme siano state rispettate da tutto il gruppo;
 		\item[Studio di Fattibilità] in questo documento vengono analizzati i vari capitolati proposti. Per ogni capitolato, è stato analizzato il dominio applicativo/tecnologico e sono state inserite delle considerazioni in merito agli aspetti positivi e negativi;
 		\item[Analisi dei requisiti] in questo documento sono raccolti tutti i requisiti progettuali necessari per comprendere più approfonditamente	il capitolato scelto con lo \emph{Studio di Fattibilità};
 		\item[Piano di Progetto] questo documento è redatto dal \emph{Responsibile di Progetto} che organizza tutte le attività e stima le risorse, costi e tempi necessari per lo svolgimento del progetto;
-		\item[Piano di Qualifica] questo documento è redatto dal \Vx{} che individua tutte le strategie di verifica e validazione che il \gloss{team} deve adottare per il progetto per ottenere e consegnare un prodotto di qualità;
+		\item[Piano di Qualifica] questo documento è redatto dal \Vx{} che individua tutte le strategie di verifica e validazione che il team deve adottare per il progetto per ottenere e consegnare un prodotto di qualità;
 		\item[Glossario] questo documento viene steso da tutti i redattori in parallelo alla stesura degli altri documenti; esso contiene la spiegazione di alcuni termini presenti nei vari documenti al fine di chiarire il significato del termine stesso;
 		\item[Lettera di presentazione] questo documento viene presentato al committente al fine di mostrare l'interesse del gruppo di partecipare alla gara d'appalto.
 	\end{description}
@@ -569,8 +570,8 @@ Questo costo viene fornito a scopo informativo e rappresenta l'investimento effe
 
 Gli sforzi maggiori si evidenziano nel ruolo di:
 \begin{itemize}
-\item {\AMx} a causa dell'impegno aggiuntivo dedicato alla creazione di un proprio \gloss{Way of Working};
-\item {\ANx} per gli sforzi impiegati a raggiungere una comprensione profonda dei requisiti del progetto affrontato.
+\item {\AMx}, a causa dell'impegno aggiuntivo dedicato alla creazione di un proprio \emph{way of working};
+\item {\ANx}, per gli sforzi impiegati a raggiungere una comprensione profonda dei requisiti del progetto affrontato.
 \end{itemize}
 
 \begin{figure}[H]
