@@ -13,14 +13,27 @@
 \usepackage{listings}
 \usepackage{eurosym}
 \usepackage{float}
+\usepackage{fancyhdr}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
 \hypersetup{hidelinks}
 
-
 \usepackage{../../util/hx-vers}
 \usepackage{../../util/hx-macro}
 \usepackage{../../util/hx-front}
+
+\pagestyle{fancy}
+% elimina indentazione paragrafo:
+\setlength{\parindent}{0pt}
+% intestazione:
+\lhead{\Large{\proj}}
+\rhead{\includegraphics[keepaspectratio=true,width=50px]{../../util/hivex_logo.png}}
+\renewcommand{\headrulewidth}{0.4pt}
+% pie' di pagina:
+\lfoot{\email}
+\rfoot{\thepage}
+\cfoot{}
+\renewcommand{\footrulewidth}{0.4pt}
 
 \renewcommand{\arraystretch}{1.5}
 \setcounter{tocdepth}{4}
