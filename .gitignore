@@ -13,3 +13,9 @@
 *.aux
 *.out
 *.toc
+*.glo
+*.ist
+*.synctex.gz
+
+### PDF
+*.pdf
