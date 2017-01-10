@@ -1413,10 +1413,10 @@ l'attore visualizza un messaggio d'errore.
 \label{UC5.3.1}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
-\item \textbf{Descrizione}: l'attore può inserire la condizione da verificare del blocco if;	
-\item \textbf{Precondizione}: l'attore ha selezionato un blocco if da inserire e il sistema visualizza il relativo form per l'inserimento dei dati; 
+\item \textbf{Descrizione}: l'attore può inserire la condizione da verificare del blocco if;	da inserire e il sistema visualizza il relativo form per l'inserimento dei dati; 
 \item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;	
 \item \textbf{Scenario principale}:
+\item \textbf{Precondizione}: l'attore ha selezionato un blocco if 
 l'attore deve inserire la condizione da verificare del blocco if come espressione booleana espressa con il linguaggio target di generazione del codice dell'applicazione.
 \end{itemize}
 
@@ -1951,211 +1951,554 @@ l'attore genera l'applicativo;
 l'attore visualizza un messaggio d'errore.	
 \end{itemize}
 
+
 \subsection{Requisiti Funzionali}
 \normalsize
 \begin{longtable}{|c|>{\centering}m{7cm}|c|}
 \hline 
-\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Stato}\\
+\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonti}\\
 \hline
 \endhead
-\hypertarget{RFO1}{RFO1} & l'attore può caricare un progetto & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO1}{RFO1} & l'attore può caricare un progetto &  \hyperlink{Interno}{Interno}\\
+& & \hyperref[UC2]{UC2}\\ \hline
 
-\hypertarget{RFO2}{RFO2} & l'attore può creare un nuovo progetto & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO2}{RFO2} & l'attore può creare un nuovo progetto &  \hyperlink{Interno}{Interno}\\
+& & \hyperref[UC3]{UC3}\\ \hline
 
-\hypertarget{RFO3}{RFO3} & l'attore può realizzare e gestire un diagramma delle classi & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3}{RFO3} & l'attore può realizzare e gestire un diagramma delle classi & \hyperlink{Capitolato}{Capitolato}\\
+& & \hyperref[UC4]{UC4}\\ \hline
 
-\hypertarget{RFO3.1}{RFO3.1} & l'attore può inserire una classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1}{RFO3.1} & l'attore può inserire una classe &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4]{UC4}\\
+& &\hyperref[UC4.1]{UC4.1}\\ \hline
 
-\hypertarget{RFO3.1.1}{RFO3.1.1} & l'attore può inserire la visibilità della classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.1}{RFO3.1.1} & l'attore può inserire la visibilità della classe & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.1]{UC4.1.1}\\ \hline
 
-\hypertarget{RFO3.1.2}{RFO3.1.2} & l'attore può inserire il nome della classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.2}{RFO3.1.2} & l'attore può inserire il nome della classe & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.2]{UC4.1.2}\\ \hline
 
-\hypertarget{RFO3.1.3}{RFO3.1.3} & l'attore può scegliere uno stereotipo per la classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.3}{RFO3.1.3} & l'attore può scegliere uno stereotipo per la classe & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.3]{UC4.1.3}\\ \hline
 
-\hypertarget{RFO3.1.4}{RFO3.1.4} & l'attore può inserire un attributo per la classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4}{RFO3.1.4} & l'attore può inserire un attributo per la classe & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.4]{UC4.1.4}\\ \hline
 
-\hypertarget{RFO3.1.4.1}{RFO3.1.4.1} & l'attore può scegliere la visibilità per l'attributo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4.1}{RFO3.1.4.1} & l'attore può scegliere la visibilità per l'attributo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.4]{UC4.1.4}\\
+& &\hyperref[UC4.1.4.1]{UC4.1.4.1}\\ \hline
 
-\hypertarget{RFO3.1.4.2}{RFO3.1.4.2} & l'attore può inserire il nome dell'attributo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4.2}{RFO3.1.4.2} & l'attore può inserire il nome dell'attributo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.4]{UC4.1.4}\\
+& &\hyperref[UC4.1.4.2]{UC4.1.4.2}\\ \hline
 
-\hypertarget{RFO3.1.4.3}{RFO3.1.4.3} & l'attore può inserire il tipo dell'attributo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4.3}{RFO3.1.4.3} & l'attore può inserire il tipo dell'attributo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.4]{UC4.1.4}\\
+& &\hyperref[UC4.1.4.2]{UC4.1.4.2}\\ \hline
 
-\hypertarget{RFO3.1.4.4}{RFO3.1.4.4} & l'attore può scegliere la molteplicità dell'attributo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4.4}{RFO3.1.4.4} & l'attore può scegliere la molteplicità dell'attributo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.4]{UC4.1.4}\\
+& &\hyperref[UC4.1.4.4]{UC4.1.4.4}\\ \hline
 
-\hypertarget{RFO3.1.4.5}{RFO3.1.4.5} & l'attore può inserire il valore di default dell'attributo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4.5}{RFO3.1.4.5} & l'attore può inserire il valore di default dell'attributo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.4]{UC4.1.4}\\
+& &\hyperref[UC4.1.4.5]{UC4.1.4.5}\\ \hline
 
-\hypertarget{RFO3.1.4.6}{RFO3.1.4.6} & l’attore può confermare l'inserimento dell'attributo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4.6}{RFO3.1.4.6} & l’attore può confermare l'inserimento dell'attributo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.4]{UC4.1.4}\\
+& &\hyperref[UC4.1.4.6]{UC4.1.4.6}\\ \hline
 
-\hypertarget{RFO3.1.4.6.1}{RFO3.1.4.6.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha inserito il nome dell'attributo, non ha inserito il tipo dell'attributo o ha inserito un nome per l'attributo già esistente & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.4.6.1}{RFO3.1.4.6.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha inserito il nome dell'attributo, non ha inserito il tipo dell'attributo o ha inserito un nome per l'attributo già esistente & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.4.6]{UC4.1.4.6}\\
+& &\hyperref[UC4.1.4.6.1]{UC4.1.4.6.1}\\ \hline
 
-\hypertarget{RFO3.1.5}{RFO3.1.5} & l'attore può rimuovere un attributo precedentemente inserito & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.5}{RFO3.1.5} & l'attore può rimuovere un attributo precedentemente inserito & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.5]{UC4.1.5}\\ \hline
 
-\hypertarget{RFO3.1.6}{RFO3.1.6} & l'attore può inserire un metodo per la classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6}{RFO3.1.6} & l'attore può inserire un metodo per la classe &\hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.6]{UC4.1.6}\\ \hline
 
-\hypertarget{RFO3.1.6.1}{RFO3.1.6.1} & l'attore può scegliere la visibilità per il metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.1}{RFO3.1.6.1} & l'attore può scegliere la visibilità per il metodo &\hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6]{UC4.1.6}\\
+& &\hyperref[UC4.1.6.1]{UC4.1.6.1}\\ \hline
 
-\hypertarget{RFO3.1.6.2}{RFO3.1.6.2} & l'attore può inserire il nome del metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.2}{RFO3.1.6.2} & l'attore può inserire il nome del metodo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6]{UC4.1.6}\\
+& &\hyperref[UC4.1.6.2]{UC4.1.6.2}\\ \hline
 
-\hypertarget{RFO3.1.6.3}{RFO3.1.6.3} & l'attore può inserire un parametro per il metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.3}{RFO3.1.6.3} & l'attore può inserire un parametro per il metodo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6]{UC4.1.6}\\
+& &\hyperref[UC4.1.6.3]{UC4.1.6.3}\\ \hline
 
-\hypertarget{RFO3.1.6.3.1}{RFO3.1.6.3.1} & l'attore può inserire il parametro del metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.3.1}{RFO3.1.6.3.1} & l'attore può inserire il parametro del metodo &\hyperlink{Interno}{Interno}\\
+& & \hyperref[UC4.1.6.3]{UC4.1.6.3}\\
+& & \hyperref[UC4.1.6.3.1]{UC4.1.6.3.1}\\ \hline
 
-\hypertarget{RFO3.1.6.3.2}{RFO3.1.6.3.2} & l'attore può inserire il tipo del metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.3.2}{RFO3.1.6.3.2} & l'attore può inserire il tipo del metodo &\hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6.3]{UC4.1.6.3}\\
+& &\hyperref[UC4.1.6.3.2]{UC4.1.6.3.2}\\ \hline
 
-\hypertarget{RFO3.1.6.3.3}{RFO3.1.6.3.3} & l’attore può confermare l'inserimento del parametro & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.3.3}{RFO3.1.6.3.3} & l’attore può confermare l'inserimento del parametro & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6.3]{UC4.1.6.3}\\
+& &\hyperref[UC4.1.6.3.3]{UC4.1.6.3.3}\\ \hline
 
-\hypertarget{RFO3.1.6.3.3.1}{RFO3.1.6.3.3.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha inserito il nome del parametro o non ha inserito il tipo del parametro & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.3.3.1}{RFO3.1.6.3.3.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha inserito il nome del parametro o non ha inserito il tipo del parametro &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6.3.3]{UC4.1.6.3.3}\\
+& &\hyperref[UC4.1.6.3.3.1]{UC4.1.6.3.3.1}\\ \hline
 
-\hypertarget{RFO3.1.6.4}{RFO3.1.6.4} & l'attore può inserire il tipo di ritorno del metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.4}{RFO3.1.6.4} & l'attore può inserire il tipo di ritorno del metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6]{UC4.1.6}\\
+& &\hyperref[UC4.1.6.4]{UC4.1.6.4}\\ \hline
 
-\hypertarget{RFO3.1.6.5}{RFO3.1.6.5} & l’attore può confermare l'inserimento del metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.5}{RFO3.1.6.5} & l’attore può confermare l'inserimento del metodo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6]{UC4.1.6}\\
+& &\hyperref[UC4.1.6.5]{UC4.1.6.5}\\ \hline
 
-\hypertarget{RFO3.1.6.5.1}{RFO3.1.6.5.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha inserito il nome del metodo, non ha inserito il tipo di ritorno del metodo o ha inserito un metodo con una segnatura già esistente & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.5.1}{RFO3.1.6.5.1} & il sistema deve visualizzare un messaggio d'errore se l'attore non ha inserito il nome del metodo, non ha inserito il tipo di ritorno del metodo o ha inserito un metodo con una segnatura già esistente & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6.5]{UC4.1.6.5}\\
+& &\hyperref[UC4.1.6.5.1]{UC4.1.6.5.1}\\ \hline
 
-\hypertarget{RFO3.1.7}{RFO3.1.7} & l'attore può rimuovere un metodo precedentemente inserito & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.6.6}{RFO3.1.6.6} & l’attore può rimuovere il parametro del metodo & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.6]{UC4.1.6}\\
+& &\hyperref[UC4.1.6.6]{UC4.1.6.6}\\ \hline
 
-\hypertarget{RFO3.1.8}{RFO3.1.8} & l’attore può confermare l'inserimento della classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.7}{RFO3.1.7} & l'attore può rimuovere un metodo precedentemente inserito & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.7]{UC4.1.7}\\ \hline
 
-\hypertarget{RFO3.1.8.1}{RFO3.1.8.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha inserito il nome della classe o ha inserito un nome per la classe già esistente & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.8}{RFO3.1.8} & l'attore può confermare l'inserimento della classe & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1]{UC4.1}\\
+& &\hyperref[UC4.1.8]{UC4.1.8}\\ \hline
 
-\hypertarget{RFO3.2}{RFO3.2} & l'attore può inserire una relazione tra due classi & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.1.8.1}{RFO3.1.8.1} & il sistema deve visualizzare un messaggio d'errore se l'attore non ha inserito il nome della classe o ha inserito un nome per la classe già esistente &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.1.8]{UC4.1.8}\\
+& &\hyperref[UC4.1.8.1]{UC4.1.8.1}\\ \hline
 
-\hypertarget{RFO3.2.1}{RFO3.2.1} & l'attore può scegliere il nome della relazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2}{RFO3.2} & l'attore può inserire una relazione tra due classi & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.2]{UC4.2}\\ \hline
 
-\hypertarget{RFO3.2.2}{RFO3.2.2} & l'attore può scegliere la classe di partenza per la relazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.1}{RFO3.2.1} & l'attore può scegliere il nome della relazione & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.2]{UC4.2}\\
+& \hyperref[UC4.2.1]{UC4.2.1}\\ \hline
 
-\hypertarget{RFO3.2.2.1}{RFO3.2.2.1} & l'attore può rimuovere un commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.2}{RFO3.2.2} & l'attore può scegliere la classe di partenza per la relazione & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.2]{UC4.2}\\
+& \hyperref[UC4.2.2]{UC4.2.2}\\ \hline
 
-\hypertarget{RFO3.2.3}{RFO3.2.3} & l'attore può scegliere la classe di destinazione per la relazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.2.1}{RFO3.2.2.1} & l'attore può rimuovere un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.6]{UC4.6}\\ \hline
 
-\hypertarget{RFO3.2.4}{RFO3.2.4} & l'attore può scegliere la cardinalità della relazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.3}{RFO3.2.3} & l'attore può scegliere la classe di destinazione per la relazione & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.2]{UC4.2}\\
+& \hyperref[UC4.2.3]{UC4.2.3}\\ \hline
 
-\hypertarget{RFO3.2.5}{RFO3.2.5} & l'attore può scegliere uno stereotipo per la relazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.4}{RFO3.2.4} & l'attore può scegliere la cardinalità della relazione & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.2]{UC4.2}\\
+& \hyperref[UC4.2.4]{UC4.2.4}\\ \hline
 
-\hypertarget{RFO3.2.6}{RFO3.2.6} & l’attore può confermare l'inserimento della relazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.5}{RFO3.2.5} & l'attore può scegliere uno stereotipo per la relazione & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.2]{UC4.2}\\
+& \hyperref[UC4.2.5]{UC4.2.5}\\ \hline
 
-\hypertarget{RFO3.2.6.1}{RFO3.2.6.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha scelto la relazione, on ha scelto la di partenza o non ha scelto la classe di destinazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.6}{RFO3.2.6} & l'attore può confermare l'inserimento della relazione & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.2]{UC4.2}\\
+& \hyperref[UC4.2.6]{UC4.2.6}\\ \hline
 
-\hypertarget{RFO3.3}{RFO3.3} & l'attore può inserire un commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.2.6.1}{RFO3.2.6.1} & il sistema deve visualizzare un messaggio d'errore se l'attore non ha scelto la relazione, on ha scelto la di partenza o non ha scelto la classe di destinazione &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.2.6]{UC4.2.6}\\
+& \hyperref[UC4.2.6.1]{UC4.2.6.1}\\ \hline
 
-\hypertarget{RFO3.3.1}{RFO3.3.1} & l'attore può inserire il testo del commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.3}{RFO3.3} & l'attore può inserire un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.3]{UC4.3}\\ \hline
 
-\hypertarget{RFO3.3.2}{RFO3.3.2} & l'attore può scegliere il "parent" del commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.3.1}{RFO3.3.1} & l'attore può inserire il testo del commento & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.3]{UC4.3}\\
+& \hyperref[UC4.3.1]{UC4.3.1}\\ \hline
 
-\hypertarget{RFO3.3.3}{RFO3.3.3} & l’attore può confermare l'inserimento del commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.3.2}{RFO3.3.2} & l'attore può scegliere il "parent" del commento & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.3]{UC4.3}\\
+& \hyperref[UC4.3.2]{UC4.3.2}\\ \hline
 
-\hypertarget{RFO3.3.3.1}{RFO3.3.3.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha scelto il "parent" del commento. & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.3.3}{RFO3.3.3} & l’attore può confermare l'inserimento del commento & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.3]{UC4.3}\\
+& \hyperref[UC4.3.3]{UC4.3.3}\\ \hline
 
-\hypertarget{RFO3.4}{RFO3.4} & l'attore può rimuovere una classe & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.3.3.1}{RFO3.3.3.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha scelto il "parent" del commento. & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.3.3]{UC4.3.3}\\
+& \hyperref[UC4.3.3.1]{UC4.3.3.1}\\ \hline
 
-\hypertarget{RFO3.5}{RFO3.5} & l'attore può rimuovere una relazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.4}{RFO3.4} & l'attore può rimuovere una classe &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.4]{UC4.4}\\ \hline
 
-\hypertarget{RFO4}{RFO4} & l'attore può realizzare e gestire un diagramma delle attività per ogni metodo presente nel diagramma delle classi & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.5}{RFO3.5} & l'attore può rimuovere una relazione &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.5]{UC4.5}\\ \hline
 
-\hypertarget{RFO4.1}{RFO4.1} & l'attore può inserire un blocco variabile scegliendo tra inizializzazione e assegnazione & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO3.6}{RFO3.6} & l'attore può rimuovere un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.6]{UC4.6}\\ \hline
+
+\hypertarget{RFO3.7}{RFO3.7} & l'attore può ridurre una classe &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.7]{UC4.7}\\ \hline
+
+\hypertarget{RFO3.8}{RFO3.8} & l'attore può espandere una classe &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.8]{UC4.8}\\ \hline
+
+\hypertarget{RFO3.9}{RFO3.9} & l'attore può ridurre un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.9]{UC4.9}\\ \hline
+
+\hypertarget{RFO3.10}{RFO3.10} & l'attore può espandere un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.10]{UC4.10}\\ \hline
+
+\hypertarget{RFO3.11}{RFO3.11} & l'attore può modificare una classe &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.11]{UC4.11}\\ \hline
+
+\hypertarget{RFO3.11.1}{RFO3.11.1} & l'attore può modificare la visibilità della classe &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11]{UC4.11}\\
+& \hyperref[UC4.11.1]{UC4.11.1}\\ \hline
+
+\hypertarget{RFO3.11.2}{RFO3.11.2} & l'attore può modificare il nome della classe &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11]{UC4.11}\\
+& \hyperref[UC4.11.2]{UC4.11.2}\\ \hline
+
+\hypertarget{RFO3.11.3}{RFO3.11.3} & l'attore può modificare un attributo della classe &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11]{UC4.11}\\
+& \hyperref[UC4.11.3]{UC4.11.3}\\ \hline
+
+\hypertarget{RFO3.11.3.1}{RFO3.11.3.1} & l'attore può modificare la visibilità dell'attributo &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11.3]{UC4.11.3}\\
+& \hyperref[UC4.11.3.1]{UC4.11.3.1}\\ \hline
+
+\hypertarget{RFO3.11.3.2}{RFO3.11.3.2} & l'attore può modificare il nome dell'attributo &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11.3]{UC4.11.3}\\
+& \hyperref[UC4.11.3.2]{UC4.11.3.2}\\ \hline
+
+\hypertarget{RFO3.11.3.3}{RFO3.11.3.3} & l'attore può modificare il tipo dell'attributo &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11.3]{UC4.11.3}\\
+& \hyperref[UC4.11.3.3]{UC4.11.3.3}\\ \hline
+
+\hypertarget{RFO3.11.3.4}{RFO3.11.3.4} & l'attore può modificare la molteplicità dell'attributo &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11.3]{UC4.11.3}\\
+& \hyperref[UC4.11.3.4]{UC4.11.3.4}\\ \hline
+
+\hypertarget{RFO3.11.3.5}{RFO3.11.3.5} & l'attore può modificare il valore di default dell'attributo &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11.3]{UC4.11.3}\\
+& \hyperref[UC4.11.3.5]{UC4.11.3.5}\\ \hline
+
+\hypertarget{RFO3.11.3.6}{RFO3.11.3.6} & l'attore può confermare le modifiche apportate all'attributo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.3]{UC4.11.3}\\
+& &\hyperref[UC4.11.3.6]{UC4.11.3.6}\\ 
+& &\hyperref[UC4.1.4.6.1]{UC4.1.4.6.1}\\ \hline
+
+\hypertarget{RFO3.11.4}{RFO3.11.4} & l'attore può modificare un metodo della classe &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11]{UC4.11}\\
+& &\hyperref[UC4.11.4]{UC4.11.4}\\ \hline
+
+\hypertarget{RFO3.11.4.1}{RFO3.11.4.1} & l'attore può modificare la visibilità del metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.4]{UC4.11.4}\\
+& &\hyperref[UC4.11.4.1]{UC4.11.4.1}\\ \hline
+
+\hypertarget{RFO3.11.4.2}{RFO3.11.4.2} & l'attore può modificare il nome del metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.4]{UC4.11.4}\\
+& &\hyperref[UC4.11.4.2]{UC4.11.4.2}\\ \hline
+
+\hypertarget{RFO3.11.4.3}{RFO3.11.4.3} & l'attore può modificare un parametro del metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.4]{UC4.11.4}\\
+& &\hyperref[UC4.11.4.3]{UC4.11.4.3}\\ \hline
+
+\hypertarget{RFO3.11.4.3.1}{RFO3.11.4.3.1} & l'attore può modificare il nome del parametro del metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.4.3]{UC4.11.4.3}\\
+& &\hyperref[UC4.11.4.3.1]{UC4.11.4.3.1}\\ \hline
+
+\hypertarget{RFO3.11.4.3.2}{RFO3.11.4.3.2} & l'attore può modificare il tipo del parametro del metodo &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.11.4.3]{UC4.11.4.3}\\
+& \hyperref[UC4.11.4.3.2]{UC4.11.4.3.2}\\ \hline
+
+\hypertarget{RFO3.11.4.3.3}{RFO3.11.4.3.3} & l'attore può confermare le modifiche apportate al parametro del metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.4.3]{UC4.11.4.3}\\
+& &\hyperref[UC4.11.4.3.3]{UC4.11.4.3.3}\\
+& &\hyperref[UC4.1.6.3.3.1]{UC4.1.6.3.3.1}\\ \hline
+
+\hypertarget{RFO3.11.4.4}{RFO3.11.4.4} & l'attore può modificare il tipo di ritorno del metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.4]{UC4.11.4}\\
+& &\hyperref[UC4.11.4.4]{UC4.11.4.4}\\ \hline
+
+\hypertarget{RFO3.11.4.5}{RFO3.11.4.5} & l'attore può confermare le modifiche apportate al metodo &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11.4]{UC4.11.4}\\
+& &\hyperref[UC4.11.4.5]{UC4.11.4.5}\\ 
+& &\hyperref[UC4.1.6.5.1]{UC4.1.6.5.1}\\ \hline
+
+\hypertarget{RFO3.11.5}{RFO3.11.5} & l'attore può confermare le modifiche apportate alla classe &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.11]{UC4.11}\\
+& &\hyperref[UC4.11.5]{UC4.11.5}\\ 
+& &\hyperref[UC4.1.8.1]{UC4.1.8.1}\\ \hline
+
+\hypertarget{RFO3.12}{RFO3.12} & l'attore può modificare una relazione &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4]{UC4}\\
+& &\hyperref[UC4.12]{UC4.12}\\ \hline
+
+\hypertarget{RFO3.12.1}{RFO3.12.1} & l'attore può modificare il tipo di una relazione &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.12]{UC4.12}\\
+& \hyperref[UC4.12.1]{UC4.12.1}\\ \hline
+
+\hypertarget{RFO3.12.2}{RFO3.12.2} & l'attore può modificare l'attributo di una relazione &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.12]{UC4.12}\\
+& \hyperref[UC4.12.2]{UC4.12.2}\\ \hline
+
+\hypertarget{RFO3.12.3}{RFO3.12.3} & l'attore può modificare la classe1 di una relazione &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.12]{UC4.12}\\
+& \hyperref[UC4.12.3]{UC4.12.3}\\ \hline
+
+\hypertarget{RFO3.12.4}{RFO3.12.4} & l'attore può modificare la classe2 di una relazione &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.12]{UC4.12}\\
+& \hyperref[UC4.12.4]{UC4.12.4}\\ \hline
+
+\hypertarget{RFO3.12.5}{RFO3.12.5} & l'attore può modificare la cardinalità di una relazione &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.12]{UC4.12}\\
+& \hyperref[UC4.12.5]{UC4.12.5}\\ \hline
+
+\hypertarget{RFO3.12.6}{RFO3.12.6} & l'attore può confermare le modifiche apportate alla relazione &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC4.12]{UC4.12}\\
+& &\hyperref[UC4.12.6]{UC4.12.6}\\ 
+& &\hyperref[UC4.2.6.1]{UC4.2.6.1}\\ \hline
+
+\hypertarget{RFO3.13}{RFO3.13} & l'attore può modificare un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4]{UC4}\\
+& \hyperref[UC4.13]{UC4.13}\\ \hline
+
+\hypertarget{RFO3.13.1}{RFO3.13.1} & l'attore può modificare il testo di un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.13]{UC4.13}\\
+& \hyperref[UC4.13.1]{UC4.13.1}\\ \hline
+
+\hypertarget{RFO3.13.2}{RFO3.13.2} & l'attore può modificare il parent di un commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.13]{UC4.13}\\
+& \hyperref[UC4.13.2]{UC4.13.2}\\ \hline
+
+\hypertarget{RFO3.13.3}{RFO3.13.3} & l'attore può confermare le modifiche apportate al commento &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC4.13]{UC4.13}\\
+& \hyperref[UC4.13.3]{UC4.13.3}\\ \hline
+
+\hypertarget{RFO4}{RFO4} & l'attore può realizzare e gestire un diagramma delle attività per ogni metodo presente nel diagramma delle classi & \hyperlink{Capitolato}{Capitolato}\\
+& & \hyperref[UC5]{UC5}\\ \hline
+
+\hypertarget{RFO4.1}{RFO4.1} & l'attore può inserire un blocco variabile scegliendo tra inizializzazione e assegnazione &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.1]{UC5.1}\\ \hline
+
+\hypertarget{RFO4.1.1}{RFO4.1.1} & l'attore può creare ed inizializzare una variabile assegnandole un valore & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.1]{UC5.1}\\
+& \hyperref[UC5.1.1]{UC5.1.1}\\ \hline
+
+\hypertarget{RFO4.1.2}{RFO4.1.2} & l'attore può assegnare un valore ad una variabile esistente e visibile & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.1]{UC5.1}\\
+& \hyperref[UC5.1.2]{UC5.1.2}\\ \hline
+
+\hypertarget{RFO4.1.3}{RFO4.1.3} & l’attore può inserire un commento per il blocco variabile & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.1]{UC5.1}\\
+& \hyperref[UC5.1.3]{UC5.1.3}\\ \hline
+
+\hypertarget{RFO4.1.4}{RFO4.1.4} & l’attore può confermare l'inserimento del blocco variabile &\hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.1]{UC5.1}\\
+& \hyperref[UC5.1.4]{UC5.1.4}\\ \hline
+
+\hypertarget{RFO4.1.4.1}{RFO4.1.4.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha fornito la variabile da inizializzare, non ha fornito un valore da assegnare alla variabile o non ha inserito un commento. & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.1.4]{UC5.1.4}\\
+& \hyperref[UC5.1.4.1]{UC5.1.4.1}\\ \hline
+
+\hypertarget{RFO4.2}{RFO4.2} & l'attore può inserire un blocco metodo & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.2]{UC5.2}\\ \hline
+
+\hypertarget{RFO4.2.1}{RFO4.2.1} & l'attore può invocare un metodo tra quelli disponibili & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.2]{UC5.2}\\
+& \hyperref[UC5.2.1]{UC5.2.1}\\ \hline
+
+\hypertarget{RFO4.2.2}{RFO4.2.2} & l’attore può inserire un commento per il blocco metodo & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.2]{UC5.2}\\
+& \hyperref[UC5.2.2]{UC5.2.2}\\ \hline
+
+\hypertarget{RFO4.2.3}{RFO4.2.3} & l’attore può confermare l'inserimento del blocco metodo & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.2]{UC5.2}\\
+& \hyperref[UC5.2.3]{UC5.2.3}\\ \hline
+
+\hypertarget{RFO4.2.3.1}{RFO4.2.3.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha fornito un metodo da inserire o non ha inserito un commento & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.2.3]{UC5.2.3}\\
+& \hyperref[UC5.2.3.1]{UC5.2.3.1}\\ \hline
+
+\hypertarget{RFO4.3}{RFO4.3} & l'attore può inserire un blocco if/else & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.3]{UC5.3}\\ \hline
+
+\hypertarget{RFO4.3.1}{RFO4.3.1} & l'attore può inserire la condizione da verificare del blocco if & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.3]{UC5.3}\\
+& \hyperref[UC5.3.1]{UC5.3.1}\\ \hline
+
+\hypertarget{RFO4.3.2}{RFO4.3.2} & l'attore può completare il corpo del blocco if, inserendo una serie di blocchi tra quelli resi disponibili dall'editor  & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.3]{UC5.3}\\
+& \hyperref[UC5.3.2]{UC5.3.2}\\ \hline
+
+\hypertarget{RFO4.3.3}{RFO4.3.3} & l'attore può completare il corpo del blocco else, inserendo una serie di blocchi tra quelli resi disponibili dall'editor  & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.3]{UC5.3}\\
+& \hyperref[UC5.3.3]{UC5.3.3}\\ \hline
+
+\hypertarget{RFO4.3.4}{RFO4.3.4} & l’attore deve inserire un commento per il blocco if/else & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.3]{UC5.3}\\
+& \hyperref[UC5.3.4]{UC5.3.4}\\ \hline
+
+\hypertarget{RFO4.3.5}{RFO4.3.5} & l’attore può confermare l'inserimento del blocco if/else & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.3]{UC5.3}\\
+& \hyperref[UC5.3.5]{UC5.3.5}\\ \hline
+
+\hypertarget{RFO4.3.5.1}{RFO4.3.5.1} & il sistema visualizza un messaggio d’errore se l'attore non ha fornito la condizione da verificare o non ha inserito un commento & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.3.5]{UC5.3.5}\\
+& \hyperref[UC5.3.5.1]{UC5.3.5.1}\\ \hline
+
+\hypertarget{RFO4.4}{RFO4.4} & l'attore può inserire un blocco while & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.4]{UC5.4}\\ \hline
+
+\hypertarget{RFO4.4.1}{RFO4.4.1} & l'attore può inserire la condizione da verificare del blocco while & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.4]{UC5.4}\\
+& \hyperref[UC5.4.1]{UC5.4.1}\\ \hline
+
+\hypertarget{RFO4.4.2}{RFO4.4.2} & l'attore può completare il corpo del blocco while, inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.4]{UC5.4}\\
+& \hyperref[UC5.4.2]{UC5.4.2}\\ \hline
+
+\hypertarget{RFO4.4.3}{RFO4.4.3} & l’attore può inserire un commento per il blocco while & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.4]{UC5.4}\\
+& \hyperref[UC5.4.3]{UC5.4.3}\\ \hline
+
+\hypertarget{RFO4.4.4}{RFO4.4.4} & l’attore può confermare l'inserimento del blocco while & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.4]{UC5.4}\\
+& \hyperref[UC5.4.4]{UC5.4.4}\\ \hline
+
+\hypertarget{RFO4.4.4.1}{RFO4.4.4.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha fornito la condizione da verificare o non ha inserito un commento. &\hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.4.4]{UC5.4.4}\\
+& \hyperref[UC5.4.4.1]{UC5.4.4.1}\\ \hline
 
-\hypertarget{RFO4.1.1}{RFO4.1.1} & l'attore può creare ed inizializzare una variabile assegnandole un valore & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.1.2}{RFO4.1.2} & l'attore può assegnare un valore ad una variabile esistente e visibile & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.1.3}{RFO4.1.3} & l’attore può inserire un commento per il blocco variabile & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.1.4}{RFO4.1.4} & l’attore può confermare l'inserimento del blocco variabile & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.1.4.1}{RFO4.1.4.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha fornito la variabile da inizializzare, non ha fornito un valore da assegnare alla variabile o non ha inserito un commento. & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.2}{RFO4.2} & l'attore può inserire un blocco metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.2.1}{RFO4.2.1} & l'attore può invocare un metodo tra quelli disponibili & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.2.2}{RFO4.2.2} & l’attore può inserire un commento per il blocco metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.2.3}{RFO4.2.3} & l’attore può confermare l'inserimento del blocco metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.2.3.1}{RFO4.2.3.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha fornito un metodo da inserire o non ha inserito un commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.3}{RFO4.3} & l'attore può inserire un blocco if/else & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.3.1}{RFO4.3.1} & l'attore può inserire la condizione da verificare del blocco if & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.3.2}{RFO4.3.2} & l'attore può completare il corpo del blocco if, inserendo una serie di blocchi tra quelli resi disponibili dall'editor  & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.3.3}{RFO4.3.3} & l'attore può completare il corpo del blocco else, inserendo una serie di blocchi tra quelli resi disponibili dall'editor  & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.3.4}{RFO4.3.4} & l’attore deve inserire un commento per il blocco if/else & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.3.5}{RFO4.3.5} & l’attore può confermare l'inserimento del blocco if/else & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.3.5.1}{RFO4.3.5.1} & il sistema visualizza un messaggio d’errore se l'attore non ha fornito la condizione da verificare o non ha inserito un commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.4}{RFO4.4} & l'attore può inserire un blocco while & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.4.1}{RFO4.4.1} & l'attore può inserire la condizione da verificare del blocco while & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.4.2}{RFO4.4.2} & l'attore può completare il corpo del blocco while, inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.4.3}{RFO4.4.3} & l’attore può inserire un commento per il blocco while & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.4.4}{RFO4.4.4} & l’attore può confermare l'inserimento del blocco while & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.4.4.1}{RFO4.4.4.1} & il sistema deve visualizzare un messaggio d’errore se l'attore non ha fornito la condizione da verificare o non ha inserito un commento. & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5}{RFO4.5} & l'attore può inserire un blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5.1}{RFO4.5.1} & l'attore può inserire l'inizializzazione del blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5.2}{RFO4.5.2} & l'attore può inserire la condizione da verificare del blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5.3}{RFO4.5.3} & l'attore può inserire l'incremento/decremento del blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5.4}{RFO4.5.4} & l'attore può completare il corpo del blocco for, inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5.5}{RFO4.5.5} & l’attore può inserire un commento per il blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5.6}{RFO4.5.6} & l’attore può confermare l'inserimento del blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.5.6.1}{RFO4.5.6.1} & il sistema deve visualizzare un messaggio d'errore se l'attore non ha fornito la condizione da verificare, non ha fornito l'incremento/decremento o non ha inserito un commento & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.6}{RFO4.6} & l'attore può inserire un blocco custom di codice & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.6.1}{RFO4.6.1} & l'attore può inserire il contenuto del blocco custom & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.6.2}{RFO4.6.2} & l’attore può inserire un commento per il blocco custom & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.6.3}{RFO4.6.3} & l’attore può confermare l'inserimento del blocco custom & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.7}{RFO4.7} & l'attore può rimuovere un blocco variabile & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.8}{RFO4.8} & l'attore può rimuovere un blocco metodo & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.9}{RFO4.9} & l'attore può rimuovere un blocco if/else & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.10}{RFO4.10} & l'attore può rimuovere un blocco while & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.11}{RFO4.11} & l'attore può rimuovere un blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO4.12}{RFO4.12} & l'attore può rimuovere un blocco custom & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFD4.13}{RFD4.13} & l'attore può ridurre il blocco if/else & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFD4.14}{RFD4.14} & l'attore può espandere il blocco if/else & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFD4.15}{RFD4.15} & l'attore può ridurre il blocco while & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFD4.16}{RFD4.16} & l'attore può espandere il blocco while & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFD4.17}{RFD4.17} & l'attore può ridurre il blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFD4.18}{RFD4.18} & l'attore può espandere il blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO5}{RFO5} & l'attore può salvare il progetto & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
-
-\hypertarget{RFO6}{RFO6} & l'attore può generare l'applicativo dai diagrammi da lui realizzati & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline
+\hypertarget{RFO4.5}{RFO4.5} & l'attore può inserire un blocco for &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.5]{UC5.5}\\ \hline
+
+\hypertarget{RFO4.5.1}{RFO4.5.1} & l'attore può inserire l'inizializzazione del blocco for & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.5]{UC5.5}\\
+& \hyperref[UC5.5.1]{UC5.5.1}\\ \hline
+
+\hypertarget{RFO4.5.2}{RFO4.5.2} & l'attore può inserire la condizione da verificare del blocco for & \textcolor{red}{\textit{Non Soddisfatto}}\\ \hline \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.5]{UC5.5}\\
+& \hyperref[UC5.5.2]{UC5.5.2}\\ \hline
+
+\hypertarget{RFO4.5.3}{RFO4.5.3} & l'attore può inserire l'incremento/decremento del blocco for & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.5]{UC5.5}\\
+& \hyperref[UC5.5.3]{UC5.5.3}\\ \hline
+
+\hypertarget{RFO4.5.4}{RFO4.5.4} & l'attore può completare il corpo del blocco for, inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.5]{UC5.5}\\
+& \hyperref[UC5.5.4]{UC5.5.4}\\ \hline
+
+\hypertarget{RFO4.5.5}{RFO4.5.5} & l’attore può inserire un commento per il blocco for & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.5]{UC5.5}\\
+& \hyperref[UC5.5.5]{UC5.5.5}\\ \hline
+
+\hypertarget{RFO4.5.6}{RFO4.5.6} & l’attore può confermare l'inserimento del blocco for &  \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.5]{UC5.5}\\
+& \hyperref[UC5.5.6]{UC5.5.6}\\ \hline
+
+\hypertarget{RFO4.5.6.1}{RFO4.5.6.1} & il sistema deve visualizzare un messaggio d'errore se l'attore non ha fornito la condizione da verificare, non ha fornito l'incremento/decremento o non ha inserito un commento & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.5.6]{UC5.5.6}\\
+& \hyperref[UC5.5.6.1]{UC5.5.6.1}\\ \hline
+
+\hypertarget{RFO4.6}{RFO4.6} & l'attore può inserire un blocco custom di codice & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.6]{UC5.6}\\ \hline
+
+\hypertarget{RFO4.6.1}{RFO4.6.1} & l'attore può inserire il contenuto del blocco custom & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.6]{UC5.6}\\
+& \hyperref[UC5.6.1]{UC5.6.1}\\ \hline
+
+\hypertarget{RFO4.6.2}{RFO4.6.2} & l’attore può inserire un commento per il blocco custom & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.6]{UC5.6}\\
+& \hyperref[UC5.6.2]{UC5.6.2}\\ \hline
+
+\hypertarget{RFO4.6.3}{RFO4.6.3} & l’attore può confermare l'inserimento del blocco custom &\hyperlink{Interno}{Interno}\\
+& \hyperref[UC5.6]{UC5.6}\\
+& \hyperref[UC5.6.3]{UC5.6.3}\\ \hline
+
+\hypertarget{RFO4.7}{RFO4.7} & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5]{UC5}\\
+& & \hyperref[UC5.7]{UC5.7}\\ \hline
+
+\hypertarget{RFO4.8}{RFO4.8} & l'attore può rimuovere un blocco metodo & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.8]{UC5.8}\\ \hline
+
+\hypertarget{RFO4.9}{RFO4.9} & l'attore può rimuovere un blocco if/else & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.9]{UC5.9}\\ \hline
+
+\hypertarget{RFO4.10}{RFO4.10} & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5]{UC5}\\
+& & \hyperref[UC5.10]{UC5.10}\\ \hline
+
+\hypertarget{RFO4.11}{RFO4.11} & l'attore può rimuovere un blocco for & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.11]{UC5.11}\\ \hline
+
+\hypertarget{RFO4.12}{RFO4.12} & l'attore può rimuovere un blocco custom & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.12]{UC5.12}\\ \hline
+
+\hypertarget{RFD4.13}{RFD4.13} & l'attore può ridurre il blocco if/else & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.12]{UC5.12}\\ \hline
+
+\hypertarget{RFD4.14}{RFD4.14} & l'attore può espandere il blocco if/else & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.14]{UC5.14}\\ \hline
+
+\hypertarget{RFD4.15}{RFD4.15} & l'attore può ridurre il blocco while & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.15]{UC5.15}\\ \hline
+
+\hypertarget{RFD4.16}{RFD4.16} & l'attore può espandere il blocco while & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.16]{UC5.16}\\ \hline
+
+\hypertarget{RFD4.17}{RFD4.17} & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& & \hyperref[UC5.17]{UC5.17}\\ \hline
+
+\hypertarget{RFD4.18}{RFD4.18} & l'attore può espandere il blocco for &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& \hyperref[UC5]{UC5}\\
+& \hyperref[UC5.18]{UC5.18}\\ \hline
+
+\hypertarget{RFO5}{RFO5} & l'attore può salvare il progetto &  \hyperlink{Interno}{Interno}\\
+& & \hyperref[UC6]{UC6}\\ \hline
+
+\hypertarget{RFO6}{RFO6} & l'attore può generare l'applicativo dai diagrammi da lui realizzati & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& & \hyperref[UC7]{UC7}\\ \hline
 
 \caption[Requisiti Funzionali]{Requisiti Funzionali}
 \label{tabella:req0}
 \end{longtable}
 \clearpage
+
 \subsection{Requisiti di Qualità}
 \normalsize
 \begin{longtable}{|c|>{\centering}m{7cm}|c|}
