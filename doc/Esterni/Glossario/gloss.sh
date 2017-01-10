@@ -21,15 +21,12 @@ echo -e "\b\b "
 # con il termine da inserire in glossario)
 printf "\n\ntermini da inserire:\n"
 for f in ../../*/*/*.tex; do
+	echo -en "\n\nFILE $f: "
 	cat $f | grep -o "gloss{.*}" | while read -r MATCH ; do
 		MATCH=`echo $MATCH | sed 's/gloss{//' | sed 's/}.*//'`
 		OK=false
 		if [[ ! `grep -i "item\[${MATCH}\]" terminiGlossario.tex` ]]; then
-			if [[ $1 = "-w" ]]; then
-				echo "${MATCH} (${f})"
-			else
-				echo -n "${MATCH}, "
-			fi
+			echo -n "${MATCH}, "
 		fi
 	done
 done
