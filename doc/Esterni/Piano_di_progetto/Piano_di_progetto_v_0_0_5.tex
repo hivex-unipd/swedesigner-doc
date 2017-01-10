@@ -17,9 +17,18 @@
 \newpage
 
 \section{Introduzione}
-	\subsection{Scopo del documento}.
+	\subsection{Scopo del documento}
 
-	Il presente documento illustra la pianificazione adottata dal gruppo \hx{} finalizzata alla produzione del progetto \proj{}. Esso è suddiviso nelle seguenti sezioni:
+	Il presente documento illustra la pianificazione adottata dal gruppo \hx{} finalizzata alla produzione del progetto \proj{}.
+	In particolare, questo documento si appresta a:
+	\begin{itemize}
+		\item analizzare e trattare i rischi;
+		\item preventivare le risorse necessarie;
+		\item pianificare le attività da svolgere;
+		\item fornire un consuntivo del lavoro svolto.
+	\end{itemize}
+	\subsection{Struttura del documento}
+	Esso è suddiviso nelle seguenti sezioni:
 \begin{description}
 	\item[sezione \ref{sec:modello}] Scelta del modello di sviluppo adottato;
 	\item[sezione \ref{sec:analisi}] Analisi e trattamento dei rischi;
@@ -46,9 +55,9 @@
 		\begin{description}
 			\item[Slides del corso di Ingegneria del Software]\url{http://www.math.unipd.it/~tullio/IS-1/2016/};
 			\item[Ingegneria del Software - Ian Sommerville - Ottava Edizione]
-			\begin{itemize}
+			\begin{description}
 				\item Capitolo 4: Software Processes;
-			\end{itemize}
+			\end{description}
 		\end{description}
 
 	\subsection{Scadenze}
@@ -65,7 +74,7 @@
 
 	La scelta di un modello di sviluppo è cruciale per la corretta pianificazione delle attività. Da essa infatti si deriva tutta la struttura principale con cui saranno pianificati milestone e task.
 
-	Il progetto {\proj}, come affrontato nei documenti \emph{Studio di fattibilità} e \emph{Piano di Qualifica}, presenta numerosi punti critici, analizzati nella sezione {\ref{sec:analisi}}, in particolare nella sezione {\ref{sec:tec}}, in cui sono analizzati i rischi tecnologici. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software \gloss{CASE} e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
+	Il progetto {\proj}, come affrontato nei documenti \emph{Studio di fattibilità} e \emph{Piano di Qualifica}, presenta numerosi punti critici, analizzati nella sezione {\ref{sec:analisi}}, in particolare nella sezione {\ref{sec:tec}}, in cui sono analizzati i rischi tecnologici. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software CASE e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
 
 	Un progetto dedito all'esplorazione va supportato con un adeguato modello di sviluppo; esso deve avere i seguenti requisiti:
 
@@ -182,24 +191,29 @@ L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado 
 
 
 \newpage \section{Analisi dei rischi} \label{sec:analisi}
-In questa sezione del documento vengono elencati e descritti tutti i possibili rischi che potrebbero colpire il gruppo \hx{} nella realizzazione del prodotto \proj. Per gestire tali rischi, è stata attuata la seguente procedura che prevede:
+La seguente sezione elenca e descrive i possibili rischi che possono andare ad inficiare sul lavoro del gruppo.
+La gestione dei rischi è divisa in cinque sottofasi:
 \begin{description}
-	\item[Identificazione dei rischi] trovare i rischi potenziali che si possono presentare durante l'intero sviluppo del progetto e studiarne la natura. Essi possono essere di tre tipologie:
-	\begin{description}
-		\item[Progetto] relativi a pianificazione, strumenti e risorse;
-		\item[Prodotto] relativi a conformità e aspettative del committente;
-		\item[Business] relativi a costi e concorrenza.
-	\end{description}
-	\item[Analisi dei rischi] studiare per ogni rischio le:
-	\begin{description}
-		\item[Probabilità di occorrenza];
-		\item[Conseguenze] comprendere che peso hanno sul progetto per comprenderne le criticità.
-	\end{description}
-	\item[Pianificazione di controllo e mitigazione] istituire metodi di controllo per i rischi, così da poterli evitare facendo:
-	\begin{description}
-		\item[Verifica costante del livello di rischio];
-		\item[Riconoscimento e trattamento].
-	\end{description}
+	\item[Identificazione dei rischi] individuare i rischi potenziali che si possono presentare durante lo sviluppo del progetto e capirne le cause. Questi possono essere identificati in tre diverse tipologie:
+	\begin{itemize}
+		\item Progetto: relativi a pianificazione, strumenti e risorse;
+		\item Prodotto: relativi a conformità e aspettative del committente;
+		\item Business: relativi a costi e concorrenza.
+	\end{itemize}
+	\item[Analisi dei rischi] per ogni rischio si deve stimare le:
+	\begin{itemize}
+		\item Probabilità di occorrenza;
+		\item Conseguenze determinarne l'impatto sul progetto per comprenderne le criticità.
+	\end{itemize}
+	\item[Pianificazione di controllo] definire metodi di controllo per i rischi, in modo da poterli evitare tramite:
+	\begin{itemize}
+		\item Verifica costante del livello di rischio;
+		\item Riconoscimento e trattamento.
+	\end{itemize}
+	\item[Mitigazione] minimizzare i danni nel caso si fossero verificati tramite:
+	\begin{itemize}
+		\item Piano di contingenza;
+	\end{itemize}
 	\item[Attuazione nel periodo] viene progressivamente descritto se il rischio si è verificato e in tal caso, in che modo il gruppo ha reagito e cosa ha comportato.
 \end{description}
 Ciascun rischio viene identificato a:
@@ -210,7 +224,7 @@ Ciascun rischio viene identificato a:
 	\item[Livello dei requisiti](sezione \ref{sec:req});
 	\item[Livello di valutazione dei costi](sezione \ref{sec:val}).
 \end{description}
-Per ogni rischio viene fornito un elenco di informazioni, necessario per comprenderne la natura. Esso comprende:
+Ogni rischio è caratterizzato da un elenco di informazioni che comprende:
 \begin{description}
 	\item[Nome];
 	\item[Descrizione];
@@ -235,11 +249,11 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 		\end{description}
 		\subsubsection{Rotture Hardware}
 		\begin{description}
-			\item[Descrizione] la strumentazione usata dal gruppo quale computer portatili, può essere soggetta a rotture e malfunzionamenti durante lo sviluppo del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare 				\gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero team, rendendo così più difficile l'avanzamento;
+			\item[Descrizione] la strumentazione hardware e software usata dal gruppo può essere soggetta a rotture e malfunzionamenti durante lo sviluppo del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare \gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero team, rendendo così più difficile l'avanzamento;
 			\item[Probabilità di occorrenza] bassa;
 			\item[Grado di pericolosità] medio;
 			\item[Riconoscimento] ogni membro del team avrà cura dei propri strumenti hardware verificandone giornalmente il completo funzionamento;
-			\item[Trattamento] prima di qualunque spostamento, è obbligatorio scaricare sul \gloss{server} \gloss{GitHub} i file modificati. Se ciò non fosse possibile per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il \gloss{server} che ospita \gloss{PragmaDB}, è previsto un sistema di \gloss{backup} automatico ogni 7 giorni e in caso di malfunzionamenti sarà compito dell’\AM{} riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
+			\item[Trattamento] prima di qualunque spostamento, è obbligatorio sincronizzare sul \gloss{server} \gloss{GitHub} i file modificati. Se ciò non fosse possibile per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il \gloss{server} che ospita \gloss{PragmaDB}, è previsto un sistema di \gloss{backup} automatico ogni 7 giorni e in caso di malfunzionamenti sarà compito dell’\AM{} riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
 			\item[Attuazione nel periodo]:
 			\begin{description}
 				\item[Analisi dei requisiti] il rischio non si è mai verificato.
@@ -248,7 +262,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 	\subsection{Livello del personale} \label{sec:per}
 		\subsubsection{Problemi tra componenti del team}
 		\begin{description}
-			\item[Descrizione] i componenti del gruppo sono alle prime esperienze nello sviluppo di progetti dove il numero di partecipanti è alto. Tale fattore potrebbe causare problemi quali incomprensioni tra i membri del gruppo e dissidi, generando quindi un clima non proficuo;
+			\item[Descrizione] i componenti del gruppo sono alle prime esperienze nello sviluppo di progetti dove il numero di partecipanti è alto. Questo potrebbe portare ad incomprensioni e dissidi tra i membri del gruppo, generando quindi un clima non proficuo;
 			\item[Probabilità di occorrenza] bassa;
 			\item[Grado di pericolosità] alto;
 			\item[Riconoscimento] il \Rx{} deve monitorare lo stato di collaborazione fra i vari componenti del gruppo durante le varie fasi e capire dove stia eventualmente nascendo un dissidio fra uno o più membri;
@@ -263,11 +277,11 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item[Descrizione] ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del team non sia disponibile in certi momenti.
 			\item[Probabilità di occorrenza] media;
 			\item[Grado di pericolosità] medio;
-			\item[Riconoscimento] per creare un calendario sincronizzato e condiviso del gruppo, è necessario che vengano notificati al \Rx{} in maniera preventiva e tempestiva gli impegni di ognuno;
+			\item[Riconoscimento] ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso del gruppo;
 			\item[Trattamento] ad ogni impegno notificato, il \Rx{} si prenderà la responsabilità di eseguire una nuova parte di pianificazione del periodo problematico; 
 			\item[Attuazione nel periodo]:
 			\begin{description}
-				\item[Analisi dei requisiti] il rischio si è verificato un paio di volte a due membri del gruppo per problemi personali; nonostante ciò, il lavoro è stato portato al termine e non ci sono stati rallentamenti.
+				\item[Analisi dei requisiti] il rischio si è verificato  a due membri del gruppo che hanno dovuto abbandonare la riunione prima della conclusione per problemi personali;
 			\end{description}
 		\end{description}
 		\subsubsection{Problemi di inesperienza}
@@ -276,7 +290,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\item[Probabilità di occorrenza] alta;
 			\item[Grado di pericolosità] alto;
 			\item[Riconoscimento] quando un componente del gruppo ritiene opportuno utilizzare una nuova tecnologia, deve segnalarlo al \Rx{} che, una volta approvatone l'utilizzo nel progetto, demanderà al gruppo il compito di documentarsi su come 	impiegarlo al meglio;
-			\item[Trattamento] ogni membro del gruppo si impegna a studiare il materiale necessario per l'utilizzo di tecnologie e strumenti richiesti durante lo svolgimento del progetto. Nel caso in cui questo non fosse sufficiente, il \Rx{} dovrà preparare un piano di studi per compensare ogni tipo di lacuna;
+			\item[Trattamento] ogni membro del gruppo ha il compito di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto. Nel caso in cui questo non fosse sufficiente, il \Rx{} dovrà preparare un piano di studi per compensare ogni tipo di lacuna;
 			\item[Attuazione nel periodo]:
 			\begin{description}
 				\item[Analisi dei requisiti]  il rischio si è verificato soprattutto nella prima fase.
