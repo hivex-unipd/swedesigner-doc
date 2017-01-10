@@ -263,8 +263,10 @@
 		\subsubsection{Metriche per i processi}
 			\paragraph{Schedule Variance}
 			Tale metrica indica di quanto le macro-attività di progetto si discostano temporalmente rispetto alla pianificazione originaria definita nel documento \PdP . 
-			\\Viene calcolata come la differenza fra la data pianificata di fine di un'attività e la data di fine reale di quell'attività; un valore di \textit{schedule variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più tempo di quanto pianificato, se pari a zero indica invece che essa è perfettamente in linea con le tempistiche previste mentre se è addirittura strettamente positivo indica che sta procedendo più speditamente di quanto considerato. 
-			\\Da sottolineare che l'utilizzo di periodi di \gloss{slack} aumenta la possibilità che la \textit{schedule variance} assuma valori positivi.
+			\\Viene calcolata come la
+differenza fra la data pianificata di fine di un’attività e la data
+reale di fine di quell’attività: un valore di \textit{schedule variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più tempo di quanto pianificato; se pari a zero indica invece che essa è perfettamente in linea con le tempistiche previste mentre se è addirittura strettamente positivo indica che sta procedendo più speditamente di quanto considerato. 
+			\\Da sottolineare che l'utilizzo di \gloss{periodi di slack} aumenta la possibilità che la \textit{schedule variance} assuma valori positivi.
 			\\I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
 					\item Range ottimale: $\geq{0}$;
@@ -273,7 +275,7 @@
 
 			\paragraph{Budget Variance}
 			Tale metrica indica quanto il costo di una particolare attività di progetto si discosta rispetto alla pianificazione originaria definita nel documento \PdP. 
-			\\Viene calcolata come la differenza fra il costo preventivato per un'attività e il costo effettivamente sostenuto per la stessa; un valore di \textit{budget variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più risorse di quanto pianificato, se pari a zero indica invece che essa è perfettamente in linea con i costi previsti mentre se è addirittura strettamente positivo indica che sta procedendo con più efficienza di quanto considerato.
+			\\Viene calcolata come la differenza fra il costo preventivato per un'attività e il costo effettivamente sostenuto per la stessa: un valore di \textit{budget variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più risorse di quanto pianificato: se pari a zero indica invece che essa è perfettamente in linea con i costi previsti mentre se è addirittura strettamente positivo indica che sta procedendo con più efficienza di quanto considerato.
 			\\I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
 					\item Range ottimale: $\geq{0}$;
@@ -281,7 +283,7 @@
 				\end{itemize}
 				
 			\paragraph{Produttività di codifica}
-			Tale metrica indica il numero medio di linee di codice prodotto per ora/persona.
+			Tale metrica indica il numero medio di linee di codice prodotto per ora/persona, ossia il numero di ore effettive impiegate nell'attività di codifica da parte dei membri del gruppo.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
 					\frac{numero~linee~di~codice~sorgente~prodotte}{ore~persona~utilizzate~per~la~codifica}
@@ -360,7 +362,7 @@
 				\end{itemize}
 				
 			\paragraph{Copertura del Codice}
-			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può ridurre tale indice tramite l'utilizzo di metodi semplici che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
+			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
 			I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
 					\item Range ottimale: 60-100;
@@ -369,8 +371,8 @@
 				
 	\subsection{Metriche per il prodotto}
 		\subsubsection{Funzionalità \label{S1}}
-		Per quanto riguarda l'aspetto funzionale del software, si è scelto di seguire determinate metriche riguardanti il rispetto dei requisiti, obbligatori e desiderabili.
-			\paragraph{Copertura Requisiti Obbligatori}
+		Per quanto riguarda l'aspetto funzionale del software, si è scelto di seguire determinate metriche riguardanti il rispetto dei requisiti di maggior importanza, ossia quelli obbligatori e desiderabili.
+			\paragraph{Copertura requisiti obbligatori}
 			Questa metrica permette di verificare in ogni momento lo stato dei requisiti obbligatori coperti. Essa rappresenta il rapporto tra i requisiti obbligatori soddisfatti e il numero totale di requisiti obbligatori ricavati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -382,7 +384,7 @@
 				\item Range di accettazione: 100-100;
 			\end{itemize}
 			
-			\paragraph{Copertura Requisiti Desiderabili}
+			\paragraph{Copertura requisiti desiderabili}
 			Tale metrica permette di verificare in ogni momento lo stato dei requisiti desiderabili coperti. Essa rappresenta il rapporto tra i requisiti desiderabili soddisfatti e il numero totale di requisiti desiderabili ricavati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -409,27 +411,27 @@
 		\subsubsection{Efficienza \label{S3}}
 		Il gruppo \hx{} ha deciso di seguire metriche relative all'efficienza del software riguardanti taluni vincoli che il codice deve rispettare.
 			\paragraph{Profondità di annidamento}
-			Tale metrica è una misura della profondità di annidamento delle istruzioni \textit{if}/cicli \textit{for} in un programma. Istruzioni \textit{if}/cicli \textit{for} profondamente annidati sono difficili da comprendere e portano potenzialmente all'errore.
+			Tale metrica è una misura della profondità di annidamento delle istruzioni condizionali (\textit{if}) o iterative (\textit{for},\textit{while}) in un programma. Istruzioni \textit{if}/cicli \textit{for} profondamente annidati sono difficili da comprendere e portano potenzialmente all'errore.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-4;
 				\item Range di accettazione: 0-10;
 			\end{itemize}
 			
-			\paragraph{Chiamate innestate di metodi}
-			Tale metrica è una misura del numero di chiamate innestate di metodi in un particolare metodo. Un grande numero di chiamate innestate di metodi può portare alla saturazione dello stack, soprattutto in caso di un grande numero di parametri, quindi è necessario limitarne il numero.
+			\paragraph{Numero di porzioni di codice duplicate}
+			Tale metrica è una misura del numero di porzioni di codice che sono presenti più volte nel programma. Una porzione di codice è considerata un duplicato non appena compare la stessa sequenza di 10 \gloss{statement}, qualsiasi sia il numero di elementi o di linee che li compongono. Un elevato numero di linee duplicate può essere segno di una programmazione non efficiente.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
-				\item Range ottimale: 0-5;
-				\item Range di accettazione: 0-10;
+				\item Range ottimale:;
+				\item Range di accettazione:;
 			\end{itemize}
 		\subsubsection{Manutenibilità \label{S4}}
 		Per garantire un elevato grado di manutenibilità, si è deciso di adottare un discreto numero di metriche che spaziano su diversi aspetti del programma.
 			\paragraph{Numero di statement per metodo}
-			Tale metrica è una misura del numero di statement di un particolare metodo. Avere un numero di statement per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
+			Tale metrica è una misura del numero di \gloss{statement} di un particolare metodo. Avere un numero di \gloss{statement} per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
-				\item Range ottimale: 0-30;
+				\item Range ottimale: 0-20;
 				\item Range di accettazione: 0-50;
 			\end{itemize}
 			
@@ -446,7 +448,7 @@
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-10;
-				\item Range di accettazione: 0-25;
+				\item Range di accettazione: 0-20;
 			\end{itemize}
 			
 			\paragraph{Numero di metodi per classe}
@@ -516,7 +518,7 @@
 			Essa risulta utile per stimare la manutenibilità del codice dal momento che un'adeguata documentazione del codice ne permette una maggiore e più rapida comprensione.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
-					\frac{numero~linee~di~commento~scritte}{numero~linee~di~codice~sorgente~prodotte}\times{100}
+					\frac{numero~linee~di~commento}{numero~linee~di~codice~sorgente}\times{100}
 				\end{equation}
 			I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -525,7 +527,7 @@
 			\end{itemize}
 			
 			\paragraph{Validazione W3C}
-			L'\gloss{applicazione web} deve superare correttamente il test di validazione offerto da W3C con un numero di errori gravi pari a zero. Gli avvisi e le inesattezze che non compromettono la funzionalità del sito sono accettate fino a un massimo di 20 per pagina.
+			L'\gloss{applicazione web} deve superare correttamente il test di validazione offerto da \gloss{W3C} con un numero di errori gravi pari a zero. Gli avvisi e le inesattezze che non compromettono la funzionalità del sito sono accettate fino a un massimo di 20 per pagina.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-0;
@@ -543,23 +545,23 @@
 	~~Schedule Variance 							&$\geq{-10}$\%	&$\geq{0}$\\
 	~~Budget Variance 								&$\geq{-10}$\%	&$\geq{0}$\\
 	~~Produttività di codifica 						&$\geq{10}$		&$\geq{3}$\\
-	~~Test di Unità eseguiti						&85-100			&100-100\\
-	~~Test di Integrazione eseguiti					&55-100			&70-100\\
-	~~Test di Sistema eseguiti						&70-100			&80-100\\
-	~~Test di Accettazione eseguiti					&90-100			&100-100\\
+	~~Test di unità eseguiti						&85-100			&100-100\\
+	~~Test di integrazione eseguiti					&55-100			&70-100\\
+	~~Test di sistema eseguiti						&70-100			&80-100\\
+	~~Test di accettazione eseguiti					&90-100			&100-100\\
 	~~Indice Gulpease								&40-100			&50-100\\
 	~~Copertura del codice							&40-100			&60-100\\
 	\hline
 	\textbf{Metriche di prodotto}					&				&\\
 	\hline
-	~~Copertura Requisiti Obbligatori				&100-100		&100-100\\
-	~~Copertura Requisiti Desiderabili				&40-100			&80-100\\
+	~~Copertura requisiti obbligatori				&100-100		&100-100\\
+	~~Copertura requisiti desiderabili				&40-100			&80-100\\
 	~~Test superati									&90-100			&100-100\\
 	~~Profondità annidamento						&0-10			&0-4\\
-	~~Chiamate innestate di metodi					&0-10			&0-5\\
-	~~Numero di statement per metodo				&0-50			&0-30\\
+	~~Numero di porzioni di codice duplicate					&-			&-\\
+	~~Numero di statement per metodo				&0-50			&0-20\\
 	~~Numero di parametri per metodo				&0-10			&0-4\\
-	~~Numero di campi dati per classe				&0-25			&0-10\\
+	~~Numero di campi dati per classe				&0-20			&0-10\\
 	~~Numero di metodi per classe					&0-30			&0-15\\
 	~~Gradi di accoppiamento						&0-7			&0-3\\
 	~~Complessità ciclomatica						&1-15			&1-10\\
