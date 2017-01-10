@@ -2,6 +2,9 @@
 % da compilare con il comando pdflatex Analisi_dei_Requisiti_x.x.x.tex
 
 \input{../../util/hx-ambiente}
+\usepackage{hyperref}
+\usepackage{longtable}
+\hypersetup{hidelinks}
 
 \version{0.0.0}
 \creaz{19 dicembre 2016}
@@ -1240,7 +1243,13 @@ Visualizzazione Errore Inserimento Commento (UC4.3.3.1);
 \item l'attore può espandere un blocco while (UC5.16);
 \item l'attore può ridurre un blocco for (UC5.17);
 \item l'attore può espandere un blocco for (UC5.18);
-\item l'attore può spostare un qualsiasi blocco già inserito (UC5.19).
+\item l'attore può spostare un qualsiasi blocco già inserito (UC5.19);
+\item l'attore può modificare un blocco variabile (UC5.20);
+\item l'attore può modificare un blocco metodo (UC5.21);
+\item l'attore può modificare un blocco if/else (UC5.22);
+\item l'attore può modificare un blocco while (UC5.23);
+\item l'attore può modificare un blocco for (UC5.24);
+\item l'attore può modificare un blocco custom (UC5.25).
 \end{enumerate}
 \end{itemize}
 
@@ -1268,7 +1277,7 @@ Visualizzazione Errore Inserimento Commento (UC4.3.3.1);
 \item \textbf{Precondizione}: l'attore ha selezionato un blocco di inizializzazione variabile da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
 \item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
 \item \textbf{Scenario principale}:
-l'attore deve indicare il nome la variabile da creare ed eventualmente un valore da assegnarle: tale valore può essere anche ritornato da un metodo che può essere scelto tra quelli proposti.
+l'attore deve indicare il nome e il tipo della variabile da creare ed eventualmente un valore da assegnarle: tale valore può essere anche ritornato da un metodo che può essere scelto tra quelli proposti.
 \end{itemize}
 
 \paragraph{UC5.1.2: Assegnazione Variabile}
@@ -1856,6 +1865,174 @@ l'attore espande il blocco for mostrandone il corpo.
 \item \textbf{Scenario principale}:
 l'attore muove il blocco selezionato in una nuova posizione del diagramma delle attività correntemente gestito.	
 \end{itemize}
+
+%\item l'attore può modificare un blocco variabile (UC5.20);
+\subsubsection{UC5.20: Modifica Blocco Variabile}
+\label{UC5.20}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare un blocco variabile;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile modificato;	
+\item \textbf{Scenario principale}:
+\begin{enumerate}
+\item l'attore può scegliere di modificare il nome della variabile (UC5.20.1);
+\item l'attore può scegliere di modificare il tipo della variabile (UC5.20.2);
+\item l'attore può scegliere di modificare il valore della variabile (UC5.20.3);
+\item l'attore può confermare le modifiche apportate al blocco variabile (UC5.20.4).
+\end{enumerate}
+\end{itemize}
+
+%\item l'attore può scegliere di modificare il nome della variabile (UC5.20.1);
+\paragraph{UC5.20.1: Modifica Nome Variabile}
+\label{UC5.20.1}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare il nome della variabile selezionata per la modifica scegliendolo eventualmente fra quelli visibili nello scope in cui sta agendo;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;	
+\item \textbf{Scenario principale}:
+L'attore modifica il nome della variabile selezionata per la modifica.	
+%\item l'attore può scegliere di modificare il tipo della variabile (UC5.20.2);
+\paragraph{UC5.20.2: Modifica Tipo Variabile}
+\label{UC5.20.2}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare il tipo della variabile selezionata per la modifica;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;	
+\item \textbf{Scenario principale}:
+L'attore modifica il tipo della variabile selezionata per la modifica.	
+%\item l'attore può scegliere di modificare il valore della variabile (UC5.20.3);
+\paragraph{UC5.20.3: Modifica Valore Variabile}
+\label{UC5.20.3}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare il valore della variabile selezionata per la modifica;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;	
+\item \textbf{Scenario principale}:
+L'attore modifica il valore della variabile selezionata per la modifica.	
+
+%\item l'attore può confermare le modifiche apportate al blocco variabile (UC5.20.4).
+\paragraph{UC5.20.4: Conferma Modifica Blocco Variabile}
+\label{UC5.20.4}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco variabile selezionato per la modifica;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile modificato;
+\item \textbf{Scenario principale}:
+L'attore conferma le modifiche apportate al blocco variabile.
+\item \textbf{Estensioni}:
+l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);	
+\item \textbf{Scenari alternativi}:
+\begin{itemize}
+\item l'attore non ha indicato il nome della variabile da inizializzare;
+\item l'attore non ha fornito un valore da assegnare alla variabile già esistente e visibile;
+\item l'attore non ha inserito un commento.	
+\end{itemize}	
+
+%\item l'attore può modificare un blocco metodo (UC5.21);
+\subsubsection{UC5.21: Modifica Blocco Metodo}
+\label{UC5.21}
+\begin{itemize}
+\item \textbf{Attori}: Utente;\item \textbf{Scenario principale}:
+
+\item \textbf{Descrizione}: l'atl'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo modificato;	
+\item \textbf{Scenario principale}:
+\begin{enumerate}
+\item l'attore può scegliere di modificare un metodo (UC5.21.1);
+\item l'attore può scegliere di modificare un commento (UC5.21.2);
+\item l'attore può confermare le modifiche apportate al blocco metodo (UC5.21.3).
+\end{enumerate}
+\end{itemize}
+%\item l'attore può scegliere di modificare un metodo (UC5.21.1);
+\paragraph{UC5.21.1: Modifica Metodo}
+\label{UC5.21.1}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare il metodo selezionato per la modifica;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;	
+\item \textbf{Scenario principale}:
+L'attore modifica il blocco metodo selezionato per la modifica.	
+%\item l'attore può scegliere di modificare un commento (UC5.21.2);
+\paragraph{UC5.21.2: Modifica Commento Metodo}
+\label{UC5.21.2}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare il commento relativo al blocco metodo selezionato per la modifica;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;	
+\item \textbf{Scenario principale}:
+L'attore modifica il commento del blocco metodo selezionato per la modifica.	
+%\item l'attore può confermare le modifiche apportate al blocco metodo (UC5.21.3).
+\paragraph{UC5.21.3: Conferma Modifica Blocco Metodo}
+\label{UC5.21.3}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco metodo selezionato per la modifica;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo modificato;	
+\item \textbf{Scenario principale}:
+L'attore modifica  selezionata per la modifica.
+\item \textbf{Estensioni}:
+l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);	
+\item \textbf{Scenari alternativi}:
+\begin{itemize}
+\item l'attore non ha indicato un metodo da inserire;
+\item l'attore non ha inserito un commento a corredo del blocco metodo.
+\end{itemize}
+\end{itemize}		
+%\item l'attore può modificare un blocco if/else (UC5.22);
+\subsubsection{UC5.22: Modifica Blocco If/Else}
+\label{UC5.22}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare il blocco if/else selezionato per la modifica;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco if/else da modificare e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else modificato;	
+\item \textbf{Scenario principale}:
+\begin{enumerate}
+\item l'attore può scegliere di modificare la condizione da verificare (UC5.22.1);
+\item l'attore può scegliere di modificare il contenuto del blocco if (UC5.22.2);
+\item l'attore può scegliere di modificare il contenuto del blocco else (UC5.22.3);
+\item l'attore può scegliere di modificare il commento (UC5.22.4);
+\item l'attore può confermare le modifiche apportate al blocco if/else (UC5.22.5).
+\end{enumerate}
+\end{itemize}	
+%\item l'attore può modificare un blocco while (UC5.23);
+\subsubsection{UC5.: Modifica }
+\label{UC5.20}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare ;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco  e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco   modificato;	
+\item \textbf{Scenario principale}:
+L'attore modifica il blocco   selezionato.	
+%\item l'attore può modificare un blocco for (UC5.24);
+\subsubsection{UC5.: Modifica }
+\label{UC5.20}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare ;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco  e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco   modificato;	
+\item \textbf{Scenario principale}:
+L'attore modifica il blocco   selezionato.	
+%\item l'attore può modificare un blocco custom (UC5.25).
+\subsubsection{UC5.: Modifica }
+\label{UC5.20}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Descrizione}: l'attore può modificare ;
+\item \textbf{Precondizione}: l'attore ha selezionato il blocco  e il sistema visualizza il form di inserimento dati ;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco   modificato;	
+\item \textbf{Scenario principale}:
+L'attore modifica il blocco   selezionato.	
 
 \subsection{UC6: Salvataggio}
 \label{UC6}
