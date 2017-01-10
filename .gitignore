@@ -13,6 +13,8 @@
 *.aux
 *.out
 *.toc
+*.lot
+*.lof
 *.glo
 *.ist
 *.synctex.gz
