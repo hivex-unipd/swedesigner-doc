@@ -1,0 +1,47 @@
+\documentclass[a4paper]{letter} % non possiamo usare hx-ambiente
+\usepackage{accanthis} % scegliere da http://www.tug.dk/FontCatalogue/
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{microtype}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{../../util/xh-macro}
+\signature{\LB\\Responsabile \hx{}}
+\address{Padova}
+
+\begin{document}
+
+\begin{letter}{
+Prof. Tullio Vardanega\\
+Università degli Studi di Padova\\
+Dipartimento di Matematica “Tullio Levi-Civita”\\
+via Trieste, 63\\
+35121 Padova
+}
+
+\opening{Egregio Professor Vardanega,} % oppure Chiarissimo Professor Vardanega
+
+Con la presente, il gruppo \hx{} intende comunicarLe l'impegno alla realizzazione del prodotto \proj{} da Lei commissionato.
+
+Si allegano i seguenti documenti:%, che trattano in maniera approfondita gli aspetti di pianifica, qualifica e analisi:
+\begin{itemize}
+	\item \SdF;
+	\item \NdP;
+	\item \PdP;
+	\item \PdQ;
+	\item \AdR;
+	\item \Glossario;
+	\item \Verbali.
+\end{itemize}
+
+Il gruppo \hx{} stima di consegnare il prodotto richiesto entro il 15 maggio 2017, con un preventivo di \num{x} euro, come analizzato nel documento \PdP.
+
+\closing{Distinti Saluti,\\
+\fromsig{\includegraphics[scale=1]{../Piano_di_progetto/img/signaturelb.jpg}} \\
+\fromname{luca}
+}
+
+\end{letter}
+
+\end{document}
