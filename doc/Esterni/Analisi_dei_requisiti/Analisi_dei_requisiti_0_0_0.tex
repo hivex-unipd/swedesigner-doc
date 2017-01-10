@@ -2,21 +2,73 @@
 % da compilare con il comando pdflatex Analisi_dei_Requisiti_x.x.x.tex
 
 \input{../../util/hx-ambiente}
+\usepackage{hyperref}
+\usepackage{longtable}
+\hypersetup{hidelinks}
 
-\version{1.0.0}
+\version{0.0.0}
 \creaz{19 dicembre 2016}
 \author{\ALL}
 \supervisor{\ALL}
 \uso{esterno}
 \dest{Prof. Tullio Vardanega, Zucchetti S.P.A.}
 \title{Analisi dei Requisiti}
-\date{9 gennaio 2017}
+
+\renewcommand{\arraystretch}{1.5}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 
 \begin{document}
 \maketitle
 \include{diario}
 \tableofcontents
+\listoffigures
+
 \newpage
+
+\newcommand{\myimg}[1]
+{
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\includegraphics[width=1.1\textwidth]{Diagrammi casi d'uso/#1}
+}
+\caption{#1}
+\label{#1}
+\end{figure}
+
+}
+\newcommand{\myimgsmall}[1]
+{
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\includegraphics[width=0.9\textwidth]{Diagrammi casi d'uso/#1}
+}
+\caption{#1}
+\label{#1}
+
+\end{figure}
+
+}
+
+\newcommand{\myimgvsmall}[1]
+{
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\includegraphics[width=0.5\textwidth]{Diagrammi casi d'uso/#1}
+}
+\caption{#1}
+\label{#1}
+
+\end{figure}
+
+}
+
 
 \section{Introduzione}
 	\subsection{Scopo del documento}
@@ -64,7 +116,15 @@
 	Per garantire inoltre una comprensione accurata e completa dell'insieme di funzionalità implementate il prodotto sarà corredato di un manuale utente completo delle indicazioni necessarie per poterne fruire in modo efficacie.
 	\subsection{Piattaforma di esecuzione}
 	Il prodotto sviluppato risulterà fruibile da qualsiasi piattaforma desktop con operante un browser web compatibile con le tecnologie \gloss{HTML5}, \gloss{CSS3} e \gloss{Javascript}. In particolare l'elenco dei browser web il cui supporto è garantito è contenuto nella sezione relativa ai requisiti di vincolo.
-	\subsection{Vincoli generali}
+\subsection{Vincoli generali}
+    Si tiene conto dei seguenti vincoli:
+    
+    \begin{itemize}
+    \item I file prodotti dal programma sono modificabili esclusivamente dal programma stesso. Eventuali modifiche di esso non garantiscono la compatibilità con l'applicativo, che potrà rifiutare il progetto modificato.
+    \item La correttezza di eventuali spezzoni di codice inseriti a mano dall'utente nel linguaggio target sono di pura responsabilità di quest'ultimo.
+    \end{itemize}	
+	
+	
 \newpage
 
 \section{Casi d'uso}
@@ -72,6 +132,7 @@ All'interno di questa sezione vengono elencati i casi d'uso rilevanti per il pro
 \\In particolare ogni
 \subsection{UC1: Pagina Iniziale}
 \label{UC1}
+\myimg{UC1 - Pagina Iniziale}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: nella pagina iniziale l'attore crea un nuovo progetto oppure ne apre uno già esistente.
@@ -98,6 +159,7 @@ Successivamente l'attore può:
 
 \subsection{UC2: Apertura Progetto}
 \label{UC2}
+
 	\begin{itemize}
 		\item \textbf{Attori}: Utente;
 		\item \textbf{Descrizione}: l'attore può caricare un progetto precedentemente realizzato con il programma ora in uso allo scopo di apportarvi 		ulteriori modifiche e/o ampliamenti;
@@ -132,6 +194,8 @@ l'attore crea un nuovo progetto interagendo con l'editor in uso tramite il coman
 
 \subsection{UC4: Realizzazione Diagramma Delle Classi}
 \label{UC4}
+\myimgsmall{UC4 - Realizzazione Diagramma delle Classi}
+
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore realizza e gestisce un diagramma delle classi con la possibilità di aggiungere nuovi elementi e rimuovere elementi precedentemente inseriti che non corrispondono più alle sue intenzioni di progettazione;
@@ -157,6 +221,8 @@ l'attore crea un nuovo progetto interagendo con l'editor in uso tramite il coman
 
 \subsubsection{UC4.1: Inserimento Classe}
 \label{UC4.1}
+\myimg{UC4.1 - Inserimento Classe}
+
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore inserisce una classe fornendo i dati richiesti;
@@ -178,6 +244,7 @@ l'attore crea un nuovo progetto interagendo con l'editor in uso tramite il coman
 
 \paragraph{UC4.1.1: Inserimento Visibilità Classe}
 \label{UC4.1.1}
+
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore inserisce la visibilità desiderata per la classe corrente;
@@ -211,6 +278,7 @@ l'attore sceglie uno stereotipo per la classe corrente fra quelli prestabiliti.
 
 \paragraph{UC4.1.4: Inserimento Attributo}
 \label{UC4.1.4}
+\myimg{UC4.1.4 - Inserimento Attributo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore inserisce un attributo per la classe corrente;
@@ -327,6 +395,7 @@ l'attore rimuove l'attributo selezionato usando l'apposito comando previsto.
 
 \paragraph{UC4.1.6: Inserimento Metodo}
 \label{UC4.1.6}
+\myimg{UC4.1.6 - Inserimento Metodo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore inserisce un metodo per la classe;
@@ -367,6 +436,7 @@ l'attore inserisce il nome del metodo.
 
 \subparagraph{UC4.1.6.3: Inserimento Parametro Metodo}
 \label{UC4.1.6.3}
+\myimg{UC4.1.6.3 - Inserimento Parametro Metodo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore inserisce un parametro per il metodo corrente;
@@ -525,6 +595,7 @@ l'attore visualizza un messaggio d'errore.
 
 \subsubsection{UC4.2: Inserimento Relazione}
 \label{UC4.2}
+\myimg{UC4.2 - Inserimento Relazione}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire una relazione tra due classi;
@@ -643,6 +714,7 @@ l'attore sceglie l'attributo della relazione.
 
 \subsubsection{UC4.3: Inserimento Commento}
 \label{UC4.3}
+\myimg{UC4.3 - Inserimento Commento}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un commento;
@@ -792,8 +864,9 @@ l'attore riduce il commento nascondendone il contenuto.
 l'attore espande il commento mostrandone il contenuto.	
 \end{itemize}
 
-\subsubsection{UC4.11:Modifica Classe}
+\subsubsection{UC4.11: Modifica Classe}
 \label{UC4.11}
+\myimg{UC4.11 - Modifica Classe}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore modifica una classe precedentemente creata; 
@@ -810,7 +883,7 @@ l'attore espande il commento mostrandone il contenuto.
 \end{itemize}
 
 \paragraph{UC4.11.1:Modifica Visibilità Classe}
-\label{UC}
+\label{UC4.11.1} %gli mancava la label giusta
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può modificare la visibilità della classe;	
@@ -831,6 +904,7 @@ l'attore espande il commento mostrandone il contenuto.
 
 \paragraph{UC4.11.3: Modifica Attributo Classe}
 \label{UC4.11.3}
+\myimg{UC4.11.3 - Modifica Attributo Classe}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore modifica un attributo della classe;	
@@ -923,6 +997,7 @@ Visualizzazione Errore Inserimento Attributo (UC4.1.4.6.1);
 
 \paragraph{UC4.11.4: Modifica Metodo Classe}
 \label{UC4.11.4}
+\myimg{UC4.11.4 - Modifica Metodo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore modifica un metodo della classe;	
@@ -962,6 +1037,7 @@ l'attore modifica il nome del metodo.
 
 \subparagraph{UC4.11.4.3: Modifica Parametro Metodo}
 \label{UC4.11.4.3}
+\myimg{UC4.11.4.3 - Modifica Parametro Metodo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore modifica un parametro del metodo;	
@@ -1065,6 +1141,7 @@ Visualizzazione Errore Inserimento Classe (UC4.1.8.1);
 
 \subsubsection{UC4.12: Modifica Relazione}
 \label{UC4.12}
+\myimg{UC4.12- Modifica Relazione}
 \begin{itemize}
 \item \textbf{Attori}: ;
 \item \textbf{Descrizione}: l'attore può modificare una relazione tra due classi;	
@@ -1159,6 +1236,7 @@ l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.2.6.1);
 
 \subsubsection{UC4.13: Modifica Commento}
 \label{UC4.13}
+\myimg{UC4.13 - Modifica Commento}
 \begin{itemize}
 \item \textbf{Attori}: ;
 \item \textbf{Descrizione}: l'attore può modificare un commento;	
@@ -1213,6 +1291,17 @@ Visualizzazione Errore Inserimento Commento (UC4.3.3.1);
 
 \subsection{UC5: Realizzazione Diagramma delle Attività}
 \label{UC5}
+%\myimgvsmall{UC5 - Realizzazione Diagramma delle Attività}
+
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\includegraphics[width=1\textwidth]{Diagrammi casi d'uso/UC5 - Realizzazione Diagramma delle Attivita}
+}
+\caption{UC5 - Realizzazione Diagramma delle Attività}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore realizza e gestisce un diagramma delle attività per ogni metodo presente nel diagramma delle classi in modo tale da darne una implementazione più in dettaglio;	
@@ -1250,6 +1339,7 @@ Visualizzazione Errore Inserimento Commento (UC4.3.3.1);
 
 \subsubsection{UC5.1: Inserimento Blocco Variabile}
 \label{UC5.1}
+\myimg{UC5.1 - Inserimento Blocco Variabile}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco variabile scegliendo tra un blocco variabile di inizializzazione e un blocco variabile di assegnazione;
@@ -1329,6 +1419,7 @@ l'attore visualizza un messaggio d'errore.
 
 \subsubsection{UC5.2: Inserimento Blocco Metodo}
 \label{UC5.2}
+\myimg{UC5.2 - Inserimento Blocco Metodo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco metodo allo scopo di inserire all'interno del diagramma la chiamata ad un particolare metodo definito altrove (eventualmente nel corrispondente diagramma delle classi);	
@@ -1395,6 +1486,7 @@ l'attore visualizza un messaggio d'errore.
 
 \subsubsection{UC5.3: Inserimento Blocco If/Else}
 \label{UC5.3}
+\myimg{UC5.3 - Inserimento Blocco If_Else}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco if/else e in caso voglia indicare semplicemente la condizione di if senza andare a specificare quella antitetica, sarà per lui sufficiente lasciare vuoto il corpo del blocco else;	
@@ -1485,6 +1577,7 @@ l'attore visualizza un messaggio d'errore.
 
 \subsubsection{UC5.4: Inserimento Blocco While}
 \label{UC5.4}
+\myimg{UC5.4 - Inserimento Blocco While}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco while specificandone condizione e istruzioni del corrispondente corpo di codice;	
@@ -1566,6 +1659,7 @@ l'attore visualizza un messaggio d'errore.
 
 \subsection{UC5.5: Inserimento Blocco For}
 \label{UC5.5}
+\myimg{UC5.5 - Inserimento Blocco For}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco for specificandone condizione, passo e le istruzioni che andranno a comporre il relativo corpo di codice;	
@@ -1671,6 +1765,7 @@ l'attore visualizza un messaggio d'errore.
 
 \subsubsection{UC5.6: Inserimento Blocco Custom	}
 \label{UC5.6}
+\myimg{UC5.6 - Inserimento Blocco Custom}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco custom di codice all'interno del quale inserire liberamente uno o più statement nel linguaggio target di generazione di codice dell'editor;	
@@ -1864,6 +1959,7 @@ l'attore muove il blocco selezionato in una nuova posizione del diagramma delle 
 %\item l'attore può modificare un blocco variabile (UC5.20);
 \subsubsection{UC5.20: Modifica Blocco Variabile}
 \label{UC5.20}
+\myimg{UC5.20 - Modifica Blocco Variabile}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può modificare un blocco variabile;
@@ -1935,6 +2031,7 @@ l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);
 %\item l'attore può modificare un blocco metodo (UC5.21);
 \subsubsection{UC5.21: Modifica Blocco Metodo}
 \label{UC5.21}
+\myimg{UC5.21 - Modifica Blocco Metodo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;\item \textbf{Scenario principale}:
 
@@ -1990,6 +2087,7 @@ l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);
 %\item l'attore può modificare un blocco if/else (UC5.22);
 \subsubsection{UC5.22: Modifica Blocco If/Else}
 \label{UC5.22}
+\myimg{UC5.22 - Modifica Blocco If_Else}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può modificare il blocco if/else selezionato per la modifica;
@@ -2045,6 +2143,7 @@ l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.3.5.1);
 %\item l'attore può modificare un blocco while (UC5.23);
 \subsubsection{UC5.23: Modifica Blocco While}
 \label{UC5.23}
+\myimg{UC5.23 - Modifica Blocco While}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può modificare il blocco while selezionato per la modifica;
@@ -2098,6 +2197,7 @@ l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.4.4.1);
 %\item l'attore può modificare un blocco for (UC5.24);
 \subsubsection{UC5.24: Modifica Blocco For}
 \label{UC5.24}
+\myimg{UC5.24 - Modifica Blocco For}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può modificare il blocco for selezionato per la modifica;
@@ -2178,6 +2278,7 @@ l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.5.6.1);
 %\item l'attore può modificare un blocco custom (UC5.25).
 \subsubsection{UC5.25: Modifica Blocco Custom}
 \label{UC5.25}
+\myimg{UC5.25 - Modifica Blocco Custom}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può modificare il blocco custom selezionato per la modifica;
@@ -2225,6 +2326,7 @@ L'attore conferma le modifiche apportate al blocco custom selezionato per la mod
 \end{itemize}
 \subsection{UC6: Salvataggio}
 \label{UC6}
+\myimg{UC6 - Salvataggio}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può salvare il progetto correntemente aperto;
@@ -4114,7 +4216,37 @@ Di Vincolo & 7 & 2 & 0\\ \hline
 \label{tabella:riepilogorequi}
 \end{longtable}
 \clearpage
+\appendix
+\section{Esempio informale di uso dell'applicazione }
 
+
+Riportiamo un esempio d'uso della nostra applicazione --- in prima persona, affinché lo stile sia più scorrevole.
+
+Questo appendice \textbf{non costituisce del testo vincolante}: esso è fornito allo scopo di riassumere i casi d'uso esplicitati nelle sezioni precedenti e fornire una visione di massima del \textbf{possibile} prodotto finale.
+
+Un approccio simile si è rivelato utile allo scopo di chiarire i requisiti del cliente in fase di riunione; si riporta quindi il testo discusso con il committente durante un incontro.
+
+\begin{enumerate}
+	\item Accedo all'applicazione web e posso subito scegliere se creare un nuovo gioco o importarne uno.
+	\item Creo un nuovo gioco.
+	\item Mi viene chiesto il nome: inserisco "ScacchiSpeciali".
+	\item Il diagramma delle classi si popola con una nuova classe \texttt{ScacchiSpeciali}, contenente solo il metodo \texttt{public void static main(String[] args)}; in esso, vi sono già le istruzioni \texttt{ScacchiSpeciali game = new ScacchiSpeciali();} e \texttt{game.start();}, dato che la nostra classe eredita per default dalla classe \texttt{Game} fornita da \proj. Questo codice sarà nascosto all'utente, tuttavia sarà necessario in output.
+	\item Per risparmiarmi un po' di lavoro, clicco (in alto) su "importa libreria" e seleziono \texttt{com.hivex.chess}; questa fornisce \textbf{classi}, \textbf{interfacce} e \textbf{prototipi} scritti appositamente per progettare giochi su scacchiere in \proj.
+	\item Ora mi si presenta una barra laterale con un po' di icone. Clicco su quella con il simbolo della scacchiera e la trascino sul mio diagramma delle classi.
+	\item Procedo in questo modo per i seguenti prototipi: \texttt{Board} (la scacchiera), \texttt{Player} e \texttt{Piece}.
+	\item Compaiono dunque queste tre classi; \texttt{Board} ha già due membri di tipo \texttt{Player} e 32 membri di tipo \texttt{Piece}. Inoltre, il costruttore di \texttt{Board} si occupa di istanziare i 32 pezzi con degli opportuni \texttt{new Pawn()}, \texttt{new Queen()} e quant'altro. (Le due righe di pedoni sono generate con un ciclo for.)
+	\item La scacchiera del mio nuovo gioco è uguale ad una scacchiera classica, tranne che le caselle pari delle righe 4 e 5 sono colorate di rosso.
+	\item Estendo \texttt{Board}, creando una nuova classe \texttt{MyBoard} che mi servirà a modificare la scacchiera predefinita.
+	\item Per modificare la colorazione, so che \texttt{Board} chiama nel suo costruttore il metodo \texttt{public void paint()}, quindi lo aggiungo a \texttt{MyBoard} per poterlo ridefinire.
+	\item Clicco su \texttt{public void paint()} e mi si apre un diagramma delle attività vuoto.
+	\item Clicco su \textsc{new block}, poi scelgo \textsc{variable}; mi viene creato un blocchetto in cui posso scegliere una variabile nello \emph{scope} della classe. Scelgo la variabile \texttt{super}; su questo blocchetto clicco \textsc{use method}, poi scelgo \texttt{paint()}, per avere già le caselle colorate in bianco e nero (in fin dei conti, voglio solo modificare quattro caselle e lasciare le altre invariate).
+	\item Dopo il blocco \texttt{super.paint();}, clicco ancora su \textsc{new block} e scelgo \textsc{for}. Mi viene chiesto l'intervallo da fornire al ciclo for e scelgo l'intervallo $[1, 8]$.
+	\item All'interno del ciclo for, clicco \textsc{new block} e scelgo \textsc{if} per selezionare solo le caselle pari; la condizione dell'if è un blocco variabile; il mio \emph{scope} comprende ora l'indice \texttt{i} del ciclo for, quindi seleziono la variabile \texttt{i} e su di essa clicco \textsc{use operation}, poi seleziono l'operazione modulo (\texttt{\%}, che necessita di un operando) e le fornisco il numero $2$ come operando\footnote{qualsiasi \emph{scope} comprende tutti i letterali numerici e alfabetici, visti come oggetti immutabili.}. (Si potrebbe anche fornire la possibilità di riempire direttamente la condizione del blocco in un formato testuale.) % la metto vaga
+	\item All'interno dell'if, clicco su \textsc{new block}, poi \textsc{variabile} e questa volta uso la variabile \texttt{this}, su cui invoco il metodo \texttt{setCellColor(int row, int col, String RedGreenBlue)} (ereditato e non ridefinito); a questo metodo fornisco i tre parametri \texttt{4}, \texttt{i} e \texttt{"FF0"}: così ho cambiato le celle pari della riga 4; per la riga 5 basterà cambiare il parametro \texttt{row} dopo aver creato un nuovo ciclo for.
+	\item Esco dal diagramma delle attività del costruttore e torno a quello delle classi.
+	\item Ora che ho modificato il colore, osservo che non è difficile modificare anche il \emph{comportamento} del mio gioco: basta ridefinire metodi, aggiungerne di nuovi (e chiamarli nel costruttore) o configurare il gioco tramite metodi già ereditati. Ad esempio, potrei decidere di modificare il numero di secondi disponibili ai giocatori per fare una mossa, tramite una chiamata a \texttt{public void setCounter(int s)} su ogni \texttt{Player}. Oppure, potrei modificare il comportamento di un particolare tipo di pezzo (il pedone, ad esempio) andando a ridefinire il suo metodo \texttt{move()}. O ancora, potrei introdurre una regola globale aggiungendo un oggetto di tipo \texttt{Rule} alla mia classe \texttt{ScacchiSpeciali}; questa classe sarà un thread il cui metodo \texttt{run}, opportunamente ridefinito, potrebbe controllare se vale una certa condizione speciale e modificare il gioco di conseguenza.
+	\item Infine, salvo il mio diagramma delle classi (che si tira dietro tutti i suo diagrammi delle attività) e l'applicazione mi restituisce un file XML e un file \emph{.jar}. Potrò usare il primo per modificare il mio programma, mentre il secondo sarà un'applicazione Java potenzialmente compilabile e, se sviluppata in modo corretto dall'utente, eseguibile.
+\end{enumerate}
 \end{document}
 
 
