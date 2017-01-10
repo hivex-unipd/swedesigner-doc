@@ -156,9 +156,9 @@ Il presente documento si divide in tre sezioni principali:
 	% La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard \gloss{UML} 2.0:
 	% \begin{itemize}
 		% \item \gloss{Diagramma delle classi}: descrive i tipi di entità(classi) e le relazioni tra loro.
-		% \item \gloss{Diagramma dei package}: raggruppa un numero di elementi \gloss{UML} in una sola unità di livello più alto.
+		% \item Diagramma dei package: raggruppa un numero di elementi \gloss{UML} in una sola unità di livello più alto.
 		% \item \gloss{Diagramma di attività}: descrive in dettaglio un algoritmo
-		% \item \gloss{Diagramma di sequenza}: descrive uno \gloss{scenario}, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
+		% \item Diagramma di sequenza: descrive uno \gloss{scenario}, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 	% \end{itemize}
 	\subsubsection{Codifica} \label{sec:cod}
 	% stessa cosa di sopra
@@ -188,7 +188,7 @@ Il presente documento si divide in tre sezioni principali:
 		
 		Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in \gloss{Latex} delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
 		\paragraph{Astah}
-		L'\gloss{editor} \gloss{UML} che gli analisti dovranno usare è \gloss{Astah}, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
+		L'\gloss{editor} \gloss{UML} che gli analisti dovranno usare è \gloss{Astah}, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e \gloss{package}).
 
 
 %%% Processi di supporto
@@ -197,7 +197,7 @@ Il presente documento si divide in tre sezioni principali:
 I processi normati in questa sezione hanno la funzione di supportare gli altri processi, fornendo istruzioni utili alla stesura dei documenti e alla loro verifica.
 
 \subsection{Documentazione} \label{sec:doc}
-La \gloss{documentazione} di progetto va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}.
+La documentazione del progetto (ossia tutto ciò che documenta le attività di un progetto) va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}.
 
 I documenti che svilupperemo sono i seguenti:
 \begin{itemize}
@@ -344,7 +344,7 @@ La configurazione del nostro software si compone dei seguenti elementi:
 	\item directory contenenti codice sorgente e materiale correlato;
 	\item singoli file contenenti un documento.
 \end{itemize}
-Ogni elemento della configurazione (quindi la directory per il codice e il singolo file per i documenti) deve avere un numero di versionamento, che lo identifica nel tempo. Tale numero si compone di tre numeri separati da un punto: il primo viene incrementato ad ogni \textbf{approvazione} dell'elemento da parte del responsabile di progetto; il secondo ad ogni sua \textbf{revisione} da parte di un \gloss{verificatore}; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso. L'incremento di un numero azzera i numeri alla sua destra.
+Ogni elemento della configurazione (quindi la directory per il codice e il singolo file per i documenti) deve avere un numero di versionamento, che lo identifica nel tempo. Tale numero si compone di tre numeri separati da un punto: il primo viene incrementato ad ogni \textbf{approvazione} dell'elemento da parte del responsabile di progetto; il secondo ad ogni sua \textbf{revisione} da parte di un verificatore; il terzo ad ogni \textbf{aggiunta o modifica} sostanziale ad esso. L'incremento di un numero azzera i numeri alla sua destra.
 
 \subsubsection{Controllo della configurazione} I cambiamenti \emph{sostanziali} nella configurazione del software vanno controllati e registrati; essi possono nascere dal piano di progetto o dall'iniziativa di un membro.
 \paragraph{Cambiamenti pianificati} I cambiamenti pianificati nascono dal piano di progetto. In questo caso il cambiamento è già controllato quindi basta registrarlo aggiornando il numero di versionamento dell'elemento che è cambiato nella configurazione.
@@ -481,7 +481,7 @@ Una comunicazione tra i membri del gruppo è essenziale per la buona riuscita di
 \begin{itemize}
 	\item invio e ricezione istantanea di messaggi;
 	\item storico dei messaggi inviati;
-	\item possibilità di avere notifiche \gloss{push} sia in ambiente desktop che smartphone;
+	\item possibilità di avere notifiche push sia in ambiente desktop che smartphone;
 	\item comunicazione tra tutti i membri del gruppo.
 \end{itemize}
 Tra i prodotti valutati, la scelta è ricaduta su \gloss{Slack}, una piattaforma di comunicazione pensata appositamente per gruppi di lavoro, in grado di soddisfare ampiamente le richieste sopra elencate. Tra le funzionalità offerte più interessanti notiamo:

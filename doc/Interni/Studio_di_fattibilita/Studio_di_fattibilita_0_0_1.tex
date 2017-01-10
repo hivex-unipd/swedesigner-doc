@@ -1,18 +1,16 @@
-% Studio di Fattibilita
+% Studio di Fattibilità
 % da compilare con il comando pdflatex Studio_di_Fattibilita_x.x.x.tex
 
 \input{../../util/hx-ambiente}
 
-\version{0.0.1}
+\version{1.0.0}
 \creaz{20 dicembre 2016}
 \author{\AZ}
 \supervisor{\LS}
 \uso{interno}
 \dest{\TV, \RC}
 \title{Studio di Fattibilità}
-
-\usepackage{hyperref}
-\hypersetup{hidelinks}
+\date{9 gennaio 2017}
 
 \begin{document}
 \maketitle
@@ -60,8 +58,8 @@
 		Lo scopo principale del capitolato è quello di realizzare un'\gloss{applicazione web} composta da almeno due disegnatori
 		ed un coordinatore, che permetta all'utente di costruire diagrammi \gloss{UML} rappresentativi del prodotto da svilupparsi e generi a partire da essi codice 
 		\gloss{Java} o \gloss{Javascript}.
-		\\In particolare l'editor dovrebbe concentrarsi su uno specifico dominio applicativo (l'esempio fornito nel capitolato d'appalto è relativo ai software 
-		di giochi da tavolo) per andare a costituire una sorta di framework per la produzione della relativa famiglia di prodotti.
+		\\In particolare l'\gloss{editor} dovrebbe concentrarsi su uno specifico dominio applicativo (l'esempio fornito nel capitolato d'appalto è relativo ai software 
+		di giochi da tavolo) per andare a costituire una sorta di \gloss{framework} per la produzione della relativa famiglia di prodotti.
 		
 		
 		Lo scopo profondo del capitolato è quello di analizzare quali diagrammi \gloss{UML} siano i più adatti allo scopo di descrivere l'architettura 
@@ -75,7 +73,7 @@
 			\paragraph{Dominio applicativo} Il dominio applicativo del seguente capitolato riguarda l'ambito della generazione di codice a partire dal linguaggio \gloss{UML}. Il prodotto si rivolge quindi, ad un target di programmatori interessati alla creazione di programmi appartenenti all'ambito dei giochi da tavolo. I clienti verranno guidati durante il percorso di realizzazione del proprio prodotto, ma dovranno possedere una certa esperienza e conoscenza nell'ambito della programmazione software, del linguaggio \gloss{UML} e dei suoi diagrammi.
 			
 			\paragraph{Dominio tecnologico}
-			Il capitolato richiede che il sistema sia realizzato con tecnologie Web. In particolare la parte server deve essere realizzata in \gloss{Java} con il \gloss{server} 
+			Il capitolato richiede che il sistema sia realizzato con tecnologie Web. In particolare la parte \gloss{server} deve essere realizzata in \gloss{Java} con il \gloss{server} 
 			\gloss{Tomcat} o in \gloss{Javascript} con il \gloss{server} \gloss{Node.js}. La parte \gloss{client}, invece, deve essere eseguibile in un browser \gloss{HTML5} ed utilizzare fogli di stile \gloss{CSS} per 
 			l'aspetto estetico e \gloss{JavaScript} per la parte attiva.
 		
@@ -148,7 +146,7 @@
 		dell'azienda zero12. Il progetto dovrebbe comporsi di tre parti ben distinte: 
 		\begin{itemize}
 			\item un'interfaccia web per permettere all'utente di interagire con l'utilizzatore del sistema;
-			\item un'interfaccia per trasmettere informazioni attraverso il canale comunicativo aziendale Slack;
+			\item un'interfaccia per trasmettere informazioni attraverso il canale comunicativo aziendale \gloss{Slack};
 			\item un sistema che sfrutti gli \gloss{AWS} per l'interazione con le \gloss{API} dell'assistente virtuale scelto.
 		\end{itemize}
 		Il capitolato si configura pertanto sia come un'indagine su ulteriori ambiti di integrazione di tali tecnologie, sia come la dimostrazione 
@@ -162,17 +160,17 @@
 			\paragraph{Dominio tecnologico}
 			Fra le tecnologie con cui è richiesto confrontarsi per la realizzazione di tale progetto vi sono:
 			\begin{itemize}
-				\item i servizi offerti dall'infrastruttura degli \gloss{AWS};
+				\item i servizi offerti dall'\gloss{infrastruttura} degli \gloss{AWS};
 				\item database \gloss{NoSQL} per la memorizzazione e l'analisi delle informazioni raccolte nel corso delle interazioni con il cliente;
 				\item linguaggio di programmazione \gloss{Node.js};
-				\item il sistema di comunicazione aziendale Slack;
+				\item il sistema di comunicazione aziendale \gloss{Slack};
 				\item gli \gloss{SDK} dei principali assistenti virtuali sul mercato, quali Cortana, Siri e Google Home.
 			\end{itemize}
 		\subsubsection{Aspetti positivi e negativi}
 		Fra i lati positivi del capitolato figurano:
 		\begin{itemize}
 			\item l'offerta di formazione da parte dell'azienda sulle principali tecnologie;
-			\item la possibilità di lavorare con il supporto di un server dedicato configurato tramite gli \gloss{AWS}.
+			\item la possibilità di lavorare con il supporto di un \gloss{server} dedicato configurato tramite gli \gloss{AWS}.
 		\end{itemize}
 		Le criticità piu importati riguardano:
 		\begin{itemize}
@@ -197,7 +195,7 @@
 			\item disegnare gli scenari di danno che possono colpire l'azienda;
 			\item ottenere dei risultati di analisi relativamente a tali scenari di rischio.
 		\end{itemize}
-		Quest'ultimo punto verrebbe attuato utilizzando il database per le situazioni di danno dell'azienda e il server di analisi, sempre di proprietà dell'azienda,
+		Quest'ultimo punto verrebbe attuato utilizzando il database per le situazioni di danno dell'azienda e il \gloss{server} di analisi, sempre di proprietà dell'azienda,
 		che opera utilizzando un algoritmo proprietario.
 		\\L'applicazione deve inoltre garantire un corretto funzionamento su desktop, tablet e dispositivi mobile e utilizzare \gloss{API} e database proprietari dell'azienda.
 		\subsubsection{Studio del dominio}
@@ -210,9 +208,9 @@
 			adeguati per valutare il rischio legato all'interruzione dei lavori per cause esterne. Molte aziende infatti si appoggiano al servizio 
 			RiskApp, alcune delle quali di notevole importanza nel ramo assicurazioni.
 			\paragraph{Dominio tecnologico}
-			Nonostante la relativa libertà nell'utilizzo dello stack tecnologico le tecnologie proposte sono:
+			Nonostante la relativa libertà nell'utilizzo dello \gloss{stack} tecnologico le tecnologie proposte sono:
 			\begin{itemize}
-				\item gli \gloss{AWS} come servizio per l'organizzazione di un server entro cui far operare l'applicativo;
+				\item gli \gloss{AWS} come servizio per l'organizzazione di un \gloss{server} entro cui far operare l'applicativo;
 				\item \gloss{Django}, come \gloss{framework} in \gloss{Python} per la realizzazione del front-end dell'applicativo;
 				\item \gloss{PostgreSQL}, per la realizzazione del database di appoggio del software;
 				\item Librerie e \gloss{framework} quali \gloss{Bootstrap} e \gloss{React.js} per la creazione di interfacce utente, \gloss{hammer.js} e \gloss{Yeoman};
@@ -234,7 +232,7 @@
 		\subsubsection{Descrizione}
 		Il progetto prevede la realizzazione di un'applicazione per dispositivi mobili in ambiente Android che agevoli, grazie all'uso di appropriate tecnologie, 
 		la lettura da parte di persone affette da dislessia.
-		\\La proposta richiede inoltre che l'applicativo, indifferentemente un lettore di ebook o un client di messaggistica, utilizzi un motore di sintesi 
+		\\La proposta richiede inoltre che l'applicativo, indifferentemente un lettore di ebook o un \gloss{client} di messaggistica, utilizzi un motore di sintesi 
 		vocale come ausilio alla lettura, evidenziando le parole del testo, in modo sincronizzato con l'audio sintetizzato. 
 		\\Un'ulteriore funzionalità da fornire, considerata molto utile per persone affette da dislessia, consiste nella la possibilità di 
 		modificare la visualizzazione del contenuto da leggere attraverso l'uso di particolari sistemi di colori, spaziature fra lettere, differenti dimensioni 
@@ -255,7 +253,7 @@
 			\item l'utilizzo di un servizio di sintesi vocale, con consiglio per il motore di sintesi “Flexible and Adaptive Text-To-Speech”.
 			\end{itemize}
 			Nel caso si proceda allo sviluppo di un ebook reader, il proponente consiglia di utilizzare una libreria di terze parti preferibilmente 
-			\gloss{open source} per accedere al contenuto. Allo stesso modo, nel caso in cui si decida di estendere le funzionalità di un client di messaggistica, 
+			\gloss{open source} per accedere al contenuto. Allo stesso modo, nel caso in cui si decida di estendere le funzionalità di un \gloss{client} di messaggistica, 
 			si suggerisce di partire da uno già esistente, possibilmente \gloss{open source}.
 		\subsubsection{Aspetti positivi e negativi}
 		Tra le criticità è stato evidenziato il fatto che in tale capitolato ci sia da sviluppare un applicazione per dispositivi mobili.
@@ -272,7 +270,7 @@
 		Lo scopo del capitolato è quello di realizzare un \gloss{framework} che consenta agli sviluppatori di creare in modo relativamente semplice delle 
 		interactive bubbles in grado di integrarsi con l'ambiente l'applicazione di messagistica Rocket.chat.
 		\\Una interactive bubble viene intesa dal proponente come una sorta di mini-applicativo autonomo all'interno del canale di comunicazione 
-		che consente di arricchire di funzionalità il client di messaggistica in uso e condividere informazioni complesse e strutturate. 
+		che consente di arricchire di funzionalità il \gloss{client} di messaggistica in uso e condividere informazioni complesse e strutturate. 
 		\\A scopo dimostrativo occorre includere delle bolle interattive predefinite pronte da essere utilizzate da parte degli utenti finali.
 		
 		\subsubsection{Studio del dominio}
@@ -289,7 +287,7 @@
 			\paragraph{Dominio tecnologico}
 			Le tecnologie da utilizzarsi nel progetto sono le seguenti:
 			\begin{itemize}
-				\item \gloss{Javascript} versione 6 per la versione dimostrativa da mostrare al proponente e il {framework} finale;
+				\item \gloss{Javascript} versione 6 per la versione dimostrativa da mostrare al proponente e il \gloss{framework} finale;
 				\item \gloss{framework} quali \gloss{Angular.js} e \gloss{React.js} sono consigliati per la realizzazione del front-end dell'applicazione;
 				\item \gloss{SCSS} per l'interfaccia utente.
 			\end{itemize}
