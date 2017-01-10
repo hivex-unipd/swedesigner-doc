@@ -35,7 +35,7 @@ Le convenzioni qui riportate hanno lo scopo di:
 	\item garantire ordine all'interno dei documenti e delle varie parti della configurazione del prodotto;
 	\item mantenere coerenza nelle notazioni e nelle procedure;
 	\item minimizzare i conflitti tra i vari ruoli;
-	\item garantire che l'infrastruttura di lavoro sia il più possibile semplice e gestibile --- quindi fruibile.
+	\item garantire che l'\gloss{infrastruttura} di lavoro sia il più possibile semplice e gestibile --- quindi fruibile.
 \end{itemize}
 
 \subsection{Struttura del documento}
@@ -154,12 +154,12 @@ Il presente documento si divide in tre sezioni principali:
 	% teniamo questo per una revisione successiva
 	La sezione sulla progettazione (norme e strumenti) verrà stesa nella prossima una versione successiva di questo documento.
 	% Il compito dei progettisti consiste di progettare l'architettura del software. % da completare.
-	% La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard UML 2.0:
+	% La fase di progettazione deve utilizzare come diagrammi \gloss{UML} quelli sotto descritti,in riferimento allo standard \gloss{UML} 2.0:
 	% \begin{itemize}
 		% \item \gloss{Diagramma delle classi}: descrive i tipi di entità(classi) e le relazioni tra loro.
-		% \item \gloss{Diagramma dei package}: raggruppa un numero di elementi UML in una sola unità di livello più alto.
+		% \item \gloss{Diagramma dei package}: raggruppa un numero di elementi \gloss{UML} in una sola unità di livello più alto.
 		% \item \gloss{Diagramma di attività}: descrive in dettaglio un algoritmo
-		% \item \gloss{Diagramma di sequenza}: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
+		% \item \gloss{Diagramma di sequenza}: descrive uno \gloss{scenario}, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 	% \end{itemize}
 	\subsubsection{Codifica} \label{sec:cod}
 	% stessa cosa di sopra
@@ -185,11 +185,11 @@ Il presente documento si divide in tre sezioni principali:
 		% \end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
-		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. %Gli analisti possono accedervi via browser collegandosi al server creato dal gruppo all'indirizzo \url{http://ec2-54-93-172-72.eu-central-1.compute.amazonaws.com} tramite autenticazione.
+		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. %Gli analisti possono accedervi via browser collegandosi al \gloss{server} creato dal gruppo all'indirizzo \url{http://ec2-54-93-172-72.eu-central-1.compute.amazonaws.com} tramite autenticazione.
 		
 		Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in \LaTeX{} delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
 		\paragraph{Astah}
-		L'editor \gloss{UML} che gli analisti dovranno usare è \gloss{Astah}, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
+		L'\gloss{editor} \gloss{UML} che gli analisti dovranno usare è \gloss{Astah}, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
 
 
 %%% Processi di supporto
@@ -255,7 +255,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	dove $x.y.z$ è il numero di versionamento: ogni versione di un documento è identificata univocamente dal nome del file e da una seconda stringa con il numero di versionamento che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
 	\item I file \LaTeX{} che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla "hx-" (per rimarcare che sono librerie create dal gruppo).
 \end{itemize}
-\paragraph{Formato} Ogni documento dev'essere in formato \LaTeX{} con estensione \texttt{.tex} (esportabile in formato PDF su foglio A4); la prima \gloss{versione} di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX. I file \LaTeX che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla "hx-" (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne "hx-ambiente", per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
+\paragraph{Formato} Ogni documento dev'essere in formato \LaTeX{} con estensione \texttt{.tex} (esportabile in formato \gloss{PDF} su foglio A4); la prima \gloss{versione} di un documento può essere in altri formati ma va presto sostituita da una versione in \LaTeX. I file \LaTeX che definiscano delle \gloss{macro} o diano istruzioni di stile iniziano con la sigla "hx-" (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne "hx-ambiente", per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
 
 \subsubsection{Struttura di un documento}
 \paragraph{Frontespizio} Ogni documento che sia più lungo di una pagina deve iniziare con un frontespizio recante: 
@@ -311,7 +311,7 @@ Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istru
 \begin{itemize}
 	\item \texttt{\textbackslash proj}, il nome del progetto;
 	\item \texttt{\textbackslash hx}, il nome del gruppo;
-	\item \texttt{\textbackslash repo}, l'indirizzo web del repository;
+	\item \texttt{\textbackslash repo}, l'indirizzo web del \gloss{repository};
 	\item \texttt{\textbackslash email}, l'indirizzo e-mail del gruppo;
 	\item \texttt{\textbackslash scopo}, il testo contenenete lo scopo del prodotto (da riportare nell'introduzione di ogni documento);
 	\item \texttt{\textbackslash presgloss}, il testo contenenete le istruzioni per l'uso del glossario (da riportare nell'introduzione di ogni documento);
@@ -333,7 +333,7 @@ Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istru
 
 
 \subsection{Configurazione} \label{sec:config}
-Definiamo la configurazione di un prodotto come l'insieme delle parti di cui si compone e il modo in cui esse interagiscono fra di loro. Per gestire la configurazione del software va utilizzato il sistema \gloss{Git}, appoggiandosi alla piattaforma \gloss{GitHub}. Abbiamo scelto GitHub non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilita ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
+Definiamo la configurazione di un prodotto come l'insieme delle parti di cui si compone e il modo in cui esse interagiscono fra di loro. Per gestire la configurazione del software va utilizzato il sistema \gloss{Git}, appoggiandosi alla piattaforma \gloss{GitHub}. Abbiamo scelto \gloss{GitHub} non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilita ad usare questa piattaforma gratuitamente. Il \gloss{repository} creato all'indirizzo \repo{} si divide nelle seguenti directory:
 \begin{description}
 	\item[\texttt{doc}] per la documentazione;
 	\item[\texttt{src}] per il codice sorgente.
@@ -350,17 +350,17 @@ Ogni elemento della configurazione (quindi la directory per il codice e il singo
 \subsubsection{Controllo della configurazione} I cambiamenti \emph{sostanziali} nella configurazione del software vanno controllati e registrati; essi possono nascere dal piano di progetto o dall'iniziativa di un membro.
 \paragraph{Cambiamenti pianificati} I cambiamenti pianificati nascono dal piano di progetto. In questo caso il cambiamento è già controllato quindi basta registrarlo aggiornando il numero di versionamento dell'elemento che è cambiato nella configurazione.
 \paragraph{Cambiamenti non pianificati} I cambiamenti \emph{non} pianificati nascono dall'iniziativa di un membro. Un cambiamento di questo tipo va proposto agli altri membri del gruppo sull'apposito canale \gloss{Slack}; nel caso la maggioranza sia d'accordo e riesca a fornire una motivazione del cambiamento, il responsabile di progetto incarica un amministratore di implementarlo e motivarlo nella \gloss{documentazione}.
-\paragraph{Branching} Nel caso si debba cambiare un elemento della configurazione da cui dipendono altri elementi --- modificando quindi gli elementi dipendenti --- il membro del gruppo che è stato incaricato di tale cambiamento deve creare un \gloss{branch} nel repository. Un \gloss{branch} (ramo) sottosta alle seguenti regole:
+\paragraph{Branching} Nel caso si debba cambiare un elemento della configurazione da cui dipendono altri elementi --- modificando quindi gli elementi dipendenti --- il membro del gruppo che è stato incaricato di tale cambiamento deve creare un \gloss{branch} nel \gloss{repository}. Un \gloss{branch} (ramo) sottosta alle seguenti regole:
 \begin{itemize}
 	\item Il ramo \texttt{master} contiene solo elementi della configurazione approvati dal responsabile di progetto.
 	\item Il ramo \texttt{doc}, figlio di \texttt{master}, contiene documentazione non ancora approvata dal responsabile di progetto.
 	\item Il ramo \texttt{develop}, figlio di \texttt{master}, contiene codice sorgente non ancora approvato dal responsabile di progetto.
-	\item Il numero di rami va contenuto, affinché Git rimanga uno strumento e non diventi un peso per i membri del gruppo: la creazione di un nuovo ramo può avvenire solo previa autorizzazione del responsabile di progetto, che dovrà valutarne l'utilità.
+	\item Il numero di rami va contenuto, affinché \gloss{Git} rimanga uno strumento e non diventi un peso per i membri del gruppo: la creazione di un nuovo ramo può avvenire solo previa autorizzazione del responsabile di progetto, che dovrà valutarne l'utilità.
 	\item Il \emph{merge} di un ramo va sottoposto ad un verificatore (tramite una \emph{merge request}) e va approvato dal responsabile di progetto.
 \end{itemize}
 
 \subsubsection{Stato della configurazione}
-Nel ramo \texttt{master} del repository va pubblicato lo stato attuale della configurazione, cioè va riportato il numero di versione dell'ultima approvazione formale dell'\emph{intero} software, a partire dalla versione zero (non ancora approvata).
+Nel ramo \texttt{master} del \gloss{repository} va pubblicato lo stato attuale della configurazione, cioè va riportato il numero di versione dell'ultima approvazione formale dell'\emph{intero} software, a partire dalla versione zero (non ancora approvata).
 
 
 
@@ -387,7 +387,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\begin{description} %%% DA RIEMPIRE MAN MANO
 		\item[norme sulla documentazione] i documenti devono rispettare tutte le norme descritte nella sezione \ref{sec:doc};
 		\item[completezza] ogni documento deve riportare tutto il necessario per adempiere al suo scopo, riportato nella sua introduzione;
-		\item[sintassi \LaTeX] il documento deve usare le macroistruzioni definite nei file della directory \texttt{util} del ramo \texttt{doc} del nostro gloss{repository};
+		\item[sintassi \LaTeX] il documento deve usare le macroistruzioni definite nei file della directory \texttt{util} del ramo \texttt{doc} del nostro \gloss{repository};
 		\item[coerenza] le asserzioni di un documento non devono contraddirsi l'un l'altra né contraddire quelle del resto della documentazione.
 	\end{description}
 	\paragraph{Lista di controllo per il codice} Gli elementi da verificare per il codice sorgente sono i seguenti:
@@ -421,7 +421,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 Ogni verifica di una parte della configurazione dev'essere vagliata dal \gloss{responsabile di progetto}; per questo, il responsabile deve controllare i risultati dei test. Egli può approvarli oppure chiedere ai verificatori di ripeterli. L'approvazione determina:
 \begin{itemize}
 	\item l'incremento del numero di versione, secondo le norme in sezione \ref{sec:idvers};
-	\item la pubblicazione dei componenti validati e dei test eseguiti sul ramo \texttt{master} del repository.
+	\item la pubblicazione dei componenti validati e dei test eseguiti sul ramo \texttt{master} del \gloss{repository}.
 \end{itemize}
 
 
@@ -445,10 +445,10 @@ La pianificazione di progetto è uno dei compiti del \gloss{responsabile di prog
 \end{itemize}
 Inizialmente è stata rivolta l'attenzione a \gloss{Trello}, accoppiato ad un servizio esterno chiamato \gloss{EleGantt}; tuttavia nel suo uso iniziale sono sorte diverse criticità:
 \begin{itemize}
-	\item principalmente, la \textbf{mancanza di struttura} che dovrebbe permettere a Trello un lavoro più agile si è rivelata inefficace in fase di pianificazione;
-	\item lo strumento EleGantt, usato per stendere dei \gloss{diagrammi di Gantt} (non nativi in Trello) era troppo limitato nella sua versione gratuita.
+	\item principalmente, la \textbf{mancanza di struttura} che dovrebbe permettere a \gloss{Trello} un lavoro più agile si è rivelata inefficace in fase di pianificazione;
+	\item lo strumento EleGantt, usato per stendere dei \gloss{diagrammi di Gantt} (non nativi in \gloss{Trello}) era troppo limitato nella sua versione gratuita.
 \end{itemize}
-Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \gloss{InstaGantt} (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
+Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \gloss{InstaGantt} (un servizio esterno molto ben integrato con \gloss{Asana}), principalmente per avvalersi delle seguenti funzionalità:
 \begin{itemize}
 	\item creazione di task (compiti);
 	\item organizzazione dei task;
@@ -457,7 +457,7 @@ Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \g
 \subsubsection{Riunioni}
 			Spetta al responsabile di progetto convocare le riunioni quando lo ritiene necessario. È possibile da una qualsiasi persona del team fare richiesta di una riunione al responsabile di progetto. Quest'ultimo poi ha il compito di decidere se è utile svolgerla.  Per informare i membri della riunione si utilizza la piattaforma di comunicazione \gloss{Slack},proponendo una data, un luogo, l'ordine del giorno e chi ha chiesto la riunione. I membri del gruppo devono quindi rispondere tempestivamente per poter confermare la presenza.
 			\paragraph{Riunioni interne}
-				Viene nominato un segretario ad inizio di ogni riunione che ha il compito di scrivere la minuta dell'incontro. A fine riunione deve inoltre redigere un verbale,il quale viene caricato nella repository insieme agli altri documenti per essere disponibile per la lettura ai membri. I partecipanti devono tenere un comportamento adeguato a favore la discussione dell'ordine del giorno.
+				Viene nominato un segretario ad inizio di ogni riunione che ha il compito di scrivere la minuta dell'incontro. A fine riunione deve inoltre redigere un verbale,il quale viene caricato nella \gloss{repository} insieme agli altri documenti per essere disponibile per la lettura ai membri. I partecipanti devono tenere un comportamento adeguato a favore la discussione dell'ordine del giorno.
 			\paragraph{Riunioni esterne}
 				Il responsabile di progetto fissa le riunioni esterne contattando il committente tramite posta elettronica,accordandosi per la data e il luogo da poi riferire ai membri del gruppo.
 				Ad ogni riunione viene chiesto al committente di poter registrare la riunione in modo da poter redigere un verbale accurato e dare la possibilità di riascoltarla anche ad eventuali membri non presenti.Viene nominato anche qui un segretario che scriverà il verbale. Nel caso non fosse stato possibile registrare la riunione il verbale sarà redatto da tutto il team in modo da tralasciare il meno possibile contenuti.
@@ -492,22 +492,22 @@ Tra i prodotti valutati, la scelta è ricaduta su \gloss{Slack}, una piattaforma
 	\item chiamate tra i membri del gruppo; 
 	\item condivisione file tramite drag and drop;
 	\item esistenza di app per smartphone e desktop;
-	\item integrazione con servizi esterni (ad esempio con GitHub).
+	\item integrazione con servizi esterni (ad esempio con \gloss{GitHub}).
 \end{itemize}
 \paragraph{Canali} La possibilità di suddividere le conversazioni in canali è molto potente ma potenzialmente anche dispersiva: avere troppi canali porta a riversare tutta la comunicazione sul canale principale, intasandolo e rendendo la lettura dello storico più complicata. Sono quindi previsti i seguenti canali, con i seguenti scopi:
 \begin{description}
 	\item[\#documents] come strutturare i documenti e problematiche relative all'uso di \LaTeX;
 	\item[\#feasibility] discussione sulla fattibilità dei capitolati;
 	\item[\#general] annunci e comunicazioni riguardanti l'intero gruppo;
-	\item[\#github] problematiche nell'uso di Git, integrazione con GitHub (vedi prossimo paragrafo);
-	\item[\#meta] strutturazione canali di Slack;
+	\item[\#\gloss{github}] problematiche nell'uso di \gloss{Git}, integrazione con \gloss{GitHub} (vedi prossimo paragrafo);
+	\item[\#meta] strutturazione canali di \gloss{Slack};
 	\item[\#project-planning] pianificazione del progetto;
 	\item[\#random] discussioni non inerenti al progetto;
 	\item[\#requirements] problematiche su requisiti e sull'utilizzo di \gloss{PragmaDB}
 	\item[\#test-slack] canale di prova;
 \end{description}
 Il numero di canali non dev'essere più di tre volte il numero di componenti del gruppo; la creazione di canali ulteriori è possibile solo previa archiviazione di canali non più utilizzati.
-\paragraph{Integrazione con GitHub} Slack offre, nella sua versione gratuita, l'integrazione di un massimo di 10 servizi esterni. Un servizio che si è rivelato utile è stato l'integrazione con GitHub: questa crea un bot, inserito nel canale \#github, il quale invia notifiche relative a \gloss{commit}, \gloss{pull request} e attività nei \gloss{GitHub Issues}.
+\paragraph{Integrazione con GitHub} \gloss{Slack} offre, nella sua versione gratuita, l'integrazione di un massimo di 10 servizi esterni. Un servizio che si è rivelato utile è stato l'integrazione con \gloss{GitHub}: questa crea un bot, inserito nel canale \#\gloss{github}, il quale invia notifiche relative a \gloss{commit}, \gloss{pull request} e attività nei \gloss{GitHub Issues}.
 
 
 
@@ -594,17 +594,17 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 	\item[descrizione] è possibile allegare una descrizione, dei file e dei riferimenti che non necessitino di essere tracciati nel \gloss{repository};
 	\item[persona assegnata] ogni task può avere al massimo una persona assegnata, secondo il principio \gloss{DRI}; 
 	\item[data di completamento prevista]
-	\item[data di inizio prevista] (da InstaGantt)
+	\item[data di inizio prevista] (da \gloss{InstaGantt})
 	\item[sottotask] qualora il task non possa essere assegnato esclusivamente ad una persona ma richieda una collaborazione, si spezza il lavoro in frammenti più contenuti, chiamati sottotask. Questi sottotask possono avere a loro volta sottotask ulteriori. L'obiettivo di questa suddivisione è raggiungere una corretta \gloss{WBS}, il più possibile quantificabile;
-	\item[dipendenze tra task] (da InstaGantt) ogni task può necessitare il completamento di un altro task per poterlo iniziare;
-	\item[ore previste] (da InstaGantt)
-	\item[ore effettive] (da InstaGantt)
+	\item[dipendenze tra task] (da \gloss{InstaGantt}) ogni task può necessitare il completamento di un altro task per poterlo iniziare;
+	\item[ore previste] (da \gloss{InstaGantt})
+	\item[ore effettive] (da \gloss{InstaGantt})
 	\item[tag] per tematizzare il task.
 \end{description}
 \paragraph{Organizzazione dei task} Si è adottato il modello \emph{Board}: esso permette di raggruppare i task in colonne, in modo da avere una visione immediata dello stato di ogni documento o codice che è necessario produrre.
 Attualmente sono state create le seguenti colonne:
 \begin{description}
-	\item[Milestone] contiene le milestone decise dal gruppo e quelle obbligatorie, definite dal \TV;
+	\item[Milestone] contiene le \gloss{milestone} decise dal gruppo e quelle obbligatorie, definite dal \TV;
 	\item[Ambiente di sviluppo] contiene dei task assegnati per indagare i migliori strumenti di sviluppo che sono stati adottati dal gruppo;
 	\item[Analisi dei Requisiti] documento richiesto;
 	\item[Piano di Qualifica] documento richiesto;
@@ -622,7 +622,7 @@ Attualmente sono state create le seguenti colonne:
 	\item[Test di sistema] attività di verifica da effettuare.
 \end{description}
 \paragraph{Diagrammi di pianificazione}
-InstaGantt permette di visualizzare i vari task in un asse temporale, producendo così un \gloss{diagramma di Gantt}. 
+\gloss{InstaGantt} permette di visualizzare i vari task in un asse temporale, producendo così un \gloss{diagramma di Gantt}. 
 Vanno rispettate le seguenti convenzioni:
 \begin{itemize}
 	\item Il nome di ogni task o sottotask deve essere univoco; per alcuni task ripetuti, come ad esempio l'incremento di un certo documento, si inserisce in coda la revisione che lo richiede (ad esempio "Incremento Piano di Qualifica [RP]" significa che il piano di qualifica è stato incrementato a causa della deadline della revisione di progettazione del \TV).
@@ -630,13 +630,13 @@ Vanno rispettate le seguenti convenzioni:
 	\item Ogni task di livello superiore che produce un documento possiede il tag \texttt{Documento}; questo task è assegnato all'utente virtuale \texttt{Hivex Team}.
 	\item I vari cicli di incremento vanno pianificati come task appartenenti allo stesso livello.
 \end{itemize}
-La sezione \emph{Workload} in InstaGantt permette di visualizzare i vari task assegnati ad ogni persona; grazie a questo si può analizzare il quantitativo di ore di lavoro impiegato giornalmente, con la possibilità di filtrarlo per ruolo, attraverso l'uso dei tag. Per questo, il responsabile di progetto è tenuto a:
+La sezione \emph{Workload} in \gloss{InstaGantt} permette di visualizzare i vari task assegnati ad ogni persona; grazie a questo si può analizzare il quantitativo di ore di lavoro impiegato giornalmente, con la possibilità di filtrarlo per ruolo, attraverso l'uso dei tag. Per questo, il responsabile di progetto è tenuto a:
 \begin{itemize}
 	\item riallocare task assegnati in caso di indisposizione di uno dei membri;
 	\item controllare la presenza di task non assegnati.
 \end{itemize}
 
-\paragraph{Baseline} Infine è compito del \gloss{Responsabile di Progetto} salvare una \emph{baseline} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
+\paragraph{Baseline} Infine è compito del \gloss{Responsabile di Progetto} salvare una \emph{baseline} del progetto ad ogni \gloss{milestone} raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
 
 \paragraph{\gloss{diagrammi di Gantt}} Non si ritiene inoltre che i \gloss{diagrammi PERT} possano essere efficaci per una rappresentazione immediata dei rischi della pianificazione. Il responsabile di progetto deve, invece, fornire solamente i diagrammi di Gantt con le relative date effettive di completamento.
 
