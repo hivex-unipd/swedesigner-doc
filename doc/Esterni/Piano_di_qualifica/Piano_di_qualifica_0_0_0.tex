@@ -2,15 +2,15 @@
 % da compilare con il comando pdflatex Piano_di_Qualifica_x.x.x.tex
 
 \input{../../util/hx-ambiente}
+\usepackage{float}
 
-\version{1.0.0}
+\version{0.0.1}
 \creaz{28 dicembre 2016}
 \author{\LS, \AZ}
 \supervisor{\GG}
 \uso{esterno}
-\dest{\TV, \ZU}
+\dest{\TV, \RC, \ZU}
 \title{Piano di Qualifica}
-\date{9 gennaio 2017}
 
 \begin{document}
 \maketitle
@@ -34,13 +34,13 @@
 			\item \emph{\NdP};
 			\item \textbf{Capitolato d'Appalto C6: \proj}:
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6p.pdf};
-			\item \textbf{Standard ISO/IEC 12207:2008:}
+			\item \textbf{Standard ISO/IEC 12207:2008}:
 			\\ \url{http://ieeexplore.ieee.org/document/4475826/};
-			\item \textbf{Standard ISO/IEC 15504:}
+			\item \textbf{Standard ISO/IEC 15504}:
 			\\ \url{https://en.wikipedia.org/wiki/ISO/IEC_15504};
-			\item \textbf{Standard ISO/IEC 9126:}
+			\item \textbf{Standard ISO/IEC 9126}:
 			\\ \url{https://it.wikipedia.org/wiki/ISO/IEC_9126};
-			\item \textbf{PDCA(Plan-Do-Check-Act):}
+			\item \textbf{PDCA(Plan-Do-Check-Act)}:
 			\\ \url{https://it.wikipedia.org/wiki/Ciclo_di_Deming}.
 		\end{itemize}
 		
@@ -49,13 +49,13 @@
 			\item \textbf{Analisi dei Requisiti: }\emph{\AdR};
 			\item \textbf{Piano di Progetto: }\emph{\PdP};
 			\item \textbf{Glossario: }\emph{\Glossario};
-			\item \textbf{Indice di Gulpease:}
+			\item \textbf{Indice di Gulpease}:
 			\\ \url{http://it.wikipedia.org/wiki/Indice_Gulpease};
-			\item \textbf{Regole del Progetto Didattico:}
+			\item \textbf{Regole del Progetto Didattico}:
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf};
-			\item \textbf{Slide Qualità del Software:}
+			\item \textbf{Slide Qualità del Software}:
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L10.pdf};
-			\item \textbf{Slide Qualità del Prodotto:}
+			\item \textbf{Slide Qualità del Prodotto}:
 			\\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L11.pdf}.
 		\end{itemize}
 \newpage
@@ -73,53 +73,53 @@
 		 \item \textbf{Livello 1: Attuato} il processo è implementato e raggiunge il suo obiettivo; esiste evidenza di semplice attuazione delle attività 			che lo compongono.
 		Il relativo attributo di processo:
 			\begin{itemize}
-				\item \emph{Esecuzione del Processo:} la misura in cui il processo raggiunge i propri obiettivi trasformando   prodotti in ingresso 						identificabili in prodotti in uscita identificabili.
+				\item \emph{Esecuzione del Processo}: la misura in cui il processo raggiunge i propri obiettivi trasformando   prodotti in ingresso 						identificabili in prodotti in uscita identificabili.
 			\end{itemize}
 		\item \textbf{Livello 2: Gestito} il processo è gestito e i suoi prodotti sono stabiliti, controllati e manutenuti; le attività sono pianificate e 			controllate e il loro svolgimento risulta documentato.
 		I relativi attributi di processo:
 			\begin{itemize}
-				\item \emph{Gestione delle Prestazioni:} la misura in cui il processo produce un risultato coerente con gli obiettivi attesi.
-				\item \emph{Gestione dei Prodotti:} la misura in cui il processo viene gestito per elaborare prodotti documentati, controllati e verificati in modo appropriato.
+				\item \emph{Gestione delle Prestazioni}: la misura in cui il processo produce un risultato coerente con gli obiettivi attesi.
+				\item \emph{Gestione dei Prodotti}: la misura in cui il processo viene gestito per elaborare prodotti documentati, controllati e verificati in modo appropriato.
 			\end{itemize}
  	
 		\item \textbf{Livello 3: Definito} il processo viene eseguito in base ai principi dell'ingegneria del software. Le procedure sono definite e adattate ai progetti e ruoli, competenze e responsabilità sono definiti e controllati.
 		I relativi attributi di processo:
 			\begin{itemize}
-				\item \emph{Definizione del Processo:} la misura in cui il processo raggiunge i risultati attesi aderendo ad un particolare standard di processo.
-				\item \emph{Utilizzo del Processo:} la misura in cui il processo attinge alle risorse allocate per la sua esecuzione.	
+				\item \emph{Definizione del Processo}: la misura in cui il processo raggiunge i risultati attesi aderendo ad un particolare standard di processo.
+				\item \emph{Utilizzo del Processo}: la misura in cui il processo attinge alle risorse allocate per la sua esecuzione.	
 			\end{itemize}
 			
 		\item \textbf{Livello 4: Predicibile} il processo è messo in atto costantemente entro limiti definiti. Le attività che lo compongono, la loro gestione e i relativi risultati sono controllati quantitativamente.
 		I relativi attributi di processo:
 			\begin{itemize}
-				\item \emph{Misurazione del Processo:} la misura in cui il processo utilizza i risultati raggiunti e le misure ricavate durante l'esecuzione per garantire il raggiungimento dei traguardi definiti.
-				\item \emph{Controllo del Processo:} la misura in cui il processo viene controllato tramite la raccolta, l'analisi e la messa in uso di misurazioni di prodotto e processo allo scopo di correggere, ove necessario, la sua esecuzione per raggiungere i risultati attesi.	
+				\item \emph{Misurazione del Processo}: la misura in cui il processo utilizza i risultati raggiunti e le misure ricavate durante l'esecuzione per garantire il raggiungimento dei traguardi definiti.
+				\item \emph{Controllo del Processo}: la misura in cui il processo viene controllato tramite la raccolta, l'analisi e la messa in uso di misurazioni di prodotto e processo allo scopo di correggere, ove necessario, la sua esecuzione per raggiungere i risultati attesi.	
 			\end{itemize}
 
 		\item \textbf{Livello 5: Ottimizzante} il processo è continuativamente migliorato per soddisfare i rilevanti traguardi di business attuali e previsti. I cambiamenti del processo sono valutati e lo studio per il miglioramento è un'attività costante.
 		I relativi attributi di processo:
 			\begin{itemize}
-				\item \emph{Innovazione del Processo:} la misura in cui cambiamenti relativi alla definizione, alla gestione e all'esecuzione del processo sono controllati per raggiungere gli obiettivi di business dell'organizzazione.
-				\item \emph{Ottimizzazione del Processo:} la misura in cui vengono identificati e implementati cambiamenti relativamente all'esecuzione del processo in modo tale da assicurare un miglioramento continuo nel raggiungimento degli obiettivi rilevanti dell'organizzazione.
+				\item \emph{Innovazione del Processo}: la misura in cui cambiamenti relativi alla definizione, alla gestione e all'esecuzione del processo sono controllati per raggiungere gli obiettivi di business dell'organizzazione.
+				\item \emph{Ottimizzazione del Processo}: la misura in cui vengono identificati e implementati cambiamenti relativamente all'esecuzione del processo in modo tale da assicurare un miglioramento continuo nel raggiungimento degli obiettivi rilevanti dell'organizzazione.
 			\end{itemize}
 		\end{itemize}
 
 	Ogni attributo di processo è misurabile e sono definiti dallo standard 4 diversi gradi di possesso:
 	\begin{itemize}
-		\item \textbf{N:} non posseduto (0\% - 15\%);
-		\item \textbf{P:} parzialmente posseduto (16\% - 50\%);
-		\item \textbf{L:} largamente posseduto (51\% - 85\%);
-		\item \textbf{F:} completamente posseduto (86\% - 100\%).
+		\item \textbf{N}: non posseduto (0\% - 15\%);
+		\item \textbf{P}: parzialmente posseduto (16\% - 50\%);
+		\item \textbf{L}: largamente posseduto (51\% - 85\%);
+		\item \textbf{F}: completamente posseduto (86\% - 100\%).
 	\end{itemize}
 
 	Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi sono usate nel contesto di una strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo \gloss{PDCA}.
 	\\Il ciclo \gloss{PDCA}, altresì noto come ciclo di Deming, definisce un'organizzazione interna dei processi incentrata sul principio del miglioramento continuo allo scopo di renderli automigliorativi.
 	\\Le fasi in cui esso si articola sono quattro:
 		\begin{itemize}
-			\item \textbf{Pianificare (Plan):} in tale fase vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
-			\item \textbf{Eseguire (Do):} in questa fase vengono attuate le azioni migliorative pianificate al passo precedente. Si procede inoltre ad eseguire misurazioni e raccogliere dati utili per le successive fasi di analisi e controllo.
-			\item \textbf{Valutare (Check):} si tratta di una fase di verifica in cui l'esito delle azioni di miglioramento viene confrontato rispetto alle attese e agli obiettivi pianificati.
-			\item \textbf{Agire (Act):} se l'esito delle valutazioni effettuate al passo precedente risulta positivo, i cambiamenti introdotti nell'esecuzione del processo vengono incorporati stabilmente in esso e standardizzati.
+			\item \textbf{Pianificare (Plan)}: in tale fase vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
+			\item \textbf{Eseguire (Do)}: in questa fase vengono attuate le azioni migliorative pianificate al passo precedente. Si procede inoltre ad eseguire misurazioni e raccogliere dati utili per le successive fasi di analisi e controllo.
+			\item \textbf{Valutare (Check)}: si tratta di una fase di verifica in cui l'esito delle azioni di miglioramento viene confrontato rispetto alle attese e agli obiettivi pianificati.
+			\item \textbf{Agire (Act)}: se l'esito delle valutazioni effettuate al passo precedente risulta positivo, i cambiamenti introdotti nell'esecuzione del processo vengono incorporati stabilmente in esso e standardizzati.
 		\end{itemize}
 
 		\subsubsection{Procedure per il controllo della qualità di processo}
@@ -178,30 +178,30 @@
 		\end{enumerate}
 		Lo standard analizza la qualità del software sotto tre diversi punti di vista:
 		\begin{itemize}
-			\item \textbf{Qualità interna:} è la qualità del prodotto software che fa riferimento alle caratteristiche implementative del software come l'architettura e il codice derivante da quest'ultima.
-			\item \textbf{Qualità esterna:} è la qualità del prodotto software relativa a quando esso viene eseguito e testato in un ambiente di prova. 
-			\item \textbf{Qualità in uso:} è la qualità del prodotto software dal lato di chi utilizza tale prodotto all'interno di uno specifico sistema.
+			\item \textbf{Qualità interna}: è la qualità del prodotto software che fa riferimento alle caratteristiche implementative del software come l'architettura e il codice derivante da quest'ultima.
+			\item \textbf{Qualità esterna}: è la qualità del prodotto software relativa a quando esso viene eseguito e testato in un ambiente di prova. 
+			\item \textbf{Qualità in uso}: è la qualità del prodotto software dal lato di chi utilizza tale prodotto all'interno di uno specifico sistema.
 		\end{itemize}
 			\paragraph{Modello della qualità del software}
 			Nella prima parte dello standard vengono presentati i modelli per la qualità esterna, interna ed in uso.
 				\subparagraph{Modello della qualità esterna ed interna}
 				Il modello di qualità esterna ed interna sancito nella prima parte dello standard è suddiviso nelle seguenti sei caratteristiche generali misurabili attraverso delle metriche:
 				\begin{itemize}
-					\item \textbf{funzionalità:} è la capacità del software di fornire le funzioni che soddisfano determinate esigenze, necessarie per operare in determinate condizioni. 
-					\item \textbf{affidabilità:} rappresenta la capacità del prodotto software di mantenere uno specifico livello di prestazioni quando viene usato in certe condizioni e per un periodo di tempo determinato.
-					\item \textbf{usabilità:} è la capacità di un prodotto software di essere facilmente comprensibile e attraente in ogni sua parte per un utente qualsiasi. Un software è considerato usabile proporzionalmente alla facilità con cui un utente opera per sfruttare al massimo le funzionalità che il software mette a disposizione.
-					\item \textbf{efficienza:} è la capacità di un prodotto di eseguire le funzioni richieste nel minor tempo possibile ed utilizzando le risorse necessarie nel modo migliore.
-					\item \textbf{manutenibilità:} rappresenta la capacità di un prodotto software di essere modificato in tempi rapidi e a costi accessibili. Le modifiche possono riguardare correzioni o adattamenti del prodotto a variazioni negli ambienti, nei requisiti e nelle specifiche funzionali.
-					\item \textbf{portabilità:} è la capacità di un prodotto software di poter essere spostato da un ambiente all'altro velocemente. L'ambiente include sia aspetti hardware che software.
+					\item \textbf{funzionalità}: è la capacità del software di fornire le funzioni che soddisfano determinate esigenze, necessarie per operare in determinate condizioni. 
+					\item \textbf{affidabilità}: rappresenta la capacità del prodotto software di mantenere uno specifico livello di prestazioni quando viene usato in certe condizioni e per un periodo di tempo determinato.
+					\item \textbf{usabilità}: è la capacità di un prodotto software di essere facilmente comprensibile e attraente in ogni sua parte per un utente qualsiasi. Un software è considerato usabile proporzionalmente alla facilità con cui un utente opera per sfruttare al massimo le funzionalità che il software mette a disposizione.
+					\item \textbf{efficienza}: è la capacità di un prodotto di eseguire le funzioni richieste nel minor tempo possibile ed utilizzando le risorse necessarie nel modo migliore.
+					\item \textbf{manutenibilità}: rappresenta la capacità di un prodotto software di essere modificato in tempi rapidi e a costi accessibili. Le modifiche possono riguardare correzioni o adattamenti del prodotto a variazioni negli ambienti, nei requisiti e nelle specifiche funzionali.
+					\item \textbf{portabilità}: è la capacità di un prodotto software di poter essere spostato da un ambiente all'altro velocemente. L'ambiente include sia aspetti hardware che software.
 				\end{itemize}
 				
 				\subparagraph{Modello della qualità in uso}
 				Gli attributi presenti nel modello relativo alla qualità del software in uso sono rappresentati da quattro grandi categorie:
 				\begin{itemize}
-					\item \textbf{efficacia:} è la capacità di consentire all'utente di raggiungere obiettivi specifici con precisione e completezza.
-					\item \textbf{produttività:} rappresenta la capacità di permettere all'utente di utilizzare un numero stabilito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo.
-					\item \textbf{sicurezza fisica:} è la capacità di raggiungere un livello accettabile di rischio di danni a dati, persone, proprietà o ambienti.
-					\item \textbf{soddisfazione:} rappresenta la capacità di soddisfare gli utenti.
+					\item \textbf{efficacia}: è la capacità di consentire all'utente di raggiungere obiettivi specifici con precisione e completezza.
+					\item \textbf{produttività}: rappresenta la capacità di permettere all'utente di utilizzare un numero stabilito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo.
+					\item \textbf{sicurezza fisica}: è la capacità di raggiungere un livello accettabile di rischio di danni a dati, persone, proprietà o ambienti.
+					\item \textbf{soddisfazione}: rappresenta la capacità di soddisfare gli utenti.
 				\end{itemize}
 			\paragraph{Metriche per la qualità del software}
 			Nelle restanti tre parti vengono trattate le metriche per la qualità esterna, interna e in uso.
@@ -214,9 +214,9 @@
 		\subsubsection{Procedure per il controllo delle qualità di prodotto}
 		Il controllo di qualità del prodotto verrà garantito da:
 		\begin{itemize}
-			\item \textbf{quality assurance:} l'insieme di attività realizzate per garantire il raggiungimento degli obiettivi di qualità. Tali attività prevedono la realizzazione di tecniche di analisi statica e dinamica.
-			\item \textbf{verifica:} il processo che stabilisce se il prodotto in uscita da una fase è consistente, corretto e completo. Per tutta la durata del progetto verranno svolte attività di verifica.
-			\item \textbf{validazione:} la conferma oggettiva che il sistema soddisfa i requisiti.
+			\item \textbf{quality assurance}: l'insieme di attività realizzate per garantire il raggiungimento degli obiettivi di qualità. Tali attività prevedono la realizzazione di tecniche di analisi statica e dinamica.
+			\item \textbf{verifica}: il processo che stabilisce se il prodotto in uscita da una fase è consistente, corretto e completo. Per tutta la durata del progetto verranno svolte attività di verifica.
+			\item \textbf{validazione}: la conferma oggettiva che il sistema soddisfa i requisiti.
 		\end{itemize}
 		\subsubsection{Obiettivi di qualità del prodotto}
 		Gli obiettivi di qualità del software che il gruppo \hx{} desidera raggiungere nell'arco del progetto sono un sottoinsieme di quelli enunciati nello standard ISO/IEC 9126:2001:
@@ -255,14 +255,14 @@
 		\subsubsection{Misure}
 		Le misure raccolte relativamente alle metriche stabilite per valutare la qualità di processi e prodotti vengono rapportate ad una scala che ne stabilisce l'accettabilità o meno. \\In particolare per ogni metrica vengono indicati i seguenti due range:
 			\begin{itemize}
-				\item \textbf{Ottimale:} se il valore misurato rientra in tale range risulta accettabile e indica che l'oggetto sottoposto a verifica ha raggiunto pienamente gli obiettivi di qualità pianificati dal team. \\L'obiettivo è quello che tutti i valori raccolti rientrino all'interno di tale range.
-				\item \textbf{Accettabile:} se il valore misurato rientra in tale range risulta accettabile e indica che l'oggetto sottoposto a verifica ha raggiunto la soglia minima di qualità prevista dal gruppo.
+				\item \textbf{Ottimale}: se il valore misurato rientra in tale range risulta accettabile e indica che l'oggetto sottoposto a verifica ha raggiunto pienamente gli obiettivi di qualità pianificati dal team. \\L'obiettivo è quello che tutti i valori raccolti rientrino all'interno di tale range.
+				\item \textbf{Accettabile}: se il valore misurato rientra in tale range risulta accettabile e indica che l'oggetto sottoposto a verifica ha raggiunto la soglia minima di qualità prevista dal gruppo.
 			\\Risulta implicitamente che valori non rientranti nel range di accettabilità, perché eccessivamente bassi, non sono accettabili e richiedono immediate strategie correttive da parte del gruppo. Quest'ultime servono per porre rimedio agli errori rilevati e per garantire che la qualità del prodotto o processo possa rientrare almeno negli obiettivi di minimo previsti.		
 			\end{itemize}
 	
 
 		\subsubsection{Metriche per i processi}
-			\paragraph{Schedule variance}
+			\paragraph[Schedule variance]{\hypertarget{sv}{Schedule variance}}
 			Tale metrica indica di quanto le macro-attività di progetto si discostano temporalmente rispetto alla pianificazione originaria definita nel documento \PdP . 
 			\\Viene calcolata come la
 differenza fra la data pianificata di fine di un’attività e la data
@@ -274,7 +274,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{-10}$\%;
 				\end{itemize}
 
-			\paragraph{Budget variance}
+			\paragraph[Budget variance]{\hypertarget{bv}{Budget variance}}
 			Tale metrica indica quanto il costo di una particolare attività di progetto si discosta rispetto alla pianificazione originaria definita nel documento \PdP. 
 			\\Viene calcolata come la differenza fra il costo preventivato per un'attività e il costo effettivamente sostenuto per la stessa: un valore di \textit{budget variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più risorse di quanto pianificato: se pari a zero indica invece che essa è perfettamente in linea con i costi previsti mentre se è addirittura strettamente positivo indica che sta procedendo con più efficienza di quanto considerato.
 			\\I range stabiliti per la metrica sono i seguenti:
@@ -283,7 +283,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{-10}$\%;
 				\end{itemize}
 				
-			\paragraph{Produttività di codifica}
+			\paragraph[Produttività di codifica]{\hypertarget{pdc}{Produttività di codifica}}
 			Tale metrica indica il numero medio di linee di codice prodotto per ora/persona, ossia il numero di ore effettive impiegate nell'attività di codifica da parte dei membri del gruppo.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -295,7 +295,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{3}$;
 				\end{itemize}
 				
-			\paragraph{Test di unità eseguiti}
+			\paragraph[Test di unità eseguiti]{\hypertarget{tde}{Test di unità eseguiti}}
 			Tale metrica indica la percentuale di test di unità eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -307,7 +307,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 85-100;
 				\end{itemize}
 				
-			\paragraph{Test di integrazione eseguiti}
+			\paragraph[Test di integrazione eseguiti]{\hypertarget{tie}{Test di integrazione eseguiti}}
 				Tale metrica indica la percentuale di test di integrazione eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -319,7 +319,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 55-100;
 				\end{itemize}
 				
-			\paragraph{Test di sistema eseguiti}
+			\paragraph[Test di sistema eseguiti]{\hypertarget{tse}{Test di sistema eseguiti}}
 			Tale metrica indica la percentuale di test di sistema eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -331,7 +331,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 70-100;
 				\end{itemize}
 				
-			\paragraph{Test di accettazione eseguiti}
+			\paragraph[Test di accettazione eseguiti]{\hypertarget{tae}{Test di accettazione eseguiti}}
 			Tale metrica indica la percentuale di test di accettazione eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -343,7 +343,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 90-100;
 				\end{itemize}
 				
-			\paragraph{Indice di Gulpease}
+			\paragraph[Indice di Gulpease]{\hypertarget{ig}{Indice di Gulpease}}
 			Tale metrica, tarata sulla lingua italiana, misura la qualità di un documento andando a stimarne il grado di leggibilità. Rispetto ad altri indici equivalenti per campo di applicazione ha il vantaggio di esprimere la lunghezza media delle parole in lettere anziché in sillabe --- cosa che ne consente una implementazione automatizzata fortemente affidabile. Tale indice, inoltre, considera principalmente due variabili linguistiche: la lunghezza delle parole e la lunghezza delle frasi in rapporto al numero delle lettere.
 			\\La formula per il calcolo dell'indice di \gloss{Gulpease} è la seguente:
 				\begin{equation}
@@ -362,7 +362,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 40-100;
 				\end{itemize}
 				
-			\paragraph{Copertura del codice}
+			\paragraph[Copertura del codice]{\hypertarget{cco}{Copertura del codice}}
 			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
 			I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
@@ -373,7 +373,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 	\subsection{Metriche per il prodotto}
 		\subsubsection{Funzionalità \label{S1}}
 		Per quanto riguarda l'aspetto funzionale del software, si è scelto di seguire determinate metriche riguardanti il rispetto dei requisiti di maggior importanza, ossia quelli obbligatori e desiderabili.
-			\paragraph{Copertura requisiti obbligatori}
+			\paragraph[Copertura requisiti obbligatori]{\hypertarget{cro}{Copertura requisiti obbligatori}}
 			Questa metrica permette di verificare in ogni momento lo stato dei requisiti obbligatori coperti. Essa rappresenta il rapporto tra i requisiti obbligatori soddisfatti e il numero totale di requisiti obbligatori ricavati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -385,7 +385,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 100-100;
 			\end{itemize}
 			
-			\paragraph{Copertura requisiti desiderabili}
+			\paragraph[Copertura requisiti desiderabili]{\hypertarget{crd}{Copertura requisiti desiderabili}}
 			Tale metrica permette di verificare in ogni momento lo stato dei requisiti desiderabili coperti. Essa rappresenta il rapporto tra i requisiti desiderabili soddisfatti e il numero totale di requisiti desiderabili ricavati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -398,7 +398,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 			\end{itemize}
 		\subsubsection{Affidabilità \label{S2}}
 		Per quanto concerne l'affidabilità del prodotto software, il gruppo ha ritenuto importante la valutazione dei test, i quali ricoprono un ruolo essenziale nel ciclo di vita del software.
-			\paragraph{Test superati}
+			\paragraph[Test superati]{\hypertarget{ts}{Test superati}}
 			Tale metrica indica la percentuale di test superati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -411,7 +411,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 			\end{itemize}
 		\subsubsection{Efficienza \label{S3}}
 		Il gruppo \hx{} ha deciso di seguire metriche relative all'efficienza del software riguardanti taluni vincoli che il codice deve rispettare.
-			\paragraph{Profondità di annidamento}
+			\paragraph[Profondità di annidamento]{\hypertarget{pa}{Profondità di annidamento}}
 			Tale metrica è una misura della profondità di annidamento delle istruzioni condizionali (\textit{if}) o iterative (\textit{for},\textit{while}) in un programma. Istruzioni \textit{if}/cicli \textit{for} profondamente annidati sono difficili da comprendere e portano potenzialmente all'errore.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -419,7 +419,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-10;
 			\end{itemize}
 			
-			\paragraph{Numero di porzioni di codice duplicate}
+			\paragraph[Numero di porzioni di codice duplicate]{\hypertarget{npcd}{Numero di porzioni di codice duplicate}}
 			Tale metrica è una misura del numero di porzioni di codice che sono presenti più volte nel programma. Una porzione di codice è considerata un duplicato non appena compare la stessa sequenza di 10 \gloss{statement}, qualsiasi sia il numero di elementi o di linee che li compongono. Un elevato numero di linee duplicate può essere segno di una programmazione non efficiente.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -428,7 +428,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 			\end{itemize}
 		\subsubsection{Manutenibilità \label{S4}}
 		Per garantire un elevato grado di manutenibilità, si è deciso di adottare un discreto numero di metriche che spaziano su diversi aspetti del programma.
-			\paragraph{Numero di statement per metodo}
+			\paragraph[Numero di statement per metodo]{\hypertarget{nsm}{Numero di statement per metodo}}
 			Tale metrica è una misura del numero di \gloss{statement} di un particolare metodo. Avere un numero di \gloss{statement} per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -436,7 +436,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-50;
 			\end{itemize}
 			
-			\paragraph{Numero di parametri per metodo}
+			\paragraph[Numero di parametri per metodo]{\hypertarget{npm}{Numero di parametri per metodo}}
 			La metrica è la misura del numero totale di parametri formali in ingresso di un particolare metodo. Se il numero di parametri è elevato, lo stack del programma può essere riempito rapidamente in caso di multiple chiamate innestate e il metodo può risultare difficilmente comprensibile e manutenibile; inoltre ciò potrebbe indicare un metodo troppo complesso e non efficacemente suddiviso in sotto-metodi.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -444,7 +444,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-10;
 			\end{itemize}
 			
-			\paragraph{Numero di campi dati per classe}
+			\paragraph[Numero di campi dati per classe]{\hypertarget{ncdc}{Numero di campi dati per classe}}
 			La metrica permette di verificare che il numero di campi dati appartenenti ad una determinata classe rientri tra i valori stabiliti. Questo consente di stimare il grado di manutenibilità e comprensibilità del codice.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -452,7 +452,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-20;
 			\end{itemize}
 			
-			\paragraph{Numero di metodi per classe}
+			\paragraph[Numero di metodi per classe]{\hypertarget{nmc}{Numero di metodi per classe}}
 			Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi \textit{setter} e \textit{getter}.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -460,7 +460,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-30;
 			\end{itemize}
 			
-			\paragraph{Grado di accoppiamento}
+			\paragraph[Grado di accoppiamento]{\hypertarget{ga}{Grado di accoppiamento}}
 			Tale metrica è una misura del numero di dipendenze di una classe con le altre contenute all'interno del suo stesso package. Avere poche dipendenze tra classi implica che ci sia un maggiore grado di disaccoppiamento. Questo aumenta molto la manutenibilità e la comprensibilità del codice.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -468,7 +468,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-7;
 			\end{itemize}
 			
-			\paragraph{Complessità ciclomatica}
+			\paragraph[Complessità ciclomatica]{\hypertarget{cci}{Complessità ciclomatica}}
 			La metrica rappresenta la complessità di funzioni, moduli, metodi o classi di un programma. Essa esprime il numero di cammini linearmente indipendenti presenti all'interno del codice. Alti valori di complessità ciclomatica sottintendono una ridotta manutenibilità del codice. Valori bassi di complessità ciclomatica potrebbero delineare una scarsa efficienza dei metodi.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -485,7 +485,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 1-15;
 			\end{itemize}
 			
-			\paragraph{Lunghezza media di un'unità}
+			\paragraph[Lunghezza media di un'unità]{\hypertarget{lmu}{Lunghezza media di un'unità}}
 			La metrica è una misura della dimensione media di una particolare unità in termini di linee di codice. Avere unità di grandi dimensioni rende infatti difficoltosa la manutenibilità e la comprensibilità del codice.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -497,7 +497,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 100-500;
 			\end{itemize}
 			
-			\paragraph{Fan-in}
+			\paragraph[Fan-in]{\hypertarget{fi}{Fan-in}}
 			Tale metrica è una misura del numero di funzioni o di metodi che chiamano una certa funzione o metodo.
 			Un alto valore di fan-in per una certa funzione implica che essa è strettamente legata al resto del progetto e che sue eventuali modifiche avranno ampi effetti a catena.
 			\\I range stabiliti per la metrica sono i seguenti:
@@ -506,7 +506,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-20;
 			\end{itemize}
 			
-			\paragraph{Fan-out}
+			\paragraph[Fan-out]{\hypertarget{fo}{Fan-out}}
 			Tale metrica è una misura del numero di funzioni o metodi che sono chiamati da una certa funzione o metodo. Un alto valore di fan-out per una certa funzione suggerisce che la sua complessità generale può essere alta a causa della complessità della logica di controllo necessaria per coordinare i componenti chiamati.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -514,7 +514,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-20;
 			\end{itemize}
 			
-			\paragraph{Rapporto linee di commento su linee di codice}
+			\paragraph[Rapporto linee di commento su linee di codice]{\hypertarget{rlclc}{Rapporto linee di commento su linee di codice}}
 			Tale metrica indica il rapporto, normalizzato fra 0 e 100, tra linee di commento e linee di codice (escludendo le linee vuote).
 			Essa risulta utile per stimare la manutenibilità del codice dal momento che un'adeguata documentazione del codice ne permette una maggiore e più rapida comprensione.
 			\\La misura viene effettuata nel modo seguente:
@@ -527,7 +527,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: $\geq{20}$;
 			\end{itemize}
 			
-			\paragraph{Validazione W3C}
+			\paragraph[]{\hypertarget{vw}{Validazione W3C}}
 			L'\gloss{applicazione web} deve superare correttamente il test di validazione offerto da \gloss{W3C} con un numero di errori gravi pari a zero. Gli avvisi e le inesattezze che non compromettono la funzionalità del sito sono accettate fino a un massimo di 20 per pagina.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -535,41 +535,41 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-20;
 			\end{itemize}
 
-	\begin{table}
+	\begin{table}[H]\footnotesize
 	\begin{tabular}{|l|l|l|}
 	\hline
 	\textbf{Metriche} 						&\textbf{Range Accettazione} &\textbf{Range Ottimale} \\
 	\hline
-	\textbf{Metriche di Processo}					&				&\\
+	\multicolumn{3}{|l|}{\textbf{Metriche di Processo}}\\% & \multicolumn{2}{|l|}{}
 	\hline
-	~~Schedule variance 							&$\geq{-10}$\%	&$\geq{0}$\\
-	~~Budget variance 								&$\geq{-10}$\%	&$\geq{0}$\\
-	~~Produttività di codifica 						&$\geq{10}$		&$\geq{3}$\\
-	~~Test di unità eseguiti						&85-100			&100-100\\
-	~~Test di integrazione eseguiti					&55-100			&70-100\\
-	~~Test di sistema eseguiti						&70-100			&80-100\\
-	~~Test di accettazione eseguiti					&90-100			&100-100\\
-	~~Indice Gulpease								&40-100			&50-100\\
-	~~Copertura del codice							&40-100			&60-100\\
+	~~\hyperlink{sv}{Schedule variance} 							&$\geq{-10}$\%	&$\geq{0}$\\
+	~~\hyperlink{bv}{Budget variance} 								&$\geq{-10}$\%	&$\geq{0}$\\
+	~~\hyperlink{pc}{Produttività di codifica} 						&$\geq{10}$		&$\geq{3}$\\
+	~~\hyperlink{tue}{Test di unità eseguiti}						&85-100			&100-100\\
+	~~\hyperlink{tie}{Test di integrazione eseguiti}					&55-100			&70-100\\
+	~~\hyperlink{tse}{Test di sistema eseguiti}						&70-100			&80-100\\
+	~~\hyperlink{tda}{Test di accettazione eseguiti}					&90-100			&100-100\\
+	~~\hyperlink{ig}{Indice Gulpease}								&40-100			&50-100\\
+	~~\hyperlink{cco}{Copertura del codice}							&40-100			&60-100\\
 	\hline
-	\textbf{Metriche di prodotto}					&				&\\
+	\multicolumn{3}{|l|}{\textbf{Metriche di prodotto}}\\% & \multicolumn{2}{|l|}{}
 	\hline
-	~~Copertura requisiti obbligatori				&100-100		&100-100\\
-	~~Copertura requisiti desiderabili				&40-100			&80-100\\
-	~~Test superati									&90-100			&100-100\\
-	~~Profondità annidamento						&0-10			&0-4\\
-	~~Numero di porzioni di codice duplicate					&-			&-\\
-	~~Numero di statement per metodo				&0-50			&0-20\\
-	~~Numero di parametri per metodo				&0-10			&0-4\\
-	~~Numero di campi dati per classe				&0-20			&0-10\\
-	~~Numero di metodi per classe					&0-30			&0-15\\
-	~~Gradi di accoppiamento						&0-7			&0-3\\
-	~~Complessità ciclomatica						&1-15			&1-10\\
-	~~Lunghezza media di un'unità					&100-500		&100-300\\
-	~~Fan-in										&0-20			&0-5\\
-	~~Fan-out										&0-20			&0-5\\
-	~~Rapporto linee di commento su linee di codice	&$\geq{20}$		&$\geq{30}$\\
-	~~Validazione W3C								&0-20			&0-0\\
+	~~\hyperlink{cro}{Copertura requisiti obbligatori}				&100-100		&100-100\\
+	~~\hyperlink{crd}{Copertura requisiti desiderabili}				&40-100			&80-100\\
+	~~\hyperlink{ts}{Test superati}									&90-100			&100-100\\
+	~~\hyperlink{pa}{Profondità annidamento}						&0-10			&0-4\\
+	~~\hyperlink{npcd}{Numero di porzioni di codice duplicate}					&-			&-\\
+	~~\hyperlink{msm}{Numero di statement per metodo}				&0-50			&0-20\\
+	~~\hyperlink{npm}{Numero di parametri per metodo}				&0-10			&0-4\\
+	~~\hyperlink{mcdc}{Numero di campi dati per classe}				&0-20			&0-10\\
+	~~\hyperlink{nmc}{Numero di metodi per classe}					&0-30			&0-15\\
+	~~\hyperlink{ga}{Gradi di accoppiamento}						&0-7			&0-3\\
+	~~\hyperlink{cci}{Complessità ciclomatica}						&1-15			&1-10\\
+	~~\hyperlink{lmu}{Lunghezza media di un'unità}					&100-500		&100-300\\
+	~~\hyperlink{fo}{Fan-in}										&0-20			&0-5\\
+	~~\hyperlink{fi}{Fan-out}										&0-20			&0-5\\
+	~~\hyperlink{rlclc}{Rapporto linee di commento su linee di codice}	&$\geq{20}$		&$\geq{30}$\\
+	~~\hyperlink{vw}{Validazione W3C}								&0-20			&0-0\\
 	\hline
 	\end{tabular}
 	\caption{Riepilogo delle metriche e dei range di accettazione e ottimali}
@@ -580,10 +580,10 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 	\subsection{Tipi di test}
 	Sono stati individuati quattro tipologie di test:
 	\begin{itemize}
-		\item \textbf{Test di unità [TU]:} test con i quali si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore, quali metodi e funzioni scritte;
-		\item \textbf{Test di integrazione [TI]:} test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari package prodotti, singolarmente o nel loro insieme;
-		\item \textbf{Test di sistema [TS]:} test con i quali si tenta di verificare che il funzionamento e il comportamento dell'architettura siano corretti;
-		\item \textbf{Test di accettazione [TA]:} test per verificare che il prodotto soddisfi le richieste del proponente.
+		\item \textbf{Test di unità [TU]}: test con i quali si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore, quali metodi e funzioni scritte;
+		\item \textbf{Test di integrazione [TI]}: test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari package prodotti, singolarmente o nel loro insieme;
+		\item \textbf{Test di sistema [TS]}: test con i quali si tenta di verificare che il funzionamento e il comportamento dell'architettura siano corretti;
+		\item \textbf{Test di accettazione [TA]}: test per verificare che il prodotto soddisfi le richieste del proponente.
 	\end{itemize}
 	Si sottolinea che la specifica dei test delle diverse tipologie verrà inserita nel presente documento a seguito della fase di progettazione del prodotto in esame.
 
@@ -613,18 +613,18 @@ All'interno di questa sezione vengono riportati gli esiti delle attivit di verif
 		Le attività di verifica automatizzate, invece, sono state svolte calcolando l'indice Gulpease dei 	
 		diversi documenti prodotti attraverso l'uso di appositi strumenti web automatici. 
 		\\I risultati ottenuti sono elencati nella seguente tabella:
-		\begin{table}[h]
+		\begin{table}[H]
 		\begin{tabular}{|l|l|l|}
 		\hline
-		\textbf{Documento} 		&\textbf{Valutazione} &\textbf{Esito} \\
+		\textbf{Documento} 		&\textbf{Valutazione} &\textbf{~~~~~~Esito~~~~~~} \\
 		\hline
-		\PdQ 					&		&Superato\\
-		\NdP 					&		&Superato\\
-		\SdF 					&		&Superato\\	
-		\AdR 					&		&Superato\\
-		\PdQ 					&		&Superato\\
-		\Glossario 				&		&Superato\\
-		\textit{Verbali} 		&		&Superato\\
+		\PdQ 					&		&~~~~~~Superato~~~~~~\\
+		\NdP 					&		&~~~~~~Superato~~~~~~\\
+		\SdF 					&		&~~~~~~Superato~~~~~~\\	
+		\AdR 					&		&~~~~~~Superato~~~~~~\\
+		\PdQ 					&		&~~~~~~Superato~~~~~~\\
+		\Glossario 				&		&~~~~~~Superato~~~~~~\\
+		\textit{Verbali} 		&		&~~~~~~Superato~~~~~~\\
 		\hline
 		\end{tabular}
 		\caption{Esiti del calcolo dell'indice di Gulpease dei documenti consegnati}
@@ -633,7 +633,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attivit di verif
 		\subsubsection{Verifica processo di pianificazione di progetto e processo di verifica e controllo}
 		Per verificare il soddisfacimento degli obiettivi di qualita definiti per tale procesoo, a partire dal 				consultivo redatto nel \PdP sono stati calcolati gli indici di budget variance e schedule variance per 				ogniuna delle attività previste.
 		\\I risultati ottenuti sono elencati nella seguente tabella:	
-		\begin{table}[h]
+		\begin{table}[H]
 		\begin{tabular}{|l|l|l|}
 		\hline
 		\textbf{Documento} 		&\textbf{Schedule variance} &\textbf{Budget variance} \\
