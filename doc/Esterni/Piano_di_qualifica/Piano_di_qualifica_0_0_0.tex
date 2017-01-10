@@ -262,7 +262,7 @@
 	
 
 		\subsubsection{Metriche per i processi}
-			\paragraph{Schedule variance}
+			\paragraph[Schedule variance]{\hypertarget{sv}{Schedule variance}}
 			Tale metrica indica di quanto le macro-attività di progetto si discostano temporalmente rispetto alla pianificazione originaria definita nel documento \PdP . 
 			\\Viene calcolata come la
 differenza fra la data pianificata di fine di un’attività e la data
@@ -274,7 +274,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{-10}$\%;
 				\end{itemize}
 
-			\paragraph{Budget variance}
+			\paragraph[Budget variance]{\hypertarget{bv}{Budget variance}}
 			Tale metrica indica quanto il costo di una particolare attività di progetto si discosta rispetto alla pianificazione originaria definita nel documento \PdP. 
 			\\Viene calcolata come la differenza fra il costo preventivato per un'attività e il costo effettivamente sostenuto per la stessa: un valore di \textit{budget variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più risorse di quanto pianificato: se pari a zero indica invece che essa è perfettamente in linea con i costi previsti mentre se è addirittura strettamente positivo indica che sta procedendo con più efficienza di quanto considerato.
 			\\I range stabiliti per la metrica sono i seguenti:
@@ -283,7 +283,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{-10}$\%;
 				\end{itemize}
 				
-			\paragraph{Produttività di codifica}
+			\paragraph[Produttività di codifica]{\hypertarget{pdc}{Produttività di codifica}}
 			Tale metrica indica il numero medio di linee di codice prodotto per ora/persona, ossia il numero di ore effettive impiegate nell'attività di codifica da parte dei membri del gruppo.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -295,7 +295,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{3}$;
 				\end{itemize}
 				
-			\paragraph{Test di unità eseguiti}
+			\paragraph[Test di unità eseguiti]{\hypertarget{tde}{Test di unità eseguiti}}
 			Tale metrica indica la percentuale di test di unità eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -307,7 +307,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 85-100;
 				\end{itemize}
 				
-			\paragraph{Test di integrazione eseguiti}
+			\paragraph[Test di integrazione eseguiti]{\hypertarget{tie}{Test di integrazione eseguiti}}
 				Tale metrica indica la percentuale di test di integrazione eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -319,7 +319,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 55-100;
 				\end{itemize}
 				
-			\paragraph{Test di sistema eseguiti}
+			\paragraph[Test di sistema eseguiti]{\hypertarget{tse}{Test di sistema eseguiti}}
 			Tale metrica indica la percentuale di test di sistema eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -331,7 +331,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 70-100;
 				\end{itemize}
 				
-			\paragraph{Test di accettazione eseguiti}
+			\paragraph[Test di accettazione eseguiti]{\hypertarget{tae}{Test di accettazione eseguiti}}
 			Tale metrica indica la percentuale di test di accettazione eseguiti.
 			\\La misura viene effettuata nel modo seguente:
 				\begin{equation}
@@ -343,7 +343,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 90-100;
 				\end{itemize}
 				
-			\paragraph{Indice di Gulpease}
+			\paragraph[Indice di Gulpease]{\hypertarget{ig}{Indice di Gulpease}}
 			Tale metrica, tarata sulla lingua italiana, misura la qualità di un documento andando a stimarne il grado di leggibilità. Rispetto ad altri indici equivalenti per campo di applicazione ha il vantaggio di esprimere la lunghezza media delle parole in lettere anziché in sillabe --- cosa che ne consente una implementazione automatizzata fortemente affidabile. Tale indice, inoltre, considera principalmente due variabili linguistiche: la lunghezza delle parole e la lunghezza delle frasi in rapporto al numero delle lettere.
 			\\La formula per il calcolo dell'indice di \gloss{Gulpease} è la seguente:
 				\begin{equation}
@@ -362,7 +362,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 40-100;
 				\end{itemize}
 				
-			\paragraph{Copertura del codice}
+			\paragraph[Copertura del codice]{\hypertarget{cco}{Copertura del codice}}
 			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
 			I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
@@ -373,7 +373,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 	\subsection{Metriche per il prodotto}
 		\subsubsection{Funzionalità \label{S1}}
 		Per quanto riguarda l'aspetto funzionale del software, si è scelto di seguire determinate metriche riguardanti il rispetto dei requisiti di maggior importanza, ossia quelli obbligatori e desiderabili.
-			\paragraph{Copertura requisiti obbligatori}
+			\paragraph[Copertura requisiti obbligatori]{\hypertarget{cro}{Copertura requisiti obbligatori}}
 			Questa metrica permette di verificare in ogni momento lo stato dei requisiti obbligatori coperti. Essa rappresenta il rapporto tra i requisiti obbligatori soddisfatti e il numero totale di requisiti obbligatori ricavati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -385,7 +385,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 100-100;
 			\end{itemize}
 			
-			\paragraph{Copertura requisiti desiderabili}
+			\paragraph[Copertura requisiti desiderabili]{\hypertarget{crd}{Copertura requisiti desiderabili}}
 			Tale metrica permette di verificare in ogni momento lo stato dei requisiti desiderabili coperti. Essa rappresenta il rapporto tra i requisiti desiderabili soddisfatti e il numero totale di requisiti desiderabili ricavati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -398,7 +398,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 			\end{itemize}
 		\subsubsection{Affidabilità \label{S2}}
 		Per quanto concerne l'affidabilità del prodotto software, il gruppo ha ritenuto importante la valutazione dei test, i quali ricoprono un ruolo essenziale nel ciclo di vita del software.
-			\paragraph{Test superati}
+			\paragraph[Test superati]{\hypertarget{ts}{Test superati}}
 			Tale metrica indica la percentuale di test superati.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -411,7 +411,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 			\end{itemize}
 		\subsubsection{Efficienza \label{S3}}
 		Il gruppo \hx{} ha deciso di seguire metriche relative all'efficienza del software riguardanti taluni vincoli che il codice deve rispettare.
-			\paragraph{Profondità di annidamento}
+			\paragraph[Profondità di annidamento]{\hypertarget{pa}{Profondità di annidamento}}
 			Tale metrica è una misura della profondità di annidamento delle istruzioni condizionali (\textit{if}) o iterative (\textit{for},\textit{while}) in un programma. Istruzioni \textit{if}/cicli \textit{for} profondamente annidati sono difficili da comprendere e portano potenzialmente all'errore.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -419,7 +419,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-10;
 			\end{itemize}
 			
-			\paragraph{Numero di porzioni di codice duplicate}
+			\paragraph[Numero di porzioni di codice duplicate]{\hypertarget{npcd}{Numero di porzioni di codice duplicate}}
 			Tale metrica è una misura del numero di porzioni di codice che sono presenti più volte nel programma. Una porzione di codice è considerata un duplicato non appena compare la stessa sequenza di 10 \gloss{statement}, qualsiasi sia il numero di elementi o di linee che li compongono. Un elevato numero di linee duplicate può essere segno di una programmazione non efficiente.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -428,7 +428,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 			\end{itemize}
 		\subsubsection{Manutenibilità \label{S4}}
 		Per garantire un elevato grado di manutenibilità, si è deciso di adottare un discreto numero di metriche che spaziano su diversi aspetti del programma.
-			\paragraph{Numero di statement per metodo}
+			\paragraph[Numero di statement per metodo]{\hypertarget{nsm}{Numero di statement per metodo}}
 			Tale metrica è una misura del numero di \gloss{statement} di un particolare metodo. Avere un numero di \gloss{statement} per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -436,7 +436,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-50;
 			\end{itemize}
 			
-			\paragraph{Numero di parametri per metodo}
+			\paragraph[Numero di parametri per metodo]{\hypertarget{npm}{Numero di parametri per metodo}}
 			La metrica è la misura del numero totale di parametri formali in ingresso di un particolare metodo. Se il numero di parametri è elevato, lo stack del programma può essere riempito rapidamente in caso di multiple chiamate innestate e il metodo può risultare difficilmente comprensibile e manutenibile; inoltre ciò potrebbe indicare un metodo troppo complesso e non efficacemente suddiviso in sotto-metodi.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -444,7 +444,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-10;
 			\end{itemize}
 			
-			\paragraph{Numero di campi dati per classe}
+			\paragraph[Numero di campi dati per classe]{\hypertarget{ncdc}{Numero di campi dati per classe}}
 			La metrica permette di verificare che il numero di campi dati appartenenti ad una determinata classe rientri tra i valori stabiliti. Questo consente di stimare il grado di manutenibilità e comprensibilità del codice.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -452,7 +452,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-20;
 			\end{itemize}
 			
-			\paragraph{Numero di metodi per classe}
+			\paragraph[Numero di metodi per classe]{\hypertarget{nmc}{Numero di metodi per classe}}
 			Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi \textit{setter} e \textit{getter}.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -460,7 +460,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-30;
 			\end{itemize}
 			
-			\paragraph{Grado di accoppiamento}
+			\paragraph[Grado di accoppiamento]{\hypertarget{ga}{Grado di accoppiamento}}
 			Tale metrica è una misura del numero di dipendenze di una classe con le altre contenute all'interno del suo stesso package. Avere poche dipendenze tra classi implica che ci sia un maggiore grado di disaccoppiamento. Questo aumenta molto la manutenibilità e la comprensibilità del codice.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -468,7 +468,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-7;
 			\end{itemize}
 			
-			\paragraph{Complessità ciclomatica}
+			\paragraph[Complessità ciclomatica]{\hypertarget{cci}{Complessità ciclomatica}}
 			La metrica rappresenta la complessità di funzioni, moduli, metodi o classi di un programma. Essa esprime il numero di cammini linearmente indipendenti presenti all'interno del codice. Alti valori di complessità ciclomatica sottintendono una ridotta manutenibilità del codice. Valori bassi di complessità ciclomatica potrebbero delineare una scarsa efficienza dei metodi.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -485,7 +485,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 1-15;
 			\end{itemize}
 			
-			\paragraph{Lunghezza media di un'unità}
+			\paragraph[Lunghezza media di un'unità]{\hypertarget{lmu}{Lunghezza media di un'unità}}
 			La metrica è una misura della dimensione media di una particolare unità in termini di linee di codice. Avere unità di grandi dimensioni rende infatti difficoltosa la manutenibilità e la comprensibilità del codice.
 			\\La misura viene effettuata nel modo seguente:
 			\begin{equation}
@@ -497,7 +497,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 100-500;
 			\end{itemize}
 			
-			\paragraph{Fan-in}
+			\paragraph[Fan-in]{\hypertarget{fi}{Fan-in}}
 			Tale metrica è una misura del numero di funzioni o di metodi che chiamano una certa funzione o metodo.
 			Un alto valore di fan-in per una certa funzione implica che essa è strettamente legata al resto del progetto e che sue eventuali modifiche avranno ampi effetti a catena.
 			\\I range stabiliti per la metrica sono i seguenti:
@@ -506,7 +506,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-20;
 			\end{itemize}
 			
-			\paragraph{Fan-out}
+			\paragraph[Fan-out]{\hypertarget{fo}{Fan-out}}
 			Tale metrica è una misura del numero di funzioni o metodi che sono chiamati da una certa funzione o metodo. Un alto valore di fan-out per una certa funzione suggerisce che la sua complessità generale può essere alta a causa della complessità della logica di controllo necessaria per coordinare i componenti chiamati.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -514,7 +514,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: 0-20;
 			\end{itemize}
 			
-			\paragraph{Rapporto linee di commento su linee di codice}
+			\paragraph[Rapporto linee di commento su linee di codice]{\hypertarget{rlclc}{Rapporto linee di commento su linee di codice}}
 			Tale metrica indica il rapporto, normalizzato fra 0 e 100, tra linee di commento e linee di codice (escludendo le linee vuote).
 			Essa risulta utile per stimare la manutenibilità del codice dal momento che un'adeguata documentazione del codice ne permette una maggiore e più rapida comprensione.
 			\\La misura viene effettuata nel modo seguente:
@@ -527,7 +527,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: $\geq{20}$;
 			\end{itemize}
 			
-			\paragraph{Validazione W3C}
+			\paragraph[]{\hypertarget{vw}{Validazione W3C}}
 			L'\gloss{applicazione web} deve superare correttamente il test di validazione offerto da \gloss{W3C} con un numero di errori gravi pari a zero. Gli avvisi e le inesattezze che non compromettono la funzionalità del sito sono accettate fino a un massimo di 20 per pagina.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
@@ -542,34 +542,34 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 	\hline
 	\multicolumn{3}{|l|}{\textbf{Metriche di Processo}}\\% & \multicolumn{2}{|l|}{}
 	\hline
-	~~Schedule variance 							&$\geq{-10}$\%	&$\geq{0}$\\
-	~~Budget variance 								&$\geq{-10}$\%	&$\geq{0}$\\
-	~~Produttività di codifica 						&$\geq{10}$		&$\geq{3}$\\
-	~~Test di unità eseguiti						&85-100			&100-100\\
-	~~Test di integrazione eseguiti					&55-100			&70-100\\
-	~~Test di sistema eseguiti						&70-100			&80-100\\
-	~~Test di accettazione eseguiti					&90-100			&100-100\\
-	~~Indice Gulpease								&40-100			&50-100\\
-	~~Copertura del codice							&40-100			&60-100\\
+	~~\hyperlink{sv}{Schedule variance} 							&$\geq{-10}$\%	&$\geq{0}$\\
+	~~\hyperlink{bv}{Budget variance} 								&$\geq{-10}$\%	&$\geq{0}$\\
+	~~\hyperlink{pc}{Produttività di codifica} 						&$\geq{10}$		&$\geq{3}$\\
+	~~\hyperlink{tue}{Test di unità eseguiti}						&85-100			&100-100\\
+	~~\hyperlink{tie}{Test di integrazione eseguiti}					&55-100			&70-100\\
+	~~\hyperlink{tse}{Test di sistema eseguiti}						&70-100			&80-100\\
+	~~\hyperlink{tda}{Test di accettazione eseguiti}					&90-100			&100-100\\
+	~~\hyperlink{ig}{Indice Gulpease}								&40-100			&50-100\\
+	~~\hyperlink{cco}{Copertura del codice}							&40-100			&60-100\\
 	\hline
 	\multicolumn{3}{|l|}{\textbf{Metriche di prodotto}}\\% & \multicolumn{2}{|l|}{}
 	\hline
-	~~Copertura requisiti obbligatori				&100-100		&100-100\\
-	~~Copertura requisiti desiderabili				&40-100			&80-100\\
-	~~Test superati									&90-100			&100-100\\
-	~~Profondità annidamento						&0-10			&0-4\\
-	~~Numero di porzioni di codice duplicate					&-			&-\\
-	~~Numero di statement per metodo				&0-50			&0-20\\
-	~~Numero di parametri per metodo				&0-10			&0-4\\
-	~~Numero di campi dati per classe				&0-20			&0-10\\
-	~~Numero di metodi per classe					&0-30			&0-15\\
-	~~Gradi di accoppiamento						&0-7			&0-3\\
-	~~Complessità ciclomatica						&1-15			&1-10\\
-	~~Lunghezza media di un'unità					&100-500		&100-300\\
-	~~Fan-in										&0-20			&0-5\\
-	~~Fan-out										&0-20			&0-5\\
-	~~Rapporto linee di commento su linee di codice	&$\geq{20}$		&$\geq{30}$\\
-	~~Validazione W3C								&0-20			&0-0\\
+	~~\hyperlink{cro}{Copertura requisiti obbligatori}				&100-100		&100-100\\
+	~~\hyperlink{crd}{Copertura requisiti desiderabili}				&40-100			&80-100\\
+	~~\hyperlink{ts}{Test superati}									&90-100			&100-100\\
+	~~\hyperlink{pa}{Profondità annidamento}						&0-10			&0-4\\
+	~~\hyperlink{npcd}{Numero di porzioni di codice duplicate}					&-			&-\\
+	~~\hyperlink{msm}{Numero di statement per metodo}				&0-50			&0-20\\
+	~~\hyperlink{npm}{Numero di parametri per metodo}				&0-10			&0-4\\
+	~~\hyperlink{mcdc}{Numero di campi dati per classe}				&0-20			&0-10\\
+	~~\hyperlink{nmc}{Numero di metodi per classe}					&0-30			&0-15\\
+	~~\hyperlink{ga}{Gradi di accoppiamento}						&0-7			&0-3\\
+	~~\hyperlink{cci}{Complessità ciclomatica}						&1-15			&1-10\\
+	~~\hyperlink{lmu}{Lunghezza media di un'unità}					&100-500		&100-300\\
+	~~\hyperlink{fo}{Fan-in}										&0-20			&0-5\\
+	~~\hyperlink{fi}{Fan-out}										&0-20			&0-5\\
+	~~\hyperlink{rlclc}{Rapporto linee di commento su linee di codice}	&$\geq{20}$		&$\geq{30}$\\
+	~~\hyperlink{vw}{Validazione W3C}								&0-20			&0-0\\
 	\hline
 	\end{tabular}
 	\caption{Riepilogo delle metriche e dei range di accettazione e ottimali}
