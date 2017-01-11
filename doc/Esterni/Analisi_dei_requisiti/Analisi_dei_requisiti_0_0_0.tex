@@ -2,21 +2,28 @@
 % da compilare con il comando pdflatex Analisi_dei_Requisiti_x.x.x.tex
 
 \input{../../util/hx-ambiente}
+\usepackage{hyperref}
+\usepackage{longtable}
+\hypersetup{hidelinks}
 
-\version{1.0.0}
+\version{0.0.0}
 \creaz{19 dicembre 2016}
 \author{\ALL}
 \supervisor{\ALL}
 \uso{esterno}
 \dest{Prof. Tullio Vardanega, Zucchetti S.P.A.}
 \title{Analisi dei Requisiti}
-\date{9 gennaio 2017}
+
+\renewcommand{\arraystretch}{1.5}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 
 \begin{document}
 \maketitle
 \include{diario}
 \tableofcontents
 \listoffigures
+
 \newpage
 
 \newcommand{\myimg}[1]
@@ -98,7 +105,13 @@
 	Il prodotto sviluppato  ha come scopo primario quello di fornire un editor in grado di regimentare e guidare l'utente nella progettazione e nella codifica dell'applicativo desiderato e generare codice eseguibile sulla base delle informazioni contenute nei diagrammi realizzati. 
 	\\In particolare, il software risulterà ottimizzato per la realizzazione di programmi appartenenti ad uno specifico dominio applicativo, quello dei giochi da tavolo.
 	\subsection{Funzioni del prodotto}
-	In dettaglio, le funzionalità e le caratteristiche del prodotto sviluppato garantite dal team \hx{} sono le seguenti:
+	Il progetto sviluppato consiste nella creazione di un applicativo web che possa permettere la creazione di svariati software di un determinato dominio applicativo (i giochi da tavolo). In dettaglio, sarà possibile:
+	\begin{itemize}
+	\item Definire un diagramma delle classi;
+	\item Definire i diagrammi di attività, con alcune modifiche rispetto allo standard, dei metodi descritti nel diagramma delle attività;
+	\item Generare in modo automatico del codice che potrà, qualora l'utente abbia correttamente progettato la sua applicazione, essere compilato ed eseguito senza alcuna modifica.
+	\item Salvare e caricare successivamente il proprio progetto sviluppato con \proj.
+	\end{itemize}
 	\subsection{Caratteristiche degli utenti}
 	Il prodotto \proj{} si rivolge principalmente ad una categoria di utenti ben specifica, quella dei programmatori o, in generale, dei lavoratori impiegati nell'ambito informatico con una conoscenza approfondita e strutturata della programmazione.
 	\\In particolare è richiesto che l'utente dell'editor abbia un certo grado di familiarità con:
@@ -2409,7 +2422,6 @@ l'attore genera l'applicativo;
 l'attore visualizza un messaggio d'errore.	
 \end{itemize}
 
-\section{Requisiti}
 
 \subsection{Requisiti Funzionali}
 \normalsize
@@ -4216,30 +4228,30 @@ Di Vincolo & 7 & 2 & 0\\ \hline
 
 Riportiamo un esempio d'uso della nostra applicazione --- in prima persona, affinché lo stile sia più scorrevole.
 
-Questo appendice \textbf{non costituisce del testo vincolante}: esso è fornito allo scopo di riassumere i casi d'uso esplicitati nelle sezioni precedenti e fornire una visione di massima del \textbf{possibile} prodotto finale.
+Questo appendice \textbf{non costituisce del testo vincolante}: esso è fornito allo scopo di riassumere i casi d'uso esplicitati nelle sezioni precedenti e fornire una visione di massima del \textbf{possibile} prodotto finale. Non si vuole suggerire in \textbf{alcun modo} la possibile implementazione futura, che può discostare dall'esempio descritto.
 
 Un approccio simile si è rivelato utile allo scopo di chiarire i requisiti del cliente in fase di riunione; si riporta quindi il testo discusso con il committente durante un incontro.
 
 \begin{enumerate}
-	\item Accedo all'\gloss{applicazione web} e posso subito scegliere se creare un nuovo gioco o importarne uno.
+	\item Accedo all'applicazione web e posso subito scegliere se creare un nuovo gioco o importarne uno.
 	\item Creo un nuovo gioco.
 	\item Mi viene chiesto il nome: inserisco "ScacchiSpeciali".
-	\item Il \gloss{diagramma delle classi} si popola con una nuova classe \texttt{ScacchiSpeciali}, contenente solo il metodo \texttt{public void static main(String[] args)}; in esso, vi sono già le istruzioni \texttt{ScacchiSpeciali game = new ScacchiSpeciali();} e \texttt{game.start();}, dato che la nostra classe eredita per default dalla classe \texttt{Game} fornita da \proj. Questo codice sarà nascosto all'utente, tuttavia sarà necessario in output.
+	\item Il diagramma delle classi si popola con una nuova classe \texttt{ScacchiSpeciali}, contenente solo il metodo \texttt{public void static main(String[] args)}; in esso, vi sono già le istruzioni \texttt{ScacchiSpeciali game = new ScacchiSpeciali();} e \texttt{game.start();}, dato che la nostra classe eredita per default dalla classe \texttt{Game} fornita da \proj. Questo codice sarà nascosto all'utente, tuttavia sarà necessario in output.
 	\item Per risparmiarmi un po' di lavoro, clicco (in alto) su "importa libreria" e seleziono \texttt{com.hivex.chess}; questa fornisce \textbf{classi}, \textbf{interfacce} e \textbf{prototipi} scritti appositamente per progettare giochi su scacchiere in \proj.
-	\item Ora mi si presenta una barra laterale con un po' di icone. Clicco su quella con il simbolo della scacchiera e la trascino sul mio \gloss{diagramma delle classi}.
-	\item Procedo in questo modo per i seguenti stereotipi: \texttt{Board} (la scacchiera), \texttt{Player} e \texttt{Piece}.
+	\item Ora mi si presenta una barra laterale con un po' di icone. Clicco su quella con il simbolo della scacchiera e la trascino sul mio diagramma delle classi.
+	\item Procedo in questo modo per i seguenti prototipi: \texttt{Board} (la scacchiera), \texttt{Player} e \texttt{Piece}.
 	\item Compaiono dunque queste tre classi; \texttt{Board} ha già due membri di tipo \texttt{Player} e 32 membri di tipo \texttt{Piece}. Inoltre, il costruttore di \texttt{Board} si occupa di istanziare i 32 pezzi con degli opportuni \texttt{new Pawn()}, \texttt{new Queen()} e quant'altro. (Le due righe di pedoni sono generate con un ciclo for.)
 	\item La scacchiera del mio nuovo gioco è uguale ad una scacchiera classica, tranne che le caselle pari delle righe 4 e 5 sono colorate di rosso.
 	\item Estendo \texttt{Board}, creando una nuova classe \texttt{MyBoard} che mi servirà a modificare la scacchiera predefinita.
 	\item Per modificare la colorazione, so che \texttt{Board} chiama nel suo costruttore il metodo \texttt{public void paint()}, quindi lo aggiungo a \texttt{MyBoard} per poterlo ridefinire.
-	\item Clicco su \texttt{public void paint()} e mi si apre un \gloss{diagramma delle attività} vuoto.
+	\item Clicco su \texttt{public void paint()} e mi si apre un diagramma delle attività vuoto.
 	\item Clicco su \textsc{new block}, poi scelgo \textsc{variable}; mi viene creato un blocchetto in cui posso scegliere una variabile nello \emph{scope} della classe. Scelgo la variabile \texttt{super}; su questo blocchetto clicco \textsc{use method}, poi scelgo \texttt{paint()}, per avere già le caselle colorate in bianco e nero (in fin dei conti, voglio solo modificare quattro caselle e lasciare le altre invariate).
 	\item Dopo il blocco \texttt{super.paint();}, clicco ancora su \textsc{new block} e scelgo \textsc{for}. Mi viene chiesto l'intervallo da fornire al ciclo for e scelgo l'intervallo $[1, 8]$.
 	\item All'interno del ciclo for, clicco \textsc{new block} e scelgo \textsc{if} per selezionare solo le caselle pari; la condizione dell'if è un blocco variabile; il mio \emph{scope} comprende ora l'indice \texttt{i} del ciclo for, quindi seleziono la variabile \texttt{i} e su di essa clicco \textsc{use operation}, poi seleziono l'operazione modulo (\texttt{\%}, che necessita di un operando) e le fornisco il numero $2$ come operando\footnote{qualsiasi \emph{scope} comprende tutti i letterali numerici e alfabetici, visti come oggetti immutabili.}. (Si potrebbe anche fornire la possibilità di riempire direttamente la condizione del blocco in un formato testuale.) % la metto vaga
 	\item All'interno dell'if, clicco su \textsc{new block}, poi \textsc{variabile} e questa volta uso la variabile \texttt{this}, su cui invoco il metodo \texttt{setCellColor(int row, int col, String RedGreenBlue)} (ereditato e non ridefinito); a questo metodo fornisco i tre parametri \texttt{4}, \texttt{i} e \texttt{"FF0"}: così ho cambiato le celle pari della riga 4; per la riga 5 basterà cambiare il parametro \texttt{row} dopo aver creato un nuovo ciclo for.
-	\item Esco dal \gloss{diagramma delle attività} del costruttore e torno a quello delle classi.
+	\item Esco dal diagramma delle attività del costruttore e torno a quello delle classi.
 	\item Ora che ho modificato il colore, osservo che non è difficile modificare anche il \emph{comportamento} del mio gioco: basta ridefinire metodi, aggiungerne di nuovi (e chiamarli nel costruttore) o configurare il gioco tramite metodi già ereditati. Ad esempio, potrei decidere di modificare il numero di secondi disponibili ai giocatori per fare una mossa, tramite una chiamata a \texttt{public void setCounter(int s)} su ogni \texttt{Player}. Oppure, potrei modificare il comportamento di un particolare tipo di pezzo (il pedone, ad esempio) andando a ridefinire il suo metodo \texttt{move()}. O ancora, potrei introdurre una regola globale aggiungendo un oggetto di tipo \texttt{Rule} alla mia classe \texttt{ScacchiSpeciali}; questa classe sarà un thread il cui metodo \texttt{run}, opportunamente ridefinito, potrebbe controllare se vale una certa condizione speciale e modificare il gioco di conseguenza.
-	\item Infine, salvo il mio \gloss{diagramma delle classi} (che si tira dietro tutti i suo diagrammi delle attività) e l'applicazione mi restituisce un file XML e un file \emph{.jar}. Potrò usare il primo per modificare il mio programma, mentre il secondo sarà un'applicazione Java potenzialmente compilabile e, se sviluppata in modo corretto dall'utente, eseguibile.
+	\item Infine, salvo il mio diagramma delle classi (che si tira dietro tutti i suo diagrammi delle attività) e l'applicazione mi restituisce un file XML e un file \emph{.jar}. Potrò usare il primo per modificare il mio programma, mentre il secondo sarà un'applicazione Java potenzialmente compilabile e, se sviluppata in modo corretto dall'utente, eseguibile.
 \end{enumerate}
 \end{document}
 
