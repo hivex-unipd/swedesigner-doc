@@ -129,47 +129,46 @@
 
 		\subsubsection{Obiettivi di qualità di processo}
 		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard ISO/IEC 12207:2008 e per ognuno di essi gli obiettivi di qualità perseguiti.
-			\paragraph{Pianificazione di progetto e processo di verifica e controllo }
+			\hyperlink{pppvc}{\paragraph{Pianificazione di progetto e processo di verifica e controllo}}
 			
 			Questo macro-processo, derivato dall'unione dei processi 6.3.1 e 6.3.2 previsti dallo standard ISO/IEC 12207:2008, ha lo scopo di pianificare le attività richieste dal progetto.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 
 				\subparagraph{Rispetto della pianificazione} 
-				Ogni attività di un processo verrà svolta da parte di colui a cui è stata assegnata, rispettando la pianificazione temporale stabilita nel documento \PdP{} e svolgendo tutti i compiti in cui essa si articola.\\(Metrica: {\hyperlink{sv}{schedule variance}}) 
+				Ogni attività di un processo verrà svolta da parte di colui a cui è stata assegnata, rispettando la pianificazione temporale stabilita nel documento \PdP{} e svolgendo tutti i compiti in cui essa si articola. 
 				\subparagraph{Rispetto del budget}   
 				I costi di ogni processo dovranno rientrare nel budget previsto dal documento \PdP.
-				\\(Metrica: {\hyperlink{bv}{budget variance}})
-			\paragraph{Processo di costruzione del software}
+				
+			\hyperlink{pcs}{\paragraph{Processo di costruzione del software}}
 			Il processo, corrispondente al processo 7.1.5 previsto dallo standard ISO/IEC 12207:2008, definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 
 				\subparagraph{Rispetto della produttività di codifica}
 				L'attività di codifica dovrà risultare opportunamente intensa in modo tale da garantire la produzione del sistema software nei tempi previsti.
-				\\(Metrica: {\hyperlink{pc}{produttività di codifica}}) 
+				 
 				
-			\paragraph{Processo di test per la qualifica del software/sistema}
+			\hyperlink{ptqs}{\paragraph{Processo di test per la qualifica del software/sistema}}
 
 			Il macro-processo, derivante dall'unione dei processi 6.4.6 e 7.1.7 dello standard ISO/IEC 12207:2008, ha lo scopo che ogni requisito individuato sia stato implementato nel prodotto.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 
 				\subparagraph{Corretto funzionamento del sistema e integrazione delle componenti}
-				Le funzionalità richieste sono state integrate all'interno di un prodotto software le cui diverse componenti interagiscono fra esse in modo coerente e senza criticità, a formare un sistema coeso e funzionante.\\(Metriche:\hyperlink{tue}{Test di unità eseguiti}, \hyperlink{tie}{Test di integrazione eseguiti}, \hyperlink{tse}{Test di sistema eseguiti}, \hyperlink{tae}{Test di accettazione eseguiti})
-			
-			\paragraph{Processo di gestione della documentazione del software}
+				Le funzionalità richieste sono state integrate all'interno di un prodotto software le cui diverse componenti interagiscono fra esse in modo coerente e senza criticità, a formare un sistema coeso e funzionante.
+			\hyperlink{pgds}{\paragraph{Processo di gestione della documentazione del software}}
 			
 			Il processo, corrispondente al processo 7.2.1 definito dallo standard ISO/IEC 12207:2008, ha lo scopo di produrre e gestire la documentazione relativa alle funzionalità e alle caratteristiche del sistema software prodotto.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 
 				\subparagraph{Leggibilità della documentazione}
-				La documentazione prodotta sarà quanto più chiara e comprensibile a tutti gli \gloss{stakeholder} coinvolti nel progetto.\\(Metrica: \hyperlink{ig}{Indice Gulpease})
+				La documentazione prodotta sarà quanto più chiara e comprensibile a tutti gli \gloss{stakeholder} coinvolti nel progetto.
 			
-			\paragraph{Processo di verifica del software}
+			\hyperlink{pvs}{\paragraph{Processo di verifica del software}}
 			
 			Il processo, corrispondente al processo 7.2.4 definito dallo standard ISO/IEC 12207:2008, ha lo scopo di verificare se qualsiasi elemento del sistema soddisfa i requisiti ad esso correlati.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 
 				\subparagraph{Copertura codice}
-				I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo.\\(Metrica: \hyperlink{cc}{Code Coverage})
+				I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo.
 	
 	\subsection{Qualità di prodotto}
 	Per garantire una buona qualità di prodotto, il gruppo \hx{} ha individuato dallo standard ISO/IEC 9126:2001 le qualità che ritiene di maggior importanza durante il ciclo di vita del prodotto e ha individuato gli obiettivi e le metriche coerenti con i livelli di qualità stabiliti.
@@ -267,7 +266,7 @@
 	
 
 		\subsection{Metriche per i processi}
-		\subsubsection{Pianificazione di progetto e processo di verifica e controllo}
+		\subsubsection[Pianificazione di progetto e processo di verifica e controllo]{\hypertarget{pppvc}{Pianificazione di progetto e processo di verifica e controllo}}
 			\paragraph[Schedule variance]{\hypertarget{sv}{Schedule variance}}
 			Tale metrica indica di quanto le macro-attività di progetto si discostano temporalmente rispetto alla pianificazione originaria definita nel documento \PdP . 
 			\\Viene calcolata come la
@@ -289,8 +288,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{-25}$\%;
 				\end{itemize}
 				
-				\subsection{Processo di costruzione del software}
-				\label{P2}
+				\subsection[Processo di costruzione del software]{\hypertarget{pcs}{Processo di costruzione del software}}
 				
 			\paragraph[Produttività di codifica]{\hypertarget{pc}{Produttività di codifica}}
 			Tale metrica indica il numero medio di linee di codice prodotto per ora/persona, ossia il numero di ore effettive impiegate nell'attività di codifica da parte dei membri del gruppo.
@@ -304,8 +302,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: $\geq{3}$;
 				\end{itemize}
 				
-				\subsection{Processo di test per la qualifica del software/sistema}
-				\label{P3}
+				\subsection[Processo di test per la qualifica del software/sistema]{\hypertarget{ptqs}{Processo di test per la qualifica del software/sistema}}
 				
 			\paragraph[Test di unità eseguiti]{\hypertarget{tue}{Test di unità eseguiti}}
 			Tale metrica indica la percentuale di test di unità eseguiti.
@@ -355,8 +352,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 90-100;
 				\end{itemize}
 			
-			\subsection{Processo di gestione della documentazione del software}
-			\label{P4}
+			\subsection[Processo di gestione della documentazione del software]{\hypertarget{pgds}{Processo di gestione della documentazione del software}}
 				
 			\paragraph[Indice di Gulpease]{\hypertarget{ig}{Indice di Gulpease}}
 			Tale metrica, tarata sulla lingua italiana, misura la qualità di un documento andando a stimarne il grado di leggibilità. Rispetto ad altri indici equivalenti per campo di applicazione ha il vantaggio di esprimere la lunghezza media delle parole in lettere anziché in sillabe --- cosa che ne consente una implementazione automatizzata fortemente affidabile. Tale indice, inoltre, considera principalmente due variabili linguistiche: la lunghezza delle parole e la lunghezza delle frasi in rapporto al numero delle lettere.
@@ -377,8 +373,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 					\item Range di accettazione: 40-100;
 				\end{itemize}
 				
-				\subsection{Processo di verifica del software}
-				\label{P5}
+				\subsection[Processo di verifica del software]{\hypertarget{pvs}{Processo di verifica del software}}
 				
 			\paragraph[Copertura del codice]{\hypertarget{cco}{Copertura del codice}}
 			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
