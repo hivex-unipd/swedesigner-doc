@@ -97,32 +97,34 @@
 \section{Descrizione generale}
 	\subsection{Obiettivo del prodotto}
 	Il prodotto sviluppato ha come scopo primario quello di fornire un editor in grado di supportare e guidare l'utente nella progettazione e nella codifica dell'applicativo desiderato e generare codice eseguibile sulla base delle informazioni contenute nei diagrammi realizzati. 
-	\\In particolare, il software risulterà orientato alla realizzazione di programmi appartenenti ad uno specifico dominio applicativo, quello dei giochi da tavolo.
+
+	In particolare, il software risulterà orientato alla realizzazione di programmi appartenenti ad uno specifico dominio applicativo, quello dei giochi da tavolo.
+
 	\subsection{Funzioni del prodotto}
 	%Il progetto sviluppato consiste nella creazione di un applicativo web che possa permettere la creazione di svariati software di un determinato dominio applicativo (i giochi da tavolo). 
 	In dettaglio, all'interno di \proj{} sarà possibile:
 	\begin{itemize}
-	\item definire un diagramma delle classi;
+	\item definire un \gloss{diagramma delle classi};
 	\item definire i \gloss{diagrammi delle attività} (con alcune modifiche rispetto al diagramma standard) dei metodi descritti nel \gloss{diagramma delle classi};
 	\item generare in modo automatico del codice che potrà, qualora l'utente abbia correttamente progettato la sua applicazione, essere compilato ed eseguito senza bisogno di apportare alcuna modifica a mano.
 	\item salvare e caricare successivamente il proprio progetto sviluppato con \proj.
 	\end{itemize}
 	\subsection{Caratteristiche degli utenti}
-	Il prodotto \proj{} si rivolge principalmente ad una categoria di utenti ben specifica, quella dei programmatori o, in generale, dei lavoratori impiegati nell'ambito informatico con una conoscenza approfondita della programmazione.
-	\\In particolare è richiesto che l'utente dell'editor abbia un certo grado di familiarità con:
-		\begin{itemize}
-			\item Le principali convenzioni della modellazione \gloss{UML}, e più in specifico con i diagrammi delle classi e delle attività;
-			\item Le astrazioni e i paradigmi della programmazione orientata agli oggetti; infatti il linguaggio target di generazione del codice, i diagrammi e le funzionalità offerte suggeriscono un'architettura dell'applicativo da realizzarsi ben strutturata in moduli funzionali specifici e distinti.
-		\end{itemize} 
-	Per garantire inoltre una comprensione accurata e completa dell'insieme di funzionalità implementate il prodotto sarà corredato di un manuale utente completo delle indicazioni necessarie per poterne fruire in modo efficace.
+	Il prodotto \proj{} si rivolge principalmente ad una categoria di utenti ben specifica, quella dei programmatori o, in generale, dei lavoratori impiegati nell'ambito informatico con una buona conoscenza della programmazione.
+
+	In particolare è richiesto che l'utente dell'editor abbia un certo grado di familiarità con:
+	\begin{itemize}
+		\item Le principali convenzioni della modellazione \gloss{UML}, e più in specifico con i \gloss{diagrammi delle classi} e i \gloss{diagrammi delle attività};
+		\item Le astrazioni e i paradigmi della programmazione orientata agli oggetti; infatti il linguaggio target di generazione del codice, i diagrammi e le funzionalità offerte suggeriscono che l'architettura dell'applicativo da realizzarsi sia ben strutturata in moduli funzionali specifici e distinti.
+	\end{itemize}
+	Per garantire inoltre una comprensione accurata e completa dell'insieme di funzionalità implementate, il prodotto sarà corredato di un manuale utente completo delle indicazioni necessarie per poterne fruire in modo efficace.
 	\subsection{Piattaforma di esecuzione}
-	Il prodotto sviluppato risulterà fruibile da qualsiasi piattaforma desktop con operante un browser web compatibile con le tecnologie \gloss{HTML5}, \gloss{CSS3} e \gloss{Javascript}. In particolare l'elenco dei browser web il cui supporto è garantito è contenuto nella sezione relativa ai requisiti di vincolo.
+	Il prodotto sviluppato risulterà fruibile da qualsiasi piattaforma desktop con operante un \gloss{browser} web compatibile con le tecnologie \gloss{HTML5}, \gloss{CSS3} e \gloss{Javascript}. In particolare, l'elenco dei \gloss{browser} il cui supporto è garantito è contenuto nella sezione relativa ai requisiti di vincolo.
 \subsection{Vincoli generali}
     Si tiene conto dei seguenti vincoli:
-    
     \begin{itemize}
-    \item I file prodotti dal programma sono modificabili esclusivamente dal programma stesso. Eventuali modifiche di esso non garantiscono la compatibilità con l'applicativo, che potrà rifiutare il progetto modificato.
-    \item La correttezza di eventuali spezzoni di codice inseriti a mano dall'utente nel linguaggio target sono di pura responsabilità di quest'ultimo.
+    	\item I file prodotti dal programma sono modificabili esclusivamente dal programma stesso. Eventuali modifiche di esso sono possibili ma non garantiscono la compatibilità con l'applicativo, che potrà rifiutare il progetto modificato.
+    	\item La correttezza di eventuali spezzoni di codice inseriti a mano dall'utente nel linguaggio target sono completa responsabilità di quest'ultimo.
     \end{itemize}	
 	
 	
@@ -131,10 +133,10 @@
 \section{Casi d'uso}
 All'interno di questa sezione vengono elencati i casi d'uso rilevanti per il prodotto \proj{} individuati e definiti attraverso l'analisi del capitolato d'appalto, gli incontri con il proponente e le riunioni interne al team \hx{}. 
 
+La struttura e le convenzioni usate in ogni caso d'uso sono specificate all'interno del documento \NdP.
 
+Si noti che, per esigenze tipografiche, è possibile che certe figure siano state posizionate immediatamente dopo l'intera esposizione del caso d'uso. Esse sono comunque rintracciabili tramite il loro identificatore univoco.
 
-
-\\In particolare ogni
 \subsection{UC1: Pagina Iniziale}
 \label{UC1}
 \myimg{UC1 - Pagina Iniziale}
@@ -143,8 +145,8 @@ All'interno di questa sezione vengono elencati i casi d'uso rilevanti per il pro
 \item \textbf{Descrizione}: nella pagina iniziale l'attore crea un nuovo progetto oppure ne apre uno già esistente.
 Successivamente l'attore può:
 	\begin{itemize}
-	\item realizzare e gestire un diagramma delle classi;
-	\item realizzare e gestire un diagramma delle attività per ogni metodo presente nel diagramma delle classi;
+	\item realizzare e gestire un \gloss{diagramma delle classi};
+	\item realizzare e gestire un \gloss{diagramma delle attività} per ogni metodo presente nel \gloss{diagramma delle classi};
 	\item salvare le modifiche apportate al progetto (se questo è stato caricato);
 	\item generare l'applicativo realizzato.
 	\end{itemize}
@@ -154,8 +156,8 @@ Successivamente l'attore può:
 	\begin{enumerate}
 	\item l'attore può aprire un progetto esistente (UC2);
 	\item l'attore può creare un nuovo progetto (UC3);
-	\item l'attore può realizzare e gestire un diagramma delle classi (UC4);
-	\item l'attore può realizzare e gestire un diagramma delle attività per ogni metodo presente nel diagramma delle classi (UC5);
+	\item l'attore può realizzare e gestire un \gloss{diagramma delle classi} (UC4);
+	\item l'attore può realizzare e gestire un \gloss{diagramma delle attività} per ogni metodo presente nel \gloss{diagramma delle classi} (UC5);
 	\item l'attore può salvare il progetto (UC6);
 	\item l'attore può generare l'applicativo realizzato (UC7).
 	\end{enumerate}
@@ -197,15 +199,15 @@ l'attore visualizza un messaggio d'errore riguardo al file inserito(UC2.1).
 l'attore crea un nuovo progetto interagendo con l'editor in uso tramite il comando appropriato.
 \end{itemize}
 
-\subsection{UC4: Realizzazione Diagramma Delle Classi}
+\subsection{UC4: Realizzazione \gloss{Diagramma Delle Classi}}
 \label{UC4}
-\myimgsmall{UC4 - Realizzazione Diagramma delle Classi}
+\myimgsmall{UC4 - Realizzazione \gloss{Diagramma delle Classi}}
 
 \begin{itemize}
 \item \textbf{Attori}: Utente;
-\item \textbf{Descrizione}: l'attore realizza e gestisce un diagramma delle classi con la possibilità di aggiungere nuovi elementi e rimuovere elementi precedentemente inseriti che non corrispondono più alle sue intenzioni di progettazione;
+\item \textbf{Descrizione}: l'attore realizza e gestisce un \gloss{diagramma delle classi} con la possibilità di aggiungere nuovi elementi e rimuovere elementi precedentemente inseriti che non corrispondono più alle sue intenzioni di progettazione;
 \item \textbf{Precondizione}: il sistema è avviato e mostra il contenuto di un progetto;
-\item \textbf{Postcondizione}: il sistema visualizza il diagramma delle classi risultante dalla gestione operata dall'utente;
+\item \textbf{Postcondizione}: il sistema visualizza il \gloss{diagramma delle classi} risultante dalla gestione operata dall'utente;
 \item \textbf{Scenario principale}:
 	\begin{enumerate}
 	 \item l'attore può inserire una classe (UC4.1);
@@ -231,8 +233,8 @@ l'attore crea un nuovo progetto interagendo con l'editor in uso tramite il coman
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore inserisce una classe fornendo i dati richiesti;
-\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi;
-\item \textbf{Postcondizione}: il sistema ha ricevuto tutti gli input dall'attore sulle classi e sulle relazioni che ha definito e per ogni metodo crea un riferimento ad un diagramma delle attività inizialmente vuoto;
+\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del \gloss{diagramma delle classi};
+\item \textbf{Postcondizione}: il sistema ha ricevuto tutti gli input dall'attore sulle classi e sulle relazioni che ha definito e per ogni metodo crea un riferimento ad un \gloss{diagramma delle attività} inizialmente vuoto;
 \item \textbf{Scenario principale}:
 	\begin{enumerate}
 		\item l'attore può impostare la visibilità della classe (UC4.1.1);
@@ -267,7 +269,7 @@ l'attore crea un nuovo progetto interagendo con l'editor in uso tramite il coman
 \item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 \item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
 \item \textbf{Scenario principale}:
-l'attore inserisce un nome per identificare la classe corrente univoco all'interno del diagramma delle classi che sta gestendo.
+l'attore inserisce un nome per identificare la classe corrente univoco all'interno del \gloss{diagramma delle classi} che sta gestendo.
 \end{itemize}
 
 \paragraph{UC4.1.3: Inserimento Stereotipo Classe}
@@ -413,7 +415,7 @@ l'attore rimuove l'attributo selezionato usando l'apposito comando previsto.
 	\item l'attore può inserire un parametro del metodo (UC4.1.6.3);
 	\item l'attore deve inserire il tipo di ritorno del metodo (UC4.1.6.4);
 	\item l'attore può confermare l'inserimento del metodo (UC4.1.6.5);
-	\item  l'attore può rimuovere un parametro del metodo (UC4.1.6.6).
+	\item l'attore può rimuovere un parametro del metodo (UC4.1.6.6).
 \end{enumerate}
 \end{itemize}
 
@@ -586,7 +588,7 @@ l'attore rimuove il metodo selezionato utilizzando l'opportuno comando previsto.
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può confermare l'inserimento della classe correntemente gestita;
 \item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;	
-\item \textbf{Postcondizione}: il sistema visualizza la classe inserita nella porzione dell'editor dedicata alla gestione e realizzazione del diagramma delle classi; 
+\item \textbf{Postcondizione}: il sistema visualizza la classe inserita nella porzione dell'editor dedicata alla gestione e realizzazione del \gloss{diagramma delle classi}; 
 \item \textbf{Scenario principale}:
 l'attore conferma l'inserimento della classe attraverso l'opportuno comando previsto;
 \item \textbf{Estensioni}:
@@ -594,7 +596,7 @@ l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.9.1);
 \item \textbf{Scenari alternativi}:
 \begin{itemize}
 	\item l'attore non ha inserito il nome della classe;
-	\item l'attore ha inserito un nome per la classe già esistente nel diagramma delle classi correntemente gestito.
+	\item l'attore ha inserito un nome per la classe già esistente nel \gloss{diagramma delle classi} correntemente gestito.
 \end{itemize}
 \end{itemize}
 
@@ -615,7 +617,7 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire una relazione tra due classi;
-\item \textbf{Precondizione}: il sistema visualizza le classi fornite dall'attore nella sezione dell'editor dedicata alla gestione e realizzazione del diagramma delle classi;
+\item \textbf{Precondizione}: il sistema visualizza le classi fornite dall'attore nella sezione dell'editor dedicata alla gestione e realizzazione del \gloss{diagramma delle classi};
 \item \textbf{Postcondizione}:il sistema visualizza graficamente la relazione creando un collegamento grafico tra le classi indicate dall'attore conforme alla tipologia di relazione specificata;
 \item \textbf{Scenario principale}:
 \begin{enumerate}
@@ -734,7 +736,7 @@ l'attore sceglie l'attributo della relazione.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un commento;
-\item \textbf{Precondizione}: il sistema visualizza la struttura di classi realizzata dall'attore nella sezione dell'editor dedicata alla gestione del diagramma delle classi;
+\item \textbf{Precondizione}: il sistema visualizza la struttura di classi realizzata dall'attore nella sezione dell'editor dedicata alla gestione del \gloss{diagramma delle classi};
 \item \textbf{Postcondizione}: il sistema visualizza il commento fornito dall'attore collegato graficamente all'elemento del grafico a cui esso si riferisce;	
 \item \textbf{Scenario principale}:
 \begin{enumerate}
@@ -759,7 +761,7 @@ l'attore inserisce il testo del commento;
 \label{UC4.3.2}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
-\item \textbf{Descrizione}: l'attore deve scegliere il "parent" di un commento, ovvero l'elemento del diagramma delle classi da lui realizzato, sia esso una classe o una relazione, a cui il commento si riferisce;
+\item \textbf{Descrizione}: l'attore deve scegliere il "parent" di un commento, ovvero l'elemento del \gloss{diagramma delle classi} da lui realizzato, sia esso una classe o una relazione, a cui il commento si riferisce;
 \item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;	
 \item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;	
 \item \textbf{Scenario principale}:
@@ -772,7 +774,7 @@ l'attore sceglie il parent del commento tra quelli possibili.
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può confermare l'inserimento di un commento;	
 \item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;	
-\item \textbf{Postcondizione}: il sistema visualizza il commento inserito collegandolo in modo grafico con l'elemento del diagramma delle classi a cui si riferisce;	
+\item \textbf{Postcondizione}: il sistema visualizza il commento inserito collegandolo in modo grafico con l'elemento del \gloss{diagramma delle classi} a cui si riferisce;	
 \item \textbf{Scenario principale}:
 l'attore conferma l'inserimento del commento;	
 \item \textbf{Estensioni}:
@@ -799,7 +801,7 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può rimuovere una classe;
-\item \textbf{Precondizione}: il sistema visualizza il diagramma delle classi realizzato dall'utente, ed in particolare la classe che sarà selezionata per la cancellazione non ha dipendenze;
+\item \textbf{Precondizione}: il sistema visualizza il \gloss{diagramma delle classi} realizzato dall'utente, ed in particolare la classe che sarà selezionata per la cancellazione non ha dipendenze;
 \item \textbf{Postcondizione}: il sistema rimuove la classe indicata dall'utente cancellandola graficamente dal diagramma;
 \item \textbf{Scenario principale}:
 \begin{itemize}
@@ -813,8 +815,8 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può rimuovere una relazione;	
-\item \textbf{Precondizione}: il sistema visualizza il diagramma delle classi realizzato dall'utente, ed in particolare la relazione che sarà selezionata per la cancellazione;
-\item \textbf{Postcondizione}: il sistema rimuove la relazione indicata dall'utente cancellandola graficamente dal diagramma delle classi precedentemente visualizzato;
+\item \textbf{Precondizione}: il sistema visualizza il \gloss{diagramma delle classi} realizzato dall'utente, ed in particolare la relazione che sarà selezionata per la cancellazione;
+\item \textbf{Postcondizione}: il sistema rimuove la relazione indicata dall'utente cancellandola graficamente dal \gloss{diagramma delle classi} precedentemente visualizzato;
 \item \textbf{Scenario principale}:
 \begin{itemize}
 	\item l'attore seleziona la relazione da eliminare;
@@ -827,8 +829,8 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può rimuovere un commento;
-\item \textbf{Precondizione}: il sistema visualizza il diagramma delle classi realizzato dall'utente, ed in particolare il commento che sarà selezionato per la cancellazione;
-\item \textbf{Postcondizione}: il sistema rimuove il commento indicato dall'utente cancellandolo graficamente dal diagramma delle classi precedentemente visualizzato;
+\item \textbf{Precondizione}: il sistema visualizza il \gloss{diagramma delle classi} realizzato dall'utente, ed in particolare il commento che sarà selezionato per la cancellazione;
+\item \textbf{Postcondizione}: il sistema rimuove il commento indicato dall'utente cancellandolo graficamente dal \gloss{diagramma delle classi} precedentemente visualizzato;
 \item \textbf{Scenario principale}:
 \begin{itemize}
 	\item l'attore seleziona il commento da eliminare;
@@ -841,7 +843,7 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può ridurre la classe;
-\item \textbf{Precondizione}: il sistema visualizza il diagramma delle classi realizzato dall'utente, ed in particolare la classe che sarà selezionata per la riduzione in formato espanso;	
+\item \textbf{Precondizione}: il sistema visualizza il \gloss{diagramma delle classi} realizzato dall'utente, ed in particolare la classe che sarà selezionata per la riduzione in formato espanso;	
 \item \textbf{Postcondizione}: il sistema visualizza la classe selezionata dall'utente in formato ridotto, ovvero con la sola specifica del nome senza i metodi o gli attributi inseriti;	
 \item \textbf{Scenario principale}:
 l'attore riduce la classe nascondendo i vari metodi ed attributi.
@@ -852,7 +854,7 @@ l'attore riduce la classe nascondendo i vari metodi ed attributi.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può espandere una classe;	
-\item \textbf{Precondizione}: il sistema visualizza il diagramma delle classi realizzato dall'utente, ed in particolare la classe che sarà selezionata per l'espansione in formato ridotto, ovvero con la sola segnatura del nome e senza la visibilità dei metodi e degli attributi inseriti;	
+\item \textbf{Precondizione}: il sistema visualizza il \gloss{diagramma delle classi} realizzato dall'utente, ed in particolare la classe che sarà selezionata per l'espansione in formato ridotto, ovvero con la sola segnatura del nome e senza la visibilità dei metodi e degli attributi inseriti;	
 \item \textbf{Postcondizione}:  il sistema visualizza la classe selezionata dall'utente in formato espanso, ovvero con la specifica del nome, degli attributi e dei metodi inseriti;
 \item \textbf{Scenario principale}:
 l'attore espande la classe mostrando i vari metodi ed attributi.	
@@ -1305,9 +1307,9 @@ Visualizzazione Errore Inserimento Commento (UC4.3.3.1);
 \end{itemize}
 \end{itemize}
 
-\subsection{UC5: Realizzazione Diagramma delle Attività}
+\subsection{UC5: Realizzazione \gloss{Diagramma delle Attività}}
 \label{UC5}
-%\myimgvsmall{UC5 - Realizzazione Diagramma delle Attività}
+%\myimgvsmall{UC5 - Realizzazione \gloss{Diagramma delle Attività}}
 
 
 
@@ -1316,13 +1318,13 @@ Visualizzazione Errore Inserimento Commento (UC4.3.3.1);
 {
 \includegraphics[width=1\textwidth]{Diagrammi casi d'uso/UC5 - Realizzazione Diagramma delle Attivita}
 }
-\caption{UC5 - Realizzazione Diagramma delle Attività}
+\caption{UC5 - Realizzazione \gloss{Diagramma delle Attività}}
 \end{figure}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
-\item \textbf{Descrizione}: l'attore realizza e gestisce un diagramma delle attività per ogni metodo presente nel diagramma delle classi in modo tale da darne una implementazione più in dettaglio;	
-\item \textbf{Precondizione}: il sistema è passato dalla sezione dell'editor dedicata alla gestione del diagramma delle classi alla sezione dell'editor dedicata alla gestione del diagramma delle attività del metodo selezionato;	
-\item \textbf{Postcondizione}: il sistema visualizza il diagramma delle attività del metodo selezionato come realizzato dall'utente del programma;
+\item \textbf{Descrizione}: l'attore realizza e gestisce un \gloss{diagramma delle attività} per ogni metodo presente nel \gloss{diagramma delle classi} in modo tale da darne una implementazione più in dettaglio;	
+\item \textbf{Precondizione}: il sistema è passato dalla sezione dell'editor dedicata alla gestione del \gloss{diagramma delle classi} alla sezione dell'editor dedicata alla gestione del \gloss{diagramma delle attività} del metodo selezionato;	
+\item \textbf{Postcondizione}: il sistema visualizza il \gloss{diagramma delle attività} del metodo selezionato come realizzato dall'utente del programma;
 \item \textbf{Scenario principale}:
 \begin{enumerate}
 \item l'attore può inserire un blocco variabile (UC5.1);
@@ -1359,8 +1361,8 @@ Visualizzazione Errore Inserimento Commento (UC4.3.3.1);
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco variabile scegliendo tra un blocco variabile di inizializzazione e un blocco variabile di assegnazione;
-\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando eventualmente il commento specificato dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del \gloss{diagramma delle attività}, visualizza un \gloss{diagramma delle attività} (eventualmente vuoto) associato ad un particolare metodo;
+\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando eventualmente il commento specificato dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 \item \textbf{Scenario principale}:
 \begin{enumerate}
 \item l'attore può scegliere di creare e inizializzare una variabile (UC5.1.1);
@@ -1409,7 +1411,7 @@ l'attore inserisce un commento per il blocco variabile selezionato;
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco variabile selezionato;	
 \item \textbf{Precondizione}: l'attore ha selezionato un blocco di assegnazione variabile da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;	
 \item \textbf{Scenario principale}:
 l'attore conferma l'inserimento del blocco variabile selezionato;	
 \item \textbf{Estensioni}:
@@ -1438,9 +1440,9 @@ l'attore visualizza un messaggio d'errore.
 \myimg{UC5.2 - Inserimento Blocco Metodo}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
-\item \textbf{Descrizione}: l'attore può inserire un blocco metodo allo scopo di inserire all'interno del diagramma la chiamata ad un particolare metodo definito altrove (eventualmente nel corrispondente diagramma delle classi);	
-\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;	
-\item \textbf{Postcondizione}:  il sistema visualizza il blocco inserito mostrando eventualmente il commento specificato dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+\item \textbf{Descrizione}: l'attore può inserire un blocco metodo allo scopo di inserire all'interno del diagramma la chiamata ad un particolare metodo definito altrove (eventualmente nel corrispondente \gloss{diagramma delle classi});	
+\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del \gloss{diagramma delle attività}, visualizza un \gloss{diagramma delle attività} (eventualmente vuoto) associato ad un particolare metodo;	
+\item \textbf{Postcondizione}:  il sistema visualizza il blocco inserito mostrando eventualmente il commento specificato dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 \item \textbf{Scenario principale}:
 \begin{enumerate}
 \item l'attore può scegliere di inserire un metodo (UC5.2.1);
@@ -1477,7 +1479,7 @@ l'attore inserisce un commento per il blocco metodo selezionato.
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco metodo;	
 \item \textbf{Precondizione}:l'attore ha selezionato un blocco metodo da inserire e il sistema visualizza il form per l'inserimento dei dati;	
-\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;		
+\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;		
 \item \textbf{Scenario principale}:
 l'attore conferma l'inserimento del blocco metodo;	
 \item \textbf{Estensioni}:
@@ -1506,8 +1508,8 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco if/else e in caso voglia indicare semplicemente la condizione di if senza andare a specificare quella antitetica, sarà per lui sufficiente lasciare vuoto il corpo del blocco else;	
-\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;	
-\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore a corredo e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;	
+\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del \gloss{diagramma delle attività}, visualizza un \gloss{diagramma delle attività} (eventualmente vuoto) associato ad un particolare metodo;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore a corredo e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;	
 \item \textbf{Scenario principale}:
 \begin{enumerate}
 \item l'attore può scegliere di inserire la condizione da verificare (UC5.3.1);
@@ -1568,7 +1570,7 @@ l'attore inserisce un commento per il blocco if/else.
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco if/else;	
 \item \textbf{Precondizione}: l'attore ha selezionato un blocco if da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;	
-\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 \item \textbf{Scenario principale}:
 l'attore conferma l'inserimento del blocco if/else selezionato;	
 \item \textbf{Estensioni}:
@@ -1597,8 +1599,8 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco while specificandone condizione e istruzioni del corrispondente corpo di codice;	
-\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;	
-\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;	
+\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del \gloss{diagramma delle attività}, visualizza un \gloss{diagramma delle attività} (eventualmente vuoto) associato ad un particolare metodo;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;	
 \item \textbf{Scenario principale}:
 \begin{enumerate}
 \item l'attore può scegliere di inserire la condizione da verificare (UC5.4.1);
@@ -1650,7 +1652,7 @@ l'attore inserisce un commento per il blocco while.
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco while;	
 \item \textbf{Precondizione}: l'attore ha selezionato un blocco while da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;	
-\item \textbf{Postcondizione}: il sistema visualizza il blocco while inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;	
+\item \textbf{Postcondizione}: il sistema visualizza il blocco while inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;	
 \item \textbf{Scenario principale}:
 l'attore conferma l'inserimento del blocco while;	
 \item \textbf{Estensioni}:
@@ -1679,9 +1681,9 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco for specificandone condizione, passo e le istruzioni che andranno a comporre il relativo corpo di codice;	
-\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;	
+\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del \gloss{diagramma delle attività}, visualizza un \gloss{diagramma delle attività} (eventualmente vuoto) associato ad un particolare metodo;	
 \item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente 
-inserito nel diagramma delle attività corrente;	
+inserito nel \gloss{diagramma delle attività} corrente;	
 \item \textbf{Scenario principale}:
 \begin{enumerate}
 \item l'attore può scegliere di inserire il codice di inizializzazione (UC5.5.1);
@@ -1755,7 +1757,7 @@ l'attore inserisce un commento per il blocco for.
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco for;	
 \item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;	
-\item \textbf{Postcondizione}: il sistema visualizza il blocco for inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+\item \textbf{Postcondizione}: il sistema visualizza il blocco for inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 \item \textbf{Scenario principale}:
 l'attore conferma l'inserimento del blocco for;	
 \item \textbf{Estensioni}:
@@ -1785,9 +1787,9 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può inserire un blocco custom di codice all'interno del quale inserire liberamente uno o più statement nel linguaggio target di generazione di codice dell'editor;	
-\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;	
+\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del \gloss{diagramma delle attività}, visualizza un \gloss{diagramma delle attività} (eventualmente vuoto) associato ad un particolare metodo;	
 \item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente 
-inserito nel diagramma delle attività corrente;	
+inserito nel \gloss{diagramma delle attività} corrente;	
 \item \textbf{Scenario principale}:
 \begin{enumerate}
 \item l'attore può inserisce il contenuto in codice del blocco custom (UC5.6.1);
@@ -1965,11 +1967,11 @@ l'attore espande il blocco for mostrandone il corpo.
 \label{UC5.19}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
-\item \textbf{Descrizione}: l'attore può spostare uno dei qualsiasi blocchi già inseriti modificandone la posizione all'interno del diagramma delle attività correntemente gestito;	
-\item \textbf{Precondizione}: il sistema visualizza il diagramma delle attività correntemente gestito dall'attore ed in particolare il blocco che sarà selezionato per lo spostamento;	
+\item \textbf{Descrizione}: l'attore può spostare uno dei qualsiasi blocchi già inseriti modificandone la posizione all'interno del \gloss{diagramma delle attività} correntemente gestito;	
+\item \textbf{Precondizione}: il sistema visualizza il \gloss{diagramma delle attività} correntemente gestito dall'attore ed in particolare il blocco che sarà selezionato per lo spostamento;	
 \item \textbf{Postcondizione}: il sistema visualizza il blocco for nella nuova posizione specificata dall'utente;	
 \item \textbf{Scenario principale}:
-l'attore muove il blocco selezionato in una nuova posizione del diagramma delle attività correntemente gestito.	
+l'attore muove il blocco selezionato in una nuova posizione del \gloss{diagramma delle attività} correntemente gestito.	
 \end{itemize}
 
 %\item l'attore può modificare un blocco variabile (UC5.20);
@@ -2412,7 +2414,7 @@ l'attore visualizza un messaggio d'errore.
 \begin{itemize}
 \item \textbf{Attori}: Utente;
 \item \textbf{Descrizione}: l'attore può generare l'applicativo realizzato mediante l'editor;
-\item \textbf{Precondizione}: il diagramma delle classi è completo e per ogni metodo è disponibile un diagramma delle attività corretto;
+\item \textbf{Precondizione}: il \gloss{diagramma delle classi} è completo e per ogni metodo è disponibile un \gloss{diagramma delle attività} corretto;
 \item \textbf{Postcondizione}: il sistema mostra l'applicativo generato;
 \item \textbf{Scenario principale}:
 l'attore genera l'applicativo;
@@ -2427,7 +2429,7 @@ l'attore genera l'applicativo;
 \label{UC7.1}
 \begin{itemize}
 \item \textbf{Attori}: Utente;
-\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della richiesta di generazione codice nel caso si siano verificati uno o più scenari alternativi durante la fase di creazione dei diagrammi delle classi e delle attività;	
+\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della richiesta di generazione codice nel caso si siano verificati uno o più scenari alternativi durante la fase di creazione dei \gloss{diagrammi delle classi} e delle attività;	
 \item \textbf{Precondizione}: i diagrammi realizzati dall'utente non sono coerenti con i vincoli imposti dal sistema di stereotipi già presente nell'applicazione;	
 \item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;	
 \item \textbf{Scenario principale}:
@@ -2451,7 +2453,7 @@ l'attore visualizza un messaggio d'errore.
 \hypertarget{RFO2}{RFO2} & l'attore può creare un nuovo progetto &  \hyperlink{Interno}{Interno}\\
 & & \hyperref[UC3]{UC3}\\ \hline
 
-\hypertarget{RFO3}{RFO3} & l'attore può realizzare e gestire un diagramma delle classi & \hyperlink{Capitolato}{Capitolato}\\
+\hypertarget{RFO3}{RFO3} & l'attore può realizzare e gestire un \gloss{diagramma delle classi} & \hyperlink{Capitolato}{Capitolato}\\
 & & \hyperref[UC4]{UC4}\\ \hline
 
 \hypertarget{RFO3.1}{RFO3.1} & l'attore può inserire una classe &  \hyperlink{Interno}{Interno}\\
@@ -2783,7 +2785,7 @@ l'attore visualizza un messaggio d'errore.
 & &\hyperref[UC4.13]{UC4.13}\\
 & &\hyperref[UC4.13.3]{UC4.13.3}\\ \hline
 
-\hypertarget{RFO4}{RFO4} & l'attore può realizzare e gestire un diagramma delle attività per ogni metodo presente nel diagramma delle classi & \hyperlink{Capitolato}{Capitolato}\\
+\hypertarget{RFO4}{RFO4} & l'attore può realizzare e gestire un \gloss{diagramma delle attività} per ogni metodo presente nel \gloss{diagramma delle classi} & \hyperlink{Capitolato}{Capitolato}\\
 & & \hyperref[UC5]{UC5}\\ \hline
 
 \hypertarget{RFO4.1}{RFO4.1} & l'attore può inserire un blocco variabile scegliendo tra inizializzazione e assegnazione &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\
@@ -2978,7 +2980,7 @@ l'attore visualizza un messaggio d'errore.
 & &\hyperref[UC5]{UC5}\\
 & &\hyperref[UC5.18]{UC5.18}\\ \hline
 
-\hypertarget{RFD4.19}{RFD4.19} & l'attore può spostare uno dei blocchi inseriti all'interno del diagramma delle attività gestito in una nuova posizione &  \hyperlink{Interno}{Interno}\\
+\hypertarget{RFD4.19}{RFD4.19} & l'attore può spostare uno dei blocchi inseriti all'interno del \gloss{diagramma delle attività} gestito in una nuova posizione &  \hyperlink{Interno}{Interno}\\
 & &\hyperref[UC5]{UC5}\\
 & &\hyperref[UC5.19]{UC5.19}\\ \hline
 
@@ -4494,22 +4496,22 @@ Un approccio simile si è rivelato utile allo scopo di chiarire i requisiti del 
 	\item Accedo all'applicazione web e posso subito scegliere se creare un nuovo gioco o importarne uno.
 	\item Creo un nuovo gioco.
 	\item Mi viene chiesto il nome: inserisco "ScacchiSpeciali".
-	\item Il diagramma delle classi si popola con una nuova classe \texttt{ScacchiSpeciali}, contenente solo il metodo \texttt{public void static main(String[] args)}; in esso, vi sono già le istruzioni \texttt{ScacchiSpeciali game = new ScacchiSpeciali();} e \texttt{game.start();}, dato che la nostra classe eredita per default dalla classe \texttt{Game} fornita da \proj. Questo codice sarà nascosto all'utente, tuttavia sarà necessario in output.
+	\item Il \gloss{diagramma delle classi} si popola con una nuova classe \texttt{ScacchiSpeciali}, contenente solo il metodo \texttt{public void static main(String[] args)}; in esso, vi sono già le istruzioni \texttt{ScacchiSpeciali game = new ScacchiSpeciali();} e \texttt{game.start();}, dato che la nostra classe eredita per default dalla classe \texttt{Game} fornita da \proj. Questo codice sarà nascosto all'utente, tuttavia sarà necessario in output.
 	\item Per risparmiarmi un po' di lavoro, clicco (in alto) su "importa libreria" e seleziono \texttt{com.hivex.chess}; questa fornisce \textbf{classi}, \textbf{interfacce} e \textbf{prototipi} scritti appositamente per progettare giochi su scacchiere in \proj.
-	\item Ora mi si presenta una barra laterale con un po' di icone. Clicco su quella con il simbolo della scacchiera e la trascino sul mio diagramma delle classi.
+	\item Ora mi si presenta una barra laterale con un po' di icone. Clicco su quella con il simbolo della scacchiera e la trascino sul mio \gloss{diagramma delle classi}.
 	\item Procedo in questo modo per i seguenti prototipi: \texttt{Board} (la scacchiera), \texttt{Player} e \texttt{Piece}.
 	\item Compaiono dunque queste tre classi; \texttt{Board} ha già due membri di tipo \texttt{Player} e 32 membri di tipo \texttt{Piece}. Inoltre, il costruttore di \texttt{Board} si occupa di istanziare i 32 pezzi con degli opportuni \texttt{new Pawn()}, \texttt{new Queen()} e quant'altro. (Le due righe di pedoni sono generate con un ciclo for.)
 	\item La scacchiera del mio nuovo gioco è uguale ad una scacchiera classica, tranne che le caselle pari delle righe 4 e 5 sono colorate di rosso.
 	\item Estendo \texttt{Board}, creando una nuova classe \texttt{MyBoard} che mi servirà a modificare la scacchiera predefinita.
 	\item Per modificare la colorazione, so che \texttt{Board} chiama nel suo costruttore il metodo \texttt{public void paint()}, quindi lo aggiungo a \texttt{MyBoard} per poterlo ridefinire.
-	\item Clicco su \texttt{public void paint()} e mi si apre un diagramma delle attività vuoto.
+	\item Clicco su \texttt{public void paint()} e mi si apre un \gloss{diagramma delle attività} vuoto.
 	\item Clicco su \textsc{new block}, poi scelgo \textsc{variable}; mi viene creato un blocchetto in cui posso scegliere una variabile nello \emph{scope} della classe. Scelgo la variabile \texttt{super}; su questo blocchetto clicco \textsc{use method}, poi scelgo \texttt{paint()}, per avere già le caselle colorate in bianco e nero (in fin dei conti, voglio solo modificare quattro caselle e lasciare le altre invariate).
 	\item Dopo il blocco \texttt{super.paint();}, clicco ancora su \textsc{new block} e scelgo \textsc{for}. Mi viene chiesto l'intervallo da fornire al ciclo for e scelgo l'intervallo $[1, 8]$.
 	\item All'interno del ciclo for, clicco \textsc{new block} e scelgo \textsc{if} per selezionare solo le caselle pari; la condizione dell'if è un blocco variabile; il mio \emph{scope} comprende ora l'indice \texttt{i} del ciclo for, quindi seleziono la variabile \texttt{i} e su di essa clicco \textsc{use operation}, poi seleziono l'operazione modulo (\texttt{\%}, che necessita di un operando) e le fornisco il numero $2$ come operando\footnote{qualsiasi \emph{scope} comprende tutti i letterali numerici e alfabetici, visti come oggetti immutabili.}. (Si potrebbe anche fornire la possibilità di riempire direttamente la condizione del blocco in un formato testuale.) % la metto vaga
 	\item All'interno dell'if, clicco su \textsc{new block}, poi \textsc{variabile} e questa volta uso la variabile \texttt{this}, su cui invoco il metodo \texttt{setCellColor(int row, int col, String RedGreenBlue)} (ereditato e non ridefinito); a questo metodo fornisco i tre parametri \texttt{4}, \texttt{i} e \texttt{"FF0"}: così ho cambiato le celle pari della riga 4; per la riga 5 basterà cambiare il parametro \texttt{row} dopo aver creato un nuovo ciclo for.
-	\item Esco dal diagramma delle attività del costruttore e torno a quello delle classi.
+	\item Esco dal \gloss{diagramma delle attività} del costruttore e torno a quello delle classi.
 	\item Ora che ho modificato il colore, osservo che non è difficile modificare anche il \emph{comportamento} del mio gioco: basta ridefinire metodi, aggiungerne di nuovi (e chiamarli nel costruttore) o configurare il gioco tramite metodi già ereditati. Ad esempio, potrei decidere di modificare il numero di secondi disponibili ai giocatori per fare una mossa, tramite una chiamata a \texttt{public void setCounter(int s)} su ogni \texttt{Player}. Oppure, potrei modificare il comportamento di un particolare tipo di pezzo (il pedone, ad esempio) andando a ridefinire il suo metodo \texttt{move()}. O ancora, potrei introdurre una regola globale aggiungendo un oggetto di tipo \texttt{Rule} alla mia classe \texttt{ScacchiSpeciali}; questa classe sarà un thread il cui metodo \texttt{run}, opportunamente ridefinito, potrebbe controllare se vale una certa condizione speciale e modificare il gioco di conseguenza.
-	\item Infine, salvo il mio diagramma delle classi (che si tira dietro tutti i suo diagrammi delle attività) e l'applicazione mi restituisce un file XML e un file \emph{.jar}. Potrò usare il primo per modificare il mio programma, mentre il secondo sarà un'applicazione Java potenzialmente compilabile e, se sviluppata in modo corretto dall'utente, eseguibile.
+	\item Infine, salvo il mio \gloss{diagramma delle classi} (che si tira dietro tutti i suo \gloss{diagrammi delle attività}) e l'applicazione mi restituisce un file XML e un file \emph{.jar}. Potrò usare il primo per modificare il mio programma, mentre il secondo sarà un'applicazione Java potenzialmente compilabile e, se sviluppata in modo corretto dall'utente, eseguibile.
 \end{enumerate}
 \end{document}
 
