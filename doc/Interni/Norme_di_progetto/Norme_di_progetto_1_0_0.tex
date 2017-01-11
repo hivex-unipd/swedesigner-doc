@@ -102,37 +102,36 @@ Il presente documento si divide in tre sezioni principali:
 	\subsubsection{Analisi dei requisiti}
 	Al termine dello studio di fattibilità, è compito degli analisti elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di analisi dei requisiti (\AdR); questo documento contiene i requisiti e i casi d'uso individuati nelle riunioni svolte.
 	Viene elencata nelle sezioni seguenti la struttura obbligatoria di requisiti e casi d'uso.
-		\paragraph{Requisiti} % da guardare come esporta pragmadb e nel caso correggere
+		\paragraph{Requisiti} 
 		Dopo aver individuato i requisiti tramite le varie riunioni, è compito degli analisti redarne un elenco con la seguente struttura:
-			\[R[Importanza][Tipo][ID]\]
+			\[R[Tipo][Importanza][ID]\]
 		dove:
 		\begin{description}
+			\item[Tipo] indica il tipo del requisito, che può essere:
+				\begin{itemize}
+					\item \textbf{F}: funzionale (cioè un servizio che il prodotto è tenuto a fornire);
+					\item \textbf{Q}: di qualità;
+					\item \textbf{P}: prestazionale;
+					\item \textbf{V}: di vincolo.
+			\end{itemize}
 			\item[Importanza] indica se il requisito è:
 			\begin{itemize}
-				\item \textbf{OB}: obbligatorio;
-				\item \textbf{DE}: desiderabile;
-				\item \textbf{OP}: opzionale.
+				\item \textbf{O}: obbligatorio;
+				\item \textbf{D}: desiderabile;
+				\item \textbf{F}: facoltativo. 
 			\end{itemize}
-			\item[Tipo] indica il tipo del requisito, che può essere:
-			\begin{itemize}
-				\item \textbf{F}: funzionale (cioè un servizio che il prodotto è tenuto a fornire);
-				\item \textbf{Q}: di qualità;
-				\item \textbf{P}: prestazionale;
-				\item \textbf{V}: di vincolo.
-			\end{itemize}
+			
 			\item[ID] identifica univocamente il requisito.
 		\end{description}
 		Inoltre, per ogni requisito l'analista deve specificare:
 		\begin{itemize}
 			\item una breve descrizione di esso;
-			\item un requisito padre (se presente);
 			\item la fonte da cui deriva:
 			\begin{itemize}
 				\item Capitolato: il requisito è derivabile direttamente dalla lettura del relativo capitolato d'appalto;
-				\item Verbale: il requisito deriva a una riunione messa a verbale;
+				\item Verbale: il requisito deriva da una riunione messa a verbale;
 				\item Casi d'uso: il requisito deriva da uno o più casi d'uso identificati.
 			\end{itemize}
-			\item se è stato effettivamente implementato.
 		\end{itemize}
 		\paragraph{Casi d'uso}
 		L'analista deve identificare ogni caso d'uso nel modo seguente:
