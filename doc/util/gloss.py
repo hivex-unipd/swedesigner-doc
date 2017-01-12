@@ -1,12 +1,12 @@
 import re
 
-g = open("terminiGlossario.tex", "r")
+g = open("../Esterni/Glossario/terminiGlossario.tex", "r")
 a = g.readlines()
 g.close()
-files = ["../../Interni/Norme_di_progetto/Norme_di_progetto_1_0_0.tex","../Analisi_dei_requisiti/Analisi_dei_requisiti_0_0_0.tex",
-"../Piano_di_progetto/Piano_di_progetto_v_0_0_5.tex",
-"../Piano_di_qualifica/Piano_di_qualifica_0_0_0.tex",
-"../../Interni/Studio_di_fattibilita/Studio_di_fattibilita_0_0_1.tex"]
+files = ["../Interni/Norme_di_progetto/Norme_di_progetto_1_0_0.tex","../Esterni/Analisi_dei_requisiti/Analisi_dei_requisiti_1_0_0.tex",
+"../Esterni/Piano_di_progetto/Piano_di_progetto_1_0_0.tex",
+"../Esterni/Piano_di_qualifica/Piano_di_qualifica_1_0_0.tex",
+"../Interni/Studio_di_fattibilita/Studio_di_fattibilita_1_0_0.tex"]
 
 
 for x in range(len(a)): # per ogni elemento nel glossario
