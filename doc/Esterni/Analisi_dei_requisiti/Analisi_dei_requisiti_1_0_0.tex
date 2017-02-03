@@ -180,7 +180,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può caricare un progetto precedentemente realizzato con il programma ora in uso allo scopo di apportarvi ulteriori modifiche e/o ampliamenti;
 	\item \textbf{Precondizione}: il sistema avviato mostra la pagina iniziale dell'applicazione;
-	\item \textbf{Postcondizione}: il sistema ha caricato il progetto selezionato, mostrandone il contenuto come precedentemente salvato;
+	\item \textbf{Postcondizione}: il sistema ha caricato il progetto selezionato, mostrandone il contenuto (come salvato dopo l'ultimo utilizzo);
 	\item \textbf{Scenario principale}: l'attore carica il progetto selezionato;
 	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al file inserito (UC2.1).
 \end{itemize}
@@ -189,10 +189,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC2.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore visualizza un opportuno messaggio di errore nel caso in cui tenti di inserire un file incompatibile rispetto all'\gloss{editor} in uso;
+	\item \textbf{Descrizione}: l'attore visualizza un opportuno messaggio d'errore nel caso in cui tenti di inserire un file incompatibile rispetto all'\gloss{editor} in uso;
 	\item \textbf{Precondizione}: l'attore ha selezionato per il caricamento un file con estensione incompatibile;
-	\item \textbf{Postcondizione}: il sistema visualizza un messaggio di errore per informare l'utente;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio di errore che indica l'incompatibilità del file richiesto per il caricamento.
+	\item \textbf{Postcondizione}: il sistema visualizza un messaggio d'errore per informare l'utente;
+	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore che indica l'incompatibilità del file richiesto per il caricamento.
 \end{itemize}
 
 \subsection{UC3: Nuovo Progetto}
@@ -201,9 +201,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può creare un nuovo progetto;
 	\item \textbf{Precondizione}: il sistema avviato mostra la pagina iniziale dell'applicazione;
-	\item \textbf{Postcondizione}: il sistema crea un progetto vuoto;
+	\item \textbf{Postcondizione}: il sistema crea un progetto vuoto e presenta all'attore un \gloss{diagramma delle classi} vuoto con un menù;
 	\item \textbf{Scenario principale}:
-	\begin{itemize} % >>> disegno con Astah <<<
+	\begin{itemize} % >>> disegno con Astah? UC3.1 <<<
 		\item l'attore deve inserire il nome del progetto.
 	\end{itemize}
 \end{itemize}
@@ -251,7 +251,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce una classe fornendo i dati richiesti;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del \gloss{diagramma delle classi};
-	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti gli input dall'attore sulle classi e sulle relazioni che ha definito e per ogni metodo crea un riferimento ad un \gloss{diagramma delle attività} inizialmente vuoto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti gli input dall'attore sulla classe che questo ha definito e mostra il \gloss{diagramma delle classi} (in cui, per ogni metodo, viene mostrato un riferimento ad un \gloss{diagramma delle attività} vuoto);
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
 		\item l'attore può impostare la visibilità della classe (UC4.1.1);
@@ -272,7 +272,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce la visibilità desiderata per la classe corrente;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce la visibilità della classe fra l'insieme dei valori per essa possibili;
 	\item \textbf{Scenario alternativo}: l'attore non inserisce alcun valore, viene pertanto applicato il valore di default per la visibilità.
 \end{itemize}
@@ -283,7 +283,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce un nome univoco per la classe corrente;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce un nome per identificare la classe corrente univoco all'interno del \gloss{diagramma delle classi} che sta gestendo.
 \end{itemize}
 
@@ -293,7 +293,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore sceglie uno stereotipo per la classe corrente fra quelli previsti dall'\gloss{editor};
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore sceglie uno stereotipo per la classe corrente fra quelli prestabiliti.
 \end{itemize}
 
@@ -322,7 +322,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può scegliere la visibilità per l'attributo;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore sceglie la visibilità per l'attributo fra l'insieme di valori per essa disponibili.
 	\item \textbf{Scenario alternativo}: l'attore non inserisce alcun valore, viene pertanto applicato il valore di default per la visibilità.
 \end{itemize}
@@ -333,7 +333,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore deve inserire il nome dell'attributo, che deve essere univoco nel contesto della classe correntemente gestita;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce il nome dell'attributo.
 \end{itemize}
 
@@ -343,8 +343,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore deve inserire il tipo dell'attributo;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore inserisce il tipo dell'attributo corrente.
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
+	\item \textbf{Scenario principale}: l'attore inserisce il tipo dell'attributo corrente;
+	\item \textbf{Scenario alternativo}: l'attore non inserisce alcun valore, viene pertanto applicato il valore di default per il tipo dell'attributo.
 \end{itemize}
 
 \subparagraph{UC4.1.4.4: Inserimento Molteplicità Attributo}
@@ -353,7 +354,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può scegliere la molteplicità dell'attributo;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore sceglie la molteplicità dell'attributo;
 	\item \textbf{Scenario alternativo}: l'attore non inserisce alcun valore, viene pertanto applicato il valore di default per la molteplicità.
 \end{itemize}
@@ -364,7 +365,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire il valore di default dell'attributo;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce un valore di default per l'attributo.
 \end{itemize}
 
@@ -376,12 +377,11 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza l'attributo inserito fornito dall'attore nella classe correntemente gestita dallo stesso;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento dell'attributo;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.4.6.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.4.6.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha inserito il nome dell'attributo;
-		\item l'attore non ha inserito il tipo dell'attributo;
+%		\item l'attore non ha inserito il tipo dell'attributo; % Ho inserito il tipo predefinito (Object) come scenario alt. in UC4.1.4.3
 		\item l'attore ha inserito per l'attributo un nome già esistente all'interno della classe stessa.
 	\end{itemize}
 \end{itemize}
@@ -392,7 +392,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore al momento della conferma dell'inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un attributo;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un attributo;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio di errore;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -402,7 +402,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può rimuovere un attributo precedentemente inserito;
 	\item \textbf{Precondizione}: il sistema visualizza la classe correntemente gestita dall'attore;
-	\item \textbf{Postcondizione}: il sistema rimuove l'attributo selezionato;
+	\item \textbf{Postcondizione}: il sistema rimuove l'attributo selezionato e visualizza la classe correntemente gestita dall'attore;
 	\item \textbf{Scenario principale}: l'attore rimuove l'attributo selezionato usando l'apposito comando previsto.
 \end{itemize}
 
@@ -412,7 +412,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce un metodo per la classe;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
+	\item \textbf{Precondizione}: il sistema visualizza il \gloss{diagramma delle classi}, con la classe correntemente gestita dall'attore;
 	\item \textbf{Postcondizione}: il sistema visualizza il metodo fornito dall'attore nella classe correntemente gestita dallo stesso;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
@@ -431,7 +431,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può scegliere la visibilità per il metodo;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore sceglie la visibilità del metodo altrimenti viene applicato il valore di default.
 \end{itemize}
 
@@ -441,7 +441,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore deve inserire il nome del metodo, che deve essere univoco nella classe correntemente gestita rispetto ad altri metodi già inseriti con la stessa segnatura;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce il nome del metodo.
 \end{itemize}
 
@@ -467,7 +467,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore deve inserire il nome del parametro del metodo, che deve essere univoco nel metodo correntemente gestito rispetto ad altri parametri già inseriti con lo stesso nome;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce il nome del parametro.
 \end{itemize}
 
@@ -477,7 +477,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore deve inserire il tipo del parametro, scelto tra i tipi predefiniti e quelli (visibili) definiti dall'utente;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce il tipo del parametro.
 \end{itemize}
 
@@ -489,8 +489,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il parametro inserito dall'attore nel metodo della classe correntemente gestita dallo stesso;
 	\item \textbf{Scenario principale}: l'attore visualizza il parametro inserito;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.6.3.3.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.6.3.3.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha inserito il nome del parametro;
@@ -498,13 +497,13 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\end{itemize}
 \end{itemize}
 
-\subparagraph{UC4.1.6.3.3.1: Visualizzazione Errore Inserimento Parametro }
+\subparagraph{UC4.1.6.3.3.1: Visualizzazione Errore Inserimento Parametro}
 \label{UC4.1.6.3.3.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un parametro;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un parametro;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -514,7 +513,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore deve inserire il tipo di ritorno del metodo;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
 	\item \textbf{Scenario principale}: l'attore inserisce il tipo di ritorno del metodo.
 \end{itemize}
 
@@ -526,8 +525,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il metodo inserito dall'attore nella classe correntemente gestita dallo stesso;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del metodo;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.6.5.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.6.5.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha inserito il nome del metodo;
@@ -542,7 +540,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore al momento della conferma dell'inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un metodo;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto tutti i dati necessari per l'inserimento di un metodo;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -574,8 +572,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza la classe inserita nella porzione dell'\gloss{editor} dedicata alla gestione e realizzazione del \gloss{diagramma delle classi};
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento della classe attraverso l'opportuno comando previsto;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.9.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.9.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha inserito il nome della classe;
@@ -589,7 +586,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore alla conferma dell'inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di una classe;
 	\item \textbf{Precondizione}: il sistema ha ricevuto dei dati errati e/o mancanti per l'inserimento di una classe;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -672,8 +669,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: graficamente la relazione creando un collegamento grafico tra le classi indicate dall'attore conforme alla tipologia di relazione specificata;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento della relazione;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.2.6.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.2.6.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha scelto il tipo della relazione;
@@ -689,7 +685,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di una relazione;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto tutti i dati necessari per l'inserimento di una relazione;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -748,8 +744,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il commento inserito collegandolo in modo grafico con l'elemento del \gloss{diagramma delle classi} a cui si riferisce;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del commento;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.3.3.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.3.3.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha scelto l'elemento a cui il commento si riferisce.
@@ -762,7 +757,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore al momento della conferma di inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un commento;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto i dati necessari per il corretto inserimento di un commento;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -1186,8 +1181,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore seleziona la relazione da modificare e il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza graficamente la relazione modificata creando un collegamento grafico tra le classi indicate dall'attore conforme alla tipologia di relazione specificata;
 	\item \textbf{Scenario principale}: l'attore conferma le modifiche apportate alla relazione;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.2.6.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.2.6.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha scelto il tipo della relazione;
@@ -1348,8 +1342,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato un blocco di assegnazione variabile da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco variabile selezionato;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha indicato il nome della variabile da inizializzare;
@@ -1364,7 +1357,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si siano verificati uno o più scenari alternativi durante la fase di inserimento di un blocco variabile;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco variabile;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -1412,8 +1405,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato un blocco metodo da inserire e il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;	
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco metodo;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha indicato un metodo da inserire;
@@ -1427,7 +1419,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si siano verificati uno o più scenari alternativi durante la fase di inserimento di un blocco metodo;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco metodo;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -1498,8 +1490,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato un blocco if da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco if/else selezionato;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.3.5.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.3.5.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha fornito la condizione da verificare;
@@ -1513,7 +1504,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si siano verificati uno o più scenari alternativi durante la fase di inserimento di un blocco if/else;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco if/else;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -1572,8 +1563,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato un blocco while da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco while inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco while;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.4.4.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.4.4.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha fornito la condizione da verificare;
@@ -1587,7 +1577,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un blocco while;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco while;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -1669,8 +1659,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco for inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel \gloss{diagramma delle attività} corrente;
 	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco for;
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.5.6.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.5.6.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha fornito la condizione da verificare;
@@ -1685,7 +1674,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un blocco for;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco for;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -1925,8 +1914,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile modificato;
 	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco variabile.
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha indicato il nome della variabile da inizializzare;
@@ -1983,8 +1971,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo modificato;
 	\item \textbf{Scenario principale}: L'attore modifica  selezionata per la modifica.
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha indicato un metodo da inserire;
@@ -2040,8 +2027,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato il blocco if/else da modificare e il sistema visualizza il form di inserimento dati ;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else modificato;
 	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco if/else selezionato per la modifica.
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.3.5.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.3.5.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha fornito la condizione da verificare;
@@ -2097,8 +2083,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato il blocco while da modificare e il sistema visualizza il form di inserimento dati ;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco while modificato;
 	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco while selezionato per la modifica.
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.4.4.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.4.4.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha fornito la condizione da verificare;
@@ -2178,8 +2163,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: l'attore ha selezionato il blocco for da modificare e il sistema visualizza il form di inserimento dati ;
 	\item \textbf{Postcondizione}: il sistema visualizza il blocco for modificato;
 	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco for selezionato per la modifica.
-	\item \textbf{Estensioni}:
-	l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.5.6.1);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.5.6.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
 		\item l'attore non ha fornito la condizione da verificare;
@@ -2295,7 +2279,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di salvataggio nel caso si siano verificati uno o più scenari alternativi durante la fase di inserimento dei dati di salvataggio;
 	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per il salvataggio del progetto;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
@@ -2320,7 +2304,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della richiesta di generazione codice nel caso si siano verificati uno o più scenari alternativi durante la fase di creazione dei \gloss{diagrammi delle classi} e delle attività;
 	\item \textbf{Precondizione}: i diagrammi realizzati dall'utente non sono coerenti con i vincoli imposti dal sistema di stereotipi già presente nell'applicazione;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
