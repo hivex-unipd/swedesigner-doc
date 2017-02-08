@@ -45,11 +45,11 @@ Per rendere più facile la lettura, i termini presenti nel glossario saranno mar
 % Ambiente da usare per il diario delle modifiche:
 \newenvironment{diario}{
 \begin{table}
-	\begin{tabular}{cp{3cm}cp{5cm}}
+	\begin{longtable}{cp{3cm}cp{5cm}}
 		\textbf{Versione} & \textbf{Autore e Ruolo} & \textbf{Data} & \textbf{Descrizione} \\ \hline
 }
 {
-	\end{tabular}
+	\end{longtable}
 	\caption{Diario delle modifiche}
 \end{table}
 }
@@ -61,7 +61,7 @@ Per rendere più facile la lettura, i termini presenti nel glossario saranno mar
 \newcommand{\PDC}{\emph{Progettazione di Dettaglio e Codifica}}
 \newcommand{\VV}{\emph{Verifica e Validazione}}
 
-%Ruoli svolti:
+% Ruoli svolti:
 \newcommand{\V}{\emph{Ver.}}
 \newcommand{\AN}{\emph{An.}}
 \newcommand{\PJ}{\emph{Pgett.}}
@@ -70,7 +70,7 @@ Per rendere più facile la lettura, i termini presenti nel glossario saranno mar
 \newcommand{\AM}{\emph{Amm.}}
 
 
-%Ruoli svolti estesi
+% Ruoli svolti estesi
 \newcommand{\Vx}{\emph{Verificatore}}
 \newcommand{\ANx}{\emph{Analista}}
 \newcommand{\PJx}{\emph{Progettista}}
@@ -84,4 +84,6 @@ Per rendere più facile la lettura, i termini presenti nel glossario saranno mar
 	\vtop{
 		\hbox{\phantom{X}}
 		\vskip-\ht0
-		\hbox{\includegraphics[#1]{#2}}}}
+		\hbox{\includegraphics[#1]{#2}}
+	}
+}
