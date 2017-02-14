@@ -182,6 +182,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema avviato mostra la pagina iniziale dell'applicazione;
 	\item \textbf{Postcondizione}: il sistema ha caricato il progetto selezionato, mostrandone il contenuto (come salvato dopo l'ultimo utilizzo);
 	\item \textbf{Scenario principale}: l'attore carica il progetto selezionato;
+	\item \textbf{Scenario alternativo}: l'attore carica un file incompatibile con l'editor;
 	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al file inserito (UC2.1).
 \end{itemize}
 
@@ -1254,7 +1255,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore realizza e gestisce un \gloss{diagramma delle attività} per ogni metodo presente nel \gloss{diagramma delle classi} in modo tale da darne una implementazione più in dettaglio;
+	\item \textbf{Descrizione}: l'attore realizza e gestisce un \gloss{diagramma delle attività} per ogni metodo presente nel \gloss{diagramma delle classi} in modo tale da darne una implementazione più in dettaglio. Essa viene effettuata mediante blocchi specifici per ogni costrutto, per la gestione delle variabili e dei metodi. Tale diagramma quindi non è comforme allo standard \gloss{UML};
 	\item \textbf{Precondizione}: il sistema è passato dalla sezione dell'\gloss{editor} dedicata alla gestione del \gloss{diagramma delle classi} alla sezione dell'\gloss{editor} dedicata alla gestione del \gloss{diagramma delle attività} del metodo selezionato;
 	\item \textbf{Postcondizione}: il sistema visualizza il \gloss{diagramma delle attività} del metodo selezionato come realizzato dall'utente del programma;
 	\item \textbf{Scenario principale}:
@@ -2287,10 +2288,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC7}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può generare l'applicativo realizzato mediante l'\gloss{editor};
+	\item \textbf{Descrizione}: l'attore può ottenere (scaricare) automaticamente l'applicativo generato dai diagrammi da esso forniti e realizzati mediante l'\gloss{editor}, i diagrammi stessi ed il codice sorgente in linguaggio \gloss{Java} ;
 	\item \textbf{Precondizione}: il \gloss{diagramma delle classi} è completo e per ogni metodo è disponibile un \gloss{diagramma delle attività} corretto;
-	\item \textbf{Postcondizione}: il sistema mostra l'applicativo generato;
-	\item \textbf{Scenario principale}: l'attore genera l'applicativo;
+	\item \textbf{Postcondizione}: il sistema genera l'applicativo derivante dai due diagrammi, i diagrammi stessi ed il codice sorgente;
+	\item \textbf{Scenario principale}: l'attore scarica tre file quali l'applicativo, i diagrammi da lui realizzati ed il codice sorgente;
 	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore relativo ai diagrammi realizzati (UC7.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
@@ -2331,6 +2332,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hypertarget{RFO2}{RFO2} & l'attore può creare un nuovo progetto &  \hyperlink{Interno}{Interno}\\
 & & \hyperref[UC3]{UC3}\\ \hline
+
+\hypertarget{RFO2.1}{RFO2.1} & l'attore deve inserire un nome da assegnare al nuovo progetto da creare&  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC3]{UC3}\\ 
+& &\hyperref[UC3.1]{UC3.1}\\ \hline
 
 \hypertarget{RFO3}{RFO3} & l'attore può realizzare e gestire un \gloss{diagramma delle classi} & \hyperlink{Capitolato}{Capitolato}\\
 & & \hyperref[UC4]{UC4}\\ \hline
@@ -3083,6 +3088,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hyperlink{RFO2}{RFO2} & \hyperlink{Interno}{Interno}\\
 & \hyperref[UC3]{UC3}\\ \hline
 
+\hyperlink{RFO2.1}{RFO2.1} & \hyperlink{Interno}{Interno}\\
+& \hyperref[UC3]{UC3}\\ 
+& \hyperref[UC3.1]{UC3.1}\\\hline
+
 \hyperlink{RFO3}{RFO3} & \hyperlink{Capitolato}{Capitolato}\\
 & \hyperref[UC4]{UC4}\\ \hline
 
@@ -3812,6 +3821,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hyperlink{Interno}{Interno} & \hyperlink{RFO1}{RFO1}\\
 & \hyperlink{RFO1.1}{RFO1.1}\\
 & \hyperlink{RFO2}{RFO2}\\
+& \hyperlink{RFO2.1}{RFO2.1}\\
 & \hyperlink{RFO3.1}{RFO3.1}\\
 & \hyperlink{RFO3.1.1}{RFO3.1.1}\\
 & \hyperlink{RFO3.1.2}{RFO3.1.2}\\
@@ -3993,6 +4003,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hyperref[UC2]{UC2} & \hyperlink{RFO1}{RFO1}\\ \hline
 \hyperref[UC2.1]{UC2.1} & \hyperlink{RFO1.1}{RFO1.1}\\ \hline
 \hyperref[UC3]{UC3} & \hyperlink{RFO2}{RFO2}\\ \hline
+\hyperref[UC3.1]{UC3.1} & \hyperlink{RFO2.1}{RFO2.1}\\ \hline
 \hyperref[UC4]{UC4} & \hyperlink{RFO3}{RFO3}\\
 & \hyperlink{RFO3.1}{RFO3.1}\\
 & \hyperlink{RFO3.2}{RFO3.2}\\
@@ -4353,7 +4364,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hline
 \textbf{Tipo} & \textbf{Obbligatorio} & \textbf{Desiderabile} & \textbf{Facoltativo}\\
 \hline
-Funzionale & 158 & 11 & 0\\ \hline
+Funzionale & 159 & 11 & 0\\ \hline
 Prestazionale & 0 & 0 & 0\\ \hline
 Di Qualità & 8 & 0 & 2\\ \hline
 Di Vincolo & 7 & 2 & 0\\ \hline
