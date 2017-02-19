@@ -10,7 +10,7 @@ def main():
     glossary = get_glossary('../Esterni/Glossario/terminiGlossario.tex')
     if len(sys.argv) == 1:
         for f in get_files('../', exclude=['util/', 'diario.tex', 'Lettere/', 'Glossario/']):
-            print(f)
+            mark_file(f, glossary)
     else:
         mark_file(sys.argv[1], glossary)
 
