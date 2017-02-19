@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import re   # regular expressions
 import sys  # system utilities
 import os   # os utilities
