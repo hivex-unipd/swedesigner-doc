@@ -2,7 +2,7 @@
 % da compilare con il comando pdflatex Piano_di_Qualifica_x.x.x.tex
 
 \input{../../util/hx-ambiente}
-\usepackage{float}
+\use\gloss{package}{float}
 
 \version{1.0.0}
 \creaz{28 dicembre 2016}
@@ -112,8 +112,8 @@
 		\item \textbf{F}: completamente posseduto (86\% - 100\%).
 	\end{itemize}
 
-	Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi sono usate nel contesto di una strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo \gloss{PDCA}.
-	\\Il ciclo \gloss{PDCA}, altresì noto come ciclo di Deming, definisce un'organizzazione interna dei processi incentrata sul principio del miglioramento continuo allo scopo di renderli automigliorativi.
+	Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi sono usate nel contesto di una strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo PDCA.
+	\\Il ciclo PDCA, altresì noto come ciclo di Deming, definisce un'organizzazione interna dei processi incentrata sul principio del miglioramento continuo allo scopo di renderli automigliorativi.
 	\\Le fasi in cui esso si articola sono quattro:
 		\begin{itemize}
 			\item \textbf{Pianificare (Plan)}: in tale fase vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
@@ -123,7 +123,7 @@
 		\end{itemize}
 
 		\subsubsection{Procedure per il controllo della qualità di processo}
-		L'adozione dello standard \gloss{SPICE}, in combinazione con l'approccio automigliorativo del ciclo \gloss{PDCA}, è alla base della strategia prevista del gruppo per garantire una sempre maggiore qualità dei processi in atto e dei prodotti risultanti.
+		L'adozione dello standard SPICE, in combinazione con l'approccio automigliorativo del ciclo PDCA, è alla base della strategia prevista del gruppo per garantire una sempre maggiore qualità dei processi in atto e dei prodotti risultanti.
 		\\Il documento \PdP{} stabilisce gli obiettivi del gruppo in relazione alla pianificazione in dettaglio dei vari processi e alla ripartizione delle risorse ad essi assegnate per un efficace svolgimento. Altri obiettivi di qualità sono illustrati successivamente in questo documento.
 		\\Le metriche utilizzate dal gruppo per valutare la qualità dei processi, commisurarla agli obiettivi stabiliti e stabilire eventuali azioni correttive di miglioramento sono definiti in dettaglio nella sezione \ref{S5} del seguente documento. Da sottolineare che anche le metriche relative alla qualità del prodotto software costituiscono un'indicazione preziosa per valutare la qualità dei processi in atto: infatti un prodotto di bassa qualità è indicativo di un processo da migliorarsi.
 
@@ -170,7 +170,7 @@
 				I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo.
 	
 	\subsection{Qualità di prodotto}
-	Per garantire una buona qualità di prodotto, il gruppo \hx{} ha individuato dallo standard ISO/IEC 9126:2001 le qualità che ritiene di maggior importanza durante il ciclo di vita del prodotto e ha individuato gli obiettivi e le metriche coerenti con i livelli di qualità stabiliti.
+	Per garantire una buona qualità di prodotto, il gruppo \hx{} ha individuato dallo standard \gloss{ISO/IEC 9126:2001} le qualità che ritiene di maggior importanza durante il ciclo di vita del prodotto e ha individuato gli obiettivi e le metriche coerenti con i livelli di qualità stabiliti.
 	\subsubsection{Standard adottato}
 	Lo Standard ISO/IEC 9126:2001 si articola in quattro parti:
 		\begin{enumerate}
@@ -252,7 +252,7 @@
 			\item \textbf{Risorse hardware}
 			Ognuno dei membri del gruppo con l'incarico di ricoprire il ruolo di Responsabile del Progetto o Verificatore ha a sua disposizione almeno un computer personale (portatile o fisso) dotato degli strumenti software necessari allo svolgimento del compito. Risultano inoltre a disposizione anche i calcolatori resi disponibili dai laboratori informatici dell'Ateneo.
 			\item \textbf{Risorse software}
-			Le risorse software disponibili sono costituite dagli \gloss{editor} di testo utilizzati per la stesura dei documenti in \gloss{Latex}, gli \gloss{IDE} impiegati a supporto dell'attività di codifica, le applicazioni online e le estensioni per i controlli sulla leggibilità e la complessità dei documenti in riferimento all'indice \gloss{Gulpease}. Più in dettaglio gli strumenti software impiegati per l'attività di Verifica sono illustrati nel documento \NdP.
+			Le risorse software disponibili sono costituite dagli \gloss{editor} di testo utilizzati per la stesura dei documenti in \gloss{Latex}, gli \gloss{IDE} impiegati a supporto dell'attività di codifica, le applicazioni online e le estensioni per i controlli sulla leggibilità e la complessità dei documenti in riferimento all'indice Gulpease. Più in dettaglio gli strumenti software impiegati per l'attività di Verifica sono illustrati nel documento \NdP.
 			\end{itemize}
 	\subsection{Misure e metriche \label{S5}}
 		\subsubsection{Misure}
@@ -271,7 +271,7 @@
 			\\Viene calcolata come la
 differenza fra la data pianificata di fine di un’attività e la data
 reale di fine di quell’attività: un valore di \textit{schedule variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più tempo di quanto pianificato; se pari a zero indica invece che essa è perfettamente in linea con le tempistiche previste mentre se è addirittura strettamente positivo indica che sta procedendo più speditamente di quanto considerato. 
-			\\Da sottolineare che l'utilizzo di \gloss{periodi di slack} aumenta la possibilità che la \textit{schedule variance} assuma valori positivi.
+			\\Da sottolineare che l'utilizzo di periodi di slack aumenta la possibilità che la \textit{schedule variance} assuma valori positivi.
 			\\I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
 					\item Range ottimale: $\geq{-10}$\%;
@@ -355,7 +355,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				
 			\paragraph[Indice di Gulpease]{\hypertarget{ig}{Indice di Gulpease}}
 			Tale metrica, tarata sulla lingua italiana, misura la qualità di un documento andando a stimarne il grado di leggibilità. Rispetto ad altri indici equivalenti per campo di applicazione ha il vantaggio di esprimere la lunghezza media delle parole in lettere anziché in sillabe --- cosa che ne consente una implementazione automatizzata fortemente affidabile. Tale indice, inoltre, considera principalmente due variabili linguistiche: la lunghezza delle parole e la lunghezza delle frasi in rapporto al numero delle lettere.
-			\\La formula per il calcolo dell'indice di \gloss{Gulpease} è la seguente:
+			\\La formula per il calcolo dell'indice di Gulpease è la seguente:
 				\begin{equation}
 					89+\frac{300\times(numero~delle~frasi)-10\times(numero~delle~lettere)}{numero~delle~parole}
 				\end{equation}
@@ -375,7 +375,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\subsection[Processo di verifica del software]{\hypertarget{pvs}{Processo di verifica del software}}
 				
 			\paragraph[Copertura del codice]{\hypertarget{cco}{Copertura del codice}}
-			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \textit{getter} e \textit{setter}.
+			Indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \textit{\gloss{getter}} e \textit{\gloss{setter}}.
 			I range stabiliti per la metrica sono i seguenti:
 				\begin{itemize}
 					\item Range ottimale: 60-100;
@@ -433,8 +433,8 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 
 		\subsubsection{Manutenibilità \label{S4}}
 		Per garantire un elevato grado di manutenibilità, si è deciso di adottare un discreto numero di metriche che spaziano su diversi aspetti del programma.
-			\paragraph[Numero di statement per metodo]{\hypertarget{nsm}{Numero di statement per metodo}}
-			Tale metrica è una misura del numero di \gloss{statement} di un particolare metodo. Avere un numero di \gloss{statement} per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
+			\paragraph[Numero di \gloss{statement} per metodo]{\hypertarget{nsm}{Numero di statement per metodo}}
+			Tale metrica è una misura del numero di statement di un particolare metodo. Avere un numero di statement per metodo relativamente basso permette di tenere un livello di manutenibilità del codice accettabile.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-20;
@@ -466,7 +466,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 			\end{itemize}
 			
 			\paragraph[Grado di accoppiamento]{\hypertarget{ga}{Grado di accoppiamento}}
-			Tale metrica è una misura del numero di dipendenze di una classe con le altre contenute all'interno del suo stesso \gloss{package}. Avere poche dipendenze tra classi implica che ci sia un maggiore grado di disaccoppiamento. Questo aumenta molto la manutenibilità e la comprensibilità del codice.
+			Tale metrica è una misura del numero di dipendenze di una classe con le altre contenute all'interno del suo stesso package. Avere poche dipendenze tra classi implica che ci sia un maggiore grado di disaccoppiamento. Questo aumenta molto la manutenibilità e la comprensibilità del codice.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-3;
@@ -532,8 +532,8 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 				\item Range di accettazione: $\geq{20}$;
 			\end{itemize}
 			
-			\paragraph[Validazione W3C]{\hypertarget{vw}{Validazione W3C}}
-			L'\gloss{applicazione web} deve superare correttamente il test di validazione offerto da \gloss{W3C} con un numero di errori gravi pari a zero. Gli avvisi e le inesattezze che non compromettono la funzionalità del sito sono accettate fino a un massimo di 20 per pagina.
+			\paragraph[Validazione \gloss{W3C}]{\hypertarget{vw}{Validazione W3C}}
+			L'\gloss{applicazione web} deve superare correttamente il test di validazione offerto da W3C con un numero di errori gravi pari a zero. Gli avvisi e le inesattezze che non compromettono la funzionalità del sito sono accettate fino a un massimo di 20 per pagina.
 			\\I range stabiliti per la metrica sono i seguenti:
 			\begin{itemize}
 				\item Range ottimale: 0-0;
@@ -585,7 +585,7 @@ reale di fine di quell’attività: un valore di \textit{schedule variance} mino
 	Sono stati individuati quattro tipologie di test:
 	\begin{itemize}
 		\item \textbf{Test di unità [TU]}: test con i quali si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore, quali metodi e funzioni scritte;
-		\item \textbf{Test di integrazione [TI]}: test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari \gloss{package} prodotti, singolarmente o nel loro insieme;
+		\item \textbf{Test di integrazione [TI]}: test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari package prodotti, singolarmente o nel loro insieme;
 		\item \textbf{Test di sistema [TS]}: test con i quali si tenta di verificare che il funzionamento e il comportamento dell'architettura siano corretti;
 		\item \textbf{Test di accettazione [TA]}: test per verificare che il prodotto soddisfi le richieste del proponente.
 	\end{itemize}

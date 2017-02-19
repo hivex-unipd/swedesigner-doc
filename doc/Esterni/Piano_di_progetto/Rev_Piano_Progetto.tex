@@ -76,9 +76,9 @@
 {\color{blue} OK sezione non presente dagli altri la grammatica mi sembra ok ma di quello che cè scritto mi fido\\}
 \section{Modello di sviluppo} \label{sec:modello}
 
-	La scelta di un modello di sviluppo è cruciale per la corretta pianificazione delle attività. Da essa infatti si deriva tutta la struttura principale con cui saranno pianificati milestone e task.
+	La scelta di un modello di sviluppo è cruciale per la corretta pianificazione delle attività. Da essa infatti si deriva tutta la struttura principale con cui saranno pianificati \gloss{milestone} e task.
 
-	Il progetto {\proj}, come affrontato nei documenti \emph{Studio di fattibilità} e \emph{Piano di Qualifica}, presenta numerosi punti critici, analizzati nella sezione {\ref{sec:analisi}}, in particolare nella sezione {\ref{sec:tec}}, in cui sono analizzati i rischi tecnologici. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software \gloss{CASE} e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
+	Il progetto {\proj}, come affrontato nei documenti \emph{Studio di fattibilità} e \emph{Piano di Qualifica}, presenta numerosi punti critici, analizzati nella sezione {\ref{sec:analisi}}, in particolare nella sezione {\ref{sec:tec}}, in cui sono analizzati i rischi tecnologici. Generalmente {\proj} richiede una intensiva fase di progettazione, il cui fine ultimo è l'esplorazione delle problematiche legate ai software CASE e alla loro risoluzione, tenendo conto del quantitativo di risorse assegnate al progetto. %[riferimento a verbale di riunione con zucchetti?]
 
 	Un progetto dedito all'esplorazione va supportato con un adeguato modello di sviluppo; esso deve avere i seguenti requisiti:
 
@@ -123,12 +123,12 @@ Questi ultimi punti entrano in netto contrasto con i requisiti inizialmente prop
 
 Ciò si può realizzare principalmente tramite due strumenti differenti: lo \emph{exploratory development} e il \emph{throwaway prototyping}.
 
-Il primo consiste nel lavorare a fianco del cliente per esplorare i suoi requisiti e infine consegnare un sistema adeguato. Mentre questo metodo di lavoro potrebbe sembrare positivo, esso presenta due grosse criticità: 
+Il primo consiste nel lavorare a fianco del \gloss{client}e per esplorare i suoi requisiti e infine consegnare un sistema adeguato. Mentre questo metodo di lavoro potrebbe sembrare positivo, esso presenta due grosse criticità: 
 \begin{itemize}
 \item Cambiamenti continui tendono a corrompere la struttura e l'architettura del software;
 \item Aggiungere estensioni non previste diventa progressivamente più complesso e costoso. 
 \end{itemize}
-Questo rischio a parere del \gloss{team} non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
+Questo rischio a parere del team non riesce ad essere bilanciato dalla possibilità di ritardare requisiti e decisioni di design.
 
 La seconda possibilità invece consiste nell'avere dei prototipi usati per meglio comprendere il problema. La criticità presente riguarda il futuro di questi prototipi: sviluppare un prototipo porta valore esclusivamente nell'ambito di comprensione i requisiti del progetto, non porta un effettivo avanzamento nello sviluppo del prodotto.
 
@@ -137,7 +137,7 @@ Questo modello si basa sull'approccio orientato al riuso di componenti già esis
 
 [immagine+desc]
 
-Questo approccio è sicuramente interessante e, malgrado non sia stato adottato in toto, ci si riserva la possibilità di seguire i punti che prevedono il design del sistema con riuso e una modifica dei requisiti, al fine di ridurre i tempi e costi di certe componenti del sistema. Il \gloss{team} ritiene inoltre che gli svantaggi riguardo ai compromessi che nasceranno siano di gran lunga ripagati dai benefici di questo approccio; infine l'approccio è stato approvato dal committente in sede di discussione.
+Questo approccio è sicuramente interessante e, malgrado non sia stato adottato in toto, ci si riserva la possibilità di seguire i punti che prevedono il design del sistema con riuso e una modifica dei requisiti, al fine di ridurre i tempi e costi di certe componenti del sistema. Il team ritiene inoltre che gli svantaggi riguardo ai compromessi che nasceranno siano di gran lunga ripagati dai benefici di questo approccio; infine l'approccio è stato approvato dal committente in sede di discussione.
 
 		\subsubsection{Modelli di sviluppo iterativi}
 			\paragraph{Modello incrementale}
@@ -165,7 +165,7 @@ Vanno segnalati tuttavia i seguenti difetti:
 
 Ciò si traduce in una criticità del processo nella fase di analisi. Nella sezione {\ref{sec:analisi}} (Analisi dei rischi) si analizza come questo rischio verrà trattato.
 
-In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostanziali vantaggi rispetto agli altri modelli finora analizzati. In seguito si analizzano altri modelli che sono stati presi in considerazione.
+In complesso, il team ritiene che il modello incrementale apporti sostanziali vantaggi rispetto agli altri modelli finora analizzati. In seguito si analizzano altri modelli che sono stati presi in considerazione.
 
 			\paragraph{Modello a spirale}
 			Il modello a spirale (Boehm, 1988) è un approccio fondamentalmente rappresentato come una sequenza di attività che si ripetono nel tempo, partendo dalla fattibilità, definizione dei requisiti, ideazione dell'architettura, e così via.
@@ -178,7 +178,7 @@ In complesso, il \gloss{team} ritiene che il modello incrementale apporti sostan
 \item Pianificazione (della fase successiva).
 \end{itemize}			 
 
-L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il \gloss{team}, il processo di sviluppo e le risorse.
+L'approccio sfrutta una metodologia fortemente \emph{risk-driven} che, malgrado possa portare dei benefici al prodotto finale, essa rischierebbe di appesantire eccessivamente il team, il processo di sviluppo e le risorse.
 
 
 \newpage \section{Analisi dei rischi} \label{sec:analisi}
@@ -245,11 +245,11 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 		\end{description}
 		\subsubsection{Rotture Hardware}
 		\begin{description}
-			\item[Descrizione]{\color{blue} la strumentazione hardware e software usata dal gruppo}{\color{red}la strumentazione usata dal gruppo quale computer portatili,} può essere soggetta a rotture e malfunzionamenti durante lo sviluppo del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare 				\gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero \gloss{team}, rendendo così più difficile l'avanzamento;
+			\item[Descrizione]{\color{blue} la strumentazione hardware e software usata dal gruppo}{\color{red}la strumentazione usata dal gruppo quale computer portatili,} può essere soggetta a rotture e malfunzionamenti durante lo sviluppo del progetto. Un altro rischio di fallibilità hardware è quello del \gloss{server} usato per ospitare 				\gloss{PragmaDB}, un malfunzionamento su tale macchina o sui pc dei membri del gruppo mette a rischio il lavoro dell'intero team, rendendo così più difficile l'avanzamento;
 			\item[Probabilità di occorrenza] bassa;
 			\item[Grado di pericolosità] medio;
 			\item[Riconoscimento] ogni membro del team avrà cura dei propri strumenti hardware verificandone giornalmente il completo funzionamento;
-			\item[Trattamento] prima di qualunque spostamento, è obbligatorio {\color{blue}sincronizzare}{\color{red}scaricare} sul \gloss{server} \gloss{GitHub} i file modificati. Se ciò non fosse possibile per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il \gloss{server} che ospita \gloss{PragmaDB}, è previsto un sistema di \gloss{backup} automatico ogni 7 giorni e in caso di malfunzionamenti sarà compito dell’\AM{} riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
+			\item[Trattamento] prima di qualunque spostamento, è obbligatorio {\color{blue}sincronizzare}{\color{red}scaricare} sul server \gloss{Git}Hub i file modificati. Se ciò non fosse possibile per assenza di collegamento ad Internet, è obbligatorio copiare i propri avanzamenti su almeno un dispositivo di memoria esterno secondario. Per il server che ospita PragmaDB, è previsto un sistema di \gloss{backup} automatico ogni 7 giorni e in caso di malfunzionamenti sarà compito dell’\AM{} riportare tale macchina in uno stato funzionante nel minor tempo possibile; 
 			\item[Attuazione nel periodo]:
 			\begin{description}
 				\item[Analisi dei requisiti] il rischio non si è mai verificato.
@@ -270,7 +270,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 		\end{description}
 		\subsubsection{Problemi personali dei componenti del team}
 		\begin{description}
-			\item[Descrizione] ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del \gloss{team} non sia disponibile in certi momenti.
+			\item[Descrizione] ciascun componente del gruppo ha impegni personali e necessità proprie. Questo implica la possibilità che qualche componente del team non sia disponibile in certi momenti.
 			\item[Probabilità di occorrenza] media;
 			\item[Grado di pericolosità] medio;
 			\item[Riconoscimento] {\color{blue}ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso del gruppo;}{\color{red}per creare un calendario sincronizzato e condiviso del gruppo, è necessario che vengano notificati al \Rx{} in maniera preventiva e tempestiva gli impegni di ognuno;}
@@ -295,7 +295,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 	\subsection{Livello organizzativo} \label{sec:org}
 		\subsubsection{Pianificazione Errata}
 		\begin{description}
-			\item[Descrizione] durante la pianificazione è possibile che, a causa di assunzioni sbagliate, i tempi per l'esecuzione di alcune attività vengano calcolati in modo errato. Ciò potrebbe portare ad avere dei periodi di inattività o di sovraccarico di lavoro del \gloss{team};
+			\item[Descrizione] durante la pianificazione è possibile che, a causa di assunzioni sbagliate, i tempi per l'esecuzione di alcune attività vengano calcolati in modo errato. Ciò potrebbe portare ad avere dei periodi di inattività o di sovraccarico di lavoro del team;
 			\item[Probabilità di occorrenza] media;
 			\item[Grado di pericolosità] alto;
 			\item[Riconoscimento] è necessario controllare lo stato delle attività nel programma di \emph{project management} periodicamente, in modo da verificare eventuali ritardi nello sviluppo delle attività; 
@@ -332,7 +332,7 @@ Per ogni rischio viene fornito un elenco di informazioni, necessario per compren
 			\end{description}
 		\end{description}
 \section{Pianificazione delle Attività} \label{sec:pianificazione}
-Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha deciso di suddividere il progetto nelle seguenti fasi:
+Per eseguire una più accurata pianificazione progettuale, il team ha deciso di suddividere il progetto nelle seguenti fasi:
 \begin{description}
 	\item[\AR](sezione \ref{sec:AR});
 	\item[\ARI](sezione \ref{sec:ARI});
@@ -343,7 +343,7 @@ Per eseguire una più accurata pianificazione progettuale, il \gloss{team} ha de
 
 In ognuna di queste fasi, vengono svolte attività di sviluppo del progetto che sono descritte più approfonditamente nel documento corrente.
 
-Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \gloss{diagrammi di Gantt} di ognuna: ogni diagramma presenta delle \gloss{milestone} stabilite e le varie suddivisioni dei periodi in sotto-attività.
+Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i diagrammi di Gantt di ognuna: ogni diagramma presenta delle milestone stabilite e le varie suddivisioni dei periodi in sotto-attività.
 
 I diagrammi presentano una visualizzazione ridotta e a volte su più pagine per esigenze tipografiche. Qualora non sia chiara la dipendenza tra più task, essa sarà specificata testualmente.
 
@@ -351,7 +351,7 @@ I diagrammi presentano una visualizzazione ridotta e a volte su più pagine per 
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttweeks1.png}}
 \label{tab:genweeks}
-\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 1)}
+\caption{Diagramma di Gantt della pianificazione generale, in settimane (parte 1)}
 
 Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme di Progetto} e \emph{Redazione Studio di Fattibilità} non esiste (vedi prossimi diagrammi in giorni).
 \end{figure}
@@ -361,7 +361,7 @@ Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttweeks2.png}}
 \label{tab:genweeks}
-\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 2)}
+\caption{Diagramma di Gantt della pianificazione generale, in settimane (parte 2)}
 \end{figure}
 
 
@@ -388,7 +388,7 @@ Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttan1.png}}
 \label{img:genweeks1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 1)}
+\caption{Diagramma di Gantt della pianificazione della fase di \AR, in giorni (parte 1)}
 \end{figure}
 
 
@@ -396,18 +396,18 @@ Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttan2.png}}
 \label{tab:genweeks2}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 2)}
+\caption{Diagramma di Gantt della pianificazione della fase di \AR, in giorni (parte 2)}
 
 Note:
 \begin{itemize}
-\item l'attività \emph{Redazione Analisi dei Requisiti} ha una dipendenza verso l'attività \gloss{PragmaDB} appartenente all'attività \emph{Database tracciamento requisiti};
+\item l'attività \emph{Redazione Analisi dei Requisiti} ha una dipendenza verso l'attività PragmaDB appartenente all'attività \emph{Database tracciamento requisiti};
 \item le attività \emph{Redazione Piano di Progetto}, \emph{Redazione Piano di Qualifica} e \emph{Redazione Analisi dei Requisiti} hanno una dipendenza verso l'attività \emph{Redazione Studio di Fattibilità}.
 \end{itemize} 
 \end{figure}
 		
 	\subsubsection{\ARI} \label{sec:ARI}
 	\textbf{Periodo}: dal 24-01-2017 al 03-02-2017.
-	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio della \PA. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\AR), con le correzioni suggerite durante la \emph{Revisione dei Requisiti}.
+	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una milestone interna che corrisponde all'inizio della \PA. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\AR), con le correzioni suggerite durante la \emph{Revisione dei Requisiti}.
 
 
 
@@ -415,7 +415,7 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttari.png}}
 \label{tab:genweeks}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \ARI, in giorni}
+\caption{Diagramma di Gantt della pianificazione della fase di \ARI, in giorni}
 \end{figure}
 
 	
@@ -432,14 +432,14 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpa1.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 1)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PA, in giorni (parte 1)}
 \end{figure}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpa2.png}}
 \label{tab:ganttpa2}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 2)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PA, in giorni (parte 2)}
 
 Note:
 \begin{itemize}
@@ -462,14 +462,14 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpdc1.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 1)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PDC, in giorni (parte 1)}
 \end{figure}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpdc2.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 2)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PDC, in giorni (parte 2)}
 \end{figure}
 
 
@@ -487,7 +487,7 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttva.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \VV, in giorni}
+\caption{Diagramma di Gantt della pianificazione della fase di \VV, in giorni}
 \end{figure}
 
 \pagebreak
@@ -1235,7 +1235,7 @@ Il costo totale del progetto {\proj} preventivato è arrotondato a \textbf{12000
 
 \pagebreak
 \section{Consuntivo di periodo} \label{sec:consuntivo}
-In questa sezione sono indicate le spese affrontate a termine di ogni \gloss{milestone} interna. Queste andranno a sommarsi per infine stilare il consuntivo finale.
+In questa sezione sono indicate le spese affrontate a termine di ogni milestone interna. Queste andranno a sommarsi per infine stilare il consuntivo finale.
 
 
 
@@ -1260,7 +1260,7 @@ Si ricorda che questo costo viene fornito a scopo informativo e rappresenta l'in
 \includegraphics[width=1.2\textwidth]{img/ganttarc1.png}}
 \label{tab:cgen1}
 
-  \caption{Variazione rispetto alla pianificazione per fase di \AR, diagramma di Gantt (parte 1)}
+  \caption{Variazione rispetto alla pianificazione per fase di \AR, \gloss{diagramma di Gantt} (parte 1)}
 \end{figure}
 
 
@@ -1274,7 +1274,7 @@ Si ricorda che questo costo viene fornito a scopo informativo e rappresenta l'in
 
 Si è verificato un ritardo nella stesura del presente documento a causa di una influenza di un membro del gruppo in data 30-12-2016.
 
-Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla \gloss{baseline}; tuttavia il task, non presentando dipendenze, non ha portato ritardi se non all'attività di verifica relativa al documento stesso.
+Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline; tuttavia il task, non presentando dipendenze, non ha portato ritardi se non all'attività di verifica relativa al documento stesso.
 
 \subsubsection{Variazione nei costi}
 \begin{itemize}

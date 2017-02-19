@@ -203,7 +203,7 @@ Ogni rischio è caratterizzato da:
 	\textbf{Nome} & \textbf{Riconoscimento} & \textbf{Trattamento} & \textbf{Attuazione nel periodo} \\
 	\hline
 	tecnologie adottate & supervisione del \Rx{} su ciascun membro del gruppo & apprendimento autonomo delle tecnologie adottate & Analisi dei requisiti: rischio non ancora verificatosi (non sono state usate tali tecnologie in questo periodo di sviluppo). \\
-	rotture hardware & verifica giornaliera del funzionamento dei propri strumenti & sincronizzazione con \gloss{GitHub} al termine di ogni modifica al \gloss{repository} continui backup su dispositivo di memoria esterno; \gloss{backup} automatico settimanale del \gloss{server} su AWS e tempestività dell’\AM{} nel riportare tale macchina in uno stato funzionante nel minor tempo possibile & Analisi dei requisiti: rischio mai verificatosi. \\
+	rotture hardware & verifica giornaliera del funzionamento dei propri strumenti & sincronizzazione con \gloss{Git}Hub al termine di ogni modifica al \gloss{repository} continui \gloss{backup} su dispositivo di memoria esterno; backup automatico settimanale del server su \gloss{AWS} e tempestività dell’\AM{} nel riportare tale macchina in uno stato funzionante nel minor tempo possibile & Analisi dei requisiti: rischio mai verificatosi. \\
 	problemi tra membri del gruppo & monitoraggio, da parte del \Rx{}, dello stato di collaborazione fra i vari membri del gruppo & il \Rx{} provvede, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li facciano collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile & Analisi dei requisiti: rischio mai verificatosi. \\
 	problemi personali dei membri & ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso & ad ogni impegno notificato, il \Rx{} eseguirà una nuova parte di pianificazione del periodo problematico & Analisi dei requisiti: rischio verificatosi  a due membri del gruppo, che hanno lasciato una riunione prima del termine per problemi personali. \\
 	problemi di inesperienza & segnalazione al \Rx{} di ogni tecnologia potenzialmente utile; il \Rx{}, una volta approvatone l'utilizzo, demanda al gruppo il compito di documentarsi su di essa & obbligo, per ciascuno, di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto; se questo non fosse sufficiente, il \Rx{} prepara un piano di studi per compensare ogni tipo di lacuna & Analisi dei requisiti: rischio verificatosi soprattutto all'inizio del periodo. \\
@@ -235,7 +235,7 @@ Per eseguire una più accurata pianificazione progettuale, \hx{} ha deciso di su
 
 In ognuna di queste fasi, vengono svolte attività di sviluppo del progetto che sono descritte più approfonditamente nel documento corrente.
 
-Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i \gloss{diagrammi di Gantt} di ognuna: ogni diagramma presenta delle \gloss{milestone} stabilite e le varie suddivisioni dei periodi in sotto-attività.
+Inoltre, per illustrare la suddivisione delle seguenti fasi, sono riportati i diagrammi di Gantt di ognuna: ogni diagramma presenta delle milestone stabilite e le varie suddivisioni dei periodi in sotto-attività.
 
 I diagrammi presentano una visualizzazione ridotta, talvolta su più pagine, per esigenze tipografiche. Qualora non sia chiara la dipendenza tra più task, essa sarà specificata testualmente.
 
@@ -243,7 +243,7 @@ I diagrammi presentano una visualizzazione ridotta, talvolta su più pagine, per
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttweeks1.png}}
 \label{tab:genweeks}
-\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 1)}
+\caption{Diagramma di Gantt della pianificazione generale, in settimane (parte 1)}
 
 Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme di Progetto} e \emph{Redazione Studio di Fattibilità} non esiste (vedi prossimi diagrammi in giorni).
 \end{figure}
@@ -253,7 +253,7 @@ Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttweeks2.png}}
 \label{tab:genweeks}
-\caption{\gloss{Diagramma di Gantt} della pianificazione generale, in settimane (parte 2)}
+\caption{Diagramma di Gantt della pianificazione generale, in settimane (parte 2)}
 \end{figure}
 
 
@@ -280,7 +280,7 @@ Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttan1.png}}
 \label{img:genweeks1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 1)}
+\caption{Diagramma di Gantt della pianificazione della fase di \AR, in giorni (parte 1)}
 \end{figure}
 
 \pagebreak
@@ -288,11 +288,11 @@ Nota: la "dipendenza all'indietro" che sembra esistere tra \emph{Redazione Norme
 \makebox[\textwidth][c]{
 \includegraphics[width=1.0\textwidth]{img/ganttan21.png}}
 \label{tab:genweeks2}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \AR, in giorni (parte 2)}
+\caption{Diagramma di Gantt della pianificazione della fase di \AR, in giorni (parte 2)}
 
 Note:
 \begin{itemize}
-	\item l'attività \emph{Redazione Analisi dei Requisiti} ha una dipendenza verso l'attività \gloss{PragmaDB} appartenente all'attività \emph{Database tracciamento requisiti};
+	\item l'attività \emph{Redazione Analisi dei Requisiti} ha una dipendenza verso l'attività PragmaDB appartenente all'attività \emph{Database tracciamento requisiti};
 	\item le attività \emph{Redazione Piano di Progetto}, \emph{Redazione Piano di Qualifica} e \emph{Redazione Analisi dei Requisiti} hanno una dipendenza verso l'attività \emph{Redazione Studio di Fattibilità}.
 	\item l'attività \emph{Resoconto dell'attività di verifica} richiede il completamento delle attività di verifica dell'\emph{Analisi dei Requisiti} e del \emph{Piano di Progetto}.
 \end{itemize} 
@@ -300,7 +300,7 @@ Note:
 		
 	\subsubsection{\ARI} \label{sec:ARI}
 	\textbf{Periodo}: dal 24-01-2017 al 03-02-2017.
-	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una \gloss{milestone} interna che corrisponde all'inizio della \PA. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\AR), con le correzioni suggerite durante la \emph{Revisione dei Requisiti} ed ampliarla tramite la definizione di alcuni requisiti opzionali.
+	\\ Questo periodo inizia in concomitanza con la \emph{Revisione dei Requisiti} e termina con una milestone interna che corrisponde all'inizio della \PA. In questo periodo, il gruppo mira ad integrare la documentazione precedentemente prodotta (in modo particolare l'\AR), con le correzioni suggerite durante la \emph{Revisione dei Requisiti} ed ampliarla tramite la definizione di alcuni requisiti opzionali.
 
 
 
@@ -308,7 +308,7 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttari.png}}
 \label{tab:genweeks}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \ARI, in giorni}
+\caption{Diagramma di Gantt della pianificazione della fase di \ARI, in giorni}
 \end{figure}
 
 	
@@ -325,14 +325,14 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpa1.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 1)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PA, in giorni (parte 1)}
 \end{figure}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpa2.png}}
 \label{tab:ganttpa2}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PA, in giorni (parte 2)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PA, in giorni (parte 2)}
 
 Note:
 \begin{itemize}
@@ -355,14 +355,14 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpdc1.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 1)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PDC, in giorni (parte 1)}
 \end{figure}
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttpdc2.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \PDC, in giorni (parte 2)}
+\caption{Diagramma di Gantt della pianificazione della fase di \PDC, in giorni (parte 2)}
 \end{figure}
 
 
@@ -380,7 +380,7 @@ Note:
 \makebox[\textwidth][c]{
 \includegraphics[width=1.2\textwidth]{img/ganttva.png}}
 \label{tab:ganttpa1}
-\caption{\gloss{Diagramma di Gantt} della pianificazione della fase di \VV, in giorni}
+\caption{Diagramma di Gantt della pianificazione della fase di \VV, in giorni}
 \end{figure}
 
 
@@ -484,7 +484,7 @@ A conclusione, è illustrato un quadro riassuntivo.
 \subsubsection{Costo \AR}
 	
 \introcosto{\AR}
-Questo costo viene fornito a scopo informativo e rappresenta l'investimento effettuato da \hx{} prima dell'aggiudicazione dell'appalto e perciò tale periodo \textbf{non è a carico del cliente}. 
+Questo costo viene fornito a scopo informativo e rappresenta l'investimento effettuato da \hx{} prima dell'aggiudicazione dell'appalto e perciò tale periodo \textbf{non è a carico del \gloss{client}e}. 
 
 Gli sforzi maggiori si evidenziano nel ruolo di:
 \begin{itemize}
@@ -1150,7 +1150,7 @@ Il costo totale del progetto \proj{} preventivato è arrotondato a \textbf{12000
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Consuntivo di periodo} \label{sec:consuntivo}
-In questa sezione sono indicate le spese affrontate a termine di ogni \gloss{milestone} interna. Queste andranno a sommarsi per infine stilare il consuntivo finale.
+In questa sezione sono indicate le spese affrontate a termine di ogni milestone interna. Queste andranno a sommarsi per infine stilare il consuntivo finale.
 
 
 
@@ -1177,12 +1177,12 @@ Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno ris
 \includegraphics[width=1.2\textwidth]{img/ganttarc21.png}}
 \label{tab:cgen1}
 
-  \caption{Variazione rispetto alla pianificazione per fase di \AR, diagramma di Gantt}
+  \caption{Variazione rispetto alla pianificazione per fase di \AR, \gloss{diagramma di Gantt}}
 \end{figure}
 
 Si è verificato un ritardo nella stesura del presente documento a causa di una influenza di un membro del gruppo in data 30-12-2016.
 
-Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla \gloss{baseline}; tuttavia il task non ha portato ritardi se non all'attività di verifica relativa al documento stesso. L'attività \emph{Resoconto dell'attività di verifica} non ha subito ritardi a causa del grande gap temporale tra le due attività.
+Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline; tuttavia il task non ha portato ritardi se non all'attività di verifica relativa al documento stesso. L'attività \emph{Resoconto dell'attività di verifica} non ha subito ritardi a causa del grande gap temporale tra le due attività.
 
 \pagebreak
 \subsubsection{Variazione nei costi}
