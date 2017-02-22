@@ -17,11 +17,11 @@ def main():
 
 
 def get_files(base='.', exclude=[]):
-    """Return a list of files in the directory tree from <base> with extension <ext>."""
+    """Return a list of TeX files in the directory tree starting from <base>."""
     result = []
     for root, dirs, files in os.walk(base):
         for f in files:
-            if f.endswith(ext) and all(e not in os.path.join(root, f) for e in exclude):
+            if f.endswith('.tex') and all(e not in os.path.join(root, f) for e in exclude):
                 result.append(os.path.join(root, f))
     return result
 
