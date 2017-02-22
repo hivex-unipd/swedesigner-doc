@@ -16,7 +16,7 @@ def main():
 
 
 
-def get_files(base='.', ext='.tex', exclude=[]):
+def get_files(base='.', exclude=[]):
     """Return a list of files in the directory tree from <base> with extension <ext>."""
     result = []
     for root, dirs, files in os.walk(base):
@@ -41,26 +41,35 @@ def get_glossary(file):
 def mark_file(file, glossary, start='\gloss{', end='}'):
     """For each glossary term, mark its first occurrence in the file and update the file.
 
-    For each word in the given glossary, mark the first occurrence of it in the file with the start and end tags; then, update the file.
+    For each word in the given glossary, mark the first occurrence of it in the given TeX file with the start and end tags; then, update the file.
     """
-    fhandle = open(file, 'r')
-    text = fhandle.read()
-    fhandle.close()
-    output = mark_text(text, glossary, start, end)
-    fhandle = open(file, 'w')
-    fhandle.write(output)
-    fhandle.close()
+    output = []
+    f = open(file, 'r')
+    for line in f:
+        if line[0] == '%':
+            output.append(reset_text(line))
+        else:
+            output.append(mark_text(line, glossary, start, end))
+    f.close()
+
+    f = open(file, 'w')
+    for line in output:
+        f.write(line)
+    f.close()
 
 
 
 def mark_text(text, glossary, start='\gloss{', end='}'):
     """For each glossary term, mark its first occurrence in the text and return the text.
 
-    For each word in the given glossary, mark the first occurrence of it in the text with the start and end tags; then, return the string.
+    For each word in the given glossary, mark the first occurrence of it in the given TeX text with the start and end tags; then, return the string.
     """
     text = reset_text(text, start, end)
+    start = start.replace('\\', '\\\\')
+    end = end.replace('\\', '\\\\')
     for g in glossary:
-        text = text.replace(g, start + g + end, 1)
+        pattern = re.compile(r'\b' + g + r'\b')
+        text = pattern.sub(start + g + end, text, 1)
     return text
 
 
