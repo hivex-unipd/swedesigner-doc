@@ -45,11 +45,8 @@ def mark_file(file, glossary, start='\gloss{', end='}'):
     """
     output = []
     f = open(file, 'r')
-    for line in f:
-        if line[0] == '%':
-            output.append(reset_text(line))
-        else:
-            output.append(mark_text(line, glossary, start, end))
+    text = f.read()
+    output.append(mark_text(text, glossary, start, end))
     f.close()
 
     f = open(file, 'w')
@@ -68,7 +65,7 @@ def mark_text(text, glossary, start='\gloss{', end='}'):
     start = start.replace('\\', '\\\\')
     end = end.replace('\\', '\\\\')
     for g in glossary:
-        pattern = re.compile(r'\b' + g + r'\b')
+        pattern = re.compile(r'\b' + g + r'\b') # trovare un modo per ignorare i commenti LaTeX
         text = pattern.sub(start + g + end, text, 1)
     return text
 
