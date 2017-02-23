@@ -1,4 +1,4 @@
-% Norme di progetto
+% Specifica Tecnica
 % da compilare con il comando pdflatex Specifica_tecnica_x.x.x.tex
 
 \input{../../util/hx-ambiente}
@@ -24,32 +24,33 @@
 \section{Introduzione}
 \input{tex/intro}
 
-% - scelta di \gloss{framework}, librerie etc...
+% - scelta di linguaggi, framework, librerie etc...
 % - interfacce con tali tecnologie
 \section{Tecnologie utilizzate}
 \input{tex/tecnologie}
 
-% - diagramma dei \gloss{package}
+% - diagramma dei package
 % - scelte architetturali
 % - altre cose ad alto livello
 \section{Descrizione dell'architettura}
 \input{tex/architettura}
 
-% ---> distinguere STRUTTURA da COMPORTAMENTO ???
+% ---> distinguere STRUTTURA (classi) da COMPORTAMENTO (procedure)?
 % - diagrammi delle classi
 % - se serve, qualche diagramma di attività/sequenza
 \section{Componenti}
 \input{tex/componenti}
 
-% JSON, \gloss{client}-\gloss{server}... ???
+% JSON, client-server... ???
 \section{Modelli dei dati e interfacce}
 \input{tex/modelli}
 
-% ---> ha senso?
-% \section{Design pattern utilizzati}
-% \input{tex/pattern}
+% ---> forse meglio come subsection di "Introduzione"?
+% poche righe sulla fattibilità di ciò che progettiamo
+\section{Stime di fattibilità}
+\input{tex/fattibil}
 
-% ---> meglio come subsection di "Componenti"?
+% ---> forse meglio come subsection di "Componenti"?
 % - tracciamento componenti-reqq
 % - tracciamento reqq-componenti
 \section{Tracciamento}
