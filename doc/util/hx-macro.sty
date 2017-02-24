@@ -87,3 +87,11 @@ Per rendere più facile la lettura, la prima occorrenza di ogni termine presente
 		\hbox{\includegraphics[#1]{#2}}
 	}
 }
+
+% Elenco dei design pattern utilizzati in un documento:
+\newcommand{\listpatternname}{Elenco dei \emph{design pattern}}
+\newlistof{pattern}{pat}{\listpatternname}
+\newcommand{\pattern}[1]{%
+\refstepcounter{pattern}
+\emph{#1}
+\addcontentsline{pat}{pattern}{\protect\numberline{\thepattern}#1}}
