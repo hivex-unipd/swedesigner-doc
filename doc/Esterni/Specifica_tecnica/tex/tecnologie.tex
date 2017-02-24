@@ -2,18 +2,49 @@
 %%  Tecnologie utilizzate
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{JointJS}
+
+
+\subsection{Client}
+Per implementare il client di \proj{} abbiamo scelto di utilizzare HTML5 e CSS3 assieme a JavaScript. Di seguito elenchiamo e descriviamo le librerie JavaScript di cui il nostro client necessita. Tutte le librerie sono open-source, come richiesto dal capitolato.
+
+\subsubsection{JointJS}
+JointJS (\url{https://www.jointjs.com/opensource}) è una libreria open-source per visualizzare e manipolare grafi (e quindi diagrammi). Dipende da HTML5 e da alcune altre librerie JavaScript ma offre numerosi plug-in per realizzare particolari tipi di grafi.
+
+JointJS dipende da:
+\begin{itemize}
+	\item HTML5: JointJS richiede che una pagina HTML5 sia popolata con un tag \texttt{<canvas>}, che conterrà un grafo.
+	\item Le seguenti librerie JavaScript:
+	\begin{itemize}
+		\item JQuery;
+		\item Lodash;
+		\item Backbone.js.
+	\end{itemize}
+\end{itemize}
+
+il client di \proj{} utilizza un plug-in di JointJS che facilita la creazione di una particolare categoria di grafi: i diagrammi UML. [\dots]
+
+\subsubsection{Backbone.js}
 % ...
 
-\subsection{Backbone.js}
+\subsubsection{JQuery}
 % ...
-
-\subsection{JQuery}
-% ...
-
-\subsection{Apache Tomcat}
-% ...
-
-
 
 %%% [altro...]
+
+
+
+\subsection{Server}
+
+\subsubsection{Apache Tomcat}
+% ...
+
+\subsubsection{Pivotal Spring}
+% ...
+
+%%% [altro...]
+
+
+
+\subsection{Linguaggio target}
+
+%%% [...]
