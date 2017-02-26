@@ -73,7 +73,7 @@ Il presente documento si divide in tre sezioni principali:
 
 \subsubsection{Riferimenti normativi}
 \begin{itemize}
-	\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf};
+	\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.\gloss{pdf}};
 	\item Capitolato d'appalto dell'azienda \ZU: \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}. % normativo o informativo?
 \end{itemize}
 
@@ -170,8 +170,8 @@ Il presente documento si divide in tre sezioni principali:
 	Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi \gloss{UML} descritti qui di seguito, in riferimento allo standard UML 2.0:
 	\begin{itemize}
 		\item Diagramma dei \gloss{package}: raggruppa un numero di elementi UML in una sola unità di livello più alto.
-		\item Diagramma delle classi: descrive i tipi di entità (classi) del sistema e le relazioni tra esse.
-		\item Diagramma delle attività: descrive i passi di una procedura.
+		\item \gloss{Diagramma delle classi}: descrive i tipi di entità (classi) del sistema e le relazioni tra esse.
+		\item \gloss{Diagramma delle attività}: descrive i passi di una procedura.
 		\item Diagramma di sequenza: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 	\end{itemize}
 
@@ -194,7 +194,7 @@ Il presente documento si divide in tre sezioni principali:
 			% \item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
 			% \item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
 			% \item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
-			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso javascript
+			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://\gloss{github}.com/jsdoc3/jsdoc) %nel caso \gloss{javascript}
 		% \end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{\gloss{PragmaDB}}
@@ -274,7 +274,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	dove $x.y.z$ è il numero di versionamento: ogni versione di un documento è identificata univocamente dal nome del file e da una seconda stringa con il numero di versionamento che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
 	\item I file Latex che definiscono delle macro-istruzioni o danno istruzioni di stile devono iniziare con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo).
 \end{itemize}
-\paragraph{Formato} Ogni documento dev'essere in formato Latex con estensione \texttt{.tex} (esportabile in formato \gloss{PDF} su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in Latex. I file Latex che definiscano delle macro o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne “hx-ambiente”, per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
+\paragraph{Formato} Ogni documento dev'essere in formato Latex con estensione \texttt{.tex} (esportabile in formato PDF su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in Latex. I file Latex che definiscano delle macro o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne “hx-ambiente”, per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
 
 \subsubsection{Struttura di un documento}
 \paragraph{Frontespizio} Ogni documento che sia più lungo di una pagina deve iniziare con un frontespizio recante:
@@ -291,7 +291,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	\item destinazione d'uso del documento;
 	\item destinatari del documento;
 	\item mail del gruppo;
-	\item riferimento al repository pubblico di \gloss{GitHub}.
+	\item riferimento al repository pubblico di GitHub.
 \end{itemize} 
 Per rispettare tale struttura il redattore del documento deve inserire \\\texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento; a seguire deve inserire i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}; all'interno delle parentesi graffe di ognuno, vanno messe le informazioni corrette per quel documento. Per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}, da inserirsi subito dopo l'istruzione \texttt{\textbackslash begin\{document\}}.
 \paragraph{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca, dal più recente al più datato, i cambiamenti apportati a ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve inserire dopo l'istruzione \texttt{\textbackslash maketitle} il comando \texttt{\textbackslash include\{diario\}} allo scopo di includere un file intitolato \texttt{diario.tex} posto nella stessa cartella del documento. \texttt{diario.tex} deve presentare solo ed esclusivamente una tabella costruita con l'ambiente \texttt{diario}, funzionante allo stesso modo dell'ambiente \texttt{tabular}. Ogni riga della tabella del diario delle modifiche dev'essere così strutturata:
@@ -536,7 +536,7 @@ Inizialmente è stata rivolta l'attenzione a \gloss{Trello}, accoppiato ad un se
 	\item principalmente, la \textbf{mancanza di struttura} che dovrebbe permettere a Trello un lavoro più agile si è rivelata inefficace in fase di pianificazione;
 	\item lo strumento EleGantt, usato per stendere dei diagrammi di Gantt (non nativi in Trello) era troppo limitato nella sua versione gratuita.
 \end{itemize}
-Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a InstaGantt (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
+Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \gloss{InstaGantt} (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
 \begin{itemize}
 	\item creazione di task (compiti);
 	\item organizzazione dei task;
@@ -559,7 +559,7 @@ Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a In
 \paragraph{Organizzazione dei task} Si è adottato il modello \emph{Board}: esso permette di raggruppare i task in colonne, in modo da avere una visione immediata dello stato di ogni documento o codice che è necessario produrre.
 Attualmente sono state create le seguenti colonne:
 \begin{description}
-	\item[Milestone] contiene le \gloss{milestone} decise dal gruppo e quelle obbligatorie, definite dal \TV;
+	\item[\gloss{Milestone}] contiene le milestone decise dal gruppo e quelle obbligatorie, definite dal \TV;
 	\item[Ambiente di sviluppo] contiene dei task assegnati per indagare i migliori strumenti di sviluppo che sono stati adottati dal gruppo;
 	\item[Analisi dei Requisiti] documento richiesto;
 	\item[Piano di Qualifica] documento richiesto;
@@ -591,7 +591,7 @@ La sezione \emph{Workload} in InstaGantt permette di visualizzare i vari task as
 	\item controllare la presenza di task non assegnati.
 \end{itemize}
 
-\paragraph{Baseline} Infine è compito del responsabile di progetto salvare una \emph{\gloss{baseline}} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
+\paragraph{\gloss{Baseline}} Infine è compito del responsabile di progetto salvare una \emph{baseline} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
 
 \paragraph{diagrammi di Gantt} Non si ritiene inoltre che i diagrammi PERT possano essere efficaci per una rappresentazione immediata dei rischi della pianificazione. Il responsabile di progetto deve, invece, fornire solamente i diagrammi di Gantt con le relative date effettive di completamento.
 

@@ -65,8 +65,8 @@ def mark_text(text, glossary, start='\gloss{', end='}'):
     start = start.replace('\\', '\\\\')
     end = end.replace('\\', '\\\\')
     for g in glossary:
-        pattern = re.compile(r'\b' + g + r'\b') # trovare un modo per ignorare i commenti LaTeX
-        text = pattern.sub(start + g + end, text, 1)
+        pattern = re.compile(r'\b(' + g + r')\b', re.I) # trovare un modo per ignorare i commenti LaTeX
+        text = pattern.sub(start + r'\1' + end, text, 1)
     return text
 
 
