@@ -155,16 +155,39 @@ Il presente documento si divide in tre sezioni principali:
 			\item[estensioni] eventuali estensioni, se specificate;
 			\item[scenari alternativi] descrizione tramite casi d'uso non appartenenti al flusso principale.
 		\end{description}
+
 	\subsubsection{Progettazione}
-	Il compito dei progettisti consiste nel progettare l'architettura del software. % da completare.
-%%% >>>>>> DA COMPLETARE <<<<<<
-	La fase di progettazione deve utilizzare i diagrammi \gloss{UML} descritti qui di seguito, in riferimento allo standard UML 2.0:
+	\paragraph{Attività} Il lavoro dei progettisti consiste nel progettare il software; nello specifico, questo lavoro si articola in due attività:
+	\begin{enumerate}
+		\item \textbf{Progettazione architetturale} (attività ISO/IEC 12207 5.3.5) --- definire l'architettura del sistema, cioè individuare e descrivere le componenti del sistema; ogni progettista documenta questa attività nel documento di Specifica Tecnica.
+		\item \textbf{Progettazione di dettaglio} (attività ISO/IEC 12207 5.3.6) --- definire, in dettaglio, il \emph{comportamento} delle componenti del sistema; ogni progettista documenta questa attività nel documento di Definizione di Prodotto.
+	\end{enumerate}
+	Per ognuna di queste due attività, ogni progettista deve definire dei test che permettano la verifica del sistema:
+	\begin{enumerate}
+		\item durante la progettazione architetturale, i progettisti definiscono i \textbf{test di integrazione}, cioè dei test che verificano il corretto interfacciarsi delle componenti del sistema;
+		\item durante la progettazione di dettaglio, la specifica del comportamento di una componente dev'essere accompagnata dalla definizione di un \textbf{test di unità} che verifichi il corretto funzionamento della componente isolata.
+	\end{enumerate}
+
+	\paragraph{Diagrammi} Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi \gloss{UML} descritti qui di seguito, in riferimento allo standard UML 2.0:
 	\begin{itemize}
 		\item Diagramma dei \gloss{package}: raggruppa un numero di elementi UML in una sola unità di livello più alto.
-		\item Diagramma delle classi: descrive i tipi di entità (classi) del sistema e le relazioni tra esse.
-		\item Diagramma delle attività: descrive i passi di una procedura.
+		\item \gloss{Diagramma delle classi}: descrive le interfacce delle componenti del sistema e le relazioni tra esse.
+		\item \gloss{Diagramma delle attività}: descrive i passi di una procedura.
 		\item Diagramma di sequenza: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 	\end{itemize}
+
+	\paragraph{Stile di progettazione} \proj{} è un software a oggetti; perciò, le componenti software descritte nei diagrammi delle classi sono classi \gloss{Java} e prototipi di oggetti \gloss{JavaScript}. Per comodità, chiameremo “classi” anche i prototipi di oggetti JavaScript, benché tale linguaggio non offra il costrutto \texttt{class} se non come “zucchero sintattico”. Pertanto, le procedure descritte nei diagrammi delle attività sono:
+	\begin{itemize}
+		\item in Java, solo ed esclusivamente metodi di classi;
+		\item in JavaScript, metodi di classi o funzioni che abbiano un nome esplicito.
+	\end{itemize}
+	Al fine di aumentare la manutenibilità del sistema, i progettisti devono seguire le seguenti regole:
+	\begin{itemize}
+		\item quando una classe si interfaccia con un'altra, essa non deve specificare una particolare classe concreta ma soltanto una suo \emph{tipo}, cioè un'interfaccia o una classe astratta;
+		\item ...
+		\item 
+	\end{itemize}
+
 	\subsubsection{Codifica} \label{sec:cod}
 	La sezione sulla codifica (norme e strumenti) verrà stesa in una versione successiva di questo documento.
 	% Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
@@ -184,7 +207,7 @@ Il presente documento si divide in tre sezioni principali:
 			% \item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
 			% \item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
 			% \item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
-			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso javascript
+			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso JavaScript
 		% \end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{\gloss{PragmaDB}}
@@ -308,7 +331,7 @@ Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a 
 \subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano, con uno stile chiaro e poco articolato. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
 \begin{itemize}
 	\item La punteggiatura è seguita ma non preceduta da uno spazio.
-	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{\gloss{framework}} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione italiana.
+	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{management} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione italiana.
 	\item Gli elementi di un elenco sono separati da un punto e virgola (quindi iniziano con lettera minuscola), tranne l'ultimo che si conclude con un punto. Nel caso che anche un solo elemento dell'elenco si componga di più frasi separate da segno di punteggiatura forte, tutti gli elementi dell'elenco iniziano per maiuscola e finiscono con un punto. In entrambi i casi, ogni elenco è introdotto dai due punti.
 	\item Le abbreviazioni vanno scritte interamente in maiuscolo e definite nel glossario.
 \end{itemize}
@@ -549,7 +572,7 @@ Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a In
 \paragraph{Organizzazione dei task} Si è adottato il modello \emph{Board}: esso permette di raggruppare i task in colonne, in modo da avere una visione immediata dello stato di ogni documento o codice che è necessario produrre.
 Attualmente sono state create le seguenti colonne:
 \begin{description}
-	\item[Milestone] contiene le \gloss{milestone} decise dal gruppo e quelle obbligatorie, definite dal \TV;
+	\item[\gloss{Milestone}] contiene le milestone decise dal gruppo e quelle obbligatorie, definite dal \TV;
 	\item[Ambiente di sviluppo] contiene dei task assegnati per indagare i migliori strumenti di sviluppo che sono stati adottati dal gruppo;
 	\item[Analisi dei Requisiti] documento richiesto;
 	\item[Piano di Qualifica] documento richiesto;
@@ -581,7 +604,7 @@ La sezione \emph{Workload} in InstaGantt permette di visualizzare i vari task as
 	\item controllare la presenza di task non assegnati.
 \end{itemize}
 
-\paragraph{Baseline} Infine è compito del responsabile di progetto salvare una \emph{\gloss{baseline}} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
+\paragraph{\gloss{Baseline}} Infine è compito del responsabile di progetto salvare una \emph{baseline} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
 
 \paragraph{diagrammi di Gantt} Non si ritiene inoltre che i diagrammi PERT possano essere efficaci per una rappresentazione immediata dei rischi della pianificazione. Il responsabile di progetto deve, invece, fornire solamente i diagrammi di Gantt con le relative date effettive di completamento.
 
