@@ -155,16 +155,26 @@ Il presente documento si divide in tre sezioni principali:
 			\item[estensioni] eventuali estensioni, se specificate;
 			\item[scenari alternativi] descrizione tramite casi d'uso non appartenenti al flusso principale.
 		\end{description}
+
 	\subsubsection{Progettazione}
-	Il compito dei progettisti consiste nel progettare l'architettura del software. % da completare.
-%%% >>>>>> DA COMPLETARE <<<<<<
-	La fase di progettazione deve utilizzare i diagrammi \gloss{UML} descritti qui di seguito, in riferimento allo standard UML 2.0:
+	Il lavoro dei progettisti consiste nel progettare il software; questo lavoro si articola in due processi:
+	\begin{enumerate}
+		\item \textbf{Progettazione architetturale} --- definire l'architettura del sistema, cioè individuare e descrivere le componenti del sistema; ogni progettista documenta questo processo nel documento di Specifica Tecnica.
+		\item \textbf{Profettazione di dettaglio} --- definire, in dettaglio, il \emph{comportamento} delle componenti del sistema; ogni progettista documenta questo processo nel documento di Definizione di Prodotto.
+	\end{enumerate}
+	Per ognuno di questi due processi, ogni progettista deve definire dei test che permettano la verifica del sistema:
+	\begin{enumerate}
+		\item durante la progettazione architetturale, i progettisti definiscono i \textbf{test di integrazione}, cioè dei test che verificano il corretto interfacciarsi delle componenti del sistema;
+		\item durante la progettazione di dettaglio, la specifica del comportamento di una componente dev'essere accompagnata dalla definizione di un \textbf{test di unità} che verifichi il corretto funzionamento della componente isolata.
+	\end{enumerate}
+	Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi \gloss{UML} descritti qui di seguito, in riferimento allo standard UML 2.0:
 	\begin{itemize}
 		\item Diagramma dei \gloss{package}: raggruppa un numero di elementi UML in una sola unità di livello più alto.
 		\item Diagramma delle classi: descrive i tipi di entità (classi) del sistema e le relazioni tra esse.
 		\item Diagramma delle attività: descrive i passi di una procedura.
 		\item Diagramma di sequenza: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 	\end{itemize}
+
 	\subsubsection{Codifica} \label{sec:cod}
 	La sezione sulla codifica (norme e strumenti) verrà stesa in una versione successiva di questo documento.
 	% Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
