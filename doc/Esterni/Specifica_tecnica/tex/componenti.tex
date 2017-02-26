@@ -8,7 +8,7 @@
 
 
 
-\subsection{Client}
+\subsection{\gloss{Client}}
 
 \subsubsection{MainApp}
 % ...
@@ -20,10 +20,46 @@
 
 
 
-\subsection{Server}
 
-\subsubsection{Generator}
-% ...
+\subsection{\gloss{Server}}
+% server==package principale
+%Controller== classe che fa da Front Controller
+%generator== package dentro server che fa il lavoro di creare il zip
+%Project==classe (forse interface o abstract) dentro generator che fa il lavoro di creare il zip
+\subsubsection{server}
+--immagine package server con la classe controller che comunica con la classe Project contenuta nel package generator--
+\begin{description}
+\item[Descrizione] è il package che racchiude tutti i componenti del back-end che si occupano di soddisfare le richieste provenienti dal front-end ed elaborarle;
+\item[Package contenuti] 
+	\begin{itemize}
+	\item server::endpoints (in teoria nn c'è);
+	\item server::generator;
+	\end{itemize}
+\item[Interazione con altri componenti] interagisce con il client definito nella sez xxx tramite i servizi REST offerti. (in teoria non c'è)
+\end{description}
 
-\subsubsection{...}
-% ...
+\paragraph{Classi}
+\subparagraph{server::Controller}
+\begin{description}
+\item[Descrizione] è la classe che implementa il pattern Front Controller e si occupa di raccogliere le richieste dal client (anche Singleton??)
+\item[Utilizzo] viene invocata ""dal client"" e trasferisce la richiesta alla classe Project contenuta nel package server::generator che si occuperà di invocare il relativo comando per soddisfare la richiesta; 
+\item[Relazioni con altre classi] 
+	\begin{itemize}
+	\item server::generator::Project.
+	\end{itemize}
+\end{description}
+
+\subsubsection{server::generator}
+--immagine--
+\begin{description}
+\item[Descrizione] è il package che contiene tutti i componenti che definiscono la logica necessaria per soddisfare le richieste il arrivo dal client;
+\item[Padre] server; 
+\item[Package contenuti]
+	\begin{itemize}
+	...
+	\end{itemize}
+\item[Interazione con altri componenti] 
+	\begin{itemize}
+	\item server::Controller.
+	\end{itemize}
+\end{description}
