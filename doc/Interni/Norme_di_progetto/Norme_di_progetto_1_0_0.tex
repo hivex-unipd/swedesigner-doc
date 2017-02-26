@@ -157,18 +157,18 @@ Il presente documento si divide in tre sezioni principali:
 		\end{description}
 
 	\subsubsection{Progettazione}
-	Il lavoro dei progettisti consiste nel progettare il software; questo lavoro si articola in due processi:
+	\paragraph{Attività} Il lavoro dei progettisti consiste nel progettare il software; nello specifico, questo lavoro si articola in due attività:
 	\begin{enumerate}
-		\item \textbf{Progettazione architetturale} --- definire l'architettura del sistema, cioè individuare e descrivere le componenti del sistema; ogni progettista documenta questo processo nel documento di Specifica Tecnica.
-		\item \textbf{Profettazione di dettaglio} --- definire, in dettaglio, il \emph{comportamento} delle componenti del sistema; ogni progettista documenta questo processo nel documento di Definizione di Prodotto.
+		\item \textbf{Progettazione architetturale} (attività ISO/IEC 12207 5.3.5) --- definire l'architettura del sistema, cioè individuare e descrivere le componenti del sistema; ogni progettista documenta questa attività nel documento di Specifica Tecnica.
+		\item \textbf{Progettazione di dettaglio} (attività ISO/IEC 12207 5.3.6) --- definire, in dettaglio, il \emph{comportamento} delle componenti del sistema; ogni progettista documenta questa attività nel documento di Definizione di Prodotto.
 	\end{enumerate}
-	Per ognuno di questi due processi, ogni progettista deve definire dei test che permettano la verifica del sistema:
+	Per ognuna di queste due attività, ogni progettista deve definire dei test che permettano la verifica del sistema:
 	\begin{enumerate}
 		\item durante la progettazione architetturale, i progettisti definiscono i \textbf{test di integrazione}, cioè dei test che verificano il corretto interfacciarsi delle componenti del sistema;
 		\item durante la progettazione di dettaglio, la specifica del comportamento di una componente dev'essere accompagnata dalla definizione di un \textbf{test di unità} che verifichi il corretto funzionamento della componente isolata.
 	\end{enumerate}
 
-	Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi \gloss{UML} descritti qui di seguito, in riferimento allo standard UML 2.0:
+	\paragraph{Diagrammi} Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi \gloss{UML} descritti qui di seguito, in riferimento allo standard UML 2.0:
 	\begin{itemize}
 		\item Diagramma dei \gloss{package}: raggruppa un numero di elementi UML in una sola unità di livello più alto.
 		\item \gloss{Diagramma delle classi}: descrive le interfacce delle componenti del sistema e le relazioni tra esse.
@@ -176,10 +176,16 @@ Il presente documento si divide in tre sezioni principali:
 		\item Diagramma di sequenza: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 	\end{itemize}
 
-	\proj{} è un software a oggetti; perciò, le componenti software descritte nei diagrammi delle classi sono classi \gloss{Java} e prototipi di oggetti \gloss{JavaScript}. Per comodità, chiameremo “classi” anche i prototipi di oggetti JavaScript, benché tale linguaggio non offra il costrutto \texttt{class} se non come “zucchero sintattico”. Pertanto, le procedure descritte nei diagrammi delle attività sono:
+	\paragraph{Stile di progettazione} \proj{} è un software a oggetti; perciò, le componenti software descritte nei diagrammi delle classi sono classi \gloss{Java} e prototipi di oggetti \gloss{JavaScript}. Per comodità, chiameremo “classi” anche i prototipi di oggetti JavaScript, benché tale linguaggio non offra il costrutto \texttt{class} se non come “zucchero sintattico”. Pertanto, le procedure descritte nei diagrammi delle attività sono:
 	\begin{itemize}
 		\item in Java, solo ed esclusivamente metodi di classi;
 		\item in JavaScript, metodi di classi o funzioni che abbiano un nome esplicito.
+	\end{itemize}
+	Al fine di aumentare la manutenibilità del sistema, i progettisti devono seguire le seguenti regole:
+	\begin{itemize}
+		\item quando una classe si interfaccia con un'altra, essa non deve specificare una particolare classe concreta ma soltanto una suo \emph{tipo}, cioè un'interfaccia o una classe astratta;
+		\item ...
+		\item 
 	\end{itemize}
 
 	\subsubsection{Codifica} \label{sec:cod}
