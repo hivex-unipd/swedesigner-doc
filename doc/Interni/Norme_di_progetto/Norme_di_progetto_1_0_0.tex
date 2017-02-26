@@ -201,7 +201,7 @@ Il presente documento si divide in tre sezioni principali:
 			% \item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
 			% \item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
 			% \item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
-			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://\gloss{github}.com/jsdoc3/jsdoc) %nel caso JavaScript
+			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso JavaScript
 		% \end{itemize}
 	\subsubsection{Strumenti}
 		\paragraph{\gloss{PragmaDB}}
@@ -281,7 +281,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	dove $x.y.z$ è il numero di versionamento: ogni versione di un documento è identificata univocamente dal nome del file e da una seconda stringa con il numero di versionamento che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
 	\item I file Latex che definiscono delle macro-istruzioni o danno istruzioni di stile devono iniziare con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo).
 \end{itemize}
-\paragraph{Formato} Ogni documento dev'essere in formato Latex con estensione \texttt{.tex} (esportabile in formato PDF su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in Latex. I file Latex che definiscano delle macro o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne “hx-ambiente”, per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
+\paragraph{Formato} Ogni documento dev'essere in formato Latex con estensione \texttt{.tex} (esportabile in formato \gloss{PDF} su foglio A4); la prima versione di un documento può essere in altri formati ma va presto sostituita da una versione in Latex. I file Latex che definiscano delle macro o diano istruzioni di stile iniziano con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo), hanno estensione \texttt{.sty} (tranne “hx-ambiente”, per permetterne l'inclusione prima di dichiarare la classe del documento) e vanno inclusi con il comando \texttt{\textbackslash usepackage\{\}}.
 
 \subsubsection{Struttura di un documento}
 \paragraph{Frontespizio} Ogni documento che sia più lungo di una pagina deve iniziare con un frontespizio recante:
@@ -298,7 +298,7 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	\item destinazione d'uso del documento;
 	\item destinatari del documento;
 	\item mail del gruppo;
-	\item riferimento al repository pubblico di GitHub.
+	\item riferimento al repository pubblico di \gloss{GitHub}.
 \end{itemize} 
 Per rispettare tale struttura il redattore del documento deve inserire \\\texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento; a seguire deve inserire i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}; all'interno delle parentesi graffe di ognuno, vanno messe le informazioni corrette per quel documento. Per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}, da inserirsi subito dopo l'istruzione \texttt{\textbackslash begin\{document\}}.
 \paragraph{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca, dal più recente al più datato, i cambiamenti apportati a ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve inserire dopo l'istruzione \texttt{\textbackslash maketitle} il comando \texttt{\textbackslash include\{diario\}} allo scopo di includere un file intitolato \texttt{diario.tex} posto nella stessa cartella del documento. \texttt{diario.tex} deve presentare solo ed esclusivamente una tabella costruita con l'ambiente \texttt{diario}, funzionante allo stesso modo dell'ambiente \texttt{tabular}. Ogni riga della tabella del diario delle modifiche dev'essere così strutturata:
@@ -325,7 +325,7 @@ Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a 
 \subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano, con uno stile chiaro e poco articolato. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
 \begin{itemize}
 	\item La punteggiatura è seguita ma non preceduta da uno spazio.
-	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{\gloss{framework}} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione italiana.
+	\item Le parole straniere di uso comune (computer, radar, web\dots) non vanno evidenziate, per non appesantire il testo; vanno invece evidenziate quelle straniere di uso \emph{non} comune, come \emph{management} o \emph{way of working}. Quando un termine straniero ha una traduzione italiana che non sia troppo strana o artificiosa, va preferita la traduzione italiana.
 	\item Gli elementi di un elenco sono separati da un punto e virgola (quindi iniziano con lettera minuscola), tranne l'ultimo che si conclude con un punto. Nel caso che anche un solo elemento dell'elenco si componga di più frasi separate da segno di punteggiatura forte, tutti gli elementi dell'elenco iniziano per maiuscola e finiscono con un punto. In entrambi i casi, ogni elenco è introdotto dai due punti.
 	\item Le abbreviazioni vanno scritte interamente in maiuscolo e definite nel glossario.
 \end{itemize}
@@ -543,7 +543,7 @@ Inizialmente è stata rivolta l'attenzione a \gloss{Trello}, accoppiato ad un se
 	\item principalmente, la \textbf{mancanza di struttura} che dovrebbe permettere a Trello un lavoro più agile si è rivelata inefficace in fase di pianificazione;
 	\item lo strumento EleGantt, usato per stendere dei diagrammi di Gantt (non nativi in Trello) era troppo limitato nella sua versione gratuita.
 \end{itemize}
-Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a \gloss{InstaGantt} (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
+Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a InstaGantt (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
 \begin{itemize}
 	\item creazione di task (compiti);
 	\item organizzazione dei task;
