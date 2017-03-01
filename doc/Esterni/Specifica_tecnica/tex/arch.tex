@@ -5,14 +5,14 @@
 
 
 \subsection{Metodo e formalismo di specifica}
-Suddividiamo la descrizione dell'architettura di \proj{} in tre sezioni:
+Suddividiamo la descrizione dell'architettura di \proj{} in quattro sezioni:
 \begin{itemize}
 	\item §\ref{sec:arch_gen}, che illustra gli aspetti generali dell'architettura del software;
 	\item §\ref{sec:arch_client}, che descrive l'architettura del \emph{front end} dell'applicazione;
 	\item §\ref{sec:arch_server}, che descrive l'architettura del \emph{back end} dell'applicazione;
 	\item §\ref{sec:arch_proto}, che descrive il protocollo che lega le due interfacce precedenti.
 \end{itemize}
-Per ognuna di queste sezioni, specifichiamo l'architettura con metodo \emph{top-down} --- dal generale al particolare --- utilizzando i formalismi di UML 2.0.
+Per ognuna di queste sezioni, descriviamo l'architettura con metodo \emph{top-down} --- dal generale al particolare --- utilizzando i formalismi di UML 2.0.
 
 
 
@@ -22,6 +22,25 @@ L'architettura dell'applicazione è suddivisa in due moduli:
 	\item il client, che vive nel browser dell'utente;
 	\item il server, che fornisce la pagina dell'applicazione al client e riceve da esso delle richieste di generazione di codice.
 \end{enumerate}
+
+Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato perseguito in due modi:
+\begin{itemize}
+	\item in generale, promuovendo le seguenti qualità:
+	\begin{itemize}
+		\item manutenibilità;
+		\item modularità;
+		\item semplicità;
+		\item basso accoppiamento.
+	\end{itemize}
+	\item nello specifico, prevedendo le seguenti possibili aggiunte nel futuro:
+	\begin{itemize}
+		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del JavaScript o del Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria StringTemplate).
+		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati in XML, anziché in JSON; sarà sufficiente implementare l'interfaccia \texttt{Generator} con una nuova classe concreta, da fornire al controller.
+		\item Diversa compressione del codice generato: attualmente l'applicazione genera codice Java e lo fornisce in formato ZIP, ma si potrebbe facilmente cambiare il formato di compressione in TAR o JAR.
+		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; oppure; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
+		\item Persistenza del programma generato: si potrebbe voler mantenere anche il codice generato, come il diagramma di input; per fare ciò, basta garantire al client il carattere persistente della risorsa fornita (badando però a non eliminarla dal server). % (per ora la eliminiamo?)
+	\end{itemize}
+\end{itemize}
 
 
 
