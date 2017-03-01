@@ -79,7 +79,9 @@ Il presente documento si divide in tre sezioni principali:
 
 \subsubsection{Riferimenti informativi}
 \begin{itemize}
-	\item L. Pantieri, \emph{L'arte di scrivere in Latex}: \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}.
+	\item L. Pantieri, \emph{L'arte di scrivere in Latex}: \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf};
+	\item SDMetrics User Manual: \url{http://www.sdmetrics.com/manual/index.html};
+	\item CodePro Analytix Help Contents.
 \end{itemize}
 
 
@@ -438,10 +440,171 @@ La verifica è un processo analitico che va implementato in due passi successivi
 		I test di accettazione vengono eseguiti con il proponente per collaudare il prodotto. Vengono identificati dalla seguente sintassi:
 			\[TV[Codice Requisito]\]
 
+\subsubsection{Metriche}
+	Nel contesto dell'attività di verifica dei processi istanziati nel corso dell'attività di progetto e dell'analisi statica dei relativi prodotti (codice, documenti, design architetturale) vengono in seguito definite delle metriche utili alla misurazione quantitativa degli obiettivi i qualità come definiti nella sezione relativa del documento \PdQ .
+	Per ognuna delle metriche viene definito il nome, lo strumento utilizzato per effettuare la relativa misurazione e il range o il valore di accettazione per essa stabilito.
+	
+			
+			\subparagraph{Copertura dei requisiti obbligatori}
+			La misura viene effettuata prendendo in considerazione le informazioni aggiornate nel database di PragmaDB a seguito dell'esecuzione con successo dei relativi test di sistema.
+			\\Il valore di accettazione stabilito per la metrica è 100.
+			
+			\subparagraph{Copertura requisiti desiderabili}
+			La misura viene effettuata prendendo in considerazione le informazioni aggiornate nel database di PragmaDB a seguito dell'esecuzione con successo dei relativi test di sistema.
+			\\Il range di accettazione stabilito per la metrica è 50 - 100.
+		
+			\subparagraph{Test superati}
+			La misura viene effettuata prendendo in considerazione le informazioni aggiornate nel database di PragmaDB a seguito dell'esecuzione con successo dei relativi test di sistema.
+			\\Il range di accettazione stabilito per la metrica è 90 - 100.
+			
+			\subparagraph{Profondità di annidamento dei blocchi}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix.
+			\\Il range di accettazione stabilito per la metrica è 0 - 8.
+			
+			\subparagraph{Numero di linee di codice per metodo}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix.
+			\\Il range di accettazione stabilito per la metrica è 0 - 40.
+			
+			\subparagraph{Numero di parametri per metodo}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix.
+			\\Il range di accettazione stabilito per la metrica è 0 - 8.
+			
+			\subparagraph{Numero di campi dati per classe}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix per la codifica e SDMetrics per la progettazione.
+			\\Il range di accettazione stabilito per la metrica è 0 - 20.
+			
+			\subparagraph{Numero di metodi per classe}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix per la codifica e SDMetrics per la progettazione.
+			\\Il range di accettazione stabilito per la metrica è 0 - 20.
+			
+			\subparagraph{Grado di accoppiamento afferente per package}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix per la codifica e SDMetrics per la progettazione.
+			\\Il range di accettazione stabilito per la metrica è 0 - 39.
+			
+			\subparagraph{Grado di accoppiamento efferente per package}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix per la codifica e SDMetrics per la progettazione.
+			\\Il range di accettazione stabilito per la metrica è 0 - 16.
+			
+			\subparagraph{Complessità ciclomatica per metodo}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix.
+			\\Il range di accettazione stabilito per la metrica è 0 - 10.
+			
+			\subparagraph{Numero di tipi per package}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix per la codifica e SDMetrics per la progettazione.
+			\\Il range di accettazione stabilito per la metrica è 0 - 30.
+			
+			\subparagraph{Distanza dalla sequenza principale normalizzata}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix per la codifica e SDMetrics per la progettazione.
+			\\Il range di accettazione stabilito per la metrica è 0.0 - 0.7.
+			
+			\subparagraph{Instabilità}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix per la codifica e SDMetrics per la progettazione.
+			\\I range di accettazione stabiliti per la metrica sono 0.0 - 0.4 e 0.6 - 1.0.
+			
+			\subparagraph{Percentuale linee di commento su linee di codice}
+			La misura viene effettuata utilizzando lo strumento CodePro Analytix.
+			\\Il range di accettazione stabilito per la metrica è 20 - 40.
+			
+			\subparagraph{Validazione W3C}
+			La misura viene effettuata utilizzando il validatore W3C disponibile all'indirizzo \url{https://validator.w3.org/}.
+			\\Il range di accettazione stabilito per la metrica è 0 - 20.
+			
+			\subparagraph{Schedule Variance}
+			La misura viene effettuata utilizzando lo strumento Asana.
+			\\Il range di accettazione stabilito per la metrica è -25 - 0.
+			
+			\subparagraph{Budget Variance}
+			La misura viene effettuata utilizzando lo strumento Asana.
+			\\Il range di accettazione stabilito per la metrica è -25 - 0.
+			
+			\subparagraph{Numero di violazioni di alta importanza delle norme di codifica}
+			La misura viene effettuata utilizzando CodePro Analytix.
+			\\Il valore di accettazione stabilito per la metrica è 0.
+			
+			\subparagraph{Numero di violazioni di media importanza delle norme di codifica}
+			La misura viene effettuata utilizzando CodePro Analytix.
+			\\Il range di accettazione stabilito per la metrica è 0 - 5.
+			
+			\subparagraph{Numero di violazioni di bassa importanza delle norme di codifica}
+			La misura viene effettuata utilizzando CodePro Analytix.
+			\\Il range di accettazione stabilito per la metrica è 0 - 10.
+			
+			\subparagraph{Indice di Gulpease}
+			La misura viene effettuata utilizzando un apposito script in Perl.
+			\\Il range di accettazione stabilito per la metrica è 40 - 100.
+			
+			\subparagraph{Numero di violazioni della completezza architetturale di alta importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il valore di accettazione stabilito per la metrica è 0.
+			
+			\subparagraph{Numero di violazioni della completezza architetturale di media importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il range di accettazione stabilito per la metrica è 0 - 5.
+			
+			\subparagraph{Numero di violazioni della completezza architetturale di bassa importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il range di accettazione stabilito per la metrica è 0 - 10.
+			
+			\subparagraph{Numero di violazioni dello stile architetturale di alta importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il valore di accettazione stabilito per la metrica è 0.
+			
+			\subparagraph{Numero di violazioni dello stile architetturale di media importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il range di accettazione stabilito per la metrica è 0 - 5.
+			
+			\subparagraph{Numero di violazioni dello stile architetturale di bassa importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il range di accettazione stabilito per la metrica è 0 - 10.
+			
+			\subparagraph{Numero di violazioni della correttezza architetturale di alta importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il valore di accettazione stabilito per la metrica è 0.
+			
+			\subparagraph{Numero di violazioni della correttezza architetturale di media importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il range di accettazione stabilito per la metrica è 0 - 5.
+			
+			\subparagraph{Numero di violazioni della correttezza architetturale di bassa importanza}
+			La misura viene effettuata utilizzando SDMetrics.
+			\\Il range di accettazione stabilito per la metrica è 0 - 10.
+			
+			\subparagraph{Statement Coverage}
+			La misura viene effettuata utilizzando ?? .
+			\\Il range di accettazione stabilito per la metrica è 80 - 100.
+			
+			\subparagraph{Branch Coverage}
+			La misura viene effettuata utilizzando ?? .
+			\\Il range di accettazione stabilito per la metrica è 80 - 100.
+			
+			\subparagraph{Test di unità eseguiti}
+			La misura viene effettuata utilizzando ??.
+			\\Il range di accettazione stabilito per la metrica è 90 - 100.
+			
+			\subparagraph{Test di integrazione eseguiti}
+			La misura viene effettuata utilizzando ??.
+			\\Il range di accettazione stabilito per la metrica è 90 - 100.
+			
+			\subparagraph{Test di sistema eseguiti}
+			La misura viene effettuata utilizzando ??.
+			\\Il range di accettazione stabilito per la metrica è 90 - 100.
+			
+			\subparagraph{Test di accettazione eseguiti}
+			La misura viene effettuata utilizzando ??.
+			\\Il range di accettazione stabilito per la metrica è 90 - 100.
+			
+			\subparagraph{Numero di figli diretti}
+			La misura viene effettuata utilizzando SDMetrics per la progettazione e CodePro Analytix per la codifica.
+			\\Il range di accettazione stabilito per la metrica è 0 - 4.
+			
+			\subparagraph{Profondità nella gerarchia}
+			La misura viene effettuata utilizzando SDMetrics per la progettazione e CodePro Analytix per la codifica.
+			\\Il range di accettazione stabilito per la metrica è 0 - 4.
+
 	\subsubsection{Strumenti}
-	La verifica va automatizzata il più possibile, per garantirne l'obiettività e l'efficacia. % DA IMPLEMENTARE...
-
-
+	In questa sezione vengono dettagliate le caratteristiche e funzionalità degli strumenti automatici scelti per la misurazione delle metriche definite nel paragrafo precedente.
+		\subparagraph{SDMetrics}
+		\subparagraph{CodePRO Analitix}
 
 \subsection{Validazione}
 Ogni verifica di una parte della configurazione dev'essere vagliata dal responsabile di progetto; per questo, il responsabile deve controllare i risultati dei test. Egli può approvarli oppure chiedere ai verificatori di ripeterli. L'approvazione determina:
