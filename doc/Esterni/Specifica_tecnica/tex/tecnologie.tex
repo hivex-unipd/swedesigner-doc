@@ -5,13 +5,12 @@
 
 
 \subsection{\gloss{Client}}
-Per implementare il client di \proj{} abbiamo scelto di utilizzare \gloss{HTML5} e \gloss{CSS3} assieme a \gloss{JavaScript}. Di seguito elenchiamo e descriviamo le librerie JavaScript di cui il nostro client necessita. Tutte le librerie sono open-source, come richiesto dal capitolato.
+Implementeremo il client di \proj{} con le tecnologie web richieste dal capitolato d'appalto: \gloss{HTML5}, \gloss{CSS3} e \gloss{JavaScript}. Di seguito elenchiamo e descriviamo le librerie JavaScript di cui il nostro client necessita. Tutte le librerie sono open-source, come richiesto dal capitolato.
 
 \subsubsection{JointJS}
 La libreria \jointjs{} (\url{https://www.jointjs.com/opensource}) è una libreria open-source per realizzare \gloss{editor} di diagrammi interattivi, in maniera altamente personalizzabile. %Dipende da HTML5 e da alcune altre librerie JavaScript ma offre numerosi plug-in per realizzare particolari tipi di grafi.
 
 La libreria sfrutta le seguenti tecnologie per il suo funzionamento:
-
 \begin{itemize}
 	\item \html{}: \jointjs{} richiede che una pagina \html{} sia popolata con un tag \texttt{<canvas>}, che conterrà un diagramma.
 	\item Le seguenti librerie \js{}:
@@ -25,11 +24,11 @@ La libreria sfrutta le seguenti tecnologie per il suo funzionamento:
 \subsubsection{\backbonejs}
 La libreria \backbonejs{} permette di strutturare applicazioni web single page (SPA) fornendo \textbf{modelli} con binding di chiave-valore, eventi, \textbf{collezioni} e \textbf{viste} con una gestione degli eventi dichiarativa. Essa offre inoltre una interfaccia RESTful.
 
-A causa della struttura data alla libreria \jointjs{}, sviluppata tramite MVC (collection), al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà \proj{} estendendo le funzionalità di base offerte da \jointjs{} usando il modello \mvc{}.
+A causa della struttura data alla libreria \jointjs{}, sviluppata tramite MVC (collection), al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà \proj{} estendendo le funzionalità di base offerte da \jointjs{} usando il modello \mvc{}. % il modello \mvc{} offerto da \backbonejs{}. % ?
 
 
 \subsubsection{\jquery}
-La libreria \jquery{} è sfruttata da \jointjs{} ed è necesaria per semplificare varie operazioni di basso livello. 
+La libreria \jquery{} è sfruttata da \jointjs{} ed è necesaria per semplificare varie operazioni di basso livello.
 
 
 \subsubsection{\requirejs}
@@ -51,16 +50,16 @@ stubs, mocks, (test spies??)
 
 
 \subsubsection{Apache Tomcat}
-% ...
+Il \emph{back end} della nostra applicazione è ospitato su un server Apache Tomcat, come richiesto dal capitolato d'appalto nel caso il \emph{back end} fosse scritto in Java.
 
 \subsubsection{Pivotal Spring}
-% ...
+Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source Spring, utile per aderire ai princìpi dello stile REST.
 
-\subsubsection{StringReplace}
-% ...
+\subsubsection{StringTemplate}
+StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Il server la utilizza per popolare dei template (scritti nel linguaggio di mark-up definito da StringTemplate) con i dati ricevuti dal client.
 
 \subsubsection{Google Gson}
-% ...
+Google Gson è una libreria 
 
 %%% [altro...]
 
