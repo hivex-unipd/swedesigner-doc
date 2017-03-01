@@ -2,31 +2,61 @@
 %%  Descrizione dell'architettura
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
 \subsection{Metodo e formalismo di specifica}
 Suddividiamo la descrizione dell'architettura di \proj{} in tre sezioni:
 \begin{itemize}
-	\item §\ref{sec:arch_client}, che descrive il \emph{front end} dell'applicazione;
-	\item §\ref{sec:arch_server}, che descrive il \emph{back end} dell'applicazione;
+	\item §\ref{sec:arch_gen}, che illustra gli aspetti generali dell'architettura del software;
+	\item §\ref{sec:arch_client}, che descrive l'architettura del \emph{front end} dell'applicazione;
+	\item §\ref{sec:arch_server}, che descrive l'architettura del \emph{back end} dell'applicazione;
 	\item §\ref{sec:arch_proto}, che descrive il protocollo che lega le due interfacce precedenti.
 \end{itemize}
-Per ognuna di queste sezioni, descriviamo l'architettura del sistema con metodo \emph{top-down} --- dal generale al particolare --- utilizzando i formalismi di UML 2.0.
+Per ognuna di queste sezioni, specifichiamo l'architettura con metodo \emph{top-down} --- dal generale al particolare --- utilizzando i formalismi di UML 2.0.
 
-\subsection{Architettura generale}
-L'architettura dell'applicazione è suddivisa in due moduli (REST ecce ecce).....
+
+
+\subsection{Architettura generale} \label{sec:arch_gen}
+L'architettura dell'applicazione è suddivisa in due moduli:
 \begin{enumerate}
-	\item Client
-	\item Server
+	\item il client, che vive nel browser dell'utente;
+	\item il server, che fornisce la pagina dell'applicazione al client e riceve da esso delle richieste di generazione di codice.
 \end{enumerate}
 
-\subsection{Architetura Client} \label{sec:arch_client}
+
+
+\subsection{Architetura del client} \label{sec:arch_client}
 menos e berga
 
-\subsection{Architettura Server} \label{sec:arch_server}
-Il server si occupa di fornire servizi REST ed elaborare le richieste (i dati) in arrivo dal client. Il back-end del server è stato suddiviso nei seguenti due moduli (penso):
+
+
+\subsection{Architettura del server} \label{sec:arch_server}
+Il server offre due servizi:
+\begin{enumerate}
+	\item fornisce al client la pagina HTML dove disegnare i diagrammi;
+	\item elabora un file JSON in arrivo dal client e gli fornisce l'applicazione generata a partire da tale file.
+\end{enumerate}
+Questi due servizi rispettano lo stile architetturale REST, come spiegato nella sezione \ref{sec:arch_proto}.
+
+Il \emph{back end} del server è suddiviso nei seguenti due moduli (penso):
 \begin{itemize}
-	\item controller: rappresenta il core del back-end. Si occupa di ricevere ed elaborare le richieste provenienti dal client.
+	\item controller: rappresenta il core del \emph{back end}. Si occupa di ricevere ed elaborare le richieste provenienti dal client.
 	\item endpoints: per la REST (ce l'abbiamo???)
 \end{itemize}
 
+
+
 \subsection{Protocollo di comunicazione client-server} \label{sec:arch_proto}
-%%% [...]
+% client                   server
+%           ----GET---->   home.html
+%           <---html----
+% [disegna]
+%           ----POST--->   json
+%                          [genera codice]
+%           <---zip-----
+I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazione generata) seguono lo stile architetturale REST:
+\begin{itemize}
+	\item La richiesta alla pagina HTML usa il metodo HTTP GET; la pagina è quindi \emph{cachable} (i router tra client e server possono decidere di ottimizzarne la fornitura).
+	\item Il file JSON viene spedito con il metodo HTTP POST, che permette la persistenza di tale file nel server; la persistenza del file JSONè indifferente alla nostra applicazione ma ne aumenta l'estensibilità, in quanto un giorno i manutentori potrebbe voler offrire un servizio di condivisione dei diagrammi disegnati oppure un database di utenti che abbiano i propri diagrammi sul server.
+	\item Ognuno dei due servizi (la pagina HTML e la generazione di codice) è una risorsa distinta: questo disaccoppia i due servizi, aumentando ancora la manutenibilità del sistema.
+\end{itemize}
