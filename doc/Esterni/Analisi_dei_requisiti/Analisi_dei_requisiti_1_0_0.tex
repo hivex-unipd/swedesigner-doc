@@ -614,7 +614,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC4.2.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve scegliere il tipo della relazione (dipendenza, associazione, composizione o estensione);
+	\item \textbf{Descrizione}: l'attore deve scegliere il tipo della relazione (dipendenza,associazione o generalizzazione);
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
 	\item \textbf{Scenario principale}: l'attore sceglie il tipo della relazione tra quelli proposti.
@@ -655,7 +655,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC4.2.5}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può scegliere uno stereotipo per una relazione fra quelli disponibili;
+	\item \textbf{Descrizione}: l'attore può scegliere uno stereotipo per la relazione (extend, include e implement);
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati
 	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
 	\item \textbf{Scenario principale}: l'attore sceglie uno stereotipo tra quelli proposti.
@@ -1283,7 +1283,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 		\item l'attore può modificare un blocco if/else (UC5.22);
 		\item l'attore può modificare un blocco while (UC5.23);
 		\item l'attore può modificare un blocco for (UC5.24);
-		\item l'attore può modificare un blocco custom (UC5.25).
+		\item l'attore può modificare un blocco custom (UC5.25);
+		\item l'attore può inserire un blocco return (UC5.26).
 	\end{enumerate}
 \end{itemize}
 
@@ -2222,6 +2223,16 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco custom selezionato per la modifica.
 \end{itemize}
 
+\subsubsection{UC5.26: Inserimento Blocco Return}
+\label{UC5.26}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può inserire un blocco return all'interno del diagramma delle attività;
+	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+	\item \textbf{Scenario principale}: L'attore inserisce un blocco return all'interno del diagramma delle attività.
+\end{itemize}
+
 \subsection{UC6: Salvataggio}
 \label{UC6}
 \myimg{UC6 - Salvataggio}
@@ -2287,10 +2298,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC7}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può ottenere (scaricare) automaticamente un file .jar contenente l'applicativo generato dai diagrammi da esso forniti e realizzati mediante l'editor, i diagrammi stessi ed il codice sorgente in linguaggio target;
+	\item \textbf{Descrizione}: l'attore può ottenere (scaricare) automaticamente una cartella compressa contenente l'applicativo generato dall'editor grazie ai diagrammi forniti e realizzati dall'utente, i diagrammi stessi ed il codice sorgente in linguaggio target;
 	\item \textbf{Precondizione}: il diagramma delle classi è completo e per ogni metodo è disponibile un diagramma delle attività corretto;
-	\item \textbf{Postcondizione}: il sistema genera l'applicativo derivante dai due diagrammi, i diagrammi stessi ed il codice sorgente;
-	\item \textbf{Scenario principale}: l'attore scarica il file .jar contenente tre file quali l'applicativo, i diagrammi da lui realizzati ed il codice sorgente;
+	\item \textbf{Postcondizione}: il sistema viusalizza la cartella compressa scaricata dall'utente;
+	\item \textbf{Scenario principale}: l'attore scarica la cartella compressa contenente tre file quali l'applicativo, i diagrammi da lui realizzati ed il codice sorgente;
 	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore relativo ai diagrammi realizzati (UC7.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
@@ -2975,6 +2986,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hypertarget{RFO4.25.3}{RFO4.25.3} & l'attore può confermare le modifiche apportate al blocco custom &  \hyperlink{Interno}{Interno}\\
 & &\hyperref[UC5.25]{UC5.25}\\
 & &\hyperref[UC5.25.3]{UC5.25.3}\\ \hline
+
+\hypertarget{RFO4.26}{RFO4.26} & l'attore può inserire un blocco return &  \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC5]{UC5}\\
+& &\hyperref[UC5.26]{UC5.26}\\ \hline
 
 \hypertarget{RFO5}{RFO5} & l'attore può salvare il progetto &  \hyperlink{Interno}{Interno}\\
 & & \hyperref[UC6]{UC6}\\ \hline
@@ -3726,6 +3741,11 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 &\hyperref[UC5.25]{UC5.25}\\
 &\hyperref[UC5.25.3]{UC5.25.3}\\ \hline
 
+\hypertarget{RFO4.26}{RFO4.26} & \hyperlink{Interno}{Interno}\\
+&\hyperref[UC5]{UC5}\\
+&\hyperref[UC5.26]{UC5.26}\\ \hline
+
+
 \hyperlink{RFO5}{RFO5} & \hyperlink{Interno}{Interno}\\
 & \hyperref[UC6]{UC6}\\ \hline
 
@@ -3957,6 +3977,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & \hyperlink{RFO4.25.1}{RFO4.25.1}\\
 & \hyperlink{RFO4.25.2}{RFO4.25.2}\\
 & \hyperlink{RFO4.25.3}{RFO4.25.3}\\
+& \hyperlink{RFO4.26}{RFO4.26}\\
 & \hyperlink{RFO5}{RFO5}\\
 & \hyperlink{RFO5.1}{RFO5.1}\\
 & \hyperlink{RFO5.2}{RFO5.2}\\
@@ -4328,6 +4349,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hyperref[UC5.25.1]{UC5.25.1} & \hyperlink{RFO4.25.1}{RFO4.25.1}\\\hline
 \hyperref[UC5.25.2]{UC5.25.2} & \hyperlink{RFO4.25.2}{RFO4.25.2}\\\hline
 \hyperref[UC5.25.3]{UC5.25.3} & \hyperlink{RFO4.25.3}{RFO4.25.3}\\\hline
+\hyperref[UC5.26]{UC5.26} & \hyperlink{RFO4.26}{RFO4.26}\\\hline
 
 \hyperref[UC6]{UC6} & \hyperlink{RFO5}{RFO5}\\
  & \hyperlink{RFO5.1}{RFO5.1}\\
@@ -4353,7 +4375,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hline
 \textbf{Tipo} & \textbf{Obbligatorio} & \textbf{Desiderabile} & \textbf{Facoltativo}\\
 \hline
-Funzionale & 158 & 11 & 0\\ \hline
+Funzionale & 159 & 11 & 0\\ \hline
 Prestazionale & 0 & 0 & 0\\ \hline
 Di Qualità & 8 & 0 & 2\\ \hline
 Di Vincolo & 7 & 2 & 0\\ \hline
