@@ -16,7 +16,6 @@
 \maketitle
 \include{diario}
 \tableofcontents
-\newpage
 
 
 
@@ -158,7 +157,7 @@ Il presente documento si divide in tre sezioni principali:
 			\item[scenari alternativi] descrizione tramite casi d'uso non appartenenti al flusso principale.
 		\end{description}
 
-	\subsubsection{Progettazione}
+	\subsubsection{Progettazione} \label{sec:norme_design}
 	\paragraph{Attività progettuali} Il lavoro dei progettisti consiste nel progettare il software; nello specifico, questo lavoro si articola in due attività:
 	\begin{enumerate}
 		\item \textbf{Progettazione architetturale} (attività descritta in §5.3.5 di ISO/IEC 12207) --- definire l'architettura del sistema, cioè individuare e descrivere le componenti del sistema, esplicitandone i ruoli e le relazioni tra essi; ogni progettista documenta questa attività nel documento di Specifica Tecnica.
@@ -177,6 +176,7 @@ Il presente documento si divide in tre sezioni principali:
 		\item \gloss{Diagramma delle attività}: descrive i passi di una procedura.
 		\item Diagramma di sequenza: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
 	\end{itemize}
+	Per disegnare i diagrammi appena esposti, i progettisti devono usare il software \gloss{Astah} ed esportare i diagrammi in formato PNG.
 
 	\paragraph{Stile di progettazione} L'architettura di \proj{} è segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
 	\begin{itemize}
@@ -196,31 +196,58 @@ Il presente documento si divide in tre sezioni principali:
 		\item i progettisti devono assumere di conoscere soltanto il tipo statico di un oggetto, non il suo tipo dinamico;
 		\item i progettisti devono definire solo metodi di istanza (quindi non statici);
 		\item se una classe $A$ dipende, per generalizzazione, da una classe $B$, allora dev'essere possibile dire che “ogni $A$ è un $B$”;
-		\item i campi dati di ogni classe Java devono essere privati;
-		\item 
+		\item i campi dati di ogni classe Java devono essere privati.
+	\end{itemize}
+
+	\paragraph{Nomenclatura} Al fine di uniformare il codice che verrà derivato dalla progettazione, i progettisti devono osservare le seguenti norme di nomenclatura:
+	\begin{itemize}
+		\item ogni componente ha un nome; tale nome:
+		\begin{itemize}
+			\item è in lingua inglese;
+			\item contiene solo caratteri alfanumerici;
+			\item ha iniziale alta;
+			\item se composto di più termini, ha l'iniziale di ogni termine alta;
+			\item è significativo del ruolo della componente nel sistema;
+			\item non può essere un termine riservato dei linguaggi Java o JavaScript;
+			\item non può essere più lungo di 30 caratteri;
+			\item è preferibilmente un sostantivo (eventualmente composto).
+		\end{itemize}
+		\item ogni metodo di classe (o funzione) ha un nome; tale nome:
+		\begin{itemize}
+			\item è in lingua inglese;
+			\item contiene solo caratteri alfanumerici;
+			\item ha iniziale bassa;
+			\item se composto di più termini, ha l'iniziale di ogni termine alta, tranne quella del primo termine;
+			\item è significativo della funzione del metodo nella classe;
+			\item non può essere un termine riservato dei linguaggi Java o JavaScript;
+			\item non può essere più lungo di 20 caratteri;
+			\item è preferibilmente un verbo (eventualmente composto).
+		\end{itemize}
 	\end{itemize}
 
 	\subsubsection{Codifica} \label{sec:cod}
-	La sezione sulla codifica (norme e strumenti) verrà stesa in una versione successiva di questo documento.
-	% Lo scopo dell'attività di codifica è di implementare quanto descritto nei documenti di definizione di prodotto a livello di codice. Per mantenere un alto grado di comprensione del codice scritto è quindi utile seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
-		% \paragraph{Formattazione del codice}
-		% Per standardizzare il codice scritto dai vari programmatori è necessario rispettare i seguenti punti:
-			% \begin{itemize}
-				% \item i nomi di variabili, classi, funzioni e metodi sono scritti in inglese;
-				% \item i nomi composti dovranno avere la prima lettera minuscola e la lettera maiuscola ad ogni iniziale della nuova parola che compone il nome.
-				% \item è opportuno scegliere il nome dei vari elementi in modo coerente con la loro funzione;
-			% \end{itemize}
-		% \paragraph{Commenti}
-		% Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
-		% \begin{itemize}
-			% \item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione;
-			% \item Ogni commento dovrà essere relativo alla parte di codice interessata;
-			% \item Ogni commento dovrà descrivere in modo breve ma preciso la parte di codice interessata;
-			% \item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
-			% \item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
-			% \item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
-			% \item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso JavaScript
-		% \end{itemize}
+	Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice scritto, i programmatori devono seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
+		\paragraph{Formattazione del codice}
+		Al fine di uniformare il codice sorgente di \proj, i programmatori devono rispettare le seguenti norme di codifica:
+			\begin{itemize}
+				\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
+				\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
+				\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
+				\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:norme_design}, tranne che devono essere preferibilmente dei sostantivi;
+				\item [...]
+			\end{itemize}
+		\paragraph{Commenti}
+		Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
+		\begin{itemize}
+			\item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione;
+			\item Ogni commento dovrà essere relativo alla parte di codice interessata;
+			\item Ogni commento dovrà descrivere in modo breve ma preciso la parte di codice interessata;
+			\item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
+			\item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
+			\item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
+			\item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso JavaScript
+		\end{itemize}
+
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
 		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati.
