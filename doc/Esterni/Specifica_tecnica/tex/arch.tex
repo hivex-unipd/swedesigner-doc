@@ -83,13 +83,6 @@ Il \emph{back end} del server è suddiviso nei seguenti due moduli (penso):
 
 
 \subsection{Protocollo di comunicazione client-server} \label{sec:arch_proto}
-% client                   server
-%           ----GET---->   home.html
-%           <---html----
-% [disegna]
-%           ----POST--->   json
-%                          [genera codice]
-%           <---zip-----
 I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazione generata) seguono lo stile architetturale REST:
 \begin{itemize}
 	\item La richiesta per ottenere la pagina HTML usa il metodo HTTP GET; la pagina è quindi \emph{cachable} (i router tra client e server possono decidere di ottimizzarne la fornitura).
@@ -98,3 +91,7 @@ I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazi
 	\item La richiesta per ottenere la pagina HTML è per forza idempotente: lo stato del server non può influire su una pagina statica.
 	\item La richiesta di generazione di codice è idempotente: l'unica dipendenza esterna al programma è il file JSON, che viene passato dal client.
 \end{itemize}
+
+\begin{center}
+	\includegraphics[scale=0.5]{img/http}
+\end{center}
