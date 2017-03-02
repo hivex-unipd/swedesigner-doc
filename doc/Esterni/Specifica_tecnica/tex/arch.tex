@@ -34,7 +34,7 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 	\end{itemize}
 	\item nello specifico, prevedendo le seguenti possibili aggiunte nel futuro:
 	\begin{itemize}
-		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del JavaScript o del Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria StringTemplate).
+		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del \gloss{JavaScript} o del Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria StringTemplate).
 		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati in XML, anziché in JSON; sarà sufficiente implementare l'interfaccia \texttt{Generator} con una nuova classe concreta, da fornire al controller.
 		\item Diversa compressione del codice generato: attualmente l'applicazione genera codice Java e lo fornisce in formato ZIP, ma si potrebbe facilmente cambiare il formato di compressione in TAR o JAR.
 		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; oppure; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
@@ -44,8 +44,25 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 
 
 
-\subsection{Architetura del client} \label{sec:arch_client}
-menos e berga
+\subsection{Architettura del client} \label{sec:arch_client}
+Il \emph{front end} di \proj{} è una singola pagina web scritta in HTML5, CSS3 e JavaScript.
+
+L'\texttt{head} (intestazione, invisibile) della pagina HTML contiene dei puntatori a:
+\begin{itemize}
+	\item le librerie JavaScript elencate nella sezione \ref{sec:tech_client} (con eventuali relativi fogli CSS);
+	\item il foglio di stile CSS della pagina;
+	\item lo script JavaScript che utilizza le librerie di cui sopra.
+\end{itemize}
+
+Il \texttt{body} (corpo, visibile) della pagina HTML si compone di pochi blocchi:
+\begin{itemize}
+	\item dei tag \texttt{div} contenenti i menù laterali da cui selezionare gli strumenti e gli elementi per interagire con i diagrammi;
+	\item un tag \texttt{canvas} (identificato dall'\texttt{id} \emph{paper}) che contiene, di volta in volta, il diagramma delle classi o il diagramma di un metodo particolare.
+\end{itemize}
+
+Alla ricezione della pagina da parte del client, il nostro script JavaScript popola il tag \texttt{canvas} (inizialmente vuoto) con un diagramma delle classi vuoto.
+
+%%% [...]
 
 
 
@@ -59,20 +76,13 @@ Questi due servizi rispettano lo stile architetturale REST, come spiegato nella 
 
 Il \emph{back end} del server è suddiviso nei seguenti due moduli (penso):
 \begin{itemize}
-	\item controller: rappresenta il core del \emph{back end}. Si occupa di ricevere ed elaborare le richieste provenienti dal client.
+	\item controller: rappresenta il core del \emph{back end}; si occupa di ricevere ed elaborare le richieste provenienti dal client.
 	\item endpoints: per la REST (ce l'abbiamo???)
 \end{itemize}
 
 
 
 \subsection{Protocollo di comunicazione client-server} \label{sec:arch_proto}
-% client                   server
-%           ----GET---->   home.html
-%           <---html----
-% [disegna]
-%           ----POST--->   json
-%                          [genera codice]
-%           <---zip-----
 I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazione generata) seguono lo stile architetturale REST:
 \begin{itemize}
 	\item La richiesta per ottenere la pagina HTML usa il metodo HTTP GET; la pagina è quindi \emph{cachable} (i router tra client e server possono decidere di ottimizzarne la fornitura).
@@ -81,3 +91,7 @@ I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazi
 	\item La richiesta per ottenere la pagina HTML è per forza idempotente: lo stato del server non può influire su una pagina statica.
 	\item La richiesta di generazione di codice è idempotente: l'unica dipendenza esterna al programma è il file JSON, che viene passato dal client.
 \end{itemize}
+
+\begin{center}
+	\includegraphics[scale=0.5]{img/http}
+\end{center}
