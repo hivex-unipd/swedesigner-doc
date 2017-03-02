@@ -2298,13 +2298,15 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC7}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può ottenere (scaricare) automaticamente una cartella compressa contenente l'applicativo generato dall'editor grazie ai diagrammi forniti e realizzati dall'utente, i diagrammi stessi ed il codice sorgente in linguaggio target;
+	\item \textbf{Descrizione}: l'attore può ottenere (scaricare) automaticamente una cartella compressa contenente i diagrammi disegnati da \proj{}, l'applicativo generato tramite i diagrammi forniti dall'utente ed il codice sorgente nel linguaggio target;
 	\item \textbf{Precondizione}: il diagramma delle classi è completo e per ogni metodo è disponibile un diagramma delle attività corretto;
-	\item \textbf{Postcondizione}: il sistema viusalizza la cartella compressa scaricata dall'utente;
+	\item \textbf{Postcondizione}: il sistema visualizza la cartella compressa scaricata dall'utente;
 	\item \textbf{Scenario principale}: l'attore scarica la cartella compressa contenente tre file quali l'applicativo, i diagrammi da lui realizzati ed il codice sorgente;
 	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore relativo ai diagrammi realizzati (UC7.1);
 	\item \textbf{Scenari alternativi}:
 	\begin{itemize}
+	  \item l'attore ha fornito dei diagrammi non validi (e.g. corrotti);
+		\item l'attore ha indicato del codice non compilabile (e.g. codice inserito in un blocco custom);
 		\item l'attore non ha rispettato i vincoli imposti dagli stereotipi scelti.
 	\end{itemize}
 \end{itemize}
@@ -2314,7 +2316,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della richiesta di generazione codice nel caso si siano verificati uno o più scenari alternativi durante la fase di creazione dei diagrammi delle classi e delle attività;
-	\item \textbf{Precondizione}: i diagrammi realizzati dall'utente non sono coerenti con i vincoli imposti dal sistema di stereotipi già presente nell'applicazione;
+	\item \textbf{Precondizione}: i diagrammi realizzati dall'utente non sono validi o presentano errori di compilazione;%non sono coerenti con i vincoli imposti dal sistema di stereotipi già presente nell'applicazione;
 	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
