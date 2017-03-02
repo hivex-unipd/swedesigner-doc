@@ -18,18 +18,20 @@
 \include{diario}
 \tableofcontents
 
+
+
 \section{Introduzione}
 	\subsection{Scopo del documento}
 	Questo documento ha lo scopo di fissare le strategie di verifica e validazione che il gruppo \hx{} ha deciso di adottare per perseguire gli obiettivi di qualità di processo e di prodotto relativi al progetto \proj{}. Il presente documento si propone di descrivere l'approccio del gruppo alle diverse fasi di verifica per poter ottenere il miglior risultato auspicabile in termini di qualità. Per perseguire tali obiettivi e risultati occorre verificare continuamente le attività svolte in modo da individuare e correggere velocemente le anomalie, minimizzando così l'utilizzo di risorse e allo stesso tempo mantenendo la correttezza del prodotto.
 
 	\subsection{Scopo del prodotto}
-	\scopo{}
+	\scopo
 	
 	\subsection{Glossario}
-	\presgloss{}
+	\presgloss
 	
 	\subsection{Riferimenti}
-		\subsubsection{Normativi}
+		\subsubsection{Riferimenti normativi}
 		\begin{itemize}
 			\item \NdP;
 			\item \textbf{Capitolato d'Appalto C6, \proj}: \\
@@ -40,11 +42,11 @@
 			\url{en.wikipedia.org/wiki/ISO/IEC_15504}, visitato il 08/02/2017;
 			\item \textbf{Standard ISO/IEC 9126}: \\
 			\url{it.wikipedia.org/wiki/ISO/IEC_9126}, visitato il 08/02/2017;
-			\item \textbf{PDCA (Plan, Do, Check, Act)}: \\
+			\item \textbf{PDCA (\emph{Plan, Do, Check, Act})}: \\
 			\url{it.wikipedia.org/wiki/Ciclo_di_Deming}, visitato il 08/02/2017.
 		\end{itemize}
 		
-		\subsubsection{Informativi}
+		\subsubsection{Riferimenti informativi}
 		\begin{itemize}
 			\item \textbf{Analisi dei Requisiti}: \AdR;
 			\item \textbf{Piano di Progetto}: \PdP;
@@ -58,6 +60,8 @@
 			\item \textbf{Slide Qualità del Prodotto}: \\
 			\url{www.math.unipd.it/~tullio/IS-1/2016/Dispense/L11.pdf}, visitato il 08/02/2017.
 		\end{itemize}
+
+
 
 \section{Visione generale della strategia di gestione della qualità}
 	\subsection{Obiettivi di qualità}
@@ -217,6 +221,10 @@
 			\end{itemize}
 	\subsection{Scadenze temporali}
 	Le scadenze temporali stabilite dal gruppo sono definite in dettaglio nel documento \PdP.
+
+
+
+
 \section{La strategia di gestione della qualità nel dettaglio}
 	\subsection{Risorse}
 		\subsubsection{Risorse necessarie}
@@ -240,6 +248,8 @@
 			Le risorse software disponibili sono costituite dagli \gloss{editor} di testo utilizzati per la stesura dei documenti in \gloss{Latex}, gli \gloss{IDE} impiegati a supporto dell'attività di codifica, le applicazioni online e le estensioni per i controlli sulla leggibilità e la complessità dei documenti in riferimento all'indice Gulpease. Più in dettaglio gli strumenti software impiegati per l'attività di Verifica sono illustrati nel documento \NdP.
 			\end{itemize}
 		
+
+
 \section{Test}
 	\subsection{Tipi di test}
 	Sono stati individuati quattro tipologie di test:
@@ -250,6 +260,8 @@
 		\item \textbf{Test di accettazione [TA]}: test per verificare che il prodotto soddisfi le richieste del proponente.
 	\end{itemize}
 	Si sottolinea che la specifica dei test delle diverse tipologie verrà inserita nel presente documento a seguito della fase di progettazione del prodotto in esame.
+
+
 
 \section{Resoconto attività di verifica}
 All'interno di questa sezione vengono riportati gli esiti delle attivit di verifica svolte sui processi attivati e sui relativi prodotti secondo quanto stabilito nel \PdP.
@@ -313,105 +325,107 @@ All'interno di questa sezione vengono riportati gli esiti delle attivit di verif
 		\caption{Esiti del calcolo degli indici di schedule e budget variance}
 		\end{table}
 
-\appendix	
-	\section{Standard adottati}
-		\subsection{Qualità di processo - SPICE}
-		Lo standard prevede sei diversi livelli di maturità (o capacità), e 9 attributi di processo che, se posseduti, lo portano ad un certo livello di 			capacità.
-		\begin{itemize}
-		\item \textbf{Livello 0: Incompleto} il processo non è implementato o non raggiunge il suo obiettivo;   non esiste evidenza di esecuzione 					sistematica delle attività che lo compongono.
-		 \item \textbf{Livello 1: Attuato} il processo è implementato e raggiunge il suo obiettivo; esiste evidenza di semplice attuazione delle attività 			che lo compongono.
-		Il relativo attributo di processo:
-			\begin{itemize}
-				\item \emph{Esecuzione del Processo}: la misura in cui il processo raggiunge i propri obiettivi trasformando   prodotti in ingresso 						identificabili in prodotti in uscita identificabili.
-			\end{itemize}
-		\item \textbf{Livello 2: Gestito} il processo è gestito e i suoi prodotti sono stabiliti, controllati e manutenuti; le attività sono pianificate e 			controllate e il loro svolgimento risulta documentato.
-		I relativi attributi di processo:
-			\begin{itemize}
-				\item \emph{Gestione delle Prestazioni}: la misura in cui il processo produce un risultato coerente con gli obiettivi attesi.
-				\item \emph{Gestione dei Prodotti}: la misura in cui il processo viene gestito per elaborare prodotti documentati, controllati e verificati 				in modo appropriato.
-			\end{itemize}
- 	
-		\item \textbf{Livello 3: Definito} il processo viene eseguito in base ai principi dell'ingegneria del software. Le procedure sono definite e 				adattate ai progetti e ruoli, competenze e responsabilità sono definiti e controllati.
-		I relativi attributi di processo:
-			\begin{itemize}
-				\item \emph{Definizione del Processo}: la misura in cui il processo raggiunge i risultati attesi aderendo ad un particolare standard di 					processo.
-				\item \emph{Utilizzo del Processo}: la misura in cui il processo attinge alle risorse allocate per la sua esecuzione.	
-			\end{itemize}
-			
-		\item \textbf{Livello 4: Predicibile} il processo è messo in atto costantemente entro limiti definiti. Le attività che lo compongono, la loro 				gestione e i relativi risultati sono controllati quantitativamente.
-		I relativi attributi di processo:
-			\begin{itemize}
-				\item \emph{Misurazione del Processo}: la misura in cui il processo utilizza i risultati raggiunti e le misure ricavate durante 							l'esecuzione per garantire il raggiungimento dei traguardi definiti.
-				\item \emph{Controllo del Processo}: la misura in cui il processo viene controllato tramite la raccolta, l'analisi e la messa in uso di 					misurazioni di prodotto e processo allo scopo di correggere, ove necessario, la sua esecuzione per raggiungere i risultati attesi.	
-			\end{itemize}
 
-		\item \textbf{Livello 5: Ottimizzante} il processo è continuativamente migliorato per soddisfare i rilevanti traguardi di business attuali e 				previsti. I cambiamenti del processo sono valutati e lo studio per il miglioramento è un'attività costante.
-		I relativi attributi di processo:
-			\begin{itemize}
-				\item \emph{Innovazione del Processo}: la misura in cui cambiamenti relativi alla definizione, alla gestione e all'esecuzione del processo 					sono controllati per raggiungere gli obiettivi di business dell'organizzazione.
-				\item \emph{Ottimizzazione del Processo}: la misura in cui vengono identificati e implementati cambiamenti relativamente all'esecuzione del 				processo in modo tale da assicurare un miglioramento continuo nel raggiungimento degli obiettivi rilevanti dell'organizzazione.
-			\end{itemize}
+
+\appendix
+\section{Standard adottati}
+	\subsection{Qualità di processo - SPICE}
+	Lo standard prevede sei diversi livelli di maturità (o capacità), e 9 attributi di processo che, se posseduti, lo portano ad un certo livello di 			capacità.
+	\begin{itemize}
+	\item \textbf{Livello 0: Incompleto} il processo non è implementato o non raggiunge il suo obiettivo;   non esiste evidenza di esecuzione 					sistematica delle attività che lo compongono.
+	 \item \textbf{Livello 1: Attuato} il processo è implementato e raggiunge il suo obiettivo; esiste evidenza di semplice attuazione delle attività 			che lo compongono.
+	Il relativo attributo di processo:
+		\begin{itemize}
+			\item \emph{Esecuzione del Processo}: la misura in cui il processo raggiunge i propri obiettivi trasformando   prodotti in ingresso 						identificabili in prodotti in uscita identificabili.
+		\end{itemize}
+	\item \textbf{Livello 2: Gestito} il processo è gestito e i suoi prodotti sono stabiliti, controllati e manutenuti; le attività sono pianificate e 			controllate e il loro svolgimento risulta documentato.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Gestione delle Prestazioni}: la misura in cui il processo produce un risultato coerente con gli obiettivi attesi.
+			\item \emph{Gestione dei Prodotti}: la misura in cui il processo viene gestito per elaborare prodotti documentati, controllati e verificati 				in modo appropriato.
+		\end{itemize}
+	
+	\item \textbf{Livello 3: Definito} il processo viene eseguito in base ai principi dell'ingegneria del software. Le procedure sono definite e 				adattate ai progetti e ruoli, competenze e responsabilità sono definiti e controllati.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Definizione del Processo}: la misura in cui il processo raggiunge i risultati attesi aderendo ad un particolare standard di 					processo.
+			\item \emph{Utilizzo del Processo}: la misura in cui il processo attinge alle risorse allocate per la sua esecuzione.	
+		\end{itemize}
+		
+	\item \textbf{Livello 4: Predicibile} il processo è messo in atto costantemente entro limiti definiti. Le attività che lo compongono, la loro 				gestione e i relativi risultati sono controllati quantitativamente.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Misurazione del Processo}: la misura in cui il processo utilizza i risultati raggiunti e le misure ricavate durante 							l'esecuzione per garantire il raggiungimento dei traguardi definiti.
+			\item \emph{Controllo del Processo}: la misura in cui il processo viene controllato tramite la raccolta, l'analisi e la messa in uso di 					misurazioni di prodotto e processo allo scopo di correggere, ove necessario, la sua esecuzione per raggiungere i risultati attesi.	
 		\end{itemize}
 
-	Ogni attributo di processo è misurabile e sono definiti dallo standard 4 diversi gradi di possesso:
-	\begin{itemize}
-		\item \textbf{N}: non posseduto (0\% - 15\%);
-		\item \textbf{P}: parzialmente posseduto (16\% - 50\%);
-		\item \textbf{L}: largamente posseduto (51\% - 85\%);
-		\item \textbf{F}: completamente posseduto (86\% - 100\%).
+	\item \textbf{Livello 5: Ottimizzante} il processo è continuativamente migliorato per soddisfare i rilevanti traguardi di business attuali e 				previsti. I cambiamenti del processo sono valutati e lo studio per il miglioramento è un'attività costante.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Innovazione del Processo}: la misura in cui cambiamenti relativi alla definizione, alla gestione e all'esecuzione del processo 					sono controllati per raggiungere gli obiettivi di business dell'organizzazione.
+			\item \emph{Ottimizzazione del Processo}: la misura in cui vengono identificati e implementati cambiamenti relativamente all'esecuzione del 				processo in modo tale da assicurare un miglioramento continuo nel raggiungimento degli obiettivi rilevanti dell'organizzazione.
+		\end{itemize}
 	\end{itemize}
 
-	Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi sono usate nel contesto di una strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo PDCA.
-	\\Il ciclo PDCA, altresì noto come ciclo di Deming, definisce un'organizzazione interna dei processi incentrata sul principio del miglioramento continuo allo scopo di renderli automigliorativi.
-	\\Le fasi in cui esso si articola sono quattro:
-		\begin{itemize}
-			\item \textbf{Pianificare (Plan)}: in tale fase vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
-			\item \textbf{Eseguire (Do)}: in questa fase vengono attuate le azioni migliorative pianificate al passo precedente. Si procede inoltre ad eseguire misurazioni e raccogliere dati utili per le successive fasi di analisi e controllo.
-			\item \textbf{Valutare (Check)}: si tratta di una fase di verifica in cui l'esito delle azioni di miglioramento viene confrontato rispetto alle attese e agli obiettivi pianificati.
-			\item \textbf{Agire (Act)}: se l'esito delle valutazioni effettuate al passo precedente risulta positivo, i cambiamenti introdotti nell'esecuzione del processo vengono incorporati stabilmente in esso e standardizzati.
-		\end{itemize}
-		\subsection{Qualità di prodotto - ISO/IEC:9126}
-		Lo Standard ISO/IEC 9126:2001 si articola in quattro parti:
-		\begin{enumerate}
-		\item Modello della qualità del software (9126-1);
-			\item Metriche per la qualità esterna (9126-2);
-			\item Metriche per la qualità interna (9126-3);
-			\item Metriche per la qualità in uso (9126-4).
-		\end{enumerate}
-		Lo standard analizza la qualità del software sotto tre diversi punti di vista:
-		\begin{itemize}
-			\item \textbf{Qualità interna}: è la qualità del prodotto software che fa riferimento alle caratteristiche implementative del software come l'architettura e il codice derivante da quest'ultima.
-			\item \textbf{Qualità esterna}: è la qualità del prodotto software relativa a quando esso viene eseguito e testato in un ambiente di prova. 
-			\item \textbf{Qualità in uso}: è la qualità del prodotto software dal lato di chi utilizza tale prodotto all'interno di uno specifico sistema.
-		\end{itemize}
-			\subsubsection{Modello della qualità del software}
-			Nella prima parte dello standard vengono presentati i modelli per la qualità esterna, interna ed in uso.
-				\paragraph{Modello della qualità esterna ed interna}
-				Il modello di qualità esterna ed interna sancito nella prima parte dello standard è suddiviso nelle seguenti sei caratteristiche generali misurabili attraverso delle metriche:
-				\begin{itemize}
-					\item \textbf{funzionalità}: è la capacità del software di fornire le funzioni che soddisfano determinate esigenze, necessarie per operare in determinate condizioni. 
-					\item \textbf{affidabilità}: rappresenta la capacità del prodotto software di mantenere uno specifico livello di prestazioni quando viene usato in certe condizioni e per un periodo di tempo determinato.
-					\item \textbf{usabilità}: è la capacità di un prodotto software di essere facilmente comprensibile e attraente in ogni sua parte per un utente qualsiasi. Un software è considerato usabile proporzionalmente alla facilità con cui un utente opera per sfruttare al massimo le funzionalità che il software mette a disposizione.
-					\item \textbf{efficienza}: è la capacità di un prodotto di eseguire le funzioni richieste nel minor tempo possibile ed utilizzando le risorse necessarie nel modo migliore.
-					\item \textbf{manutenibilità}: rappresenta la capacità di un prodotto software di essere modificato in tempi rapidi e a costi accessibili. Le modifiche possono riguardare correzioni o adattamenti del prodotto a variazioni negli ambienti, nei requisiti e nelle specifiche funzionali.
-					\item \textbf{portabilità}: è la capacità di un prodotto software di poter essere spostato da un ambiente all'altro velocemente. L'ambiente include sia aspetti hardware che software.
-				\end{itemize}
-				
-				\paragraph{Modello della qualità in uso}
-				Gli attributi presenti nel modello relativo alla qualità del software in uso sono rappresentati da quattro grandi categorie:
-				\begin{itemize}
-					\item \textbf{efficacia}: è la capacità di consentire all'utente di raggiungere obiettivi specifici con precisione e completezza.
-					\item \textbf{produttività}: rappresenta la capacità di permettere all'utente di utilizzare un numero stabilito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo.
-					\item \textbf{sicurezza fisica}: è la capacità di raggiungere un livello accettabile di rischio di danni a dati, persone, proprietà o ambienti.
-					\item \textbf{soddisfazione}: rappresenta la capacità di soddisfare gli utenti.
-				\end{itemize}
-			\subsubsection{Metriche per la qualità del software}
-			Nelle restanti tre parti vengono trattate le metriche per la qualità esterna, interna e in uso.
-				\paragraph{Metriche per la qualità esterna}
-				Le metriche esterne misurano i comportamenti del software che si possono rilevare dai test, dall'operatività e dall'osservazione durante la sua esecuzione sulla base degli obiettivi stabiliti. Le metriche esterne sono scelte in base alle caratteristiche che il prodotto finale dovrà dimostrare una volta utilizzato.
-				\paragraph{Metriche per la qualità interna}
-				Le metriche interne si applicano al software non eseguibile (un esempio è il codice sorgente) e alla documentazione. Le misure effettuate permettono di prevedere il livello di qualità esterna ed in uso del prodotto finale poiché gli attributi interni influenzano le caratteristiche esterne e quelle in uso.
-				\paragraph{Metriche per la qualità in uso}
-				Le metriche della qualità in uso valutano il livello con cui il software consente agli utenti di svolgere le proprie attività con efficacia, produttività, sicurezza e soddisfazione nel contesto operativo previsto.
+Ogni attributo di processo è misurabile e sono definiti dallo standard 4 diversi gradi di possesso:
+\begin{itemize}
+	\item \textbf{N}: non posseduto (0\% - 15\%);
+	\item \textbf{P}: parzialmente posseduto (16\% - 50\%);
+	\item \textbf{L}: largamente posseduto (51\% - 85\%);
+	\item \textbf{F}: completamente posseduto (86\% - 100\%).
+\end{itemize}
+
+Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi sono usate nel contesto di una strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo PDCA.
+\\Il ciclo PDCA, altresì noto come ciclo di Deming, definisce un'organizzazione interna dei processi incentrata sul principio del miglioramento continuo allo scopo di renderli automigliorativi.
+\\Le fasi in cui esso si articola sono quattro:
+	\begin{itemize}
+		\item \textbf{Pianificare (Plan)}: in tale fase vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
+		\item \textbf{Eseguire (Do)}: in questa fase vengono attuate le azioni migliorative pianificate al passo precedente. Si procede inoltre ad eseguire misurazioni e raccogliere dati utili per le successive fasi di analisi e controllo.
+		\item \textbf{Valutare (Check)}: si tratta di una fase di verifica in cui l'esito delle azioni di miglioramento viene confrontato rispetto alle attese e agli obiettivi pianificati.
+		\item \textbf{Agire (Act)}: se l'esito delle valutazioni effettuate al passo precedente risulta positivo, i cambiamenti introdotti nell'esecuzione del processo vengono incorporati stabilmente in esso e standardizzati.
+	\end{itemize}
+	\subsection{Qualità di prodotto - ISO/IEC:9126}
+	Lo Standard ISO/IEC 9126:2001 si articola in quattro parti:
+	\begin{enumerate}
+	\item Modello della qualità del software (9126-1);
+		\item Metriche per la qualità esterna (9126-2);
+		\item Metriche per la qualità interna (9126-3);
+		\item Metriche per la qualità in uso (9126-4).
+	\end{enumerate}
+	Lo standard analizza la qualità del software sotto tre diversi punti di vista:
+	\begin{itemize}
+		\item \textbf{Qualità interna}: è la qualità del prodotto software che fa riferimento alle caratteristiche implementative del software come l'architettura e il codice derivante da quest'ultima.
+		\item \textbf{Qualità esterna}: è la qualità del prodotto software relativa a quando esso viene eseguito e testato in un ambiente di prova. 
+		\item \textbf{Qualità in uso}: è la qualità del prodotto software dal lato di chi utilizza tale prodotto all'interno di uno specifico sistema.
+	\end{itemize}
+		\subsubsection{Modello della qualità del software}
+		Nella prima parte dello standard vengono presentati i modelli per la qualità esterna, interna ed in uso.
+			\paragraph{Modello della qualità esterna ed interna}
+			Il modello di qualità esterna ed interna sancito nella prima parte dello standard è suddiviso nelle seguenti sei caratteristiche generali misurabili attraverso delle metriche:
+			\begin{itemize}
+				\item \textbf{funzionalità}: è la capacità del software di fornire le funzioni che soddisfano determinate esigenze, necessarie per operare in determinate condizioni. 
+				\item \textbf{affidabilità}: rappresenta la capacità del prodotto software di mantenere uno specifico livello di prestazioni quando viene usato in certe condizioni e per un periodo di tempo determinato.
+				\item \textbf{usabilità}: è la capacità di un prodotto software di essere facilmente comprensibile e attraente in ogni sua parte per un utente qualsiasi. Un software è considerato usabile proporzionalmente alla facilità con cui un utente opera per sfruttare al massimo le funzionalità che il software mette a disposizione.
+				\item \textbf{efficienza}: è la capacità di un prodotto di eseguire le funzioni richieste nel minor tempo possibile ed utilizzando le risorse necessarie nel modo migliore.
+				\item \textbf{manutenibilità}: rappresenta la capacità di un prodotto software di essere modificato in tempi rapidi e a costi accessibili. Le modifiche possono riguardare correzioni o adattamenti del prodotto a variazioni negli ambienti, nei requisiti e nelle specifiche funzionali.
+				\item \textbf{portabilità}: è la capacità di un prodotto software di poter essere spostato da un ambiente all'altro velocemente. L'ambiente include sia aspetti hardware che software.
+			\end{itemize}
+			
+			\paragraph{Modello della qualità in uso}
+			Gli attributi presenti nel modello relativo alla qualità del software in uso sono rappresentati da quattro grandi categorie:
+			\begin{itemize}
+				\item \textbf{efficacia}: è la capacità di consentire all'utente di raggiungere obiettivi specifici con precisione e completezza.
+				\item \textbf{produttività}: rappresenta la capacità di permettere all'utente di utilizzare un numero stabilito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo.
+				\item \textbf{sicurezza fisica}: è la capacità di raggiungere un livello accettabile di rischio di danni a dati, persone, proprietà o ambienti.
+				\item \textbf{soddisfazione}: rappresenta la capacità di soddisfare gli utenti.
+			\end{itemize}
+		\subsubsection{Metriche per la qualità del software}
+		Nelle restanti tre parti vengono trattate le metriche per la qualità esterna, interna e in uso.
+			\paragraph{Metriche per la qualità esterna}
+			Le metriche esterne misurano i comportamenti del software che si possono rilevare dai test, dall'operatività e dall'osservazione durante la sua esecuzione sulla base degli obiettivi stabiliti. Le metriche esterne sono scelte in base alle caratteristiche che il prodotto finale dovrà dimostrare una volta utilizzato.
+			\paragraph{Metriche per la qualità interna}
+			Le metriche interne si applicano al software non eseguibile (un esempio è il codice sorgente) e alla documentazione. Le misure effettuate permettono di prevedere il livello di qualità esterna ed in uso del prodotto finale poiché gli attributi interni influenzano le caratteristiche esterne e quelle in uso.
+			\paragraph{Metriche per la qualità in uso}
+			Le metriche della qualità in uso valutano il livello con cui il software consente agli utenti di svolgere le proprie attività con efficacia, produttività, sicurezza e soddisfazione nel contesto operativo previsto.
 	
 \end{document}
