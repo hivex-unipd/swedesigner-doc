@@ -42,25 +42,25 @@ Le convenzioni qui riportate hanno lo scopo di:
 
 \subsection{Struttura del documento}
 Il presente documento si divide in tre sezioni principali:
-\begin{description}
-	\item[sezione \ref{sec:primari}] Regola i due processi primari di:
+\begin{itemize}
+	\item La sezione \ref{sec:primari} regola i due processi primari di:
 	\begin{description}
 		\item[fornitura] descritto in §5.2 di ISO/IEC 12207-1995;
 		\item[sviluppo] descritto in §5.3 di ISO/IEC 12207-1995.
 	\end{description}
-	\item[sezione \ref{sec:supporto}] Regola i processi di supporto:
+	\item La sezione \ref{sec:supporto} regola i processi di supporto:
 	\begin{description}
 		\item[documentazione] descritto in §6.1 di ISO/IEC 12207-1995;
 		\item[configurazione] descritto in §6.2 di ISO/IEC 12207-1995;
 		\item[verifica] descritto in §6.4 di ISO/IEC 12207-1995;
 		\item[validazione] descritto in §6.5 di ISO/IEC 12207-1995.
 	\end{description}
-	\item[sezione \ref{sec:organizzativi}] Regola i processi organizzativi:
+	\item La sezione \ref{sec:organizzativi} regola i processi organizzativi:
 	\begin{description}
 		% \item[strumenti] descritto in §7.2 di ISO/IEC 12207-1995;
 		\item[amministrazione] descritto in §7.1 di ISO/IEC 12207-1995.
 	\end{description}
-\end{description}
+\end{itemize}
 
 \subsection{Scopo del prodotto}
 \scopo
@@ -72,8 +72,8 @@ Il presente documento si divide in tre sezioni principali:
 
 \subsubsection{Riferimenti normativi}
 \begin{itemize}
-	\item ISO/IEC 12207-1995: \url{http://www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}, visitato in data 08/02/2017;
-	\item Capitolato d'appalto dell'azienda \ZU: \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato in data 08/02/2017. % normativo o informativo?
+	\item ISO/IEC 12207-1995: \url{www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}, visitato in data 08/02/2017;
+	\item Capitolato d'appalto dell'azienda \ZU: \url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato in data 08/02/2017. % normativo o informativo?
 \end{itemize}
 
 \subsubsection{Riferimenti informativi}
@@ -226,31 +226,43 @@ Il presente documento si divide in tre sezioni principali:
 	\end{itemize}
 
 	\subsubsection{Codifica} \label{sec:cod}
-	Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice scritto, i programmatori devono seguire delle linee guida che definiscono lo standard di scrittura e documentazione di esso.
-		\paragraph{Formattazione del codice}
-		Al fine di uniformare il codice sorgente di \proj, i programmatori devono rispettare le seguenti norme di codifica:
-			\begin{itemize}
-				\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
-				\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
-				\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
-				\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:norme_design}, tranne che devono essere preferibilmente dei sostantivi;
-				\item [...]
-			\end{itemize}
-		\paragraph{Commenti}
-		Per facilitare la comprensione del codice è fondamentale l'uso di commenti. A seguire dei suggerimenti per il loro inserimento:
-		\begin{itemize}
-			\item È preferibile commentare ogni funzione in modo da poter poi creare una documentazione;
-			\item Ogni commento dovrà essere relativo alla parte di codice interessata;
-			\item Ogni commento dovrà descrivere in modo breve ma preciso la parte di codice interessata;
-			\item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
-			\item È preferibile commentare sopra una riga di codice anziché alla fine di essa per una miglior facilità di lettura,
-			\item Evitare di usare troppi simboli per separare i commenti. Lasciare invece uno spazio vuoto per separarli dal codice;
-			\item Nel caso i commenti facciano parte anche della documentazione seguire le linee guida di jdoc (https://github.com/jsdoc3/jsdoc) %nel caso JavaScript
-		\end{itemize}
+	Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
+
+	Le seguenti norme verranno ampliate in una versione successiva di questo documento.
+
+	\paragraph{Tecnologie da usare}
+	Ogni programmatore deve utilizzare i seguenti editor di testo:
+	\begin{itemize}
+		\item \emph{IntelliJ IDEA} per scrivere codice Java;
+		\item \emph{IntelliJ Webstorm} per scrivere codice JavaScript.
+	\end{itemize}
+	Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
+
+	\paragraph{Nomenclatura del codice}
+	Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
+	\begin{itemize}
+		\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
+		\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
+		\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
+		\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:norme_design}, tranne che devono essere preferibilmente dei sostantivi.
+	\end{itemize}
+
+	\paragraph{Documentazione del codice}
+	Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
+	\begin{itemize}
+		\item i programmatori devono spiegare, con un commento, ogni componente;
+		\item i programmatori devono spiegare, con un commento, ogni metodo e funzione;
+		\item la spiegazione di una componente o di un metodo Java deve seguire gli standard di documentazione JavaDoc;
+		\item la spiegazione di una componente, di un metodo o di una funzione JavaScript deve seguire le linee guida di jdoc (\url{github.com/jsdoc3/jsdoc});
+		\item quando possibile, è bene documentare con un commento in linea parti di codice non immediatamente comprensibili;
+		\item ogni commento in linea deve recare uno spazio tra il testo e il marcatore di inizio commento;
+		\item è opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
+		\item è preferibile porre il commento sopra una riga di codice anziché alla fine di essa, per una miglior facilità di lettura.
+	\end{itemize}
 
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
-		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati.
+		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati.
 		
 		Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in \gloss{Latex} delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
 
@@ -374,7 +386,7 @@ Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a 
 	\item Gli elementi di un elenco sono separati da un punto e virgola (quindi iniziano con lettera minuscola), tranne l'ultimo che si conclude con un punto. Nel caso che anche un solo elemento dell'elenco si componga di più frasi separate da segno di punteggiatura forte, tutti gli elementi dell'elenco iniziano per maiuscola e finiscono con un punto. In entrambi i casi, ogni elenco è introdotto dai due punti.
 	\item Le abbreviazioni vanno scritte interamente in maiuscolo e definite nel glossario.
 \end{itemize}
-L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (vedi sezione \ref{sec:ref}).
+L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (vedi sezione \ref{sec:ref}).
 
 \subsubsection{Macro-istruzioni Latex}
 Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istruzioni Latex, definite nelle librerie della directory \texttt{util}:
@@ -543,7 +555,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 			\\Il range di accettazione stabilito per la metrica è 20 - 40.
 			
 			\subparagraph{Validazione W3C}
-			La misura viene effettuata utilizzando il validatore W3C disponibile all'indirizzo \url{https://validator.w3.org/}.
+			La misura viene effettuata utilizzando il validatore W3C disponibile all'indirizzo \url{validator.w3.org/}.
 			\\Il range di accettazione stabilito per la metrica è 0 - 20.
 			
 			\subparagraph{Schedule Variance}
