@@ -23,7 +23,7 @@ L'architettura dell'applicazione è suddivisa in due moduli:
 	\item il server, che fornisce la pagina dell'applicazione al client e riceve da esso delle richieste di generazione di codice.
 \end{enumerate}
 
-Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato perseguito in due modi:
+Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato perseguito con due strategie:
 \begin{itemize}
 	\item in generale, promuovendo le seguenti qualità:
 	\begin{itemize}
@@ -34,7 +34,7 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 	\end{itemize}
 	\item nello specifico, prevedendo le seguenti possibili aggiunte nel futuro:
 	\begin{itemize}
-		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del \gloss{JavaScript} o del Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria StringTemplate).
+		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del codice \gloss{JavaScript} o Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria \emph{StringTemplate}).
 		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati in XML, anziché in JSON; sarà sufficiente implementare l'interfaccia \texttt{Generator} con una nuova classe concreta, da fornire al controller.
 		\item Diversa compressione del codice generato: attualmente l'applicazione genera codice Java e lo fornisce in formato ZIP, ma si potrebbe facilmente cambiare il formato di compressione in TAR o JAR.
 		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; oppure; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
@@ -61,6 +61,13 @@ Il \texttt{body} (corpo, visibile) della pagina HTML si compone di pochi blocchi
 \end{itemize}
 
 Alla ricezione della pagina da parte del client, il nostro script JavaScript popola il tag \texttt{canvas} (inizialmente vuoto) con un diagramma delle classi vuoto.
+
+L'architettura del client è suddivisa in tre package:
+\begin{itemize}
+	\item \texttt{model}, che gestisce la logica sottostante i diagrammi;
+	\item \texttt{view}, che gestisce l'interfaccia grafica;
+	\item \texttt{collection}, che raggruppa in una collezione tutti i diagrammi creati.
+\end{itemize}
 
 %%% [...]
 
