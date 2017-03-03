@@ -24,7 +24,7 @@ def main():
     for d in [f for dp, dn, fn in os.walk(os.path.expanduser('..')) for f in fn]:
         for m in macros:
             if d.startswith(m[1]) and d.endswith('.tex'):
-                vers.write(new_cmd.format(m[0], d))
+                vers.write(new_cmd.format(m[0], d.replace('_', '\_')))
                 macros.remove(m)
     vers.close()
 
