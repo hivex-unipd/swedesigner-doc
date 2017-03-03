@@ -230,8 +230,40 @@ Il presente documento si divide in tre sezioni principali:
 	\subsubsection{Codifica} \label{sec:cod}
 	Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
 
-	Le seguenti norme verranno ampliate in una versione successiva di questo documento.
-
+	\paragraph{Convenzioni} \label{sec:conv}
+	Il team seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte client scritta in javascript verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritti su \url{http://javascript.crockford.com/code.html}. La parte server è scritta in java e seguirà le indicazioni di \url{http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
+	\paragraph{Nomi}
+	Sia per la parte client che per la parte server i la nomenclatura di classi, metodi e variabili segue la notazione a cammello, con alcune specifiche:
+	\begin{itemize}
+		\item variabili e metodi di Javascript iniziano con la lettera minuscola;
+		\item le classi di Java usano la lettera iniziale maiuscola;
+		\item variabili e metodi di Java usano la lettera iniziale minuscola.
+	\end{itemize}
+	\paragraph{Ricorsione}
+	Bisogna sempre evitare di ricorrere alla ricorsione. Nel caso non fosse possibile trovare un metodo alternativo iterativo è obbligatorio fornire una prova della sua terminazione. 
+	\paragraph{Commenti}
+	Per fornire un'adeguata documentazione al progetto è necessario fare uso di commenti nel codice. In particolare oltre a seguire le indicazioni precisate nella sezione \ref{sec:conv} riguardo lo stile di essi, si integrano inoltre commenti per la generazione di documentazione tramite javadoc.
+	\begin{itemize}
+	\item all'inizio di ogni file .java si inserisce un commento riguardante il documento con la seguente struttura:
+	\begin{equation}
+	/**
+	* Descrizione del file
+	*
+	*
+	* @author Autore
+	* @version Versione corrente del file
+	* @since Versione del prodotto dalla quale è presente il file
+	*/
+	\end{equation}
+	\item all'inizio di ogni metodo si inserisce un commento con la struttura descritta in seguito:
+	\begin{equation}
+	 /** 
+     * Descrizione del metodo
+     * @param NomeParametro    Descrizione parametro
+     * @return Tiporitorno     Valore di ritorno 
+     */
+	\end{equation}
+	Il numero di @param dipende dal numero di parametri del metodo.	@return si omette nel caso di metodi void e costruttori. Alcuni parametri aggiuntivi posso essere \emph{@throws TipoEccezione Motivo} nel caso di eccezioni controllate presenti nel metodo e \emph{@since} se il metodo è stato inserito in una versione diversa rispetto al file.
 	\paragraph{Tecnologie da usare}
 	Ogni programmatore deve utilizzare i seguenti editor di testo:
 	\begin{itemize}
