@@ -232,17 +232,39 @@ Il presente documento si divide in tre sezioni principali:
 
 	\paragraph{Convenzioni} \label{sec:conv}
 	Il team seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte client scritta in javascript verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritti su \url{http://javascript.crockford.com/code.html}. La parte server è scritta in java e seguirà le indicazioni di \url{http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
-	\paragraph{Nomi}
-	Sia per la parte client che per la parte server i la nomenclatura di classi, metodi e variabili segue la notazione a cammello, con alcune specifiche:
+	
+	\paragraph{Nomenclatura del codice}
+	Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
 	\begin{itemize}
-		\item variabili e metodi di Javascript iniziano con la lettera minuscola;
-		\item le classi di Java usano la lettera iniziale maiuscola;
-		\item variabili e metodi di Java usano la lettera iniziale minuscola.
+		\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
+		\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
+		\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
+		\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:norme_design}, tranne che devono essere preferibilmente dei sostantivi.
 	\end{itemize}
+	
 	\paragraph{Ricorsione}
 	Bisogna sempre evitare di ricorrere alla ricorsione. Nel caso non fosse possibile trovare un metodo alternativo iterativo è obbligatorio fornire una prova della sua terminazione. 
 	\paragraph{Commenti}
-	Per fornire un'adeguata documentazione al progetto è necessario fare uso di commenti nel codice. In particolare oltre a seguire le indicazioni precisate nella sezione \ref{sec:conv} riguardo lo stile di essi, si integrano inoltre commenti per la generazione di documentazione tramite javadoc.
+	
+	
+	
+
+	
+
+	\paragraph{Documentazione del codice}
+	Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
+	\begin{itemize}
+		\item i programmatori devono spiegare, con un commento, ogni componente;
+		\item i programmatori devono spiegare, con un commento, ogni metodo e funzione;
+		%spiego meglio sotto giusto per allungare un pò e per semplificare tutte le specifiche scritte su javadoc/jsdoc
+		%\item la spiegazione di una componente o di un metodo Java deve seguire gli standard di documentazione \emph{JavaDoc};
+		%\item la spiegazione di una componente, di un metodo o di una funzione JavaScript deve seguire le linee guida dell'API \emph{JSDdoc} (nei riferimenti informativi);
+		\item quando possibile, è bene documentare con un commento in linea parti di codice non immediatamente comprensibili;
+		\item ogni commento in linea deve recare uno spazio tra il testo e il marcatore di inizio commento;
+		\item è opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
+		\item è preferibile porre il commento sopra una riga di codice anziché alla fine di essa, per una miglior facilità di lettura.
+	\end{itemize}
+	La documentazione di file e metodi in particolare i programmatori devono seguire le strutture descritte sotto bassate sulle linee guida di Javadoc e Jsdoc.
 	\begin{itemize}
 	\item all'inizio di ogni file .java si inserisce un commento riguardante il documento con la seguente struttura:
 	\begin{equation}
@@ -255,7 +277,8 @@ Il presente documento si divide in tre sezioni principali:
 	* @since Versione del prodotto dalla quale è presente il file
 	*/
 	\end{equation}
-	\item all'inizio di ogni metodo si inserisce un commento con la struttura descritta in seguito:
+	\item Per documentazione di inizio file in Javascript rispettare sempre la struttura descritta per i file .java al punto sopra.
+	\item all'inizio di ogni metodo java si inserisce un commento con la struttura descritta in seguito:
 	\begin{equation}
 	 /** 
      * Descrizione del metodo
@@ -264,6 +287,17 @@ Il presente documento si divide in tre sezioni principali:
      */
 	\end{equation}
 	Il numero di @param dipende dal numero di parametri del metodo.	@return si omette nel caso di metodi void e costruttori. Alcuni parametri aggiuntivi posso essere \emph{@throws TipoEccezione Motivo} nel caso di eccezioni controllate presenti nel metodo e \emph{@since} se il metodo è stato inserito in una versione diversa rispetto al file.
+	
+	\item all'inizio di ogni funzione javascript si inserisce un commento con la struttura descritta in seguito:
+	\begin{equation}
+	 /** 
+     * Descrizione della funzione
+     * @param {Tipoparametro} NomeParametro - Descrizione parametro
+     */
+	\end{equation}
+	
+	\end{itemize}
+	
 	\paragraph{Tecnologie da usare}
 	Ogni programmatore deve utilizzare i seguenti editor di testo:
 	\begin{itemize}
@@ -271,28 +305,6 @@ Il presente documento si divide in tre sezioni principali:
 		\item \emph{IntelliJ Webstorm} per scrivere codice JavaScript.
 	\end{itemize}
 	Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
-
-	\paragraph{Nomenclatura del codice}
-	Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
-	\begin{itemize}
-		\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
-		\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
-		\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
-		\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:norme_design}, tranne che devono essere preferibilmente dei sostantivi.
-	\end{itemize}
-
-	\paragraph{Documentazione del codice}
-	Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
-	\begin{itemize}
-		\item i programmatori devono spiegare, con un commento, ogni componente;
-		\item i programmatori devono spiegare, con un commento, ogni metodo e funzione;
-		\item la spiegazione di una componente o di un metodo Java deve seguire gli standard di documentazione \emph{JavaDoc};
-		\item la spiegazione di una componente, di un metodo o di una funzione JavaScript deve seguire le linee guida dell'API \emph{JSDdoc} (nei riferimenti informativi);
-		\item quando possibile, è bene documentare con un commento in linea parti di codice non immediatamente comprensibili;
-		\item ogni commento in linea deve recare uno spazio tra il testo e il marcatore di inizio commento;
-		\item è opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
-		\item è preferibile porre il commento sopra una riga di codice anziché alla fine di essa, per una miglior facilità di lettura.
-	\end{itemize}
 
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
