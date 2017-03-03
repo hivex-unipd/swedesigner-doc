@@ -23,7 +23,7 @@ L'architettura dell'applicazione è suddivisa in due moduli:
 	\item il server, che fornisce la pagina dell'applicazione al client e riceve da esso delle richieste di generazione di codice.
 \end{enumerate}
 
-Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato perseguito in due modi:
+Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato perseguito con due strategie:
 \begin{itemize}
 	\item in generale, promuovendo le seguenti qualità:
 	\begin{itemize}
@@ -34,7 +34,7 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 	\end{itemize}
 	\item nello specifico, prevedendo le seguenti possibili aggiunte nel futuro:
 	\begin{itemize}
-		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del \gloss{JavaScript} o del Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria StringTemplate).
+		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del codice \gloss{JavaScript} o Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria \emph{StringTemplate}).
 		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati in XML, anziché in JSON; sarà sufficiente implementare l'interfaccia \texttt{Generator} con una nuova classe concreta, da fornire al controller.
 		\item Diversa compressione del codice generato: attualmente l'applicazione genera codice Java e lo fornisce in formato ZIP, ma si potrebbe facilmente cambiare il formato di compressione in TAR o JAR.
 		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; oppure; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
@@ -62,6 +62,13 @@ Il \texttt{body} (corpo, visibile) della pagina HTML si compone di pochi blocchi
 
 Alla ricezione della pagina da parte del client, il nostro script JavaScript popola il tag \texttt{canvas} (inizialmente vuoto) con un diagramma delle classi vuoto.
 
+L'architettura del client è suddivisa in tre package:
+\begin{itemize}
+	\item \texttt{model}, che gestisce la logica sottostante i diagrammi;
+	\item \texttt{view}, che gestisce l'interfaccia grafica;
+	\item \texttt{collection}, che raggruppa in una collezione tutti i diagrammi creati.
+\end{itemize}
+
 %%% [...]
 
 
@@ -86,12 +93,12 @@ Il \emph{back end} del server è suddiviso nei seguenti due moduli (penso):
 I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazione generata) seguono lo stile architetturale REST:
 \begin{itemize}
 	\item La richiesta per ottenere la pagina HTML usa il metodo HTTP GET; la pagina è quindi \emph{cachable} (i router tra client e server possono decidere di ottimizzarne la fornitura).
-	\item Il file JSON viene spedito con il metodo HTTP POST, che permette la persistenza di tale file nel server; la persistenza del file JSONè indifferente alla nostra applicazione ma ne aumenta l'estensibilità, in quanto un giorno i manutentori potrebbe voler offrire un servizio di condivisione dei diagrammi disegnati oppure un database di utenti che abbiano i propri diagrammi sul server.
+	\item Il file JSON viene spedito con il metodo HTTP POST, che permette la persistenza di tale file nel server; la persistenza del file JSON è indifferente alla nostra applicazione ma ne aumenta l'estensibilità, in quanto un giorno i manutentori potrebbe voler offrire un servizio di condivisione dei diagrammi disegnati oppure un database di utenti che abbiano i propri diagrammi sul server.
 	\item Ognuno dei due servizi (la pagina HTML e la generazione di codice) è una risorsa distinta: questo disaccoppia i due servizi, aumentando ancora la manutenibilità del sistema.
 	\item La richiesta per ottenere la pagina HTML è per forza idempotente: lo stato del server non può influire su una pagina statica.
 	\item La richiesta di generazione di codice è idempotente: l'unica dipendenza esterna al programma è il file JSON, che viene passato dal client.
 \end{itemize}
 
 \begin{center}
-	\includegraphics[scale=0.5]{img/http}
+	\includegraphics[scale=0.66]{img/http}
 \end{center}

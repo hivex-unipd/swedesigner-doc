@@ -230,16 +230,9 @@ Il presente documento si divide in tre sezioni principali:
 	\subsubsection{Codifica} \label{sec:cod}
 	Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
 
-	Le seguenti norme verranno ampliate in una versione successiva di questo documento.
-
-	\paragraph{Tecnologie da usare}
-	Ogni programmatore deve utilizzare i seguenti editor di testo:
-	\begin{itemize}
-		\item \emph{IntelliJ IDEA} per scrivere codice Java;
-		\item \emph{IntelliJ Webstorm} per scrivere codice JavaScript.
-	\end{itemize}
-	Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
-
+	\paragraph{Convenzioni} \label{sec:conv}
+	Il team seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte client scritta in javascript verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritti su \url{http://javascript.crockford.com/code.html}. La parte server è scritta in java e seguirà le indicazioni di \url{http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
+	
 	\paragraph{Nomenclatura del codice}
 	Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
 	\begin{itemize}
@@ -248,19 +241,70 @@ Il presente documento si divide in tre sezioni principali:
 		\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
 		\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:norme_design}, tranne che devono essere preferibilmente dei sostantivi.
 	\end{itemize}
+	
+	\paragraph{Ricorsione}
+	Bisogna sempre evitare di ricorrere alla ricorsione. Nel caso non fosse possibile trovare un metodo alternativo iterativo è obbligatorio fornire una prova della sua terminazione. 
+	\paragraph{Commenti}
+	
+	
+	
+
+	
 
 	\paragraph{Documentazione del codice}
 	Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
 	\begin{itemize}
 		\item i programmatori devono spiegare, con un commento, ogni componente;
 		\item i programmatori devono spiegare, con un commento, ogni metodo e funzione;
-		\item la spiegazione di una componente o di un metodo Java deve seguire gli standard di documentazione \emph{JavaDoc};
-		\item la spiegazione di una componente, di un metodo o di una funzione JavaScript deve seguire le linee guida dell'API \emph{JSDdoc} (nei riferimenti informativi);
+		%spiego meglio sotto giusto per allungare un pò e per semplificare tutte le specifiche scritte su javadoc/jsdoc
+		%\item la spiegazione di una componente o di un metodo Java deve seguire gli standard di documentazione \emph{JavaDoc};
+		%\item la spiegazione di una componente, di un metodo o di una funzione JavaScript deve seguire le linee guida dell'API \emph{JSDdoc} (nei riferimenti informativi);
 		\item quando possibile, è bene documentare con un commento in linea parti di codice non immediatamente comprensibili;
 		\item ogni commento in linea deve recare uno spazio tra il testo e il marcatore di inizio commento;
 		\item è opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
 		\item è preferibile porre il commento sopra una riga di codice anziché alla fine di essa, per una miglior facilità di lettura.
 	\end{itemize}
+	La documentazione di file e metodi in particolare i programmatori devono seguire le strutture descritte sotto bassate sulle linee guida di Javadoc e Jsdoc.
+	\begin{itemize}
+	\item all'inizio di ogni file .java si inserisce un commento riguardante il documento con la seguente struttura:
+	\begin{equation}
+	/**
+	* Descrizione del file
+	*
+	*
+	* @author Autore
+	* @version Versione corrente del file
+	* @since Versione del prodotto dalla quale è presente il file
+	*/
+	\end{equation}
+	\item Per documentazione di inizio file in Javascript rispettare sempre la struttura descritta per i file .java al punto sopra.
+	\item all'inizio di ogni metodo java si inserisce un commento con la struttura descritta in seguito:
+	\begin{equation}
+	 /** 
+     * Descrizione del metodo
+     * @param NomeParametro    Descrizione parametro
+     * @return Tiporitorno     Valore di ritorno 
+     */
+	\end{equation}
+	Il numero di @param dipende dal numero di parametri del metodo.	@return si omette nel caso di metodi void e costruttori. Alcuni parametri aggiuntivi posso essere \emph{@throws TipoEccezione Motivo} nel caso di eccezioni controllate presenti nel metodo e \emph{@since} se il metodo è stato inserito in una versione diversa rispetto al file.
+	
+	\item all'inizio di ogni funzione javascript si inserisce un commento con la struttura descritta in seguito:
+	\begin{equation}
+	 /** 
+     * Descrizione della funzione
+     * @param {Tipoparametro} NomeParametro - Descrizione parametro
+     */
+	\end{equation}
+	
+	\end{itemize}
+	
+	\paragraph{Tecnologie da usare}
+	Ogni programmatore deve utilizzare i seguenti editor di testo:
+	\begin{itemize}
+		\item \emph{IntelliJ IDEA} per scrivere codice Java;
+		\item \emph{IntelliJ Webstorm} per scrivere codice JavaScript.
+	\end{itemize}
+	Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
 
 	\subsubsection{Strumenti}
 		\paragraph{PragmaDB}
@@ -655,7 +699,27 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\subsubsection{Strumenti}
 	In questa sezione vengono dettagliate le caratteristiche e funzionalità degli strumenti automatici scelti per la misurazione delle metriche definite nel paragrafo precedente.
 		\subparagraph{SDMetrics}
-		\subparagraph{CodePRO Analitix}
+		SDMetrics fornisce:
+		\begin{itemize}
+			\item un ampio insieme di misurazioni per la progettazione;
+			\item un complesso di regole per il controllo della progettazione;
+			\item una serie di feedback proattivi sulla qualità degli schemi di progettazione realizzati;
+			\item un insieme estendibile di misurazioni per la progettazione e di regole di progettazione;
+			\item interoperabilità con gli strumenti UML;
+			\item la possibilità di esportare i risultati delle misurazioni;
+			\item un interfaccia grafica interattiva;
+			\item velocita nel processare le informazioni e fornire i risultati;
+		\end{itemize}
+
+		\subparagraph{CodePRO Analytix}
+		CodePRO Analytix fornisce:
+		\begin{itemize}
+			\item analisi statica del codice con più di 1200 regole di controllo del codice;
+			\item rilevamento dei difetti e suggerimento di azioni di riparazione;
+			\item possibilità di definire insiemi di regole di controllo personalizzate;
+			\item analisi della copertura del codice;
+			\item intergazione con Eclipse.
+		\end{itemize}
 
 \subsection{Validazione}
 Ogni verifica di una parte della configurazione dev'essere vagliata dal responsabile di progetto; per questo, il responsabile deve controllare i risultati dei test. Egli può approvarli oppure chiedere ai verificatori di ripeterli. L'approvazione determina:
@@ -877,5 +941,328 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 \paragraph{Integrazione con GitHub} Slack offre, nella sua versione gratuita, l'integrazione di un massimo di 10 servizi esterni. Un servizio che si è rivelato utile è stato l'integrazione con GitHub: questa crea un bot, inserito nel canale \#github, il quale invia notifiche relative a commit, pull request e attività nei GitHub Issues.
 
 
+
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Definizione delle metriche
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Definizione delle metriche}
+
+
+
+\subsection{Copertura dei requisiti obbligatori}
+Questa metrica permette di verificare in ogni momento lo stato dei requisiti obbligatori coperti. Essa rappresenta il rapporto tra i requisiti obbligatori soddisfatti e il numero totale di requisiti obbligatori ricavati.
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	\frac{~numero~requisiti~obbligatori~soddisfatti}{~numero~requisiti~obbligatori~totali}\times{100}
+\end{equation}
+
+
+
+\subsection{Copertura dei requisiti desiderabili}
+Tale metrica permette di verificare in ogni momento lo stato dei requisiti desiderabili coperti. Essa rappresenta il rapporto tra i requisiti desiderabili soddisfatti e il numero totale di requisiti desiderabili ricavati.
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	\frac{~numero~requisiti~desiderabili~soddisfatti}{~numero~requisiti~desiderabili~totali}\times{100}
+\end{equation}
+
+
+
+\subsection{Test superati}
+Tale metrica permette di verificare in ogni momento la percentuale di test superati.
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	\frac{~numero~test~eseguiti}{~numero~test~pianificati}\times{100}
+\end{equation}
+
+
+
+\subsection{Profondità di annidamento dei blocchi}
+Tale metrica misura il massimo numero di annidamento di blocchi di scoping all'interno di un particolare metodo. Metodi con un numero eccessivo di blocchi annidati possono risultare sono difficili da comprendere e portano potenzialmente all'errore.
+
+
+
+\subsection{Numero di linee di codice per metodo}
+La metrica misura il numero di linee di codice di un particolare metodo del programma. In particolare una linea di codice è considerata tale se contiene caratteri diversi da commenti e spaziature. Avere un numero di linee di codice per metodo relativamente basso permette di tenere un livello di manutenibilità accettabile. Un metodo eccessivamente articolato può risultare di contro difficile da comprendere e modificare e pertanto potrebbe essere necessario fattorizzarlo in più metodi con responsabilità meglio circoscritte e definite.
+
+
+
+\subsection{Numero di parametri per metodo}
+La metrica è la misura del numero totale di parametri formali in ingresso di un particolare metodo. Se il numero di parametri è elevato, lo \gloss{stack} del programma può essere riempito rapidamente in caso di multiple chiamate innestate e il metodo può risultare difficilmente comprensibile e mantenibile; inoltre ciò potrebbe indicare un metodo troppo complesso e non efficacemente suddiviso in sotto-metodi. In generale, inoltre, codice sorgente con invocazioni di metodi con una lunga lista di parametri è maggiormente soggetto all'errore.
+
+
+
+\subsection{Numero di campi dati per classe}
+Tale metrica indica il numero di campi dati dichiarati all'interno di una particolare classe o interfaccia. Maggiore è il numero di campi dati che una classe o un interfaccia contiene, maggiore è il numero di problemi che possono verificarsi quando essa viene estesa o implementata: un \emph{override} indesiderato di campi dati protetti o pubblici può provocare malfunzionamenti del programma. Un numero eccessivo di attributi all'interno di una classe, inoltre, può essere indice di mancanza di coesione nelle responsabilità ad essa assegnate.
+
+
+
+\subsection{Numero di metodi per classe}
+Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi \emph{setter} e \emph{getter}.
+
+
+
+\subsection{Grado di accoppiamento afferente per package}
+Tale metrica indica per un particolare package il numero di classi ed interfacce al suo esterno che dipendono da classi ed interfacce all'interno del package stesso.
+
+In particolare, c'è una dipendenza tra una classe o interfaccia $C$ verso una classe o interfaccia $D$ se:
+\begin{itemize}
+	\item{$C$ ha un attributo di tipo $D$;}
+	\item{$C$ ha un metodo con un parametro di tipo $D$;}
+	\item{$C$ ha un'associazione, aggregazione o composizione verso $D$ (solo per i diagrammi UML);}
+	\item{$C$ ha una dipendenza UML d'uso verso $D$ (solo per i diagrammi UML);}
+	\item{$C$ è sottoclasse diretta di $D$;}
+	\item{$C$ implementa l'interfaccia $D$.}
+\end{itemize}
+Un alto valore di accoppiamento efferente è caratteristico dei package di utilità i cui servizi sono ampiamente sfruttati e pertanto non è necessariamente indicativo di una cattiva progettazione. Tuttavia bisogna considerare che package con un alto grado di accoppiamento afferente devono avere un buon grado di stabilità, dal momento che futuri cambiamenti potrebbero avere un notevole impatto a livello dell'intera applicazione. Inoltre si può considerare che un alto numero di dipendenze entranti può essere considerato accettabile se il package è relativamente "astratto", meno se esso è invece più "concreto".
+
+
+
+\subsection{Grado di accoppiamento efferente per package}
+Tale metrica indica per un particolare package il numero di classi ed interfacce contenute al suo interno che dipendono da classi ed interfacce all'esterno del package stesso. Le dipendenze considerate sono quelle elencate nella sezione relativa al Grado di accoppiamento afferente di un package.
+
+Un alto valore di accoppiamento efferente può indicare che il package non ha una responsabilità ben definita e circoscritta e può anche indicare che è potenzialmente instabile dal momento che esso dipende dalla stabilità di tutti i tipi a cui risulta accoppiato.
+
+L'accoppiamento efferente può essere ridotto decomponendo le classi maggiormente accoppiate del package in sottoclassi.
+
+
+
+\subsection{Complessità ciclomatica per metodo}
+La metrica rappresenta la complessità di funzioni e metodi di un programma. Essa esprime il numero di cammini linearmente indipendenti presenti all'interno del codice del metodo o della funzione in esame. 
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	Cyclomatic \ Number = e - n + 2p
+\end{equation}
+dove:
+\begin{itemize}
+	\item $e$ è il numero di archi;
+	\item $n$ è il numero di nodi;
+	\item $p$ è il numero di componenti connesse.
+\end{itemize}
+Alti valori di complessità ciclomatica sottintendono una ridotta manutenibilità del codice. Valori bassi di complessità ciclomatica potrebbero delineare una scarsa efficienza dei metodi.
+
+
+
+\subsection{Numero di tipi per package}
+La metrica misura il numero di tipi (classi ed interfacce) contenuti all'interno di un particolare package. Un valore elevato di tale metrica può essere indice di mancanza di coesione nelle responsabilità ad esso assegnate e pertanto di un basso livello di coesione funzionale, cosa che si ripercuote negativamente sulla comprensibilità, riusabilità e manutenibilità del package stesso. 
+
+
+
+\subsection{Distanza dalla sequenza principale normalizzata} 
+Tale metrica di package è basata sulla convinzione che il grado di astrattezza e stabilità di un package siano strettamente correlati ed è una misura derivata di astrattezza ($A$), ovvero la percentuale di classi astratte presenti nel package in esame, e instabilità ($I$). 
+
+Package che sono massimamente stabili ($I = 0$) e allo stesso tempo massimamente astratti ($A = 1$) sono considerati buoni. Allo stesso modo, package che sono instabili ($I = 1$) e allo stesso tempo concreti ($A = 0$) sono considerati accettabili. Per essere considerato di buona qualità architetturale, un package dovrebbe idealmente collocarsi sul segmento di connessione di questi due punti su di un grafico $A \times I$. Questo segmento è detto sequenza principale.
+
+La misura $D$ della distanza dalla sequenza principale viene effettuata nel modo seguente:
+\begin{equation}
+	D = | A + I - 1 | 
+\end{equation}
+I valori variano da 0 ad 1 dove 0 indica che il package sta direttamente sulla sequenza principale, mentre 1 indica che il package è massimamente distante da essa. Qualsiasi package piuttosto distante dal valore ideale 0 dovrebbe essere riesaminato e ristrutturato in modo tale da renderlo maggiormente riusabile e meno suscettibile ai cambiamenti.
+
+
+
+\subsection{Instabilità}
+Tale metrica misura il grado di instabilità di un particolare package.
+
+Package che presentano molte dipendenze uscenti e poche dipendenze entranti sono poco stabili perché suscettibili ai cambiamenti degli elementi da cui dipendono; d'altro canto, package che presentano molte dipendenze entranti e poche dipendenze uscenti sono più stabili perché più difficili da modificare.
+
+Il grado di instabilità $I$ di un package può essere misurato confrontando le dipendenze entranti ed uscenti nel modo seguente:	
+\begin{equation}
+	I = Ce/(Ca + Ce) 
+\end{equation}
+\begin{itemize}
+	\item $Ce$ = grado di accoppiamento efferente;
+	\item $Ca$ = grado di accoppiamento afferente;
+\end{itemize}
+I valori variano da 0 a 1 dove 0 indica un package massimamente stabile e 1 un package massimamente instabile.
+
+Tuttavia bisogna considerare che non tutti i package devono essere completamente stabili o completamente instabili. Invece, ogni package dovrebbe essere intenzionalmente progettato per essere il più possibile stabile o instabile.
+	
+
+
+\subsection{Percentuale linee di commento su linee di codice}
+Tale metrica misura il rapporto fra il numero di commenti inseriti all'interno del programma e il numero totale di linee di codice. Essa risulta utile per stimare la manutenibilità del codice dal momento che un'adeguata documentazione del codice ne permette una maggiore e più rapida comprensione.
+
+Se la densità di commenti, per esempio, scende al di sotto di un certo valore soglia, questo può andare ad indicare che il codice non è adeguatamente commentato.
+
+Un valore molto alto di tale metrica, tuttavia, può non essere considerato positivamente: una commento eccessivo del codice può risultare eccessivamente pedante, ridondante e frustrante nella sua lettura.
+
+
+
+\subsection{Validazione W3C}
+La metrica indica il numero di errori riscontrati dal validatore W3C nell'analisi delle pagine \gloss{HTML5} del programma.
+
+Una pagina valida assicura una notevole serie di vantaggi:
+\begin{itemize}
+ 	\item c'è una maggiore possibilità che essa venga gestita in modo consistente dai diversi browser senza incappare in errori inattesi;
+ 	\item c'è una maggiore probabilità che la pagina, conforme agli standard web, sia correttamente gestita anche dalle future evoluzioni dei browser esistenti;
+ 	\item risulta più facilmente mantenibile nel breve e lungo periodo.
+\end{itemize}
+
+
+
+\subsection{Schedule Variance}
+Tale metrica indica di quanto le macro-attività di progetto si discostano temporalmente rispetto alla pianificazione originaria definita nel documento \PdP . 
+
+Viene calcolata come la differenza fra la data pianificata di fine di un'attività e la data reale di fine di quell'attività: un valore di \emph{schedule variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più tempo di quanto pianificato; se pari a zero indica invece che essa è perfettamente in linea con le tempistiche previste mentre se è addirittura strettamente positivo indica che sta procedendo più speditamente di quanto considerato. 
+
+Da sottolineare che l'utilizzo di periodi di \gloss{slack} aumenta la possibilità che la \emph{schedule variance} assuma valori positivi.
+
+
+
+\subsection{Budget Variance}
+Tale metrica indica quanto il costo di una particolare attività di progetto si discosta rispetto alla pianificazione originaria definita nel documento \PdP. 
+
+Viene calcolata come la differenza fra il costo preventivato per un'attività e il costo effettivamente sostenuto per la stessa: un valore di \emph{budget variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più risorse di quanto pianificato: se pari a zero indica invece che essa è perfettamente in linea con i costi previsti mentre se è addirittura strettamente positivo indica che sta procedendo con più efficienza di quanto considerato.
+
+
+
+\subsection{Numero di violazioni di alta importanza delle norme di codifica}
+La metrica misura il numero di violazioni di alta importanza delle norme di codifica segnalate dalla componente Audit del plug-in Eclipse CodePro Analytix. Un codice che non rispetta tali regole risulta difficilmente comprensibile e leggibile, poco coeso ed uniforme nella struttura e difficilmente mantenibile in futuro.
+
+
+
+\subsection{Numero di violazioni di media importanza delle norme di codifica}
+La metrica misura il numero di violazioni di media importanza delle norme di codifica segnalate dalla componente Audit del plug-in Eclipse CodePro Analytix. Un codice che non rispetta tali regole risulta difficilmente comprensibile e leggibile, poco coeso ed uniforme nella struttura e difficilmente mantenibile in futuro.
+
+
+
+\subsection{Numero di violazioni di bassa importanza delle norme di codifica}
+La metrica misura il numero di violazioni di bassa importanza delle norme di codifica segnalate dalla componente Audit del plug-in Eclipse CodePro Analytix. Un codice che non rispetta tali regole risulta difficilmente comprensibile e leggibile, poco coeso ed uniforme nella struttura e difficilmente mantenibile in futuro.
+
+
+
+\subsection{Indice di Gulpease}
+Tale metrica, tarata sulla lingua italiana, misura la qualità di un documento andando a stimarne il grado di leggibilità. Rispetto ad altri indici equivalenti per campo di applicazione ha il vantaggio di esprimere la lunghezza media delle parole in lettere anziché in sillabe --- cosa che ne consente una implementazione automatizzata fortemente affidabile. Tale indice, inoltre, considera principalmente due variabili linguistiche: la lunghezza delle parole e la lunghezza delle frasi in rapporto al numero delle lettere.
+
+La formula per il calcolo dell'indice di Gulpease è la seguente:
+\begin{equation}
+	89+\frac{300\times(numero~delle~frasi)-10\times(numero~delle~lettere)}{numero~delle~parole}
+\end{equation}
+Il risultato è un valore compreso nell'intervallo [0,100], dove il valore 100 indica la più alta leggibilità, mentre 0 la più bassa. In generale risulta che testi con indice:
+\begin{itemize}
+	\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+	\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+	\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.	
+\end{itemize}
+Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione siano relativamente bassi; tuttavia non bisogna dimenticare che la documentazione prodotta relativamente al progetto corrente è inevitabilmente ricca di terminologie tecniche ed è rivolta a lettori con un significativo grado di istruzione e una certa familiarità con gli ambiti affrontati.
+
+
+
+\subsection{Numero di violazioni della completezza architetturale di alta importanza}
+La metrica misura il numero di violazioni della completezza architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
+
+
+
+\subsection{Numero di violazioni della completezza architetturale di media importanza}
+La metrica misura il numero di violazioni della completezza architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
+
+
+
+\subsection{Numero di violazioni della completezza architetturale di bassa importanza}
+La metrica misura il numero di violazioni della completezza architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
+
+
+
+\subsection{Numero di violazioni dello stile architetturale di alta importanza}
+La metrica misura il numero di violazioni dello stile architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
+
+
+
+\subsection{Numero di violazioni dello stile architetturale di media importanza}
+La metrica misura il numero di violazioni dello stile architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
+
+
+
+\subsection{Numero di violazioni dello stile architetturale di bassa importanza}
+La metrica misura il numero di violazioni dello stile architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
+
+
+
+\subsection{Numero di violazioni della correttezza architetturale di alta importanza}
+La metrica misura il numero di violazioni della correttezza architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
+
+
+
+\subsection{Numero di violazioni della correttezza architetturale di media importanza}
+La metrica misura il numero di violazioni della correttezza architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
+
+
+
+\subsection{Numero di violazioni della correttezza architetturale di bassa importanza}
+La metrica misura il numero di violazioni della correttezza architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
+
+
+
+\subsection{Statement Coverage}
+La metrica indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \gloss{getter} e \gloss{setter}.
+
+
+
+\subsection{Branch Coverage}
+%%% manca?
+
+
+
+\subsection{Test di unità eseguiti}
+Tale metrica indica la percentuale di test di unità eseguiti.
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	\frac{numero~test~unità~eseguiti}{numero~test~unità~pianificati}\times100
+\end{equation}
+
+
+
+\subsection{Test di integrazione eseguiti}
+Tale metrica indica la percentuale di test di integrazione eseguiti.
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	\frac{numero~test~integrazione~eseguiti}{numero~test~integrazione~pianificati}\times100
+\end{equation}
+
+
+
+\subsection{Test di sistema eseguiti}
+Tale metrica indica la percentuale di test di sistema eseguiti.
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	\frac{numero~test~sistema~eseguiti}{numero~test~sistema~pianificati}\times100
+\end{equation}
+
+
+
+\subsection{Test di accettazione eseguiti}
+Tale metrica indica la percentuale di test di accettazione eseguiti.
+
+La misura viene effettuata nel modo seguente:
+\begin{equation}
+	\frac{numero~test~accettazione~eseguiti}{numero~test~accettazione~pianificati}\times100
+\end{equation}
+
+
+
+\subsection{Numero di figli diretti}
+Questa metrica misura il numero di sottoclassi dirette di una particolare superclasse.
+
+
+
+\subsection{Profondità nella gerarchia}
+Questa metrica misura il livello di profondità di una classe all'interno della gerarchia a cui essa appartiene. 
+
+La profondità di un'interfaccia è stabilita pari a (1). La profondità della classe \texttt{java.lang.Object} è stabilita pari a (1). La profondità di ogni altra classe è definita come 1 + profondità della sua superclasse diretta
+
+Più una classe è posizionata in profondità all'interno di una gerarchia, maggiore è il numero di metodi e campi dati che essa potenzialmente eredita, cosa che rende più difficile controllare e predire il suo comportamento. Essa diventa più specializzata e può essere difficile comprendere un sistema con più livelli di profondità. Tuttavia, bisogna anche considerare che c'è un grande potenziale nel riuso dei metodi ereditati.
+
+Pertanto se un valore troppo alto di tale metrica è indice di un grado di complessità dell'architettura da limitarsi, un valore eccessivamente basso sottolinea un potenziale sottouso dei vantaggi dell'architettura orientata agli oggetti.
 
 \end{document}
