@@ -45,7 +45,7 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 
 
 \subsection{Architettura del client} \label{sec:arch_client}
-Il \emph{front end} di \proj{} è una singola pagina web scritta in HTML5, CSS3 e JavaScript.
+Il \emph{front end} di \proj{} è una \emph{Single webPage Application} (\gloss{SPA}) scritta in HTML5, CSS3 e JavaScript.
 
 L'\texttt{head} (intestazione) della pagina HTML contiene dei puntatori a:
 \begin{itemize}
@@ -57,15 +57,15 @@ L'\texttt{head} (intestazione) della pagina HTML contiene dei puntatori a:
 Il \texttt{body} (corpo) della pagina HTML si compone di pochi blocchi:
 \begin{itemize}
 	\item dei tag \texttt{div} contenenti i menù laterali da cui selezionare gli strumenti e gli elementi per interagire con i diagrammi;
-	\item un tag \texttt{canvas} (identificato dall'\texttt{id} \emph{paper}) che contiene, di volta in volta, il diagramma delle classi o il diagramma di un metodo particolare.
+	\item un tag \texttt{svg} (identificato dall'\texttt{id} \emph{paper}) che contiene, di volta in volta, il diagramma delle classi o il diagramma di un metodo particolare.
 \end{itemize}
-Alla ricezione della pagina da parte del client, il nostro script JavaScript popola il tag \texttt{canvas} (inizialmente vuoto) con un diagramma delle classi vuoto.
+Alla ricezione della pagina da parte del client, lo script JavaScript popola il tag \texttt{svg} (inizialmente vuoto) con un diagramma delle classi vuoto.
 
 L'architettura del client è suddivisa in tre package:
 \begin{itemize}
 	\item \texttt{model}, che gestisce la logica sottostante i diagrammi;
 	\item \texttt{view}, che gestisce l'interfaccia grafica;
-	\item \texttt{collection}, che raggruppa in una collezione tutti i diagrammi creati.
+	\item \texttt{collection}, che raggruppa in una collezione più model, come per tutti i diagrammi creati.
 \end{itemize}
 
 %%% [...]
@@ -78,16 +78,17 @@ L'architettura del client è suddivisa in tre package:
 
 
 \subsection{Architettura del server} \label{sec:arch_server}
-Il server offre due servizi:
+Il server offre tre servizi:
 \begin{enumerate}
 	\item fornisce al client la pagina HTML dove disegnare i diagrammi;
-	\item elabora un file JSON in arrivo dal client e gli fornisce l'applicazione generata a partire da tale file.
+	\item elabora un file JSON in arrivo dal client e gli fornisce l'applicazione generata a partire da tale file;
+	\item restituisce l'elenco degli stereotipi esistenti all'interno del server e utilizzabili dal client.
 \end{enumerate}
-Questi due servizi rispettano lo stile architetturale REST (come spiegato più avanti nella sezione \ref{sec:arch_proto}).
+Questi tre servizi rispettano lo stile architetturale REST (come spiegato più avanti nella sezione \ref{sec:arch_proto}).
 
 Il primo servizio è una semplice pagina HTML, che il server Tomcat gestisce senza nessuna aggiunta da parte nostra.
 
-Il secondo servizio, invece, è una \emph{servlet} Java organizzata nei seguenti package:
+Il secondo e il terzo servizio, invece, sono una \emph{servlet} Java organizzata nei seguenti package:
 \begin{itemize}
 	\item \textbf{\texttt{controller}} rappresenta il nucleo del \emph{back end}; un \texttt{RequestHandlerController} si occupa di ricevere ed elaborare le richieste di elaborazione provenienti dal client.
 	\item nel package \textbf{\texttt{parser}}, la classe \texttt{Parser} si occupa di convertire il file JSON ricevuto in un oggetto Java di tipo \texttt{ParsedProgram}. Questo oggetto Java rappresenta il programma che l'utente vuole generare; esso si compone di oggetti \texttt{ParsedType} (cioè i tipi definiti dall'utente: gli elementi del diagramma delle classi), i quali si compongono di oggetti \texttt{ParsedAttribute} e \texttt{ParsedMethod}; quest'ultimo tipo si compone a sua volta di oggetti \texttt{ParsedInstruction} e così fia fino ad arrivare alle istruzioni “atomiche”, come ad esempio un \texttt{ParsedReturn}.
@@ -119,3 +120,5 @@ I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazi
 \begin{center}
 	\includegraphics[scale=0.66]{img/http}
 \end{center}
+
+% ci sarebbe da fare pure una cosa simile per il recupero degli stereotipi
