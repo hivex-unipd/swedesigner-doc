@@ -45,7 +45,7 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 
 
 \subsection{Architettura del client} \label{sec:arch_client}
-Il \emph{front end} di \proj{} è una \emph{Single webPage Application} (\gloss{SPA}) scritta in HTML5, CSS3 e JavaScript.
+Il \emph{front end} di \proj{} è una \emph{Single Page Application} (\gloss{SPA}) scritta in HTML5, CSS3 e JavaScript.
 
 L'\texttt{head} (intestazione) della pagina HTML contiene dei puntatori a:
 \begin{itemize}
@@ -86,7 +86,7 @@ Il server offre tre servizi:
 \end{enumerate}
 Questi tre servizi rispettano lo stile architetturale REST (come spiegato più avanti nella sezione \ref{sec:arch_proto}).
 
-Il primo servizio è una semplice pagina HTML, che il server Tomcat gestisce senza nessuna aggiunta da parte nostra.
+Il primo servizio è una semplice pagina HTML, fornita normalmente da Tomcat e arricchita di codice Javascript.
 
 Il secondo e il terzo servizio, invece, sono una \emph{servlet} Java organizzata nei seguenti package:
 \begin{itemize}
