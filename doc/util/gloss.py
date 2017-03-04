@@ -9,7 +9,7 @@ import os   # os utilities
 def main():
     glossary = get_glossary('../Esterni/Glossario/terminiGlossario.tex')
     if len(sys.argv) == 1:
-        for f in get_files('../', exclude=['util/', 'diario.tex', 'Lettere/', 'Glossario/']):
+        for f in get_files('../', exclude=['util/', 'diario.tex', 'Lettere/', 'Glossario/', 'Specifica_tecnica/']):
             mark_file(f, glossary)
     else:
         mark_file(sys.argv[1], glossary)
@@ -44,15 +44,14 @@ def mark_file(file, glossary, start='\gloss{', end='}'):
     For each word in the given glossary, mark the first occurrence of it in the given TeX file with the start and end tags; then, update the file.
     """
     output = []
-    f = open(file, 'r')
-    text = f.read()
-    output.append(mark_text(text, glossary, start, end))
-    f.close()
+    with open(file, 'r') as f:
+        text = f.read()
+        print('marking ' + file + '...')
+        output.append(mark_text(text, glossary, start, end))
 
-    f = open(file, 'w')
-    for line in output:
-        f.write(line)
-    f.close()
+    with open(file, 'w') as f:
+        for line in output:
+            f.write(line)
 
 
 
@@ -65,11 +64,12 @@ def mark_text(text, glossary, start='\gloss{', end='}'):
     start = start.replace('\\', '\\\\')
     end = end.replace('\\', '\\\\')
     for g in glossary:
+        exp = r'^([^%]*?)(?<!section{)(?<!paragraph{)\b(' + g + r')\b'
         if g[0].lower() == g[0]:
-            pattern = re.compile(r'\b(' + g + r')\b', re.I) # trovare un modo per ignorare i commenti LaTeX
+            pattern = re.compile(exp, re.I | re.M)
         else:
-            pattern = re.compile(r'\b(' + g + r')\b') # trovare un modo per ignorare i commenti LaTeX
-        text = pattern.sub(start + r'\1' + end, text, 1)
+            pattern = re.compile(exp, re.M)
+        text = pattern.sub(r'\1' + start + r'\2' + end, text, 1)
     return text
 
 
