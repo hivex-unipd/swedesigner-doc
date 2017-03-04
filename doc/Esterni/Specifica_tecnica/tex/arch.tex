@@ -12,18 +12,18 @@ Suddividiamo la descrizione dell'architettura di \proj{} in quattro sezioni:
 	\item §\ref{sec:arch_server}, che descrive l'architettura del \emph{back end} dell'applicazione;
 	\item §\ref{sec:arch_proto}, che descrive il protocollo che lega le due interfacce precedenti.
 \end{itemize}
-Per ognuna di queste sezioni, descriviamo l'architettura con metodo \emph{top-down} --- dal generale al particolare --- utilizzando i formalismi di UML 2.0.
+Per ognuna di queste sezioni, procediamo con metodo \emph{top-down} --- dal generale al particolare --- utilizzando i formalismi di UML 2.0.
 
 
 
-\subsection{Architettura generale} \label{sec:arch_gen}
+\subsection{Descrizione generale} \label{sec:arch_gen}
 L'architettura dell'applicazione è suddivisa in due moduli:
 \begin{enumerate}
 	\item il client, che vive nel browser dell'utente;
 	\item il server, che fornisce la pagina dell'applicazione al client e riceve da esso delle richieste di generazione di codice.
 \end{enumerate}
 
-Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato perseguito con due strategie:
+Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato raggiunto con due strategie:
 \begin{itemize}
 	\item in generale, promuovendo le seguenti qualità:
 	\begin{itemize}
@@ -34,11 +34,11 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 	\end{itemize}
 	\item nello specifico, prevedendo le seguenti possibili aggiunte nel futuro:
 	\begin{itemize}
-		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del codice \gloss{JavaScript} o Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria \emph{StringTemplate}).
-		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati in XML, anziché in JSON; sarà sufficiente implementare l'interfaccia \texttt{Generator} con una nuova classe concreta, da fornire al controller.
-		\item Diversa compressione del codice generato: attualmente l'applicazione genera codice Java e lo fornisce in formato ZIP, ma si potrebbe facilmente cambiare il formato di compressione in TAR o JAR.
-		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; oppure; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
+		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del codice JavaScript o Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria \emph{StringTemplate}).
+		\item Diversa compressione del codice generato: attualmente l'applicazione genera un JAR e lo comprime, assieme al file JSON, in formato ZIP; ma si potrebbe facilmente cambiare il formato di compressione in un JAR che contenga egli stesso al suo interno il file JSON.
+		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
 		\item Persistenza del programma generato: si potrebbe voler mantenere anche il codice generato, come il diagramma di input; per fare ciò, basta garantire al client il carattere persistente della risorsa fornita (badando però a non eliminarla dal server). % (per ora la eliminiamo?)
+		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati in XML, anziché in JSON; sarà sufficiente modificare il package \texttt{parser}.
 	\end{itemize}
 \end{itemize}
 
@@ -47,19 +47,18 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 \subsection{Architettura del client} \label{sec:arch_client}
 Il \emph{front end} di \proj{} è una singola pagina web scritta in HTML5, CSS3 e JavaScript.
 
-L'\texttt{head} (intestazione, invisibile) della pagina HTML contiene dei puntatori a:
+L'\texttt{head} (intestazione) della pagina HTML contiene dei puntatori a:
 \begin{itemize}
 	\item le librerie JavaScript elencate nella sezione \ref{sec:tech_client} (con eventuali relativi fogli CSS);
 	\item il foglio di stile CSS della pagina;
 	\item lo script JavaScript che utilizza le librerie di cui sopra.
 \end{itemize}
 
-Il \texttt{body} (corpo, visibile) della pagina HTML si compone di pochi blocchi:
+Il \texttt{body} (corpo) della pagina HTML si compone di pochi blocchi:
 \begin{itemize}
 	\item dei tag \texttt{div} contenenti i menù laterali da cui selezionare gli strumenti e gli elementi per interagire con i diagrammi;
 	\item un tag \texttt{canvas} (identificato dall'\texttt{id} \emph{paper}) che contiene, di volta in volta, il diagramma delle classi o il diagramma di un metodo particolare.
 \end{itemize}
-
 Alla ricezione della pagina da parte del client, il nostro script JavaScript popola il tag \texttt{canvas} (inizialmente vuoto) con un diagramma delle classi vuoto.
 
 L'architettura del client è suddivisa in tre package:
@@ -71,6 +70,11 @@ L'architettura del client è suddivisa in tre package:
 
 %%% [...]
 
+% >>> RICORDARSI DEL DIAGR. DEI PACKAGE DEL CLIENT 
+% \begin{center}
+% 	\includegraphics[scale=0.5]{img/pkg_client}
+% \end{center}
+
 
 
 \subsection{Architettura del server} \label{sec:arch_server}
@@ -79,13 +83,26 @@ Il server offre due servizi:
 	\item fornisce al client la pagina HTML dove disegnare i diagrammi;
 	\item elabora un file JSON in arrivo dal client e gli fornisce l'applicazione generata a partire da tale file.
 \end{enumerate}
-Questi due servizi rispettano lo stile architetturale REST, come spiegato nella sezione \ref{sec:arch_proto}.
+Questi due servizi rispettano lo stile architetturale REST (come spiegato più avanti nella sezione \ref{sec:arch_proto}).
 
-Il \emph{back end} del server è suddiviso nei seguenti due moduli (penso):
+Il primo servizio è una semplice pagina HTML, che il server Tomcat gestisce senza nessuna aggiunta da parte nostra.
+
+Il secondo servizio, invece, è una \emph{servlet} Java organizzata nei seguenti package:
 \begin{itemize}
-	\item controller: rappresenta il core del \emph{back end}; si occupa di ricevere ed elaborare le richieste provenienti dal client.
-	\item endpoints: per la REST (ce l'abbiamo???)
+	\item \textbf{\texttt{controller}} rappresenta il nucleo del \emph{back end}; un \texttt{RequestHandlerController} si occupa di ricevere ed elaborare le richieste di elaborazione provenienti dal client.
+	\item nel package \textbf{\texttt{parser}}, la classe \texttt{Parser} si occupa di convertire il file JSON ricevuto in un oggetto Java di tipo \texttt{ParsedProgram}. Questo oggetto Java rappresenta il programma che l'utente vuole generare; esso si compone di oggetti \texttt{ParsedType} (cioè i tipi definiti dall'utente: gli elementi del diagramma delle classi), i quali si compongono di oggetti \texttt{ParsedAttribute} e \texttt{ParsedMethod}; quest'ultimo tipo si compone a sua volta di oggetti \texttt{ParsedInstruction} e così fia fino ad arrivare alle istruzioni “atomiche”, come ad esempio un \texttt{ParsedReturn}.
+	\item \textbf{\texttt{project}} non è altro che il package che organizza i tipi elencati al punto precedente, tutti discendenti da \texttt{ParsedElement}. Inoltre, questo package offre una classe \texttt{ElementFactory}. % che non ho capito cosa fa
+	\item \textbf{\texttt{generator}} presenta al suo interno l'interfaccia \texttt{Generator}; le classi che la estendono si occupano di popolare i template \emph{StringTemplate} di un particolare linguaggio di programmazione (\texttt{JavaGenerator} genera codice sorgente Java). % GeneratorAssembler ...
+	\item \textbf{\texttt{template}} è il package che organizza i template per linguaggio: dall'interfaccia \texttt{Template} discende, ad esempio, \texttt{JavaTemplate}.
+	\item \textbf{\texttt{stereotype}} % boh
+	\item \textbf{\texttt{compiler}} presenta l'interfaccia \texttt{Compiler}, le cui implementazioni (specifiche per un certo linguaggio target) compilano il codice sorgente non eseguibile in un programma eseguibile; \texttt{JavaCompiler}, ad esempio, compila codice sorgente Java in \emph{bytecode} per la JVM (Java Virtual Machine) e compatta il codice in un file JAR eseguibile.
+	\item \textbf{\texttt{utility}} espone classi di utilità per il programma, come ad esempio una classe \texttt{Compressor} che comprime l'output del compiler in ZIP. % è pulito tenere un package con un nome così generico?
 \end{itemize}
+
+% >>> RICORDARSI DEL DIAGR. DEI PACKAGE DEL SERVER 
+% \begin{center}
+% 	\includegraphics[scale=0.5]{img/pkg_server}
+% \end{center}
 
 
 
