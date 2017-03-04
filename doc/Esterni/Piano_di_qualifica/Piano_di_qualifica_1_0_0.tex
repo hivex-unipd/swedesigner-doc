@@ -18,8 +18,6 @@
 \include{diario}
 \tableofcontents
 
-
-
 \section{Introduzione}
 	\subsection{Scopo del documento}
 	Questo documento ha lo scopo di fissare le strategie di verifica e validazione che il gruppo \hx{} ha deciso di adottare per perseguire gli obiettivi di qualità di processo e di prodotto relativi al progetto \proj{}. Il presente documento si propone di descrivere l'approccio del gruppo alle diverse fasi di verifica per poter ottenere il miglior risultato auspicabile in termini di qualità. Per perseguire tali obiettivi e risultati occorre verificare continuamente le attività svolte in modo da individuare e correggere velocemente le anomalie, minimizzando così l'utilizzo di risorse e allo stesso tempo mantenendo la correttezza del prodotto.
@@ -1519,11 +1517,39 @@ I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue compo
 \caption[Test di Integrazione]{Test di Integrazione}
 \label{tabella:test2}
 \end{longtable}
+
+\subsubsection{Tracciamento Test di Integrazione-Componenti}
+\normalsize
+\begin{longtable}{|>{\centering}m{3cm}|m{9cm}<{\centering}|}
+\hline 
+\textbf{Test} & \textbf{Componente}\\
+\hline
+\endhead
+\hyperlink{TI1}{TI1} & \texttt{SWEDesigner}\\ \hline
+\hyperlink{TI2}{TI2} & \texttt{SWEDesigner::Server}\\ \hline
+\hyperlink{TI3}{TI3} & \texttt{SWEDesigner::Server::Compiler}\\ \hline
+\hyperlink{TI4}{TI4} & \texttt{SWEDesigner::Server::Controller}\\ \hline
+\hyperlink{TI5}{TI5} & \texttt{SWEDesigner::Server::Generator}\\ \hline
+\hyperlink{TI6}{TI6} & \texttt{SWEDesigner::Server::Parser}\\ \hline
+\hyperlink{TI7}{TI7} & \texttt{SWEDesigner::Server::Project}\\ \hline
+\hyperlink{TI8}{TI8} & \texttt{SWEDesigner::Server::Stereotype}\\ \hline
+\hyperlink{TI9}{TI9} & \texttt{SWEDesigner::Server::Template}\\ \hline
+\hyperlink{TI10}{TI10} & \texttt{SWEDesigner::Server::Utility}\\ \hline
+\hyperlink{TI11}{TI11} & \texttt{SWEDesigner::Server::Compiler::Java}\\ \hline
+\hyperlink{TI12}{TI12} & \texttt{SWEDesigner::Server::Generator::Java}\\ \hline
+\hyperlink{TI13}{TI13} & \texttt{SWEDesigner::Server::Template::Java}\\ \hline
+\hyperlink{TI14}{TI14} & \texttt{SWEDesigner::Client}\\ \hline
+\hyperlink{TI15}{TI15} & \texttt{SWEDesigner::Client::Model::CellTypes}\\ \hline
+\hyperlink{TI16}{TI16} & \texttt{SWEDesigner::Client::Collection}\\ \hline
+\hyperlink{TI17}{TI17} & \texttt{SWEDesigner::Client::Model}\\ \hline
+\hyperlink{TI18}{TI18} & \texttt{SWEDesigner::Client::Model::Utility}\\ \hline
+\hyperlink{TI19}{TI19} & \texttt{SWEDesigner::Client::View}\\ \hline
+\caption[Tracciamento Test di Integrazione-Componenti]{Tracciamento Test di Integrazione-Componenti}
+\label{tabella:ts-requi}
+\end{longtable}
 \clearpage
+
 	
-
-
-
 \section{Resoconto attività di verifica}
 All'interno di questa sezione vengono riportati gli esiti delle attività di verifica svolte sui processi attivati e sui relativi prodotti secondo quanto stabilito nel \PdP.
 	\subsection{Revisione dei requisiti}
