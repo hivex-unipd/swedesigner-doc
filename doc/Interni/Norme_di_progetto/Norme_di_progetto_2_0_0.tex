@@ -657,27 +657,27 @@ La verifica è un processo analitico che va implementato in due passi successivi
 			\\Il range di accettazione stabilito per la metrica è 0 - 10.
 			
 			\subparagraph{Statement Coverage}
-			La misura viene effettuata utilizzando ?? .
+			La misura viene effettuata utilizzando lo strumento Travis CI.
 			\\Il range di accettazione stabilito per la metrica è 80 - 100.
 			
 			\subparagraph{Branch Coverage}
-			La misura viene effettuata utilizzando ?? .
+			La misura viene effettuata utilizzando lo strumento Travis CI.
 			\\Il range di accettazione stabilito per la metrica è 80 - 100.
 			
 			\subparagraph{Percentuale di test di unità eseguiti}
-			La misura viene effettuata utilizzando ??.
+			La misura viene effettuata utilizzando lo strumento Travis CI.
 			\\Il range di accettazione stabilito per la metrica è 90 - 100.
 			
 			\subparagraph{Percentuale di test di integrazione eseguiti}
-			La misura viene effettuata utilizzando ??.
+			La misura viene effettuata utilizzando lo strumento Travis CI.
 			\\Il range di accettazione stabilito per la metrica è 90 - 100.
 			
 			\subparagraph{Percentuale di test di sistema eseguiti}
-			La misura viene effettuata utilizzando ??.
+			La misura viene effettuata utilizzando lo strumento Travis CI.
 			\\Il range di accettazione stabilito per la metrica è 90 - 100.
 			
 			\subparagraph{Percentuale di test di validazione eseguiti}
-			La misura viene effettuata utilizzando ??.
+			La misura viene effettuata utilizzando utilizzando lo strumento Travis CI.
 			\\Il range di accettazione stabilito per la metrica è 90 - 100.
 			
 			\subparagraph{Numero di figli diretti}
@@ -1161,47 +1161,29 @@ La metrica misura il numero di violazioni della completezza architetturale di me
 \subsection{Numero di violazioni della completezza architetturale di bassa importanza}
 La metrica misura il numero di violazioni della completezza architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
 
-
-
 \subsection{Numero di violazioni dello stile architetturale di alta importanza}
 La metrica misura il numero di violazioni dello stile architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
-
-
 
 \subsection{Numero di violazioni dello stile architetturale di media importanza}
 La metrica misura il numero di violazioni dello stile architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
 
-
-
 \subsection{Numero di violazioni dello stile architetturale di bassa importanza}
 La metrica misura il numero di violazioni dello stile architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
-
-
 
 \subsection{Numero di violazioni della correttezza architetturale di alta importanza}
 La metrica misura il numero di violazioni della correttezza architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
 
-
-
 \subsection{Numero di violazioni della correttezza architetturale di media importanza}
 La metrica misura il numero di violazioni della correttezza architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
-
-
 
 \subsection{Numero di violazioni della correttezza architetturale di bassa importanza}
 La metrica misura il numero di violazioni della correttezza architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
 
-
-
 \subsection{Statement Coverage}
 La metrica indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \gloss{getter} e \gloss{setter}.
 
-
-
 \subsection{Branch Coverage}
-%%% manca?
-
-
+Tale metrica indica in percentuale il numero di cammini decisionali percorsi in ambito di testing rispetto al totale presente all'interno del codice. A differenza dello Statement Coverage che si limita a verificare la copertura di istruzioni, nel momento in cui tutti i rami decisionali sono coperti tale metrica assicura che nessuno di essi porti ad errori o situazioni inconsistenti.
 
 \subsection{Percentuale di test di unità eseguiti}
 Tale metrica indica la percentuale di test di unità eseguiti.
@@ -1210,8 +1192,6 @@ La misura viene effettuata nel modo seguente:
 \begin{equation}
 	\frac{numero~test~unità~eseguiti}{numero~test~unità~pianificati}\times100
 \end{equation}
-
-
 
 \subsection{Percentuale di test di integrazione eseguiti}
 Tale metrica indica la percentuale di test di integrazione eseguiti.
@@ -1231,8 +1211,6 @@ La misura viene effettuata nel modo seguente:
 	\frac{numero~test~sistema~eseguiti}{numero~test~sistema~pianificati}\times100
 \end{equation}
 
-
-
 \subsection{Percentuale di test di validazione eseguiti}
 Tale metrica indica la percentuale di test di validazione eseguiti.
 
@@ -1241,12 +1219,8 @@ La misura viene effettuata nel modo seguente:
 	\frac{numero~test~validazione~eseguiti}{numero~test~validazione~pianificati}\times100
 \end{equation}
 
-
-
 \subsection{Numero di figli diretti}
-Questa metrica misura il numero di sottoclassi dirette di una particolare superclasse.
-
-
+Questa metrica misura il numero di sottoclassi dirette di una particolare superclasse. Il valore di tale metrica indica approssimativamente il grado di riuso di una componente elementare dell'applicazione. C'è inoltre da considerarsi che maggiore è il numero di figli diretti di una classe, maggiore è la responsabilità di chi ha il compito di manutenere tale classe per non impattare sul comportamento dei figli. Pertanto è più difficile modificare la classe ed essa richiede maggiore attenzione in fatto di testing.
 
 \subsection{Profondità nella gerarchia}
 Questa metrica misura il livello di profondità di una classe all'interno della gerarchia a cui essa appartiene. 
