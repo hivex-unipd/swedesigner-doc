@@ -75,12 +75,12 @@ Il presente documento si divide in tre sezioni principali:
 	\item ISO/IEC 12207-1995: \url{www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}, visitato in data 08/02/2017;
 	\item Capitolato d'appalto dell'azienda \ZU: \url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato in data 08/02/2017. % normativo o informativo?
 	\item Standard \emph{JavaDoc}: \url{www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html};
-	\item API \emph{JSDdoc}: \url{github.com/jsdoc3/jsdoc}.
+	\item \gloss{API} \emph{JSDdoc}: \url{github.com/jsdoc3/jsdoc}.
 \end{itemize}
 
 \subsubsection{Riferimenti informativi}
 \begin{itemize}
-	\item L. Pantieri, \emph{L'arte di scrivere in Latex}: \url{www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}, visitato in data 08/02/2017;
+	\item L. Pantieri, \emph{L'arte di scrivere in \gloss{Latex}}: \url{www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}, visitato in data 08/02/2017;
 	\item \emph{SDMetrics User Manual}: \url{www.sdmetrics.com/manual/index.html}, visitato in data 21/02/2017;
 %	\item \emph{CodePro Analytix Help Contents}, accessibile da Eclipse;
 \end{itemize}
@@ -110,7 +110,7 @@ Il presente documento si divide in tre sezioni principali:
 
 \subsection{Sviluppo}
 	\subsubsection{Analisi dei requisiti}
-	Al termine dello studio di fattibilità, è compito degli analisti elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di analisi dei requisiti (\AdR); questo documento contiene i requisiti e i \gloss{casi d'uso} individuati nelle riunioni svolte.
+	Al termine dello studio di fattibilità, è compito degli analisti elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di analisi dei requisiti (\AdR); questo documento contiene i requisiti e i casi d'uso individuati nelle riunioni svolte.
 	Viene elencata nelle sezioni seguenti la struttura obbligatoria di requisiti e casi d'uso.
 		\paragraph{Requisiti} 
 		Dopo aver individuato i requisiti tramite le varie riunioni, è compito degli analisti redarne un elenco con la seguente struttura:
@@ -144,7 +144,7 @@ Il presente documento si divide in tre sezioni principali:
 			\end{itemize}
 		\end{itemize}
 		\paragraph{Casi d'uso}
-		L'analista deve identificare ogni caso d'uso nel modo seguente:
+		L'analista deve identificare ogni \gloss{caso d'uso} nel modo seguente:
 			\[UCx\]
 		dove $x$ è un numero che identifica il caso d'uso. Ogni macro-caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UCp.f$, dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
 		\begin{description}
@@ -171,7 +171,7 @@ Il presente documento si divide in tre sezioni principali:
 		\item durante la progettazione di dettaglio, la specifica del comportamento di una componente dev'essere accompagnata dalla definizione di un \textbf{test di unità} che verifichi il corretto funzionamento della componente isolata.
 	\end{enumerate}
 
-	\paragraph{Diagrammi} Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi \gloss{UML} descritti qui di seguito, seguendo lo standard UML 2.0:
+	\paragraph{Diagrammi} Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi UML descritti qui di seguito, seguendo lo standard UML 2.0:
 	\begin{itemize}
 		\item Diagramma dei \gloss{package}: raggruppa un numero di elementi UML in una sola unità di livello più alto.
 		\item \gloss{Diagramma delle classi}: descrive le interfacce delle componenti del sistema e le relazioni tra esse.
@@ -182,8 +182,8 @@ Il presente documento si divide in tre sezioni principali:
 
 	\paragraph{Stile di progettazione} L'architettura di \proj{} è segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
 	\begin{itemize}
-		\item classi \gloss{Java};
-		\item prototipi di oggetti \gloss{JavaScript}.
+		\item classi Java;
+		\item prototipi di oggetti JavaScript.
 	\end{itemize}
 	Per comodità, chiameremo “classi” anche i prototipi di oggetti JavaScript, benché tale linguaggio non offra il costrutto \texttt{class} (se non come “zucchero sintattico”). Pertanto, le procedure descritte nei diagrammi delle attività sono:
 	\begin{itemize}
@@ -231,7 +231,7 @@ Il presente documento si divide in tre sezioni principali:
 	Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
 
 	\paragraph{Convenzioni} \label{sec:conv}
-	Il team seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte client scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritti su \url{javascript.crockford.com/code.html}. La parte server è scritta in Java e seguirà le indicazioni JavaDoc disponibili su \url{www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
+	Il team seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte \gloss{client} scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritti su \url{javascript.crockford.com/code.html}. La parte \gloss{server} è scritta in Java e seguirà le indicazioni JavaDoc disponibili su \url{www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
 	
 	\paragraph{Nomenclatura del codice}
 	Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
@@ -258,7 +258,7 @@ Il presente documento si divide in tre sezioni principali:
 		\item è opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
 		\item è preferibile porre il commento sopra una riga di codice anziché alla fine di essa, per una miglior facilità di lettura.
 	\end{itemize}
-	La documentazione di file e metodi in particolare i programmatori devono seguire le strutture descritte sotto bassate sulle linee guida di Javadoc e Jsdoc.
+	La documentazione di file e metodi in particolare i programmatori devono seguire le strutture descritte sotto bassate sulle linee guida di \gloss{Javadoc} e Jsdoc.
 	\begin{itemize}
 		\item all'inizio di ogni file \texttt{.java} si inserisce un commento, riguardante il documento, con la seguente struttura:
 		\begin{verbatim}
@@ -302,10 +302,10 @@ Il presente documento si divide in tre sezioni principali:
 		\paragraph{PragmaDB}
 		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati.
 		
-		Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in \gloss{Latex} delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
+		Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
 
 		\paragraph{Astah}
-		L'\gloss{editor} UML che gli analisti dovranno usare è \gloss{Astah}, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
+		L'editor UML che gli analisti dovranno usare è Astah, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
 
 
 
@@ -592,12 +592,12 @@ La verifica è un processo analitico che va implementato in due passi successivi
 			La misura viene effettuata utilizzando lo strumento CodePro Analytix.
 			\\Il range di accettazione stabilito per la metrica è 20 - 40.
 			
-			\subparagraph{Validazione W3C}
+			\subparagraph{Validazione \gloss{W3C}}
 			La misura viene effettuata utilizzando il validatore W3C disponibile all'indirizzo \url{validator.w3.org/}.
 			\\Il range di accettazione stabilito per la metrica è 0 - 20.
 			
 			\subparagraph{Schedule Variance}
-			La misura viene effettuata utilizzando lo strumento Asana.
+			La misura viene effettuata utilizzando lo strumento \gloss{Asana}.
 			\\Il range di accettazione stabilito per la metrica è -25 - 0.
 			
 			\subparagraph{Budget Variance}
@@ -657,7 +657,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 			\\Il range di accettazione stabilito per la metrica è 0 - 10.
 			
 			\subparagraph{Statement Coverage}
-			La misura viene effettuata utilizzando lo strumento Travis CI.
+			La misura viene effettuata utilizzando lo strumento \gloss{Travis} CI.
 			\\Il range di accettazione stabilito per la metrica è 80 - 100.
 			
 			\subparagraph{Branch Coverage}
@@ -819,7 +819,7 @@ Inizialmente è stata rivolta l'attenzione a \gloss{Trello}, accoppiato ad un se
 	\item principalmente, la \textbf{mancanza di struttura} che dovrebbe permettere a Trello un lavoro più agile si è rivelata inefficace in fase di pianificazione;
 	\item lo strumento EleGantt, usato per stendere dei diagrammi di Gantt (non nativi in Trello) era troppo limitato nella sua versione gratuita.
 \end{itemize}
-Il gruppo ha quindi adottato i servizi offerti da \gloss{Asana}, accoppiato a InstaGantt (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
+Il gruppo ha quindi adottato i servizi offerti da Asana, accoppiato a InstaGantt (un servizio esterno molto ben integrato con Asana), principalmente per avvalersi delle seguenti funzionalità:
 \begin{itemize}
 	\item creazione di task (compiti);
 	\item organizzazione dei task;
@@ -874,7 +874,7 @@ La sezione \emph{Workload} in InstaGantt permette di visualizzare i vari task as
 	\item controllare la presenza di task non assegnati.
 \end{itemize}
 
-\paragraph{\gloss{Baseline}} Infine è compito del responsabile di progetto salvare una \emph{baseline} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
+\paragraph{Baseline} Infine è compito del responsabile di progetto salvare una \emph{\gloss{baseline}} del progetto ad ogni milestone raggiunta: in questo modo è possibile confrontare il lavoro pianificato con quello effettivamente svolto e stilare il consuntivo.
 
 \paragraph{diagrammi di Gantt} Non si ritiene inoltre che i diagrammi PERT possano essere efficaci per una rappresentazione immediata dei rischi della pianificazione. Il responsabile di progetto deve, invece, fornire solamente i diagrammi di Gantt con le relative date effettive di completamento.
 
@@ -996,7 +996,7 @@ Tale metrica indica il numero di campi dati dichiarati all'interno di una partic
 
 
 \subsection{Numero di metodi per classe}
-Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi \emph{setter} e \emph{getter}.
+Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi \emph{\gloss{setter}} e \emph{\gloss{getter}}.
 
 
 
@@ -1089,7 +1089,7 @@ Un valore molto alto di tale metrica, tuttavia, può non essere considerato posi
 
 
 \subsection{Validazione W3C}
-La metrica indica il numero di errori riscontrati dal validatore W3C nell'analisi delle pagine \gloss{HTML5} del programma.
+La metrica indica il numero di errori riscontrati dal validatore W3C nell'analisi delle pagine HTML5 del programma.
 
 Una pagina valida assicura una notevole serie di vantaggi:
 \begin{itemize}
@@ -1105,7 +1105,7 @@ Tale metrica indica di quanto le macro-attività di progetto si discostano tempo
 
 Viene calcolata come la differenza fra la data pianificata di fine di un'attività e la data reale di fine di quell'attività: un valore di \emph{schedule variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più tempo di quanto pianificato; se pari a zero indica invece che essa è perfettamente in linea con le tempistiche previste mentre se è addirittura strettamente positivo indica che sta procedendo più speditamente di quanto considerato. 
 
-Da sottolineare che l'utilizzo di periodi di \gloss{slack} aumenta la possibilità che la \emph{schedule variance} assuma valori positivi.
+Da sottolineare che l'utilizzo di periodi di slack aumenta la possibilità che la \emph{schedule variance} assuma valori positivi.
 
 
 
@@ -1180,10 +1180,10 @@ La metrica misura il numero di violazioni della correttezza architetturale di me
 La metrica misura il numero di violazioni della correttezza architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
 
 \subsection{Statement Coverage}
-La metrica indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi \gloss{getter} e \gloss{setter}.
+La metrica indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi getter e setter.
 
 \subsection{Branch Coverage}
-Tale metrica indica in percentuale il numero di cammini decisionali percorsi in ambito di testing rispetto al totale presente all'interno del codice. A differenza dello Statement Coverage che si limita a verificare la copertura di istruzioni, nel momento in cui tutti i rami decisionali sono coperti tale metrica assicura che nessuno di essi porti ad errori o situazioni inconsistenti.
+Tale metrica indica in percentuale il numero di cammini decisionali percorsi in ambito di testing rispetto al totale presente all'interno del codice. A differenza dello \gloss{Statement} Coverage che si limita a verificare la copertura di istruzioni, nel momento in cui tutti i rami decisionali sono coperti tale metrica assicura che nessuno di essi porti ad errori o situazioni inconsistenti.
 
 \subsection{Percentuale di test di unità eseguiti}
 Tale metrica indica la percentuale di test di unità eseguiti.

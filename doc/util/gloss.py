@@ -10,6 +10,7 @@ def main():
     glossary = get_glossary('../Esterni/Glossario/terminiGlossario.tex')
     if len(sys.argv) == 1:
         for f in get_files('../', exclude=['util/', 'diario.tex', 'Lettere/', 'Glossario/', 'Specifica_tecnica/']):
+            print('marking ' + f + '...')
             mark_file(f, glossary)
     else:
         mark_file(sys.argv[1], glossary)
@@ -46,7 +47,6 @@ def mark_file(file, glossary, start='\gloss{', end='}'):
     output = []
     with open(file, 'r') as f:
         text = f.read()
-        print('marking ' + file + '...')
         output.append(mark_text(text, glossary, start, end))
 
     with open(file, 'w') as f:

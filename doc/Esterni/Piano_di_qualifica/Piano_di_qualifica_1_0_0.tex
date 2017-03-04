@@ -107,7 +107,7 @@
 			Il processo, corrispondente al processo 7.1.3 dello standard ISO/IEC 12207:2008, ha lo scopo di definire un'architettura software che implementi i requisiti corrispondenti e identifichi le diverse componenti del sistema.
 			Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 				\subparagraph{Completezza}
-				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la completezza. Ad esempio si evitano package senza elementi, classi non usate, parametri senza un tipo, ecc.
+				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la completezza. Ad esempio si evitano \gloss{package} senza elementi, classi non usate, parametri senza un tipo, ecc.
 				Gli obiettivi relativi alla completezza dell'architettura e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
 					\item \textbf{Numero di violazioni della completezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore 0;
@@ -159,8 +159,8 @@
 				\subparagraph{Copertura codice}
 				I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo. Gli obiettivi relativi alla copertura del codice e le metriche ad essi associate sono i seguenti:
 				\begin{itemize}
-					\item \textbf{statement coverage}: l'obiettivo stabilito per la metrica è il valore 100;
-					\item \textbf{branch coverage}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{\gloss{statement} coverage}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{\gloss{branch} coverage}: l'obiettivo stabilito per la metrica è il valore 100;
 				\end{itemize}
 	
 	\subsection{Qualità di prodotto}
@@ -216,7 +216,7 @@
 		 	Il prodotto deve poter garantire le sue funzionalità in browser differenti.
 		 	Gli obiettivi di portabilità e le metriche ad essi associate sono i seguenti:
 		 	\begin{itemize}
-				\item \textbf{Validazione W3C}: l'obiettivo stabilito per la metrica è il valore 0.
+				\item \textbf{Validazione \gloss{W3C}}: l'obiettivo stabilito per la metrica è il valore 0.
 			\end{itemize}
 	\subsection{Scadenze temporali}
 	Le scadenze temporali stabilite dal gruppo sono definite in dettaglio nel documento \PdP.
@@ -244,7 +244,7 @@
 			\item \textbf{Risorse hardware}
 			Ognuno dei membri del gruppo con l'incarico di ricoprire il ruolo di Responsabile del Progetto o Verificatore ha a sua disposizione almeno un computer personale (portatile o fisso) dotato degli strumenti software necessari allo svolgimento del compito. Risultano inoltre a disposizione anche i calcolatori resi disponibili dai laboratori informatici dell'Ateneo.
 			\item \textbf{Risorse software}
-			Le risorse software disponibili sono costituite dagli \gloss{editor} di testo utilizzati per la stesura dei documenti in \gloss{Latex}, gli \gloss{IDE} impiegati a supporto dell'attività di codifica, le applicazioni online e le estensioni per i controlli sulla leggibilità e la complessità dei documenti in riferimento all'indice Gulpease. Più in dettaglio gli strumenti software impiegati per l'attività di Verifica sono illustrati nel documento \NdP.
+			Le risorse software disponibili sono costituite dagli editor di testo utilizzati per la stesura dei documenti in \gloss{Latex}, gli \gloss{IDE} impiegati a supporto dell'attività di codifica, le applicazioni online e le estensioni per i controlli sulla leggibilità e la complessità dei documenti in riferimento all'indice Gulpease. Più in dettaglio gli strumenti software impiegati per l'attività di Verifica sono illustrati nel documento \NdP.
 			\end{itemize}
 		
 
@@ -283,7 +283,7 @@ All'utente è richiesto di:
 \hypertarget{TVFO3.1}{TVFO3.1} & L'utente intende inserire una classe.
 All'utente è richiesto di:
 \begin{itemize}
-\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item trovarsi nella schermata di gestione del \gloss{diagramma delle classi} del progetto;
 \item premere il pulsante di inserimento nuova classe.
 \end{itemize} & \textit{Non Implementato}\\ \hline
 \hypertarget{TVFO3.1.1}{TVFO3.1.1} & L'utente intende inserire la visibilità di una classe.
@@ -786,7 +786,7 @@ All'utente è richiesto di:
 \item modificare i campi di interesse del commento;
 \item selezionare l'opzione di conferma.
 \end{itemize} & \textit{Non Implementato}\\ \hline
-\hypertarget{TVFO4}{TVFO4} & L'utente intende visualizzare il diagramma delle attività di un particolare metodo.
+\hypertarget{TVFO4}{TVFO4} & L'utente intende visualizzare il \gloss{diagramma delle attività} di un particolare metodo.
 All'utente è richiesto di:
 \begin{itemize}
 \item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1470,20 +1470,20 @@ I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue compo
 \hypertarget{TSFO5}{TSFO5} & Verificare che il sistema permetta all'utente di salvare il progretto & \textit{Non Implementato}\\ \hline
 \hypertarget{TSFO6}{TSFO6} & Verificare che il sistema permetta all'utente di ottenere automaticamente una cartella compressa contenente i diagrammi disegnati da SWEDesigner, l'applicativo generato tramite i diagrammi forniti dall'utente ed il codice sorgente nel linguaggio target & \textit{Non Implementato}\\ \hline
 \hypertarget{TSFO6.1}{TSFO6.1} & Verificare che il sistema visualizzi un messaggio d’errore se l’utente non ha rispettato i vincoli imposti dagli stereotipi scelti o si sono verificati errori di compilazione & \textit{Non Implementato}\\ \hline
-\hypertarget{TSFO7}{TSFO7} & Verificare che il sistema riceva una richiesta http post contenente il file JSON generato dal programma utente & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO7}{TSFO7} & Verificare che il sistema riceva una richiesta http post contenente il file \gloss{JSON} generato dal programma utente & \textit{Non Implementato}\\ \hline
 \hypertarget{TSFO8.1}{TSFO8.1} & Verificare che il sistema traduca il file JSON in un oggetto Java corrispondente & \textit{Non Implementato}\\ \hline
 \hypertarget{TSFO8.2}{TSFO8.2} & Verificare che il sistema traduca l'oggetto Java nel corrispondente codice sorgente Java & \textit{Non Implementato}\\ \hline
 \hypertarget{TSFO9}{TSFO9} & Verificare che il sistema compili il codice sorgente Java generato & \textit{Non Implementato}\\ \hline
 \hypertarget{TSFO10}{TSFO10} & Verificare che il sistema crei una cartella compressa contenente il file JSON, il codice sorgente Java e il programmma Java compilato  & \textit{Non Implementato}\\ \hline
 \hypertarget{TSFO11}{TSFO11} & Verificare che il sistema elabori una risposta http contenente l'indirizzo della cartella compressa creata & \textit{Non Implementato}\\ \hline
-\hypertarget{TSVO1.1}{TSVO1.1} & Verificare che l'applicativo lato client sia realizzato in HTML5, CSS e JavaScript & \textit{Non Implementato}\\ \hline
-\hypertarget{TSVO1.2}{TSVO1.2} & verificare che l’applicativo lato server sia realizzato in Java con server Tomcat & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.1}{TSVO1.1} & Verificare che l'applicativo lato \gloss{client} sia realizzato in HTML5, CSS3 e JavaScript & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.2}{TSVO1.2} & verificare che l’applicativo lato \gloss{server} sia realizzato in Java con server \gloss{Tomcat} & \textit{Non Implementato}\\ \hline
 \hypertarget{TSVO1.3}{TSVO1.3} & Verificare che l’applicativo funziona su Mozilla Firefox versione 43 o superiore & \textit{Non Implementato}\\ \hline
 \hypertarget{TSVO1.4}{TSVO1.4} & Verificare che l’applicativo funzioni su Google Chrome versione 47 o superiore & \textit{Non Implementato}\\ \hline
 \hypertarget{TSVO1.5}{TSVO1.5} & Verificare che l’applicativo funzioni su Internet Explorer versione 11 o superiore & \textit{Non Implementato}\\ \hline
 \hypertarget{TSVO1.6}{TSVO1.6} & Verificare che l’applicativo funzioni su Safari versione 9 o superiore & \textit{Non Implementato}\\ \hline
 \hypertarget{TSVO1.7}{TSVO1.7} & Verificare che l’applicativo funzioni su Microsoft Edge versione 25 o superiore & \textit{Non Implementato}\\ \hline
-\hypertarget{TSVO2}{TSVO2} & Verificare che il progetto sia sviluppato sulla piattaforma GitHub in modalità pubblica & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO2}{TSVO2} & Verificare che il progetto sia sviluppato sulla piattaforma \gloss{GitHub} in modalità pubblica & \textit{Non Implementato}\\ \hline
 \caption[Test di Sistema]{Test di Sistema}
 \label{tabella:test1}
 \end{longtable}
@@ -1510,7 +1510,7 @@ I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue compo
 \hypertarget{TI11}{TI11} & Verificare che il sistema gestisca correttamente le componenti relative al package Compiler::Java. In particolare che gestisca correttamente l'interazione con gli elementi del package Compiler di SWEDesigner::Server. & \textit{Non Implementato}\\ \hline
 \hypertarget{TI12}{TI12} & Verificare che il sistema gestisca correttamente le componenti relative al package Generator::Java. In particolare che gestisca correttamente l'interazione con gli elementi del package Generator di SWEDesigner::Server. & \textit{Non Implementato}\\ \hline
 \hypertarget{TI13}{TI13} & Verificare che il sistema gestisca correttamente le componenti relative al package Template::Java. In particolare che gestisca correttamente l'interazione con gli elementi del package Template di SWEDesigner::Server. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI14}{TI14} & Test di integrazione fra le componenti CellType, Collection, Model e View e la libreria esterna JointJS. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI14}{TI14} & Test di integrazione fra le componenti CellType, Collection, Model e View e la libreria esterna \gloss{JointJS}. & \textit{Non Implementato}\\ \hline
 \hypertarget{TI15}{TI15} & Verificare che il sistema gestisca correttamente le componenti relative al package CellType. In particolare che gestisca correttamente l'interazione con il package View di SWEDesigner::Client e la libreria esterna JointJS. & \textit{Non Implementato}\\ \hline
 \hypertarget{TI16}{TI16} & Verificare che il sistema gestisca correttamente le componenti relative al package Collection. In particolare che gestisca correttamente l'interazione con il package Model di SWEDesigner::Client e la libreria esterna JointJS. & \textit{Non Implementato}\\ \hline
 \hypertarget{TI17}{TI17} & Verificare che il sistema gestisca correttamente le componenti relative al package Model. In particolare che gestisca correttamente l'interazione con i package Collection e View di SWEDesigner::Client e la libreria esterna JointJS. & \textit{Non Implementato}\\ \hline
