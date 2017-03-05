@@ -1250,25 +1250,39 @@ Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline;
 \label{tab:car}
 \caption{Tabella costo effettivo {\AR} per ruolo e per persona, valori in euro (\euro).}
 \end{figure}
-%%%%%%%% da fare
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo  & Ore & Costo \\ \hline
+    \R & 20 & 600 \\ \hline
+    \AM & 64 & 1280 \\ \hline
+    \AN & 61 & 1525 \\ \hline
+    \V & 49 & 735 \\ \hline
+    \rowcolor[gray]{.9}
+
+   Differenza & 0 & 0 \\ \hline
+  \end{tabular}
+  
+}
+\label{tab:car}
+\caption{DIfferenza preventivo-consuntivo per ruolo, \AR.}
+\end{figure}
+%%%%%%%% da fare%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Consuntivo \ARI}
 \introconsuntivo{\ARI}
 
 \subsubsection{Variazioni nella pianificazione}
 
 Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno rispettato la corretta pianificazione, terminando in modo identico alla pianificazione.
-
-\begin{figure}[H]
-\makebox[\textwidth][c]{
-\includegraphics[width=1.2\textwidth]{img/ganttarc21.png}}
-\label{tab:cgen1}
-
-  \caption{Variazione rispetto alla pianificazione per l'\AR, diagramma di Gantt}
-\end{figure}
-
-Si è verificato un ritardo nella stesura del presente documento a causa di una influenza di un membro del gruppo in data 30-12-2016.
-
-Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline; tuttavia il task non ha portato ritardi se non all'attività di verifica relativa al documento stesso. L'attività \emph{Resoconto dell'attività di verifica} non ha subito ritardi a causa del grande gap temporale tra le due attività.
 
 \pagebreak
 \subsubsection{Variazione nei costi}
@@ -1293,20 +1307,20 @@ Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline;
     \hline
     \rowcolor[gray]{.9}
     Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
-    \PB & 7 & 3 & 14 & 0 & 0 & 7 & 31 \\ \hline
-    \LB & 12 & 11 & 6 & 0 & 0 & 6 & 35 \\ \hline
-    \GG & 0 & 24 & 8 & 0 & 0 & 3 & 35 \\ \hline
-    \MM & 0 & 20 & 8 & 0 & 0 & 4 & 32\\ \hline
-    \LS & 0 & 2 & 12 & 0 & 0 & 17 & 31\\ \hline
-    \AZ & 1 & 4 & 13 & 0 & 0 & 12 & 30 \\ \hline
+    \PB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \GG & 0 & 0 & 0 & 0 & 0 & 2 & 2 \\ \hline
+    \MM & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LS & 0 & 0 & 5 & 0 & 0 & 0 & 5 \\ \hline
+    \AZ & 0 & 0 & 8 & 0 & 0 & 0 & 8 \\ \hline
     \rowcolor[gray]{.9}
 
-    Totale ore/ruolo & 20 & 64 & 61 & 0 & 0 & 49 & 194 \\ \hline
+    Totale ore/ruolo & 0 & 0 & 13 & 0 & 0 & 2 & 15 \\ \hline
     
   \end{tabular}
 }
 \label{tab:car}
-\caption{Tabella ore effettive {\AR} per ruolo e per persona.}
+\caption{Tabella ore effettive {\ARI} per ruolo e per persona.}
 
 \end{figure}
 
@@ -1322,25 +1336,159 @@ Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline;
     \hline
     \rowcolor[gray]{.9}
     Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
-    \PB & 210 & 60 & 350 & 0 & 0 & 105 & 725 \\ \hline
-    \LB & 360 & 220 & 150 & 0 & 0 & 90 & 820 \\ \hline
-    \GG & 0 & 480 & 200 & 0 & 0 & 45 & 725 \\ \hline
-    \MM & 0 & 400 & 200 & 0 & 0 & 60 & 660 \\ \hline
-    \LS & 0 & 40 & 300 & 0 & 0 & 255 & 595 \\ \hline
-    \AZ & 30 & 80 & 325 & 0 & 0 & 180 & 615 \\ \hline
+    \PB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LB & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \GG & 0 & 0 & 0 & 0 & 0 & 30 & 30 \\ \hline
+    \MM & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+    \LS & 0 & 0 & 125 & 0 & 0 & 0 & 125 \\ \hline
+    \AZ & 0 & 0 & 200 & 0 & 0 & 0 & 200 \\ \hline
     \rowcolor[gray]{.9}
 
-    Totale euro/ruolo & 600 & 1280 & 1525 & 0 & 0 & 735 & 4140 \\ \hline
+    Totale euro/ruolo & 0 & 0 & 325 & 0 & 0 & 30 & 355 \\ \hline
+  \end{tabular}
+  
+}\label{tab:cari}
+
+  \caption{Tabella costo {\ARI} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo  & Ore & Costo \\ \hline
+    \AN & 13 & 325 \\ \hline
+    \V & 2 & 30 \\ \hline
+    \rowcolor[gray]{.9}
+
+   Differenza & 0 & 0 \\ \hline
   \end{tabular}
   
 }
 \label{tab:car}
-\caption{Tabella costo effettivo {\AR} per ruolo e per persona, valori in euro (\euro).}
+\caption{DIfferenza preventivo-consuntivo per ruolo, \ARI.}
 \end{figure}
-%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Consuntivo \PA}
+\introconsuntivo{\PA}
 
-\subsubsection{Preventivo a finire}
-Siccome non sono state rilevate variazioni nei costi, il preventivo a finire (a carico del cliente) è pari a quelle riportate nella sezione \ref{sec:orerend} \nameref{sec:orerend}.
+\subsubsection{Variazioni nella pianificazione}
+
+Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno rispettato la corretta pianificazione, terminando in modo identico alla pianificazione.
+
+%%\begin{figure}[H]
+%%\makebox[\textwidth][c]{
+%%\includegraphics[width=1.2\textwidth]{img/ganttarc21.png}}
+%%\label{tab:cgen1}
+
+  %%\caption{Variazione rispetto alla pianificazione per la \PA, diagramma di Gantt}
+%%\end{figure}
+
+%Si è verificato un ritardo nella stesura del presente documento a causa di una influenza di un membro del gruppo in data 30-12-2016.
+
+%Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline; tuttavia il task non ha portato ritardi se non all'attività di verifica relativa al documento stesso. L'attività \emph{Resoconto dell'attività di verifica} non ha subito ritardi a causa del grande gap temporale tra le due attività.
+
+\pagebreak
+\subsubsection{Variazione nei costi}
+\begin{itemize}
+
+\item Sono state rilevate variazioni nei costi.
+
+\item Non si riportano i grafici di variazione oraria.
+
+\item Si riportano le tabelle di divisione oraria effettive e i relativi costi.
+
+\end{itemize}
+% i colori danno problemi di visualizzazione alle linee
+\begin{figure}[H]
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+\makebox[\textwidth][c]
+{
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 0 & 0 & 0 & 26 (-4) & 0 & 6 & 32 (-4) \\ \hline
+    \LB & 0 & 3 & 0 & 38 & 0 & 1 & 42 \\ \hline
+    \GG & 3 & 0 & 0 & 35 & 0 & 1 & 39 \\ \hline
+    \MM & 0 & 0 & 0 & 42 (-3) & 0 & 4 & 46 (-3) \\ \hline
+    \LS & 2 & 0 & 0 & 36 (-4) & 0 & 6 & 44 (-4) \\ \hline
+    \AZ & 0 & 0 & 0 & 31 (-5) & 0 & 4 & 35 (-5) \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 5 & 3 & 0 & 208 (-16)& 0 & 22 & 238 (-16) \\ \hline
+    
+  \end{tabular}
+}
+\caption{Ore/ruolo per persona durante la \PA.}
+\end{figure} 
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 0 & 0 & 0 & 572 (-88) & 0 & 90 & 662 (-88) \\ \hline
+    \LB & 0 & 60 & 0 & 836 & 0 & 15 & 911 \\ \hline
+    \GG & 90 & 0 & 0 & 770 & 0 & 15 & 875 \\ \hline
+    \MM & 0 & 0 & 0 & 924 (-66) & 0 & 60 & 984 (-66)\\ \hline
+    \LS & 60 & 0 & 0 & 792 (-88) & 0 & 90 & 942 (-88)\\ \hline
+    \AZ & 0 & 0 & 0 & 682 (-90)& 0 & 60 & 742 (-90)\\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 150 & 60 & 0 & 4576 (-352)& 0 & 330 & 5116 (-352)\\ \hline
+    
+  \end{tabular}
+  
+}\label{tab:cpa}
+
+  \caption{Tabella costo {\PA} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo  & Ore & Costo \\ \hline
+    \R & 5 & 150 \\ \hline
+    \AM & 3 & 60 \\ \hline
+    \PJ & 208 (-16)& 4576 (-352)\\ \hline
+    \V & 22 & 330 \\ \hline
+    \rowcolor[gray]{.9}
+
+   Differenza & -16 & -352 \\ \hline
+  \end{tabular}
+  
+}
+\label{tab:car}
+\caption{DIfferenza preventivo-consuntivo per ruolo, \PA.}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsubsection{Preventivo a finire}
+
 
 
 
