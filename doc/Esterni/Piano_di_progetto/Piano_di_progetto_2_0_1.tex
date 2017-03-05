@@ -174,9 +174,11 @@ Ogni rischio è caratterizzato da:
 	\item attuazione nel periodo.
 \end{itemize}
 
+\subsection{Descrizione rischi}
+
 \begin{adjustwidth}{-3cm}{-3cm}
 \begin{center}
-\begin{tabular}{| p{3cm} | p{8cm} | r | r |}
+\begin{tabular}{| p{2.5cm} | p{8cm} |  p{1.8cm} |  p{1.85cm}  |}
 	\hline
 	\textbf{Nome} & \textbf{Descrizione} & \textbf{Probabilità} & \textbf{Pericolosità} \\
 	\hline
@@ -194,17 +196,18 @@ Ogni rischio è caratterizzato da:
 \end{adjustwidth}
 
 \newpage
+\subsection{Riconoscimento e trattamento}
 
 \begin{adjustwidth}{-3cm}{-3cm}
 \begin{center}
 \begin{tabular}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
 	\hline
-	\textbf{Nome} & \textbf{Riconoscimento} & \textbf{Trattamento} & \textbf{Attuazione nel periodo} \\
+	\textbf{Nome} & \textbf{Riconoscimento} & \textbf{Trattamento} \\
 	\hline
-	tecnologie adottate & supervisione del \Rx{} su ciascun membro del gruppo & apprendimento autonomo delle tecnologie adottate & Analisi dei requisiti: rischio non ancora verificatosi (non sono state usate tali tecnologie in questo periodo di sviluppo). \\
-	rotture hardware & verifica giornaliera del funzionamento dei propri strumenti & sincronizzazione con \gloss{GitHub} al termine di ogni modifica al \gloss{repository} continui \gloss{backup} su dispositivo di memoria esterno; backup automatico settimanale del server su \gloss{AWS} e tempestività dell’\AM{} nel riportare tale macchina in uno stato funzionante nel minor tempo possibile & Analisi dei requisiti: rischio mai verificatosi. \\
-	problemi tra membri del gruppo & monitoraggio, da parte del \Rx{}, dello stato di collaborazione fra i vari membri del gruppo & il \Rx{} provvede, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li facciano collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile & Analisi dei requisiti: rischio mai verificatosi. \\
-	problemi personali dei membri & ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso & ad ogni impegno notificato, il \Rx{} eseguirà una nuova parte di pianificazione del periodo problematico & Analisi dei requisiti: rischio verificatosi  a due membri del gruppo, che hanno lasciato una riunione prima del termine per problemi personali. \\
+	tecnologie adottate & supervisione del \Rx{} su ciascun membro del gruppo & apprendimento autonomo delle tecnologie adottate \\
+	rotture hardware & verifica giornaliera del funzionamento dei propri strumenti & sincronizzazione con \gloss{GitHub} al termine di ogni modifica al \gloss{repository} continui \gloss{backup} su dispositivo di memoria esterno; backup automatico settimanale del server su \gloss{AWS} e tempestività dell’\AM{} nel riportare tale macchina in uno stato funzionante nel minor tempo possibile \\
+	problemi tra membri del gruppo & monitoraggio, da parte del \Rx{}, dello stato di collaborazione fra i vari membri del gruppo & il \Rx{} provvede, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li facciano collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile \\
+	problemi personali dei membri & ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso & ad ogni impegno notificato, il \Rx{} eseguirà una nuova parte di pianificazione del periodo problematico \\
 	
 	
 	
@@ -217,10 +220,10 @@ Ogni rischio è caratterizzato da:
 \begin{center}
 \begin{tabular}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
 
-	problemi di inesperienza & segnalazione al \Rx{} di ogni tecnologia potenzialmente utile; il \Rx{}, una volta approvatone l'utilizzo, demanda al gruppo il compito di documentarsi su di essa & obbligo, per ciascuno, di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto; se questo non fosse sufficiente, il \Rx{} prepara un piano di studi per compensare ogni tipo di lacuna & Analisi dei requisiti: rischio verificatosi soprattutto all'inizio del periodo. \\
-	pianificazione errata & controllo periodico dello stato delle attività nel programma di \emph{project management}, in modo da verificare eventuali ritardi nelle attività & si è deciso di prevedere, per ogni attività, un periodo maggiore di quanto normalmente richiesto e un periodo di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto & Analisi dei requisiti: rischio mai verificatosi. \\
-	incomprensioni e scelte non congrue & incontro con il proponente stesso, per poter discutere dei requisiti identificati e assicurarsi della totale concordanza sulle necessità del prodotto & incontri con il proponente e correzione tempestiva di ogni errore e imprecisione che il committente individua alle revisioni & Analisi dei requisiti: rischio verificatosi durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato. \\
-	errore nelle previsioni & attento monitoraggio del programma di \emph{project management} da parte del \Rx{}, che deve attuare tempestive modiche alla pianificazione e al rendiconto dei costi & è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli & Analisi dei requisiti: rischio mai verificatosi. \\
+	problemi di inesperienza & segnalazione al \Rx{} di ogni tecnologia potenzialmente utile; il \Rx{}, una volta approvatone l'utilizzo, demanda al gruppo il compito di documentarsi su di essa & obbligo, per ciascuno, di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto; se questo non fosse sufficiente, il \Rx{} prepara un piano di studi per compensare ogni tipo di lacuna \\
+	pianificazione errata & controllo periodico dello stato delle attività nel programma di \emph{project management}, in modo da verificare eventuali ritardi nelle attività & si è deciso di prevedere, per ogni attività, un periodo maggiore di quanto normalmente richiesto e un periodo di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto  \\
+	incomprensioni e scelte non congrue & incontro con il proponente stesso, per poter discutere dei requisiti identificati e assicurarsi della totale concordanza sulle necessità del prodotto & incontri con il proponente e correzione tempestiva di ogni errore e imprecisione che il committente individua alle revisioni  \\
+	errore nelle previsioni & attento monitoraggio del programma di \emph{project management} da parte del \Rx{}, che deve attuare tempestive modiche alla pianificazione e al rendiconto dei costi & è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli  \\
 	\hline
 \end{tabular}
 \end{center}
@@ -232,7 +235,7 @@ Ogni rischio è caratterizzato da:
 \begin{adjustwidth}{-3cm}{-3cm}
 \begin{center}
 \begin{tabular}{| p{3cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
-
+\hline
 Nome & \AR & \ARI & \PA \\
 	\hline
 	tecnologie adottate & rischio non ancora verificatosi (non sono state usate tali tecnologie in questo periodo di sviluppo). & rischio mai verificatosi. & rischio verificatosi, il \Rx{} ha effettuato una ricerca preventiva delle possibili tecnologie utilizzabili e, in collaborazione con gli altri membri del gruppo, \hx{} ha identificato la maggior parte delle tecnologie utilizzate e materiale di studio. \\
