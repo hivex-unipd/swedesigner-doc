@@ -1937,14 +1937,14 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\AdR 					&0\%		&0\%\\
 		\PdP 					&-25\%		&0\%\\
 		\Glossario 				&0\%		&0\%\\
-		\textit{Verbali.pdf} 			&0\%		&0\%\\
+		\textit{Verbali.pdf} 	&0\%		&0\%\\
 		\hline
 		\end{tabular}
 		\caption{Esiti del calcolo degli indici di schedule e budget variance}
 		\end{table}
 
 
-\subsection{Revisione dei progettazione}
+	\subsection{Revisione dei progettazione}
 		\subsubsection{Verifica processo di documentazione}
 		Le attività di verifica svolte sui documenti prodotti durante la progettazione sono state di due tipi:
 		\begin{itemize}		
@@ -2011,29 +2011,49 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		
 		I risultati ottenuti sono elencati nella seguente tabella:
 		\begin{table}[H]
-		\begin{tabular}{|l|p{2cm}|p{2cm}|p{2cm}|}
+		\begin{tabular}{|l|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
 		\hline
-		\textbf{Metrica} 		 					&\textbf{Valore accettabile}	&\textbf{Valore obiettivo}	&\textbf{Valore effettivo}\\
+		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
 		\hline
 		Completezza									&								&							&\\
 		Numero di violazioni di alta importanza		&0								&0							&0\\						
-		Numero di violazioni di media importanza	&0								&0							&0\\						
-		Numero di violazioni di bassa importanza	&0								&0							&0\\						
+		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
+		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
 		\hline
 		Correttezza 								&								&							&\\
 		Numero di violazioni di alta importanza		&0								&0							&0\\						
-		Numero di violazioni di media importanza	&0								&0							&0\\						
-		Numero di violazioni di bassa importanza	&0								&0							&0\\						
+		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
+		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
 		\hline
 		Stile 										&								&							&\\
 		Numero di violazioni di alta importanza		&0								&0							&0\\						
-		Numero di violazioni di media importanza	&0								&0							&0\\						
-		Numero di violazioni di bassa importanza	&0								&0							&0\\						
+		Numero di violazioni di media importanza	&0 - 5							&0							&0\\						
+		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
 		\hline
 		\end{tabular}
 		\caption{Esiti del calcolo delle metriche relative alla progettazione}
 		\end{table}
 
+		\subsubsection{Verifica della qualità dell'architettura}
+		Per verificare l'osservanza degli obiettivi riguardanti la qualità dell'architettura prodotta, sono stati calcolati i valori delle metriche relative ai diagrammi dei package.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{table}[H]
+		\begin{tabular}{|p{5.5cm}|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
+		\hline
+		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
+		\hline
+		Distanza dalla sequenza principale normalizzata &0.0 - 0.7 &0.0 - 0.5 & \\
+		\hline
+		Numero di figli diretti &0 - 4 &0 - 2 & \\
+		\hline
+		Numero di tipi per package &0 - 30 &0 - 20 & \\
+		\hline
+		Profondità della gerarchia &0 - 4 &1 - 2 & \\
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo delle metriche relative all'architettura}
+		\end{table}
 
 \appendix
 \section{Standard adottati}
