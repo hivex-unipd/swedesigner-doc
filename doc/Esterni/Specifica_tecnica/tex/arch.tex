@@ -62,17 +62,18 @@ Il \texttt{body} (corpo) della pagina HTML si compone di pochi blocchi:
 \end{itemize}
 Alla ricezione della pagina da parte del client, lo script JavaScript popola il tag \texttt{svg} (inizialmente vuoto) con un diagramma delle classi vuoto.
 
-% >>> RICORDARSI DEL DIAGR. DEI PACKAGE DEL CLIENT (diag. 0 [, 2])
-\begin{center}
-	\includegraphics[scale=0.5]{img/client_pkg}
-\end{center}
-
-L'architettura del client è suddivisa in tre package:
+L'architettura del client è suddivisa in tre package, come in figura \ref{fig:client_pkg}:
 \begin{itemize}
 	\item \texttt{model}, che gestisce la logica sottostante i diagrammi;
 	\item \texttt{view}, che gestisce l'interfaccia grafica;
 	\item \texttt{collection}, che raggruppa in una collezione più model, come per tutti i diagrammi creati.
 \end{itemize}
+
+% diagramma dei package del client (diag. 0 [, 2])
+\begin{figure} \label{fig:client_pkg}
+	\includegraphics[scale=0.5]{img/client_pkg}
+	\caption{Architettura del client.}
+\end{figure}
 
 %%% [...]
 
@@ -102,9 +103,10 @@ Il secondo e il terzo servizio, invece, sono un programma Java che genera due \e
 \end{itemize}
 
 % >>> RICORDARSI DEL DIAGR. DEI PACKAGE DEL SERVER (diag. 7)
-% \begin{center}
+% \begin{figure} \label{fig:server_pkg}
 % 	\includegraphics[scale=0.5]{img/server_pkg}
-% \end{center}
+%	\caption{Architettura del server.}
+% \end{figure}
 
 
 
@@ -118,8 +120,9 @@ I tre servizi offerti dal server (ottenere la pagina HTML; recuperare stereotipi
 	\item La richiesta di generazione di codice è idempotente: l'unica dipendenza esterna al programma è il file JSON, che viene passato dal client.
 \end{itemize}
 
-\begin{center}
+\begin{figure} \label{fig:protocol}
 	\includegraphics[scale=0.66]{img/http}
-\end{center}
+	\caption{Possibile interazione tra client e server.}
+\end{figure}
 
 % ci sarebbe da fare pure una cosa simile per il recupero degli stereotipi
