@@ -5,7 +5,7 @@
 
 
 \subsection{Client} \label{sec:tech_client}
-Implementeremo il \gloss{client} di \proj{} con le tecnologie web richieste dal capitolato d'appalto: HTML5, CSS3 e JavaScript. Di seguito elenchiamo e descriviamo le librerie JavaScript di cui il nostro client necessita. Tutte le librerie sono open-source, come richiesto dal capitolato.
+Il \gloss{client} di \proj{} sarà implementato con le tecnologie web richieste dal capitolato d'appalto: HTML5, CSS3 e JavaScript. Di seguito sono elencate e descritte le librerie JavaScript di cui il client necessita. Tutte le librerie sono open-source, come richiesto dal capitolato.
 
 \subsubsection{JointJS}
 La libreria \jointjs{} (\url{www.jointjs.com/opensource}) è una libreria open-source per realizzare editor di diagrammi interattivi, in maniera altamente personalizzabile.
@@ -21,10 +21,10 @@ La libreria sfrutta le seguenti tecnologie per il suo funzionamento:
 	\end{itemize}
 \end{itemize}
 
-Di \jointjs{} sfruttiamo un \emph{plug-in} per realizzare diagrammi UML. Tale \emph{plug-in} offre delle forme geometriche e delle frecce che ci servono per il disegno del diagramma delle classi e dei diagrammi a blocchi di ogni metodo.
+È reperibile un \emph{plug-in} di \jointjs{} che sarà sfruttato per realizzare diagrammi UML. Tale \emph{plug-in} offre delle forme geometriche e delle frecce che ci servono per il disegno del diagramma delle classi e dei diagrammi a blocchi di ogni metodo.
 
 \subsubsection{\backbonejs}
-La libreria \backbonejs{} permette di strutturare applicazioni web single page (SPA) fornendo \textbf{modelli} con binding di chiave-valore, eventi, \textbf{collezioni} e \textbf{viste} con una gestione degli eventi dichiarativa. Essa offre inoltre una interfaccia RESTful.
+La libreria \backbonejs{} permette di strutturare applicazioni web single page (\gloss{SPA}) fornendo \textbf{modelli} con binding di chiave-valore, eventi, \textbf{collezioni} e \textbf{viste} con una gestione degli eventi dichiarativa. Essa offre inoltre una interfaccia RESTful.
 
 A causa della struttura data alla libreria \jointjs{}, sviluppata tramite MVC (collection), al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà il lato client di \proj{} estendendo le funzionalità di base offerte da \jointjs{} usando il modello \mvc{} offerto da \backbonejs{}.	
 
@@ -43,14 +43,12 @@ La libreria \lodash{} fornisce metodi di utilità non offerti da \js{} puro. Ris
 % \subsubsection{sinonjs}
 % stubs, mocks, (test spies??)
 
-
-
 \subsection{Server}
 
 \subsubsection{Apache Tomcat}
 Il \emph{back end} della nostra applicazione è ospitato su un \gloss{server} Apache Tomcat, come richiesto dal capitolato d'appalto nel caso il \emph{back end} fosse scritto in Java.
 
-\subsubsection{Pivotal Spring}
+\subsubsection{Spring}
 Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source \emph{Spring} (disponibile all'indirizzo \url{spring.io}), utile per aderire ai princìpi dello stile architetturale REST.
 
 \subsubsection{StringTemplate}

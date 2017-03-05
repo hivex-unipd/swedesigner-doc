@@ -5,14 +5,14 @@
 
 
 \subsection{Metodo e formalismo di specifica}
-Suddividiamo la descrizione dell'architettura di \proj{} in quattro sezioni:
+La descrizione dell'architettura di \proj{} è suddivisa in quattro sezioni:
 \begin{itemize}
 	\item §\ref{sec:arch_gen}, che illustra gli aspetti generali dell'architettura del software;
 	\item §\ref{sec:arch_client}, che descrive l'architettura del \emph{front end} dell'applicazione;
 	\item §\ref{sec:arch_server}, che descrive l'architettura del \emph{back end} dell'applicazione;
 	\item §\ref{sec:arch_proto}, che descrive il protocollo che lega le due interfacce precedenti.
 \end{itemize}
-Per ognuna di queste sezioni, procediamo con metodo \emph{top-down} --- dal generale al particolare. utilizziamo dei diagrammi che seguono i formalismi di UML 2.0 e, in essi, evidenziamo in color malva le parti dell'architettura che sono di librerie esterne.
+Per ognuna di queste sezioni, procediamo con metodo \emph{top-down} --- dal generale al particolare. utilizziamo dei diagrammi che seguono i formalismi di UML 2.0 e in essi, evidenziamo in colore più scuro le parti dell'architettura che sono di librerie esterne.
 
 
 
@@ -38,7 +38,7 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 		\item Diversa compressione del codice generato: attualmente l'applicazione genera un JAR e lo comprime, assieme al file JSON, in formato ZIP; ma si potrebbe facilmente cambiare il formato di compressione in un JAR che contenga egli stesso al suo interno il file JSON.
 		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
 		\item Persistenza del programma generato: si potrebbe voler mantenere anche il codice generato, come il diagramma di input; per fare ciò, basta garantire al client il carattere persistente della risorsa fornita (badando però a non eliminarla dal server). % (per ora la eliminiamo?)
-		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati in XML, anziché in JSON; sarà sufficiente modificare il package \texttt{parser}.
+		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati da un client esterno, anziché in JSON (e.g. disegnatori di diagrammi UML come Astah); sarà sufficiente modificare il package \texttt{parser}.
 		\item Aumento del numero di stereotipi UML offerti: la presenza di un numero consistente di stereotipi non sarà mai un problema, grazie al fatto che vengono caricati dinamicamente nel client in modo asincrono.
 	\end{itemize}
 \end{itemize}
@@ -46,7 +46,7 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 
 
 \subsection{Architettura del client} \label{sec:arch_client}
-Il \emph{front end} di \proj{} è una \emph{Single Page Application} (SPA) scritta in HTML5, CSS3 e JavaScript.
+Il \emph{front end} di \proj{} è una \emph{Single Page Application} (\gloss{SPA}) scritta in HTML5, CSS3 e JavaScript.
 
 L'\texttt{head} (intestazione) della pagina HTML contiene dei puntatori a:
 \begin{itemize}
@@ -71,7 +71,7 @@ L'architettura del client è suddivisa in tre moduli, come in figura \ref{fig:cl
 
 \texttt{model} contiene i vari tipi di celle dei diagrammi: elementi del diagramma delle classi, collegamenti tra essi, stereotipi per giochi da tavolo e, infine, elementi dei diagrammi a blocchi. % ...
 
-\texttt{view} offre la classe \texttt{ProjectView}, che rappresenta l'area di disegno principale dell'applicazione. Attorno ad essa stanno dei menù: \texttt{DetailsView} visualizza tutti i campi di un elemento o di un collegamento tra elementi e ne permette la modifica; \texttt{NewCellView} visualizza tutti i possibili tipi di elementi e collegamenti che si possono inserire in un diagramma. Tutta l'interfaccia grafica è orchestrata da una \texttt{AppView}, che crea una \texttt{ProjectView}, una \texttt{DetailsView} e una \texttt{NewCellView}.
+\texttt{view} offre la classe \texttt{ProjectView}, che rappresenta l'area di disegno principale dell'applicazione. Attorno ad essa sono presenti dei menù: \texttt{DetailsView} visualizza tutti i campi di un elemento o di un collegamento tra elementi e ne permette la modifica; \texttt{NewCellView} visualizza tutti i possibili tipi di elementi e collegamenti che si possono inserire in un diagramma. Tutta l'interfaccia grafica è orchestrata da una \texttt{AppView}, che crea una \texttt{ProjectView}, una \texttt{DetailsView} e una \texttt{NewCellView}.
 
 \texttt{collection} contiene soltanto la classe \texttt{DiagramCollection}, che compone in una collezione più oggetti \texttt{Cell} (tipo definito da \jointjs). Ognuno di questi oggetti è l'elemento di un diagramma (a classi o a blocchi) oppure un collegamento tra elementi del diagramma delle classi.
 
@@ -101,7 +101,7 @@ Il secondo e il terzo servizio, invece, sono un programma Java che genera due \e
 	\item \textbf{\texttt{project}} non è altro che il package che organizza i tipi elencati al punto precedente, tutti discendenti da \texttt{ParsedElement}. Inoltre, questo package offre una classe \texttt{ElementFactory}. % che non ho capito cosa fa
 	\item \textbf{\texttt{generator}} presenta al suo interno l'interfaccia \texttt{Generator}; le classi che la estendono si occupano di popolare i template \emph{StringTemplate} di un particolare linguaggio di programmazione (\texttt{JavaGenerator} genera codice sorgente Java) e scrivere il risultato su disco. \texttt{GeneratorAssembler} fornisce la giusta implementazione \texttt{Generator}, grazie a un file di configurazione XML e a \emph{Spring}.
 	\item \textbf{\texttt{template}} è il package che organizza i template per linguaggio: dall'interfaccia \texttt{Template} discende, ad esempio, \texttt{JavaTemplate}. Anche questo package presenta una classe che si occupa di fornire la giusta implementazione di \texttt{Template}: \texttt{TemplateAssembler}, dipendente anch'esso dal file di configurazione XML.
-	\item \textbf{\texttt{stereotype}} % boh <<<
+	\item \textbf{\texttt{stereotype}} espone una classe che recupera da disco i vari template di ogni stereotipo implementato.
 	\item \textbf{\texttt{compiler}} presenta l'interfaccia \texttt{Compiler}, le cui implementazioni specifiche (per un certo linguaggio target) compilano il codice sorgente non eseguibile in un programma eseguibile (che viene poi scritto su disco); \texttt{JavaCompiler}, ad esempio, compila codice sorgente Java in \emph{bytecode} per la JVM (Java Virtual Machine) e compatta il codice in un file JAR eseguibile. Anche questo package presenta un \texttt{CompilerAssembler} (dipendente dal file di configurazione XML) che si occupa di fornire la giusta implementazione di \texttt{Compiler}.
 	\item \textbf{\texttt{utility}} espone classi di utilità per il programma, come ad esempio una classe \texttt{Compressor} che comprime l'output di un \texttt{Compiler} in formato ZIP. % è pulito tenere un package con un nome così generico?
 \end{itemize}
