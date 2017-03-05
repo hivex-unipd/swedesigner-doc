@@ -89,9 +89,9 @@ Questi tre servizi rispettano lo stile architetturale REST (come spiegato più a
 
 Il primo servizio è una semplice pagina HTML, fornita normalmente da Tomcat e arricchita di codice Javascript.
 
-Il secondo e il terzo servizio, invece, sono una \emph{servlet} Java organizzata nei seguenti package:
+Il secondo e il terzo servizio, invece, sono un programma Java che genera due \emph{servlet}; il programma è organizzato nei seguenti package:
 \begin{itemize}
-	\item \textbf{\texttt{controller}} rappresenta il nucleo del \emph{back end}; un \texttt{RequestHandlerController} si occupa di ricevere ed elaborare le richieste provenienti dal client.
+	\item \textbf{\texttt{controller}} rappresenta il nucleo del \emph{back end}; un \texttt{RequestHandlerController} si occupa di generare le due \emph{servlet} Java, usando \emph{Spring}.
 	\item nel package \textbf{\texttt{parser}}, la classe \texttt{Parser} si occupa di convertire il file JSON ricevuto in un oggetto Java di tipo \texttt{ParsedProgram}. Questo oggetto Java rappresenta il programma che l'utente vuole generare; esso si compone di oggetti \texttt{ParsedType} (cioè i tipi definiti dall'utente: gli elementi del diagramma delle classi), i quali si possono comporre di oggetti \texttt{ParsedAttribute} e \texttt{ParsedMethod}; quest'ultimo tipo si compone a sua volta di oggetti \texttt{ParsedInstruction} e così via fino ad arrivare alle istruzioni “atomiche”, come per esempio un \texttt{ParsedReturn}.
 	\item \textbf{\texttt{project}} non è altro che il package che organizza i tipi elencati al punto precedente, tutti discendenti da \texttt{ParsedElement}. Inoltre, questo package offre una classe \texttt{ElementFactory}. % che non ho capito cosa fa
 	\item \textbf{\texttt{generator}} presenta al suo interno l'interfaccia \texttt{Generator}; le classi che la estendono si occupano di popolare i template \emph{StringTemplate} di un particolare linguaggio di programmazione (\texttt{JavaGenerator} genera codice sorgente Java) e scrivere il risultato su disco. \texttt{GeneratorAssembler} fornisce la giusta implementazione \texttt{Generator}, grazie a un file di configurazione XML e a \emph{Spring}.
@@ -109,12 +109,12 @@ Il secondo e il terzo servizio, invece, sono una \emph{servlet} Java organizzata
 
 
 \subsection{Protocollo di comunicazione client-server} \label{sec:arch_proto}
-I due servizi offerti dal server (ottenere la pagina HTML e ottenere l'applicazione generata) seguono lo stile architetturale REST:
+I tre servizi offerti dal server (ottenere la pagina HTML; recuperare stereotipi UML; ottenere l'applicazione generata) seguono lo stile architetturale REST:
 \begin{itemize}
 	\item La richiesta per ottenere la pagina HTML usa il metodo HTTP GET; la pagina è quindi \emph{cachable} (i router tra client e server possono decidere di ottimizzarne la fornitura).
 	\item Il file JSON viene spedito con il metodo HTTP POST, che permette la persistenza di tale file nel server; la persistenza del file JSON è indifferente alla nostra applicazione ma ne aumenta l'estensibilità, in quanto un giorno i manutentori potrebbe voler offrire un servizio di condivisione dei diagrammi disegnati oppure un database di utenti che abbiano i propri diagrammi sul server.
-	\item Ognuno dei due servizi (la pagina HTML e la generazione di codice) è una risorsa distinta: questo disaccoppia i due servizi, aumentando ancora la manutenibilità del sistema.
-	\item La richiesta per ottenere la pagina HTML è per forza idempotente: lo stato del server non può influire su una pagina statica.
+	\item Ognuno dei tre servizi (pagina HTML, recupero di stereotipi e generazione di codice) è una risorsa distinta: questo disaccoppia i due servizi, aumentando ancora la manutenibilità del sistema.
+	\item La richiesta per ottenere la pagina HTML è per forza idempotente: lo stato del server non può influire su una pagina statica. %Neanche il recupero di stereotipi dipende dallo stato del server, dato che gli stereotipi sono contenuti in file statici. % <<< o forse no?
 	\item La richiesta di generazione di codice è idempotente: l'unica dipendenza esterna al programma è il file JSON, che viene passato dal client.
 \end{itemize}
 
