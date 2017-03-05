@@ -1,9 +1,15 @@
-L'appendice che segue è tratto e rielaborato dal libro \emph{Developing Backbone.js Applications}, \emph{Addy Osmani}, \emph{O'Reilly}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Note a riguardo di Backbone.js
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Il pattern seguito dal client di \proj{} ricalca il pattern di \jointjs, basato su \backbonejs. Classificare questo pattern non è un compito semplice: la comunità di Backbone.js è internamente divisa sull'effettiva natura del pattern che implementa. Molti sviluppatori JavaScript non vedono i pattern MVC (Model View Controller) e MVP (Model View Presenter) come mutualmente esclusivi, ma è possibile sviluppare una applicazione che possiede un componente simile al Presenter e considerarla ancora fondata su un tipo di MVC.
 
-Alcuni sviluppatori pensano invece che Backbone.js sia più una implementazione del modello MVP: principalmente il Presenter consiste nella \texttt{Backbone.View}, il modello è rappresentato da \texttt{Backbone.Model} e le view sono rappresentate dai template HTML. 
 
-È possibile rispondere a questa osservazione constatando che \texttt{Backbone.View} è effettivamente capace di assolvere a due compiti, perché essa è flessibile a sufficienza per essere usata per multipli scopi. Questi due compiti sono la View dell'MVC e la Presenter dell'MVP.
+L'appendice che segue \`e tratta e rielaborata dal libro \emph{Developing Backbone.js Applications}, \emph{Addy Osmani}, \emph{O'Reilly}.
 
-Questo porta all'osservazione fatta dall'autore di MarionetteJS, Derick Bailey, il quale afferma che è meglio non forzare Backbone.js a sottostare ad uno specifico design pattern: un design pattern dovrebbe essere una \textbf{guida flessibile} riguardo a come una applicazione potrebbe essere strutturata, e in questo senso Backbone.js non entra né nella definizione di MVC né di MVP.
+Il pattern seguito dal client di \proj{} ricalca il pattern di \jointjs, basato su \backbonejs. Classificare questo pattern non \`e un compito semplice: la comunit\`a di Backbone.js \`e internamente divisa sull'effettiva natura del pattern che implementa. Molti sviluppatori JavaScript non vedono i pattern MVC (Model View Controller) e MVP (Model View Presenter) come mutualmente esclusivi, ma \`e possibile sviluppare una applicazione che possiede un componente simile al Presenter e considerarla ancora fondata su un tipo di MVC.
+
+Alcuni sviluppatori pensano invece che Backbone.js sia pi\`u una implementazione del modello MVP: principalmente il Presenter consiste nella \texttt{Backbone.View}, il modello \`e rappresentato da \texttt{Backbone.Model} e le view sono rappresentate dai template HTML. 
+
+\`e possibile rispondere a questa osservazione constatando che \texttt{Backbone.View} \`e effettivamente capace di assolvere a due compiti, perch\'e essa \`e flessibile a sufficienza per essere usata per multipli scopi. Questi due compiti sono la View dell'MVC e la Presenter dell'MVP.
+
+Questo porta all'osservazione fatta dall'autore di MarionetteJS, Derick Bailey, il quale afferma che \`e meglio non forzare Backbone.js a sottostare ad uno specifico design pattern: un design pattern dovrebbe essere una \textbf{guida flessibile} riguardo a come una applicazione potrebbe essere strutturata, e in questo senso Backbone.js non entra n\'e nella definizione di MVC n\'e di MVP.
