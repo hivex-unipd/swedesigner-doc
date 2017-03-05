@@ -75,7 +75,7 @@ L'architettura del client è suddivisa in tre moduli, come in figura \ref{fig:cl
 
 \texttt{collection} contiene soltanto la classe \texttt{DiagramCollection}, che compone in una collezione più oggetti \texttt{Cell} (tipo definito da \jointjs). Ognuno di questi oggetti è l'elemento di un diagramma (a classi o a blocchi) oppure un collegamento tra elementi del diagramma delle classi.
 
-% diagramma dei package del client (diag. 0 [, 2])
+% diagramma dei package del client
 \begin{figure} \label{fig:client_pkg}
 	\includegraphics[scale=0.5]{img/client_pkg}
 	\caption{Architettura del client.}
@@ -94,7 +94,7 @@ Questi tre servizi rispettano lo stile architetturale REST (come spiegato più a
 
 Il primo servizio è una semplice pagina HTML, fornita normalmente da Tomcat e arricchita di codice Javascript.
 
-Il secondo e il terzo servizio, invece, sono un programma Java che genera due \emph{servlet}; il programma è organizzato nei seguenti package:
+Il secondo e il terzo servizio, invece, sono un programma Java che genera due \emph{servlet}; il programma è organizzato nei seguenti package, come illustrato in figura \ref{fig:server_pkg}:
 \begin{itemize}
 	\item \textbf{\texttt{controller}} rappresenta il nucleo del \emph{back end}; un \texttt{RequestHandlerController} si occupa di generare le due \emph{servlet} Java, usando \emph{Spring}.
 	\item nel package \textbf{\texttt{parser}}, la classe \texttt{Parser} si occupa di convertire il file JSON ricevuto in un oggetto Java di tipo \texttt{ParsedProgram}. Questo oggetto Java rappresenta il programma che l'utente vuole generare; esso si compone di oggetti \texttt{ParsedType} (cioè i tipi definiti dall'utente: gli elementi del diagramma delle classi), i quali si possono comporre di oggetti \texttt{ParsedAttribute} e \texttt{ParsedMethod}; quest'ultimo tipo si compone a sua volta di oggetti \texttt{ParsedInstruction} e così via fino ad arrivare alle istruzioni “atomiche”, come per esempio un \texttt{ParsedReturn}.
@@ -106,11 +106,11 @@ Il secondo e il terzo servizio, invece, sono un programma Java che genera due \e
 	\item \textbf{\texttt{utility}} espone classi di utilità per il programma, come ad esempio una classe \texttt{Compressor} che comprime l'output di un \texttt{Compiler} in formato ZIP. % è pulito tenere un package con un nome così generico?
 \end{itemize}
 
-% >>> RICORDARSI DEL DIAGR. DEI PACKAGE DEL SERVER (diag. 7)
-% \begin{figure} \label{fig:server_pkg}
-% 	\includegraphics[scale=0.5]{img/server_pkg}
-%	\caption{Architettura del server.}
-% \end{figure}
+% >>> diagr. dei package del server
+\begin{figure} \label{fig:server_pkg}
+	\includegraphics[scale=0.5]{img/server_pkg}
+	\caption{Architettura del server.}
+\end{figure}
 
 
 
