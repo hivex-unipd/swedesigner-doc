@@ -195,9 +195,9 @@ Ogni rischio è caratterizzato da:
 
 \newpage
 
-\begin{adjustwidth}{-1cm}{-1cm}
+\begin{adjustwidth}{-3cm}{-3cm}
 \begin{center}
-\begin{longtable}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
 	\hline
 	\textbf{Nome} & \textbf{Riconoscimento} & \textbf{Trattamento} & \textbf{Attuazione nel periodo} \\
 	\hline
@@ -205,16 +205,60 @@ Ogni rischio è caratterizzato da:
 	rotture hardware & verifica giornaliera del funzionamento dei propri strumenti & sincronizzazione con \gloss{GitHub} al termine di ogni modifica al \gloss{repository} continui \gloss{backup} su dispositivo di memoria esterno; backup automatico settimanale del server su \gloss{AWS} e tempestività dell’\AM{} nel riportare tale macchina in uno stato funzionante nel minor tempo possibile & Analisi dei requisiti: rischio mai verificatosi. \\
 	problemi tra membri del gruppo & monitoraggio, da parte del \Rx{}, dello stato di collaborazione fra i vari membri del gruppo & il \Rx{} provvede, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li facciano collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile & Analisi dei requisiti: rischio mai verificatosi. \\
 	problemi personali dei membri & ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso & ad ogni impegno notificato, il \Rx{} eseguirà una nuova parte di pianificazione del periodo problematico & Analisi dei requisiti: rischio verificatosi  a due membri del gruppo, che hanno lasciato una riunione prima del termine per problemi personali. \\
+	
+	
+	
+\end{tabular}
+\end{center}
+\end{adjustwidth}
+
+	
+\begin{adjustwidth}{-3cm}{-3cm}
+\begin{center}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
+
 	problemi di inesperienza & segnalazione al \Rx{} di ogni tecnologia potenzialmente utile; il \Rx{}, una volta approvatone l'utilizzo, demanda al gruppo il compito di documentarsi su di essa & obbligo, per ciascuno, di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto; se questo non fosse sufficiente, il \Rx{} prepara un piano di studi per compensare ogni tipo di lacuna & Analisi dei requisiti: rischio verificatosi soprattutto all'inizio del periodo. \\
 	pianificazione errata & controllo periodico dello stato delle attività nel programma di \emph{project management}, in modo da verificare eventuali ritardi nelle attività & si è deciso di prevedere, per ogni attività, un periodo maggiore di quanto normalmente richiesto e un periodo di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto & Analisi dei requisiti: rischio mai verificatosi. \\
 	incomprensioni e scelte non congrue & incontro con il proponente stesso, per poter discutere dei requisiti identificati e assicurarsi della totale concordanza sulle necessità del prodotto & incontri con il proponente e correzione tempestiva di ogni errore e imprecisione che il committente individua alle revisioni & Analisi dei requisiti: rischio verificatosi durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato. \\
 	errore nelle previsioni & attento monitoraggio del programma di \emph{project management} da parte del \Rx{}, che deve attuare tempestive modiche alla pianificazione e al rendiconto dei costi & è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli & Analisi dei requisiti: rischio mai verificatosi. \\
 	\hline
-\end{longtable}
+\end{tabular}
 \end{center}
 \end{adjustwidth}
 
 
+\subsection{Attuazione nel periodo}
+
+\begin{adjustwidth}{-3cm}{-3cm}
+\begin{center}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
+
+Nome & \AR & \ARI & \PA \\
+	\hline
+	tecnologie adottate & rischio non ancora verificatosi (non sono state usate tali tecnologie in questo periodo di sviluppo). & rischio mai verificatosi. & rischio verificatosi, il \Rx{} ha effettuato una ricerca preventiva delle possibili tecnologie utilizzabili e, in collaborazione con gli altri membri del gruppo, \hx{} ha identificato la maggior parte delle tecnologie utilizzate e materiale di studio. \\
+	rotture hardware & rischio mai verificatosi. & rischio mai verificatosi.  & disservizio della piattaforma GitHub la quale non ha comunque rallentato il lavoro del team, il quale ha comunicato tramite la piattaforma Slack. \\
+	problemi tra membri del gruppo & rischio mai verificatosi. & rischio mai verificatosi. & rischio mai verificatosi.  \\
+	problemi personali dei membri & rischio verificatosi: a due membri del gruppo, che hanno lasciato una riunione prima del termine per problemi personali. & rischio verificatosi: la presenza della sessione di appello ha ritardato la pianificazione della \ARI. (vedi \nameref{sec:consuntivo}) & rischio mai verificatosi.  \\
+	problemi di inesperienza & rischio verificatosi soprattutto all'inizio del periodo. & rischio mai verificatosi. & rischio verificatosi, i membri del gruppo hanno tentato di colmare le proprie lacune procedendo con lo studio dei Design Pattern in modo sia autonomo che collaborativo. \\
+	
+	
+	\end{tabular}
+\end{center}
+\end{adjustwidth}
+
+\begin{adjustwidth}{-3cm}{-3cm}
+\begin{center}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
+
+	
+	pianificazione errata & rischio mai verificatosi. & rischio verificatosi, vedi \nameref{sec:consuntivo} & rischio mai verificatosi. \\
+	incomprensioni e scelte non congrue &  rischio verificatosi durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato. & rischio mai verificatosi. & rischio mai verificatosi.  \\
+	 errore nelle previsioni & rischio mai verificatosi. & rischio mai verificatosi. & rischio verificatosi, vedi \nameref{sec:consuntivo}.\\
+	% sinceramente fonderei errore nelle previsioni e pianificazione errata
+	\hline
+\end{tabular}
+\end{center}
+\end{adjustwidth}
 
 
 
