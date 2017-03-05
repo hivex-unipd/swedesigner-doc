@@ -12,7 +12,7 @@ Suddividiamo la descrizione dell'architettura di \proj{} in quattro sezioni:
 	\item §\ref{sec:arch_server}, che descrive l'architettura del \emph{back end} dell'applicazione;
 	\item §\ref{sec:arch_proto}, che descrive il protocollo che lega le due interfacce precedenti.
 \end{itemize}
-Per ognuna di queste sezioni, procediamo con metodo \emph{top-down} --- dal generale al particolare --- utilizzando i formalismi di UML 2.0.
+Per ognuna di queste sezioni, procediamo con metodo \emph{top-down} --- dal generale al particolare. utilizziamo dei diagrammi che seguono i formalismi di UML 2.0 e, in essi, evidenziamo in color malva le parti dell'architettura che sono di librerie esterne.
 
 
 
@@ -23,7 +23,7 @@ L'architettura dell'applicazione è suddivisa in due moduli:
 	\item il server, che fornisce la pagina dell'applicazione al client e riceve da esso delle richieste di generazione di codice.
 \end{enumerate}
 
-Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha cercato di perseguire principalmente l'\textbf{estensibilità}. Tale obiettivo è stato raggiunto con due strategie:
+Tra le varie qualità desiderabili per la nostra architettura, la progettazione ha perseguito principalmente l'\textbf{estensibilità}. Tale obiettivo è stato raggiunto con due strategie:
 \begin{itemize}
 	\item in generale, promuovendo le seguenti qualità:
 	\begin{itemize}
@@ -62,12 +62,18 @@ Il \texttt{body} (corpo) della pagina HTML si compone di pochi blocchi:
 \end{itemize}
 Alla ricezione della pagina da parte del client, lo script JavaScript popola il tag \texttt{svg} (inizialmente vuoto) con un diagramma delle classi vuoto.
 
-L'architettura del client è suddivisa in tre package, come in figura \ref{fig:client_pkg}:
+L'architettura del client è suddivisa in tre moduli, come in figura \ref{fig:client_pkg}:
 \begin{itemize}
-	\item \texttt{model}, che gestisce la logica sottostante i diagrammi;
+	\item \texttt{model}, che organizza la logica sottostante i diagrammi;
 	\item \texttt{view}, che gestisce l'interfaccia grafica;
-	\item \texttt{collection}, che raggruppa in una collezione più model, come per tutti i diagrammi creati.
+	\item \texttt{collection}, che raggruppa in una collezione più model, come per tutti i diagrammi creati. % <<< ?
 \end{itemize}
+
+\texttt{model} contiene i vari tipi di celle dei diagrammi: elementi del diagramma delle classi, collegamenti tra essi, stereotipi per giochi da tavolo e, infine, elementi dei diagrammi a blocchi. % ...
+
+\texttt{view} offre la classe \texttt{ProjectView}, che rappresenta l'area di disegno principale dell'applicazione. Attorno ad essa stanno dei menù: \texttt{DetailsView} visualizza tutti i campi di un elemento o di un collegamento tra elementi e ne permette la modifica; \texttt{NewCellView} visualizza tutti i possibili tipi di elementi e collegamenti che si possono inserire in un diagramma. Tutta l'interfaccia grafica è orchestrata da una \texttt{AppView}, che crea una \texttt{ProjectView}, una \texttt{DetailsView} e una \texttt{NewCellView}.
+
+\texttt{collection} contiene soltanto la classe \texttt{DiagramCollection}, che compone in una collezione più oggetti \texttt{Cell} (tipo definito da \jointjs). Ognuno di questi oggetti è l'elemento di un diagramma (a classi o a blocchi) oppure un collegamento tra elementi del diagramma delle classi.
 
 % diagramma dei package del client (diag. 0 [, 2])
 \begin{figure} \label{fig:client_pkg}
@@ -75,16 +81,14 @@ L'architettura del client è suddivisa in tre package, come in figura \ref{fig:c
 	\caption{Architettura del client.}
 \end{figure}
 
-%%% [...]
-
 
 
 \subsection{Architettura del server} \label{sec:arch_server}
 Il server offre tre servizi:
 \begin{enumerate}
 	\item fornisce al client la pagina HTML dove disegnare i diagrammi;
-	\item elabora un file JSON in arrivo dal client e gli fornisce l'applicazione generata a partire da tale file;
-	\item restituisce l'elenco degli stereotipi esistenti all'interno del server e utilizzabili dal client.
+	\item restituisce l'elenco degli stereotipi esistenti all'interno del server e utilizzabili dal client;
+	\item elabora un file JSON in arrivo dal client e gli fornisce l'applicazione generata a partire da tale file.
 \end{enumerate}
 Questi tre servizi rispettano lo stile architetturale REST (come spiegato più avanti nella sezione \ref{sec:arch_proto}).
 
