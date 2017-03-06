@@ -197,19 +197,28 @@ Il presente documento si divide in tre sezioni principali:
 		\item ogni componente deve avere un compito ben preciso, ricavabile dal proprio nome e dai metodi che costituiscono la propria interfaccia;
 		\item i progettisti devono assumere di conoscere soltanto il tipo statico di un oggetto, non il suo tipo dinamico;
 		\item i progettisti devono definire solo metodi di istanza (quindi non statici);
-		\item se una classe $A$ dipende, per generalizzazione, da una classe $B$, allora dev'essere possibile dire che “ogni $A$ è un $B$”;
+		\item se una classe $A$ estende il contratto di una classe $B$, allora dev'essere possibile affermare che “ogni $A$ è un $B$”;
 		\item i campi dati di ogni classe Java devono essere privati.
 	\end{itemize}
 
 	\paragraph{Nomenclatura} Al fine di uniformare il codice che verrà derivato dalla progettazione, i progettisti devono osservare le seguenti norme di nomenclatura:
 	\begin{itemize}
+		\item i componenti vanno raggruppati in moduli (\emph{package}, in Java) con un nome; tale nome:
+		\begin{itemize}
+			\item è in lingua inglese;
+			\item contiene solo caratteri alfanumerici;
+			\item ha iniziale bassa;
+			\item reca il nome dell'eventuale modulo “padre” che lo contiene, preposto al proprio nome e seguito da una coppia di \emph{due punti} (\texttt{::});
+			\item è rappresentativo del ruolo del modulo nel sistema;
+			\item è preferibilmente un sostantivo.
+		\end{itemize}
 		\item ogni componente ha un nome; tale nome:
 		\begin{itemize}
 			\item è in lingua inglese;
 			\item contiene solo caratteri alfanumerici;
 			\item ha iniziale alta;
 			\item se composto di più termini, ha l'iniziale di ogni termine alta;
-			\item è significativo del ruolo della componente nel sistema;
+			\item è rappresentativo del ruolo della componente nel sistema;
 			\item non può essere un termine riservato dei linguaggi Java o JavaScript;
 			\item non può essere più lungo di 30 caratteri;
 			\item è preferibilmente un sostantivo (eventualmente composto).
@@ -220,7 +229,7 @@ Il presente documento si divide in tre sezioni principali:
 			\item contiene solo caratteri alfanumerici;
 			\item ha iniziale bassa;
 			\item se composto di più termini, ha l'iniziale di ogni termine alta, tranne quella del primo termine;
-			\item è significativo della funzione del metodo nella classe;
+			\item è rappresentativo della funzione del metodo nella classe;
 			\item non può essere un termine riservato dei linguaggi Java o JavaScript;
 			\item non può essere più lungo di 20 caratteri;
 			\item è preferibilmente un verbo (eventualmente composto).
