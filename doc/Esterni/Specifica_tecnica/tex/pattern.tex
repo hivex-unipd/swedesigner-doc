@@ -56,7 +56,7 @@
 \subsection{Factory}
 
 \begin{figure}[H] \label{fig:factory}
-	\includegraphics[scale=0.34]{img/factory2.png}
+	\includegraphics[scale=0.8]{img/factory2.png}
 	\caption{Factory.}
 \end{figure}
 
@@ -64,9 +64,9 @@
 
 \subsubsection{Struttura} Sono coinvolti i seguenti componenti:
 \begin{enumerate}
-	\item Creator: dichiara la Factory che avrà il compito di ritornare l'oggetto appropriato;
-	\item Product: definisce l'interfaccia dell'oggetto che deve essere creato dalla Factory;
-	\item ConcreteProduct: implementa l'oggetto in base ai metodi  definiti dall'interfaccia Product.
+	\item Creator (VeichleFactory): dichiara la Factory che avrà il compito di ritornare l'oggetto appropriato;
+	\item Product (Vehicle): definisce l'interfaccia dell'oggetto che deve essere creato dalla Factory;
+	\item ConcreteProduct (Truck,Car): implementa l'oggetto in base ai metodi  definiti dall'interfaccia Product.
 \end{enumerate}
 
 \subsubsection{Applicabilità} È possibile applicare il pattern quando:
