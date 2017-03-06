@@ -174,9 +174,11 @@ Ogni rischio è caratterizzato da:
 	\item attuazione nel periodo.
 \end{itemize}
 
+\subsection{Descrizione rischi}
+
 \begin{adjustwidth}{-3cm}{-3cm}
 \begin{center}
-\begin{tabular}{| p{3cm} | p{8cm} | r | r |}
+\begin{tabular}{| p{2.5cm} | p{8cm} |  p{1.8cm} |  p{1.85cm}  |}
 	\hline
 	\textbf{Nome} & \textbf{Descrizione} & \textbf{Probabilità} & \textbf{Pericolosità} \\
 	\hline
@@ -194,27 +196,72 @@ Ogni rischio è caratterizzato da:
 \end{adjustwidth}
 
 \newpage
+\subsection{Riconoscimento e trattamento}
 
-\begin{adjustwidth}{-1cm}{-1cm}
+\begin{adjustwidth}{-3cm}{-3cm}
 \begin{center}
-\begin{longtable}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
 	\hline
-	\textbf{Nome} & \textbf{Riconoscimento} & \textbf{Trattamento} & \textbf{Attuazione nel periodo} \\
+	\textbf{Nome} & \textbf{Riconoscimento} & \textbf{Trattamento} \\
 	\hline
-	tecnologie adottate & supervisione del \Rx{} su ciascun membro del gruppo & apprendimento autonomo delle tecnologie adottate & Analisi dei requisiti: rischio non ancora verificatosi (non sono state usate tali tecnologie in questo periodo di sviluppo). \\
-	rotture hardware & verifica giornaliera del funzionamento dei propri strumenti & sincronizzazione con \gloss{GitHub} al termine di ogni modifica al \gloss{repository} continui \gloss{backup} su dispositivo di memoria esterno; backup automatico settimanale del server su \gloss{AWS} e tempestività dell’\AM{} nel riportare tale macchina in uno stato funzionante nel minor tempo possibile & Analisi dei requisiti: rischio mai verificatosi. \\
-	problemi tra membri del gruppo & monitoraggio, da parte del \Rx{}, dello stato di collaborazione fra i vari membri del gruppo & il \Rx{} provvede, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li facciano collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile & Analisi dei requisiti: rischio mai verificatosi. \\
-	problemi personali dei membri & ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso & ad ogni impegno notificato, il \Rx{} eseguirà una nuova parte di pianificazione del periodo problematico & Analisi dei requisiti: rischio verificatosi  a due membri del gruppo, che hanno lasciato una riunione prima del termine per problemi personali. \\
-	problemi di inesperienza & segnalazione al \Rx{} di ogni tecnologia potenzialmente utile; il \Rx{}, una volta approvatone l'utilizzo, demanda al gruppo il compito di documentarsi su di essa & obbligo, per ciascuno, di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto; se questo non fosse sufficiente, il \Rx{} prepara un piano di studi per compensare ogni tipo di lacuna & Analisi dei requisiti: rischio verificatosi soprattutto all'inizio del periodo. \\
-	pianificazione errata & controllo periodico dello stato delle attività nel programma di \emph{project management}, in modo da verificare eventuali ritardi nelle attività & si è deciso di prevedere, per ogni attività, un periodo maggiore di quanto normalmente richiesto e un periodo di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto & Analisi dei requisiti: rischio mai verificatosi. \\
-	incomprensioni e scelte non congrue & incontro con il proponente stesso, per poter discutere dei requisiti identificati e assicurarsi della totale concordanza sulle necessità del prodotto & incontri con il proponente e correzione tempestiva di ogni errore e imprecisione che il committente individua alle revisioni & Analisi dei requisiti: rischio verificatosi durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato. \\
-	errore nelle previsioni & attento monitoraggio del programma di \emph{project management} da parte del \Rx{}, che deve attuare tempestive modiche alla pianificazione e al rendiconto dei costi & è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli & Analisi dei requisiti: rischio mai verificatosi. \\
+	tecnologie adottate & supervisione del \Rx{} su ciascun membro del gruppo & apprendimento autonomo delle tecnologie adottate \\
+	rotture hardware & verifica giornaliera del funzionamento dei propri strumenti & sincronizzazione con \gloss{GitHub} al termine di ogni modifica al \gloss{repository} continui \gloss{backup} su dispositivo di memoria esterno; backup automatico settimanale del server su \gloss{AWS} e tempestività dell’\AM{} nel riportare tale macchina in uno stato funzionante nel minor tempo possibile \\
+	problemi tra membri del gruppo & monitoraggio, da parte del \Rx{}, dello stato di collaborazione fra i vari membri del gruppo & il \Rx{} provvede, in caso di contrasti tra membri del gruppo, ad affidare alle persone coinvolte attività che non li facciano collaborare assieme, cercando di riportare sempre la sintonia all'interno del gruppo per avere un ambiente di lavoro il meno stressante possibile \\
+	problemi personali dei membri & ognuno è tenuto a comunicare tempestivamente i propri impegni al \Rx{} in modo da create un calendario sincronizzato e condiviso & ad ogni impegno notificato, il \Rx{} eseguirà una nuova parte di pianificazione del periodo problematico \\
+	
+	
+	
+\end{tabular}
+\end{center}
+\end{adjustwidth}
+
+	
+\begin{adjustwidth}{-3cm}{-3cm}
+\begin{center}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{4cm} | p{3cm} |}
+
+	problemi di inesperienza & segnalazione al \Rx{} di ogni tecnologia potenzialmente utile; il \Rx{}, una volta approvatone l'utilizzo, demanda al gruppo il compito di documentarsi su di essa & obbligo, per ciascuno, di documentarsi su strumenti e tecnologie utili allo svolgimento del progetto; se questo non fosse sufficiente, il \Rx{} prepara un piano di studi per compensare ogni tipo di lacuna \\
+	pianificazione errata & controllo periodico dello stato delle attività nel programma di \emph{project management}, in modo da verificare eventuali ritardi nelle attività & si è deciso di prevedere, per ogni attività, un periodo maggiore di quanto normalmente richiesto e un periodo di verifica ogni venerdì della settimana interessata per poter correggere, dove possibile, gli eventuali errori il sabato stesso; in tale maniera, un eventuale ritardo non influenzerà la durata totale del progetto  \\
+	incomprensioni e scelte non congrue & incontro con il proponente stesso, per poter discutere dei requisiti identificati e assicurarsi della totale concordanza sulle necessità del prodotto & incontri con il proponente e correzione tempestiva di ogni errore e imprecisione che il committente individua alle revisioni  \\
+	errore nelle previsioni & attento monitoraggio del programma di \emph{project management} da parte del \Rx{}, che deve attuare tempestive modiche alla pianificazione e al rendiconto dei costi & è necessario che ogni membro del gruppo rispetti i tempi delle attività assegnatogli  \\
 	\hline
-\end{longtable}
+\end{tabular}
 \end{center}
 \end{adjustwidth}
 
 
+\subsection{Attuazione nel periodo}
+
+\begin{adjustwidth}{-3cm}{-3cm}
+\begin{center}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
+\hline
+Nome & \AR & \ARI & \PA \\
+	\hline
+	tecnologie adottate & rischio non ancora verificatosi (non sono state usate tali tecnologie in questo periodo di sviluppo). & rischio mai verificatosi. & rischio verificatosi, il \Rx{} ha effettuato una ricerca preventiva delle possibili tecnologie utilizzabili e, in collaborazione con gli altri membri del gruppo, \hx{} ha identificato la maggior parte delle tecnologie utilizzate e materiale di studio. \\
+	rotture hardware & rischio mai verificatosi. & rischio mai verificatosi.  & disservizio della piattaforma GitHub la quale non ha comunque rallentato il lavoro del team, il quale ha comunicato tramite la piattaforma Slack. \\
+	problemi tra membri del gruppo & rischio mai verificatosi. & rischio mai verificatosi. & rischio mai verificatosi.  \\
+	problemi personali dei membri & rischio verificatosi: a due membri del gruppo, che hanno lasciato una riunione prima del termine per problemi personali. & rischio verificatosi: la presenza della sessione di appello ha ritardato la pianificazione della \ARI. (vedi \nameref{sec:consuntivo}) & rischio mai verificatosi.  \\
+	problemi di inesperienza & rischio verificatosi soprattutto all'inizio del periodo. & rischio mai verificatosi. & rischio verificatosi, i membri del gruppo hanno tentato di colmare le proprie lacune procedendo con lo studio dei Design Pattern in modo sia autonomo che collaborativo. \\
+	
+	
+	\end{tabular}
+\end{center}
+\end{adjustwidth}
+
+\begin{adjustwidth}{-3cm}{-3cm}
+\begin{center}
+\begin{tabular}{| p{3cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
+
+	
+	pianificazione errata & rischio mai verificatosi. & rischio verificatosi, vedi \nameref{sec:consuntivo} & rischio mai verificatosi. \\
+	incomprensioni e scelte non congrue &  rischio verificatosi durante il secondo incontro, facendo emergere dei nuovi requisiti fondamentali non evidenziati nel capitolato. & rischio mai verificatosi. & rischio mai verificatosi.  \\
+	 errore nelle previsioni & rischio mai verificatosi. & rischio mai verificatosi. & rischio verificatosi, vedi \nameref{sec:consuntivo}.\\
+	% sinceramente fonderei errore nelle previsioni e pianificazione errata
+	\hline
+\end{tabular}
+\end{center}
+\end{adjustwidth}
 
 
 
@@ -1130,7 +1177,7 @@ Questo quadro riassuntivo esclude il periodo di {\AR}: i costi che seguono \text
   \caption{Tabella costo totale per ruolo e per persona, valori in euro (\euro).}
 \end{figure}
 
-Il costo totale del progetto \proj{} preventivato è arrotondato a \textbf{11700{\euro}} (\emph{dodicimila euro}).
+Il costo totale del progetto \proj{} preventivato è arrotondato a \textbf{11700{\euro}} (\emph{undicimilaesettecento euro}).
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{
@@ -1273,16 +1320,36 @@ Questo ha portato un ritardo complessivo pari a 3 giorni rispetto alla baseline;
   
 }
 \label{tab:car}
-\caption{DIfferenza preventivo-consuntivo per ruolo, \AR.}
+\caption{Differenza preventivo-consuntivo per ruolo, \AR.}
 \end{figure}
+
+
+\subsubsection{Considerazioni}
+La pianificazione è stata in gran parte rispettata, eccetto un trascurabile ritardo per malattia. 
+
+Un aspetto trascurato potenzialmente migliorativo della pianificazione corrente consiste nell'includere nella pianificazione delle attività anche degli incontri con l'azienda \ZU, accordandosi preventivamente, in modo da poter avere dei rapporti continui con l'azienda proponente. Questa opzione sarà considerata dal \Rx{} nei periodi successivi.
+
 %%%%%%%% da fare%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\pagebreak
 \subsection{Consuntivo \ARI}
 \introconsuntivo{\ARI}
 
 \subsubsection{Variazioni nella pianificazione}
 
-Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno rispettato la corretta pianificazione, terminando in modo identico alla pianificazione.
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/varari.png}}
+\label{tab:cgen1}
+
+  \caption{Variazione rispetto alla pianificazione per l'\ARI, diagramma di Gantt}
+\end{figure}
+
+Si è verificato un ritardo nell'attuazione dei task previsti per la \ARI{} a causa della necessità di alcuni membri del gruppo di sostenere altri esami relativi al Corso di Laurea in Informatica. Questo ha portato ad un ritardo delle attività le quali sono cominciate il giorno 30-01-2017, ovvero con 4 giorni di ritardo.
+
+Questo ritardo comunque non ha influenzato eccessivamente gli altri task, i quali sono stati effettuati senza ritardi accumulati, svolgendo dapprima lavoro non relativo all'incremento effettuato.
+
 
 \pagebreak
 \subsubsection{Variazione nei costi}
@@ -1372,8 +1439,16 @@ Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno ris
   
 }
 \label{tab:car}
-\caption{DIfferenza preventivo-consuntivo per ruolo, \ARI.}
+\caption{Differenza preventivo-consuntivo per ruolo, \ARI.}
 \end{figure}
+
+
+
+\subsubsection{Considerazioni}
+La pianificazione è stata rispettata ad un livello sub-ottimale, ma comunque accettabile. Il \Rx{} terrà in maggior conto gli impegni universitari dei componenti del gruppo, prevedendo anche la necessità di ritentare più volte un esame.
+
+L'utilità di questo periodo è stata inferiore a quanto preventivato: la sua ridotta dimensione è risultata troppo dispersiva.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Consuntivo \PA}
 \introconsuntivo{\PA}
@@ -1382,13 +1457,32 @@ Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno ris
 
 Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno rispettato la corretta pianificazione, terminando in modo identico alla pianificazione.
 
-%%\begin{figure}[H]
-%%\makebox[\textwidth][c]{
-%%\includegraphics[width=1.2\textwidth]{img/ganttarc21.png}}
-%%\label{tab:cgen1}
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/varpa3.png}}
+\label{tab:cgen1}
 
-  %%\caption{Variazione rispetto alla pianificazione per la \PA, diagramma di Gantt}
-%%\end{figure}
+\caption{Variazione rispetto alla pianificazione per la \PA{} diagramma di Gantt (parte 1)}
+\end{figure}
+
+Si è verificato un ritardo nella stesura dei documenti del \PdQ{} a causa del carico di lavoro sottostimato a preventivo per la correzione degli errori risultante dalla prima revisione di avanzamento. All'attività \emph{Stesura Incremento Piano di Qualifica [RP]} è stata dunque riservata un periodo temporale più lungo e maggiori risorse, sottraendole dall'attività di progettazione. La data d'inizio di tale attività, a causa della riunione organizzata dal \TV{} del 21-02-2017, è stata spostata dal giorno 6-02-2017 al giorno 22-02-2017. Ulteriori osservazioni sono descritte dopo la seguente sezione.
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/varpa2.png}}
+\label{tab:cgen1}
+
+\caption{Variazione rispetto alla pianificazione per la \PA{} diagramma di Gantt (parte 2)}
+\end{figure}
+
+È stato cambiato il nome del task \emph{Diagrammi di attività Specifica Tecnica}, in quanto errata nella fase di \PA{} ed è stato variato il nome in \emph{Componenti e classi Client Specifica Tecnica} e \emph{Componenti e classi Server Specifica Tecnica}.
+
+Le ore dedicate al task \emph{Redazione Specifica Tecnica} sono variate, da un totale di 114 ore a 95 ore, per una variazione negativa di 19 ore.
+
+Le ore dedicate al task \emph{Incremento Piano di Qualifica [RP]} sono variate, da un totale di 5 ore a 28 ore, per una variazione positiva di 23 ore.
+
+
 
 %Si è verificato un ritardo nella stesura del presente documento a causa di una influenza di un membro del gruppo in data 30-12-2016.
 
@@ -1399,8 +1493,6 @@ Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno ris
 \begin{itemize}
 
 \item Sono state rilevate variazioni nei costi.
-
-\item Non si riportano i grafici di variazione oraria.
 
 \item Si riportano le tabelle di divisione oraria effettive e i relativi costi.
 
@@ -1417,15 +1509,15 @@ Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno ris
     \hline
     \rowcolor[gray]{.9}
     Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
-    \PB & 0 & 0 & 0 & 26 (-4) & 0 & 6 & 32 (-4) \\ \hline
+    \PB & 0 & 0 & 0 & 26 & 0 & 6 & 32 \\ \hline
     \LB & 0 & 3 & 0 & 38 & 0 & 1 & 42 \\ \hline
     \GG & 3 & 0 & 0 & 35 & 0 & 1 & 39 \\ \hline
-    \MM & 0 & 0 & 0 & 42 (-3) & 0 & 4 & 46 (-3) \\ \hline
-    \LS & 2 & 0 & 0 & 36 (-4) & 0 & 6 & 44 (-4) \\ \hline
-    \AZ & 0 & 0 & 0 & 31 (-5) & 0 & 4 & 35 (-5) \\ \hline
+    \MM & 0 & 0 & 0 & 39 (-3) & 0 & 7 (+3) & 46 \\ \hline
+    \LS & 2 & 0 & 0 & 28 (-8) & 0 & 16 (+10) & 44 (+2) \\ \hline
+    \AZ & 0 & 0 & 0 & 31 (-8) & 0 & 14 (+10) & 35 (+2) \\ \hline
     \rowcolor[gray]{.9}
 
-    Totale ore/ruolo & 5 & 3 & 0 & 208 (-16)& 0 & 22 & 238 (-16) \\ \hline
+    Totale ore/ruolo & 5 & 3 & 0 & 189 (-19) & 0 & 45 (+23) & 238 (+4) \\ \hline
     
   \end{tabular}
 }
@@ -1444,15 +1536,15 @@ Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno ris
     \hline
     \rowcolor[gray]{.9}
     Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
-    \PB & 0 & 0 & 0 & 572 (-88) & 0 & 90 & 662 (-88) \\ \hline
+    \PB & 0 & 0 & 0 & 572 & 0 & 90 & 662 \\ \hline
     \LB & 0 & 60 & 0 & 836 & 0 & 15 & 911 \\ \hline
     \GG & 90 & 0 & 0 & 770 & 0 & 15 & 875 \\ \hline
-    \MM & 0 & 0 & 0 & 924 (-66) & 0 & 60 & 984 (-66)\\ \hline
-    \LS & 60 & 0 & 0 & 792 (-88) & 0 & 90 & 942 (-88)\\ \hline
-    \AZ & 0 & 0 & 0 & 682 (-90)& 0 & 60 & 742 (-90)\\ \hline
+    \MM & 0 & 0 & 0 & 858 (-66) & 0 & 105 (+45) & 963 (-21)\\ \hline
+    \LS & 60 & 0 & 0 & 616 (-176) & 0 & 240 (+150) & 916 (-26)\\ \hline
+    \AZ & 0 & 0 & 0 & 506 (-176) & 0 & 210 (+150) & 716 (-26)\\ \hline
     \rowcolor[gray]{.9}
 
-    Totale euro/ruolo & 150 & 60 & 0 & 4576 (-352)& 0 & 330 & 5116 (-352)\\ \hline
+    Totale euro/ruolo & 150 & 60 & 0 & 4158 (-418) & 0 & 675 (+345) & 5043 (-73)\\ \hline
     
   \end{tabular}
   
@@ -1474,21 +1566,28 @@ Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno ris
     Ruolo  & Ore & Costo \\ \hline
     \R & 5 & 150 \\ \hline
     \AM & 3 & 60 \\ \hline
-    \PJ & 208 (-16)& 4576 (-352)\\ \hline
-    \V & 22 & 330 \\ \hline
+    \PJ & 189 (-19) & 4158 (-418)\\ \hline
+    \V & 45 (+23) & 675 (+345) \\ \hline
     \rowcolor[gray]{.9}
 
-   Differenza & -16 & -352 \\ \hline
+   Differenza & +4 & -73 \\ \hline
   \end{tabular}
   
 }
 \label{tab:car}
-\caption{DIfferenza preventivo-consuntivo per ruolo, \PA.}
+\caption{Differenza preventivo-consuntivo per ruolo, \PA. Colonna \emph{Costo} in euro (\euro).}
 \end{figure}
+
+\subsubsection{Considerazioni}
+A fronte delle necessarie correzioni al \PdQ{} non previste è stato necessario rivedere la pianificazione, sottraendo risorse alla progettazione e assegnandole alla verifica. Questo ha portato ad una variazione totale delle ore/persona del gruppo ma è sempre stato rispettato il vincolo delle 105 ore rendicontabili. 
+
+Il consuntivo presenta una differenza di costo negativa a causa del costo diverso delle due diverse mansioni. Queste risorse risparmiate in questa fase saranno investite successivamente qualora necessario al fine di migliorare ulteriormente le attività di verifica, prevedendo l'assegnazione di più ore alla attività di verifica. L'effettiva variazione delle ore assegnate sarà presentata nei prossimi consuntivi di periodo.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\subsubsection{Preventivo a finire}
 
+% SAREBBE DA FARE MA OH
 
 
 
