@@ -34,12 +34,12 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 	\end{itemize}
 	\item nello specifico, prevedendo le seguenti possibili aggiunte nel futuro:
 	\begin{itemize}
-		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del codice JavaScript o Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria \emph{StringTemplate}).
+		\item Generazione di codice in altri linguaggi target: se i manutentori vorranno generare del codice JavaScript o Python, sarà sufficiente aggiungere dei template per il linguaggio scelto (grazie alla libreria \emph{StringTemplate}) e implementare le interfacce \texttt{Generator} e \texttt{Compiler}.
 		\item Diversa compressione del codice generato: attualmente l'applicazione genera un JAR e lo comprime, assieme al file JSON, in formato ZIP; ma si potrebbe facilmente cambiare il formato di compressione in un JAR che contenga egli stesso al suo interno il file JSON.
 		\item Persistenza dei dati del diagramma che arrivano in input al \emph{back end}: si potrebbe voler mantenere un database di utenti dell'applicazione, ognuno con i propri diagrammi mantenuti nel server a tempo indefinito; per questo, basta fornire l'indirizzo della risorsa JSON, che attualmente non viene eliminata dal server. % (oppure per ora potremmo eliminarla...)
 		\item Persistenza del programma generato: si potrebbe voler mantenere anche il codice generato, come il diagramma di input; per fare ciò, basta garantire al client il carattere persistente della risorsa fornita (badando però a non eliminarla dal server). % (per ora la eliminiamo?)
-		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati da un client esterno, anziché in JSON (e.g. disegnatori di diagrammi UML come Astah); sarà sufficiente modificare il package \texttt{parser}.
-		\item Aumento del numero di stereotipi UML offerti: la presenza di un numero consistente di stereotipi non sarà mai un problema, grazie al fatto che vengono caricati dinamicamente nel client in modo asincrono.
+%		\item Diverso formato per i diagrammi in input: si potrebbe voler ricevere dei dati da un client esterno, anziché in JSON (e.g. disegnatori di diagrammi UML come Astah); sarà sufficiente modificare il package \texttt{parser}.
+		\item Modifica degli stereotipi UML offerti: gli stereotipi sono disaccoppiati dalla pagina principale dell'applicazione, in quanto vengono forniti al client separatamente dalla pagina stessa, in modo asincrono.
 	\end{itemize}
 \end{itemize}
 
@@ -48,11 +48,11 @@ Tra le varie qualità desiderabili per la nostra architettura, la progettazione 
 \subsection{Architettura del client} \label{sec:arch_client}
 Il \emph{front end} di \proj{} è una \emph{Single Page Application} (\gloss{SPA}) scritta in HTML5, CSS3 e JavaScript.
 
-L'\texttt{head} (intestazione) della pagina HTML contiene dei puntatori a:
+L'\texttt{head} (intestazione) della pagina HTML contiene dei riferimenti a:
 \begin{itemize}
-	\item le librerie JavaScript elencate nella sezione \ref{sec:tech_client} (con eventuali relativi fogli CSS);
-	\item il foglio di stile CSS della pagina;
-	\item lo script JavaScript che utilizza le librerie di cui sopra.
+	\item uno script JavaScript che sfrutta \requirejs per risolvere le dipendenze tra le varie librerie JavaScript che utilizziamo;
+	\item i fogli di stile CSS di alcune librerie;
+	\item il foglio di stile CSS della pagina.
 \end{itemize}
 
 Il \texttt{body} (corpo) della pagina HTML si compone di pochi blocchi:
@@ -73,7 +73,7 @@ L'architettura del client è suddivisa in tre moduli, come in figura \ref{fig:cl
 
 \texttt{view} offre la classe \texttt{ProjectView}, che rappresenta l'area di disegno principale dell'applicazione. Attorno ad essa sono presenti dei menù: \texttt{DetailsView} visualizza tutti i campi di un elemento o di un collegamento tra elementi e ne permette la modifica; \texttt{NewCellView} visualizza tutti i possibili tipi di elementi e collegamenti che si possono inserire in un diagramma. Tutta l'interfaccia grafica è orchestrata da una \texttt{AppView}, che crea una \texttt{ProjectView}, una \texttt{DetailsView} e una \texttt{NewCellView}.
 
-\texttt{collection} contiene soltanto la classe \texttt{DiagramCollection}, che compone in una collezione più oggetti \texttt{Cell} (tipo definito da \jointjs). Ognuno di questi oggetti è l'elemento di un diagramma (a classi o a blocchi) oppure un collegamento tra elementi del diagramma delle classi.
+\texttt{collection} contiene soltanto la classe \texttt{DiagramCollection}, che compone in una collezione più oggetti \texttt{Graph} (tipo definito da \jointjs). Ognuno di questi oggetti è un diagramma (a classi o a blocchi).
 
 % diagramma dei package del client
 \begin{figure} \label{fig:client_pkg}
@@ -128,5 +128,26 @@ I tre servizi offerti dal server (ottenere la pagina HTML; recuperare stereotipi
 	\includegraphics[scale=0.66]{img/http}
 	\caption{Possibile interazione tra client e server.}
 \end{figure}
+
+\subsubsection{Pagina HTML}
+\begin{itemize}
+	\item risorsa: \texttt{/index.html};
+	\item metodo: GET;
+	\item utilizzo: il client richiede al server la pagina principale dell'applicazione web.
+\end{itemize}
+
+\subsubsection{Stereotipi UML}
+\begin{itemize}
+	\item risorsa: \texttt{/stereotypes};
+	\item metodo: GET;
+	\item utilizzo: il client richiede al server gli stereotipi disponibili.
+\end{itemize}
+
+\subsubsection{Generazione del codice}
+\begin{itemize}
+	\item risorsa: \texttt{/generate};
+	\item metodo: POST;
+	\item utilizzo: il client richiede al server di generare il codice relativo al diagramma creato, mandandogli il file JSON del diagramma e ricevendo l'indirizzo della risorsa contenente il codice generato.
+\end{itemize}
 
 % ci sarebbe da fare pure una cosa simile per il recupero degli stereotipi
