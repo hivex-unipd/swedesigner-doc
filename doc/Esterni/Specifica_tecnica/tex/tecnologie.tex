@@ -21,14 +21,14 @@ La libreria sfrutta le seguenti tecnologie per il suo funzionamento:
 	\end{itemize}
 \end{itemize}
 
-È reperibile un \emph{plug-in} di \jointjs{} che sarà sfruttato per realizzare diagrammi UML. Tale \emph{plug-in} offre delle forme geometriche e delle frecce che ci servono per il disegno del diagramma delle classi e dei diagrammi a blocchi di ogni metodo.
+% È reperibile un \emph{plug-in} di \jointjs{} che sarà sfruttato per realizzare diagrammi UML. Tale \emph{plug-in} offre delle forme geometriche e delle frecce che ci servono per il disegno del diagramma delle classi e dei diagrammi a blocchi di ogni metodo.
 
 L'appendice \ref{sec:app_jointjs} riporta un approfondimento su \jointjs.
 
 \subsubsection{\backbonejs}
-La libreria \backbonejs{} permette di strutturare applicazioni web single page (\gloss{SPA}) fornendo \textbf{modelli} con binding di chiave-valore, eventi, \textbf{collezioni} e \textbf{viste} con una gestione degli eventi dichiarativa. Essa offre inoltre una interfaccia RESTful.
+La libreria \backbonejs{} permette di strutturare applicazioni web single page (\gloss{SPA}) fornendo \textbf{modelli} con binding di chiave-valore, eventi, \textbf{collezioni} e \textbf{viste} con una gestione degli eventi dichiarativa. Essa offre inoltre una interfaccia \gloss{RESTful}.
 
-A causa della struttura data alla libreria \jointjs{}, sviluppata tramite MVC (collection), al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà il lato client di \proj{} estendendo le funzionalità di base offerte da \jointjs{} usando il modello \mvc{} offerto da \backbonejs{}.	
+A causa della struttura data alla libreria \jointjs{}, sviluppata tramite MVC, al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà il lato client di \proj{} estendendo le funzionalità di base offerte da \jointjs{} usando il modello MVC offerto da \backbonejs.
 
 \subsubsection{\jquery}
 La libreria \jquery{} è sfruttata da \jointjs{} ed è necesaria per semplificare varie operazioni di basso livello.
@@ -37,7 +37,7 @@ La libreria \jquery{} è sfruttata da \jointjs{} ed è necesaria per semplificar
 La libreria \requirejs{} è un loader di moduli e file \js{}. Esso si occuperà principalmente di risolvere dipendenze delle librerie \js{} utilizzate.
 
 \subsubsection{\lodash}
-La libreria \lodash{} fornisce metodi di utilità non offerti da \js{} puro. Rispetto alla simile libreria \emph{Underscore}, questa fornisce più performance, più features e miglior documentazione. Essa inoltre è usata da \jointjs{}.
+La libreria \lodash{} fornisce metodi di utilità non offerti da \js{} puro. Rispetto alla simile libreria \emph{Underscore}, questa fornisce più performance, più features e miglior documentazione. Essa inoltre è usata da \jointjs.
 
 % \subsubsection{qunit}
 % assertions, test di regressione
@@ -54,7 +54,7 @@ Il \emph{back end} della nostra applicazione è ospitato su un \gloss{server} Ap
 Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source \emph{Spring} (disponibile all'indirizzo \url{spring.io}), utile per aderire ai princìpi dello stile architetturale REST.
 
 \subsubsection{StringTemplate}
-StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Il server della nostra applicazione la utilizza per:
+StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Come indicato sul sito ufficiale, questa libreria è particolarmente adatta alla genereazione di codice. Il server della nostra applicazione la utilizza per:
 \begin{enumerate}
 	\item creare dei template di codice Java, inframmezzati da speciali marcatori definiti da StringTemplate;
 	\item popolare tali template con i dati ricevuti dal client.
