@@ -1,6 +1,11 @@
 \subsection{\nogloxy{swedesigner::client}}
 \label{\nogloxy{swedesigner::client}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/client_pkg}}
+	\caption{Diagramma package client}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package descrive le componenti del \emph{front end}, scritte in JavaScript.
@@ -41,6 +46,13 @@ questa classe ci permette di aggiungere della logica alla collezione di tutti i 
 \subsection{\nogloxy{swedesigner::client::model}}
 \label{\nogloxy{swedesigner::client::model}}
 \subsubsection{Informazioni generali}
+
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/client_model}}
+	\caption{Diagramma package client::model}
+\end{figure}
+
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene i modelli di dati usati dal client per rappresentare l'informazione manipolata dall'utente.
@@ -134,6 +146,14 @@ questa classe collection possiede un certo numero di \texttt{Graph}, offerti dal
 \subsection{\nogloxy{swedesigner::client::model::celltypes}}
 \label{\nogloxy{swedesigner::client::model::celltypes}}
 \subsubsection{Informazioni generali}
+
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/client_cellTypes}}
+	\caption{Diagramma package client::model::celltypes}
+\end{figure}
+
+
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene la definizione del modello degli elementi grafici dell'applicazione (e.g. diagrammi delle classi, blocchi condizionali\dots). 
@@ -388,6 +408,13 @@ eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \t
 \subsection{\nogloxy{swedesigner::client::model::utility}}
 \label{\nogloxy{swedesigner::client::model::utility}}
 \subsubsection{Informazioni generali}
+
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/client_utility}}
+	\caption{Diagramma package client::model::utility}
+\end{figure}
+
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package racchiude le classi che definiscono i principali comandi dell'applicazione; esse fanno parte di un unico pattern Command, usato dalla \texttt{AppView} principale.
@@ -470,6 +497,11 @@ questa classe rappresenta le caratteristiche dello stereotipo che viene assegnat
 \subsection{\nogloxy{swedesigner::client::view}}
 \label{\nogloxy{swedesigner::client::view}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/client_view}}
+	\caption{Diagramma package client::view}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package raccoglie le classi che rappresentano i menù laterali e il foglio SVG che vengono visualizzati dal browser, che popolano template e si sottoscrivono alla view tramite un pattern Observer. (I template non sono contenuti in questo package.)

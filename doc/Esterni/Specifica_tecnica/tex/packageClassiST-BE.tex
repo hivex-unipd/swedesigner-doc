@@ -1,6 +1,11 @@
 \subsection{\nogloxy{swedesigner::server}}
 \label{\nogloxy{swedesigner::server}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_pkg}}
+	\caption{Diagramma package server}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene le componenti del server, scritte in Java.
@@ -29,6 +34,11 @@ Questo package contiene le componenti secondarie necessarie al server, indipende
 \subsection{\nogloxy{swedesigner::server::compiler}}
 \label{\nogloxy{swedesigner::server::compiler}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_compiler}}
+	\caption{Diagramma package server::compiler}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene le classi adibite alla compilazione del codice sorgente in codice eseguibile (nel linguaggio target specifico). È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \texttt{java}.
@@ -102,6 +112,11 @@ questa interfaccia si occupa di fornire un oggetto compiler generico a chi lo ri
 \subsection{\nogloxy{swedesigner::server::controller}}
 \label{\nogloxy{swedesigner::server::controller}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_controller}}
+	\caption{Diagramma package server::controller}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene i vari controller che implementano il pattern Front Controller fornito dal framework \emph{Spring}. Ogni controller dovrebbe occuparsi di gestire una richiesta e di rispondere opportunamente ad essa, attraverso l'interfaccia REST definita.
@@ -135,6 +150,11 @@ questa classe si occupa di creare e salvare su disco un archivio compresso conte
 \subsection{\nogloxy{swedesigner::server::generator}}
 \label{\nogloxy{swedesigner::server::generator}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_generator}}
+	\caption{Diagramma package server::generator}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene le classi adibite alla trasformazione dal diagramma (rappresentato in oggetti Java derivati da oggetti JSON) a codice sorgente, nel linguaggio target specifico. È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \texttt{java}.
@@ -214,6 +234,11 @@ questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a
 \subsection{\nogloxy{swedesigner::server::parser}}
 \label{\nogloxy{swedesigner::server::parser}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_parser}}
+	\caption{Diagramma package server::parser}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package presenta le classi utili all'attività di parsing dei dati ricevuti dai client.
@@ -238,6 +263,11 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 \subsection{\nogloxy{swedesigner::server::project}}
 \label{\nogloxy{swedesigner::server::project}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_project}}
+	\caption{Diagramma package server::project}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene al suo interno le classi utili a rappresentare un progetto UML. Il package parser necessita di questo package per poter dare in output un programma rappresentato in memoria come oggetti Java. Per chiarezza e per evitare l'uso di keyword riservate dal linguaggio Java, all'inizio del nome di queste classi è inserito il prefisso \texttt{Parsed} (e.g. \texttt{ParsedClass}).
@@ -505,6 +535,11 @@ deriva da \texttt{ParsedInstruction}.
 \subsection{\nogloxy{swedesigner::server::stereotype}}
 \label{\nogloxy{swedesigner::server::stereotype}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_stereotype}}
+	\caption{Diagramma package server::stereotype}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package offre le classi che descrivono ciò che caratterizza un particolare stereotipo. Queste classi derivano tutte da una classe base chiamata \texttt{Stereotype}. Le classi che definiscono come deve variare ogni stereotipo sono contraddistinte dal suffisso \texttt{Stereotype} (e.g. \texttt{BoardStereotype}). Si noti che tra queste classi non sono presenti dei legami, in quanto sono necessarie alla generazione del codice. La struttura degli stereotipi assegnabili ad ogni classe e le loro relazioni saranno definite successivamente nella \emph{Definizione di Prodotto}.
@@ -514,6 +549,11 @@ Questo package offre le classi che descrivono ciò che caratterizza un particola
 \subsection{\nogloxy{swedesigner::server::template}}
 \label{\nogloxy{swedesigner::server::template}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_template}}
+	\caption{Diagramma package server::template}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene le classi necessarie a trasformare l'oggetto che rappresenta il programma in una stringa di testo che rappresenta il codice sorgente tramite un sistema a template, il quale definirà tramite dei file di testo la struttura di ogni componente del programma; per facilitare questo compito sarà usata la libreria \stringtemplate{}. Similarmente al package \texttt{Generator} si è prevista la possibilità di implementare un sistema di template per ogni linguaggio, implementando diversamente l'interfaccia della classe Template e definendo un nuovo package (e.g. \texttt{Java}).
@@ -587,6 +627,11 @@ questa interfaccia si occupa di fornire un oggetto template generico a chi lo ri
 \subsection{\nogloxy{swedesigner::server::utility}}
 \label{\nogloxy{swedesigner::server::utility}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_utility}}
+	\caption{Diagramma package server::utility}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package contiene le componenti secondarie necessarie al server, indipendentemente dal linguaggio target dell'applicazione.
