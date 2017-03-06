@@ -2016,7 +2016,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
 		\hline
 		Completezza									&								&							&\\
-		Numero di violazioni di alta importanza		&0								&0							&0\\						
+		Numero di violazioni di alta importanza		&0								&0							&22*\\						
 		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
 		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
 		\hline
@@ -2027,12 +2027,14 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\hline
 		Stile 										&								&							&\\
 		Numero di violazioni di alta importanza		&0								&0							&0\\						
-		Numero di violazioni di media importanza	&0 - 5							&0							&0\\						
+		Numero di violazioni di media importanza	&0 - 5							&0							&3\\						
 		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
 		\hline
 		\end{tabular}
 		\caption{Esiti del calcolo delle metriche relative alla progettazione}
 		\end{table}
+		
+		* l'alto valore del numero di violazioni di alta importanza relative alla completezza è dovuto al fatto che SDMetrics indica come non usate le classi che nell'attuale diagramma dei package implementano interfacce o classi astratte e che quindi a differenza della loro superclasse diretta non sono esplicitamente coinvolte in alcun tipo di associazione di dipendenza o riferimento.  
 
 		\subsubsection{Verifica della qualità dell'architettura}
 		Per verificare l'osservanza degli obiettivi riguardanti la qualità dell'architettura prodotta, sono stati calcolati i valori delle metriche relative ai diagrammi dei package.
@@ -2043,17 +2045,29 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\hline
 		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
 		\hline
-		Distanza dalla sequenza principale normalizzata &0.0 - 0.7 &0.0 - 0.5 & \\
+		Distanza dalla sequenza principale normalizzata & &\\
+		Model.utility &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		Model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.model &0.0 - 0.7 &0.0 - 0.5 &0.625\\
+		client.collection &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.view &0.0 - 0.7 &0.0 - 0.5 &0\\
 		\hline
-		Numero di figli diretti &0 - 4 &0 - 2 & \\
+		Numero di figli diretti &0 - 4 &0 - 2 &min 0 max 8* **\\
 		\hline
 		Numero di tipi per package &0 - 30 &0 - 20 & \\
+		Model.utility &0 - 30 &0 - 20 &5\\
+		Model.celltypes &0 - 30 &0 - 20 &19 \\
+		client.model &0 - 30 &0 - 20 &3 \\
+		client.collection &0 - 30 &0 - 20 &1 \\
+		client.view &0 - 30 &0 - 20 &4 \\
 		\hline
-		Profondità della gerarchia &0 - 4 &1 - 2 & \\
+		Profondità della gerarchia &0 - 4 &1 - 2 &min 0 max 2*\\
 		\hline
 		\end{tabular}
 		\caption{Esiti del calcolo delle metriche relative all'architettura}
 		\end{table}
+	* abbiamo deciso di specificare solamente i valori massimi e minimi della metrica per evitare di creare tabelle troppo prolisse e poco leggibili, a fronte di un contenuto equivalente a quello proposto.
+	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
 
 \appendix
 \section{Standard adottati}
