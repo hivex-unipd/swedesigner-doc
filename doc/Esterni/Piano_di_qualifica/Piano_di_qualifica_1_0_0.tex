@@ -2016,7 +2016,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
 		\hline
 		Completezza									&								&							&\\
-		Numero di violazioni di alta importanza		&0								&0							&22*\\						
+		Numero di violazioni di alta importanza		&0								&0							&27*\\						
 		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
 		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
 		\hline
@@ -2027,14 +2027,15 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\hline
 		Stile 										&								&							&\\
 		Numero di violazioni di alta importanza		&0								&0							&0\\						
-		Numero di violazioni di media importanza	&0 - 5							&0							&3\\						
+		Numero di violazioni di media importanza	&0 - 5							&0							&13**\\						
 		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
 		\hline
 		\end{tabular}
 		\caption{Esiti del calcolo delle metriche relative alla progettazione}
 		\end{table}
 		
-		* l'alto valore del numero di violazioni di alta importanza relative alla completezza è dovuto al fatto che SDMetrics indica come non usate le classi che nell'attuale diagramma dei package implementano interfacce o classi astratte e che quindi a differenza della loro superclasse diretta non sono esplicitamente coinvolte in alcun tipo di associazione di dipendenza o riferimento.  
+		* l'alto valore del numero di violazioni di alta importanza relative alla completezza è dovuto al fatto che SDMetrics indica come non usate le classi che nell'attuale diagramma dei package implementano interfacce o classi astratte e che quindi a differenza della loro superclasse diretta non sono esplicitamente coinvolte in alcun tipo di associazione di dipendenza o riferimento.
+		** l'alto valore del numero di violazione di media importanza relative allo stile è dovuto al fatto che nel server in alcune occasioni viene violato lo Stable-Dependencies Principle perchè alcuni package dipendono da altri package contenenti una singola classe concreta. Basta quindi che i primi abbiano una singola interfaccia affinchè la violazione venga segnalata.		
 
 		\subsubsection{Verifica della qualità dell'architettura}
 		Per verificare l'osservanza degli obiettivi riguardanti la qualità dell'architettura prodotta, sono stati calcolati i valori delle metriche relative ai diagrammi dei package.
@@ -2046,20 +2047,42 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
 		\hline
 		Distanza dalla sequenza principale normalizzata & &\\
-		Model.utility &0.0 - 0.7 &0.0 - 0.5 &0.5\\
-		Model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.model.utility &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		client.model &0.0 - 0.7 &0.0 - 0.5 &0.625\\
 		client.collection &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		client.view &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.controller &0.0 - 0.7 &0.0 - 0.5 &0.39\\
+		server.parser  &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.generator.java  &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.generator &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.stereotype  &0.0 - 0.7 &0.0 - 0.5 &0.33\\
+		server.project  &0.0 - 0.7 &0.0 - 0.5 &0.39\\
+		server.template.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
+		server.template  &0.0 - 0.7 &0.0 - 0.5 &0.16\\
+		server.compiler.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
+		server.compiler  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.utility  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		\hline
 		Numero di figli diretti &0 - 4 &0 - 2 &min 0 max 8* **\\
 		\hline
-		Numero di tipi per package &0 - 30 &0 - 20 & \\
-		Model.utility &0 - 30 &0 - 20 &5\\
-		Model.celltypes &0 - 30 &0 - 20 &19 \\
-		client.model &0 - 30 &0 - 20 &3 \\
-		client.collection &0 - 30 &0 - 20 &1 \\
-		client.view &0 - 30 &0 - 20 &4 \\
+		Numero di tipi per package & &\\
+		client.model.utility &0 - 30 &0 - 20 &6\\
+		client.model.celltypes &0 - 30 &0 - 20 &17\\
+		client.model &0 - 30 &0 - 20 &3\\
+		client.collection &0 - 30 &0 - 20 &1\\
+		client.view &0 - 30 &0 - 20 &4\\
+		server.controller &0 - 30 &0 - 20 &1\\
+		server.parser &0 - 30 &0 - 20 &1\\
+		server.generator.java &0 - 30 &0 - 20 &1\\
+		server.generator &0 - 30 &0 - 20 &2\\
+		server.stereotype &0 - 30 &0 - 20 &1\\
+		server.project &0 - 30 &0 - 20 &16\\
+		server.template.java &0 - 30 &0 - 20 &1\\
+		server.template &0 - 30 &0 - 20 &2\\
+		server.compiler.java &0 - 30 &0 - 20 &1\\
+		server.compiler &0 - 30 &0 - 20 &2\\
+		server.utility &0 - 30 &0 - 20 &1\\
 		\hline
 		Profondità della gerarchia &0 - 4 &1 - 2 &min 0 max 2*\\
 		\hline
