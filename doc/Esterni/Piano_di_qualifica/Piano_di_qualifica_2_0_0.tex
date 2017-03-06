@@ -2044,12 +2044,11 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		Per verificare l'osservanza degli obiettivi riguardanti la qualità dell'architettura prodotta, sono stati calcolati i valori delle metriche relative ai diagrammi dei package.
 		
 		I risultati ottenuti sono elencati nella seguente tabella:
-		\begin{table}[H]
-		\begin{tabular}{|p{5.5cm}|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
+		\begin{longtable}{|p{5.5cm}|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
 		\hline
 		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
 		\hline
-		Distanza dalla sequenza principale normalizzata & &\\
+		\textbf{Distanza dalla sequenza principale normalizzata} & & &\\
 		client.model.utility &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		client.model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		client.model &0.0 - 0.7 &0.0 - 0.5 &0.625\\
@@ -2067,9 +2066,9 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		server.compiler  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		server.utility  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		\hline
-		Numero di figli diretti &0 - 4 &0 - 2 &min 0 max 8* **\\
+		Numero di figli diretti &0 - 4 &0 - 2 &min0 max8* **\\
 		\hline
-		Numero di tipi per package & &\\
+		\textbf{Numero di tipi per package} & & &\\
 		client.model.utility &0 - 30 &0 - 20 &6\\
 		client.model.celltypes &0 - 30 &0 - 20 &17\\
 		client.model &0 - 30 &0 - 20 &3\\
@@ -2089,9 +2088,8 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\hline
 		Profondità della gerarchia &0 - 4 &1 - 2 &min 0 max 2*\\
 		\hline
-		\end{tabular}
 		\caption{Esiti del calcolo delle metriche relative all'architettura}
-		\end{table}
+		\end{longtable}
 	* abbiamo deciso di specificare solamente i valori massimi e minimi della metrica per evitare di creare tabelle troppo prolisse e poco leggibili, a fronte di un contenuto equivalente a quello proposto.
 	
 	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
@@ -2146,11 +2144,11 @@ Ogni attributo di processo è misurabile e sono definiti dallo standard 4 divers
 
 Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi sono usate nel contesto di una strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo PDCA.
 \\Il ciclo PDCA, altresì noto come ciclo di Deming, definisce un'organizzazione interna dei processi incentrata sul principio del miglioramento continuo allo scopo di renderli automigliorativi.
-\\Le fasi in cui esso si articola sono quattro:
+\\I passi in cui esso si articola sono quattro:
 	\begin{itemize}
-		\item \textbf{Pianificare (Plan)}: in tale fase vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
-		\item \textbf{Eseguire (Do)}: in questa fase vengono attuate le azioni migliorative pianificate al passo precedente. Si procede inoltre ad eseguire misurazioni e raccogliere dati utili per le successive fasi di analisi e controllo.
-		\item \textbf{Valutare (Check)}: si tratta di una fase di verifica in cui l'esito delle azioni di miglioramento viene confrontato rispetto alle attese e agli obiettivi pianificati.
+		\item \textbf{Pianificare (Plan)}: vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
+		\item \textbf{Eseguire (Do)}: vengono attuate le azioni migliorative pianificate al passo precedente. Si procede inoltre ad eseguire misurazioni e raccogliere dati utili per i successivi passi di analisi e controllo.
+		\item \textbf{Valutare (Check)}: l'esito delle azioni di miglioramento viene confrontato rispetto alle attese e agli obiettivi pianificati.
 		\item \textbf{Agire (Act)}: se l'esito delle valutazioni effettuate al passo precedente risulta positivo, i cambiamenti introdotti nell'esecuzione del processo vengono incorporati stabilmente in esso e standardizzati.
 	\end{itemize}
 	\subsection{Qualità di prodotto - ISO/IEC:9126}
