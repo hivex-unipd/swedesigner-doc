@@ -12,7 +12,16 @@
 \title{Specifica Tecnica}
 % \date{9 gennaio 2017}
 
+% Per neutralizzare \nogloxy:
 \newcommand{\nogloxy}[1]{#1}
+
+% Elenco dei design pattern utilizzati in un documento:
+\newcommand{\listpatternname}{Elenco dei \emph{design pattern}}
+\newlistof{pattern}{pat}{\listpatternname}
+\newcommand{\pattern}[1]{%
+\refstepcounter{pattern}
+\emph{#1}
+\addcontentsline{pat}{pattern}{\protect\numberline{\thepattern}#1}}
 
 \begin{document}
 \maketitle
