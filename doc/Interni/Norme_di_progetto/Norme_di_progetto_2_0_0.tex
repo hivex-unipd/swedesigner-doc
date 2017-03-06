@@ -540,88 +540,88 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	Nel contesto dell'attività di verifica dei processi istanziati nel corso dell'attività di progetto e dell'analisi statica dei relativi prodotti (codice, documenti, design architetturale) vengono in seguito definite delle metriche utili alla misurazione quantitativa degli obiettivi i qualità come definiti nella sezione relativa del documento \PdQ .
 	Per ognuna delle metriche viene definito il nome, lo strumento utilizzato per effettuare la relativa misurazione e il range o il valore di accettazione per essa stabilito.
 			\normalsize
-\begin{longtable}{|p{0.3\textwidth}|p{0.4\textwidth}|p{0.3\textwidth}|}
+\begin{longtable}{|p{0.5\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|}
 	\hline 
-	\textbf{Metrica} & \textbf{Range/Valore di accettazione} & \textbf{Strumenti di misura} \\ 
+	\textbf{Metrica} & \textbf{Range/Valore accettazione} & \textbf{Strumenti di misura} \\ 
 	\hline
 	\endhead 
-	Branch Coverage & Range di accettazione: 80 - 100 &  Travis CI \\ 
+	Branch Coverage &  80 - 100 &  Travis CI \\ 
 	\hline 
-	Budget Variance & Range di accettazione: -25 - 0 &  Asana \\ 
+	Budget Variance &  -25 - 0 &  Asana \\ 
 	\hline 
-	Complessità ciclomatica per metodo & Range di accettazione: 0 - 10 &  CodePro Analytix \\ 
+	Complessità ciclomatica per metodo &  0 - 10 &  CodePro Analytix \\ 
 	\hline 
-	Copertura requisiti desiderabili & Range di accettazione: 50 - 100 & La misura viene effettuata prendendo in considerazione le informazioni aggiornate nel database di PragmaDB a seguito dell'esecuzione con successo dei relativi test di sistema \\ 
+	Copertura requisiti desiderabili &  50 - 100 & PragmaDB (funzionalità custom) \\ 
 	\hline 
-	Copertura dei requisiti obbligatori & Valore di accettazione: 100 & La misura viene effettuata prendendo in considerazione le informazioni aggiornate nel database di PragmaDB a seguito dell'esecuzione con successo dei relativi test di sistema \\ 
+	Copertura dei requisiti obbligatori &  100 & PragmaDB (funzionalità custom) \\ 
 	\hline 
-	Distanza dalla sequenza principale normalizzata & Range di accettazione: 0.0 - 0.7 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Distanza dalla sequenza principale normalizzata &  0.0 - 0.7 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
 	\hline 
-	Grado di accoppiamento afferente per package & Range di accettazione: 0 - 39 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Grado di accoppiamento afferente per package &  0 - 39 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
 	\hline 
-	Grado di accoppiamento efferente per package & Range di accettazione: 0 - 16 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Grado di accoppiamento efferente per package &  0 - 16 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
 	\hline 
-	Indice di Gulpease & Range di accettazione: 40 - 100 & Script in Perl \\ 
+	Indice di Gulpease &  40 - 100 & Script in Perl \\ 
 	\hline 
-	Instabilità & Range di accettazione: 0.0 - 0.4 e 0.6 - 1.0 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Instabilità &  0.0 - 0.4 e 0.6 - 1.0 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
 	\hline 
-	Numero di campi dati per classe & Range di accettazione: 0 - 20 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Numero di campi dati per classe &  0 - 20 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
 	\hline 
-	Numero di figli diretti & Range di accettazione: 0 - 4 &  SDMetrics per la progettazione e CodePro Analytix per la codifica \\ 
+	Numero di figli diretti &  0 - 4 &  SDMetrics per la progettazione e CodePro Analytix per la codifica \\ 
 	\hline 
-	Numero di linee di codice per metodo & Range di accettazione: 0 - 40 &  CodePro Analytix \\ 
+	Numero di linee di codice per metodo &  0 - 40 &  CodePro Analytix \\ 
 	\hline 
-	Numero di metodi per classe & Range di accettazione: 0 - 20 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Numero di metodi per classe &  0 - 20 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
 	\hline 
-	Numero di parametri per metodo & Range di accettazione: 0 - 8 &  CodePro Analytix \\ 
+	Numero di parametri per metodo &  0 - 8 &  CodePro Analytix \\ 
 	\hline 
-	Numero di tipi per package & Range di accettazione: 0 - 30 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Numero di tipi per package &  0 - 30 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
 	\hline 
-	Numero di violazioni della completezza architetturale di alta importanza & Valore di accettazione: 0 &  SDMetrics \\ 
+	Numero di violazioni della completezza architetturale di alta importanza &  0 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni della completezza architetturale di media importanza & Range di accettazione: 0 - 5 &  SDMetrics \\ 
+	Numero di violazioni della completezza architetturale di media importanza &  0 - 5 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni della completezza architetturale di bassa importanza & Range di accettazione: 0 - 10 &  SDMetrics \\ 
+	Numero di violazioni della completezza architetturale di bassa importanza &  0 - 10 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni della correttezza architetturale di alta importanza & Valore di accettazione: 0 &  SDMetrics \\ 
+	Numero di violazioni della correttezza architetturale di alta importanza &  0 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni della correttezza architetturale di media importanza & Range di accettazione: 0 - 5 &  SDMetrics \\ 
+	Numero di violazioni della correttezza architetturale di media importanza &  0 - 5 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni della correttezza architetturale di bassa importanza & Range di accettazione: 0 - 10 &  SDMetrics \\ 
+	Numero di violazioni della correttezza architetturale di bassa importanza &  0 - 10 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni dello stile architetturale di alta importanza & Valore di accettazione: 0 &  SDMetrics \\ 
+	Numero di violazioni dello stile architetturale di alta importanza &  0 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni dello stile architetturale di media importanza & Range di accettazione: 0 - 5 &  SDMetrics \\ 
+	Numero di violazioni dello stile architetturale di media importanza &  0 - 5 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni dello stile architetturale di bassa importanza & Range di accettazione: 0 - 10 &  SDMetrics \\ 
+	Numero di violazioni dello stile architetturale di bassa importanza &  0 - 10 &  SDMetrics \\ 
 	\hline 
-	Numero di violazioni di alta importanza delle norme di codifica & Valore di accettazione: 0 &  CodePro Analytix \\ 
+	Numero di violazioni di alta importanza delle norme di codifica &  0 &  CodePro Analytix \\ 
 	\hline 
-	Numero di violazioni di media importanza delle norme di codifica & Range di accettazione: 0 - 5 &  CodePro Analytix \\ 
+	Numero di violazioni di media importanza delle norme di codifica &  0 - 5 &  CodePro Analytix \\ 
 	\hline 
-	Numero di violazioni di bassa importanza delle norme di codifica & Range di accettazione: 0 - 10 &  CodePro Analytix \\ 
+	Numero di violazioni di bassa importanza delle norme di codifica &  0 - 10 &  CodePro Analytix \\ 
 	\hline 
-	Percentuale di test di unità eseguiti & Range di accettazione: 90 - 100 &  Travis CI \\ 
+	Percentuale di test di unità eseguiti &  90 - 100 &  Travis CI \\ 
 	\hline 
-	Percentuale di test di integrazione eseguiti & Range di accettazione: 90 - 100 &  Travis CI \\ 
+	Percentuale di test di integrazione eseguiti &  90 - 100 &  Travis CI \\ 
 	\hline 
-	Percentuale di test di sistema eseguiti & Range di accettazione: 90 - 100 &  Travis CI \\ 
+	Percentuale di test di sistema eseguiti &  90 - 100 &  Travis CI \\ 
 	\hline 
-	Percentuale di test di validazione eseguiti & Range di accettazione: 90 - 100 & Travis CI \\ 
+	Percentuale di test di validazione eseguiti &  90 - 100 & Travis CI \\ 
 	\hline 
-	Percentuale di test superati & Range di accettazione: 90 - 100 & La misura viene effettuata prendendo in considerazione le informazioni aggiornate nel database di PragmaDB a seguito dell'esecuzione con successo dei relativi test di sistema \\ 
+	Percentuale di test superati &  90 - 100 & Travis CI \\ 
 	\hline 
-	Percentuale linee di commento su linee di codice & Range di accettazione: 20 - 40 &  CodePro Analytix \\ 
+	Percentuale linee di commento su linee di codice &  20 - 40 &  CodePro Analytix \\ 
 	\hline 
-	Profondità di annidamento dei blocchi & Range di accettazione: 0 - 8 &  CodePro Analytix \\ 
+	Profondità di annidamento dei blocchi &  0 - 8 &  CodePro Analytix \\ 
 	\hline 
-	Profondità nella gerarchia & Range di accettazione: 0 - 4 &  SDMetrics per la progettazione e CodePro Analytix per la codifica \\ 
+	Profondità nella gerarchia &  0 - 4 &  SDMetrics per la progettazione e CodePro Analytix per la codifica \\ 
 	\hline 
-	Statement Coverage & Range di accettazione: 80 - 100 &  Travis CI \\ 
+	Statement Coverage &  80 - 100 &  Travis CI \\ 
 	\hline 
-	Schedule Variance & Range di accettazione: -25 - 0 &  Asana \\ 
+	Schedule Variance &  -25 - 0 &  Asana \\ 
 	\hline 
-	Validazione W3C & Range di accettazione: 0 - 20 &  Il validatore W3C disponibile all'indirizzo \url{validator.w3.org/} \\ 
+	Validazione W3C &  0 - 20 &  Il validatore W3C disponibile all'indirizzo \url{validator.w3.org/} \\ 
 	\hline 
 	\caption[Metriche]{Metriche}
 	\label{tabella:metriche}
