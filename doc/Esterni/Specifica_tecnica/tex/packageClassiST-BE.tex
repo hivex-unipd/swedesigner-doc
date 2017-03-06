@@ -1,65 +1,75 @@
-\subsection{\nogloxy{SWEDesigner::Server}}
-\label{\nogloxy{SWEDesigner::Server}}
+\subsection{\nogloxy{swedesigner::server}}
+\label{\nogloxy{swedesigner::server}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_pkg}}
+	\caption{Diagramma package server}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questo package contiene le componenti del server, scritte in Java.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner}]{\nogloxy{\texttt{SWEDesigner}}}
+Questo package contiene le componenti del server, scritte in Java.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner}]{\nogloxy{\texttt{swedesigner}}}
 \item \textbf{Package contenuti}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Compiler}]{\nogloxy{\texttt{Compiler}}}\\
-questo package contiene le classi adibite alla compilazione del codice sorgente in eseguibile nel linguaggio target specifico. È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \emph{java}.
-\item \hyperref[\nogloxy{SWEDesigner::Server::Controller}]{\nogloxy{\texttt{Controller}}}\\
-questo package contiene i vari controller che implementano il pattern Front Controller fornito dal framework \spring{}. Ogni controller dovrebbe occuparsi di gestire una richiesta e di rispondere opportunamente ad essa, attraverso il protocollo REST definito.
-\item \hyperref[\nogloxy{SWEDesigner::Server::Generator}]{\nogloxy{\texttt{Generator}}}\\
-questo package contiene le classi adibite alla trasformazione da programma rappresentato in memoria a codice sorgente, nel linguaggio target specifico. È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \emph{java}.
-\item \hyperref[\nogloxy{SWEDesigner::Server::Parser}]{\nogloxy{\texttt{Parser}}}\\
-al suo interno sono inserite le classi utili all'attività di parsing delle richieste provenienti dai client.
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project}]{\nogloxy{\texttt{Project}}}\\
-questo package contiene al suo interno le classi utili a rappresentare un progetto. Il package parser necessita di questo package per poter dare in output un programma rappresentato in memoria. Per chiarezza e per evitare l'uso di keyword riservate dal linguaggio Java, all'inizio del nome di queste classi è inserito il prefisso \emph{Parsed} (e.g. \emph{ParsedClass}).
-\item \hyperref[\nogloxy{SWEDesigner::Server::Stereotype}]{\nogloxy{\texttt{Stereotype}}}\\
-all'interno di questo package sono inserite le classi che descrivono ciò che caratterizza un particolare stereotipo. Queste classi derivano tutte da una classe base, chiamata Stereotype. Le classi che definiscono come deve variare ogni stereotipo sono contraddistinte dal suffisso \emph{Stereotype} (e.g. BoardStereotype). Si noti che tra queste classi non sono presenti dei legami, in quanto queste classi sono necessarie alla generazione del codice. La struttura degli stereotipi assegnabili ad ogni classe e le loro relazioni saranno definite successivamente nella \emph{Definizione di prodotto v 1.0.0}.
-\item \hyperref[\nogloxy{SWEDesigner::Server::Template}]{\nogloxy{\texttt{Template}}}\\
-questo package contiene le classi necessarie a trasformare l'oggetto che rappresenta il programma in una stringa di testo che rappresenta il codice sorgente tramite un sistema a template, il quale definirà tramite dei file di testo la struttura di ogni componente del programma; per facilitare questo compito sarà usata la libreria \emph{StringTemplate}. Similarmente al package \emph{Generator} si è prevista la possibilità di implementare un sistema di template per ogni linguaggio, implementando diversamente l'interfaccia della classe Template e definendo un nuovo package (e.g. \emph{Java}).
-\item \hyperref[\nogloxy{SWEDesigner::Server::Utility}]{\nogloxy{\texttt{Utility}}}\\
-in questo package sono contenute le componenti secondarie necessarie al server, indipendentemente dal linguaggio target dell'applicazione.
+\item \hyperref[\nogloxy{swedesigner::server::compiler}]{\nogloxy{\texttt{compiler}}}\\
+Questo package contiene le classi adibite alla compilazione del codice sorgente in codice eseguibile (nel linguaggio target specifico). È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \texttt{java}.
+\item \hyperref[\nogloxy{swedesigner::server::controller}]{\nogloxy{\texttt{controller}}}\\
+Questo package contiene i vari controller che implementano il pattern Front Controller fornito dal framework \emph{Spring}. Ogni controller dovrebbe occuparsi di gestire una richiesta e di rispondere opportunamente ad essa, attraverso l'interfaccia REST definita.
+\item \hyperref[\nogloxy{swedesigner::server::generator}]{\nogloxy{\texttt{generator}}}\\
+Questo package contiene le classi adibite alla trasformazione dal diagramma (rappresentato in oggetti Java derivati da oggetti JSON) a codice sorgente, nel linguaggio target specifico. È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \texttt{java}.
+\item \hyperref[\nogloxy{swedesigner::server::parser}]{\nogloxy{\texttt{parser}}}\\
+Questo package presenta le classi utili all'attività di parsing dei dati ricevuti dai client.
+\item \hyperref[\nogloxy{swedesigner::server::project}]{\nogloxy{\texttt{project}}}\\
+Questo package contiene al suo interno le classi utili a rappresentare un progetto UML. Il package parser necessita di questo package per poter dare in output un programma rappresentato in memoria come oggetti Java. Per chiarezza e per evitare l'uso di keyword riservate dal linguaggio Java, all'inizio del nome di queste classi è inserito il prefisso \texttt{Parsed} (e.g. \texttt{ParsedClass}).
+\item \hyperref[\nogloxy{swedesigner::server::stereotype}]{\nogloxy{\texttt{stereotype}}}\\
+Questo package offre le classi che descrivono ciò che caratterizza un particolare stereotipo. Queste classi derivano tutte da una classe base chiamata \texttt{Stereotype}. Le classi che definiscono come deve variare ogni stereotipo sono contraddistinte dal suffisso \texttt{Stereotype} (e.g. \texttt{BoardStereotype}). Si noti che tra queste classi non sono presenti dei legami, in quanto sono necessarie alla generazione del codice. La struttura degli stereotipi assegnabili ad ogni classe e le loro relazioni saranno definite successivamente nella \emph{Definizione di Prodotto}.
+\item \hyperref[\nogloxy{swedesigner::server::template}]{\nogloxy{\texttt{template}}}\\
+Questo package contiene le classi necessarie a trasformare l'oggetto che rappresenta il programma in una stringa di testo che rappresenta il codice sorgente tramite un sistema a template, il quale definirà tramite dei file di testo la struttura di ogni componente del programma; per facilitare questo compito sarà usata la libreria \stringtemplate{}. Similarmente al package \texttt{Generator} si è prevista la possibilità di implementare un sistema di template per ogni linguaggio, implementando diversamente l'interfaccia della classe Template e definendo un nuovo package (e.g. \texttt{Java}).
+\item \hyperref[\nogloxy{swedesigner::server::utility}]{\nogloxy{\texttt{utility}}}\\
+Questo package contiene le componenti secondarie necessarie al server, indipendentemente dal linguaggio target dell'applicazione.
 \end{itemize}
 \end{itemize}
 
-\subsection{\nogloxy{SWEDesigner::Server::Compiler}}
-\label{\nogloxy{SWEDesigner::Server::Compiler}}
+\subsection{\nogloxy{swedesigner::server::compiler}}
+\label{\nogloxy{swedesigner::server::compiler}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_compiler}}
+	\caption{Diagramma package server::compiler}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questo package contiene le classi adibite alla compilazione del codice sorgente in eseguibile nel linguaggio target specifico. È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \emph{java}.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package contiene le classi adibite alla compilazione del codice sorgente in codice eseguibile (nel linguaggio target specifico). È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \texttt{java}.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \item \textbf{Package contenuti}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Java}]{\nogloxy{\texttt{Java}}}\\
-in questo package è descritta l'implementazione dell'interfaccia \emph{Compiler} appartenente al package superiore. Simili package possono essere creati per permettere la generazione in altri linguaggi.
+\item \hyperref[\nogloxy{swedesigner::server::compiler::java}]{\nogloxy{\texttt{java}}}\\
+Questo package offre un'implementazione dell'interfaccia \texttt{Compiler} appartenente al package superiore. Possono essere aggiunti simili package per permettere la generazione in altri linguaggi.
 \end{itemize}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Compiler::Compiler}}
-\label{\nogloxy{SWEDesigner::Server::Compiler::Compiler}}
+\subsubsubsection{\nogloxy{swedesigner::server::compiler::Compiler}}
+\label{\nogloxy{swedesigner::server::compiler::Compiler}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa interfaccia si occupa di fornire un oggetto compiler generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del compiler del linguaggio target desiderato.
 \item \textbf{Utilizzo}\\
-\texttt{RequestHandlerController} ha una dipendenza verso \texttt{Compiler} in quanto chiederà a \texttt{CompilerAssembler} una implementazione concreta di un \texttt{Compiler} in base al linguaggio target. Il pattern realizzato con questa classe è una \emph{dependency injection}.
+\textt{RequestHandlerController} ha una dipendenza verso \texttt{Compiler} in quanto chiederà a \textt{CompilerAssembler} una implementazione concreta di un \textt{Compiler} in base al linguaggio target. Il pattern realizzato con questa classe è una \emph{dependency injection}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::CompilerAssembler}]{\nogloxy{\texttt{CompilerAssembler}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::compiler::CompilerAssembler}]{\nogloxy{\texttt{CompilerAssembler}}}\\
 questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Compiler}. 
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Java::JavaCompiler}]{\nogloxy{\texttt{JavaCompiler}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::compiler::java::JavaCompiler}]{\nogloxy{\texttt{JavaCompiler}}}\\
 questa classe è una implementazione di \texttt{Compiler} che permette di creare un jar dal codice sorgente Java.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
 questa classe si occupa di ricevere le richieste REST provenienti dal client.
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Compiler::CompilerAssembler}}
-\label{\nogloxy{SWEDesigner::Server::Compiler::CompilerAssembler}}
+\subsubsubsection{\nogloxy{swedesigner::server::compiler::CompilerAssembler}}
+\label{\nogloxy{swedesigner::server::compiler::CompilerAssembler}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Compiler}. 
@@ -67,25 +77,25 @@ questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Comp
 viene utilizzata da \texttt{RequestHandlerController} che richiede ad essa una istanza di un'implementazione di \texttt{Compiler} del linguaggio configurato. È possibile realizzarlo tramite XML e il framework \spring{}. I dettagli dell'implementazione saranno esplicati nel documento \emph{Definizione di Prodotto}. % [RIFERIMENTO].
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Compiler}]{\nogloxy{\texttt{Compiler}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::compiler::Compiler}]{\nogloxy{\texttt{Compiler}}}\\
 questa interfaccia si occupa di fornire un oggetto compiler generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del compiler del linguaggio target desiderato.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Java::JavaCompiler}]{\nogloxy{\texttt{JavaCompiler}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::compiler::java::JavaCompiler}]{\nogloxy{\texttt{JavaCompiler}}}\\
 questa classe è una implementazione di \texttt{Compiler} che permette di creare un jar dal codice sorgente Java.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
 questa classe si occupa di ricevere le richieste REST provenienti dal client.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Compiler::Java}}
-\label{\nogloxy{SWEDesigner::Server::Compiler::Java}}
+\subsection{\nogloxy{swedesigner::server::compiler::java}}
+\label{\nogloxy{swedesigner::server::compiler::java}}
 \subsubsection{Informazioni generali}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-in questo package è descritta l'implementazione dell'interfaccia \emph{Compiler} appartenente al package superiore. Simili package possono essere creati per permettere la generazione in altri linguaggi.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server::Compiler}]{\nogloxy{\texttt{Compiler}}}
+Questo package offre un'implementazione dell'interfaccia \texttt{Compiler} appartenente al package superiore. Possono essere aggiunti simili package per permettere la generazione in altri linguaggi.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server::compiler}]{\nogloxy{\texttt{compiler}}}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Compiler::Java::JavaCompiler}}
-\label{\nogloxy{SWEDesigner::Server::Compiler::Java::JavaCompiler}}
+\subsubsubsection{\nogloxy{swedesigner::server::compiler::java::JavaCompiler}}
+\label{\nogloxy{swedesigner::server::compiler::java::JavaCompiler}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe è una implementazione di \texttt{Compiler} che permette di creare un jar dal codice sorgente Java.
@@ -93,23 +103,28 @@ questa classe è una implementazione di \texttt{Compiler} che permette di creare
 viene utilizzata da \texttt{CompilerAssembler} che ritorna un' istanza di essa quando richiesto.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::CompilerAssembler}]{\nogloxy{\texttt{CompilerAssembler}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::compiler::CompilerAssembler}]{\nogloxy{\texttt{CompilerAssembler}}}\\
 questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Compiler}. 
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Compiler}]{\nogloxy{\texttt{Compiler}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::compiler::Compiler}]{\nogloxy{\texttt{Compiler}}}\\
 questa interfaccia si occupa di fornire un oggetto compiler generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del compiler del linguaggio target desiderato.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Controller}}
-\label{\nogloxy{SWEDesigner::Server::Controller}}
+\subsection{\nogloxy{swedesigner::server::controller}}
+\label{\nogloxy{swedesigner::server::controller}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_controller}}
+	\caption{Diagramma package server::controller}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questo package contiene i vari controller che implementano il pattern Front Controller fornito dal framework \spring{}. Ogni controller dovrebbe occuparsi di gestire una richiesta e di rispondere opportunamente ad essa, attraverso il protocollo REST definito.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package contiene i vari controller che implementano il pattern Front Controller fornito dal framework \emph{Spring}. Ogni controller dovrebbe occuparsi di gestire una richiesta e di rispondere opportunamente ad essa, attraverso l'interfaccia REST definita.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}}
-\label{\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}}
+\subsubsubsection{\nogloxy{swedesigner::server::controller::RequestHandlerController}}
+\label{\nogloxy{swedesigner::server::controller::RequestHandlerController}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe si occupa di ricevere le richieste REST provenienti dal client.
@@ -118,86 +133,91 @@ essa deve gestire la richiesta di generazione di un progetto (attraverso file JS
 Richiama in ordine le varie classi addette alla generazione del codice, ovvero: un \texttt{Parser}, un \texttt{Generator}, un \texttt{Compiler} e infine il \texttt{Compressor}. 
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::CompilerAssembler}]{\nogloxy{\texttt{CompilerAssembler}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::compiler::CompilerAssembler}]{\nogloxy{\texttt{CompilerAssembler}}}\\
 questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Compiler}. 
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Generator::GeneratorAssembler}]{\nogloxy{\texttt{GeneratorAssembler}}}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Compiler}]{\nogloxy{\texttt{Compiler}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::generator::GeneratorAssembler}]{\nogloxy{\texttt{GeneratorAssembler}}}\\
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::compiler::Compiler}]{\nogloxy{\texttt{Compiler}}}\\
 questa interfaccia si occupa di fornire un oggetto compiler generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del compiler del linguaggio target desiderato.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
-questa interfaccia si occupa di fornire un oggetto generator generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Parser::Parser}]{\nogloxy{\texttt{Parser}}}\\
-questa classe si occupa di elaborare il file json proveniente dal client e di creare da esso un oggetto Java \texttt{ParsedProgram} strutturato in modo da poter essere facilmente convertito in codice.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Utility::Compressor}]{\nogloxy{\texttt{Compressor}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
+questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::parser::Parser}]{\nogloxy{\texttt{Parser}}}\\
+questa classe si occupa di elaborare il file JSON proveniente dal client e di creare da esso un oggetto Java \texttt{ParsedProgram} strutturato in modo da poter essere facilmente convertito in codice.
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::utility::Compressor}]{\nogloxy{\texttt{Compressor}}}\\
 questa classe si occupa di creare e salvare su disco un archivio compresso contenente il progetto JSON, il codice sorgente e l'eseguibile generato che verrà poi messo a disposizione dell'utente che potrà scaricarlo.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Generator}}
-\label{\nogloxy{SWEDesigner::Server::Generator}}
+\subsection{\nogloxy{swedesigner::server::generator}}
+\label{\nogloxy{swedesigner::server::generator}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_generator}}
+	\caption{Diagramma package server::generator}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questo package contiene le classi adibite alla trasformazione da programma rappresentato in memoria a codice sorgente, nel linguaggio target specifico. È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \emph{java}.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package contiene le classi adibite alla trasformazione dal diagramma (rappresentato in oggetti Java derivati da oggetti JSON) a codice sorgente, nel linguaggio target specifico. È stata prevista la possibilità di ampliare questo package inserendo al suo interno ulteriori package. All'interno di questo package è presente unicamente il package \texttt{java}.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \item \textbf{Package contenuti}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Generator::Java}]{\nogloxy{\texttt{Java}}}\\
-in questo package è descritta l'implementazione dell'interfaccia Generator appartenente al package superiore. Simili package possono essere creati per permettere la generazione in altri linguaggi.
+\item \hyperref[\nogloxy{swedesigner::server::generator::java}]{\nogloxy{\texttt{java}}}\\
+Questo package offre un'implementazione dell'interfaccia \texttt{Generator} appartenente al package superiore. Possono essere aggiunti simili package per permettere la generazione in altri linguaggi.
 \end{itemize}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Generator::Generator}}
-\label{\nogloxy{SWEDesigner::Server::Generator::Generator}}
+\subsubsubsection{\nogloxy{swedesigner::server::generator::Generator}}
+\label{\nogloxy{swedesigner::server::generator::Generator}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa interfaccia si occupa di fornire un oggetto generator generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
+questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
 \item \textbf{Utilizzo}\\
-\texttt{RequestHandlerController} ha una dipendenza verso \texttt{Generator} in quanto chiederà a \texttt{generatorAssembler} una implementazione concreta di un \texttt{Generator} in base al linguaggio target.
+\texttt{RequestHandlerController} ha una dipendenza verso \texttt{Generator} in quanto chiederà a \texttt{GeneratorAssembler} una implementazione concreta di un \texttt{Generator} in base al linguaggio target. Il pattern realizzato con questa classe è una \emph{dependency injection}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
 questa classe si occupa di ricevere le richieste REST provenienti dal client.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Generator::GeneratorAssembler}]{\nogloxy{\texttt{GeneratorAssembler}}}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Java::JavaGenerator}]{\nogloxy{\texttt{JavaGenerator}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::generator::GeneratorAssembler}]{\nogloxy{\texttt{GeneratorAssembler}}}\\
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::generator::java::JavaGenerator}]{\nogloxy{\texttt{JavaGenerator}}}\\
 questa classe è una implementazione di \texttt{Compiler} che permette di creare del codice sorgente Java da un \texttt{ParsedProgram}.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Template::TemplateAssembler}]{\nogloxy{\texttt{TemplateAssembler}}}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::template::TemplateAssembler}]{\nogloxy{\texttt{TemplateAssembler}}}\\
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
 questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si specifica il metodo \texttt{RenderTemplate} che impone la necessità di implementarlo ad ogni classe sottostante.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Template::Template}]{\nogloxy{\texttt{Template}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::template::Template}]{\nogloxy{\texttt{Template}}}\\
 questa interfaccia si occupa di fornire un oggetto template generico a chi lo richiede in modo da poter rendere estensibile il sistema aggiungendo un'implementazione concreta del template del linguaggio target desiderato.
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Generator::GeneratorAssembler}}
-\label{\nogloxy{SWEDesigner::Server::Generator::GeneratorAssembler}}
+\subsubsubsection{\nogloxy{swedesigner::server::generator::GeneratorAssembler}}
+\label{\nogloxy{swedesigner::server::generator::GeneratorAssembler}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
 \item \textbf{Utilizzo}\\
 viene utilizzata da \texttt{RequestHandlerController} che richiede ad essa una istanza di un'implementazione di \texttt{Generator} del linguaggio configurato.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
 questa classe si occupa di ricevere le richieste REST provenienti dal client.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
-questa interfaccia si occupa di fornire un oggetto generator generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Java::JavaGenerator}]{\nogloxy{\texttt{JavaGenerator}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
+questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::generator::java::JavaGenerator}]{\nogloxy{\texttt{JavaGenerator}}}\\
 questa classe è una implementazione di \texttt{Compiler} che permette di creare del codice sorgente Java da un \texttt{ParsedProgram}.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Generator::Java}}
-\label{\nogloxy{SWEDesigner::Server::Generator::Java}}
+\subsection{\nogloxy{swedesigner::server::generator::java}}
+\label{\nogloxy{swedesigner::server::generator::java}}
 \subsubsection{Informazioni generali}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-in questo package è descritta l'implementazione dell'interfaccia Generator appartenente al package superiore. Simili package possono essere creati per permettere la generazione in altri linguaggi.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server::Generator}]{\nogloxy{\texttt{Generator}}}
+Questo package offre un'implementazione dell'interfaccia \texttt{Generator} appartenente al package superiore. Possono essere aggiunti simili package per permettere la generazione in altri linguaggi.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server::generator}]{\nogloxy{\texttt{generator}}}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Generator::Java::JavaGenerator}}
-\label{\nogloxy{SWEDesigner::Server::Generator::Java::JavaGenerator}}
+\subsubsubsection{\nogloxy{swedesigner::server::generator::java::JavaGenerator}}
+\label{\nogloxy{swedesigner::server::generator::java::JavaGenerator}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe è una implementazione di \texttt{Compiler} che permette di creare del codice sorgente Java da un \texttt{ParsedProgram}.
@@ -205,47 +225,57 @@ questa classe è una implementazione di \texttt{Compiler} che permette di creare
 viene utilizzata da \texttt{CompilerAssembler} che ritorna un' istanza di essa quando richiesto.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Generator::GeneratorAssembler}]{\nogloxy{\texttt{GeneratorAssembler}}}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
-questa interfaccia si occupa di fornire un oggetto generator generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::generator::GeneratorAssembler}]{\nogloxy{\texttt{GeneratorAssembler}}}\\
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Generator}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
+questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Parser}}
-\label{\nogloxy{SWEDesigner::Server::Parser}}
+\subsection{\nogloxy{swedesigner::server::parser}}
+\label{\nogloxy{swedesigner::server::parser}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_parser}}
+	\caption{Diagramma package server::parser}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-al suo interno sono inserite le classi utili all'attività di parsing delle richieste provenienti dai client.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package presenta le classi utili all'attività di parsing dei dati ricevuti dai client.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Parser::Parser}}
-\label{\nogloxy{SWEDesigner::Server::Parser::Parser}}
+\subsubsubsection{\nogloxy{swedesigner::server::parser::Parser}}
+\label{\nogloxy{swedesigner::server::parser::Parser}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di elaborare il file json proveniente dal client e di creare da esso un oggetto Java \texttt{ParsedProgram} strutturato in modo da poter essere facilmente convertito in codice.
+questa classe si occupa di elaborare il file JSON proveniente dal client e di creare da esso un oggetto Java \texttt{ParsedProgram} strutturato in modo da poter essere facilmente convertito in codice.
 \item \textbf{Utilizzo}\\
-viene utilizzata da \texttt{RequestHandlerController} che ne crea un istanza e ne chiama i metodi per elaborare il JSON. \texttt{Parser} inoltre crea istanze di \texttt{parsedElement} e ritorna a controller un'istanza di \texttt{ParsedProgram}.
+viene utilizzata da \texttt{RequestHandlerController} che ne crea un istanza e ne chiama i metodi per elaborare il JSON. \texttt{Parser} inoltre crea istanze di \texttt{ParsedElement} e ritorna a controller un'istanza di \texttt{ParsedProgram}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
 questa classe si occupa di ricevere le richieste REST provenienti dal client.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedProgram}]{\nogloxy{\texttt{ParsedProgram}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedProgram}]{\nogloxy{\texttt{ParsedProgram}}}\\
 questa classe rappresenta l'entità che possiede al suo interno tutte le componenti di un progetto. Essa possiede più \texttt{ParsedType}.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Project}}
-\label{\nogloxy{SWEDesigner::Server::Project}}
+\subsection{\nogloxy{swedesigner::server::project}}
+\label{\nogloxy{swedesigner::server::project}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_project}}
+	\caption{Diagramma package server::project}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questo package contiene al suo interno le classi utili a rappresentare un progetto. Il package parser necessita di questo package per poter dare in output un programma rappresentato in memoria. Per chiarezza e per evitare l'uso di keyword riservate dal linguaggio Java, all'inizio del nome di queste classi è inserito il prefisso \emph{Parsed} (e.g. \emph{ParsedClass}).
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package contiene al suo interno le classi utili a rappresentare un progetto UML. Il package parser necessita di questo package per poter dare in output un programma rappresentato in memoria come oggetti Java. Per chiarezza e per evitare l'uso di keyword riservate dal linguaggio Java, all'inizio del nome di queste classi è inserito il prefisso \texttt{Parsed} (e.g. \texttt{ParsedClass}).
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedAssignment}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedAssignment}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedAssignment}}
+\label{\nogloxy{swedesigner::server::project::ParsedAssignment}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il comportamento di un blocco di assegnazione variabile.	
@@ -253,12 +283,12 @@ questa classe descrive il comportamento di un blocco di assegnazione variabile.
 dispone della possibilità di effettuare il render di un template in ingresso.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedAttribute}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedAttribute}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedAttribute}}
+\label{\nogloxy{swedesigner::server::project::ParsedAttribute}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe rappresenta un singolo attributo, memorizzando il nome della variabile, la sua visibilità e il suo valore di default. 
@@ -271,17 +301,17 @@ Nota: Memorizzare il valore di questo attributo risulta superfluo, in quanto que
 
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedClass}]{\nogloxy{\texttt{ParsedClass}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedClass}]{\nogloxy{\texttt{ParsedClass}}}\\
 questa classe estende la classe astratta \texttt{ParsedType}, imponendo al suo interno la presenza di una lista di \texttt{ParsedAttribute}. 
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
 questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIstruction} e un insieme di \texttt{ParsedAttribute} come parametri del metodo.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
 questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si specifica il metodo \texttt{RenderTemplate} che impone la necessità di implementarlo ad ogni classe sottostante.
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedClass}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedClass}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedClass}}
+\label{\nogloxy{swedesigner::server::project::ParsedClass}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe estende la classe astratta \texttt{ParsedType}, imponendo al suo interno la presenza di una lista di \texttt{ParsedAttribute}. 
@@ -289,19 +319,19 @@ questa classe estende la classe astratta \texttt{ParsedType}, imponendo al suo i
 questa classe è creata tramite la \texttt{ElementFactory} durante il parsing del progetto e inserita all'interno di \texttt{ParsedProgram}.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}
 \end{itemize}
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedAttribute}]{\nogloxy{\texttt{ParsedAttribute}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedAttribute}]{\nogloxy{\texttt{ParsedAttribute}}}\\
 questa classe rappresenta un singolo attributo, memorizzando il nome della variabile, la sua visibilità e il suo valore di default. 
 % Tuttavia, ciò non vale per attributi statici. 
 % Nella \emph{Definizione_di_prodotto_v_1_0_0} [RIFERIMENTO] sarà esplicitata l'implementazione di dettaglio decisa.
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedCustom}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedCustom}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedCustom}}
+\label{\nogloxy{swedesigner::server::project::ParsedCustom}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il comportamento di un blocco di codice custom, scritto nel linguaggio target.	
@@ -309,12 +339,12 @@ questa classe descrive il comportamento di un blocco di codice custom, scritto n
 dispone della possibilità di effettuare il render di un template in ingresso.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedElement}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedElement}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedElement}}
+\label{\nogloxy{swedesigner::server::project::ParsedElement}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si specifica il metodo \texttt{RenderTemplate} che impone la necessità di implementarlo ad ogni classe sottostante.
@@ -322,23 +352,23 @@ questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si 
 questa interfaccia è usata da \texttt{ElementFactory}, la quale fornisce un metodo per creare nuovi elementi secondo il design pattern Factory. %[RIFERIMENTO AD APPENDICE].
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
-questa interfaccia si occupa di fornire un oggetto generator generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedAttribute}]{\nogloxy{\texttt{ParsedAttribute}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
+questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedAttribute}]{\nogloxy{\texttt{ParsedAttribute}}}\\
 questa classe rappresenta un singolo attributo, memorizzando il nome della variabile, la sua visibilità e il suo valore di default. 
 % Tuttavia, ciò non vale per attributi statici. 
 % Nella \emph{Definizione_di_prodotto_v_1_0_0} [RIFERIMENTO] sarà esplicitata l'implementazione di dettaglio decisa.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}\\
 questa classe astratta rappresenta la singola istruzione contenuta all'interno di un metodo. Essa è estesa dalle istruzioni specifiche (e.g. \texttt{ParsedIf}, \texttt{ParsedWhile}, etc.)
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
 questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIstruction} e un insieme di \texttt{ParsedAttribute} come parametri del metodo.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}\\
 questa classe astratta definisce un contratto comune tra le classi \texttt{ParsedInterface} e \texttt{ParsedClass}. 
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedFor}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedFor}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedFor}}
+\label{\nogloxy{swedesigner::server::project::ParsedFor}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il comportamento di un blocco \texttt{for}.
@@ -346,12 +376,12 @@ questa classe descrive il comportamento di un blocco \texttt{for}.
 dispone della possibilità di effettuare il render di un template in ingresso.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedIf}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedIf}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedIf}}
+\label{\nogloxy{swedesigner::server::project::ParsedIf}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il comportamento di un blocco \texttt{if}.
@@ -359,12 +389,12 @@ questa classe descrive il comportamento di un blocco \texttt{if}.
 dispone della possibilità di effettuare il render di un template in ingresso.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedInitialize}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedInitialize}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedInitialize}}
+\label{\nogloxy{swedesigner::server::project::ParsedInitialize}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il comportamento di un blocco di inizializzazione variabile.
@@ -372,12 +402,12 @@ questa classe descrive il comportamento di un blocco di inizializzazione variabi
 dispone della possibilità di effettuare il render di un template in ingresso.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedInstruction}}
+\label{\nogloxy{swedesigner::server::project::ParsedInstruction}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe astratta rappresenta la singola istruzione contenuta all'interno di un metodo. Essa è estesa dalle istruzioni specifiche (e.g. \texttt{ParsedIf}, \texttt{ParsedWhile}, etc.)
@@ -385,38 +415,38 @@ questa classe astratta rappresenta la singola istruzione contenuta all'interno d
 questa classe implementa l'interfaccia \texttt{ParsedElement}.
 \item \textbf{Sottoclassi}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedAssignment}]{\nogloxy{\texttt{ParsedAssignment}}}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedCustom}]{\nogloxy{\texttt{ParsedCustom}}}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedFor}]{\nogloxy{\texttt{ParsedFor}}}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedIf}]{\nogloxy{\texttt{ParsedIf}}}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInitialize}]{\nogloxy{\texttt{ParsedInitialize}}}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedReturn}]{\nogloxy{\texttt{ParsedReturn}}}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedWhile}]{\nogloxy{\texttt{ParsedWhile}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedAssignment}]{\nogloxy{\texttt{ParsedAssignment}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedCustom}]{\nogloxy{\texttt{ParsedCustom}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedFor}]{\nogloxy{\texttt{ParsedFor}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedIf}]{\nogloxy{\texttt{ParsedIf}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInitialize}]{\nogloxy{\texttt{ParsedInitialize}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedReturn}]{\nogloxy{\texttt{ParsedReturn}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedWhile}]{\nogloxy{\texttt{ParsedWhile}}}
 \end{itemize}
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
 questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIstruction} e un insieme di \texttt{ParsedAttribute} come parametri del metodo.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
 questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si specifica il metodo \texttt{RenderTemplate} che impone la necessità di implementarlo ad ogni classe sottostante.
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedInterface}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedInterface}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedInterface}}
+\label{\nogloxy{swedesigner::server::project::ParsedInterface}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe estende la classe astratta \texttt{ParsedType} ed ha bisogno soltanto della firma dei metodi essendo una classe che contiene informazioni riguardo un'interfaccia pura.
+questa classe estende la classe astratta \textt{ParsedType} ed ha bisogno soltanto della firma dei metodi essendo una classe che contiene informazioni riguardo un'interfaccia pura.
 \item \textbf{Utilizzo}\\
 questa classe è creata tramite la \texttt{ElementFactory} durante il parsing del progetto e inserita all'interno di \texttt{ParsedProgram}.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedMethod}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedMethod}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedMethod}}
+\label{\nogloxy{swedesigner::server::project::ParsedMethod}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIstruction} e un insieme di \texttt{ParsedAttribute} come parametri del metodo.
@@ -424,21 +454,21 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 questa classe è usata da \texttt{ParsedType} come descritto in precedenza. La classe inoltre implementa l'interfaccia \texttt{ParsedElement}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}\\
 questa classe astratta definisce un contratto comune tra le classi \texttt{ParsedInterface} e \texttt{ParsedClass}. 
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedAttribute}]{\nogloxy{\texttt{ParsedAttribute}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedAttribute}]{\nogloxy{\texttt{ParsedAttribute}}}\\
 questa classe rappresenta un singolo attributo, memorizzando il nome della variabile, la sua visibilità e il suo valore di default. 
 % Tuttavia, ciò non vale per attributi statici. 
 % Nella \emph{Definizione_di_prodotto_v_1_0_0} [RIFERIMENTO] sarà esplicitata l'implementazione di dettaglio decisa.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
 questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si specifica il metodo \texttt{RenderTemplate} che impone la necessità di implementarlo ad ogni classe sottostante.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}\\
 questa classe astratta rappresenta la singola istruzione contenuta all'interno di un metodo. Essa è estesa dalle istruzioni specifiche (e.g. \texttt{ParsedIf}, \texttt{ParsedWhile}, etc.)
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedProgram}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedProgram}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedProgram}}
+\label{\nogloxy{swedesigner::server::project::ParsedProgram}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe rappresenta l'entità che possiede al suo interno tutte le componenti di un progetto. Essa possiede più \texttt{ParsedType}.
@@ -446,15 +476,15 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 La classe \texttt{Parser} ha una dipendenza verso questo elemento: essa infatti ne crea una e la ritorna al controller, il quale la passerà alla classe \texttt{Generator}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Parser::Parser}]{\nogloxy{\texttt{Parser}}}\\
-questa classe si occupa di elaborare il file json proveniente dal client e di creare da esso un oggetto Java \texttt{ParsedProgram} strutturato in modo da poter essere facilmente convertito in codice.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::parser::Parser}]{\nogloxy{\texttt{Parser}}}\\
+questa classe si occupa di elaborare il file JSON proveniente dal client e di creare da esso un oggetto Java \texttt{ParsedProgram} strutturato in modo da poter essere facilmente convertito in codice.
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedType}]{\nogloxy{\texttt{ParsedType}}}\\
 questa classe astratta definisce un contratto comune tra le classi \texttt{ParsedInterface} e \texttt{ParsedClass}. 
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedReturn}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedReturn}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedReturn}}
+\label{\nogloxy{swedesigner::server::project::ParsedReturn}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il comportamento di un blocco di ritorno di un metodo.
@@ -462,12 +492,12 @@ questa classe descrive il comportamento di un blocco di ritorno di un metodo.
 dispone della possibilità di effettuare il render di un template in ingresso.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedType}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedType}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedType}}
+\label{\nogloxy{swedesigner::server::project::ParsedType}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe astratta definisce un contratto comune tra le classi \texttt{ParsedInterface} e \texttt{ParsedClass}. 
@@ -476,22 +506,22 @@ essa possiede un insieme di \texttt{ParsedMethod}. Nell'accezione di molti lingu
 I tipi sono creati dalla \texttt{ParsedFactory} e sono richiesti da \texttt{Parser}.
 \item \textbf{Sottoclassi}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedClass}]{\nogloxy{\texttt{ParsedClass}}}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInterface}]{\nogloxy{\texttt{ParsedInterface}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedClass}]{\nogloxy{\texttt{ParsedClass}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInterface}]{\nogloxy{\texttt{ParsedInterface}}}
 \end{itemize}
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedProgram}]{\nogloxy{\texttt{ParsedProgram}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::project::ParsedProgram}]{\nogloxy{\texttt{ParsedProgram}}}\\
 questa classe rappresenta l'entità che possiede al suo interno tutte le componenti di un progetto. Essa possiede più \texttt{ParsedType}.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedElement}]{\nogloxy{\texttt{ParsedElement}}}\\
 questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si specifica il metodo \texttt{RenderTemplate} che impone la necessità di implementarlo ad ogni classe sottostante.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::project::ParsedMethod}]{\nogloxy{\texttt{ParsedMethod}}}\\
 questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIstruction} e un insieme di \texttt{ParsedAttribute} come parametri del metodo.
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Project::ParsedWhile}}
-\label{\nogloxy{SWEDesigner::Server::Project::ParsedWhile}}
+\subsubsubsection{\nogloxy{swedesigner::server::project::ParsedWhile}}
+\label{\nogloxy{swedesigner::server::project::ParsedWhile}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe descrive il comportamento di un blocco \texttt{while} e dispone della possibilità di effettuare il render di un template in ingresso.
@@ -499,78 +529,88 @@ questa classe descrive il comportamento di un blocco \texttt{while} e dispone de
 deriva da \texttt{ParsedInstruction}.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
+\item \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{ParsedInstruction}}}
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Stereotype}}
-\label{\nogloxy{SWEDesigner::Server::Stereotype}}
+\subsection{\nogloxy{swedesigner::server::stereotype}}
+\label{\nogloxy{swedesigner::server::stereotype}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_stereotype}}
+	\caption{Diagramma package server::stereotype}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-all'interno di questo package sono inserite le classi che descrivono ciò che caratterizza un particolare stereotipo. Queste classi derivano tutte da una classe base, chiamata Stereotype. Le classi che definiscono come deve variare ogni stereotipo sono contraddistinte dal suffisso \emph{Stereotype} (e.g. BoardStereotype). Si noti che tra queste classi non sono presenti dei legami, in quanto queste classi sono necessarie alla generazione del codice. La struttura degli stereotipi assegnabili ad ogni classe e le loro relazioni saranno definite successivamente nella \emph{Definizione di prodotto v 1.0.0}.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package offre le classi che descrivono ciò che caratterizza un particolare stereotipo. Queste classi derivano tutte da una classe base chiamata \texttt{Stereotype}. Le classi che definiscono come deve variare ogni stereotipo sono contraddistinte dal suffisso \texttt{Stereotype} (e.g. \texttt{BoardStereotype}). Si noti che tra queste classi non sono presenti dei legami, in quanto sono necessarie alla generazione del codice. La struttura degli stereotipi assegnabili ad ogni classe e le loro relazioni saranno definite successivamente nella \emph{Definizione di Prodotto}.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \end{itemize}
 
-\subsection{\nogloxy{SWEDesigner::Server::Template}}
-\label{\nogloxy{SWEDesigner::Server::Template}}
+\subsection{\nogloxy{swedesigner::server::template}}
+\label{\nogloxy{swedesigner::server::template}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_template}}
+	\caption{Diagramma package server::template}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questo package contiene le classi necessarie a trasformare l'oggetto che rappresenta il programma in una stringa di testo che rappresenta il codice sorgente tramite un sistema a template, il quale definirà tramite dei file di testo la struttura di ogni componente del programma; per facilitare questo compito sarà usata la libreria \emph{StringTemplate}. Similarmente al package \emph{Generator} si è prevista la possibilità di implementare un sistema di template per ogni linguaggio, implementando diversamente l'interfaccia della classe Template e definendo un nuovo package (e.g. \emph{Java}).
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package contiene le classi necessarie a trasformare l'oggetto che rappresenta il programma in una stringa di testo che rappresenta il codice sorgente tramite un sistema a template, il quale definirà tramite dei file di testo la struttura di ogni componente del programma; per facilitare questo compito sarà usata la libreria \stringtemplate{}. Similarmente al package \texttt{Generator} si è prevista la possibilità di implementare un sistema di template per ogni linguaggio, implementando diversamente l'interfaccia della classe Template e definendo un nuovo package (e.g. \texttt{Java}).
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \item \textbf{Package contenuti}:
 \begin{itemize}
-\item \hyperref[\nogloxy{SWEDesigner::Server::Template::Java}]{\nogloxy{\texttt{Java}}}\\
-all'interno di questo package sono definite le operazioni necessarie all'applicazione del template relativo al linguaggio Java. Simili package possono essere creati per permettere l'esportazione in diversi linguaggi target.
+\item \hyperref[\nogloxy{swedesigner::server::template::java}]{\nogloxy{\texttt{java}}}\\
+Questo package definisce le operazioni necessarie all'applicazione del template relativo al linguaggio Java. Simili package possono essere creati per permettere l'esportazione in diversi linguaggi target.
 \end{itemize}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Template::Template}}
-\label{\nogloxy{SWEDesigner::Server::Template::Template}}
+\subsubsubsection{\nogloxy{swedesigner::server::template::Template}}
+\label{\nogloxy{swedesigner::server::template::Template}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa interfaccia si occupa di fornire un oggetto template generico a chi lo richiede in modo da poter rendere estensibile il sistema aggiungendo un'implementazione concreta del template del linguaggio target desiderato.
 \item \textbf{Utilizzo}\\
-\texttt{RequestHandlerController} ha una dipendenza verso Template in quanto chiederà a \texttt{TemplateAssembler} una implementazione concreta di un \texttt{Template} in base al linguaggio target.
+\texttt{RequestHandlerController} ha una dipendenza verso Template in quanto chiederà a \texttt{TemplateAssembler} una implementazione concreta di un \texttt{Template} in base al linguaggio target. Il pattern realizzato con questa classe è una \emph{dependency injection}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
-questa interfaccia si occupa di fornire un oggetto generator generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Template::Java::JavaTemplate}]{\nogloxy{\texttt{JavaTemplate}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
+questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::template::java::JavaTemplate}]{\nogloxy{\texttt{JavaTemplate}}}\\
 questa classe è una implementazione di \texttt{Template} che permette di fornire un template di una classe, metodo o costrutto Java.
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Template::TemplateAssembler}]{\nogloxy{\texttt{TemplateAssembler}}}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::template::TemplateAssembler}]{\nogloxy{\texttt{TemplateAssembler}}}\\
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
 \end{itemize}
 \end{itemize}
 
-\paragraph{\nogloxy{SWEDesigner::Server::Template::TemplateAssembler}}
-\label{\nogloxy{SWEDesigner::Server::Template::TemplateAssembler}}
+\subsubsubsection{\nogloxy{swedesigner::server::template::TemplateAssembler}}
+\label{\nogloxy{swedesigner::server::template::TemplateAssembler}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
 \item \textbf{Utilizzo}\\
 viene utilizzata da \texttt{RequestHandlerController} che richiede ad essa una istanza di \texttt{Template} del linguaggio configurato.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
-questa interfaccia si occupa di fornire un oggetto generator generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Template::Java::JavaTemplate}]{\nogloxy{\texttt{JavaTemplate}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::generator::Generator}]{\nogloxy{\texttt{Generator}}}\\
+questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a chi lo richiede in modo da poter rendere entensibile il sistema aggiungendo un'implementazione concreta del generator del linguaggio target desiderato.
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::template::java::JavaTemplate}]{\nogloxy{\texttt{JavaTemplate}}}\\
 questa classe è una implementazione di \texttt{Template} che permette di fornire un template di una classe, metodo o costrutto Java.
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Template::Template}]{\nogloxy{\texttt{Template}}}\\
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::template::Template}]{\nogloxy{\texttt{Template}}}\\
 questa interfaccia si occupa di fornire un oggetto template generico a chi lo richiede in modo da poter rendere estensibile il sistema aggiungendo un'implementazione concreta del template del linguaggio target desiderato.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Template::Java}}
-\label{\nogloxy{SWEDesigner::Server::Template::Java}}
+\subsection{\nogloxy{swedesigner::server::template::java}}
+\label{\nogloxy{swedesigner::server::template::java}}
 \subsubsection{Informazioni generali}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-all'interno di questo package sono definite le operazioni necessarie all'applicazione del template relativo al linguaggio Java. Simili package possono essere creati per permettere l'esportazione in diversi linguaggi target.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server::Template}]{\nogloxy{\texttt{Template}}}
+Questo package definisce le operazioni necessarie all'applicazione del template relativo al linguaggio Java. Simili package possono essere creati per permettere l'esportazione in diversi linguaggi target.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server::template}]{\nogloxy{\texttt{template}}}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Template::Java::JavaTemplate}}
-\label{\nogloxy{SWEDesigner::Server::Template::Java::JavaTemplate}}
+\subsubsubsection{\nogloxy{swedesigner::server::template::java::JavaTemplate}}
+\label{\nogloxy{swedesigner::server::template::java::JavaTemplate}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe è una implementazione di \texttt{Template} che permette di fornire un template di una classe, metodo o costrutto Java.
@@ -578,23 +618,28 @@ questa classe è una implementazione di \texttt{Template} che permette di fornir
 viene utilizzata da \texttt{CompilerAssembler} che ritorna un' istanza di essa quando richiesto.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Template::TemplateAssembler}]{\nogloxy{\texttt{TemplateAssembler}}}\\
-questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella Definizione di Prodotto. % RIFERIMENTO
-\item \textit{OUT} \hyperref[\nogloxy{SWEDesigner::Server::Template::Template}]{\nogloxy{\texttt{Template}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::template::TemplateAssembler}]{\nogloxy{\texttt{TemplateAssembler}}}\\
+questa classe si occupa di creare delle istanze di tipi concreti di \texttt{Template}. È possibile realizzarlo tramite XML e il framework \spring. I dettagli dell'implementazione saranno spiegati nella \emph{Definizione di Prodotto}. % RIFERIMENTO
+\item \textit{OUT} \hyperref[\nogloxy{swedesigner::server::template::Template}]{\nogloxy{\texttt{Template}}}\\
 questa interfaccia si occupa di fornire un oggetto template generico a chi lo richiede in modo da poter rendere estensibile il sistema aggiungendo un'implementazione concreta del template del linguaggio target desiderato.
 \end{itemize}
 \end{itemize}
-\subsection{\nogloxy{SWEDesigner::Server::Utility}}
-\label{\nogloxy{SWEDesigner::Server::Utility}}
+\subsection{\nogloxy{swedesigner::server::utility}}
+\label{\nogloxy{swedesigner::server::utility}}
 \subsubsection{Informazioni generali}
+\begin{figure}[H]
+	\makebox[\textwidth][c]{
+	\includegraphics[width=1\textwidth]{img/server_utility}}
+	\caption{Diagramma package server::utility}
+\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-in questo package sono contenute le componenti secondarie necessarie al server, indipendentemente dal linguaggio target dell'applicazione.
-\item \textbf{Padre}: \hyperref[\nogloxy{SWEDesigner::Server}]{\nogloxy{\texttt{Server}}}
+Questo package contiene le componenti secondarie necessarie al server, indipendentemente dal linguaggio target dell'applicazione.
+\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::server}]{\nogloxy{\texttt{server}}}
 \end{itemize}
 \subsubsection{Classi}
-\paragraph{\nogloxy{SWEDesigner::Server::Utility::Compressor}}
-\label{\nogloxy{SWEDesigner::Server::Utility::Compressor}}
+\subsubsubsection{\nogloxy{swedesigner::server::utility::Compressor}}
+\label{\nogloxy{swedesigner::server::utility::Compressor}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 questa classe si occupa di creare e salvare su disco un archivio compresso contenente il progetto JSON, il codice sorgente e l'eseguibile generato che verrà poi messo a disposizione dell'utente che potrà scaricarlo.
@@ -602,7 +647,7 @@ questa classe si occupa di creare e salvare su disco un archivio compresso conte
 viene utilizzata da \texttt{RequestHandlerController} per creare l'archivio compresso dei file
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
+\item \textit{IN} \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{RequestHandlerController}}}\\
 questa classe si occupa di ricevere le richieste REST provenienti dal client.
 \end{itemize}
 \end{itemize}
