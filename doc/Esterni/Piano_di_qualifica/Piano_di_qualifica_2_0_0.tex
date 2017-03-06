@@ -1960,12 +1960,9 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 			\item refusi ed errori grammaticali;
 			\item periodi troppo lunghi e complessi da spezzare, ridurre e semplificare.
 		\end{itemize}
-		A partire dalla natura e frequenza degli errori identificati il gruppo ha iniziato a stilare una lista
-		di controllo da applicare nei successivi momenti di verifica nel contesto della strategia di verifica
-		inspection.
+		A partire dalla natura e frequenza degli errori identificati il gruppo ha integrato le liste di controllo precedentemente stilate.
 
-		Le attività di verifica automatizzate, invece, sono state svolte calcolando l'indice Gulpease dei 	
-		diversi documenti prodotti attraverso l'uso di appositi strumenti web automatici. 
+		Le attività di verifica automatizzate, invece, sono state svolte utilizzando gli strumenti indicati nel documento \NdP. 
 		
 		I risultati ottenuti sono elencati nella seguente tabella:
 		\begin{table}[H]
@@ -2040,6 +2037,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\end{table}
 		
 		* l'alto valore del numero di violazioni di alta importanza relative alla completezza è dovuto al fatto che SDMetrics indica come non usate le classi che nell'attuale diagramma dei package implementano interfacce o classi astratte e che quindi a differenza della loro superclasse diretta non sono esplicitamente coinvolte in alcun tipo di associazione di dipendenza o riferimento.
+		
 		** l'alto valore del numero di violazione di media importanza relative allo stile è dovuto al fatto che nel server in alcune occasioni viene violato lo Stable-Dependencies Principle perchè alcuni package dipendono da altri package contenenti una singola classe concreta. Basta quindi che i primi abbiano una singola interfaccia affinchè la violazione venga segnalata.		
 
 		\subsubsection{Verifica della qualità dell'architettura}
@@ -2095,6 +2093,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\caption{Esiti del calcolo delle metriche relative all'architettura}
 		\end{table}
 	* abbiamo deciso di specificare solamente i valori massimi e minimi della metrica per evitare di creare tabelle troppo prolisse e poco leggibili, a fronte di un contenuto equivalente a quello proposto.
+	
 	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
 
 \appendix
