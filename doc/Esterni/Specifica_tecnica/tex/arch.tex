@@ -84,9 +84,14 @@ L'architettura del client è suddivisa in tre moduli, come in figura \ref{fig:cl
 \subsubsection{Diagrammi}
 I due tipi di diagrammi visualizzabili sul client sono: diagramma delle classi; diagramma di attività.
 
-Il diagramma delle classi è un normale diagramma UML che offre un sottoinsieme dei formalismi UML, ispirato al \emph{20 percent of UML that helps you do 80 percent of your work} di cui parla Martin Fowler in \emph{UML Distilled}.
+	\paragraph{Diagramma delle classi}
+Il diagramma delle classi è un normale diagramma UML che offre un sottoinsieme dei formalismi definiti dal relativo standard, ispirato al \emph{20 percent of UML that helps you do 80 percent of your work} di cui parla Martin Fowler in \emph{UML Distilled}. L'editor ad esso relativo propone all'utente anche delle funzionalità aggiuntive fra cui la possibilità di marcare le classi create con dei particolari stereotipi già definiti. Questi rappresentano un insieme di vincoli logici e semantici che l'utente deve rispettare nel popolare la classe, come, ad esempio, metodi da scriversi obbligatoriamente o l'impossibilità di inserire campi dati.
+	\paragraph{Diagramma delle attività}
+La seconda tipologia di diagramma viene da noi chiamata "diagramma delle attività" per l'affinità che la lega al corrispettivo formalismo di modellazione dell'UML anche se in realtà ne rappresenta una profonda revisione. L'editor mette a disposizione dell'utente una serie di blocchi da comporre per popolare il corpo di uno specifico metodo, ognuno dei quali legato - anche nominalmente - a statement o formalismi tipici dei linguaggi di programmazione. Vi è la possibilità di scegliere fra blocchi variabili per assegnazioni o dichiarazioni, blocchi metodi per la loro invocazione, blocchi return per uscire dal metodo in esame, blocchi if/else per le ramificazioni decisionali, blocchi while e for che rappresentano i relativi cicli iterativi e blocchi custom per inserire codice senza alcun vincolo a monte.
+In generale l'utente compone questi elementi inserendoli uno di seguito all'altro, libero di spostare in una nuova posizione all'interno della sequenza le unità desiderate.
+All'interno del corpo dei blocchi while, for e if/else è inoltre possibile inserire una qualsiasi sequenza dei blocchi precedentemente elencati in modo tale da aumentare i livelli di innestamento delle varie istruzioni e quindi, in generale, la complessità del metodo stesso.
+È inoltre possibile corredare ogni blocco con un commento che ne illustri il "contratto" in modo tale da poter mantenere una visione ad alto livello del flusso logico delle azioni definite anche nel caso in cui si decida di visualizzare in formato ridotto i diversi elementi.
 
-Il diagramma che noi chiamiamo di attività è, in realtà, un diagramma ``a blocchi'', cioè una sequenza di elementi grafici che rappresentano operazioni atomiche (ad esempio un \texttt{return} o un'assegnazione) oppure raggruppano al loro interno un'altra sequenza di blocchi (ad esempio un blocco \texttt{while} che raggruppa una sequenza di blocchi).
 
 
 
