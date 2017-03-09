@@ -14,7 +14,7 @@ def main():
         ('\\Glossario', 'Glossario'),
         ('\\ST', 'Specifica_tecnica'),
         ('\\DdP', 'Definizione_di_'),
-        ('\\MU', 'Manuale_'),
+        ('\\MU', 'Manuale_')
     ]
     vers = open('hx-vers.sty', 'w')
     vers.write('% Ultime versioni dei documenti\n')
@@ -24,8 +24,7 @@ def main():
     for d in [f for dp, dn, fn in os.walk(os.path.expanduser('..')) for f in fn]:
         for m in macros:
             if d.startswith(m[1]) and d.endswith('.tex'):
-                vers.write(new_cmd.format(m[0], d.replace('_', '\_')))
-                macros.remove(m)
+                vers.write(new_cmd.format(m[0], d.replace('_', '\_').replace('.tex', '.pdf')))
     vers.close()
 
 if __name__ == '__main__':
