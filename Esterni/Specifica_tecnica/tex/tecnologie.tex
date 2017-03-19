@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Tecnologie utilizzate
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\subsection{Client} \label{sec:tech_client}
+Il \gloss{client} di \proj{} sarà implementato con le tecnologie web richieste dal capitolato d'appalto: HTML5, CSS3 e JavaScript. Di seguito sono elencate e descritte le librerie JavaScript di cui il client necessita. Tutte le librerie sono open-source, come richiesto dal capitolato.
+
+
+\subsubsection{JointJS}
+La libreria \jointjs{} (\url{www.jointjs.com/opensource}) è una libreria open-source per realizzare editor di diagrammi interattivi, in maniera altamente personalizzabile.
+
+La libreria sfrutta le seguenti tecnologie per il suo funzionamento:
+\begin{itemize}
+	\item \html: \jointjs{} richiede che una pagina \html{} sia popolata con un tag \texttt{<svg>}, che conterrà un diagramma.
+	\item Le seguenti librerie \js:
+	\begin{itemize}
+		\item \jquery;
+		\item \lodash;
+		\item \backbonejs.
+	\end{itemize}
+\end{itemize}
+
+% È reperibile un \emph{plug-in} di \jointjs{} che sarà sfruttato per realizzare diagrammi UML. Tale \emph{plug-in} offre delle forme geometriche e delle frecce che ci servono per il disegno del diagramma delle classi e dei diagrammi a blocchi di ogni metodo.
+
+L'appendice \ref{sec:app_jointjs} riporta un approfondimento su \jointjs.
+
+\subsubsection{\backbonejs}
+La libreria \backbonejs{} permette di strutturare applicazioni web single page (\gloss{SPA}) fornendo \textbf{modelli} con binding di chiave-valore, eventi, \textbf{collezioni} e \textbf{viste} con una gestione degli eventi dichiarativa. Essa offre inoltre una interfaccia \gloss{RESTful}.
+
+A causa della struttura data alla libreria \jointjs{}, sviluppata tramite MVC, al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà il lato client di \proj{} estendendo le funzionalità di base offerte da \jointjs{} usando il modello MVC offerto da \backbonejs.
+
+Tra i pro di \backbonejs{}:
+\begin{itemize}
+	\item permette una facile implementazione lato client del pattern architetturale MVC;
+	\item semplice, flessibile e con un gran numero di plug-in ed estensioni disponibili;
+	\item fornisce un modello di ereditarietà semplice, ma allo stesso tempo potente basato su metodo emph{extend}.
+\end{itemize}
+
+Tra i contro di \backbonejs{}:
+\begin{itemize}
+	\item fare test di unità sulle Views di \backbonejs{} può essere molto complicato e richiedere una gran quantità di codice di mock;
+	\item creazione di tag div ridondanti nel codice HTML generato;
+	\item difficoltà nel comunicare con un back-end non RESTful;
+	\item mancanza di una netta separazione tra View e Controller nell'interpretazione del pattern MVC che esso propone.
+\end{itemize}
+
+\subsubsection{\jquery}
+La libreria \jquery{} è sfruttata da \jointjs{} ed è necessaria per semplificare varie operazioni di basso livello.
+
+I vantaggi più rilevanti sono:
+\begin{itemize}
+	\item il grande supporto da parte della community;
+	\item permette di malipolare gli elementi del DOM facilmente;
+	\item agevola la realizzazione di animazioni elementari;
+	\item presenta un gran numero di plug-in.
+\end{itemize}
+
+Tra i contro dell'utilizzo di \jquery{}:
+\begin{itemize}
+	\item lentezza nelle prestazioni in caso di complesse manipolazioni del DOM e manipolazioni;
+	\item un uso scorretto può portare alla creazione di grandi moli di codice difficile da mantenere;
+\end{itemize} 
+
+\subsubsection{\requirejs}
+La libreria \requirejs{} è un loader di moduli e file \js{}. Esso si occuperà principalmente di risolvere dipendenze delle librerie \js{} utilizzate.
+
+I vantaggi principali:
+\begin{itemize}
+	\item esplicita le dipendenze tra i diversi moduli;
+	\item caricamento dei moduli asincrono e "su richiesta".
+\end{itemize}
+
+Lo svantaggio principale risiede nella necessità di uno studio approfondito e ragionato prima di un utilizzo efficace.
+
+\subsubsection{\lodash}
+La libreria \lodash{} fornisce metodi di utilità non offerti da \js{} puro. Rispetto alla simile libreria \emph{Underscore}, questa fornisce più performance, più features e miglior documentazione. Essa inoltre è usata da \jointjs.
+
+% \subsubsection{qunit}
+% assertions, test di regressione
+
+% \subsubsection{sinonjs}
+% stubs, mocks, (test spies??)
+
+\subsection{Server}
+
+\subsubsection{Apache Tomcat}
+Il \emph{back end} della nostra applicazione è ospitato su un \gloss{server} Apache Tomcat, come richiesto dal capitolato d'appalto nel caso il \emph{back end} fosse scritto in Java.
+
+Tomcat fornisce numerosi vantaggi:
+\begin{itemize}
+	\item facile da installare;
+	\item richiede poche impostazione personalizzate per poter esssere pienamente operativo;
+	\item consumo di memoria molto basso rispetto alle applicazioni concorrenti;
+	\item tempo di avvio immediato. 
+\end{itemize}
+
+Allo stesso tempo manca della funzionalità che permette il recupero automatico delle funzionalita in caso di \emph{failure}.
+
+\subsubsection{Spring}
+Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source \emph{Spring} (disponibile all'indirizzo \url{spring.io}), utile per aderire ai princìpi dello stile architetturale REST.
+
+La scelta di Spring è stata guidata dalle seguenti caratteristiche proprie di questa libreria:
+\begin{itemize}
+	\item modulare: rende possibile integrare solo alcuni moduli all'interno del progetto;
+	\item leggero: diminuisce le dipendenze o le isola;
+	\item integrabile: rende facile l'utilizzazione di altri framework oper source;
+	\item portabile: permette di scrivere software facile da testare.
+\end{itemize}
+
+\subsubsection{StringTemplate}
+StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Come indicato sul sito ufficiale, questa libreria è particolarmente adatta alla genereazione di codice. 
+
+Essa viene utilizzata per:
+\begin{enumerate}
+	\item creare dei template di codice Java, inframmezzati da speciali marcatori definiti da StringTemplate;
+	\item popolare tali template con i dati ricevuti dal client.
+\end{enumerate}
+I marcatori definiti dalla libreria servono da segnaposto per ospitare i dati ottenuti analizzando il documento JSON generato dal client.
+
+\subsubsection{Google Gson}
+Google Gson è una libreria open-source disponibile all'indirizzo \url{github.com/google/gson}. Essa permette di convertire un oggetto JSON in un oggetto Java che abbia, come campi dati, un sovrainsieme delle chiavi presenti nell'oggetto JSON; l'oggetto JSON dev'essere contenuto in una stringa Java. I valori delle chiavi dell'oggetto JSON diventano i valori dei campi dati dell'oggetto Java. La libreria permette anche il procedimento inverso (da Java a JSON), che però non usiamo nella nostra applicazione.
+
+Tra gli aspetti più rilevanti di Google Gson spiccano:
+\begin{itemize}
+	\item la semplicita e la velocità di utilizzo;
+	\item l'indipendenza dai file sorgenti al contrario delle librerie. simili;
+\end{itemize}

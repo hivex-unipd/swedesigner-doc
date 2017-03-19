@@ -1,0 +1,36 @@
+% Riunione interna del 12 dicembre 2016
+% da compilare con il comando pdflatex Esterni/Verbali/VI_16-12-12.tex
+
+\input{../../util/hx-ambiente}
+
+\version{1.0.0}
+\creaz{12 dicembre 2016}
+\author{\PB}
+\supervisor{\MM}
+\uso{interno}
+\dest{\ALL}
+\title{Riunione interna del 12 dicembre 2016}
+% \date{9 gennaio 2017}
+
+\begin{document}
+
+\maketitle
+
+\begin{description}
+	\item[Orario] 13:30 - 15:00;
+	\item[Durata] 1 ora e 30 minuti;
+	\item[Luogo incontro] Aula 1C150 di Torre Archimede;
+	\item[Oggetto] scelta degli strumenti per lo sviluppo del software e preparazione di domande da porre al proponente il 15 dicembre;
+	\item[Segretario] \PB; 
+	\item[Partecipanti] \ALL.
+\end{description}
+
+Decisioni prese:
+\begin{enumerate}
+	\item \textbf{strumenti} --- Abbiamo discusso degli strumenti da utilizzare nel corso del progetto. Alcuni criteri di scelta sono stati: che gli strumenti fossero “standard”; che non fossero eccessivamente complicati da utilizzare né da imparare; che si integrassero il più possibile tra di loro. Perciò, per generare la documentazione abbiamo adottato \gloss{Latex}, al fine di ottenere un buon grado di automazione e di modularità.
+	\item \textbf{\gloss{PragmaDB}} --- Per la gestione automatizzata dei requisiti, abbiamo scelto di adottare un'\gloss{applicazione web} open-source chiamata “PragmaDB”, ideata da alcuni nostri predecessori; il nostro gruppo ha scelto quest'applicazione per aumentare ancora il grado di automazione dei processi di analisi dei requisiti e progettazione.
+	\item \textbf{controllo codice e documenti} --- Abbiamo analizzato alcuni software per il controllo del codice e dei documenti, quali Sonarqube e \gloss{Travis} che si integra bene con \gloss{GitHub}, e altre tecnologie circa \gloss{Java}, \gloss{JavaScript}, javaDoc ed infine IntelliJ IDEA.
+	\item \textbf{preparazione riunione esterna} --- Abbiamo scelto le domande da porre al \GP circa la definizione dei requisiti del progetto. In particolare, abbiamo pensato di porre alcune domande basilari come la scelta del linguaggio da generare (Java o JavaScript) e la scelta della lingua per la documentazione del software (italiano o inglese); inoltre, abbiamo formalizzato i dubbi sorti sulla natura stessa di questo progetto così particolare.
+\end{enumerate}
+
+\end{document}

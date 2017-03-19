@@ -1,0 +1,39 @@
+% Specifica Tecnica
+% da compilare con il comando pdflatex Definizione_di_prodotto_x.x.x.tex
+
+\input{../../util/hx-ambiente}
+
+\version{0.0.1}
+\creaz{28 febbraio 2017}
+\author{...}
+\supervisor{...}
+\uso{interno}
+\dest{\ALL}
+\title{Definizione di Prodotto}
+% \date{9 gennaio 2017}
+
+% Per neutralizzare \nogloxy:
+\newcommand{\nogloxy}[1]{#1}
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+\newcommand{\textt}[1]{\texttt{#1}}
+
+\begin{document}
+\maketitle
+\include{diario}
+\tableofcontents
+
+
+
+\section{Introduzione}
+\input{tex/intro}
+
+\section{Classi e componenti del \emph{front end}}
+\input{tex/componenti_FE}
+
+\section{Classi e componenti del \emph{back end}}
+\input{tex/componenti_BE}
+
+\section{Tracciamento}
+\input{tex/tracciamento}
+
+\end{document}

@@ -1,0 +1,2167 @@
+%Piano di Qualifica
+% da compilare con il comando pdflatex Piano_di_Qualifica_x.x.x.tex
+
+\input{../../util/hx-ambiente}
+\usepackage{float}
+
+\version{2.0.0}
+\creaz{28 dicembre 2016}
+\author{\LS, \AZ}
+\supervisor{\GG}
+\uso{esterno}
+\dest{\TV, \RC, \ZU}
+\title{Piano di Qualifica}
+% \date{9 gennaio 2017}
+
+\begin{document}
+\maketitle
+\include{diario}
+\tableofcontents
+
+\section{Introduzione}
+	\subsection{Scopo del documento}
+	Questo documento ha lo scopo di fissare le strategie di verifica e validazione che il gruppo \hx{} ha deciso di adottare per perseguire gli obiettivi di qualità di processo e di prodotto relativi al progetto \proj{}. Il presente documento si propone di descrivere l'approccio del gruppo alle diverse fasi di verifica per poter ottenere il miglior risultato auspicabile in termini di qualità. Per perseguire tali obiettivi e risultati occorre verificare continuamente le attività svolte in modo da individuare e correggere velocemente le anomalie, minimizzando così l'utilizzo di risorse e allo stesso tempo mantenendo la correttezza del prodotto.
+
+	\subsection{Scopo del prodotto}
+	\scopo
+	
+	\subsection{Glossario}
+	\presgloss
+	
+	\subsection{Riferimenti}
+		\subsubsection{Riferimenti normativi}
+		\begin{itemize}
+			\item \NdP;
+			\item \textbf{Capitolato d'Appalto C6, \proj}: \\
+			\url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato il 08/02/2017;
+			\item \textbf{Standard ISO/IEC 12207:2008}: \\
+			\url{ieeexplore.ieee.org/document/4475826/}, visitato il 08/02/2017;
+			\item \textbf{Standard ISO/IEC 15504}: \\
+			\url{en.wikipedia.org/wiki/ISO/IEC_15504}, visitato il 08/02/2017;
+			\item \textbf{Standard ISO/IEC 9126}: \\
+			\url{it.wikipedia.org/wiki/ISO/IEC_9126}, visitato il 08/02/2017;
+			\item \textbf{PDCA (\emph{Plan, Do, Check, Act})}: \\
+			\url{it.wikipedia.org/wiki/Ciclo_di_Deming}, visitato il 08/02/2017.
+		\end{itemize}
+		
+		\subsubsection{Riferimenti informativi}
+		\begin{itemize}
+			\item \textbf{Analisi dei Requisiti}: \AdR;
+			\item \textbf{Piano di Progetto}: \PdP;
+			\item \textbf{Glossario}: \Glossario;
+			\item \textbf{Indice di Gulpease}: \\
+			\url{it.wikipedia.org/wiki/Indice_Gulpease}, visitato il 08/02/2017;
+			\item \textbf{Regole del Progetto Didattico}: \\
+			\url{www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf}, visitato il 08/02/2017;
+			\item \textbf{Slide Qualità del Software}: \\
+			\url{www.math.unipd.it/~tullio/IS-1/2016/Dispense/L10.pdf}, visitato il 08/02/2017;
+			\item \textbf{Slide Qualità del Prodotto}: \\
+			\url{www.math.unipd.it/~tullio/IS-1/2016/Dispense/L11.pdf}, visitato il 08/02/2017.
+		\end{itemize}
+
+
+
+\section{Visione generale della strategia di gestione della qualità}
+	\subsection{Obiettivi di qualità}
+	In questa sezione vengono illustrati in modo quanto più completo ed esaustivo gli obiettivi di qualità che il gruppo intende perseguire nel corso 	dello svolgimento del progetto, opportunamente declinati nelle due sottosezioni Qualità di processo e Qualità di prodotto.
+
+	\subsection{Qualità di processo}
+	È indubbio che la qualità di un prodotto software non possa in alcun modo prescindere dalla qualità dei diversi processi che concorrono nel definirlo e 	che anzi ne sia intrinsecamente dipendente. Con tale consapevolezza il gruppo ha scelto come riferimento per la valutazione della qualità dei propri processi lo standard ISO/IEC 15504 altresì conosciuto sotto l'acronimo di \gloss{SPICE}.
+		\subsubsection{Procedure per il controllo della qualità di processo}
+		L'adozione dello standard SPICE, in combinazione con l'approccio automigliorativo del ciclo PDCA, è alla base della strategia prevista del gruppo per garantire una sempre maggiore qualità dei processi in atto e dei prodotti risultanti.
+		\\Il documento \PdP stabilisce gli obiettivi del gruppo in relazione alla pianificazione in dettaglio dei vari processi e alla ripartizione delle risorse ad essi assegnate per un efficace svolgimento. Altri obiettivi di qualità sono illustrati successivamente in questo documento.
+		\\Ad ogni obiettivo di qualità sono associate una o più metriche allo scopo di rendere misurabile la valutazione del suo raggiungimento o meno; ad ogni metrica, inoltre, si riferisce un valore o un range che stabilisce in senso strategico l'obiettivo qualitativo che il team si prefigge di raggiungere. Da sottolineare che anche le metriche relative alla qualità del prodotto software costituiscono un'indicazione preziosa per valutare la qualità dei processi in atto: infatti un prodotto di bassa qualità è indicativo di un processo da migliorarsi.
+
+		\subsubsection{Obiettivi di qualità di processo}
+		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard ISO/IEC 12207:2008 e per ognuno di essi gli obiettivi di qualità perseguiti.
+			
+			\paragraph{Pianificazione di progetto e processo di verifica e controllo}
+			Questo macro-processo, derivato dall'unione dei processi 6.3.1 e 6.3.2 previsti dallo standard ISO/IEC 12207:2008, ha lo scopo di pianificare le attività richieste dal progetto.
+			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+				\subparagraph{Rispetto della pianificazione} 
+				Ogni attività di un processo verrà svolta da parte di colui a cui è stata assegnata, rispettando la pianificazione temporale stabilita nel documento \PdP{} e svolgendo tutti i compiti in cui essa si articola.
+				Gli obiettivi di pianificazione e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{schedule variance}: l'obiettivo stabilito per la metrica è il valore 0.
+				\end{itemize}
+				\subparagraph{Rispetto del budget}   
+				I costi di ogni processo dovranno rientrare nel budget previsto dal documento \PdP.
+				Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{budget variance}: l'obiettivo stabilito per la metrica è il valore 0.
+				\end{itemize}
+				
+			\paragraph{Processo di gestione della documentazione del software}
+			Il processo, corrispondente al processo 7.2.1 definito dallo standard ISO/IEC 12207:2008, ha lo scopo di produrre e gestire la documentazione relativa alle funzionalità e alle caratteristiche del sistema software prodotto.
+			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+				\subparagraph{Leggibilità della documentazione}
+				La documentazione prodotta sarà quanto più chiara e comprensibile a tutti gli \gloss{stakeholder} coinvolti nel progetto.
+				Gli obiettivi relativi alla documentazione e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{indice di Gulpease}: l'obiettivo stabilito per la metrica è il range 60 - 100.
+				\end{itemize}
+				
+			\paragraph{Processo di architettura del software}
+			Il processo, corrispondente al processo 7.1.3 dello standard ISO/IEC 12207:2008, ha lo scopo di definire un'architettura software che implementi i requisiti corrispondenti e identifichi le diverse componenti del sistema.
+			Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+				\subparagraph{Completezza}
+				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la completezza. Ad esempio si evitano \gloss{package} senza elementi, classi non usate, parametri senza un tipo, ecc.
+				Gli obiettivi relativi alla completezza dell'architettura e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{numero di violazioni della completezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni della completezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni della completezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore 0.
+				\end{itemize}
+				\subparagraph{Correttezza}
+				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la correttezza rispetto allo standard UML.
+				Gli obiettivi relativi alla correttezza dell'architettura e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{numero di violazioni della correttezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni della correttezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni della correttezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore 0.
+				\end{itemize}
+				\subparagraph{Stile}
+				L'architettura prodotta non presenta problemi di design, che pur essendo legali per lo standard UML, posso compromettere la qualità generale del sistema. Ad esempio si evitano dipendenze circolari tra i pacchetti, lunghe liste di parametri, ecc.
+				Gli obiettivi relativi allo stile dell'architettura e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{numero di violazioni dello stile architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni dello stile architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni dello stile architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore 0.
+				\end{itemize}
+				
+			\paragraph{Processo di costruzione del software}
+			Il processo, corrispondente al processo 7.1.5 previsto dallo standard ISO/IEC 12207:2008, definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
+			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+				\subparagraph{Rispetto delle norme di codifica}
+				Durante il processo di codifica vengono rispettate le norme stabilite nel \NdP{}.
+				Gli obiettivi di rispetto delle norme di codifica e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{numero di violazioni di alta importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni di media importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore 0;
+					\item \textbf{numero di violazioni di bassa importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore 0.
+				\end{itemize}
+				
+			\paragraph{Processo di test per la qualifica del software/sistema}
+			Il macro-processo, derivante dall'unione dei processi 6.4.6 e 7.1.7 dello standard ISO/IEC 12207:2008, ha lo scopo che ogni requisito individuato sia stato implementato nel prodotto.
+			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+				\subparagraph{Corretto funzionamento del sistema e integrazione delle componenti}
+				Le funzionalità richieste sono state integrate all'interno di un prodotto software le cui diverse componenti interagiscono fra esse in modo coerente e senza criticità, a formare un sistema coeso e funzionante.
+				Gli obiettivi relativi al corretto funzionamento del sistema e le metriche ad essi associate sono i seguenti:
+		 		\begin{itemize}
+					\item \textbf{percentuale di test di unità eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{percentuale di test di integrazione eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{percentuale di test di sistema eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{percentuale di test di validazione eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
+				\end{itemize}
+				
+				\subparagraph{Copertura codice}
+				I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo. Gli obiettivi relativi alla copertura del codice e le metriche ad essi associate sono i seguenti:
+				\begin{itemize}
+					\item \textbf{\gloss{statement} coverage}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{\gloss{branch} coverage}: l'obiettivo stabilito per la metrica è il valore 100;
+				\end{itemize}
+	
+	\subsection{Qualità di prodotto}
+	Per garantire una buona qualità di prodotto, il gruppo \hx{} ha individuato dallo standard \gloss{ISO/IEC 9126:2001} le qualità che ritiene di maggior importanza durante il ciclo di vita del prodotto e ha individuato gli obiettivi e le metriche coerenti con i livelli di qualità stabiliti.
+		\subsubsection{Procedure per il controllo delle qualità di prodotto}
+		Il controllo di qualità del prodotto verrà garantito da:
+		\begin{itemize}
+			\item \textbf{quality assurance}: l'insieme di attività realizzate per garantire il raggiungimento degli obiettivi di qualità. Tali attività prevedono la realizzazione di tecniche di analisi statica e dinamica.
+			\item \textbf{verifica}: il processo che stabilisce se il prodotto in uscita da una fase è consistente, corretto e completo. Per tutta la durata del progetto verranno svolte attività di verifica.
+			\item \textbf{validazione}: la conferma oggettiva che il sistema soddisfa i requisiti.
+		\end{itemize}
+		\subsubsection{Obiettivi di qualità del prodotto}
+		Gli obiettivi di qualità del software che il gruppo \hx{} desidera raggiungere nell'arco del progetto sono un sottoinsieme di quelli enunciati nello standard ISO/IEC 9126:2001.
+		
+		 	\paragraph{funzionalità}
+		 	Il prodotto possiede tutte le funzionalità descritte all'interno dei requisiti obbligatori e gran parte delle funzionalità descritte all'interno dei requisiti desiderabili.
+		 	Gli obiettivi di funzionalità e le metriche ad essi associate sono i seguenti:
+		 	\begin{itemize}
+				\item \textbf{copertura dei requisiti obbligatori}: l'obiettivo stabilito per la metrica è il valore 100;
+				\item \textbf{copertura dei requisiti desiderabili}: l'obiettivo stabilito per la metrica è il range 80 - 100.
+			\end{itemize}
+		 	\paragraph{affidabilità}
+		 	Il prodotto è testato negli aspetti più importanti e in determinate situazioni nelle quali esso si può trovare.
+		 	Gli obiettivi di affidabilità e le metriche ad essi associate sono i seguenti:
+		 	\begin{itemize}
+				\item \textbf{percentuale di test superati}: l'obiettivo stabilito per la metrica è il valore 100.
+			\end{itemize}
+		 	\paragraph{efficienza}
+		 	Il prodotto presenta codice senza elevati gradi di complessità relativamente ad alcuni vincoli definiti.
+		 	Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
+		 	\begin{itemize}
+				\item \textbf{Profondità di annidamento dei blocchi}: l'obiettivo stabilito per la metrica è il range 0 - 4;
+			\end{itemize}
+		 	\paragraph{manutenibilità}
+		 	Il codice risulta manutenibile e facilmente comprensibile.
+		 	Gli obiettivi di manutenibilità e le metriche ad essi associate sono i seguenti:
+		 	\begin{itemize}
+				\item \textbf{Numero di linee di codice per metodo}: l'obiettivo stabilito per la metrica è il range 0 - 20; 
+				\item \textbf{Numero di parametri per metodo}: l'obiettivo stabilito per la metrica è il range 0 - 4;
+				\item \textbf{Numero di campi dati per classe}: l'obiettivo stabilito per la metrica è il range 0 - 10;
+				\item \textbf{Numero di metodi per classe}: l'obiettivo stabilito per la metrica è il range 0 - 10;
+				\item \textbf{Grado di accoppiamento afferente per package}: l'obiettivo stabilito per la metrica è il 0 - 7;
+				\item \textbf{Grado di accoppiamento efferente per package}: l'obiettivo stabilito per la metrica è il 0 - 6;
+				\item \textbf{Complessità ciclomatica per metodo}: l'obiettivo stabilito per la metrica è il range 0 - 8;
+				\item \textbf{Numero di tipi per package}: l'obiettivo stabilito per la metrica è il range 0 - 20;
+				\item \textbf{Distanza dalla sequenza principale normalizzata}: l'obiettivo stabilito per la metrica è il range 0.0 - 0.5; 
+				\item \textbf{Instabilità}: l'obiettivo stabilito per la metrica sono i range 0.0 - 0.3 e 0.7 - 1.0; 
+				\item \textbf{Percentuale linee di commento su linee di codice}: l'obiettivo stabilito per la metrica è il range 20 - 40;	
+				\item \textbf{Numero di figli diretti}: l'obiettivo stabilito per la metrica è il range 0 - 2;
+				\item \textbf{Profondità nella gerarchia}: l'obiettivo stabilito per la metrica è il range 1 - 2;
+			\end{itemize}
+			\paragraph{portabilità}
+		 	Il prodotto deve poter garantire le sue funzionalità in browser differenti.
+		 	Gli obiettivi di portabilità e le metriche ad essi associate sono i seguenti:
+		 	\begin{itemize}
+				\item \textbf{Validazione \gloss{W3C}}: l'obiettivo stabilito per la metrica è il valore 0.
+			\end{itemize}
+
+\section{Test}
+	\subsection{Tipi di test}
+	Sono stati individuati quattro tipologie di test:
+	\begin{itemize}
+		\item \textbf{Test di unità [TU]}: test con i quali si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore, quali metodi e funzioni scritte;
+		\item \textbf{Test di integrazione [TI]}: test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari package prodotti, singolarmente o nel loro insieme;
+		\item \textbf{Test di sistema [TS]}: test con i quali si tenta di verificare che il funzionamento e il comportamento dell'architettura siano corretti;
+		\item \textbf{Test di validazione [TV]}: test per verificare che il prodotto soddisfi le richieste del proponente.
+	\end{itemize}
+
+\subsection{Test di Validazione}
+I test di validazione vengono eseguiti con il proponente per collaudare il prodotto e hanno lo scopo di accertare che esso sia conforme alle attese. Per ogni test viene riportata una descrizione contenente i passi che l'utente deve seguire per verificare che i requisiti siano soddisfatti.
+
+\subsubsection{Descrizione dei Test di Validazione}
+\normalsize
+\begin{longtable}{|c|>{}m{8cm}|c|}
+\hline 
+\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+\hline
+\endhead
+\hypertarget{TVFO1}{TVFO1} & L' utente intende caricare un progetto precedentemente salvato. All'utente è richiesto di:
+\begin{itemize}
+\item premere sul pulsante di caricamento del progetto;
+\item selezionare un progetto valido;
+\item confermare il caricamento.
+\end{itemize}
+ & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO2}{TVFO2} & L'utente intende creare un  nuovo progetto.
+All'utente è richiesto di:
+\begin{itemize}
+\item premere sul pulsante di creazione nuovo progetto.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1}{TVFO3.1} & L'utente intende inserire una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del \gloss{diagramma delle classi} del progetto;
+\item premere il pulsante di inserimento nuova classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.1}{TVFO3.1.1} & L'utente intende inserire la visibilità di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare la visibilità della classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.2}{TVFO3.1.2} & L'utente intende inserire il nome di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item inserire il nome della classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.3}{TVFO3.1.3} & L'utente intende scegliere lo stereotipo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item scegliere lo stereotipo della classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.4}{TVFO3.1.4} & L'utente intende inserire un attributo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'opzione di aggiunta di un attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.4.1}{TVFO3.1.4.1} & L'utente intende inserire la visibilità di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'attributo;
+\item scegliere la visibilità dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.4.2}{TVFO3.1.4.2} & L'utente intende inserire il nome di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'attributo; 
+\item inserire il nome dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.4.3}{TVFO3.1.4.3} & L'utente intende inserire il tipo di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'attributo;
+\item inserire il tipo dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.4.4}{TVFO3.1.4.4} & L'utente intende inserire la molteplicità di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'attributo; 
+\item inserire ila molteplicità dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.4.5}{TVFO3.1.4.5} & L'utente intende inserire il valore di default  di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'attributo;
+\item inserire il valore di default  dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.4.6}{TVFO3.1.4.6} & L'utente intende confermare l'inserimento di un attributo. All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item inserire un nuovo attributo;
+\item completare i campi dell'attributo;
+\item premere sull'opzione di conferma dell'inserimento.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.5}{TVFO3.1.5} & L'utente intende rimuovere un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'attributo;
+\item scegliere l'opzione di rimozione dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6}{TVFO3.1.6} & L'utente intende inserire un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare l'opzione di aggiunta di un metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.1}{TVFO3.1.6.1} & L'utente intende inserire la visibilità di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item selezionare la visibilità del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.2}{TVFO3.1.6.2} & L'utente intende inserire il nome di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item inserire il nome del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.3}{TVFO3.1.6.3} & L'utente intende inserire un parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item selezionare l'opzione di aggiunta di un parametro.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.3.1}{TVFO3.1.6.3.1} & L'utente intende inserire il nome di un parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item selezionare un parametro del metodo;
+\item inserire il nome del parametro.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.3.2}{TVFO3.1.6.3.2} & L'utente intende inserire il tipo di un parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item selezionare un parametro del metodo;
+\item inserire il tipo del parametro.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.3.3}{TVFO3.1.6.3.3} & L'utente intende confermare l'inserimento di un parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item inserire un nuovo parametro del metodo;
+\item completare i campi del parametro;
+\item selezionare l'opzione di conferma di inserimento del parametro.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.4}{TVFO3.1.6.4} & L'utente intende inserire il tipo di ritorno di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item inserire il tipo di ritorno del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.5}{TVFO3.1.6.5} & L'utente intende confermare l'inserimento di un metodo di una classe. 
+All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto; 
+\item selezionare la classe; 
+\item inserire un nuovo metodo; 
+\item completare i campi del metodo;
+\item premere sull'opzione di conferma dell'inserimento.  
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.6.6}{TVFO3.1.6.6} & L'utente intende rimuovere un parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un metodo;
+\item selezionare un parametro;
+\item scegliere l'opzione di rimozione del parametro.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.7}{TVFO3.1.7} & L'utente intende rimuovere un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare la classe;
+\item selezionare un metodo;
+\item scegliere l'opzione di rimozione del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.1.8}{TVFO3.1.8} & L'utente intende inserire confermare l'inserimento di un attributo. 
+All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto; 
+\item inserire una nuova classe; 
+\item completare i campi obbligatori della classe;
+\item premere sull'opzione di conferma dell'inserimento.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.2}{TVFO3.2} & L'utente intende inserire una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item premere il pulsante di inserimento di una nuova relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.2.1}{TVFO3.2.1} & L'utente intende inserire il nome di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item inserire il nome della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.2.2}{TVFO3.2.2} & L'utente intende inserire la classe di partenza di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item inserire la classe di partenza della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.2.3}{TVFO3.2.3} & L'utente intende inserire la classe di destinazione di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item inserire la classe di destinazione della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.2.5}{TVFO3.2.5} & L'utente intende inserire lo stereotipo di partenza di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item selezionare lo stereotipo della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.2.6}{TVFO3.2.6} & L'utente intende confermare l'inserimento di una relazione. 
+All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item inserire una relazione;
+\item completare i campi della relazione;
+\item premere sull'opzione di conferma dell'inserimento.
+ \end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.2.7}{TVFO3.2.7} & L'utente intende inserire l'attributo di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item inserire l'attributo della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.3}{TVFO3.3} & L'utente intende inserire un commento. 
+All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item premere il pulsante di inserimento di un nuovo commento. 
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.3.1}{TVFO3.3.1} & L'utente intende inserire il testo di un commento. 
+All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare un commento;
+\item inserire il testo del commento.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.3.2}{TVFO3.3.2} & L'utente intende inserire il testo di un commento. 
+All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare un commento;
+\item selezionare l'elemento di riferimento del commento. 
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.3.3}{TVFO3.3.3} & L'utente intende confermare l'inserimento di un commento. 
+All'utente è richiesto di: 
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item inserire un commento;
+\item completare i campi del commento;
+\item premere sull'opzione di conferma dell'inserimento. 
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.4}{TVFO3.4} & L'utente intende rimuovere una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item scegliere l'opzione di rimozione della classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.5}{TVFO3.5} & L'utente intende rimuovere una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione; 
+\item scegliere l'opzione di rimozione della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.6}{TVFO3.6} & L'utente intende rimuovere un commento.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare un commento;
+\item scegliere l'opzione di rimozione del commento.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD3.7}{TVFD3.7} & L'utente intende ridurre la dimensione di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe a visualizzazione espansa;
+\item selezionare l'opzione di riduzione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD3.8}{TVFD3.8} & L'utente intende espandere la dimensione di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe a visualizzazione ridotta;
+\item selezionare l'opzione di espansione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD3.9}{TVFD3.9} & L'utente intende ridurre la dimensione di un commento.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare un commento a visualizzazione espansa;
+\item selezionare l'opzione di riduzione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD3.10}{TVFD3.10} & L'utente intende espandere la dimensione di un commento.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare un commento a visualizzazione ridotta;
+\item selezionare l'opzione di espansione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.1}{TVFO3.11.1} & L'utente intende modificare la visibilità di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item modificare la visibilità della classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.2}{TVFO3.11.2} & L'utente intende modificare il nome di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item modificare il nome della classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.3.1}{TVFO3.11.3.1} & L'utente intende modificare la visibilità di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un attributo;
+\item modificare la visibilità dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.3.2}{TVFO3.11.3.2} & L'utente intende modificare il nome di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un attributo;
+\item modificare il nome dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.3.3}{TVFO3.11.3.3} & L'utente intende modificare il tipo di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un attributo;
+\item modificare il tipo dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.3.5}{TVFO3.11.3.5} & L'utente intende modificare il valore di default di un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un attributo;
+\item modificare il valore di default dell'attributo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.3.6}{TVFO3.11.3.6} & L'utente intende confermare le modifiche apportate ad un attributo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un attributo;
+\item modificare i campi di interesse dell'attributo;
+\item selezionare l'opzione di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.4.1}{TVFO3.11.4.1} & L'utente intende modificare la visibilità di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un metodo;
+\item modificare la visibilità del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.4.2}{TVFO3.11.4.2} & L'utente intende modificare il nome di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un metodo;
+\item modificare il nome del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.4.3.1}{TVFO3.11.4.3.1} & L'utente intende modificare il nome di un parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe; 
+\item selezionare un metodo; 
+\item selezionare un parametro;
+\item modificare il nome del parametro.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.4.3.2}{TVFO3.11.4.3.2} & L'utente intende modificare il tipo di un parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe; 
+\item selezionare un metodo;
+\item selezionare un parametro;
+\item modificare il tipo del parametro.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.4.3.3}{TVFO3.11.4.3.3} & L'utente intende confermare le modifiche apportate al parametro di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un metodo;
+\item selezionare un parametro;
+\item modificare i campi di interesse del parametro;
+\item selezionare l'opzione di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.4.4}{TVFO3.11.4.4} & L'utente intende modificare il tipo di rtorno di un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un metodo;
+\item modificare il tipo di ritorno del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.4.5}{TVFO3.11.4.5} & L'utente intende confermare le modifiche apportate ad un metodo di una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare un metodo;
+\item modificare i campi di interesse del metodo;
+\item selezionare l'opzione di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.11.5}{TVFO3.11.5} & L'utente intende confermare le modifiche ad una classe.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item modificare i campi di interesse della classe;
+\item selezionare l'opzione di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.12.1}{TVFO3.12.1} & L'utente intende modificare il tipo di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item modificare il nome della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.12.2}{TVFO3.12.2} & L'utente intende modificare l'attributo di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item modificare l'attributo della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.12.3}{TVFO3.12.3} & L'utente intende modificare la classe di partenza di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item modificare la classe di partenza della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.12.4}{TVFO3.12.4} & L'utente intende modificare la classe di destinazione di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item modificare la classe di destinazione della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.12.5}{TVFO3.12.5} & L'utente intende modificare la cardinalità di una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item modificare la cardinalità della relazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.12.6}{TVFO3.12.6} & L'utente intende confermare le modifiche ad una relazione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una relazione;
+\item modificare i campi di interesse della relazione;
+\item selezionare l'opzione di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.13.1}{TVFO3.13.1} & L'utente intende modificare il testo di un commento. 
+All'utente è richiesto di: 
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare un commento;
+\item modificare il testo del commento.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.13.2}{TVFO3.13.2} & L'utente intende inserire il "parent" di un commento.
+All'utente è richiesto di:
+\begin{itemize} 
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto; 
+\item selezionare un commento;
+\item modificare l'elemento di riferimento del commento.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO3.13.3}{TVFO3.13.3} & L'utente intende confermare le modifiche ad un commento.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare un commento;
+\item modificare i campi di interesse del commento;
+\item selezionare l'opzione di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4}{TVFO4} & L'utente intende visualizzare il \gloss{diagramma delle attività} di un particolare metodo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare una classe;
+\item selezionare l'opzione di visualizzazione del diagramma delle attività di un metodo della classe.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.1}{TVFO4.1} & L'utente intende inserire un blocco variabile.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco variabile.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.1.1}{TVFO4.1.1} & L'utente intende creare ed inizializzare una nuova variabile.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco variabile;
+\item inserire il nome della variabile;
+\item inserire il valore della variabile.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.1.2}{TVFO4.1.2} & L'utente intende assegnare un valore ad una variabile già esistente e visibile.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco variabile;
+\item selezionare una variabile tra quelle esistenti e visibili;
+\item inserire il valore della variabile.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.1.3}{TVFO4.1.3} & L'utente intende inserire un commento per un blocco variabile.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco variabile;
+\item inserire il commento relativo al blocco variabile.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.1.4}{TVFO4.1.4} & L'utente intende confermare l'inserimento di un blocco variabile.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco variabile;
+\item completare le informazioni dei campi di interesse;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.2}{TVFO4.2} & L'utente intende inserire un blocco metodo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.2.1}{TVFO4.2.1} & L'utente intende invocare un metodo tra quelli disponibili.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco metodo;
+\item selezionare una metodo tra quelli disponibili;
+\item inserire i parametri del metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.2.2}{TVFO4.2.2} & L'utente intende inserire un commento per un blocco metodo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco metodo;
+\item inserire il commento relativo al blocco metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.2.3}{TVFO4.2.3} & L'utente intende confermare l'inserimento di un blocco metodo.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco metodo;
+\item completare le informazioni dei campi di interesse;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.3}{TVFO4.3} & L'utente intende inserire un blocco if/else.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco if/else.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.3.1}{TVFO4.3.1} & L'utente intende inserire la condizione di un blocco if.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco if/else;
+\item inserire la condizione del blocco if.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.3.2}{TVFO4.3.2} & L'utente intende completare il corpo di un blocco if inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco if/else;
+\item selezionare il corpo del blocco if;
+\item schiacciare sul pulsante di inserimento del blocco da inserire nel corpo;
+\item completare le informazioni ad esso relative;
+\item schiacciare sul pulsante di conferma;
+\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.3.3}{TVFO4.3.3} & L'utente intende completare il corpo di un blocco else inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco if/else;
+\item selezionare il corpo del blocco else;
+\item schiacciare sul pulsante di inserimento del blocco da inserire nel corpo;
+\item completare le informazioni ad esso relative;
+\item schiacciare sul pulsante di conferma;
+\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.3.4}{TVFO4.3.4} & L'utente intende inserire un commento per un blocco if/else.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco if/else;
+\item inserire il commento relativo al blocco if/else.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.3.5}{TVFO4.3.5} & L'utente intende confermare l'inserimento di un blocco if/else.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco if/else;
+\item completare le informazioni dei campi di interesse;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.4}{TVFO4.4} & L'utente intende inserire un blocco whilee.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco while.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.4.1}{TVFO4.4.1} & L'utente intende inserire la condizione da verificare di un blocco while.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco while;
+\item inserire la condizione da verificare del blocco while.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.4.2}{TVFO4.4.2} & L'utente intende completare il corpo di un blocco while inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco while;
+\item selezionare il corpo del blocco while;
+\item schiacciare sul pulsante di inserimento del blocco da inserire nel corpo;
+\item completare le informazioni ad esso relative;
+\item schiacciare sul pulsante di conferma;
+\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.4.3}{TVFO4.4.3} & L'utente intende inserire un commento per un blocco while.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco while;
+\item inserire il commento relativo al blocco while.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.4.4}{TVFO4.4.4} & L'utente intende confermare l'inserimento di un blocco while.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco while;
+\item completare le informazioni dei campi di interesse;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.5}{TVFO4.5} & L'utente intende inserire un blocco for.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco for.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.5.1}{TVFO4.5.1} & L'utente intende inserire l'inizializzazione di un blocco for .
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for;
+\item selezionare l'opzione di inizializzazione;
+\item selezionare un blocco di assegnazione o inizializzazione;
+\item completare le informazioni ad esso relative;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.5.2}{TVFO4.5.2} & L'utente intende inserire la condizione da verificare di un blocco for.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for;
+\item selezionare l'opzione di condizione;
+\item inserire la condizione da verificare del blocco for.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.5.3}{TVFO4.5.3} & L'utente intende inserire l'incremento-decremento di un blocco for .
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for;
+\item selezionare l'opzione di incremento/decremento;
+\item selezionare un blocco di assegnazione o inizializzazione;
+\item completare le informazioni ad esso relative;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.5.4}{TVFO4.5.4} & L'utente intende completare il corpo di un blocco for inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for;
+\item selezionare il corpo del blocco for;
+\item schiacciare sul pulsante di inserimento del blocco da inserire nel corpo;
+\item completare le informazioni ad esso relative;
+\item schiacciare sul pulsante di conferma;
+\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.5.5}{TVFO4.5.5} & L'utente intende inserire un commento per un blocco for.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for;
+\item inserire il commento relativo al blocco for.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.5.6}{TVFO4.5.6} & L'utente intende confermare l'inserimento di un blocco for.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco for;
+\item completare le informazioni dei campi di interesse;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.6}{TVFO4.6} & L'utente intende inserire un blocco custom.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco custom di codice.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.6.1}{TVFO4.6.1} & L'utente intende inserire il contenuto di un blocco custom di codice.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco custom di codice;
+\item inserire il contenuto del blocco custom di codice.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.6.2}{TVFO4.6.2} & L'utente intende inserire un commento per un blocco custom di codice.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco custom di codice;
+\item inserire il commento relativo al blocco custom di codice.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.6.3}{TVFO4.6.3} & L'utente intende confermare l'inserimento di un blocco custom di codice.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco custom di codice;
+\item completare le informazioni dei campi di interesse;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.7}{TVFO4.7} & L'utente intende rimuovere un blocco variabile esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare il blocco variabile da eliminare;
+\item premere sul pulsante di cancellazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.8}{TVFO4.8} & L'utente intende rimuovere un blocco metodo esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare il blocco metodo da eliminare;
+\item premere sul pulsante di cancellazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.9}{TVFO4.9} & L'utente intende rimuovere un blocco if/else esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare il blocco if/else da eliminare;
+\item premere sul pulsante di cancellazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.10}{TVFO4.10} & L'utente intende rimuovere un blocco while esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare il blocco while da eliminare;
+\item premere sul pulsante di cancellazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.11}{TVFO4.11} & L'utente intende rimuovere un blocco for esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare il blocco for da eliminare;
+\item premere sul pulsante di cancellazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.12}{TVFO4.12} & L'utente intende rimuovere un blocco custom di codice esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare il blocco custom di codice da eliminare;
+\item premere sul pulsante di cancellazione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.13}{TVFO4.13} & L'utente intende ridurre la dimensione di un blocco if/else.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare blocco if/else a visualizzazione espansa;
+\item selezionare l'opzione di riduzione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD4.14}{TVFD4.14} & L'utente intende espandere la dimensione di un blocco if/else.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare blocco if/else a visualizzazione ridotta;
+\item selezionare l'opzione di espansione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD4.15}{TVFD4.15} & L'utente intende ridurre la dimensione di un blocco while.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare blocco while a visualizzazione espansa;
+\item selezionare l'opzione di riduzione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD4.16}{TVFD4.16} & L'utente intende espandere la dimensione di un blocco while.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare blocco while a visualizzazione ridotta;
+\item selezionare l'opzione di espansione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD4.17}{TVFD4.17} & L'utente intende ridurre la dimensione di un blocco for.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare blocco for a visualizzazione espansa;
+\item selezionare l'opzione di riduzione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD4.18}{TVFD4.18} & L'utente intende espandere la dimensione di un blocco for.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare blocco for a visualizzazione ridotta;
+\item selezionare l'opzione di espansione dimensione.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFD4.19}{TVFD4.19} & L'utente intende spostare uno dei blocchi inseriti all’interno del diagramma delle attività gestito in una nuova posizione.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi esistenti;
+\item trascinarlo in basso od in alto fino ad inserirlo nella nuova posizione desiderata.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.20.1}{TVFO4.20.1} & L'utente intende modificare il nome di una variabile relativa ad un blocco variabile esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi variabili esistenti;
+\item modificare il nome della variabile.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.20.2}{TVFO4.20.2} & L'utente intende modificare il tipo di una variabile relativa ad un blocco variabile esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi variabili esistenti;
+\item modificare il tipo della variabile.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.20.3}{TVFO4.20.3} & L'utente intende modificare il valore di una variabile relativa ad un blocco variabile esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi variabili esistenti;
+\item modificare il valore della variabile.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.20.4}{TVFO4.20.4} & L'utente intende confermare le modifiche apportate ad un blocco variabile esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi variabili esistenti;
+\item modificare i campi di interesse del blocco variabile;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.21.1}{TVFO4.21.1} & L'utente modificare il metodo relativo ad un blocco metodo esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco metodo;
+\item modificare il metodo in esso contenuto.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.21.2}{TVFO4.21.2} & L'utente intende modificare il commento relativo ad un blocco metodo esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco metodo;
+\item modificare il commento relativo al blocco metodo.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.21.3}{TVFO4.21.3} & L'utente intende confermare le modifiche apportate ad un blocco metodo esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi metodo esistenti;
+\item modificare i campi di interesse del blocco metodo;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.22.1}{TVFO4.22.1} & L'utente intende modificare la condizione di un blocco if esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco if/else;
+\item modificare la condizione del blocco if.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.22.2}{TVFO4.22.2} & L'utente intende modificare il commento relativo ad un blocco if/else esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco if/else;
+\item modificare il commento relativo al blocco if/else.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.22.3}{TVFO4.22.3} & L'utente intende confermare le modifiche apportate ad un blocco if/else esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi if/else esistenti;
+\item modificare i campi di interesse del blocco if/else;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.23.1}{TVFO4.23.1} & L'utente intende modificare la condizione di un blocco while esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item{trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;}
+\item{selezionare un blocco while;}
+\item{modificare la condizione del blocco while;}
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.23.2}{TVFO4.23.2} & L'utente intende modificare il commento relativo ad un blocco while esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item{trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;}
+\item{selezionare un blocco while;}
+\item{modificare il commento relativo al blocco while.}
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.23.3}{TVFO4.23.3} & L'utente intende confermare le modifiche apportate ad un blocco while esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item{trovarsi nella schermata di gestione del diagramma delle classi del progetto;}
+\item{selezionare uno dei blocchi while esistenti;}
+\item{modificare i campi di interesse del blocco while;}
+\item{premere sul pulsante di conferma.}
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.24.1}{TVFO4.24.1} & L'utente intende modificare l'inizializzazione di un blocco for esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo; 
+\item selezionare un blocco for; 
+\item selezionare l'opzione di inizializzazione; 
+\item modificare il blocco variabile ad esso relativo; 
+\item premere sul pulsante di conferma. 
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.24.2}{TVFO4.24.2} & L'utente intende modificare la condizione da verificare di un blocco for esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for;
+\item selezionare l'opzione di condizione;
+\item modificare la condizione da verificare del blocco for.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.24.3}{TVFO4.24.3} & L'utente intende modificare l'incremento-decremento di un blocco for .
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for esistente;
+\item selezionare l'opzione di incremento/decremento;
+\item modificare il blocco di assegnazione o inizializzazione relativo;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.24.4}{TVFO4.24.4} & L'utente intende modificare il commento relativo ad un blocco for esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco for;
+\item modificare il commento relativo al blocco for.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.24.5}{TVFO4.24.5} & L'utente intende confermare le modifiche apportate ad un blocco for esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi for esistenti;
+\item modificare i campi di interesse del blocco for;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.25.1}{TVFO4.25.1} & L'utente modificare il contenuto di un blocco custom di codice esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco custom di codice esistente;
+\item modificare il contenuto del blocco custom di codice.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.25.2}{TVFO4.25.2} & L'utente intende modificare il commento relativo ad un blocco custom di codice esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item selezionare un blocco custom di codice esistente;
+\item modificare il commento relativo al blocco custom di codice.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.25.3}{TVFO4.25.3} & L'utente intende confermare le modifiche apportate ad un blocco custom di codice esistente.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
+\item selezionare uno dei blocchi custom di codice esistenti;
+\item modificare i campi di interesse del blocco custom di codice;
+\item premere sul pulsante di conferma.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO4.26}{TVFO4.26} & L'utente intende inserire un blocco return.
+All'utente è richiesto di:
+\begin{itemize}
+\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
+\item premere sul pulsante di inserimento del blocco return.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO5}{TVFO5} & L'utente intende salvare il progetto corrente.
+All'utente è richiesto di:
+\begin{itemize}
+\item premere sul pulsante di salvataggio;
+\item specificare eventualmente il nome del progetto;
+\item indicare la directory corrispondente;
+\item confermare il salvataggio.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\hypertarget{TVFO6}{TVFO6} & L'utente intende scaricare il codice relativo al progetto corrente.
+All'utente è richiesto di:
+\begin{itemize}
+\item cliccare sul pulsante genera codice;
+\item attendere lo scaricamento della cartella.
+\end{itemize} & \textit{Non Implementato}\\ \hline
+\caption[Test di Validazione]{Test di Validazione}
+\label{tabella:test0}
+\end{longtable}
+
+\subsubsection{Tracciamento Test di Validazione-Requisiti}
+\normalsize
+\begin{longtable}{|>{\centering}m{5cm}|m{5cm}<{\centering}|}
+\hline 
+\textbf{Test} & \textbf{Requisito}\\
+\hline
+\endhead
+\hyperlink{TVFO1}{TVFO1} & RFO1\\ \hline
+\hyperlink{TVFO2}{TVFO2} & RFO2\\ \hline
+\hyperlink{TVFO3.1}{TVFO3.1} & RFO3.1\\ \hline
+\hyperlink{TVFO3.1.1}{TVFO3.1.1} & RFO3.1.1\\ \hline
+\hyperlink{TVFO3.1.2}{TVFO3.1.2} & RFO3.1.2\\ \hline
+\hyperlink{TVFO3.1.3}{TVFO3.1.3} & RFO3.1.3\\ \hline
+\hyperlink{TVFO3.1.4}{TVFO3.1.4} & RFO3.1.4\\ \hline
+\hyperlink{TVFO3.1.4.1}{TVFO3.1.4.1} & RFO3.1.4.1\\ \hline
+\hyperlink{TVFO3.1.4.2}{TVFO3.1.4.2} & RFO3.1.4.2\\ \hline
+\hyperlink{TVFO3.1.4.3}{TVFO3.1.4.3} & RFO3.1.4.3\\ \hline
+\hyperlink{TVFO3.1.4.4}{TVFO3.1.4.4} & RFO3.1.4.4\\ \hline
+\hyperlink{TVFO3.1.4.5}{TVFO3.1.4.5} & RFO3.1.4.5\\ \hline
+\hyperlink{TVFO3.1.4.6}{TVFO3.1.4.6} & RFO3.1.4.6\\ \hline
+\hyperlink{TVFO3.1.5}{TVFO3.1.5} & RFO3.1.5\\ \hline
+\hyperlink{TVFO3.1.6}{TVFO3.1.6} & RFO3.1.6\\ \hline
+\hyperlink{TVFO3.1.6.1}{TVFO3.1.6.1} & RFO3.1.6.1\\ \hline
+\hyperlink{TVFO3.1.6.2}{TVFO3.1.6.2} & RFO3.1.6.2\\ \hline
+\hyperlink{TVFO3.1.6.3}{TVFO3.1.6.3} & RFO3.1.6.3\\ \hline
+\hyperlink{TVFO3.1.6.3.1}{TVFO3.1.6.3.1} & RFO3.1.6.3.1\\ \hline
+\hyperlink{TVFO3.1.6.3.2}{TVFO3.1.6.3.2} & RFO3.1.6.3.2\\ \hline
+\hyperlink{TVFO3.1.6.3.3}{TVFO3.1.6.3.3} & RFO3.1.6.3.3\\ \hline
+\hyperlink{TVFO3.1.6.4}{TVFO3.1.6.4} & RFO3.1.6.4\\ \hline
+\hyperlink{TVFO3.1.6.5}{TVFO3.1.6.5} & RFO3.1.6.5\\ \hline
+\hyperlink{TVFO3.1.6.6}{TVFO3.1.6.6} & RFO3.1.6.6\\ \hline
+\hyperlink{TVFO3.1.7}{TVFO3.1.7} & RFO3.1.7\\ \hline
+\hyperlink{TVFO3.1.8}{TVFO3.1.8} & RFO3.1.8\\ \hline
+\hyperlink{TVFO3.2}{TVFO3.2} & RFO3.2\\ \hline
+\hyperlink{TVFO3.2.1}{TVFO3.2.1} & RFO3.2.1\\ \hline
+\hyperlink{TVFO3.2.2}{TVFO3.2.2} & RFO3.2.2\\ \hline
+\hyperlink{TVFO3.2.3}{TVFO3.2.3} & RFO3.2.3\\ \hline
+\hyperlink{TVFO3.2.5}{TVFO3.2.5} & RFO3.2.5\\ \hline
+\hyperlink{TVFO3.2.6}{TVFO3.2.6} & RFO3.2.6\\ \hline
+\hyperlink{TVFO3.2.7}{TVFO3.2.7} & RFO3.2.7\\ \hline
+\hyperlink{TVFO3.3}{TVFO3.3} & RFO3.3\\ \hline
+\hyperlink{TVFO3.3.1}{TVFO3.3.1} & RFO3.3.1\\ \hline
+\hyperlink{TVFO3.3.2}{TVFO3.3.2} & RFO3.3.2\\ \hline
+\hyperlink{TVFO3.3.3}{TVFO3.3.3} & RFO3.3.3\\ \hline
+\hyperlink{TVFO3.4}{TVFO3.4} & RFO3.4\\ \hline
+\hyperlink{TVFO3.5}{TVFO3.5} & RFO3.5\\ \hline
+\hyperlink{TVFO3.6}{TVFO3.6} & RFO3.6\\ \hline
+\hyperlink{TVFD3.7}{TVFD3.7} & RFD3.7\\ \hline
+\hyperlink{TVFD3.8}{TVFD3.8} & RFD3.8\\ \hline
+\hyperlink{TVFD3.9}{TVFD3.9} & RFD3.9\\ \hline
+\hyperlink{TVFD3.10}{TVFD3.10} & RFD3.10\\ \hline
+\hyperlink{TVFO3.11.1}{TVFO3.11.1} & RFO3.11.1\\ \hline
+\hyperlink{TVFO3.11.2}{TVFO3.11.2} & RFO3.11.2\\ \hline
+\hyperlink{TVFO3.11.3.1}{TVFO3.11.3.1} & RFO3.11.3.1\\ \hline
+\hyperlink{TVFO3.11.3.2}{TVFO3.11.3.2} & RFO3.11.3.2\\ \hline
+\hyperlink{TVFO3.11.3.3}{TVFO3.11.3.3} & RFO3.11.3.3\\ \hline
+\hyperlink{TVFO3.11.3.5}{TVFO3.11.3.5} & RFO3.11.3.5\\ \hline
+\hyperlink{TVFO3.11.3.6}{TVFO3.11.3.6} & RFO3.11.3.6\\ \hline
+\hyperlink{TVFO3.11.4.1}{TVFO3.11.4.1} & RFO3.11.4.1\\ \hline
+\hyperlink{TVFO3.11.4.2}{TVFO3.11.4.2} & RFO3.11.4.2\\ \hline
+\hyperlink{TVFO3.11.4.3.1}{TVFO3.11.4.3.1} & RFO3.11.4.3.1\\ \hline
+\hyperlink{TVFO3.11.4.3.2}{TVFO3.11.4.3.2} & RFO3.11.4.3.2\\ \hline
+\hyperlink{TVFO3.11.4.3.3}{TVFO3.11.4.3.3} & RFO3.11.4.3.3\\ \hline
+\hyperlink{TVFO3.11.4.4}{TVFO3.11.4.4} & RFO3.11.4.4\\ \hline
+\hyperlink{TVFO3.11.4.5}{TVFO3.11.4.5} & RFO3.11.4.5\\ \hline
+\hyperlink{TVFO3.11.5}{TVFO3.11.5} & RFO3.11.5\\ \hline
+\hyperlink{TVFO3.12.1}{TVFO3.12.1} & RFO3.12.1\\ \hline
+\hyperlink{TVFO3.12.2}{TVFO3.12.2} & RFO3.12.2\\ \hline
+\hyperlink{TVFO3.12.3}{TVFO3.12.3} & RFO3.12.3\\ \hline
+\hyperlink{TVFO3.12.4}{TVFO3.12.4} & RFO3.12.4\\ \hline
+\hyperlink{TVFO3.12.5}{TVFO3.12.5} & RFO3.12.5\\ \hline
+\hyperlink{TVFO3.12.6}{TVFO3.12.6} & RFO3.12.6\\ \hline
+\hyperlink{TVFO3.13.1}{TVFO3.13.1} & RFO3.13.1\\ \hline
+\hyperlink{TVFO3.13.2}{TVFO3.13.2} & RFO3.13.2\\ \hline
+\hyperlink{TVFO3.13.3}{TVFO3.13.3} & RFO3.13.3\\ \hline
+\hyperlink{TVFO4}{TVFO4} & RFO4\\ \hline
+\hyperlink{TVFO4.1}{TVFO4.1} & RFO4.1\\ \hline
+\hyperlink{TVFO4.1.1}{TVFO4.1.1} & RFO4.1.1\\ \hline
+\hyperlink{TVFO4.1.2}{TVFO4.1.2} & RFO4.1.2\\ \hline
+\hyperlink{TVFO4.1.3}{TVFO4.1.3} & RFO4.1.3\\ \hline
+\hyperlink{TVFO4.1.4}{TVFO4.1.4} & RFO4.1.4\\ \hline
+\hyperlink{TVFO4.2}{TVFO4.2} & RFO4.2\\ \hline
+\hyperlink{TVFO4.2.1}{TVFO4.2.1} & RFO4.2.1\\ \hline
+\hyperlink{TVFO4.2.2}{TVFO4.2.2} & RFO4.2.2\\ \hline
+\hyperlink{TVFO4.2.3}{TVFO4.2.3} & RFO4.2.3\\ \hline
+\hyperlink{TVFO4.3}{TVFO4.3} & RFO4.3\\ \hline
+\hyperlink{TVFO4.3.1}{TVFO4.3.1} & RFO4.3.1\\ \hline
+\hyperlink{TVFO4.3.2}{TVFO4.3.2} & RFO4.3.2\\ \hline
+\hyperlink{TVFO4.3.3}{TVFO4.3.3} & RFO4.3.3\\ \hline
+\hyperlink{TVFO4.3.4}{TVFO4.3.4} & RFO4.3.4\\ \hline
+\hyperlink{TVFO4.3.5}{TVFO4.3.5} & RFO4.3.5\\ \hline
+\hyperlink{TVFO4.4}{TVFO4.4} & RFO4.4\\ \hline
+\hyperlink{TVFO4.4.1}{TVFO4.4.1} & RFO4.4.1\\ \hline
+\hyperlink{TVFO4.4.2}{TVFO4.4.2} & RFO4.4.2\\ \hline
+\hyperlink{TVFO4.4.3}{TVFO4.4.3} & RFO4.4.3\\ \hline
+\hyperlink{TVFO4.4.4}{TVFO4.4.4} & RFO4.4.4\\ \hline
+\hyperlink{TVFO4.5}{TVFO4.5} & RFO4.5\\ \hline
+\hyperlink{TVFO4.5.1}{TVFO4.5.1} & RFO4.5.1\\ \hline
+\hyperlink{TVFO4.5.2}{TVFO4.5.2} & RFO4.5.2\\ \hline
+\hyperlink{TVFO4.5.3}{TVFO4.5.3} & RFO4.5.3\\ \hline
+\hyperlink{TVFO4.5.4}{TVFO4.5.4} & RFO4.5.4\\ \hline
+\hyperlink{TVFO4.5.5}{TVFO4.5.5} & RFO4.5.5\\ \hline
+\hyperlink{TVFO4.5.6}{TVFO4.5.6} & RFO4.5.6\\ \hline
+\hyperlink{TVFO4.6}{TVFO4.6} & RFO4.6\\ \hline
+\hyperlink{TVFO4.6.1}{TVFO4.6.1} & RFO4.6.1\\ \hline
+\hyperlink{TVFO4.6.2}{TVFO4.6.2} & RFO4.6.2\\ \hline
+\hyperlink{TVFO4.6.3}{TVFO4.6.3} & RFO4.6.3\\ \hline
+\hyperlink{TVFO4.7}{TVFO4.7} & RFO4.7\\ \hline
+\hyperlink{TVFO4.8}{TVFO4.8} & RFO4.8\\ \hline
+\hyperlink{TVFO4.9}{TVFO4.9} & RFO4.9\\ \hline
+\hyperlink{TVFO4.10}{TVFO4.10} & RFO4.10\\ \hline
+\hyperlink{TVFO4.11}{TVFO4.11} & RFO4.11\\ \hline
+\hyperlink{TVFO4.12}{TVFO4.12} & RFO4.12\\ \hline
+\hyperlink{TVFO4.13}{TVFO4.13} & RFO4.13\\ \hline
+\hyperlink{TVFD4.14}{TVFD4.14} & RFD4.14\\ \hline
+\hyperlink{TVFD4.15}{TVFD4.15} & RFD4.15\\ \hline
+\hyperlink{TVFD4.16}{TVFD4.16} & RFD4.16\\ \hline
+\hyperlink{TVFD4.17}{TVFD4.17} & RFD4.17\\ \hline
+\hyperlink{TVFD4.18}{TVFD4.18} & RFD4.18\\ \hline
+\hyperlink{TVFD4.19}{TVFD4.19} & RFD4.19\\ \hline
+\hyperlink{TVFO4.20.1}{TVFO4.20.1} & RFO4.20.1\\ \hline
+\hyperlink{TVFO4.20.2}{TVFO4.20.2} & RFO4.20.2\\ \hline
+\hyperlink{TVFO4.20.3}{TVFO4.20.3} & RFO4.20.3\\ \hline
+\hyperlink{TVFO4.20.4}{TVFO4.20.4} & RFO4.20.4\\ \hline
+\hyperlink{TVFO4.21.1}{TVFO4.21.1} & RFO4.21.1\\ \hline
+\hyperlink{TVFO4.21.2}{TVFO4.21.2} & RFO4.21.2\\ \hline
+\hyperlink{TVFO4.21.3}{TVFO4.21.3} & RFO4.21.3\\ \hline
+\hyperlink{TVFO4.22.1}{TVFO4.22.1} & RFO4.22.1\\ \hline
+\hyperlink{TVFO4.22.2}{TVFO4.22.2} & RFO4.22.2\\ \hline
+\hyperlink{TVFO4.22.3}{TVFO4.22.3} & RFO4.22.3\\ \hline
+\hyperlink{TVFO4.23.1}{TVFO4.23.1} & RFO4.23.1\\ \hline
+\hyperlink{TVFO4.23.2}{TVFO4.23.2} & RFO4.23.2\\ \hline
+\hyperlink{TVFO4.23.3}{TVFO4.23.3} & RFO4.23.3\\ \hline
+\hyperlink{TVFO4.24.1}{TVFO4.24.1} & RFO4.24.1\\ \hline
+\hyperlink{TVFO4.24.2}{TVFO4.24.2} & RFO4.24.2\\ \hline
+\hyperlink{TVFO4.24.3}{TVFO4.24.3} & RFO4.24.3\\ \hline
+\hyperlink{TVFO4.24.4}{TVFO4.24.4} & RFO4.24.4\\ \hline
+\hyperlink{TVFO4.24.5}{TVFO4.24.5} & RFO4.24.5\\ \hline
+\hyperlink{TVFO4.25.1}{TVFO4.25.1} & RFO4.25.1\\ \hline
+\hyperlink{TVFO4.25.2}{TVFO4.25.2} & RFO4.25.2\\ \hline
+\hyperlink{TVFO4.25.3}{TVFO4.25.3} & RFO4.25.3\\ \hline
+\hyperlink{TVFO4.26}{TVFO4.26} & RFO4.26\\ \hline
+\hyperlink{TVFO5}{TVFO5} & RFO5\\ \hline
+\hyperlink{TVFO6}{TVFO6} & RFO6\\ \hline
+\caption[Tracciamento Test di Validazione-Requisiti]{Tracciamento Test di Validazione-Requisiti}
+\label{tabella:tv-requi}
+\end{longtable}
+\clearpage
+
+\subsection{Test di Sistema}
+I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue componenti sono completamente integrate allo scopo di verificare che soddisfi i requisiti come definiti nel documento \AdR .
+
+\subsubsection{Descrizione dei Test di Sistema}
+\normalsize
+\begin{longtable}{|c|>{}m{8cm}|c|}
+\hline 
+\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+\hline
+\endhead
+\hypertarget{TSFO1}{TSFO1} & Verificare che il sistema permetta all'utente di caricare un progetto. & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO1.1}{TSFO1.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'attore cerca di caricare come progetto un file incompatibile con l'editor stesso. & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO2}{TSFO2} & Verificare che il sistema permetta all'utente di creare un nuovo progetto. & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1}{TSFO3.1} & Verificare che il sistema permetta all'utente di inserire una classe nel diagramma delle classi. & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.1}{TSFO3.1.1} & Verificare che il sistema permetta all'utente di inserire la visibilità di una classe del diagramma delle classi. & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.2}{TSFO3.1.2} & Verificare che il sistema permetta all'utente di inserire il nome di una classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.3}{TSFO3.1.3} & Verificare che il sistema permetta all'utente di scegliere lo stereotipo per la classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4}{TSFO3.1.4} & Verificare che il sistema permetta all'utente di inserire un attributo per la classe. & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4.1}{TSFO3.1.4.1} & Verificare che il sistema permetta all'utente di scegliere la visibilità per l'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4.2}{TSFO3.1.4.2} & Verificare che il sistema permetta all'utente di inserire il nome dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4.3}{TSFO3.1.4.3} & Verificare che il sistema permetta all'utente di inseire il tipo dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4.4}{TSFO3.1.4.4} & Verificare che il sistema permetta all'utente di scegliere la molteplicità dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4.5}{TSFO3.1.4.5} & Verificare che il sistema permetta all'utente di inserire il valore di default dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4.6}{TSFO3.1.4.6} & Verificare che il sistema permetta all'utente di confermare l'inserimento dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.4.6.1}{TSFO3.1.4.6.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le informazioni corrette per l'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.5}{TSFO3.1.5} & Verificare che il sistema permetta all'utente di rimuovere un attributo precedentemente inserito & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6}{TSFO3.1.6} & Verificare che il sistema permetta all'utente di inserire un metodo per una classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.1}{TSFO3.1.6.1} & Verificare che il sistema permetta all'utente di scegliere la visibilità per un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.2}{TSFO3.1.6.2} & Verificare che il sistema permetta all'utente di inserire il nome di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.3}{TSFO3.1.6.3} & Verificare che il sistema permetta all'utente di inserire un parametro per un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.3.1}{TSFO3.1.6.3.1} & Verificare che il sistema permetta all'utente di inserire il nome di un parametro del metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.3.2}{TSFO3.1.6.3.2} & Verificare che il sistema permetta all'utente di inserire il tipo del parametro di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.3.3}{TSFO3.1.6.3.3} & Verificare che il sistema permetta all'utente di confermare l'inserimento di un parametro di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.3.3.1}{TSFO3.1.6.3.3.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le informazioni corrette per il parametro & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.4}{TSFO3.1.6.4} & Verificare che il sistema permetta all'utente di inserire il tipo di ritorno di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.5}{TSFO3.1.6.5} & Verificare che il sistema permetta all'utente di confermare l'inserimento di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.5.1}{TSFO3.1.6.5.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le infomazioni corrette per il metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.6.6}{TSFO3.1.6.6} & Verificare che il sistema permetta all'utente di rimuovere un parametro di un metodo precedentemente inseirito & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.7}{TSFO3.1.7} & Verificare che il sistema permetta all'utente di rimuovere un metodo precedentemente inserito & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.8}{TSFO3.1.8} & Verificare che il sistema permetta all'utente di confermare l'inserimento della classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.1.8.1}{TSFO3.1.8.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le corrette informazioni per la classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2}{TSFO3.2} & Verificare che il sistema permetta all'utente di inserire una relazioni & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.1}{TSFO3.2.1} & Verificare che il sistema permetta all'utente di scegliere il nome di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.2}{TSFO3.2.2} & Verificare che il sistema permetta all'utente di inserire la classe di partenza della relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.3}{TSFO3.2.3} & Verificare che il sistema permetta all'utente di scegliere la classe di destinazione della relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.4}{TSFO3.2.4} & Verificare che il sistema permetta all'utente di scegliere la cardinalità della relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.5}{TSFO3.2.5} & Verificare che il sistema permetta all'utente di scegliere uno stereotipo per la relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.6}{TSFO3.2.6} & Verificare che il sistema permetta all'utente di confermare l'inserimento di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.6.1}{TSFO3.2.6.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le informazioni corrette per la relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.2.7}{TSFO3.2.7} & Verificare che il sistema permetta all'utente di scegliere l'attributo di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.3}{TSFO3.3} & Verificare che il sistema permetta all'utente di inserire un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.3.1}{TSFO3.3.1} & Verificare che il sistema permetta all'utente di inserire il testo di un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.3.2}{TSFO3.3.2} & Verificare che il sistema permetta all'utente di scegliere il "parent" di un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.3.3}{TSFO3.3.3} & Verificare che il sistema permetta all'utente di confermare l'inserimento del commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.3.3.1}{TSFO3.3.3.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le informazioni corrette per il commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.4}{TSFO3.4} & Verificare che il sistema permetta all'utente di rimuovere una classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.5}{TSFO3.5} & Verificare che il sistema permetta all'utente di rimuovere una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.6}{TSFO3.6} & Verificare che il sistema permetta all'utente di rimuovere un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD3.7}{TSFD3.7} & Verificare che il sistema permetta all'utente di ridurre una classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD3.8}{TSFD3.8} & Verificare che il sistema permetta all'utente di espandere una classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD3.9}{TSFD3.9} & Verificare che il sistema permetta all'utente di ridurre un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD3.10}{TSFD3.10} & Verificare che il sistema permetta all'utente di espandere un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.1}{TSFO3.11.1} & Verificare che il sistema permetta all'utente di modificare la visibilità di una classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.2}{TSFO3.11.2} & Verificare che il sistema permetta all'utente di modificare il nome di una classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.3.1}{TSFO3.11.3.1} & Verificare che il sistema permetta all'utente di modificare la visibilità di un attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.3.2}{TSFO3.11.3.2} & Verificare che il sistema permetta all'utente di modificare il nome di un attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.3.3}{TSFO3.11.3.3} & Verificare che il sistema permetta all'utente di modificare il tipo dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.3.4}{TSFO3.11.3.4} & Verificare che il sistema permetta all'utente di modificare la molteplicità dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.3.5}{TSFO3.11.3.5} & Verificare che il sistema permetta all'utente di modificare il valore di default dell'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.3.6}{TSFO3.11.3.6} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate all'attributo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.4.1}{TSFO3.11.4.1} & Verificare che il sistema permetta all'utente di modificare la visibilità di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.4.2}{TSFO3.11.4.2} & Verificare che il sistema permetta all'utente di modificare il nome di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.4.3.1}{TSFO3.11.4.3.1} & Verificare che il sistema permetta all'utente di modificare il nome del parametro di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.4.3.2}{TSFO3.11.4.3.2} & Verificare che il sistema permetta all'utente di modificare il tipo del parametro di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.4.3.3}{TSFO3.11.4.3.3} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al parametro di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.4.4}{TSFO3.11.4.4} & Verificare che il sistema permetta all'utente di modificare il tipo di ritorno di un metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.4.5}{TSFO3.11.4.5} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.11.5}{TSFO3.11.5} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate alla classe & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.12.1}{TSFO3.12.1} & Verificare che il sistema permetta all'utente di modificare il tipo di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.12.2}{TSFO3.12.2} & Verificare che il sistema permetta all'utente di modificare l'attributo di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.12.3}{TSFO3.12.3} & Verificare che il sistema permetta all'utente di modificare la classe1 di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.12.4}{TSFO3.12.4} & Verificare che il sistema permetta all'utente di modificare la classe2 di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.12.5}{TSFO3.12.5} & Verificare che il sistema permetta all'utente di modificare la cardinalità di una relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.12.6}{TSFO3.12.6} & Verificare che il sistema permetta all'utente di confermare le modifiche apportare alla relazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.13.1}{TSFO3.13.1} & Verificare che il sistema permetta all'utente di modificare il testo di un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.13.2}{TSFO3.13.2} & Verificare che il sistema permetta all'utente di modificare il "parent" di un commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO3.13.3}{TSFO3.13.3} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al commento & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4}{TSFO4} & Verificare che il sistema permetta all'utente di cliccare su un metodo di una classe ed aprire il relativo diagramma delle attività per quel metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.1}{TSFO4.1} & Verificare che il sistema permetta all'utente di inserire un blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.1.1}{TSFO4.1.1} & Verificare che il sistema permetta all'utente di creare e inizializzare una variabile assegnandole un valore & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.1.2}{TSFO4.1.2} & Verificare che il sistema permetta all'utente di assegnare un valore ad una variabile esistente e visibile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.1.3}{TSFO4.1.3} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.1.4}{TSFO4.1.4} & Verificare che il sistema permetta all'utente di confermare l'inserimento del blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.1.4.1}{TSFO4.1.4.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'attore non ha inserito le corrette informazioni nel blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.2}{TSFO4.2} & Verificare che il sistema permetta all'utente di inserire un blocco metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.2.1}{TSFO4.2.1} & Verificare che il sistema permetta all'utente di invocare un metodo tra quelli disponibili & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.2.2}{TSFO4.2.2} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.2.3}{TSFO4.2.3} & Verificare che il sistema permetta all'utente di confermare l'inserimento di un blocco metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.2.3.1}{TSFO4.2.3.1} & Verificare che il sistemavisualizzi un messaggio d'errore se l'utente non ha inserito le informazioni corrette nel blocco metodo  & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.3}{TSFO4.3} & Verificare che il sistema permetta all'utente di inserire un blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.3.1}{TSFO4.3.1} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco if & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.3.2}{TSFO4.3.2} & Verificare che il sistema permetta all'utente di completare il corpo del blocco if scegliendo tra una serie di blocchi tra quelli resi disponibili dall'editor & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.3.3}{TSFO4.3.3} & Verificare che il sistema permetta all'utente di completare il corpo del blocco else inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.3.4}{TSFO4.3.4} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.3.5}{TSFO4.3.5} & Verificare che il sistema permetta all'utente di confermare l'inserimento del blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.3.5.1}{TSFO4.3.5.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le informazioni corrette nel blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.4}{TSFO4.4} & Verificare che il sistema permetta all'utente di inserire un blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.4.1}{TSFO4.4.1} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.4.2}{TSFO4.4.2} & Verificare che il sistema permetta all'utente di completare il corpo del blocco while inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.4.3}{TSFO4.4.3} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.4.4}{TSFO4.4.4} & Verificare che il sistema permetta all'utente di confermare l'inserimento del blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.4.4.1}{TSFO4.4.4.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le corrette informazioni per il blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5}{TSFO4.5} & Verificare che il sistema permetta all'utente di inserire un blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5.1}{TSFO4.5.1} & Verificare che il sistema permetta all'utente di inserire l'inizializzazione del blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5.2}{TSFO4.5.2} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5.3}{TSFO4.5.3} & Verificare che il sistema permetta all'utente di inserire l'incremento/decremento del blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5.4}{TSFO4.5.4} & Verificare che il sistema permetta all'utente di completare il corpo del blocco for inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5.5}{TSFO4.5.5} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5.6}{TSFO4.5.6} & Verificare che il sistema permetta all'utente di confermare l'inserimento del blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.5.6.1}{TSFO4.5.6.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'utente non ha inserito le corrette informazioni per il blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.6}{TSFO4.6} & Verificare che il sistema permetta all'utente di inserire un blocco custom di codice & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.6.1}{TSFO4.6.1} & Verificare che il sistema permetta all'utente di inserire il contenuto del blocco custom & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.6.2}{TSFO4.6.2} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco custom & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.6.3}{TSFO4.6.3} & Verificare che il sistema permetta all'utente di confermare l'inserimento del blocco custom & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.7}{TSFO4.7} & Verificare che il sistema permetta all'utente di rimuovere un blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.8}{TSFO4.8} & Verificare che il sistema permetta all'utente di rimuovere un blocco metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.9}{TSFO4.9} & Verificare che il sistema permetta all'utente di rimuovere un blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.10}{TSFO4.10} & Verificare che il sistema permetta all'utente di rimuovere un blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.11}{TSFO4.11} & Verificare che il sistema permetta all'utente di rimuovere un blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.12}{TSFO4.12} & Verificare che il sistema permetta all'utente di rimuovere un blocco custom & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.13}{TSFO4.13} & Verificare che il sistema permetta all'utente di ridurre il blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD4.14}{TSFD4.14} & Verificare che il sistema permetta all'utente di espandere il blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD4.15}{TSFD4.15} & Verificare che il sistema permetta all'utente di ridurre il blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD4.16}{TSFD4.16} & Verificare che il sistema permetta all'utente di espandere il blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD4.17}{TSFD4.17} & Verificare che il sistema permetta all'utente di ridurre il blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD4.18}{TSFD4.18} & Verificare che il sistema permetta all'utente di espandere il blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFD4.19}{TSFD4.19} & Verificare che il sistema permetta all'utente di spostare uno dei blocchi inseriti all’interno del diagramma delle attività gestito in una nuova posizione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.20.1}{TSFO4.20.1} & Verificare che il sistema permetta all'utente di modificare il nome della variabile relativa al blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.20.2}{TSFO4.20.2} & Verificare che il sistema permetta all'utente di modificare il tipo della variabile relativa al blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.20.3}{TSFO4.20.3} & Verificare che il sistema permetta all'utente di modificare il valore della variabile relativa al blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.20.4}{TSFO4.20.4} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al blocco variabile & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.21.1}{TSFO4.21.1} & Verificare che il sistema permetta all'utente di modificare il metodo relativo al blocco metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.21.2}{TSFO4.21.2} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.21.3}{TSFO4.21.3} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al blocco metodo & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.22.1}{TSFO4.22.1} & Verificare che il sistema permetta all'utente di modificare la condizione relativo al blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.22.2}{TSFO4.22.2} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.22.3}{TSFO4.22.3} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al blocco if/else & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.23.1}{TSFO4.23.1} & Verificare che il sistema permetta all'utente di modificare la condizione relativa al blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.23.2}{TSFO4.23.2} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.23.3}{TSFO4.23.3} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al blocco while & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.24.1}{TSFO4.24.1} & Verificare che il sistema permetta all'utente di modificare l'inizializzazione relativa al blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.24.2}{TSFO4.24.2} & Verificare che il sistema permetta all'utente di modificare la condizione relativa al blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.24.3}{TSFO4.24.3} & Verificare che il sistema permetta all'utente di modificare il passo d'incremento/decremento relativo al blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.24.4}{TSFO4.24.4} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.24.5}{TSFO4.24.5} & Verificare che il sistema permetta all'utente di confermare le modifiche relative al blocco for & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.25.1}{TSFO4.25.1} & Verificare che il sistema permetta all'utente di modificare il contenuto in codice relativo al blocco custom & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.25.2}{TSFO4.25.2} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco custom & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.25.3}{TSFO4.25.3} & Verificare che il sistema permetta all'utente di confermare le modifiche apportate al blocco custom & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO4.26}{TSFO4.26} & Verificare che il sistema permetta all'utente di inserire un blocco return all'interno del diagramma delle attività & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO5}{TSFO5} & Verificare che il sistema permetta all'utente di salvare il progretto & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO6}{TSFO6} & Verificare che il sistema permetta all'utente di ottenere automaticamente una cartella compressa contenente i diagrammi disegnati da SWEDesigner, l'applicativo generato tramite i diagrammi forniti dall'utente ed il codice sorgente nel linguaggio target & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO6.1}{TSFO6.1} & Verificare che il sistema visualizzi un messaggio d’errore se l’utente non ha rispettato i vincoli imposti dagli stereotipi scelti o si sono verificati errori di compilazione & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO7}{TSFO7} & Verificare che il sistema riceva una richiesta http post contenente il file \gloss{JSON} generato dal programma utente & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO8.1}{TSFO8.1} & Verificare che il sistema traduca il file JSON in un oggetto Java corrispondente & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO8.2}{TSFO8.2} & Verificare che il sistema traduca l'oggetto Java nel corrispondente codice sorgente Java & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO9}{TSFO9} & Verificare che il sistema compili il codice sorgente Java generato & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO10}{TSFO10} & Verificare che il sistema crei una cartella compressa contenente il file JSON, il codice sorgente Java e il programmma Java compilato  & \textit{Non Implementato}\\ \hline
+\hypertarget{TSFO11}{TSFO11} & Verificare che il sistema elabori una risposta http contenente l'indirizzo della cartella compressa creata & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.1}{TSVO1.1} & Verificare che l'applicativo lato \gloss{client} sia realizzato in HTML5, CSS3 e JavaScript & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.2}{TSVO1.2} & verificare che l’applicativo lato \gloss{server} sia realizzato in Java con server \gloss{Tomcat} & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.3}{TSVO1.3} & Verificare che l’applicativo funziona su Mozilla Firefox versione 43 o superiore & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.4}{TSVO1.4} & Verificare che l’applicativo funzioni su Google Chrome versione 47 o superiore & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.5}{TSVO1.5} & Verificare che l’applicativo funzioni su Internet Explorer versione 11 o superiore & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.6}{TSVO1.6} & Verificare che l’applicativo funzioni su Safari versione 9 o superiore & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO1.7}{TSVO1.7} & Verificare che l’applicativo funzioni su Microsoft Edge versione 25 o superiore & \textit{Non Implementato}\\ \hline
+\hypertarget{TSVO2}{TSVO2} & Verificare che il progetto sia sviluppato sulla piattaforma \gloss{GitHub} in modalità pubblica & \textit{Non Implementato}\\ \hline
+\caption[Test di Sistema]{Test di Sistema}
+\label{tabella:test1}
+\end{longtable}
+
+\subsubsection{Tracciamento Test di Sistema-Requisiti}
+\normalsize
+\begin{longtable}{|>{\centering}m{5cm}|m{5cm}<{\centering}|}
+\hline 
+\textbf{Test} & \textbf{Requisito}\\
+\hline
+\endhead
+\hyperlink{TSFO1}{TSFO1} & RFO1\\ \hline
+\hyperlink{TSFO1.1}{TSFO1.1} & RFO1.1\\ \hline
+\hyperlink{TSFO2}{TSFO2} & RFO2\\ \hline
+\hyperlink{TSFO3.1}{TSFO3.1} & RFO3.1\\ \hline
+\hyperlink{TSFO3.1.1}{TSFO3.1.1} & RFO3.1.1\\ \hline
+\hyperlink{TSFO3.1.2}{TSFO3.1.2} & RFO3.1.2\\ \hline
+\hyperlink{TSFO3.1.3}{TSFO3.1.3} & RFO3.1.3\\ \hline
+\hyperlink{TSFO3.1.4}{TSFO3.1.4} & RFO3.1.4\\ \hline
+\hyperlink{TSFO3.1.4.1}{TSFO3.1.4.1} & RFO3.1.4.1\\ \hline
+\hyperlink{TSFO3.1.4.2}{TSFO3.1.4.2} & RFO3.1.4.2\\ \hline
+\hyperlink{TSFO3.1.4.3}{TSFO3.1.4.3} & RFO3.1.4.3\\ \hline
+\hyperlink{TSFO3.1.4.4}{TSFO3.1.4.4} & RFO3.1.4.4\\ \hline
+\hyperlink{TSFO3.1.4.5}{TSFO3.1.4.5} & RFO3.1.4.5\\ \hline
+\hyperlink{TSFO3.1.4.6}{TSFO3.1.4.6} & RFO3.1.4.6\\ \hline
+\hyperlink{TSFO3.1.4.6.1}{TSFO3.1.4.6.1} & RFO3.1.4.6.1\\ \hline
+\hyperlink{TSFO3.1.5}{TSFO3.1.5} & RFO3.1.5\\ \hline
+\hyperlink{TSFO3.1.6}{TSFO3.1.6} & RFO3.1.6\\ \hline
+\hyperlink{TSFO3.1.6.1}{TSFO3.1.6.1} & RFO3.1.6.1\\ \hline
+\hyperlink{TSFO3.1.6.2}{TSFO3.1.6.2} & RFO3.1.6.2\\ \hline
+\hyperlink{TSFO3.1.6.3}{TSFO3.1.6.3} & RFO3.1.6.3\\ \hline
+\hyperlink{TSFO3.1.6.3.1}{TSFO3.1.6.3.1} & RFO3.1.6.3.1\\ \hline
+\hyperlink{TSFO3.1.6.3.2}{TSFO3.1.6.3.2} & RFO3.1.6.3.2\\ \hline
+\hyperlink{TSFO3.1.6.3.3}{TSFO3.1.6.3.3} & RFO3.1.6.3.3\\ \hline
+\hyperlink{TSFO3.1.6.3.3.1}{TSFO3.1.6.3.3.1} & RFO3.1.6.3.3.1\\ \hline
+\hyperlink{TSFO3.1.6.4}{TSFO3.1.6.4} & RFO3.1.6.4\\ \hline
+\hyperlink{TSFO3.1.6.5}{TSFO3.1.6.5} & RFO3.1.6.5\\ \hline
+\hyperlink{TSFO3.1.6.5.1}{TSFO3.1.6.5.1} & RFO3.1.6.5.1\\ \hline
+\hyperlink{TSFO3.1.6.6}{TSFO3.1.6.6} & RFO3.1.6.6\\ \hline
+\hyperlink{TSFO3.1.7}{TSFO3.1.7} & RFO3.1.7\\ \hline
+\hyperlink{TSFO3.1.8}{TSFO3.1.8} & RFO3.1.8\\ \hline
+\hyperlink{TSFO3.1.8.1}{TSFO3.1.8.1} & RFO3.1.8.1\\ \hline
+\hyperlink{TSFO3.2}{TSFO3.2} & RFO3.2\\ \hline
+\hyperlink{TSFO3.2.1}{TSFO3.2.1} & RFO3.2.1\\ \hline
+\hyperlink{TSFO3.2.2}{TSFO3.2.2} & RFO3.2.2\\ \hline
+\hyperlink{TSFO3.2.3}{TSFO3.2.3} & RFO3.2.3\\ \hline
+\hyperlink{TSFO3.2.4}{TSFO3.2.4} & RFO3.2.4\\ \hline
+\hyperlink{TSFO3.2.5}{TSFO3.2.5} & RFO3.2.5\\ \hline
+\hyperlink{TSFO3.2.6}{TSFO3.2.6} & RFO3.2.6\\ \hline
+\hyperlink{TSFO3.2.6.1}{TSFO3.2.6.1} & RFO3.2.6.1\\ \hline
+\hyperlink{TSFO3.2.7}{TSFO3.2.7} & RFO3.2.7\\ \hline
+\hyperlink{TSFO3.3}{TSFO3.3} & RFO3.3\\ \hline
+\hyperlink{TSFO3.3.1}{TSFO3.3.1} & RFO3.3.1\\ \hline
+\hyperlink{TSFO3.3.2}{TSFO3.3.2} & RFO3.3.2\\ \hline
+\hyperlink{TSFO3.3.3}{TSFO3.3.3} & RFO3.3.3\\ \hline
+\hyperlink{TSFO3.3.3.1}{TSFO3.3.3.1} & RFO3.3.3.1\\ \hline
+\hyperlink{TSFO3.4}{TSFO3.4} & RFO3.4\\ \hline
+\hyperlink{TSFO3.5}{TSFO3.5} & RFO3.5\\ \hline
+\hyperlink{TSFO3.6}{TSFO3.6} & RFO3.6\\ \hline
+\hyperlink{TSFD3.7}{TSFD3.7} & RFD3.7\\ \hline
+\hyperlink{TSFD3.8}{TSFD3.8} & RFD3.8\\ \hline
+\hyperlink{TSFD3.9}{TSFD3.9} & RFD3.9\\ \hline
+\hyperlink{TSFD3.10}{TSFD3.10} & RFD3.10\\ \hline
+\hyperlink{TSFO3.11.1}{TSFO3.11.1} & RFO3.11.1\\ \hline
+\hyperlink{TSFO3.11.2}{TSFO3.11.2} & RFO3.11.2\\ \hline
+\hyperlink{TSFO3.11.3.1}{TSFO3.11.3.1} & RFO3.11.3.1\\ \hline
+\hyperlink{TSFO3.11.3.2}{TSFO3.11.3.2} & RFO3.11.3.2\\ \hline
+\hyperlink{TSFO3.11.3.3}{TSFO3.11.3.3} & RFO3.11.3.3\\ \hline
+\hyperlink{TSFO3.11.3.4}{TSFO3.11.3.4} & RFO3.11.3.4\\ \hline
+\hyperlink{TSFO3.11.3.5}{TSFO3.11.3.5} & RFO3.11.3.5\\ \hline
+\hyperlink{TSFO3.11.3.6}{TSFO3.11.3.6} & RFO3.11.3.6\\ \hline
+\hyperlink{TSFO3.11.4.1}{TSFO3.11.4.1} & RFO3.11.4.1\\ \hline
+\hyperlink{TSFO3.11.4.2}{TSFO3.11.4.2} & RFO3.11.4.2\\ \hline
+\hyperlink{TSFO3.11.4.3.1}{TSFO3.11.4.3.1} & RFO3.11.4.3.1\\ \hline
+\hyperlink{TSFO3.11.4.3.2}{TSFO3.11.4.3.2} & RFO3.11.4.3.2\\ \hline
+\hyperlink{TSFO3.11.4.3.3}{TSFO3.11.4.3.3} & RFO3.11.4.3.3\\ \hline
+\hyperlink{TSFO3.11.4.4}{TSFO3.11.4.4} & RFO3.11.4.4\\ \hline
+\hyperlink{TSFO3.11.4.5}{TSFO3.11.4.5} & RFO3.11.4.5\\ \hline
+\hyperlink{TSFO3.11.5}{TSFO3.11.5} & RFO3.11.5\\ \hline
+\hyperlink{TSFO3.12.1}{TSFO3.12.1} & RFO3.12.1\\ \hline
+\hyperlink{TSFO3.12.2}{TSFO3.12.2} & RFO3.12.2\\ \hline
+\hyperlink{TSFO3.12.3}{TSFO3.12.3} & RFO3.12.3\\ \hline
+\hyperlink{TSFO3.12.4}{TSFO3.12.4} & RFO3.12.4\\ \hline
+\hyperlink{TSFO3.12.5}{TSFO3.12.5} & RFO3.12.5\\ \hline
+\hyperlink{TSFO3.12.6}{TSFO3.12.6} & RFO3.12.6\\ \hline
+\hyperlink{TSFO3.13.1}{TSFO3.13.1} & RFO3.13.1\\ \hline
+\hyperlink{TSFO3.13.2}{TSFO3.13.2} & RFO3.13.2\\ \hline
+\hyperlink{TSFO3.13.3}{TSFO3.13.3} & RFO3.13.3\\ \hline
+\hyperlink{TSFO4}{TSFO4} & RFO4\\ \hline
+\hyperlink{TSFO4.1}{TSFO4.1} & RFO4.1\\ \hline
+\hyperlink{TSFO4.1.1}{TSFO4.1.1} & RFO4.1.1\\ \hline
+\hyperlink{TSFO4.1.2}{TSFO4.1.2} & RFO4.1.2\\ \hline
+\hyperlink{TSFO4.1.3}{TSFO4.1.3} & RFO4.1.3\\ \hline
+\hyperlink{TSFO4.1.4}{TSFO4.1.4} & RFO4.1.4\\ \hline
+\hyperlink{TSFO4.1.4.1}{TSFO4.1.4.1} & RFO4.1.4.1\\ \hline
+\hyperlink{TSFO4.2}{TSFO4.2} & RFO4.2\\ \hline
+\hyperlink{TSFO4.2.1}{TSFO4.2.1} & RFO4.2.1\\ \hline
+\hyperlink{TSFO4.2.2}{TSFO4.2.2} & RFO4.2.2\\ \hline
+\hyperlink{TSFO4.2.3}{TSFO4.2.3} & RFO4.2.3\\ \hline
+\hyperlink{TSFO4.2.3.1}{TSFO4.2.3.1} & RFO4.2.3.1\\ \hline
+\hyperlink{TSFO4.3}{TSFO4.3} & RFO4.3\\ \hline
+\hyperlink{TSFO4.3.1}{TSFO4.3.1} & RFO4.3.1\\ \hline
+\hyperlink{TSFO4.3.2}{TSFO4.3.2} & RFO4.3.2\\ \hline
+\hyperlink{TSFO4.3.3}{TSFO4.3.3} & RFO4.3.3\\ \hline
+\hyperlink{TSFO4.3.4}{TSFO4.3.4} & RFO4.3.4\\ \hline
+\hyperlink{TSFO4.3.5}{TSFO4.3.5} & RFO4.3.5\\ \hline
+\hyperlink{TSFO4.3.5.1}{TSFO4.3.5.1} & RFO4.3.5.1\\ \hline
+\hyperlink{TSFO4.4}{TSFO4.4} & RFO4.4\\ \hline
+\hyperlink{TSFO4.4.1}{TSFO4.4.1} & RFO4.4.1\\ \hline
+\hyperlink{TSFO4.4.2}{TSFO4.4.2} & RFO4.4.2\\ \hline
+\hyperlink{TSFO4.4.3}{TSFO4.4.3} & RFO4.4.3\\ \hline
+\hyperlink{TSFO4.4.4}{TSFO4.4.4} & RFO4.4.4\\ \hline
+\hyperlink{TSFO4.4.4.1}{TSFO4.4.4.1} & RFO4.4.4.1\\ \hline
+\hyperlink{TSFO4.5}{TSFO4.5} & RFO4.5\\ \hline
+\hyperlink{TSFO4.5.1}{TSFO4.5.1} & RFO4.5.1\\ \hline
+\hyperlink{TSFO4.5.2}{TSFO4.5.2} & RFO4.5.2\\ \hline
+\hyperlink{TSFO4.5.3}{TSFO4.5.3} & RFO4.5.3\\ \hline
+\hyperlink{TSFO4.5.4}{TSFO4.5.4} & RFO4.5.4\\ \hline
+\hyperlink{TSFO4.5.5}{TSFO4.5.5} & RFO4.5.5\\ \hline
+\hyperlink{TSFO4.5.6}{TSFO4.5.6} & RFO4.5.6\\ \hline
+\hyperlink{TSFO4.5.6.1}{TSFO4.5.6.1} & RFO4.5.6.1\\ \hline
+\hyperlink{TSFO4.6}{TSFO4.6} & RFO4.6\\ \hline
+\hyperlink{TSFO4.6.1}{TSFO4.6.1} & RFO4.6.1\\ \hline
+\hyperlink{TSFO4.6.2}{TSFO4.6.2} & RFO4.6.2\\ \hline
+\hyperlink{TSFO4.6.3}{TSFO4.6.3} & RFO4.6.3\\ \hline
+\hyperlink{TSFO4.7}{TSFO4.7} & RFO4.7\\ \hline
+\hyperlink{TSFO4.8}{TSFO4.8} & RFO4.8\\ \hline
+\hyperlink{TSFO4.9}{TSFO4.9} & RFO4.9\\ \hline
+\hyperlink{TSFO4.10}{TSFO4.10} & RFO4.10\\ \hline
+\hyperlink{TSFO4.11}{TSFO4.11} & RFO4.11\\ \hline
+\hyperlink{TSFO4.12}{TSFO4.12} & RFO4.12\\ \hline
+\hyperlink{TSFO4.13}{TSFO4.13} & RFO4.13\\ \hline
+\hyperlink{TSFD4.14}{TSFD4.14} & RFD4.14\\ \hline
+\hyperlink{TSFD4.15}{TSFD4.15} & RFD4.15\\ \hline
+\hyperlink{TSFD4.16}{TSFD4.16} & RFD4.16\\ \hline
+\hyperlink{TSFD4.17}{TSFD4.17} & RFD4.17\\ \hline
+\hyperlink{TSFD4.18}{TSFD4.18} & RFD4.18\\ \hline
+\hyperlink{TSFD4.19}{TSFD4.19} & RFD4.19\\ \hline
+\hyperlink{TSFO4.20.1}{TSFO4.20.1} & RFO4.20.1\\ \hline
+\hyperlink{TSFO4.20.2}{TSFO4.20.2} & RFO4.20.2\\ \hline
+\hyperlink{TSFO4.20.3}{TSFO4.20.3} & RFO4.20.3\\ \hline
+\hyperlink{TSFO4.20.4}{TSFO4.20.4} & RFO4.20.4\\ \hline
+\hyperlink{TSFO4.21.1}{TSFO4.21.1} & RFO4.21.1\\ \hline
+\hyperlink{TSFO4.21.2}{TSFO4.21.2} & RFO4.21.2\\ \hline
+\hyperlink{TSFO4.21.3}{TSFO4.21.3} & RFO4.21.3\\ \hline
+\hyperlink{TSFO4.22.1}{TSFO4.22.1} & RFO4.22.1\\ \hline
+\hyperlink{TSFO4.22.2}{TSFO4.22.2} & RFO4.22.2\\ \hline
+\hyperlink{TSFO4.22.3}{TSFO4.22.3} & RFO4.22.3\\ \hline
+\hyperlink{TSFO4.23.1}{TSFO4.23.1} & RFO4.23.1\\ \hline
+\hyperlink{TSFO4.23.2}{TSFO4.23.2} & RFO4.23.2\\ \hline
+\hyperlink{TSFO4.23.3}{TSFO4.23.3} & RFO4.23.3\\ \hline
+\hyperlink{TSFO4.24.1}{TSFO4.24.1} & RFO4.24.1\\ \hline
+\hyperlink{TSFO4.24.2}{TSFO4.24.2} & RFO4.24.2\\ \hline
+\hyperlink{TSFO4.24.3}{TSFO4.24.3} & RFO4.24.3\\ \hline
+\hyperlink{TSFO4.24.4}{TSFO4.24.4} & RFO4.24.4\\ \hline
+\hyperlink{TSFO4.24.5}{TSFO4.24.5} & RFO4.24.5\\ \hline
+\hyperlink{TSFO4.25.1}{TSFO4.25.1} & RFO4.25.1\\ \hline
+\hyperlink{TSFO4.25.2}{TSFO4.25.2} & RFO4.25.2\\ \hline
+\hyperlink{TSFO4.25.3}{TSFO4.25.3} & RFO4.25.3\\ \hline
+\hyperlink{TSFO4.26}{TSFO4.26} & RFO4.26\\ \hline
+\hyperlink{TSFO5}{TSFO5} & RFO5\\ \hline
+\hyperlink{TSFO6}{TSFO6} & RFO6\\ \hline
+\hyperlink{TSFO6.1}{TSFO6.1} & RFO6.1\\ \hline
+\hyperlink{TSFO7}{TSFO7} & RFO7\\ \hline
+\hyperlink{TSFO8.1}{TSFO8.1} & RFO8.1\\ \hline
+\hyperlink{TSFO8.2}{TSFO8.2} & RFO8.2\\ \hline
+\hyperlink{TSFO9}{TSFO9} & RFO9\\ \hline
+\hyperlink{TSFO10}{TSFO10} & RFO10\\ \hline
+\hyperlink{TSFO11}{TSFO11} & RFO11\\ \hline
+\hyperlink{TSVO1.1}{TSVO1.1} & RVO1.1\\ \hline
+\hyperlink{TSVO1.2}{TSVO1.2} & RVO1.2\\ \hline
+\hyperlink{TSVO1.3}{TSVO1.3} & RVO1.3\\ \hline
+\hyperlink{TSVO1.4}{TSVO1.4} & RVO1.4\\ \hline
+\hyperlink{TSVO1.5}{TSVO1.5} & RVO1.5\\ \hline
+\hyperlink{TSVO1.6}{TSVO1.6} & RVO1.6\\ \hline
+\hyperlink{TSVO1.7}{TSVO1.7} & RVO1.7\\ \hline
+\hyperlink{TSVO2}{TSVO2} & RVO2\\ \hline
+\caption[Tracciamento Test di Sistema-Requisiti]{Tracciamento Test di Sistema-Requisiti}
+\label{tabella:ts-requi}
+\end{longtable}
+\clearpage
+
+	\subsection{Test di Integrazione}
+	I test di integrazione consentono di controllare che più moduli funzionino assieme in modo corretto.
+	
+		\subsubsection{Descrizione dei Test di Integrazione}
+\normalsize
+\begin{longtable}{|c|>{}m{8cm}|c|}
+\hline 
+\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+\hline
+\endhead
+\hypertarget{TI1}{TI1} & Test di integrazione finale per le componenti client e server & \textit{Non Implementato}\\ \hline
+\hypertarget{TI2}{TI2} & Test di integrazione fra le componenti compiler, controller, generator, parser, project, template e utility. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI3}{TI3} & Verificare che il sistema gestisca correttamente le componenti relative al package compiler. In particolare che gestisca correttamente l'interazione con il controller di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI4}{TI4} & Verificare che il sistema gestisca correttamente le componenti relative al package controller. In particolare che gestisca correttamente l'interazione con i package compiler, utility, parser e generator di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI5}{TI5} & Verificare che il sistema gestisca correttamente le componenti relative al package generator. In particolare che gestisca correttamente l'interazione con i package controller, project e template di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI6}{TI6} & Verificare che il sistema gestisca correttamente le componenti relative al package parser. In particolare che gestisca correttamente l'interazione con i package controller e project di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI7}{TI7} & Verificare che il sistema gestisca correttamente le componenti relative al package project. In particolare che gestisca correttamente l'interazione con i package generator, parser e stereotype di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI8}{TI8} & Verificare che il sistema gestisca correttamente le componenti relative al package stereotype. In particolare che gestisca correttamente l'interazione con il package project di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI9}{TI9} & Verificare che il sistema gestisca correttamente le componenti relative al package template. In particolare che gestisca correttamente l'interazione con il package generator di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI10}{TI10} & Verificare che il sistema gestisca correttamente le componenti relative al package utility. In particolare che gestisca correttamente l'interazione con il package controller di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI11}{TI11} & Verificare che il sistema gestisca correttamente le componenti relative al package compiler::java. In particolare che gestisca correttamente l'interazione con gli elementi del package compiler di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI12}{TI12} & Verificare che il sistema gestisca correttamente le componenti relative al package generator::java. In particolare che gestisca correttamente l'interazione con gli elementi del package generator di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI13}{TI13} & Verificare che il sistema gestisca correttamente le componenti relative al package template::java. In particolare che gestisca correttamente l'interazione con gli elementi del package template di SWEDesigner::server. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI14}{TI14} & Test di integrazione fra le componenti celltypes, collection, model, utility e view e la libreria esterna \gloss{JointJS}. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI15}{TI15} & Verificare che il sistema gestisca correttamente le componenti relative al package celltypes. In particolare che gestisca correttamente l'interazione con il package view di SWEDesigner::client e la libreria esterna JointJS. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI16}{TI16} & Verificare che il sistema gestisca correttamente le componenti relative al package collection. In particolare che gestisca correttamente l'interazione con il package model di SWEDesigner::client e la libreria esterna JointJS. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI17}{TI17} & Verificare che il sistema gestisca correttamente le componenti relative al package model. In particolare che gestisca correttamente l'interazione con i package collection e view di SWEDesigner::client e la libreria esterna JointJS. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI18}{TI18} & Verificare che il sistema gestisca correttamente le componenti relative al package model::utility. In particolare che gestisca correttamente l'interazione con i package model::celltypes, model e view di SWEDesigner::client. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI19}{TI19} & Verificare che il sistema gestisca correttamente le componenti relative al package view. In particolare che gestisca correttamente l'interazione con i package model, model::celltypes e model::utility di SWEDesigner::client. & \textit{Non Implementato}\\ \hline
+\caption[Test di Integrazione]{Test di Integrazione}
+\label{tabella:test2}
+\end{longtable}
+
+\subsubsection{Tracciamento Test di Integrazione-Componenti}
+\normalsize
+\begin{longtable}{|>{\centering}m{3cm}|m{9cm}<{\centering}|}
+\hline 
+\textbf{Test} & \textbf{Componente}\\
+\hline
+\endhead
+\hyperlink{TI1}{TI1} & \texttt{SWEDesigner}\\ \hline
+\hyperlink{TI2}{TI2} & \texttt{SWEDesigner::server}\\ \hline
+\hyperlink{TI3}{TI3} & \texttt{SWEDesigner::server::compiler}\\ \hline
+\hyperlink{TI4}{TI4} & \texttt{SWEDesigner::server::controller}\\ \hline
+\hyperlink{TI5}{TI5} & \texttt{SWEDesigner::server::generator}\\ \hline
+\hyperlink{TI6}{TI6} & \texttt{SWEDesigner::server::parser}\\ \hline
+\hyperlink{TI7}{TI7} & \texttt{SWEDesigner::server::project}\\ \hline
+\hyperlink{TI8}{TI8} & \texttt{SWEDesigner::server::stereotype}\\ \hline
+\hyperlink{TI9}{TI9} & \texttt{SWEDesigner::server::template}\\ \hline
+\hyperlink{TI10}{TI10} & \texttt{SWEDesigner::server::utility}\\ \hline
+\hyperlink{TI11}{TI11} & \texttt{SWEDesigner::server::compiler::java}\\ \hline
+\hyperlink{TI12}{TI12} & \texttt{SWEDesigner::server::generator::java}\\ \hline
+\hyperlink{TI13}{TI13} & \texttt{SWEDesigner::server::template::java}\\ \hline
+\hyperlink{TI14}{TI14} & \texttt{SWEDesigner::client}\\ \hline
+\hyperlink{TI15}{TI15} & \texttt{SWEDesigner::client::model::celltypes}\\ \hline
+\hyperlink{TI16}{TI16} & \texttt{SWEDesigner::client::collection}\\ \hline
+\hyperlink{TI17}{TI17} & \texttt{SWEDesigner::client::model}\\ \hline
+\hyperlink{TI18}{TI18} & \texttt{SWEDesigner::client::model::utility}\\ \hline
+\hyperlink{TI19}{TI19} & \texttt{SWEDesigner::client::view}\\ \hline
+\caption[Tracciamento Test di Integrazione-Componenti]{Tracciamento Test di Integrazione-Componenti}
+\label{tabella:ts-requi}
+\end{longtable}
+\clearpage
+
+\appendix
+\section{Resoconto attività di verifica}
+All'interno di questa sezione vengono riportati gli esiti delle attività di verifica svolte sui processi attivati e sui relativi prodotti secondo quanto stabilito nel \PdP.
+	\subsection{Revisione dei requisiti}
+		\subsubsection{Verifica processo di documentazione}
+		Le attività di verifica svolte sui documenti prodotti sono state di due tipi:
+		\begin{itemize}		
+			\item attività di verifica manuali;
+			\item attività di verifica automatizzate.
+		\end{itemize}
+		
+		Le prime sono state svolte dai verificatori assegnati ad ogni documento utilizzando la tecnica di 					analisi statica walkthrough. Grazie ad essa è stato possibile correggere una discreta quantità di errori e imprecisioni presenti all'interno dei documenti prodotti fra cui: 
+		\begin{itemize}	
+			\item nuovi termini da inserire nel glossario;
+			\item termini presenti nel glossario, ma non correttamente segnati;
+			\item violazioni delle norme tipografiche e grammaticali come definite nel documento \NdP ;
+			\item refusi ed errori grammaticali;
+			\item periodi troppo lunghi e complessi da spezzare, ridurre e semplificare.
+		\end{itemize}
+		A partire dalla natura e frequenza degli errori identificati il gruppo ha iniziato a stilare una lista
+		di controllo da applicare nei successivi momenti di verifica nel contesto della strategia di verifica
+		inspection.
+
+		Le attività di verifica automatizzate, invece, sono state svolte calcolando l'indice Gulpease dei 	
+		diversi documenti prodotti attraverso l'uso di appositi strumenti web automatici. 
+		\\I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{table}[H]
+		\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Documento} 		&\textbf{Valutazione} &\textbf{~~~~~~Esito~~~~~~} \\
+		\hline
+		\PdQ 					&51		&~~~~~~Superato~~~~~~\\
+		\NdP 					&41		&~~~~~~Superato~~~~~~\\
+		\SdF 					&49		&~~~~~~Superato~~~~~~\\	
+		\AdR 					&72		&~~~~~~Superato~~~~~~\\
+		\PdP 					&55		&~~~~~~Superato~~~~~~\\
+		\Glossario 				&48		&~~~~~~Superato~~~~~~\\
+		\textit{Verbali.pdf} 		&49		&~~~~~~Superato~~~~~~\\
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo dell'indice di Gulpease dei documenti consegnati}
+		\end{table}
+		
+		\subsubsection{Verifica processo di pianificazione di progetto e processo di verifica e controllo}
+		Per verificare il soddisfacimento degli obiettivi di qualità definiti per tale processo, a partire dal 				consultivo redatto nel \PdP sono stati calcolati gli indici di budget variance e schedule variance per ognuna delle attività previste.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:	
+		\begin{table}[H]
+		\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Documento} 		&\textbf{Schedule variance} &\textbf{Budget variance} \\
+		\hline
+		\PdQ 					&0\%		&0\%\\
+		\NdP 					&0\%		&0\%\\
+		\SdF 					&0\%		&0\%\\
+		\AdR 					&0\%		&0\%\\
+		\PdP 					&-25\%		&0\%\\
+		\Glossario 				&0\%		&0\%\\
+		\textit{Verbali.pdf} 	&0\%		&0\%\\
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo degli indici di schedule e budget variance}
+		\end{table}
+
+
+	\subsection{Revisione dei progettazione}
+		\subsubsection{Verifica processo di documentazione}
+		Le attività di verifica svolte sui documenti prodotti durante la progettazione sono state di due tipi:
+		\begin{itemize}		
+			\item attività di verifica manuali;
+			\item attività di verifica automatizzate.
+		\end{itemize}
+		
+		Le prime sono state svolte dai verificatori assegnati ad ogni documento utilizzando la tecnica di 					analisi statica walkthrough. Grazie ad essa è stato possibile correggere una discreta quantità di errori e imprecisioni presenti all'interno dei documenti prodotti fra cui: 
+		\begin{itemize}	
+			\item nuovi termini da inserire nel glossario;
+			\item termini presenti nel glossario, ma non correttamente segnati;
+			\item violazioni delle norme tipografiche e grammaticali come definite nel documento \NdP ;
+			\item refusi ed errori grammaticali;
+			\item periodi troppo lunghi e complessi da spezzare, ridurre e semplificare.
+		\end{itemize}
+		A partire dalla natura e frequenza degli errori identificati il gruppo ha integrato le liste di controllo precedentemente stilate.
+
+		Le attività di verifica automatizzate, invece, sono state svolte utilizzando gli strumenti indicati nel documento \NdP. 
+		
+		I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{table}[H]
+		\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Documento} 		&\textbf{Valutazione} &\textbf{~~~~~~Esito~~~~~~} \\
+		\hline
+		\PdQ 					&61		&~~~~~~Superato~~~~~~\\
+		\NdP 					&49		&~~~~~~Superato~~~~~~\\
+		\AdR 					&71		&~~~~~~Superato~~~~~~\\
+		\PdP 					&55		&~~~~~~Superato~~~~~~\\
+		\ST 					&69		&~~~~~~Superato~~~~~~\\	
+		\Glossario 				&48		&~~~~~~Superato~~~~~~\\
+		\textit{VI_17-02-16.pdf} 		&57		&~~~~~~Superato~~~~~~\\
+		\textit{VI_17-02-22.pdf} 		&59		&~~~~~~Superato~~~~~~\\
+		\textit{VI_17-02-24.pdf} 		&62		&~~~~~~Superato~~~~~~\\
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo dell'indice di Gulpease dei documenti consegnati}
+		\end{table}
+		
+		\subsubsection{Verifica processo di pianificazione di progetto e processo di verifica e controllo}
+		Per verificare il soddisfacimento degli obiettivi di qualità definiti per tale processo, a partire dal 				consultivo redatto nel \PdP sono stati calcolati gli indici di budget variance e schedule variance per ognuna delle attività previste.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:	
+		\begin{table}[H]
+		\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Documento} 		&\textbf{Schedule variance} &\textbf{Budget variance} 		\\
+		\hline
+		\PdQ 					&0\%		&-105*\%\\
+		\NdP 					&0\%		&0\%\\
+		\AdR 					&0\%		&0\%\\
+		\PdP 					&0\%		&0\%\\
+		\ST					&0\%		&+11*\%\\
+		\Glossario 				&0\%		&0\%\\
+		\textit{VI_17-02-16.pdf} 		&0\%		&0\%\\
+		\textit{VI_17-02-22.pdf} 		&0\%		&0\%\\
+		\textit{VI_17-02-24.pdf} 		&0\%		&0\%\\
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo degli indici di schedule e budget variance}
+		\end{table}
+		* è stato necessario allocare un numero maggiore di ore per il piano di qualifica rispetto a quanto preventivato alla luce della valutazione negativa ottenuta in sede di revisione RR. Tali ore sono state sottratte all'attività di progettazione e quindi alla redazione del documento \ST.
+		
+		\subsubsection{Verifica processo di architettura del software}
+		La verifica del rispetto degli obiettivi stabiliti per tale processo è stata effettuata calcolando una serie di metriche specificate nel documento \NdP. Queste metriche sono d'aiuto alla comprensione del grado di completezza, correttezza e stile dell'architettura software prodotta.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{table}[H]
+		\begin{tabular}{|l|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
+		\hline
+		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
+		\hline
+		Completezza									&								&							&\\
+		Numero di violazioni di alta importanza		&0								&0							&27*\\						
+		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
+		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
+		\hline
+		Correttezza 								&								&							&\\
+		Numero di violazioni di alta importanza		&0								&0							&0\\						
+		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
+		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
+		\hline
+		Stile 										&								&							&\\
+		Numero di violazioni di alta importanza		&0								&0							&0\\						
+		Numero di violazioni di media importanza	&0 - 5							&0							&13**\\						
+		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo delle metriche relative alla progettazione}
+		\end{table}
+		
+		* l'alto valore del numero di violazioni di alta importanza relative alla completezza è dovuto al fatto che SDMetrics indica come non usate le classi che nell'attuale diagramma dei package implementano interfacce o classi astratte e che quindi a differenza della loro superclasse diretta non sono esplicitamente coinvolte in alcun tipo di associazione di dipendenza o riferimento.
+		
+		** l'alto valore del numero di violazione di media importanza relative allo stile è dovuto al fatto che nel server in alcune occasioni viene violato lo Stable-Dependencies Principle perchè alcuni package dipendono da altri package contenenti una singola classe concreta. Basta quindi che i primi abbiano una singola interfaccia affinchè la violazione venga segnalata.		
+
+		\subsubsection{Verifica della qualità dell'architettura}
+		Per verificare l'osservanza degli obiettivi riguardanti la qualità dell'architettura prodotta, sono stati calcolati i valori delle metriche relative ai diagrammi dei package.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{longtable}{|p{5.5cm}|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
+		\hline
+		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
+		\hline
+		\textbf{Distanza dalla sequenza principale normalizzata} & & &\\
+		client.model.utility &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.model &0.0 - 0.7 &0.0 - 0.5 &0.625\\
+		client.collection &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.view &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.controller &0.0 - 0.7 &0.0 - 0.5 &0.39\\
+		server.parser  &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.generator.java  &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.generator &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.stereotype  &0.0 - 0.7 &0.0 - 0.5 &0.33\\
+		server.project  &0.0 - 0.7 &0.0 - 0.5 &0.39\\
+		server.template.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
+		server.template  &0.0 - 0.7 &0.0 - 0.5 &0.16\\
+		server.compiler.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
+		server.compiler  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.utility  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		\hline
+		Numero di figli diretti &0 - 4 &0 - 2 &min0 max8* **\\
+		\hline
+		\textbf{Numero di tipi per package} & & &\\
+		client.model.utility &0 - 30 &0 - 20 &6\\
+		client.model.celltypes &0 - 30 &0 - 20 &17\\
+		client.model &0 - 30 &0 - 20 &3\\
+		client.collection &0 - 30 &0 - 20 &1\\
+		client.view &0 - 30 &0 - 20 &4\\
+		server.controller &0 - 30 &0 - 20 &1\\
+		server.parser &0 - 30 &0 - 20 &1\\
+		server.generator.java &0 - 30 &0 - 20 &1\\
+		server.generator &0 - 30 &0 - 20 &2\\
+		server.stereotype &0 - 30 &0 - 20 &1\\
+		server.project &0 - 30 &0 - 20 &16\\
+		server.template.java &0 - 30 &0 - 20 &1\\
+		server.template &0 - 30 &0 - 20 &2\\
+		server.compiler.java &0 - 30 &0 - 20 &1\\
+		server.compiler &0 - 30 &0 - 20 &2\\
+		server.utility &0 - 30 &0 - 20 &1\\
+		\hline
+		Profondità della gerarchia &0 - 4 &1 - 2 &min 0 max 2*\\
+		\hline
+		\caption{Esiti del calcolo delle metriche relative all'architettura}
+		\end{longtable}
+	* abbiamo deciso di specificare solamente i valori massimi e minimi della metrica per evitare di creare tabelle troppo prolisse e poco leggibili, a fronte di un contenuto equivalente a quello proposto.
+	
+	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
+
+\section{Standard adottati}
+	\subsection{Qualità di processo - SPICE}
+	Lo standard prevede sei diversi livelli di maturità (o capacità), e 9 attributi di processo che, se posseduti, lo portano ad un certo livello di 			capacità.
+	\begin{itemize}
+	\item \textbf{Livello 0: Incompleto} il processo non è implementato o non raggiunge il suo obiettivo;   non esiste evidenza di esecuzione 					sistematica delle attività che lo compongono.
+	 \item \textbf{Livello 1: Attuato} il processo è implementato e raggiunge il suo obiettivo; esiste evidenza di semplice attuazione delle attività 			che lo compongono.
+	Il relativo attributo di processo:
+		\begin{itemize}
+			\item \emph{Esecuzione del Processo}: la misura in cui il processo raggiunge i propri obiettivi trasformando   prodotti in ingresso 						identificabili in prodotti in uscita identificabili.
+		\end{itemize}
+	\item \textbf{Livello 2: Gestito} il processo è gestito e i suoi prodotti sono stabiliti, controllati e manutenuti; le attività sono pianificate e 			controllate e il loro svolgimento risulta documentato.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Gestione delle Prestazioni}: la misura in cui il processo produce un risultato coerente con gli obiettivi attesi.
+			\item \emph{Gestione dei Prodotti}: la misura in cui il processo viene gestito per elaborare prodotti documentati, controllati e verificati 				in modo appropriato.
+		\end{itemize}
+	
+	\item \textbf{Livello 3: Definito} il processo viene eseguito in base ai principi dell'ingegneria del software. Le procedure sono definite e 				adattate ai progetti e ruoli, competenze e responsabilità sono definiti e controllati.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Definizione del Processo}: la misura in cui il processo raggiunge i risultati attesi aderendo ad un particolare standard di 					processo.
+			\item \emph{Utilizzo del Processo}: la misura in cui il processo attinge alle risorse allocate per la sua esecuzione.	
+		\end{itemize}
+		
+	\item \textbf{Livello 4: Predicibile} il processo è messo in atto costantemente entro limiti definiti. Le attività che lo compongono, la loro 				gestione e i relativi risultati sono controllati quantitativamente.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Misurazione del Processo}: la misura in cui il processo utilizza i risultati raggiunti e le misure ricavate durante 							l'esecuzione per garantire il raggiungimento dei traguardi definiti.
+			\item \emph{Controllo del Processo}: la misura in cui il processo viene controllato tramite la raccolta, l'analisi e la messa in uso di 					misurazioni di prodotto e processo allo scopo di correggere, ove necessario, la sua esecuzione per raggiungere i risultati attesi.	
+		\end{itemize}
+
+	\item \textbf{Livello 5: Ottimizzante} il processo è continuativamente migliorato per soddisfare i rilevanti traguardi di business attuali e 				previsti. I cambiamenti del processo sono valutati e lo studio per il miglioramento è un'attività costante.
+	I relativi attributi di processo:
+		\begin{itemize}
+			\item \emph{Innovazione del Processo}: la misura in cui cambiamenti relativi alla definizione, alla gestione e all'esecuzione del processo 					sono controllati per raggiungere gli obiettivi di business dell'organizzazione.
+			\item \emph{Ottimizzazione del Processo}: la misura in cui vengono identificati e implementati cambiamenti relativamente all'esecuzione del 				processo in modo tale da assicurare un miglioramento continuo nel raggiungimento degli obiettivi rilevanti dell'organizzazione.
+		\end{itemize}
+	\end{itemize}
+
+Ogni attributo di processo è misurabile e sono definiti dallo standard 4 diversi gradi di possesso:
+\begin{itemize}
+	\item \textbf{N}: non posseduto (0\% - 15\%);
+	\item \textbf{P}: parzialmente posseduto (16\% - 50\%);
+	\item \textbf{L}: largamente posseduto (51\% - 85\%);
+	\item \textbf{F}: completamente posseduto (86\% - 100\%).
+\end{itemize}
+
+Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi sono usate nel contesto di una strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo PDCA.
+\\Il ciclo PDCA, altresì noto come ciclo di Deming, definisce un'organizzazione interna dei processi incentrata sul principio del miglioramento continuo allo scopo di renderli automigliorativi.
+\\I passi in cui esso si articola sono quattro:
+	\begin{itemize}
+		\item \textbf{Pianificare (Plan)}: vengono definite attività, scadenze, responsabilità, risorse utili a raggiungere specifici obiettivi di miglioramento opportunamente pianificati.
+		\item \textbf{Eseguire (Do)}: vengono attuate le azioni migliorative pianificate al passo precedente. Si procede inoltre ad eseguire misurazioni e raccogliere dati utili per i successivi passi di analisi e controllo.
+		\item \textbf{Valutare (Check)}: l'esito delle azioni di miglioramento viene confrontato rispetto alle attese e agli obiettivi pianificati.
+		\item \textbf{Agire (Act)}: se l'esito delle valutazioni effettuate al passo precedente risulta positivo, i cambiamenti introdotti nell'esecuzione del processo vengono incorporati stabilmente in esso e standardizzati.
+	\end{itemize}
+	\subsection{Qualità di prodotto - ISO/IEC:9126}
+	Lo Standard ISO/IEC 9126:2001 si articola in quattro parti:
+	\begin{enumerate}
+	\item Modello della qualità del software (9126-1);
+		\item Metriche per la qualità esterna (9126-2);
+		\item Metriche per la qualità interna (9126-3);
+		\item Metriche per la qualità in uso (9126-4).
+	\end{enumerate}
+	Lo standard analizza la qualità del software sotto tre diversi punti di vista:
+	\begin{itemize}
+		\item \textbf{Qualità interna}: è la qualità del prodotto software che fa riferimento alle caratteristiche implementative del software come l'architettura e il codice derivante da quest'ultima.
+		\item \textbf{Qualità esterna}: è la qualità del prodotto software relativa a quando esso viene eseguito e testato in un ambiente di prova. 
+		\item \textbf{Qualità in uso}: è la qualità del prodotto software dal lato di chi utilizza tale prodotto all'interno di uno specifico sistema.
+	\end{itemize}
+		\subsubsection{Modello della qualità del software}
+		Nella prima parte dello standard vengono presentati i modelli per la qualità esterna, interna ed in uso.
+			\paragraph{Modello della qualità esterna ed interna}
+			Il modello di qualità esterna ed interna sancito nella prima parte dello standard è suddiviso nelle seguenti sei caratteristiche generali misurabili attraverso delle metriche:
+			\begin{itemize}
+				\item \textbf{funzionalità}: è la capacità del software di fornire le funzioni che soddisfano determinate esigenze, necessarie per operare in determinate condizioni. 
+				\item \textbf{affidabilità}: rappresenta la capacità del prodotto software di mantenere uno specifico livello di prestazioni quando viene usato in certe condizioni e per un periodo di tempo determinato.
+				\item \textbf{usabilità}: è la capacità di un prodotto software di essere facilmente comprensibile e attraente in ogni sua parte per un utente qualsiasi. Un software è considerato usabile proporzionalmente alla facilità con cui un utente opera per sfruttare al massimo le funzionalità che il software mette a disposizione.
+				\item \textbf{efficienza}: è la capacità di un prodotto di eseguire le funzioni richieste nel minor tempo possibile ed utilizzando le risorse necessarie nel modo migliore.
+				\item \textbf{manutenibilità}: rappresenta la capacità di un prodotto software di essere modificato in tempi rapidi e a costi accessibili. Le modifiche possono riguardare correzioni o adattamenti del prodotto a variazioni negli ambienti, nei requisiti e nelle specifiche funzionali.
+				\item \textbf{portabilità}: è la capacità di un prodotto software di poter essere spostato da un ambiente all'altro velocemente. L'ambiente include sia aspetti hardware che software.
+			\end{itemize}
+			
+			\paragraph{Modello della qualità in uso}
+			Gli attributi presenti nel modello relativo alla qualità del software in uso sono rappresentati da quattro grandi categorie:
+			\begin{itemize}
+				\item \textbf{efficacia}: è la capacità di consentire all'utente di raggiungere obiettivi specifici con precisione e completezza.
+				\item \textbf{produttività}: rappresenta la capacità di permettere all'utente di utilizzare un numero stabilito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo.
+				\item \textbf{sicurezza fisica}: è la capacità di raggiungere un livello accettabile di rischio di danni a dati, persone, proprietà o ambienti.
+				\item \textbf{soddisfazione}: rappresenta la capacità di soddisfare gli utenti.
+			\end{itemize}
+		\subsubsection{Metriche per la qualità del software}
+		Nelle restanti tre parti vengono trattate le metriche per la qualità esterna, interna e in uso.
+			\paragraph{Metriche per la qualità esterna}
+			Le metriche esterne misurano i comportamenti del software che si possono rilevare dai test, dall'operatività e dall'osservazione durante la sua esecuzione sulla base degli obiettivi stabiliti. Le metriche esterne sono scelte in base alle caratteristiche che il prodotto finale dovrà dimostrare una volta utilizzato.
+			\paragraph{Metriche per la qualità interna}
+			Le metriche interne si applicano al software non eseguibile (un esempio è il codice sorgente) e alla documentazione. Le misure effettuate permettono di prevedere il livello di qualità esterna ed in uso del prodotto finale poiché gli attributi interni influenzano le caratteristiche esterne e quelle in uso.
+			\paragraph{Metriche per la qualità in uso}
+			Le metriche della qualità in uso valutano il livello con cui il software consente agli utenti di svolgere le proprie attività con efficacia, produttività, sicurezza e soddisfazione nel contesto operativo previsto.
+	
+\end{document}
