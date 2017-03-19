@@ -16,8 +16,5 @@
 *.ist
 *.synctex.gz
 
-# elenco personalizzato design pattern
-*.pat
-
 ### PDF
 *.pdf
