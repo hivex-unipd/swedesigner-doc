@@ -27,6 +27,7 @@
 
 \section{Introduzione}
 
+
 \subsection{Scopo del documento}
 Questo documento, ad uso interno del gruppo, ha lo scopo di definire le norme che i suoi membri devono seguire nel corso dello svolgimento del progetto didattico \proj.
 
@@ -39,6 +40,7 @@ Le convenzioni qui riportate hanno lo scopo di:
 	\item minimizzare i conflitti tra i vari ruoli;
 	\item garantire che l'\gloss{infrastruttura} di lavoro sia il più possibile semplice e gestibile --- quindi fruibile.
 \end{itemize}
+
 
 \subsection{Struttura del documento}
 Il presente documento si divide in tre sezioni principali:
@@ -62,11 +64,14 @@ Il presente documento si divide in tre sezioni principali:
 	\end{description}
 \end{itemize}
 
+
 \subsection{Scopo del prodotto}
 \scopo
 
+
 \subsection{Glossario}
 \presgloss
+
 
 \subsection{Riferimenti} \label{sec:ref}
 
@@ -94,228 +99,221 @@ Il presente documento si divide in tre sezioni principali:
 
 \section{Processi primari} \label{sec:primari}
 
+
 \subsection{Fornitura}
 
-	\subsubsection{Studio di fattibilità}
-	La fase antecedente alla realizzazione del progetto consiste nel fissare delle riunioni in modo che il gruppo possa discutere di esso. È poi compito degli analisti redigere lo Studio di Fattibilità (\SdF), sulla base di ciò che è emerso dalle riunioni (come ad esempio il dominio applicativo del capitolato).
+\subsubsection{Studio di fattibilità}
+La fase antecedente alla realizzazione del progetto consiste nel fissare delle riunioni in modo che il gruppo possa discutere di esso. È poi compito degli analisti redigere lo Studio di Fattibilità (\SdF), sulla base di ciò che è emerso dalle riunioni (come ad esempio il dominio applicativo del capitolato).
 
-	Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo riguardo ad ogni capitolato. Per ogni capitolato, gli analisti devono inserire le seguenti sezioni:
-	\begin{description}
-		\item[descrizione breve] presentazione della proposta di capitolato; 
-		\item[dominio applicativo] analisi dell'ambito applicativo della proposta di capitolato; 
-		\item[dominio tecnologico] insieme di tecnologie richieste e consigliate per lo sviluppo del progetto;
-		\item[aspetti negativi e positivi] analisi delle criticità e delle potenzialità del progetto in esame;
-		\item[valutazione finale] sunto dei principali motivi alla base dell'accettazione o del rigetto del capitolato in esame.
-	\end{description}
+Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo riguardo ad ogni capitolato. Per ogni capitolato, gli analisti devono inserire le seguenti sezioni:
+\begin{description}
+	\item[descrizione breve] presentazione della proposta di capitolato; 
+	\item[dominio applicativo] analisi dell'ambito applicativo della proposta di capitolato; 
+	\item[dominio tecnologico] insieme di tecnologie richieste e consigliate per lo sviluppo del progetto;
+	\item[aspetti negativi e positivi] analisi delle criticità e delle potenzialità del progetto in esame;
+	\item[valutazione finale] sunto dei principali motivi alla base dell'accettazione o del rigetto del capitolato in esame.
+\end{description}
+
 
 \subsection{Sviluppo}
-	\subsubsection{Analisi dei requisiti}
-	Al termine dello studio di fattibilità, gli analisti devono elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di Analisi dei Requisiti (\AdR); questo documento contiene i requisiti e i \gloss{casi d'uso} individuati nelle riunioni svolte.
-	
-	Nelle sezioni seguenti esponiamo la struttura che gli analisti devono rispettare per specificare requisiti e casi d'uso.
-		\paragraph{Requisiti} 
-		Dopo aver individuato i requisiti tramite le varie riunioni, è compito degli analisti redarne un elenco con la seguente struttura:
-			\[R[Tipo][Importanza][ID]\]
-		dove:
-		\begin{description}
-			\item[Tipo] indica il tipo del requisito, che può essere:
-			\begin{itemize}
-				\item \textbf{F}: funzionale (cioè un servizio che il prodotto è tenuto a fornire);
-				\item \textbf{Q}: di qualità;
-				\item \textbf{P}: prestazionale;
-				\item \textbf{V}: di vincolo.
-			\end{itemize}
-			\item[Importanza] indica se il requisito è:
-			\begin{itemize}
-				\item \textbf{O}: obbligatorio;
-				\item \textbf{D}: desiderabile;
-				\item \textbf{F}: facoltativo. 
-			\end{itemize}
-			\item[ID] identifica univocamente il requisito.
-		\end{description}
-		Inoltre, per ogni requisito l'analista deve specificare:
-		\begin{itemize}
-			\item una breve descrizione di esso;
-			\item la fonte da cui deriva:
-			\begin{itemize}
-				\item Capitolato: il requisito è derivabile direttamente dalla lettura del relativo capitolato d'appalto;
-				\item Riunione Esterna: il requisito deriva da una delle riunioni esterne con il proponente;
-				\item Interno: il requisito deriva da un'analisi maggiormente approfondita del capitolato C6 da parte degli analisti;
-				\item Casi d'uso: il requisito deriva da uno o più casi d'uso identificati.
-			\end{itemize}
-		\end{itemize}
-		\paragraph{Casi d'uso}
-		L'analista deve identificare ogni caso d'uso nel modo seguente:
-			\[UCx\]
-		dove $x$ è un numero che identifica il caso d'uso. Ogni macro-caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UCp.f$, dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
-		\begin{description}
-			\item[nome] nome identificativo del caso d'uso;
-			\item[attori] attori coinvolti nel caso d'uso;
-			\item[descrizione] descrizione del caso d'uso;
-			\item[precondizioni] condizioni che devono valere prima del caso d'uso;
-			\item[postcondizioni] condizioni che devono valere dopo il caso d'uso;
-			\item[\gloss{scenario} principale] descrizione del caso d'uso tramite i casi d'uso figli;
-			\item[inclusioni] eventuali inclusioni di altri casi d'uso, se specificate;
-			\item[estensioni] eventuali estensioni di altri casi d'uso, se specificate;
-			\item[scenari alternativi] descrizione tramite casi d'uso non appartenenti al flusso principale.
-		\end{description}
+Il gruppo mantiene il codice sorgente del prodotto in un \gloss{repository} pubblico su \gloss{GitHub}. Tale repository è reperibile all'indirizzo \url{github.com/hivex-unipd/swedesigner}.
 
-	\subsubsection{Progettazione} \label{sec:design}
-	\paragraph{Attività progettuali} Il lavoro dei progettisti consiste nel progettare struttura e comportamento del software; nello specifico, questo lavoro si articola in due attività:
-	\begin{enumerate}
-		\item \textbf{Progettazione architetturale} (descritta in §5.3.5 di ISO/IEC 12207:1995) --- definire l'\emph{architettura} del sistema, cioè individuare e descrivere le componenti del sistema, esplicitandone ruoli e relazioni tra essi; ogni progettista documenta i prodotti di questa attività nel documento di Specifica Tecnica.
-		\item \textbf{Progettazione di dettaglio} (descritta in §5.3.6 di ISO/IEC 12207:1995) --- definire, in dettaglio, il \emph{comportamento} delle componenti del sistema; ogni progettista documenta i prodotti di questa attività nel documento di Definizione di Prodotto.
-	\end{enumerate}
-	Per ognuna di queste due attività, ogni progettista deve definire dei test che permettano la verifica del sistema:
-	\begin{enumerate}
-		\item durante la progettazione architetturale, i progettisti definiscono i \textbf{test di integrazione}, cioè dei test che verificano il corretto interfacciarsi delle componenti del sistema;
-		\item durante la progettazione di dettaglio, la specifica del comportamento di una componente dev'essere accompagnata dalla definizione di un \textbf{test di unità} che verifichi il corretto funzionamento della componente isolata.
-	\end{enumerate}
+\subsubsection{Analisi dei requisiti}
+Al termine dello studio di fattibilità, gli analisti devono elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di Analisi dei Requisiti (\AdR); questo documento contiene i requisiti e i \gloss{casi d'uso} individuati nelle riunioni svolte.
 
-	\paragraph{Diagrammi} Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi UML descritti qui di seguito, seguendo lo standard UML 2.0:
-	\begin{itemize}
-		\item Diagramma dei \gloss{package} --- raggruppa un numero di elementi UML in una sola unità di livello più alto.
-		\item \gloss{Diagramma delle classi} --- descrive le interfacce delle componenti del sistema e le relazioni tra esse.
-		\item \gloss{Diagramma delle attività} --- descrive i passi di una procedura.
-		\item Diagramma di sequenza: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
-	\end{itemize}
-	Per disegnare i diagrammi appena esposti, i progettisti devono usare il software \gloss{Astah} ed esportare i diagrammi in formato PNG.
+Per tracciare le relazioni tra casi d'uso e requisiti, gli analisti devono usare l'applicazione web \gloss{PragmaDB} (\url{github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario; inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) e consente il rispetto delle linee guida di struttura descritte in seguito.
 
-	\paragraph{Stile di progettazione} L'architettura di \proj{} segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
-	\begin{itemize}
-		\item classi Java;
-		\item prototipi di oggetti JavaScript.
-	\end{itemize}
-	Per comodità, chiameremo “classi” anche i prototipi di oggetti JavaScript, benché tale linguaggio non offra il costrutto \texttt{class} (se non come “zucchero sintattico”). Pertanto, le procedure descritte nei diagrammi delle attività sono:
-	\begin{itemize}
-		\item in Java, solo ed esclusivamente metodi di classi;
-		\item in JavaScript, metodi di classi o funzioni che abbiano un nome esplicito (quindi \textbf{non} anonime).
-	\end{itemize}
-	Al fine di aumentare la manutenibilità del sistema, i progettisti devono seguire le seguenti regole:
-	\begin{itemize}
-		\item ogni libreria esterna dev'essere utilizzata come puro servizio: non è possibile modificarne il codice (questo per problemi di tempo);
-		\item quando una classe si interfaccia con un'altra, essa non deve conoscere una particolare classe concreta ma soltanto il suo \emph{tipo}, cioè un'interfaccia o una classe astratta;
-		\item ogni componente deve avere un compito ben preciso, ricavabile dal proprio nome e dai metodi che costituiscono la propria interfaccia;
-		\item i progettisti devono assumere di conoscere soltanto il tipo statico di un oggetto, non il suo tipo dinamico;
-		\item i progettisti devono definire solo metodi di istanza (quindi non statici), eccettuato il metodo \texttt{main} del \emph{controller} Java del \emph{back end};
-		\item se una classe $A$ estende il contratto di una classe $B$, allora dev'essere possibile affermare che “ogni $A$ è un $B$”;
-		\item i campi dati di ogni classe Java devono essere privati.
-	\end{itemize}
+Nelle sezioni seguenti esponiamo la struttura che gli analisti devono rispettare per specificare requisiti e casi d'uso.
 
-	\paragraph{Nomenclatura} Al fine di uniformare il codice che verrà derivato dalla progettazione, i progettisti devono osservare le seguenti norme di nomenclatura:
+\paragraph{Requisiti} 
+Dopo aver individuato i requisiti tramite le varie riunioni, è compito degli analisti redarne un elenco con la seguente struttura:
+	\[R[Tipo][Importanza][ID]\]
+dove:
+\begin{description}
+	\item[Tipo] indica il tipo del requisito, che può essere:
 	\begin{itemize}
-		\item le componenti vanno raggruppate in moduli (\emph{package}, in Java) con un nome; tale nome:
-		\begin{itemize}
-			\item è in lingua inglese;
-			\item contiene solo caratteri alfanumerici;
-			\item non contiene lettere alte;
-			\item reca il nome dell'eventuale modulo “padre” che lo contiene, preposto al proprio nome e seguito da una coppia di \emph{due punti} (\texttt{::});
-			\item è rappresentativo del ruolo del modulo all'interno del sistema;
-			\item è preferibilmente un sostantivo.
-		\end{itemize}
-		\item ogni componente ha un nome; tale nome:
-		\begin{itemize}
-			\item è in lingua inglese;
-			\item contiene solo caratteri alfanumerici;
-			\item ha iniziale alta;
-			\item se composto di più termini, ha l'iniziale di ogni termine alta;
-			\item è rappresentativo del ruolo della componente all'interno del sistema;
-			\item non può essere un termine riservato dei linguaggi Java o JavaScript;
-			\item non può essere più lungo di 30 caratteri;
-			\item è preferibilmente un sostantivo (eventualmente composto).
-		\end{itemize}
-		\item ogni metodo di classe (o funzione) ha un nome; tale nome:
-		\begin{itemize}
-			\item è in lingua inglese;
-			\item contiene solo caratteri alfanumerici;
-			\item ha iniziale bassa;
-			\item se composto di più termini ha l'iniziale di ogni termine alta, tranne quella del primo termine;
-			\item è rappresentativo del servizio che il metodo offre;
-			\item non può essere un termine riservato dei linguaggi Java o JavaScript;
-			\item non può essere più lungo di 20 caratteri;
-			\item è preferibilmente un verbo (eventualmente composto).
-		\end{itemize}
+		\item \textbf{F}: funzionale (cioè un servizio che il prodotto è tenuto a fornire);
+		\item \textbf{Q}: di qualità;
+		\item \textbf{P}: prestazionale;
+		\item \textbf{V}: di vincolo.
 	\end{itemize}
-
-	\subsubsection{Codifica} \label{sec:cod}
-	Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
-
-	\paragraph{Convenzioni} \label{sec:conv}
-	Il team seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte \gloss{client} scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritti su \url{javascript.crockford.com/code.html}. La parte \gloss{server} è scritta in Java e seguirà le indicazioni JavaDoc disponibili su \url{www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
-	
-	\paragraph{Nomenclatura del codice}
-	Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
+	\item[Importanza] indica se il requisito è:
 	\begin{itemize}
-		\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
-		\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
-		\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
-		\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:design}, tranne che devono essere preferibilmente dei sostantivi.
+		\item \textbf{O}: obbligatorio;
+		\item \textbf{D}: desiderabile;
+		\item \textbf{F}: facoltativo. 
 	\end{itemize}
-	
-	\paragraph{Ricorsione}
-	Il programmatore deve evitare la ricorsione. Nel caso fosse molto difficile trovare un metodo iterativo equivalente, egli è tenuto a fornire una prova di terminazione dell'algoritmo ricorsivo.
-
-	\paragraph{Documentazione del codice}
-	Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
+	\item[ID] identifica univocamente il requisito.
+\end{description}
+Inoltre, per ogni requisito l'analista deve specificare:
+\begin{itemize}
+	\item una breve descrizione di esso;
+	\item la fonte da cui deriva:
 	\begin{itemize}
-		\item i programmatori devono spiegare, con un commento, ogni componente;
-		\item i programmatori devono spiegare, con un commento, ogni metodo e funzione;
-		%spiego meglio sotto giusto per allungare un pò e per semplificare tutte le specifiche scritte su javadoc/jsdoc
-		%\item la spiegazione di una componente o di un metodo Java deve seguire gli standard di documentazione \emph{JavaDoc};
-		%\item la spiegazione di una componente, di un metodo o di una funzione JavaScript deve seguire le linee guida dell'API \emph{JSDdoc} (nei riferimenti informativi);
-		\item quando possibile, è bene documentare con un commento in linea parti di codice non immediatamente comprensibili;
-		\item ogni commento in linea deve recare uno spazio tra il testo e il marcatore di inizio commento;
-		\item è opportuno usare frasi di senso compiuto in modo da essere più chiari possibili;
-		\item è preferibile porre il commento sopra una riga di codice anziché alla fine di essa, per una miglior facilità di lettura.
+		\item Capitolato: il requisito è derivabile direttamente dalla lettura del relativo capitolato d'appalto;
+		\item Riunione Esterna: il requisito deriva da una delle riunioni esterne con il proponente;
+		\item Interno: il requisito deriva da un'analisi maggiormente approfondita del capitolato C6 da parte degli analisti;
+		\item Casi d'uso: il requisito deriva da uno o più casi d'uso identificati.
 	\end{itemize}
-	La documentazione di file e metodi in particolare i programmatori devono seguire le strutture descritte sotto bassate sulle linee guida di \gloss{Javadoc} e Jsdoc.
-	\begin{itemize}
-		\item all'inizio di ogni file \texttt{.java} si inserisce un commento, riguardante il documento, con la seguente struttura:
-		\begin{verbatim}
-		/**
-		* Descrizione del file
-		*
-		*
-		* @author Autore
-		* @version Versione corrente del file
-		* @since Versione del prodotto dalla quale è presente il file
-		*/
-		\end{verbatim}
-		\item Per documentazione di inizio file in JavaScript rispettare sempre la struttura descritta per i file \texttt{.java} al punto sopra.
-		\item all'inizio di ogni metodo Java si inserisce un commento con la struttura descritta in seguito:
-		\begin{verbatim}
-		/** 
-		* Descrizione del metodo
-		* @param NomeParametro    Descrizione parametro
-		* @return Tiporitorno     Valore di ritorno 
-		*/
-		\end{verbatim}
-		Il numero di \texttt{@param} dipende dal numero di parametri del metodo. Il tag \texttt{@return} si omette nel caso di metodi \texttt{void} e costruttori. Alcuni parametri aggiuntivi posso recare \texttt{@throws TipoEccezione Motivo}, nel caso di eccezioni controllate presenti nel metodo e \texttt{@since} se il metodo è stato inserito in una versione diversa rispetto al file.
-		\item all'inizio di ogni funzione JavaScript si inserisce un commento con la seguente struttura:
-		\begin{verbatim}
-		/** 
-		* Descrizione della funzione
-		* @param {Tipoparametro} NomeParametro - Descrizione parametro
-		*/
-		\end{verbatim}
-	\end{itemize}
-	
-	\paragraph{Tecnologie da usare}
-	Ogni programmatore deve utilizzare i seguenti editor di testo:
-	\begin{itemize}
-		\item \emph{Eclipse} per scrivere codice Java;
-		\item \emph{JetBrains Webstorm} per scrivere codice JavaScript.
-	\end{itemize}
-	Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
+\end{itemize}
+\paragraph{Casi d'uso}
+L'analista deve identificare ogni caso d'uso nel modo seguente:
+	\[UCx\]
+dove $x$ è un numero che identifica il caso d'uso. Ogni macro-caso d'uso sarà poi analizzato in modo più specifico e identificato dalla notazione $UCp.f$, dove $p$ indica il caso d'uso stesso e $f$ un suo figlio; ogni figlio può a sua volta avere altri figli. Inoltre ogni caso d'uso deve avere le seguenti proprietà:
+\begin{description}
+	\item[nome] nome identificativo del caso d'uso;
+	\item[attori] attori coinvolti nel caso d'uso;
+	\item[descrizione] descrizione del caso d'uso;
+	\item[precondizioni] condizioni che devono valere prima del caso d'uso;
+	\item[postcondizioni] condizioni che devono valere dopo il caso d'uso;
+	\item[\gloss{scenario} principale] descrizione del caso d'uso tramite i casi d'uso figli;
+	\item[inclusioni] eventuali inclusioni di altri casi d'uso, se specificate;
+	\item[estensioni] eventuali estensioni di altri casi d'uso, se specificate;
+	\item[scenari alternativi] descrizione tramite casi d'uso non appartenenti al flusso principale.
+\end{description}
 
-	\subsubsection{Strumenti}
-		\paragraph{PragmaDB}
-		Per tracciare le relazioni tra casi d'uso e requisiti, il gruppo ha scelto di usare \gloss{PragmaDB} (\url{github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati.
-		
-		Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario. Risulta quindi un supporto agevole per rendere il lavoro di gruppo in fase di analisi più efficiente, uniforme e coeso. Inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) seguendo le linee guida di struttura descritte in questo documento.
+\subsubsection{Progettazione} \label{sec:design}
+\paragraph{Attività progettuali} Il lavoro dei progettisti consiste nel progettare struttura e comportamento del software; nello specifico, questo lavoro si articola in due attività:
+\begin{enumerate}
+	\item \textbf{Progettazione architetturale} (descritta in §5.3.5 di ISO/IEC 12207:1995) --- definire l'\emph{architettura} del sistema, cioè individuare e descrivere le componenti del sistema, esplicitandone ruoli e relazioni tra essi; ogni progettista documenta i prodotti di questa attività nel documento di Specifica Tecnica.
+	\item \textbf{Progettazione di dettaglio} (descritta in §5.3.6 di ISO/IEC 12207:1995) --- definire, in dettaglio, il \emph{comportamento} delle componenti del sistema; ogni progettista documenta i prodotti di questa attività nel documento di Definizione di Prodotto.
+\end{enumerate}
+Per ognuna di queste due attività, ogni progettista deve definire dei test che permettano la verifica del sistema:
+\begin{enumerate}
+	\item durante la progettazione architetturale, i progettisti definiscono i \textbf{test di integrazione}, cioè dei test che verificano il corretto interfacciarsi delle componenti del sistema;
+	\item durante la progettazione di dettaglio, la specifica del comportamento di una componente dev'essere accompagnata dalla definizione di un \textbf{test di unità} che verifichi il corretto funzionamento della componente isolata.
+\end{enumerate}
 
-		\paragraph{Astah}
-		L'editor UML che gli analisti dovranno usare è Astah, creato da \emph{ChangeVision} e disponibile gratuitamente online. Supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
+\paragraph{Diagrammi} Per descrivere l'architettura e il comportamento del sistema i progettisti utilizzano i diagrammi UML descritti qui di seguito, seguendo lo standard UML 2.0:
+\begin{itemize}
+	\item Diagramma dei \gloss{package} --- raggruppa un numero di elementi UML in una sola unità di livello più alto.
+	\item \gloss{Diagramma delle classi} --- descrive le interfacce delle componenti del sistema e le relazioni tra esse.
+	\item \gloss{Diagramma delle attività} --- descrive i passi di una procedura.
+	\item Diagramma di sequenza: descrive uno scenario, dove le azioni sono disposte in sequenza e le varie scelte sono già state prese.
+\end{itemize}
+Per disegnare i diagrammi appena esposti, i progettisti devono usare il software gratuito \gloss{Astah} ed esportare i diagrammi in formato PNG. Astah supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
+
+\paragraph{Stile di progettazione} L'architettura di \proj{} segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
+\begin{itemize}
+	\item classi Java;
+	\item prototipi di oggetti JavaScript.
+\end{itemize}
+Per comodità, chiameremo “classi” anche i prototipi di oggetti JavaScript, benché tale linguaggio non offra il costrutto \texttt{class} (se non come “zucchero sintattico”). Pertanto, le procedure descritte nei diagrammi delle attività sono:
+\begin{itemize}
+	\item in Java, solo ed esclusivamente metodi di classi;
+	\item in JavaScript, metodi di classi o funzioni che abbiano un nome esplicito (quindi \textbf{non} anonime).
+\end{itemize}
+Al fine di aumentare la manutenibilità del sistema, i progettisti devono seguire le seguenti regole:
+\begin{itemize}
+	\item ogni libreria esterna dev'essere utilizzata come puro servizio: non è possibile modificarne il codice (questo per problemi di tempo);
+	\item quando una classe si interfaccia con un'altra, essa non deve conoscere una particolare classe concreta ma soltanto il suo \emph{tipo}, cioè un'interfaccia o una classe astratta;
+	\item ogni componente deve avere un compito ben preciso, ricavabile dal proprio nome e dai metodi che costituiscono la propria interfaccia;
+	\item i progettisti devono assumere di conoscere soltanto il tipo statico di un oggetto, non il suo tipo dinamico;
+	\item i progettisti devono definire solo metodi di istanza (quindi non statici), eccettuato il metodo \texttt{main} del \emph{controller} Java del \emph{back end};
+	\item se una classe $A$ estende il contratto di una classe $B$, allora dev'essere possibile affermare che “ogni $A$ è un $B$”;
+	\item i campi dati di ogni classe Java devono essere privati.
+\end{itemize}
+
+\paragraph{Nomenclatura} Al fine di uniformare il codice che verrà derivato dalla progettazione, i progettisti devono osservare le seguenti norme di nomenclatura:
+\begin{itemize}
+	\item le componenti vanno raggruppate in moduli (\emph{package}, in Java) con un nome; tale nome:
+	\begin{itemize}
+		\item è in lingua inglese;
+		\item contiene solo caratteri alfanumerici;
+		\item non contiene lettere alte;
+		\item reca il nome dell'eventuale modulo “padre” che lo contiene, preposto al proprio nome e seguito da una coppia di \emph{due punti} (\texttt{::});
+		\item è rappresentativo del ruolo del modulo all'interno del sistema;
+		\item è preferibilmente un sostantivo.
+	\end{itemize}
+	\item ogni componente ha un nome; tale nome:
+	\begin{itemize}
+		\item è in lingua inglese;
+		\item contiene solo caratteri alfanumerici;
+		\item ha iniziale alta;
+		\item se composto di più termini, ha l'iniziale di ogni termine alta;
+		\item è rappresentativo del ruolo della componente all'interno del sistema;
+		\item non può essere un termine riservato dei linguaggi Java o JavaScript;
+		\item non può essere più lungo di 30 caratteri;
+		\item è preferibilmente un sostantivo (eventualmente composto).
+	\end{itemize}
+	\item ogni metodo di classe (o funzione) ha un nome; tale nome:
+	\begin{itemize}
+		\item è in lingua inglese;
+		\item contiene solo caratteri alfanumerici;
+		\item ha iniziale bassa;
+		\item se composto di più termini ha l'iniziale di ogni termine alta, tranne quella del primo termine;
+		\item è rappresentativo del servizio che il metodo offre;
+		\item non può essere un termine riservato dei linguaggi Java o JavaScript;
+		\item non può essere più lungo di 20 caratteri;
+		\item è preferibilmente un verbo (eventualmente composto).
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Codifica} \label{sec:cod}
+Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
+
+\paragraph{Convenzioni} \label{sec:conv}
+Il gruppo seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte \gloss{client} scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritte in \url{javascript.crockford.com/code.html}. La parte \gloss{server} è scritta in Java e seguirà le indicazioni JavaDoc disponibili in \url{www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
+
+\paragraph{Nomenclatura del codice}
+Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
+\begin{itemize}
+	\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
+	\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
+	\item i programmatori \textbf{non} possono introdurre classi ausiliarie non presenti nella progettazione del software;
+	\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:design}, tranne che devono essere preferibilmente dei sostantivi.
+\end{itemize}
+
+\paragraph{Ricorsione}
+Il programmatore deve evitare la ricorsione. Nel caso fosse molto difficile trovare un metodo iterativo equivalente, egli è tenuto a fornire una prova di terminazione dell'algoritmo ricorsivo.
+
+\paragraph{Documentazione del codice}
+Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
+\begin{itemize}
+	\item All'inizio di ogni file sorgente (\texttt{.java} o \texttt{.js}) e prima di ogni classe, i programmatori devono inserire un commento con la seguente struttura:
+	\begin{verbatim}
+	/**
+	* Descrizione del file o della classe
+	*
+	*
+	* @author Autore
+	* @version Versione corrente del file o della classe
+	* @since Versione del prodotto dalla quale è presente il file o la classe
+	*/
+	\end{verbatim}
+	\item All'inizio di ogni metodo Java i programmatori devono inserire un commento con la seguente struttura:
+	\begin{verbatim}
+	/** 
+	* Descrizione del metodo
+	* @param NomeParametro    Descrizione parametro
+	* @return Tiporitorno     Valore di ritorno 
+	*/
+	\end{verbatim}
+	Il numero di \texttt{@param} dipende dal numero di parametri del metodo. Il tag \texttt{@return} si omette nel caso di metodi \texttt{void} e costruttori. Alcuni parametri aggiuntivi posso recare \texttt{@throws TipoEccezione Motivo}, nel caso di eccezioni controllate presenti nel metodo e \texttt{@since} se il metodo è stato inserito in una versione diversa rispetto al file.
+	\item All'inizio di ogni funzione JavaScript i programmatori devono inserire un commento con la seguente struttura:
+	\begin{verbatim}
+	/** 
+	* Descrizione della funzione
+	* @param {Tipoparametro} NomeParametro - Descrizione parametro
+	*/
+	\end{verbatim}
+	\item Quando possibile, è bene documentare con un commento in linea parti di codice non immediatamente comprensibili.
+	\item Ogni commento in linea deve recare uno spazio tra il testo e il marcatore di inizio commento.
+	\item È opportuno usare frasi di senso compiuto in modo da essere più chiari possibili.
+	\item È preferibile porre il commento sopra una riga di codice anziché alla fine di essa, per una miglior facilità di lettura.
+	\item In generale, i programmatori devono attenersi alle linee guida \gloss{Javadoc} e Jsdoc.
+\end{itemize}
+
+\paragraph{Tecnologie e infrastruttura}
+Ogni programmatore deve scrivere codice sorgente utilizzando i seguenti editor di testo:
+\begin{itemize}
+	\item \emph{Eclipse} per scrivere codice Java;
+	\item \emph{JetBrains Webstorm} per scrivere codice JavaScript.
+\end{itemize}
+Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
+
+I programmatori devono caricare il codice sorgente nel repository pubblico \url{github.com/hivex-unipd/swedesigner}. Ogni \emph{commit} deve recare un messaggio che spiega concisamente le aggiunte o modifiche che sono state apportate al codice sorgente.
+
 
 
 
@@ -327,28 +325,31 @@ Il presente documento si divide in tre sezioni principali:
 \section{Processi di supporto} \label{sec:supporto}
 I processi normati in questa sezione hanno la funzione di supportare gli altri processi, fornendo istruzioni utili alla stesura dei documenti e alla loro verifica.
 
+
 \subsection{Documentazione} \label{sec:doc}
-La documentazione del progetto (ossia tutto ciò che documenta le attività di un progetto) va sviluppata nel \gloss{branch} \texttt{doc} del nostro \gloss{repository}, come motivato nella sezione \ref{sec:config}.
+Il gruppo mantiene la documentazione di progetto (tutto ciò che documenta le attività del progetto) in un repository distinto da quello del codice sorgente, come motivato nella sezione \ref{sec:config}. Tale repository è reperibile all'indirizzo \url{github.com/hivex-unipd/swedesigner-doc}.
 
 I documenti che svilupperemo sono i seguenti:
 \begin{itemize}
 	\item Documenti interni al gruppo:
 	\begin{itemize}
-		\item \textbf{Studio di fattibilità}: vaglia i \emph{pro} e i \emph{contro} di ogni capitolato d'appalto;
-		\item \textbf{Norme di progetto}: norma i processi del progetto.
+		\item \textbf{Studio di Fattibilità} --- Vaglia pro e contro di ogni capitolato d'appalto.
+		\item \textbf{Norme di Progetto} --- Norma i processi del progetto.
+		\item \textbf{Verbali} --- Insieme di documenti che riporta i verbali delle riunioni che interessano il gruppo e non un lettore esterno.
 	\end{itemize}
-	\item Documenti rivolti non solo al gruppo ma anche ai committenti e/o ai docenti:
+	\item Documenti rivolti non solo al gruppo ma anche al proponente e/o ai docenti:
 	\begin{itemize}
-		\item \textbf{Piano di progetto}: dichiara come il gruppo intende gestire le risorse umane e temporali nel corso del progetto;
-		\item \textbf{Piano di qualifica}: descrive come il gruppo affronta il problema di garantire la qualità del prodotto da fornire;
-		\item \textbf{Analisi dei requisiti}: elenca, descrive e traccia i requisiti e i casi d'uso del prodotto da fornire;
-		\item \textbf{Specifica tecnica}: descrive l'architettura logica del sistema da fornire, mostrando ciò che il sistema deve fare senza però fissarne i dettagli implementativi (descrive l'interfaccia di ogni componente del sistema, attraverso più livelli gerarchici di decomposizione);
-		\item \textbf{Definizione di prodotto}: rispetto alla specifica tecnica, decompone l'architettura in moduli ad un livello più fine, affinché ogni modulo possegga dimensione, coesione, complessità e accoppiamento tali per cui i moduli possano essere sviluppati in parallelo dai programmatori;
-		\item \textbf{Glossario}: riporta specifici termini che il gruppo ha ritenuto opportuno definire. I motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”;
-		\item \textbf{Manuale utente}: fornisce all'utente una guida completa ed esaustiva di tutte le funzionalità del prodotto;
-		\item \textbf{Verbali}: insieme di documenti che riporta i verbali delle riunioni del gruppo (sia quelle interne al gruppo sia quelle in presenza del committente), ognuna identificata univocamente dalla data.
+		\item \textbf{Piano di Progetto} --- Dichiara come il gruppo intende gestire le risorse umane e temporali nel corso del progetto.
+		\item \textbf{Piano di Qualifica} --- Descrive come il gruppo affronta il problema di garantire la qualità del prodotto da fornire.
+		\item \textbf{Analisi dei Requisiti} --- Elenca, descrive e traccia i requisiti e i casi d'uso del prodotto da fornire.
+		\item \textbf{Specifica Tecnica} --- Descrive l'architettura logica del sistema da fornire, mostrando ciò che il sistema deve fare senza però fissarne i dettagli implementativi; descrive quindi l'interfaccia di ogni componente del sistema, attraverso più livelli gerarchici di decomposizione.
+		\item \textbf{Definizione di Prodotto} --- Rispetto alla specifica tecnica, decompone l'architettura in moduli ad un livello più fine; la decomposizione si ferma quando i moduli possiedono dimensione, coesione, complessità e accoppiamento tali per cui essi possano essere sviluppati in parallelo dai programmatori.
+		\item \textbf{Glossario} --- Riporta specifici termini che il gruppo ha ritenuto opportuno definire; i motivi che portano ad inserire un termine nel glossario sono la sua potenziale ambiguità e/o la sua natura “tecnica”.
+		\item \textbf{Manuale Utente} --- Fornisce all'utente una guida completa ed esaustiva di tutte le funzionalità del prodotto.
+		\item \textbf{Verbali} --- Insieme di documenti che riporta quei verbali di riunione contenenti informazioni utili per la lettura di documenti esterni.
 	\end{itemize}
 \end{itemize}
+
 Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
 
 \subsubsection{Ambiente di lavoro} I documenti vanno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultato essere il seguente:
@@ -380,13 +381,11 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{Nomi, formati e identificazione} Nome ed estensione dei file sono regolati come segue.
+\subsubsection{Nomi e formati} Nome ed estensione dei file sono regolati come segue.
 \paragraph{Nome} Il nome di un file o di una directory non deve contenere spazi, al fine di facilitare operazioni da riga di comando. Inoltre deve indicare in modo quanto più chiaro e non ambiguo il contenuto del documento stesso. In particolare:
 \begin{itemize}
 	\item I documenti formali da consegnare avranno un nome composto nel formato
-	\begin{center}
-		Nome\_Del\_Documento\_x\_y\_z
-	\end{center}
+		\[Nome\_del\_documento\_x\_y\_z\]
 	dove $x.y.z$ è il numero di versionamento: ogni versione di un documento è identificata univocamente dal nome del file e da una seconda stringa con il numero di versionamento che deve seguire le regole esposte nella sezione \ref{sec:idvers}.
 	\item I file Latex che definiscono delle macro-istruzioni o danno istruzioni di stile devono iniziare con la sigla “hx-” (per rimarcare che sono librerie create dal gruppo).
 \end{itemize}
@@ -404,18 +403,18 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 %	\item data di ultima modifica del documento;
 	\item nome e cognome dei membri del gruppo incaricati della redazione del documento;
 	\item nome e cognome dei membri del gruppo incaricati della verifica del documento;
-	\item destinazione d'uso del documento;
+	\item uso (interno o esterno) del documento;
 	\item destinatari del documento;
 	\item mail del gruppo;
-	\item riferimento al repository pubblico di \gloss{GitHub}.
+	\item riferimento al repository pubblico del codice sorgente su GitHub.
 \end{itemize} 
-Per rispettare tale struttura il redattore del documento deve inserire \\\texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento; a seguire deve inserire i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}; all'interno delle parentesi graffe di ognuno, vanno messe le informazioni corrette per quel documento. Per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}, da inserirsi subito dopo l'istruzione \texttt{\textbackslash begin\{document\}}.
-\paragraph{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca, dal più recente al più datato, i cambiamenti apportati a ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve inserire dopo l'istruzione \texttt{\textbackslash maketitle} il comando \texttt{\textbackslash include\{diario\}} allo scopo di includere un file intitolato \texttt{diario.tex} posto nella stessa cartella del documento. \texttt{diario.tex} deve presentare solo ed esclusivamente una tabella costruita con l'ambiente \texttt{diario}, funzionante allo stesso modo dell'ambiente \texttt{tabular}. Ogni riga della tabella del diario delle modifiche dev'essere così strutturata:
+Per rispettare tale struttura il redattore del documento deve inserire \\\texttt{\textbackslash input\{../../util/hx-ambiente\}} all'inizio del documento; a seguire deve inserire i comandi \texttt{\textbackslash version\{\}}, \texttt{\textbackslash creaz\{\}}, \texttt{\textbackslash author\{\}}, \texttt{\textbackslash supervisor\{\}}, \texttt{\textbackslash uso\{\}}, \texttt{\textbackslash dest\{\}} e \texttt{\textbackslash title\{\}}; all'interno delle parentesi graffe di ognuno, vanno messe le informazioni corrette per quel documento. Per generare il frontespizio, va usato il comando \texttt{\textbackslash maketitle}, che ogni redattore deve inserire subito dopo l'istruzione \texttt{\textbackslash begin\{document\}}.
+\paragraph{Diario delle modifiche} Ogni documento deve includere un diario delle modifiche che elenca, dal più recente al più datato, i cambiamenti apportati a ogni versione rispetto alla precedente, assieme all'autore e alla data di tali cambiamenti. Per questo, il redattore deve inserire dopo l'istruzione \texttt{\textbackslash maketitle} il comando \texttt{\textbackslash include\{diario\}} allo scopo di includere un file intitolato \texttt{diario.tex} posto nella stessa cartella del documento. \texttt{diario.tex} deve presentare solo ed esclusivamente una tabella costruita con l'ambiente \texttt{diario}, funzionante allo stesso modo dell'ambiente \texttt{longtable}. Ogni riga della tabella del diario delle modifiche dev'essere così strutturata:
 \begin{itemize}
- \item Versione: versione del documento dopo la modifica;
- \item Autore e Ruolo: autore della modifica e ruolo che esso ricopre;
- \item Data: data della modifica apportata;
- \item Descrizione: descrizione della modifica apportata.
+ \item \textbf{Versione} del documento dopo la modifica;
+ \item \textbf{Autore} della modifica e \textbf{Ruolo} che esso ricopre;
+ \item \textbf{Data} della modifica apportata;
+ \item \textbf{Descrizione} della modifica apportata.
 \end{itemize}
 \paragraph{Indice dei contenuti} Documenti con più di tre o quattro sezioni devono riportare, all'inizio, un indice dei contenuti. Per questo, dopo l'inclusione del diario delle modifiche va posto il comando \texttt{\textbackslash tableofcontents}.
 \paragraph{Sezionamento} Dev'esserci un'unica struttura gerarchica di sezioni comune a tutta la documentazione: il sezionamento principale si attua con \texttt{\textbackslash section\{\}}; poi si scende nello specifico con \texttt{\textbackslash subsection\{\}}, \texttt{\textbackslash subsubsection\{\}} e infine \texttt{\textbackslash paragraph\{\}}. Questi quattro livelli di sezionamento generano parti di testo che vengono tracciate dall'indice generale e sono quindi atti a contenere parti di testo leggibili “ad accesso casuale” (cioè anche senza dover rileggere parti di testo precedenti); per quelle parti di testo che, pur avendo una propria strutturazione, vanno lette in modo “sequenziale”, il redattore deve invece usare gli elenchi; questi \emph{non} vengono riportati nell'indice generale e possono essere di tre tipi:
@@ -427,9 +426,15 @@ Per rispettare tale struttura il redattore del documento deve inserire \\\texttt
 Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a quelli “in linea” (cioè separati solo da un punto e virgola), per aumentare la chiarezza del testo.
 \paragraph{Intestazione} Ogni pagina dev'essere numerata, tranne il frontespizio. Inoltre, ogni pagina deve recare nome del progetto, logo del gruppo e e-mail di contatto del gruppo.
 
-\subsubsection{Ciclo di vita di un documento} Per ogni documento creato, i redattori stendono una bozza (in Latex) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al responsabile di progetto --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
+\subsubsection{Ciclo di vita di un documento} Sono gli amministratori a creare i documenti: per ogni documento, essi devono:
+\begin{enumerate}
+	\item predisporre e ordinare la cartella che lo conterrà;
+	\item stendere lo scheletro del documento e del relativo diario delle modifiche;
+	\item documentare la creazione del documento nella prima riga del diario delle modifiche.
+\end{enumerate}
+Per ogni documento creato, i redattori stendono una bozza (in Latex) che dev'essere poi controllata dai verificatori; se questi rilevano errori o possibili miglioramenti da apportare, segnalano il fatto al responsabile di progetto --- che provvede a rendicontare le ore di lavoro aggiuntive --- e modificano il documento dopo aver avvisato i redattori di tale documento.
 
-\subsubsection{Termini del glossario} All'interno di un documento, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con il pedice “\ped{$g$}” tramite la macro \texttt{\textbackslash gloss\{termine\}}, per indicare al lettore di ricercarne il significato nel glossario. La segnatura dei termini dev'essere fatta in modo automatizzato, tramite lo script \texttt{gloss.py} nella cartella \texttt{util}.
+\subsubsection{Termini del glossario} All'interno di un documento, la prima occorrenza di un termine che si trovi nel glossario dev'essere evidenziata e segnata con il pedice “\ped{$g$}” tramite la macro \texttt{\textbackslash gloss\{termine\}}, per indicare al lettore di ricercarne il significato nel glossario. I redattori non devono segnare i termini; questo sarà compito dei verificatori, che  devono lanciare lo script \texttt{gloss.py} dalla directory \texttt{util} \emph{prima} di verificare il documento.
 
 \subsubsection{Grammatica e tipografia} Tutti i documenti vanno redatti in italiano, con uno stile chiaro e poco articolato. I documenti in italiano osservano le usuali regole grammaticali, tra cui evidenziamo:
 \begin{itemize}
@@ -438,14 +443,14 @@ Il redattore di un documento è tenuto a preferire gli elenchi appena esposti a 
 	\item Gli elementi di un elenco sono separati da un punto e virgola (quindi iniziano con lettera minuscola), tranne l'ultimo che si conclude con un punto. Nel caso che anche un solo elemento dell'elenco si componga di più frasi separate da segno di punteggiatura forte, tutti gli elementi dell'elenco iniziano per maiuscola e finiscono con un punto. In entrambi i casi, ogni elenco è introdotto dai due punti.
 	\item Le abbreviazioni vanno scritte interamente in maiuscolo e definite nel glossario.
 \end{itemize}
-L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (vedi sezione \ref{sec:ref}).
+L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{termine\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (vedi sezione \ref{sec:ref}).
 
 \subsubsection{Macro-istruzioni Latex}
 Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istruzioni Latex, definite nelle librerie della directory \texttt{util}:
 \begin{itemize}
 	\item \texttt{\textbackslash proj}, il nome del progetto;
 	\item \texttt{\textbackslash hx}, il nome del gruppo;
-	\item \texttt{\textbackslash repo}, l'indirizzo web del repository;
+	\item \texttt{\textbackslash repo}, l'indirizzo web del repository con il codice sorgente;
 	\item \texttt{\textbackslash email}, l'indirizzo e-mail del gruppo;
 	\item \texttt{\textbackslash scopo}, il testo contenenete lo scopo del prodotto (da riportare nell'introduzione di ogni documento);
 	\item \texttt{\textbackslash presgloss}, il testo contenenete le istruzioni per l'uso del glossario (da riportare nell'introduzione di ogni documento);
@@ -459,7 +464,7 @@ Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istru
 	\item \texttt{\textbackslash TV}, \TV;
 	\item \texttt{\textbackslash RC}, \RC;
 	\item \texttt{\textbackslash GP}, \GP;
-	\item \texttt{\textbackslash ZU}, \ZU.
+	\item \texttt{\textbackslash ZU}, \ZU
 \end{itemize}
 
 \subsubsection{Accessibilità per la stampa} Un documento dev'essere fruibile anche se stampato. Per questo, i collegamenti web vanno scritti esplicitamente con \texttt{\textbackslash url\{indirizzo.del.collegamento\}} anziché nascosti da una parola del testo (come in \texttt{\textbackslash href\{indirizzo.del.collegamento\}\{clicca qui\}}). Inoltre, va minimizzato l'uso di colori, al fine di evitare ambiguità se un documento viene stampato in bassa qualità.
@@ -467,11 +472,11 @@ Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istru
 
 
 \subsection{Configurazione} \label{sec:config}
-Definiamo la configurazione di un prodotto come l'insieme delle parti di cui si compone e il modo in cui esse interagiscono fra di loro. Per gestire la configurazione del software va utilizzato il sistema \gloss{Git}, appoggiandosi alla piattaforma GitHub. Abbiamo scelto GitHub non solo per la qualità del servizio fornito ma anche per la natura open-source del progetto \proj, che ci abilita ad usare questa piattaforma gratuitamente. Il repository creato all'indirizzo \repo{} si divide nelle seguenti directory:
-\begin{description}
-	\item[\texttt{doc}] per la documentazione;
-	\item[\texttt{src}] per il codice sorgente.
-\end{description}
+Definiamo la configurazione di un prodotto come l'insieme delle parti di cui si compone e il modo in cui esse interagiscono fra di loro. Per gestire la configurazione del software i membri del gruppo devono utilizzare il sistema \gloss{Git}, appoggiandosi alla piattaforma GitHub. Ogni membro del gruppo dev'essere iscritto a GitHub con la propria e-mail accademica e deve far parte dell'organizzazione \texttt{hivex-unipd} (\url{hivex-unipd.github.io}). Il nostro software si divide nei seguenti due repository pubblici, gestiti dall'organizzazione \texttt{hivex-unipd}:
+\begin{itemize}
+	\item \repo{} per il codice sorgente;
+	\item \repodoc{} per la documentazione.
+\end{itemize}
 
 \subsubsection{Identificazione e versionamento} \label{sec:idvers}
 La configurazione del nostro software si compone dei seguenti elementi:
@@ -486,15 +491,13 @@ Ogni elemento della configurazione (quindi la directory per il codice e il singo
 \paragraph{Cambiamenti non pianificati} I cambiamenti \emph{non} pianificati nascono dall'iniziativa di un membro. Un cambiamento di questo tipo va proposto agli altri membri del gruppo sull'apposito canale \gloss{Slack}; nel caso la maggioranza sia d'accordo e riesca a fornire una motivazione del cambiamento, il responsabile di progetto incarica un amministratore di implementarlo e motivarlo nella documentazione.
 \paragraph{Branching} Nel caso si debba cambiare un elemento della configurazione da cui dipendono altri elementi --- modificando quindi gli elementi dipendenti --- il membro del gruppo che è stato incaricato di tale cambiamento deve creare un branch nel repository. Un branch (ramo) sottosta alle seguenti regole:
 \begin{itemize}
-	\item Il ramo \texttt{master} contiene solo elementi della configurazione approvati dal responsabile di progetto.
-	\item Il ramo \texttt{doc}, figlio di \texttt{master}, contiene documentazione non ancora approvata dal responsabile di progetto.
-	\item Il ramo \texttt{develop}, figlio di \texttt{master}, contiene codice sorgente non ancora approvato dal responsabile di progetto.
+	\item Il ramo principale è il ramo \texttt{master}.
 	\item Il numero di rami va contenuto, affinché Git rimanga uno strumento e non diventi un peso per i membri del gruppo: la creazione di un nuovo ramo può avvenire solo previa autorizzazione del responsabile di progetto, che dovrà valutarne l'utilità.
-	\item Il \emph{merge} di un ramo va sottoposto ad un verificatore (tramite una \emph{merge request}) e va approvato dal responsabile di progetto.
+	\item Il \emph{merge} di un ramo va sottoposto ad un verificatore (tramite una \emph{pull request}) e va approvato dal responsabile di progetto.
 \end{itemize}
 
 \subsubsection{Stato della configurazione}
-Nel ramo \texttt{master} del repository va pubblicato lo stato attuale della configurazione, cioè va riportato il numero di versione dell'ultima approvazione formale dell'\emph{intero} software, a partire dalla versione zero (non ancora approvata).
+Nel ramo \texttt{master} del repository del codice sorgente il responsabile di progetto deve riportare il numero di versione dell'ultima approvazione formale dell'\emph{intero} software, a partire dalla versione zero (non ancora approvata). Il responsabile deve riportare tale numero nel file \texttt{README.md} presente alla base del ramo \texttt{master}. Inoltre, gli amministratori devono predisporre, nello stesso file, un'icona che riporti lo stato del codice sorgente, cioè l'esito delle verifiche effettuate su di esso tramite \gloss{Travis CI}.
 
 
 
@@ -517,7 +520,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\begin{description} %%% DA RIEMPIRE MAN MANO
 		\item[norme sulla documentazione] i documenti devono rispettare tutte le norme descritte nella sezione \ref{sec:doc};
 		\item[completezza] ogni documento deve riportare tutto il necessario per adempiere al suo scopo, riportato nella sua introduzione;
-		\item[sintassi Latex] il documento deve usare le macro-istruzioni definite nei file della directory \texttt{util} del ramo \texttt{doc} del nostro repository;
+		\item[sintassi Latex] il documento deve usare le macro-istruzioni definite nei file della directory \texttt{util} del repository contenente la documentazione;
 		\item[coerenza] le asserzioni di un documento non devono contraddirsi l'un l'altra né contraddire quelle del resto della documentazione.
 	\end{description}
 	\paragraph{Lista di controllo per il codice} Gli elementi da verificare per il codice sorgente sono i seguenti:
@@ -542,94 +545,93 @@ La verifica è un processo analitico che va implementato in due passi successivi
 			\[TV[Codice Requisito]\]
 
 \subsubsection{Metriche}
-	Nel contesto dell'attività di verifica dei processi istanziati nel corso dell'attività di progetto e dell'analisi statica dei relativi prodotti (codice, documenti, design architetturale) vengono in seguito definite delle metriche utili alla misurazione quantitativa degli obiettivi i qualità come definiti nella sezione relativa del documento \PdQ .
+	Nel contesto dell'attività di verifica dei processi istanziati nel corso dell'attività di progetto e dell'analisi statica dei relativi prodotti (codice, documenti, design architetturale) vengono in seguito definite delle metriche utili alla misurazione quantitativa degli obiettivi i qualità come definiti nella sezione relativa del documento \PdQ.
 	Per ognuna delle metriche viene definito il nome, lo strumento utilizzato per effettuare la relativa misurazione e il range o il valore di accettazione per essa stabilito.
-			\normalsize
-\begin{longtable}{|p{0.5\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|}
+	\begin{longtable}{|p{0.4\textwidth}|p{0.24\textwidth}|p{0.3\textwidth}|}
 	\hline 
-	\textbf{Metrica} & \textbf{Range/Valore accettazione} & \textbf{Strumenti di misura} \\ 
+	\textbf{Metrica} & \textbf{Range/Valore accettazione} & \textbf{Strumenti di misura} \\
 	\hline
 	\endhead 
-	Branch Coverage &  80 - 100 &  Travis CI \\ 
+	Branch Coverage &  $[80, 100]$ &  Travis CI \\
 	\hline 
-	Budget Variance &  -25 - 0 &  Asana \\ 
+	Budget Variance &  $[-25, 0]$ &  Asana \\
 	\hline 
-	Complessità ciclomatica per metodo &  0 - 10 &  CodePro Analytix \\ 
+	Complessità ciclomatica per metodo &  $[0, 10]$ &  CodePro Analytix \\
 	\hline 
-	Copertura requisiti desiderabili &  50 - 100 & PragmaDB (funzionalità custom) \\ 
+	Copertura requisiti desiderabili &  $[50, 100]$ & PragmaDB (funzionalità custom) \\
 	\hline 
-	Copertura dei requisiti obbligatori &  100 & PragmaDB (funzionalità custom) \\ 
+	Copertura dei requisiti obbligatori &  $100$ & PragmaDB (funzionalità custom) \\
 	\hline 
-	Distanza dalla sequenza principale normalizzata &  0.0 - 0.7 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Distanza dalla sequenza principale normalizzata &  $[0.0, 0.7]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Grado di accoppiamento afferente per package &  0 - 39 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Grado di accoppiamento afferente per package &  $[0, 39]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Grado di accoppiamento efferente per package &  0 - 16 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Grado di accoppiamento efferente per package &  $[0, 16]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Indice di Gulpease &  40 - 100 & Script in Perl \\ 
+	Indice di Gulpease &  $[40, 100]$ & Script in Perl \\
 	\hline 
-	Instabilità &  0.0 - 0.4 e 0.6 - 1.0 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Instabilità &  $[0.0, 0.4] \cup [0.6, 1.0]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Numero di campi dati per classe &  0 - 20 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Numero di campi dati per classe &  $[0, 20]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Numero di figli diretti &  0 - 4 &  SDMetrics per la progettazione e CodePro Analytix per la codifica \\ 
+	Numero di figli diretti &  $[0, 4]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Numero di linee di codice per metodo &  0 - 40 &  CodePro Analytix \\ 
+	Numero di linee di codice per metodo &  $[0, 40]$ &  CodePro Analytix \\
 	\hline 
-	Numero di metodi per classe &  0 - 20 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Numero di metodi per classe &  $[0, 20]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Numero di parametri per metodo &  0 - 8 &  CodePro Analytix \\ 
+	Numero di parametri per metodo &  $[0, 8]$ &  CodePro Analytix \\
 	\hline 
-	Numero di tipi per package &  0 - 30 &  CodePro Analytix per la codifica e SDMetrics per la progettazione \\ 
+	Numero di tipi per package &  $[0, 30]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Numero di violazioni della completezza architetturale di alta importanza &  0 &  SDMetrics \\ 
+	Numero di violazioni della completezza architetturale di alta importanza &  $0$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni della completezza architetturale di media importanza &  0 - 5 &  SDMetrics \\ 
+	Numero di violazioni della completezza architetturale di media importanza &  $[0, 5]$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni della completezza architetturale di bassa importanza &  0 - 10 &  SDMetrics \\ 
+	Numero di violazioni della completezza architetturale di bassa importanza &  $[0, 10]$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni della correttezza architetturale di alta importanza &  0 &  SDMetrics \\ 
+	Numero di violazioni della correttezza architetturale di alta importanza &  $0$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni della correttezza architetturale di media importanza &  0 - 5 &  SDMetrics \\ 
+	Numero di violazioni della correttezza architetturale di media importanza &  $[0, 5]$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni della correttezza architetturale di bassa importanza &  0 - 10 &  SDMetrics \\ 
+	Numero di violazioni della correttezza architetturale di bassa importanza &  $[0, 10]$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni dello stile architetturale di alta importanza &  0 &  SDMetrics \\ 
+	Numero di violazioni dello stile architetturale di alta importanza &  $0$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni dello stile architetturale di media importanza &  0 - 5 &  SDMetrics \\ 
+	Numero di violazioni dello stile architetturale di media importanza &  $[0, 5]$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni dello stile architetturale di bassa importanza &  0 - 10 &  SDMetrics \\ 
+	Numero di violazioni dello stile architetturale di bassa importanza &  $[0, 10]$ &  SDMetrics \\
 	\hline 
-	Numero di violazioni di alta importanza delle norme di codifica &  0 &  CodePro Analytix \\ 
+	Numero di violazioni di alta importanza delle norme di codifica &  $0$ &  CodePro Analytix \\
 	\hline 
-	Numero di violazioni di media importanza delle norme di codifica &  0 - 5 &  CodePro Analytix \\ 
+	Numero di violazioni di media importanza delle norme di codifica &  $[0, 5]$ &  CodePro Analytix \\
 	\hline 
-	Numero di violazioni di bassa importanza delle norme di codifica &  0 - 10 &  CodePro Analytix \\ 
+	Numero di violazioni di bassa importanza delle norme di codifica &  $[0, 10]$ &  CodePro Analytix \\
 	\hline 
-	Percentuale di test di unità eseguiti &  90 - 100 &  Travis CI \\ 
+	Percentuale di test di unità eseguiti &  $[90, 100]$ &  Travis CI \\
 	\hline 
-	Percentuale di test di integrazione eseguiti &  90 - 100 &  Travis CI \\ 
+	Percentuale di test di integrazione eseguiti &  $[90, 100]$ &  Travis CI \\
 	\hline 
-	Percentuale di test di sistema eseguiti &  90 - 100 &  Travis CI \\ 
+	Percentuale di test di sistema eseguiti &  $[90, 100]$ &  Travis CI \\
 	\hline 
-	Percentuale di test di validazione eseguiti &  90 - 100 & Travis CI \\ 
+	Percentuale di test di validazione eseguiti &  $[90, 100]$ & Travis CI \\
 	\hline 
-	Percentuale di test superati &  90 - 100 & Travis CI \\ 
+	Percentuale di test superati &  $[90, 100]$ & Travis CI \\
 	\hline 
-	Percentuale linee di commento su linee di codice &  20 - 40 &  CodePro Analytix \\ 
+	Percentuale linee di commento su linee di codice &  $[20, 40]$ &  CodePro Analytix \\
 	\hline 
-	Profondità di annidamento dei blocchi &  0 - 8 &  CodePro Analytix \\ 
+	Profondità di annidamento dei blocchi &  $[0, 8]$ &  CodePro Analytix \\
 	\hline 
-	Profondità nella gerarchia &  0 - 4 &  SDMetrics per la progettazione e CodePro Analytix per la codifica \\ 
+	Profondità nella gerarchia &  $[0, 4]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
 	\hline 
-	Statement Coverage &  80 - 100 &  Travis CI \\ 
+	Statement Coverage &  $[80, 100]$ &  Travis CI \\
 	\hline 
-	Schedule Variance &  -25 - 0 &  Asana \\ 
+	Schedule Variance &  $[-25, 0]$ &  Asana \\
 	\hline 
-	Validazione W3C &  0 - 20 &  Il validatore W3C disponibile all'indirizzo \url{validator.w3.org/} \\ 
+	Validazione W3C &  $[0, 20]$ &  validatore W3C (disponibile all'indirizzo \url{validator.w3.org}) \\
 	\hline 
 	\caption[Metriche]{Metriche}
-	\label{tabella:metriche}
+	\label{tab:metriche}
 	\end{longtable}
 
 	\subsubsection{Strumenti}
@@ -657,6 +659,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 			\item intergazione con Eclipse.
 		\end{itemize}
 
+
 \subsection{Validazione}
 Ogni verifica di una parte della configurazione dev'essere vagliata dal responsabile di progetto; per questo, il responsabile deve controllare i risultati dei test. Egli può approvarli oppure chiedere ai verificatori di ripeterli. L'approvazione determina:
 \begin{itemize}
@@ -673,6 +676,7 @@ Ogni verifica di una parte della configurazione dev'essere vagliata dal responsa
 
 \section{Processi organizzativi} \label{sec:organizzativi}
 I processi normati in questa sezione servono all'organizzazione che li istanzia a progetto, cioè servono al gruppo.
+
 
 \subsection{Gestione di progetto}
 
@@ -891,13 +895,16 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 
 \section{Definizione delle metriche}
 
+
 \subsection{Branch Coverage}
 Tale metrica indica in percentuale il numero di cammini decisionali percorsi in ambito di testing rispetto al totale presente all'interno del codice. A differenza dello \gloss{Statement} Coverage che si limita a verificare la copertura di istruzioni, nel momento in cui tutti i rami decisionali sono coperti tale metrica assicura che nessuno di essi porti ad errori o situazioni inconsistenti.
+
 
 \subsection{Budget Variance}
 Tale metrica indica quanto il costo di una particolare attività di progetto si discosta rispetto alla pianificazione originaria definita nel documento \PdP. 
 
 Viene calcolata come la differenza fra il costo preventivato per un'attività e il costo effettivamente sostenuto per la stessa: un valore di \emph{budget variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più risorse di quanto pianificato: se pari a zero indica invece che essa è perfettamente in linea con i costi previsti mentre se è addirittura strettamente positivo indica che sta procedendo con più efficienza di quanto considerato.
+
 
 \subsection{Complessità ciclomatica per metodo}
 La metrica rappresenta la complessità di funzioni e metodi di un programma. Essa esprime il numero di cammini linearmente indipendenti presenti all'interno del codice del metodo o della funzione in esame. 
@@ -914,6 +921,7 @@ dove:
 \end{itemize}
 Alti valori di complessità ciclomatica sottintendono una ridotta manutenibilità del codice. Valori bassi di complessità ciclomatica potrebbero delineare una scarsa efficienza dei metodi.
 
+
 \subsection{Copertura dei requisiti desiderabili}
 Tale metrica permette di verificare in ogni momento lo stato dei requisiti desiderabili coperti. Essa rappresenta il rapporto tra i requisiti desiderabili soddisfatti e il numero totale di requisiti desiderabili ricavati.
 
@@ -922,6 +930,7 @@ La misura viene effettuata nel modo seguente:
 	\frac{~numero~requisiti~desiderabili~soddisfatti}{~numero~requisiti~desiderabili~totali}\times{100}
 \end{equation}
 
+
 \subsection{Copertura dei requisiti obbligatori}
 Questa metrica permette di verificare in ogni momento lo stato dei requisiti obbligatori coperti. Essa rappresenta il rapporto tra i requisiti obbligatori soddisfatti e il numero totale di requisiti obbligatori ricavati.
 
@@ -929,6 +938,7 @@ La misura viene effettuata nel modo seguente:
 \begin{equation}
 	\frac{~numero~requisiti~obbligatori~soddisfatti}{~numero~requisiti~obbligatori~totali}\times{100}
 \end{equation}
+
 
 \subsection{Distanza dalla sequenza principale normalizzata} 
 Tale metrica di package è basata sulla convinzione che il grado di astrattezza e stabilità di un package siano strettamente correlati ed è una misura derivata di astrattezza ($A$), ovvero la percentuale di classi astratte presenti nel package in esame, e instabilità ($I$). 
@@ -940,6 +950,7 @@ La misura $D$ della distanza dalla sequenza principale viene effettuata nel modo
 	D = | A + I - 1 | 
 \end{equation}
 I valori variano da 0 ad 1 dove 0 indica che il package sta direttamente sulla sequenza principale, mentre 1 indica che il package è massimamente distante da essa. Qualsiasi package piuttosto distante dal valore ideale 0 dovrebbe essere riesaminato e ristrutturato in modo tale da renderlo maggiormente riusabile e meno suscettibile ai cambiamenti.
+
 
 \subsection{Grado di accoppiamento afferente per package}
 Tale metrica indica per un particolare package il numero di classi ed interfacce al suo esterno che dipendono da classi ed interfacce all'interno del package stesso.
@@ -955,12 +966,14 @@ In particolare, c'è una dipendenza tra una classe o interfaccia $C$ verso una c
 \end{itemize}
 Un alto valore di accoppiamento efferente è caratteristico dei package di utilità i cui servizi sono ampiamente sfruttati e pertanto non è necessariamente indicativo di una cattiva progettazione. Tuttavia bisogna considerare che package con un alto grado di accoppiamento afferente devono avere un buon grado di stabilità, dal momento che futuri cambiamenti potrebbero avere un notevole impatto a livello dell'intera applicazione. Inoltre si può considerare che un alto numero di dipendenze entranti può essere considerato accettabile se il package è relativamente "astratto", meno se esso è invece più "concreto".
 
+
 \subsection{Grado di accoppiamento efferente per package}
 Tale metrica indica per un particolare package il numero di classi ed interfacce contenute al suo interno che dipendono da classi ed interfacce all'esterno del package stesso. Le dipendenze considerate sono quelle elencate nella sezione relativa al Grado di accoppiamento afferente di un package.
 
 Un alto valore di accoppiamento efferente può indicare che il package non ha una responsabilità ben definita e circoscritta e può anche indicare che è potenzialmente instabile dal momento che esso dipende dalla stabilità di tutti i tipi a cui risulta accoppiato.
 
 L'accoppiamento efferente può essere ridotto decomponendo le classi maggiormente accoppiate del package in sottoclassi.
+
 
 \subsection{Indice di Gulpease}
 Tale metrica, tarata sulla lingua italiana, misura la qualità di un documento andando a stimarne il grado di leggibilità. Rispetto ad altri indici equivalenti per campo di applicazione ha il vantaggio di esprimere la lunghezza media delle parole in lettere anziché in sillabe --- cosa che ne consente una implementazione automatizzata fortemente affidabile. Tale indice, inoltre, considera principalmente due variabili linguistiche: la lunghezza delle parole e la lunghezza delle frasi in rapporto al numero delle lettere.
@@ -976,6 +989,7 @@ Il risultato è un valore compreso nell'intervallo [0,100], dove il valore 100 i
 	\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.	
 \end{itemize}
 Si potrebbe osservare che i valori indicati nei range ottimali e di accettazione siano relativamente bassi; tuttavia non bisogna dimenticare che la documentazione prodotta relativamente al progetto corrente è inevitabilmente ricca di terminologie tecniche ed è rivolta a lettori con un significativo grado di istruzione e una certa familiarità con gli ambiti affrontati.
+
 
 \subsection{Instabilità}
 Tale metrica misura il grado di instabilità di un particolare package.
@@ -994,59 +1008,78 @@ I valori variano da 0 a 1 dove 0 indica un package massimamente stabile e 1 un p
 
 Tuttavia bisogna considerare che non tutti i package devono essere completamente stabili o completamente instabili. Invece, ogni package dovrebbe essere intenzionalmente progettato per essere il più possibile stabile o instabile.
 	
+
 \subsection{Numero di campi dati per classe}
 Tale metrica indica il numero di campi dati dichiarati all'interno di una particolare classe o interfaccia. Maggiore è il numero di campi dati che una classe o un interfaccia contiene, maggiore è il numero di problemi che possono verificarsi quando essa viene estesa o implementata: un \emph{override} indesiderato di campi dati protetti o pubblici può provocare malfunzionamenti del programma. Un numero eccessivo di attributi all'interno di una classe, inoltre, può essere indice di mancanza di coesione nelle responsabilità ad essa assegnate.
+
 
 \subsection{Numero di figli diretti}
 Questa metrica misura il numero di sottoclassi dirette di una particolare superclasse. Il valore di tale metrica indica approssimativamente il grado di riuso di una componente elementare dell'applicazione. C'è inoltre da considerarsi che maggiore è il numero di figli diretti di una classe, maggiore è la responsabilità di chi ha il compito di manutenere tale classe per non impattare sul comportamento dei figli. Pertanto è più difficile modificare la classe ed essa richiede maggiore attenzione in fatto di testing.
 
+
 \subsection{Numero di linee di codice per metodo}
 La metrica misura il numero di linee di codice di un particolare metodo del programma. In particolare una linea di codice è considerata tale se contiene caratteri diversi da commenti e spaziature. Avere un numero di linee di codice per metodo relativamente basso permette di tenere un livello di manutenibilità accettabile. Un metodo eccessivamente articolato può risultare di contro difficile da comprendere e modificare e pertanto potrebbe essere necessario fattorizzarlo in più metodi con responsabilità meglio circoscritte e definite.
+
 
 \subsection{Numero di metodi per classe}
 Tale metrica indica il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione. Vengono esclusi dal conteggio i metodi \emph{\gloss{setter}} e \emph{\gloss{getter}}.
 
+
 \subsection{Numero di parametri per metodo}
 La metrica è la misura del numero totale di parametri formali in ingresso di un particolare metodo. Se il numero di parametri è elevato, lo \gloss{stack} del programma può essere riempito rapidamente in caso di multiple chiamate innestate e il metodo può risultare difficilmente comprensibile e mantenibile; inoltre ciò potrebbe indicare un metodo troppo complesso e non efficacemente suddiviso in sotto-metodi. In generale, inoltre, codice sorgente con invocazioni di metodi con una lunga lista di parametri è maggiormente soggetto all'errore.
+
 
 \subsection{Numero di tipi per package}
 La metrica misura il numero di tipi (classi ed interfacce) contenuti all'interno di un particolare package. Un valore elevato di tale metrica può essere indice di mancanza di coesione nelle responsabilità ad esso assegnate e pertanto di un basso livello di coesione funzionale, cosa che si ripercuote negativamente sulla comprensibilità, riusabilità e manutenibilità del package stesso. 
 
+
 \subsection{Numero di violazioni della completezza architetturale di alta importanza}
 La metrica misura il numero di violazioni della completezza architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
+
 
 \subsection{Numero di violazioni della completezza architetturale di media importanza}
 La metrica misura il numero di violazioni della completezza architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
 
+
 \subsection{Numero di violazioni della completezza architetturale di bassa importanza}
 La metrica misura il numero di violazioni della completezza architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
+
 
 \subsection{Numero di violazioni della correttezza architetturale di alta importanza}
 La metrica misura il numero di violazioni della correttezza architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
 
+
 \subsection{Numero di violazioni della correttezza architetturale di media importanza}
 La metrica misura il numero di violazioni della correttezza architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
+
 
 \subsection{Numero di violazioni della correttezza architetturale di bassa importanza}
 La metrica misura il numero di violazioni della correttezza architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
 
+
 \subsection{Numero di violazioni dello stile architetturale di alta importanza}
 La metrica misura il numero di violazioni dello stile architetturale di alta importanza segnalate dal programma SDMetrics. Una violazione di tali regole costituisce una pratica di progettazione non legale o comunque fortemente sconsigliata e con un forte impatto negativo sulla qualità del sistema. Il problema dovrebbe essere risolto in ogni circostanza.
+
 
 \subsection{Numero di violazioni dello stile architetturale di media importanza}
 La metrica misura il numero di violazioni dello stile architetturale di media importanza segnalate dal programma SDMetrics. Una violazione di tali regole può impattare negativamente sulla qualità del sistema. Il problema dovrebbe essere risolto se non vi è alcuna giustificazione per la violazione.
 
+
 \subsection{Numero di violazioni dello stile architetturale di bassa importanza}
 La metrica misura il numero di violazioni dello stile architetturale di bassa importanza segnalate dal programma SDMetrics. Una violazione di tali regole non ha un particolare impatto negativo sulle qualità del sistema, ma risolverla porta sicuramente ad una maggiore qualità dell'architettura generale.
+
 
 \subsection{Numero di violazioni di alta importanza delle norme di codifica}
 La metrica misura il numero di violazioni di alta importanza delle norme di codifica segnalate dalla componente Audit del plug-in Eclipse CodePro Analytix. Un codice che non rispetta tali regole risulta difficilmente comprensibile e leggibile, poco coeso ed uniforme nella struttura e difficilmente mantenibile in futuro.
 
+
 \subsection{Numero di violazioni di media importanza delle norme di codifica}
 La metrica misura il numero di violazioni di media importanza delle norme di codifica segnalate dalla componente Audit del plug-in Eclipse CodePro Analytix. Un codice che non rispetta tali regole risulta difficilmente comprensibile e leggibile, poco coeso ed uniforme nella struttura e difficilmente mantenibile in futuro.
 
+
 \subsection{Numero di violazioni di bassa importanza delle norme di codifica}
 La metrica misura il numero di violazioni di bassa importanza delle norme di codifica segnalate dalla componente Audit del plug-in Eclipse CodePro Analytix. Un codice che non rispetta tali regole risulta difficilmente comprensibile e leggibile, poco coeso ed uniforme nella struttura e difficilmente mantenibile in futuro.
+
 
 \subsection{Percentuale di test di unità eseguiti}
 Tale metrica indica la percentuale di test di unità eseguiti.
@@ -1056,6 +1089,7 @@ La misura viene effettuata nel modo seguente:
 	\frac{numero~test~unità~eseguiti}{numero~test~unità~pianificati}\times100
 \end{equation}
 
+
 \subsection{Percentuale di test di integrazione eseguiti}
 Tale metrica indica la percentuale di test di integrazione eseguiti.
 
@@ -1063,6 +1097,7 @@ La misura viene effettuata nel modo seguente:
 \begin{equation}
 	\frac{numero~test~integrazione~eseguiti}{numero~test~integrazione~pianificati}\times100
 \end{equation}
+
 
 \subsection{Percentuale di test di sistema eseguiti}
 Tale metrica indica la percentuale di test di sistema eseguiti.
@@ -1072,6 +1107,7 @@ La misura viene effettuata nel modo seguente:
 	\frac{numero~test~sistema~eseguiti}{numero~test~sistema~pianificati}\times100
 \end{equation}
 
+
 \subsection{Percentuale di test di validazione eseguiti}
 Tale metrica indica la percentuale di test di validazione eseguiti.
 
@@ -1079,6 +1115,7 @@ La misura viene effettuata nel modo seguente:
 \begin{equation}
 	\frac{numero~test~validazione~eseguiti}{numero~test~validazione~pianificati}\times100
 \end{equation}
+
 
 \subsection{Percentuale di test superati}
 Tale metrica permette di verificare in ogni momento la percentuale di test superati.
@@ -1088,6 +1125,7 @@ La misura viene effettuata nel modo seguente:
 	\frac{~numero~test~eseguiti}{~numero~test~pianificati}\times{100}
 \end{equation}
 
+
 \subsection{Percentuale linee di commento su linee di codice}
 Tale metrica misura il rapporto fra il numero di commenti inseriti all'interno del programma e il numero totale di linee di codice. Essa risulta utile per stimare la manutenibilità del codice dal momento che un'adeguata documentazione del codice ne permette una maggiore e più rapida comprensione.
 
@@ -1095,8 +1133,10 @@ Se la densità di commenti, per esempio, scende al di sotto di un certo valore s
 
 Un valore molto alto di tale metrica, tuttavia, può non essere considerato positivamente: una commento eccessivo del codice può risultare eccessivamente pedante, ridondante e frustrante nella sua lettura.
 
+
 \subsection{Profondità di annidamento dei blocchi}
 Tale metrica misura il massimo numero di annidamento di blocchi di scoping all'interno di un particolare metodo. Metodi con un numero eccessivo di blocchi annidati possono risultare sono difficili da comprendere e portano potenzialmente all'errore.
+
 
 \subsection{Profondità nella gerarchia}
 Questa metrica misura il livello di profondità di una classe all'interno della gerarchia a cui essa appartiene. 
@@ -1107,8 +1147,10 @@ Più una classe è posizionata in profondità all'interno di una gerarchia, magg
 
 Pertanto se un valore troppo alto di tale metrica è indice di un grado di complessità dell'architettura da limitarsi, un valore eccessivamente basso sottolinea un potenziale sottouso dei vantaggi dell'architettura orientata agli oggetti.
 
+
 \subsection{Statement Coverage}
 La metrica indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi getter e setter.
+
 
 \subsection{Schedule Variance}
 Tale metrica indica di quanto le macro-attività di progetto si discostano temporalmente rispetto alla pianificazione originaria definita nel documento \PdP . 
@@ -1116,6 +1158,7 @@ Tale metrica indica di quanto le macro-attività di progetto si discostano tempo
 Viene calcolata come la differenza fra la data pianificata di fine di un'attività e la data reale di fine di quell'attività: un valore di \emph{schedule variance} minore di zero indica che l'attività di progetto considerata sta richiedendo più tempo di quanto pianificato; se pari a zero indica invece che essa è perfettamente in linea con le tempistiche previste mentre se è addirittura strettamente positivo indica che sta procedendo più speditamente di quanto considerato. 
 
 Da sottolineare che l'utilizzo di periodi di slack aumenta la possibilità che la \emph{schedule variance} assuma valori positivi.
+
 
 \subsection{Validazione W3C}
 La metrica indica il numero di errori riscontrati dal validatore W3C nell'analisi delle pagine HTML5 del programma.
