@@ -358,7 +358,8 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 		\item \texttt{hx-front.sty} --- frontespizio di ogni documento;
 		\item \texttt{hx-macro.sty} --- macro-istruzioni utili ai redattori;
 		\item \texttt{hx-vers.sty} --- macro-istruzioni per ottenere il nome dell'ultima versione di ogni documento;
-		\item \texttt{gloss.py} --- script che segna la prima occorrenza di ogni termine da glossario in ogni documento.
+		\item \texttt{gloss.py} --- script che segna la prima occorrenza di ogni termine da glossario in ogni documento;
+		\item \texttt{gloss.py} --- script che aggiorna le versioni dei documenti presenti in \texttt{hx-vers.sty}.
 	\end{itemize}
 	\item \texttt{Interni} contiene cartelle con i documenti ad uso interno del gruppo:
 	\begin{itemize}
@@ -371,7 +372,10 @@ Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazio
 		\item \texttt{Analisi_dei_requisiti};
 		\item \texttt{Glossario};
 		\item \texttt{Piano_di_progetto};
-		\item \texttt{Piano_di_qualifica}.
+		\item \texttt{Piano_di_qualifica};
+		\item \texttt{Specifica_tecnica};
+		\item \texttt{Definizione_di_prodotto};
+		\item \texttt{Verbali}.
 	\end{itemize}
 \end{itemize}
 
@@ -778,6 +782,7 @@ Il gruppo ha quindi adottato i servizi offerti da Asana, accoppiato a InstaGantt
 	\item[ore effettive] (da InstaGantt)
 	\item[tag] per tematizzare il task.
 \end{description}
+
 \paragraph{Organizzazione dei task} Si è adottato il modello \emph{Board}: esso permette di raggruppare i task in colonne, in modo da avere una visione immediata dello stato di ogni documento o codice che è necessario produrre.
 Attualmente sono state create le seguenti colonne:
 \begin{description}
@@ -798,6 +803,7 @@ Attualmente sono state create le seguenti colonne:
 	\item[Manuale Utente] documento richiesto;
 	\item[Test di sistema] attività di verifica da effettuare.
 \end{description}
+
 \paragraph{Diagrammi di pianificazione}
 InstaGantt permette di visualizzare i vari task in un asse temporale, producendo così un \gloss{diagramma di Gantt}. 
 Vanno rispettate le seguenti convenzioni:
@@ -820,24 +826,26 @@ La sezione \emph{Workload} in InstaGantt permette di visualizzare i vari task as
 
 \subsubsection{Riunioni}
 Spetta al responsabile di progetto convocare le riunioni quando lo ritiene necessario. È possibile da una qualsiasi persona del team fare richiesta di una riunione al responsabile di progetto. Quest'ultimo poi ha il compito di decidere se è utile svolgerla. Per informare i membri della riunione si utilizza la piattaforma di comunicazione Slack,proponendo una data, un luogo, l'ordine del giorno e chi ha chiesto la riunione. I membri del gruppo devono quindi rispondere tempestivamente per poter confermare la presenza.
+
 \paragraph{Riunioni interne} Viene nominato un segretario ad inizio di ogni riunione che ha il compito di scrivere la minuta dell'incontro. A fine riunione deve inoltre redigere un verbale,il quale viene caricato nella repository insieme agli altri documenti per essere disponibile per la lettura ai membri. I partecipanti devono tenere un comportamento adeguato a favore la discussione dell'ordine del giorno.
-\paragraph{Riunioni esterne} Il responsabile di progetto fissa le riunioni esterne contattando il committente tramite posta elettronica,accordandosi per la data e il luogo da poi riferire ai membri del gruppo.
-Ad ogni riunione viene chiesto al committente di poter registrare la riunione in modo da poter redigere un verbale accurato e dare la possibilità di riascoltarla anche ad eventuali membri non presenti.Viene nominato anche qui un segretario che scriverà il verbale. Nel caso non fosse stato possibile registrare la riunione il verbale sarà redatto da tutto il team in modo da tralasciare il meno possibile contenuti.
-\paragraph{Verbali} I verbali che vengono redatti dal segretario (o dal tutto il team in mancanza di registrazione audio) riassumono in modo sintetico ma preciso cosa o stato discusso nella riunione. In particolare specificano:
+
+\paragraph{Riunioni esterne} Il responsabile di progetto fissa le riunioni esterne contattando il committente tramite posta elettronica,accordandosi per la data e il luogo da poi riferire ai membri del gruppo. Ad ogni riunione viene chiesto al committente di poter registrare la riunione in modo da poter redigere un verbale accurato e dare la possibilità di riascoltarla anche ad eventuali membri non presenti.Viene nominato anche qui un segretario che scriverà il verbale. Nel caso non fosse stato possibile registrare la riunione il verbale sarà redatto da tutto il team in modo da tralasciare il meno possibile contenuti.
+
+\paragraph{Verbali} I verbali vengono redatti dal segretario (o dal tutto il team, in mancanza di registrazione audio); ogni verbale riassume in modo sintetico ma preciso cosa è stato discusso nella riunione. In particolare specifica:
 \begin{itemize}
-	\item orario e giorno in cui si è svolta la riunione;
-	\item durata della riunione;
-	\item luogo dell'incontro;
-	\item oggetto della riunione,ossia l'ordine del giorno;
-	\item il segretario;
-	\item i partecipanti alla riunione.
+	\item \textbf{giorno} in cui si è svolta la riunione (nel titolo);
+	\item \textbf{orario} di inizio e fine riunione;
+	\item \textbf{durata} della riunione;
+	\item \textbf{luogo} dell'incontro;
+	\item \textbf{oggetto} della riunione, ossia l'ordine del giorno;
+	\item \textbf{segretario};
+	\item \textbf{partecipanti} alla riunione.
 \end{itemize}
-Sotto poi è presente un riassunto esaustivo riguardo le decisione prese rispetto agli argomenti trattati,eventuali dubbi e problemi ed eventuali compiti assegnati.
+Dopo aver specificato i suddetti punti, il verbale espone le decisioni prese rispetto agli argomenti trattati, eventuali dubbi o problemi ed eventuali compiti assegnati. Il redattore del verbale deve esporre le decisioni in forma di lista numerata, cosicché ogni decisione possa essere tracciabile; ogni decisione presa in riunione è identificata dal giorno della riunione e dal numero della decisione stessa.
 
 
 \subsubsection{Comunicazioni esterne}
-Per le comunicazioni esterne il gruppo ha creato un indirizzo di posta elettronica (\email).
-È compito del responsabile di progetto comunicare con il committente e il proponente e informare i restanti membri di cosa si è discusso.
+Per le comunicazioni esterne il gruppo ha creato un indirizzo di posta elettronica (\email). È compito del responsabile di progetto comunicare con il committente e il proponente e informare i restanti membri di cosa si è discusso.
 
 
 \subsubsection{Comunicazione intra-gruppo} 
