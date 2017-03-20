@@ -18,9 +18,17 @@
 \include{diario}
 \tableofcontents
 
+
+
+
+
+%%%%%%%%%%%%%%%%
+%%  Introduzione
+%%%%%%%%%%%%%%%%
+
 \section{Introduzione}
 	\subsection{Scopo del documento}
-	Questo documento ha lo scopo di fissare le strategie di verifica e validazione che il gruppo \hx{} ha deciso di adottare per perseguire gli obiettivi di qualità di processo e di prodotto relativi al progetto \proj{}. Il presente documento si propone di descrivere l'approccio del gruppo alle diverse fasi di verifica per poter ottenere il miglior risultato auspicabile in termini di qualità. Per perseguire tali obiettivi e risultati occorre verificare continuamente le attività svolte in modo da individuare e correggere velocemente le anomalie, minimizzando così l'utilizzo di risorse e allo stesso tempo mantenendo la correttezza del prodotto.
+	Questo documento ha lo scopo di fissare le strategie di verifica e validazione che il gruppo \hx{} ha deciso di adottare per perseguire gli obiettivi di qualità di processo e di prodotto relativi al progetto \proj. Il presente documento si propone di descrivere l'approccio del gruppo al processo di verifica per poter ottenere il miglior risultato auspicabile in termini di qualità. Per perseguire tali obiettivi e risultati occorre verificare continuamente le attività svolte in modo da individuare e correggere velocemente le anomalie, minimizzando così l'utilizzo di risorse e allo stesso tempo mantenendo la correttezza del prodotto.
 
 	\subsection{Scopo del prodotto}
 	\scopo
@@ -61,19 +69,27 @@
 
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%  Visione generale
+%%%%%%%%%%%%%%%%%%%%
+
 \section{Visione generale della strategia di gestione della qualità}
 	\subsection{Obiettivi di qualità}
-	In questa sezione vengono illustrati in modo quanto più completo ed esaustivo gli obiettivi di qualità che il gruppo intende perseguire nel corso 	dello svolgimento del progetto, opportunamente declinati nelle due sottosezioni Qualità di processo e Qualità di prodotto.
+	In questa sezione vengono illustrati in modo quanto più completo ed esaustivo gli obiettivi di qualità che il gruppo intende perseguire nel corso 	dello svolgimento del progetto, opportunamente declinati nelle due sottosezioni \nameref{sec:qualprocesso} e \nameref{sec:qualprodotto}.
 
-	\subsection{Qualità di processo}
-	È indubbio che la qualità di un prodotto software non possa in alcun modo prescindere dalla qualità dei diversi processi che concorrono nel definirlo e 	che anzi ne sia intrinsecamente dipendente. Con tale consapevolezza il gruppo ha scelto come riferimento per la valutazione della qualità dei propri processi lo standard ISO/IEC 15504 altresì conosciuto sotto l'acronimo di \gloss{SPICE}.
+	\subsection{Qualità di processo} \label{sec:qualprocesso}
+	È indubbio che la qualità di un prodotto software non possa in alcun modo prescindere dalla qualità dei diversi processi che concorrono nel definirlo e 	che, anzi, ne sia intrinsecamente dipendente. Con tale consapevolezza il gruppo ha scelto come riferimento per la valutazione della qualità dei propri processi lo standard ISO/IEC 15504, altresì conosciuto sotto l'acronimo di \gloss{SPICE}.
 		\subsubsection{Procedure per il controllo della qualità di processo}
-		L'adozione dello standard SPICE, in combinazione con l'approccio automigliorativo del ciclo PDCA, è alla base della strategia prevista del gruppo per garantire una sempre maggiore qualità dei processi in atto e dei prodotti risultanti.
-		\\Il documento \PdP stabilisce gli obiettivi del gruppo in relazione alla pianificazione in dettaglio dei vari processi e alla ripartizione delle risorse ad essi assegnate per un efficace svolgimento. Altri obiettivi di qualità sono illustrati successivamente in questo documento.
-		\\Ad ogni obiettivo di qualità sono associate una o più metriche allo scopo di rendere misurabile la valutazione del suo raggiungimento o meno; ad ogni metrica, inoltre, si riferisce un valore o un range che stabilisce in senso strategico l'obiettivo qualitativo che il team si prefigge di raggiungere. Da sottolineare che anche le metriche relative alla qualità del prodotto software costituiscono un'indicazione preziosa per valutare la qualità dei processi in atto: infatti un prodotto di bassa qualità è indicativo di un processo da migliorarsi.
+		L'adozione dello standard SPICE, in combinazione con l'approccio automigliorativo del ciclo PDCA, è alla base della strategia prevista dal gruppo per garantire una sempre maggiore qualità dei processi in atto e dei prodotti risultanti.
+
+		Il documento \PdP{} stabilisce gli obiettivi del gruppo in relazione alla pianificazione in dettaglio dei vari processi e alla ripartizione delle risorse ad essi assegnate per un efficace svolgimento. Altri obiettivi di qualità sono illustrati successivamente in questo documento.
+
+		Ad ogni obiettivo di qualità sono associate una o più metriche allo scopo di rendere misurabile la valutazione del suo raggiungimento o meno; ad ogni metrica, inoltre, si riferisce un valore o un range che stabilisce in senso strategico l'obiettivo qualitativo che il team si prefigge di raggiungere. Da sottolineare che anche le metriche relative alla qualità del prodotto software costituiscono un'indicazione preziosa per valutare la qualità dei processi in atto: infatti un prodotto di bassa qualità è indicativo di un processo da migliorarsi.
 
 		\subsubsection{Obiettivi di qualità di processo}
-		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard ISO/IEC 12207:2008 e per ognuno di essi gli obiettivi di qualità perseguiti.
+		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard ISO/IEC 12207:2008 e, per ognuno di essi, gli obiettivi di qualità perseguiti.
 			
 			\paragraph{Pianificazione di progetto e processo di verifica e controllo}
 			Questo macro-processo, derivato dall'unione dei processi 6.3.1 e 6.3.2 previsti dallo standard ISO/IEC 12207:2008, ha lo scopo di pianificare le attività richieste dal progetto.
@@ -82,13 +98,13 @@
 				Ogni attività di un processo verrà svolta da parte di colui a cui è stata assegnata, rispettando la pianificazione temporale stabilita nel documento \PdP{} e svolgendo tutti i compiti in cui essa si articola.
 				Gli obiettivi di pianificazione e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{schedule variance}: l'obiettivo stabilito per la metrica è il valore 0.
+					\item \textbf{schedule variance}: l'obiettivo stabilito per la metrica è il valore $0$.
 				\end{itemize}
 				\subparagraph{Rispetto del budget}   
 				I costi di ogni processo dovranno rientrare nel budget previsto dal documento \PdP.
 				Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{budget variance}: l'obiettivo stabilito per la metrica è il valore 0.
+					\item \textbf{budget variance}: l'obiettivo stabilito per la metrica è il valore $0$.
 				\end{itemize}
 				
 			\paragraph{Processo di gestione della documentazione del software}
@@ -98,47 +114,47 @@
 				La documentazione prodotta sarà quanto più chiara e comprensibile a tutti gli \gloss{stakeholder} coinvolti nel progetto.
 				Gli obiettivi relativi alla documentazione e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{indice di Gulpease}: l'obiettivo stabilito per la metrica è il range 60 - 100.
+					\item \textbf{indice di Gulpease}: l'obiettivo stabilito per la metrica è l'intervallo $[60, 100]$.
 				\end{itemize}
 				
-			\paragraph{Processo di architettura del software}
+			\paragraph{Processo di progettazione del software}
 			Il processo, corrispondente al processo 7.1.3 dello standard ISO/IEC 12207:2008, ha lo scopo di definire un'architettura software che implementi i requisiti corrispondenti e identifichi le diverse componenti del sistema.
 			Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 				\subparagraph{Completezza}
 				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la completezza. Ad esempio si evitano \gloss{package} senza elementi, classi non usate, parametri senza un tipo, ecc.
 				Gli obiettivi relativi alla completezza dell'architettura e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{numero di violazioni della completezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni della completezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni della completezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore 0.
+					\item \textbf{numero di violazioni della completezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni della completezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni della completezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
 				\end{itemize}
 				\subparagraph{Correttezza}
 				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la correttezza rispetto allo standard UML.
 				Gli obiettivi relativi alla correttezza dell'architettura e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{numero di violazioni della correttezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni della correttezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni della correttezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore 0.
+					\item \textbf{numero di violazioni della correttezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni della correttezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni della correttezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
 				\end{itemize}
 				\subparagraph{Stile}
-				L'architettura prodotta non presenta problemi di design, che pur essendo legali per lo standard UML, posso compromettere la qualità generale del sistema. Ad esempio si evitano dipendenze circolari tra i pacchetti, lunghe liste di parametri, ecc.
+				L'architettura prodotta non presenta problemi di design che, pur essendo legali per lo standard UML, possano compromettere la qualità generale del sistema. (Ad esempio si evitano dipendenze circolari tra i pacchetti, lunghe liste di parametri, ecc.)
 				Gli obiettivi relativi allo stile dell'architettura e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{numero di violazioni dello stile architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni dello stile architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni dello stile architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore 0.
+					\item \textbf{numero di violazioni dello stile architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni dello stile architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni dello stile architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
 				\end{itemize}
 				
 			\paragraph{Processo di costruzione del software}
 			Il processo, corrispondente al processo 7.1.5 previsto dallo standard ISO/IEC 12207:2008, definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
 			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 				\subparagraph{Rispetto delle norme di codifica}
-				Durante il processo di codifica vengono rispettate le norme stabilite nel \NdP{}.
+				Durante il processo di codifica vengono rispettate le norme stabilite nel documento \NdP.
 				Gli obiettivi di rispetto delle norme di codifica e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{numero di violazioni di alta importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni di media importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore 0;
-					\item \textbf{numero di violazioni di bassa importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore 0.
+					\item \textbf{numero di violazioni di alta importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni di media importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$;
+					\item \textbf{numero di violazioni di bassa importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$.
 				\end{itemize}
 				
 			\paragraph{Processo di test per la qualifica del software/sistema}
@@ -148,20 +164,20 @@
 				Le funzionalità richieste sono state integrate all'interno di un prodotto software le cui diverse componenti interagiscono fra esse in modo coerente e senza criticità, a formare un sistema coeso e funzionante.
 				Gli obiettivi relativi al corretto funzionamento del sistema e le metriche ad essi associate sono i seguenti:
 		 		\begin{itemize}
-					\item \textbf{percentuale di test di unità eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
-					\item \textbf{percentuale di test di integrazione eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
-					\item \textbf{percentuale di test di sistema eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
-					\item \textbf{percentuale di test di validazione eseguiti}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{percentuale di test di unità eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
+					\item \textbf{percentuale di test di integrazione eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
+					\item \textbf{percentuale di test di sistema eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
+					\item \textbf{percentuale di test di validazione eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
 				\end{itemize}
 				
 				\subparagraph{Copertura codice}
 				I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo. Gli obiettivi relativi alla copertura del codice e le metriche ad essi associate sono i seguenti:
 				\begin{itemize}
-					\item \textbf{\gloss{statement} coverage}: l'obiettivo stabilito per la metrica è il valore 100;
-					\item \textbf{\gloss{branch} coverage}: l'obiettivo stabilito per la metrica è il valore 100;
+					\item \textbf{\gloss{statement} coverage}: l'obiettivo stabilito per la metrica è il valore $100$;
+					\item \textbf{\gloss{branch} coverage}: l'obiettivo stabilito per la metrica è il valore $100$;
 				\end{itemize}
 	
-	\subsection{Qualità di prodotto}
+	\subsection{Qualità di prodotto} \label{sec:qualprodotto}
 	Per garantire una buona qualità di prodotto, il gruppo \hx{} ha individuato dallo standard \gloss{ISO/IEC 9126:2001} le qualità che ritiene di maggior importanza durante il ciclo di vita del prodotto e ha individuato gli obiettivi e le metriche coerenti con i livelli di qualità stabiliti.
 		\subsubsection{Procedure per il controllo delle qualità di prodotto}
 		Il controllo di qualità del prodotto verrà garantito da:
@@ -173,53 +189,61 @@
 		\subsubsection{Obiettivi di qualità del prodotto}
 		Gli obiettivi di qualità del software che il gruppo \hx{} desidera raggiungere nell'arco del progetto sono un sottoinsieme di quelli enunciati nello standard ISO/IEC 9126:2001.
 		
-		 	\paragraph{funzionalità}
+		 	\paragraph{Funzionalità}
 		 	Il prodotto possiede tutte le funzionalità descritte all'interno dei requisiti obbligatori e gran parte delle funzionalità descritte all'interno dei requisiti desiderabili.
 		 	Gli obiettivi di funzionalità e le metriche ad essi associate sono i seguenti:
 		 	\begin{itemize}
-				\item \textbf{copertura dei requisiti obbligatori}: l'obiettivo stabilito per la metrica è il valore 100;
-				\item \textbf{copertura dei requisiti desiderabili}: l'obiettivo stabilito per la metrica è il range 80 - 100.
+				\item \textbf{copertura dei requisiti obbligatori}: l'obiettivo stabilito per la metrica è il valore $100$;
+				\item \textbf{copertura dei requisiti desiderabili}: l'obiettivo stabilito per la metrica è l'intervallo $[80, 100]$.
 			\end{itemize}
-		 	\paragraph{affidabilità}
+		 	\paragraph{Affidabilità}
 		 	Il prodotto è testato negli aspetti più importanti e in determinate situazioni nelle quali esso si può trovare.
 		 	Gli obiettivi di affidabilità e le metriche ad essi associate sono i seguenti:
 		 	\begin{itemize}
-				\item \textbf{percentuale di test superati}: l'obiettivo stabilito per la metrica è il valore 100.
+				\item \textbf{percentuale di test superati}: l'obiettivo stabilito per la metrica è il valore $100$.
 			\end{itemize}
-		 	\paragraph{efficienza}
+		 	\paragraph{Efficienza}
 		 	Il prodotto presenta codice senza elevati gradi di complessità relativamente ad alcuni vincoli definiti.
 		 	Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
 		 	\begin{itemize}
-				\item \textbf{Profondità di annidamento dei blocchi}: l'obiettivo stabilito per la metrica è il range 0 - 4;
+				\item \textbf{Profondità di annidamento dei blocchi}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 4]$;
 			\end{itemize}
-		 	\paragraph{manutenibilità}
+		 	\paragraph{Manutenibilità}
 		 	Il codice risulta manutenibile e facilmente comprensibile.
 		 	Gli obiettivi di manutenibilità e le metriche ad essi associate sono i seguenti:
 		 	\begin{itemize}
-				\item \textbf{Numero di linee di codice per metodo}: l'obiettivo stabilito per la metrica è il range 0 - 20; 
-				\item \textbf{Numero di parametri per metodo}: l'obiettivo stabilito per la metrica è il range 0 - 4;
-				\item \textbf{Numero di campi dati per classe}: l'obiettivo stabilito per la metrica è il range 0 - 10;
-				\item \textbf{Numero di metodi per classe}: l'obiettivo stabilito per la metrica è il range 0 - 10;
-				\item \textbf{Grado di accoppiamento afferente per package}: l'obiettivo stabilito per la metrica è il 0 - 7;
-				\item \textbf{Grado di accoppiamento efferente per package}: l'obiettivo stabilito per la metrica è il 0 - 6;
-				\item \textbf{Complessità ciclomatica per metodo}: l'obiettivo stabilito per la metrica è il range 0 - 8;
-				\item \textbf{Numero di tipi per package}: l'obiettivo stabilito per la metrica è il range 0 - 20;
-				\item \textbf{Distanza dalla sequenza principale normalizzata}: l'obiettivo stabilito per la metrica è il range 0.0 - 0.5; 
-				\item \textbf{Instabilità}: l'obiettivo stabilito per la metrica sono i range 0.0 - 0.3 e 0.7 - 1.0; 
-				\item \textbf{Percentuale linee di commento su linee di codice}: l'obiettivo stabilito per la metrica è il range 20 - 40;	
-				\item \textbf{Numero di figli diretti}: l'obiettivo stabilito per la metrica è il range 0 - 2;
-				\item \textbf{Profondità nella gerarchia}: l'obiettivo stabilito per la metrica è il range 1 - 2;
+				\item \textbf{Numero di linee di codice per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 20]$; 
+				\item \textbf{Numero di parametri per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 4]$;
+				\item \textbf{Numero di campi dati per classe}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 10]$;
+				\item \textbf{Numero di metodi per classe}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 10]$;
+				\item \textbf{Grado di accoppiamento afferente per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 7]$;
+				\item \textbf{Grado di accoppiamento efferente per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 6]$;
+				\item \textbf{Complessità ciclomatica per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 8]$;
+				\item \textbf{Numero di tipi per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 20]$;
+				\item \textbf{Distanza dalla sequenza principale normalizzata}: l'obiettivo stabilito per la metrica è l'intervallo $[0.0, 0.5]$; 
+				\item \textbf{Instabilità}: l'obiettivo stabilito per la metrica sono gli intervalli $[0.0, 0.3]$ e $[0.7, 1.0]$; 
+				\item \textbf{Percentuale linee di commento su linee di codice}: l'obiettivo stabilito per la metrica è l'intervallo $[20, 40]$;	
+				\item \textbf{Numero di figli diretti}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 2]$;
+				\item \textbf{Profondità nella gerarchia}: l'obiettivo stabilito per la metrica è l'intervallo $[1, 2]$;
 			\end{itemize}
-			\paragraph{portabilità}
+			\paragraph{Portabilità}
 		 	Il prodotto deve poter garantire le sue funzionalità in browser differenti.
 		 	Gli obiettivi di portabilità e le metriche ad essi associate sono i seguenti:
 		 	\begin{itemize}
-				\item \textbf{Validazione \gloss{W3C}}: l'obiettivo stabilito per la metrica è il valore 0.
+				\item \textbf{Numero di errori segnalati dalla validazione \gloss{W3C}}: l'obiettivo stabilito per la metrica è il valore $0$.
 			\end{itemize}
+
+
+
+
+
+%%%%%%%%
+%%  Test
+%%%%%%%%
 
 \section{Test}
 	\subsection{Tipi di test}
-	Sono stati individuati quattro tipologie di test:
+	Individuiamo quattro tipologie di test:
 	\begin{itemize}
 		\item \textbf{Test di unità [TU]}: test con i quali si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore, quali metodi e funzioni scritte;
 		\item \textbf{Test di integrazione [TI]}: test per verificare le componenti di sistema con l'obiettivo di verificare il funzionamento dei vari package prodotti, singolarmente o nel loro insieme;
@@ -1428,7 +1452,7 @@ All'utente è richiesto di:
 \clearpage
 
 \subsection{Test di Sistema}
-I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue componenti sono completamente integrate allo scopo di verificare che soddisfi i requisiti come definiti nel documento \AdR .
+I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue componenti sono completamente integrate allo scopo di verificare che soddisfi i requisiti come definiti nel documento \AdR.
 
 \subsubsection{Descrizione dei Test di Sistema}
 \normalsize
@@ -1847,9 +1871,17 @@ I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue compo
 \caption[Tracciamento Test di Integrazione-Componenti]{Tracciamento Test di Integrazione-Componenti}
 \label{tabella:ts-requi}
 \end{longtable}
-\clearpage
+
+
+
+
 
 \appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Resoconto attività di verifica
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Resoconto attività di verifica}
 All'interno di questa sezione vengono riportati gli esiti delle attività di verifica svolte sui processi attivati e sui relativi prodotti secondo quanto stabilito nel \PdP.
 	\subsection{Revisione dei requisiti}
@@ -1864,7 +1896,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\begin{itemize}	
 			\item nuovi termini da inserire nel glossario;
 			\item termini presenti nel glossario, ma non correttamente segnati;
-			\item violazioni delle norme tipografiche e grammaticali come definite nel documento \NdP ;
+			\item violazioni delle norme tipografiche e grammaticali come definite nel documento \NdP;
 			\item refusi ed errori grammaticali;
 			\item periodi troppo lunghi e complessi da spezzare, ridurre e semplificare.
 		\end{itemize}
@@ -1893,7 +1925,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\end{table}
 		
 		\subsubsection{Verifica processo di pianificazione di progetto e processo di verifica e controllo}
-		Per verificare il soddisfacimento degli obiettivi di qualità definiti per tale processo, a partire dal 				consultivo redatto nel \PdP sono stati calcolati gli indici di budget variance e schedule variance per ognuna delle attività previste.
+		Per verificare il soddisfacimento degli obiettivi di qualità definiti per tale processo, a partire dal 				consultivo redatto nel \PdP{} sono stati calcolati gli indici di budget variance e schedule variance per ognuna delle attività previste.
 		
 		I risultati ottenuti sono elencati nella seguente tabella:	
 		\begin{table}[H]
@@ -1926,7 +1958,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\begin{itemize}	
 			\item nuovi termini da inserire nel glossario;
 			\item termini presenti nel glossario, ma non correttamente segnati;
-			\item violazioni delle norme tipografiche e grammaticali come definite nel documento \NdP ;
+			\item violazioni delle norme tipografiche e grammaticali come definite nel documento \NdP;
 			\item refusi ed errori grammaticali;
 			\item periodi troppo lunghi e complessi da spezzare, ridurre e semplificare.
 		\end{itemize}
@@ -1955,7 +1987,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\end{table}
 		
 		\subsubsection{Verifica processo di pianificazione di progetto e processo di verifica e controllo}
-		Per verificare il soddisfacimento degli obiettivi di qualità definiti per tale processo, a partire dal 				consultivo redatto nel \PdP sono stati calcolati gli indici di budget variance e schedule variance per ognuna delle attività previste.
+		Per verificare il soddisfacimento degli obiettivi di qualità definiti per tale processo, a partire dal consultivo redatto nel \PdP{} sono stati calcolati gli indici di budget variance e schedule variance per ognuna delle attività previste.
 		
 		I risultati ottenuti sono elencati nella seguente tabella:	
 		\begin{table}[H]
@@ -2008,7 +2040,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		
 		* l'alto valore del numero di violazioni di alta importanza relative alla completezza è dovuto al fatto che SDMetrics indica come non usate le classi che nell'attuale diagramma dei package implementano interfacce o classi astratte e che quindi a differenza della loro superclasse diretta non sono esplicitamente coinvolte in alcun tipo di associazione di dipendenza o riferimento.
 		
-		** l'alto valore del numero di violazione di media importanza relative allo stile è dovuto al fatto che nel server in alcune occasioni viene violato lo Stable-Dependencies Principle perchè alcuni package dipendono da altri package contenenti una singola classe concreta. Basta quindi che i primi abbiano una singola interfaccia affinchè la violazione venga segnalata.		
+		** l'alto valore del numero di violazione di media importanza relative allo stile è dovuto al fatto che nel server in alcune occasioni viene violato lo Stable-Dependencies Principle perchè alcuni package dipendono da altri package contenenti una singola classe concreta. Basta quindi che i primi abbiano una singola interfaccia affinchè la violazione venga segnalata.
 
 		\subsubsection{Verifica della qualità dell'architettura}
 		Per verificare l'osservanza degli obiettivi riguardanti la qualità dell'architettura prodotta, sono stati calcolati i valori delle metriche relative ai diagrammi dei package.
@@ -2064,42 +2096,50 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 	
 	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%  Standard adottati
+%%%%%%%%%%%%%%%%%%%%%
+
 \section{Standard adottati}
 	\subsection{Qualità di processo - SPICE}
-	Lo standard prevede sei diversi livelli di maturità (o capacità), e 9 attributi di processo che, se posseduti, lo portano ad un certo livello di 			capacità.
+	Lo standard prevede sei diversi livelli di maturità (o capacità), e 9 attributi di processo che, se posseduti, lo portano ad un certo livello di capacità.
 	\begin{itemize}
-	\item \textbf{Livello 0: Incompleto} il processo non è implementato o non raggiunge il suo obiettivo;   non esiste evidenza di esecuzione 					sistematica delle attività che lo compongono.
-	 \item \textbf{Livello 1: Attuato} il processo è implementato e raggiunge il suo obiettivo; esiste evidenza di semplice attuazione delle attività 			che lo compongono.
+	\item \textbf{Livello 0: Incompleto} il processo non è implementato o non raggiunge il suo obiettivo; non esiste evidenza di esecuzione sistematica delle attività che lo compongono.
+	 \item \textbf{Livello 1: Attuato} il processo è implementato e raggiunge il suo obiettivo; esiste evidenza di semplice attuazione delle attività che lo compongono.
 	Il relativo attributo di processo:
 		\begin{itemize}
-			\item \emph{Esecuzione del Processo}: la misura in cui il processo raggiunge i propri obiettivi trasformando   prodotti in ingresso 						identificabili in prodotti in uscita identificabili.
+			\item \emph{Esecuzione del Processo}: la misura in cui il processo raggiunge i propri obiettivi trasformando   prodotti in ingresso identificabili in prodotti in uscita identificabili.
 		\end{itemize}
 	\item \textbf{Livello 2: Gestito} il processo è gestito e i suoi prodotti sono stabiliti, controllati e manutenuti; le attività sono pianificate e 			controllate e il loro svolgimento risulta documentato.
 	I relativi attributi di processo:
 		\begin{itemize}
 			\item \emph{Gestione delle Prestazioni}: la misura in cui il processo produce un risultato coerente con gli obiettivi attesi.
-			\item \emph{Gestione dei Prodotti}: la misura in cui il processo viene gestito per elaborare prodotti documentati, controllati e verificati 				in modo appropriato.
+			\item \emph{Gestione dei Prodotti}: la misura in cui il processo viene gestito per elaborare prodotti documentati, controllati e verificati in modo appropriato.
 		\end{itemize}
 	
 	\item \textbf{Livello 3: Definito} il processo viene eseguito in base ai principi dell'ingegneria del software. Le procedure sono definite e 				adattate ai progetti e ruoli, competenze e responsabilità sono definiti e controllati.
 	I relativi attributi di processo:
 		\begin{itemize}
-			\item \emph{Definizione del Processo}: la misura in cui il processo raggiunge i risultati attesi aderendo ad un particolare standard di 					processo.
+			\item \emph{Definizione del Processo}: la misura in cui il processo raggiunge i risultati attesi aderendo ad un particolare standard di processo.
 			\item \emph{Utilizzo del Processo}: la misura in cui il processo attinge alle risorse allocate per la sua esecuzione.	
 		\end{itemize}
 		
-	\item \textbf{Livello 4: Predicibile} il processo è messo in atto costantemente entro limiti definiti. Le attività che lo compongono, la loro 				gestione e i relativi risultati sono controllati quantitativamente.
+	\item \textbf{Livello 4: Predicibile} il processo è messo in atto costantemente entro limiti definiti. Le attività che lo compongono, la loro gestione e i relativi risultati sono controllati quantitativamente.
 	I relativi attributi di processo:
 		\begin{itemize}
-			\item \emph{Misurazione del Processo}: la misura in cui il processo utilizza i risultati raggiunti e le misure ricavate durante 							l'esecuzione per garantire il raggiungimento dei traguardi definiti.
-			\item \emph{Controllo del Processo}: la misura in cui il processo viene controllato tramite la raccolta, l'analisi e la messa in uso di 					misurazioni di prodotto e processo allo scopo di correggere, ove necessario, la sua esecuzione per raggiungere i risultati attesi.	
+			\item \emph{Misurazione del Processo}: la misura in cui il processo utilizza i risultati raggiunti e le misure ricavate durante l'esecuzione per garantire il raggiungimento dei traguardi definiti.
+			\item \emph{Controllo del Processo}: la misura in cui il processo viene controllato tramite la raccolta, l'analisi e la messa in uso di misurazioni di prodotto e processo allo scopo di correggere, ove necessario, la sua esecuzione per raggiungere i risultati attesi.	
 		\end{itemize}
 
 	\item \textbf{Livello 5: Ottimizzante} il processo è continuativamente migliorato per soddisfare i rilevanti traguardi di business attuali e 				previsti. I cambiamenti del processo sono valutati e lo studio per il miglioramento è un'attività costante.
 	I relativi attributi di processo:
 		\begin{itemize}
-			\item \emph{Innovazione del Processo}: la misura in cui cambiamenti relativi alla definizione, alla gestione e all'esecuzione del processo 					sono controllati per raggiungere gli obiettivi di business dell'organizzazione.
-			\item \emph{Ottimizzazione del Processo}: la misura in cui vengono identificati e implementati cambiamenti relativamente all'esecuzione del 				processo in modo tale da assicurare un miglioramento continuo nel raggiungimento degli obiettivi rilevanti dell'organizzazione.
+			\item \emph{Innovazione del Processo}: la misura in cui cambiamenti relativi alla definizione, alla gestione e all'esecuzione del processo sono controllati per raggiungere gli obiettivi di business dell'organizzazione.
+			\item \emph{Ottimizzazione del Processo}: la misura in cui vengono identificati e implementati cambiamenti relativamente all'esecuzione del processo in modo tale da assicurare un miglioramento continuo nel raggiungimento degli obiettivi rilevanti dell'organizzazione.
 		\end{itemize}
 	\end{itemize}
 
