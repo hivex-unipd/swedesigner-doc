@@ -51,3 +51,7 @@
 % profondità di indicizzazione:
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
+
+% numerazione innestata per elenchi numerati:
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
