@@ -1,0 +1,54 @@
+% Riunione interna del 17 marzo 2017
+% da compilare con il comando pdflatex Esterni/Verbali/VI_17-01-02.tex
+
+\input{../../util/hx-ambiente}
+
+\version{1.0.0}
+\creaz{22 marzo 2017}
+\author{\GG}
+\supervisor{\LB}
+\uso{interno}
+\dest{\ALL}
+\title{Riunione interna del 17 marzo 2017}
+% \date{9 gennaio 2017}
+
+\begin{document}
+
+\maketitle
+
+\begin{description}
+	\item[Orario] 09:30 - 12:30;
+	\item[Durata] 3 ore;
+	\item[Luogo incontro] Laboratorio di Torre Archimede;
+	\item[Oggetto] discussione sull'esito della RP;
+	\item[Segretario] \AZ; 
+	\item[Partecipanti] \ALL.
+\end{description}
+
+Decisioni prese:
+\begin{enumerate}
+	\item \textbf{colloquio con il \GP} --- Abbiamo deciso di fissare un incontro con il proponente, \GP, con i seguenti obiettivi:
+	\begin{enumerate}
+		\item presentazione delle scelte architetturali adottate;
+		\item modifica dei requisiti (rimozione della gestione automatica della visibilità delle variabili) e spiegazione del perché;
+		\item esposizione del compromesso adottato tra:
+		\begin{itemize}
+			\item estensibilità dell'applicazione, sul lungo termine;
+			\item sua immediata ricchezza di funzionalità.
+		\end{itemize}
+		\item tecnologie usate.
+	\end{enumerate}
+	\item \textbf{domande per il \RC} --- Abbiamo deciso di chiedere al \RC{} delle precisazioni sulla revisione dei documenti; in particolare sul termine \emph{service} e sui diagrammi più adatti (tra quelli di attività e di sequenza) per una Specifica Tecnica.
+	\item \textbf{colloquio con il \TV} --- Avendo letto la revisione, abbiamo deciso di chiedere al \TV{} delle precisazioni sui seguenti punti:
+	\begin{enumerate}
+		\item possibile relazione tra identificatore numerico dei verbali e il registro delle modifiche;
+		\item nell'Analisi dei Requisiti, rapporto tra requisiti relativi alla modifica di elementi e requisiti relativi all'inserimento di elementi;
+		\item obiettivo e significato delle presentazioni ad ogni revisione di avanzamento (per poter migliorare le prossime presentazioni);
+		\item nell'Analisi dei Requisiti, necessità o meno di rimuovere la ridondanza tra estensione e scenario alternativo;
+		\item quando inserire i test di unità nel prodotto.
+	\end{enumerate}
+	\item \textbf{miglioramento delle presentazioni} --- Per migliorare le nostre presentazioni, abbiamo deciso di concentrarci sul rispetto degli intervalli di tempo assegnati ad ognuno durante la presentazione; inoltre, abbiamo pattuito di fare delle prove in più (cronometrate).
+	\item \textbf{correzioni per la Specifica Tecnica} --- Abbiamo discusso dell'utilizzo di \emph{Spring Boot} (invece di \emph{Spring}) e abbiamo convenuto di adottarlo; inoltre, abbiamo chiarito alcune correzioni che dovremo apportare al documento di Specifica Tecnica.
+\end{enumerate}
+
+\end{document}
