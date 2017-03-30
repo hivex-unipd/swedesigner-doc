@@ -76,17 +76,17 @@ Il presente documento si divide in tre sezioni principali:
 
 \subsubsection{Riferimenti normativi}
 \begin{itemize}
-	\item ISO/IEC 12207:1995: \url{www.math.unipd.it/\~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}, visitato in data 08/02/2017;
-	\item Capitolato d'appalto dell'azienda \ZU: \url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato in data 08/02/2017.
-	\item Standard \emph{JavaDoc}: \url{www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}, visitato in data 20/03/2017;
-	\item \gloss{API} \emph{JSDdoc}: \url{github.com/jsdoc3/jsdoc}, visitato in data 20/03/2017.
+	\item ISO/IEC 12207:1995: \url{http://www.math.unipd.it//~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}, visitato in data 08/02/2017;
+	\item Capitolato d'appalto dell'azienda \ZU: \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato in data 08/02/2017.
+	\item Standard \emph{JavaDoc}: \url{http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}, visitato in data 20/03/2017;
+	\item \gloss{API} \emph{JSDdoc}: \url{https://github.com/jsdoc3/jsdoc}, visitato in data 20/03/2017.
 \end{itemize}
 
 \subsubsection{Riferimenti informativi}
 \begin{itemize}
-	\item L. Pantieri, \emph{L'arte di scrivere in \gloss{Latex}}: \url{www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}, visitato in data 08/02/2017;
-	\item \emph{SDMetrics User Manual}: \url{www.sdmetrics.com/manual/index.html}, visitato in data 21/02/2017;
+	\item L. Pantieri, \emph{L'arte di scrivere in \gloss{Latex}}: \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (appendice A), visitato in data 08/02/2017;
 %	\item \emph{CodePro Analytix Help Contents}, accessibile da Eclipse;
+	\item \emph{SDMetrics User Manual}: \url{http://www.sdmetrics.com/manual/index.html}, visitato in data 30/03/2017.
 \end{itemize}
 
 
@@ -116,12 +116,12 @@ Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo
 
 
 \subsection{Sviluppo}
-Il gruppo mantiene il codice sorgente del prodotto in un \gloss{repository} pubblico su \gloss{GitHub}. Tale repository è reperibile all'indirizzo \url{github.com/hivex-unipd/swedesigner}.
+Il gruppo mantiene il codice sorgente del prodotto in un \gloss{repository} pubblico su \gloss{GitHub}. Tale repository è reperibile all'indirizzo \url{https://github.com/hivex-unipd/swedesigner}.
 
 \subsubsection{Analisi dei requisiti}
 Al termine dello studio di fattibilità, gli analisti devono elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di Analisi dei Requisiti (\AdR); questo documento contiene i requisiti e i \gloss{casi d'uso} individuati nelle riunioni svolte.
 
-Per tracciare le relazioni tra casi d'uso e requisiti, gli analisti devono usare l'applicazione web \gloss{PragmaDB} (\url{github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario; inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) e consente il rispetto delle linee guida di struttura descritte in seguito.
+Per tracciare le relazioni tra casi d'uso e requisiti, gli analisti devono usare l'applicazione web \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario; inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) e consente il rispetto delle linee guida di struttura descritte in seguito.
 
 Nelle sezioni seguenti esponiamo la struttura che gli analisti devono rispettare per specificare requisiti e casi d'uso.
 
@@ -249,11 +249,13 @@ Al fine di aumentare la manutenibilità del sistema, i progettisti devono seguir
 	\end{itemize}
 \end{itemize}
 
+\paragraph{Risoluzione di ulteriori dubbi} Nel caso un progettista abbia ulteriori dubbi su come svolgere un proprio compito, egli deve consultare la documentazione di \emph{SDMetrics} reperibile all'indirizzo \url{http://www.sdmetrics.com/manual/LORules.html}.
+
 \subsubsection{Codifica} \label{sec:cod}
 Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
 
 \paragraph{Convenzioni} \label{sec:conv}
-Il gruppo seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte \gloss{client} scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritte in \url{javascript.crockford.com/code.html}. La parte \gloss{server} è scritta in Java e seguirà le indicazioni JavaDoc disponibili in \url{www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
+Il gruppo seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte \gloss{client} scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritte in \url{http://javascript.crockford.com/code.html}. La parte \gloss{server} è scritta in Java e seguirà le indicazioni JavaDoc disponibili in \url{http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
 
 \paragraph{Nomenclatura del codice}
 Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
@@ -312,7 +314,7 @@ Ogni programmatore deve scrivere codice sorgente utilizzando i seguenti editor d
 \end{itemize}
 Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
 
-I programmatori devono caricare il codice sorgente nel repository pubblico \url{github.com/hivex-unipd/swedesigner}. Ogni \emph{commit} deve recare un messaggio che spiega concisamente le aggiunte o modifiche che sono state apportate al codice sorgente.
+I programmatori devono caricare il codice sorgente nel repository pubblico \url{https://github.com/hivex-unipd/swedesigner}. Ogni \emph{commit} deve recare un messaggio che spiega concisamente le aggiunte o modifiche che sono state apportate al codice sorgente.
 
 
 
@@ -327,7 +329,7 @@ I processi normati in questa sezione hanno la funzione di supportare gli altri p
 
 
 \subsection{Documentazione} \label{sec:doc}
-Il gruppo mantiene la documentazione di progetto (tutto ciò che documenta le attività del progetto) in un repository distinto da quello del codice sorgente, come motivato nella sezione \ref{sec:config}. Tale repository è reperibile all'indirizzo \url{github.com/hivex-unipd/swedesigner-doc}.
+Il gruppo mantiene la documentazione di progetto (tutto ciò che documenta le attività del progetto) in un repository distinto da quello del codice sorgente, come motivato nella sezione \ref{sec:config}. Tale repository è reperibile all'indirizzo \url{https://github.com/hivex-unipd/swedesigner-doc}.
 
 I documenti che svilupperemo sono i seguenti:
 \begin{itemize}
@@ -443,7 +445,7 @@ Per ogni documento creato, i redattori stendono una bozza (in Latex) che dev'ess
 	\item Gli elementi di un elenco sono separati da un punto e virgola (quindi iniziano con lettera minuscola), tranne l'ultimo che si conclude con un punto. Nel caso che anche un solo elemento dell'elenco si componga di più frasi separate da segno di punteggiatura forte, tutti gli elementi dell'elenco iniziano per maiuscola e finiscono con un punto. In entrambi i casi, ogni elenco è introdotto dai due punti.
 	\item Le abbreviazioni vanno scritte interamente in maiuscolo e definite nel glossario.
 \end{itemize}
-L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{termine\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (vedi sezione \ref{sec:ref}).
+L'evidenziazione di un termine va fatta con \texttt{\textbackslash emph\{termine\}}. Ogni altro dubbio su grammatica o tipografia va chiarito consultando l'appendice A del testo open-source \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (vedi sezione \ref{sec:ref}).
 
 \subsubsection{Macro-istruzioni Latex}
 Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istruzioni Latex, definite nelle librerie della directory \texttt{util}:
@@ -472,7 +474,7 @@ Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istru
 
 
 \subsection{Configurazione} \label{sec:config}
-Definiamo la configurazione di un prodotto come l'insieme delle parti di cui si compone e il modo in cui esse interagiscono fra di loro. Per gestire la configurazione del software i membri del gruppo devono utilizzare il sistema \gloss{Git}, appoggiandosi alla piattaforma GitHub. Ogni membro del gruppo dev'essere iscritto a GitHub con la propria e-mail accademica e deve far parte dell'organizzazione \texttt{hivex-unipd} (\url{hivex-unipd.github.io}). Il nostro software si divide nei seguenti due repository pubblici, gestiti dall'organizzazione \texttt{hivex-unipd}:
+Definiamo la configurazione di un prodotto come l'insieme delle parti di cui si compone e il modo in cui esse interagiscono fra di loro. Per gestire la configurazione del software i membri del gruppo devono utilizzare il sistema \gloss{Git}, appoggiandosi alla piattaforma GitHub. Ogni membro del gruppo dev'essere iscritto a GitHub con la propria e-mail accademica e deve far parte dell'organizzazione \texttt{hivex-unipd} (\url{https://hivex-unipd.github.io}). Il nostro software si divide nei seguenti due repository pubblici, gestiti dall'organizzazione \texttt{hivex-unipd}:
 \begin{itemize}
 	\item \repo{} per il codice sorgente;
 	\item \repodoc{} per la documentazione.
@@ -628,7 +630,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\hline 
 	Schedule Variance &  $[-25, 0]$ &  Asana \\
 	\hline 
-	Validazione W3C &  $[0, 20]$ &  validatore W3C (disponibile all'indirizzo \url{validator.w3.org}) \\
+	Validazione W3C &  $[0, 20]$ &  validatore W3C (disponibile all'indirizzo \url{https://validator.w3.org}) \\
 	\hline 
 	\caption[Metriche]{Metriche}
 	\label{tab:metriche}
