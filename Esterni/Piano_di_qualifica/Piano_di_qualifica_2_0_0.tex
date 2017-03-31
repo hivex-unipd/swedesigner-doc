@@ -3,6 +3,7 @@
 
 \input{../../util/hx-ambiente}
 \usepackage{float}
+\usepackage{varwidth}
 
 \version{2.0.0}
 \creaz{28 dicembre 2016}
@@ -11,6 +12,13 @@
 \uso{esterno}
 \dest{\TV, \RC, \ZU}
 \title{Piano di Qualifica}
+
+% per andare a capo in una cella "multirow":
+\newcommand\ambito[2]{%
+	\multirow{#1}*{%
+		\begin{varwidth}{3cm}%
+		#2%
+		\end{varwidth}}}
 
 \begin{document}
 \maketitle
@@ -89,92 +97,183 @@
 
 		\subsubsection{Obiettivi di qualità di processo}
 		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard ISO/IEC 12207:2008 e, per ognuno di essi, gli obiettivi di qualità perseguiti.
-			
-			\paragraph{Pianificazione di progetto e processo di verifica e controllo}
-			Questo macro-processo, derivato dall'unione dei processi 6.3.1 e 6.3.2 previsti dallo standard ISO/IEC 12207:2008, ha lo scopo di pianificare le attività richieste dal progetto.
-			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
-				\subparagraph{Rispetto della pianificazione} 
-				Ogni attività di un processo verrà svolta da parte di colui a cui è stata assegnata, rispettando la pianificazione temporale stabilita nel documento \PdP{} e svolgendo tutti i compiti in cui essa si articola.
-				Gli obiettivi di pianificazione e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{schedule variance}: l'obiettivo stabilito per la metrica è il valore $0$.
-				\end{itemize}
-				\subparagraph{Rispetto del budget}   
-				I costi di ogni processo dovranno rientrare nel budget previsto dal documento \PdP.
-				Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{budget variance}: l'obiettivo stabilito per la metrica è il valore $0$.
-				\end{itemize}
-				
-			\paragraph{Processo di gestione della documentazione del software}
-			Il processo, corrispondente al processo 7.2.1 definito dallo standard ISO/IEC 12207:2008, ha lo scopo di produrre e gestire la documentazione relativa alle funzionalità e alle caratteristiche del sistema software prodotto.
-			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
-				\subparagraph{Leggibilità della documentazione}
-				La documentazione prodotta sarà quanto più chiara e comprensibile a tutti gli \gloss{stakeholder} coinvolti nel progetto.
-				Gli obiettivi relativi alla documentazione e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{indice di Gulpease}: l'obiettivo stabilito per la metrica è l'intervallo $[60, 100]$.
-				\end{itemize}
-				
-			\paragraph{Processo di progettazione del software}
-			Il processo, corrispondente al processo 7.1.3 dello standard ISO/IEC 12207:2008, ha lo scopo di definire un'architettura software che implementi i requisiti corrispondenti e identifichi le diverse componenti del sistema.
-			Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
-				\subparagraph{Completezza}
-				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la completezza. Ad esempio si evitano \gloss{package} senza elementi, classi non usate, parametri senza un tipo, ecc.
-				Gli obiettivi relativi alla completezza dell'architettura e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{numero di violazioni della completezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni della completezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni della completezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
-				\end{itemize}
-				\subparagraph{Correttezza}
-				L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la correttezza rispetto allo standard UML.
-				Gli obiettivi relativi alla correttezza dell'architettura e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{numero di violazioni della correttezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni della correttezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni della correttezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
-				\end{itemize}
-				\subparagraph{Stile}
-				L'architettura prodotta non presenta problemi di design che, pur essendo legali per lo standard UML, possano compromettere la qualità generale del sistema. (Ad esempio si evitano dipendenze circolari tra i pacchetti, lunghe liste di parametri, ecc.)
-				Gli obiettivi relativi allo stile dell'architettura e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{numero di violazioni dello stile architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni dello stile architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni dello stile architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
-				\end{itemize}
-				
-			\paragraph{Processo di costruzione del software}
-			Il processo, corrispondente al processo 7.1.5 previsto dallo standard ISO/IEC 12207:2008, definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
-			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
-				\subparagraph{Rispetto delle norme di codifica}
-				Durante il processo di codifica vengono rispettate le norme stabilite nel documento \NdP.
-				Gli obiettivi di rispetto delle norme di codifica e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{numero di violazioni di alta importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni di media importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$;
-					\item \textbf{numero di violazioni di bassa importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$.
-				\end{itemize}
-				
-			\paragraph{Processo di test per la qualifica del software/sistema}
-			Il macro-processo, derivante dall'unione dei processi 6.4.6 e 7.1.7 dello standard ISO/IEC 12207:2008, ha lo scopo che ogni requisito individuato sia stato implementato nel prodotto.
-			\\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
-				\subparagraph{Corretto funzionamento del sistema e integrazione delle componenti}
-				Le funzionalità richieste sono state integrate all'interno di un prodotto software le cui diverse componenti interagiscono fra esse in modo coerente e senza criticità, a formare un sistema coeso e funzionante.
-				Gli obiettivi relativi al corretto funzionamento del sistema e le metriche ad essi associate sono i seguenti:
-		 		\begin{itemize}
-					\item \textbf{percentuale di test di unità eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
-					\item \textbf{percentuale di test di integrazione eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
-					\item \textbf{percentuale di test di sistema eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
-					\item \textbf{percentuale di test di validazione eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
-				\end{itemize}
-				
-				\subparagraph{Copertura codice}
-				I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo. Gli obiettivi relativi alla copertura del codice e le metriche ad essi associate sono i seguenti:
-				\begin{itemize}
-					\item \textbf{\gloss{statement} coverage}: l'obiettivo stabilito per la metrica è il valore $100$;
-					\item \textbf{\gloss{branch} coverage}: l'obiettivo stabilito per la metrica è il valore $100$;
-				\end{itemize}
+
+\paragraph{Pianificazione di progetto, verifica e controllo}
+Questo macro-processo, derivato dall'unione dei processi 6.3.1 e 6.3.2 previsti dallo standard ISO/IEC 12207:2008, ha lo scopo di pianificare le attività richieste dal progetto.
+
+Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+\begin{center}
+\begin{tabular}{| l | p{6cm} | r |}
+	\hline
+	\textbf{ambito} & \textbf{metrica} & \textbf{obiettivo} \\
+	\hline
+	rispetto della pianificazione & schedule variance & $0$ \\
+	\hline
+	rispetto della pianificazione & budget variance & $0$ \\
+	\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Gestione della documentazione}
+Il processo, corrispondente al processo 7.2.1 definito in ISO/IEC 12207:2008, ha lo scopo di produrre e gestire la documentazione relativa alle funzionalità e alle caratteristiche del sistema software prodotto.
+
+Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+\begin{center}
+\begin{tabular}{| l | l | r |}
+	\hline
+	\textbf{ambito} & \textbf{metrica} & \textbf{obiettivo} \\
+	\hline
+	leggibilità della documentazione & indice di Gulpease & $[60, 100]$ \\
+	\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Progettazione del software}
+Il processo, corrispondente al processo 7.1.3 di ISO/IEC 12207:2008, ha lo scopo di definire un'architettura software che implementi i requisiti corrispondenti e identifichi le diverse componenti del sistema.
+
+Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+\begin{center}
+\begin{tabular}{| l | p{6cm} | r |}
+	\hline
+	\textbf{ambito} & \textbf{metrica} & \textbf{obiettivo} \\
+	\hline
+	\multirow{3}{*}{completezza} & numero di violazioni della completezza architetturale di alta importanza & $0$ \\
+	& numero di violazioni della completezza architetturale di media importanza & $0$ \\
+	& numero di violazioni della completezza architetturale di bassa importanza & $0$ \\
+	\hline
+	\multirow{3}{*}{correttezza} & numero di violazioni della correttezza architetturale di alta importanza & $0$ \\
+	& numero di violazioni della correttezza architetturale di media importanza & $0$ \\
+	& numero di violazioni della correttezza architetturale di bassa importanza & $0$ \\
+	\hline
+	\multirow{3}{*}{stile} & numero di violazioni dello stile architetturale di alta importanza & $0$ \\
+	& numero di violazioni dello stile architetturale di media importanza & $0$ \\
+	& numero di violazioni dello stile architetturale di bassa importanza & $0$ \\
+	\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Costruzione del software}
+Il processo, corrispondente al processo 7.1.5 di ISO/IEC 12207:2008, definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
+
+Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+\begin{center}
+\begin{tabular}{| l | p{6cm} | r |}
+	\hline
+	\textbf{ambito} & \textbf{metrica} & \textbf{obiettivo} \\
+	\hline
+	\ambito{3}{rispetto delle norme di codifica} & numero di violazioni di alta importanza delle norme di codifica & $0$ \\
+	& numero di violazioni di media importanza delle norme di codifica & $0$ \\
+	& numero di violazioni di bassa importanza delle norme di codifica & $0$ \\
+	\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Test per la qualifica del software/sistema}
+Il macro-processo, derivante dall'unione dei processi 6.4.6 e 7.1.7 di ISO/IEC 12207:2008, ha lo scopo che ogni requisito individuato sia stato implementato nel prodotto.
+
+Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+\begin{center}
+\begin{tabular}{| l | p{6cm} | r |}
+	\hline
+	\textbf{ambito} & \textbf{metrica} & \textbf{obiettivo} \\
+	\hline
+	\ambito{3}{corretto funzionamento del sistema e integrazione delle componenenti} & percentuale di test di unità eseguiti & $100$ \\
+	& percentuale di test di integrazione eseguiti & $100$ \\
+	& percentuale di test di sistema eseguiti & $100$ \\
+	& percentuale di test di validazione eseguiti & $100$ \\
+	\hline
+	\multirow{3}{*}{copertura del codice} & \gloss{statement} coverage & $100$ \\
+	& \gloss{branch} coverage & $100$ \\
+	\hline
+\end{tabular}
+\end{center}
+
+
+			% \paragraph{Pianificazione di progetto e processo di verifica e controllo}
+			% Questo macro-processo, derivato dall'unione dei processi 6.3.1 e 6.3.2 previsti dallo standard ISO/IEC 12207:2008, ha lo scopo di pianificare le attività richieste dal progetto.
+			% \\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+			% 	\subparagraph{Rispetto della pianificazione} 
+			% 	Ogni attività di un processo verrà svolta da parte di colui a cui è stata assegnata, rispettando la pianificazione temporale stabilita nel documento \PdP{} e svolgendo tutti i compiti in cui essa si articola.
+			% 	Gli obiettivi di pianificazione e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{schedule variance}: l'obiettivo stabilito per la metrica è il valore $0$.
+			% 	\end{itemize}
+			% 	\subparagraph{Rispetto del budget}   
+			% 	I costi di ogni processo dovranno rientrare nel budget previsto dal documento \PdP.
+			% 	Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{budget variance}: l'obiettivo stabilito per la metrica è il valore $0$.
+			% 	\end{itemize}
+
+			% \paragraph{Processo di gestione della documentazione del software}
+			% Il processo, corrispondente al processo 7.2.1 definito dallo standard ISO/IEC 12207:2008, ha lo scopo di produrre e gestire la documentazione relativa alle funzionalità e alle caratteristiche del sistema software prodotto.
+			% \\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+			% 	\subparagraph{Leggibilità della documentazione}
+			% 	La documentazione prodotta sarà quanto più chiara e comprensibile a tutti gli \gloss{stakeholder} coinvolti nel progetto.
+			% 	Gli obiettivi relativi alla documentazione e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{indice di Gulpease}: l'obiettivo stabilito per la metrica è l'intervallo $[60, 100]$.
+			% 	\end{itemize}
+
+			% \paragraph{Processo di progettazione del software}
+			% Il processo, corrispondente al processo 7.1.3 dello standard ISO/IEC 12207:2008, ha lo scopo di definire un'architettura software che implementi i requisiti corrispondenti e identifichi le diverse componenti del sistema.
+			% Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+			% 	\subparagraph{Completezza}
+			% 	L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la completezza. Ad esempio si evitano \gloss{package} senza elementi, classi non usate, parametri senza un tipo, ecc.
+			% 	Gli obiettivi relativi alla completezza dell'architettura e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{numero di violazioni della completezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni della completezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni della completezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
+			% 	\end{itemize}
+			% 	\subparagraph{Correttezza}
+			% 	L'architettura prodotta rispetta le regole di progettazione che ne garantiscono la correttezza rispetto allo standard UML.
+			% 	Gli obiettivi relativi alla correttezza dell'architettura e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{numero di violazioni della correttezza architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni della correttezza architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni della correttezza architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
+			% 	\end{itemize}
+			% 	\subparagraph{Stile}
+			% 	L'architettura prodotta non presenta problemi di design che, pur essendo legali per lo standard UML, possano compromettere la qualità generale del sistema. (Ad esempio si evitano dipendenze circolari tra i pacchetti, lunghe liste di parametri, ecc.)
+			% 	Gli obiettivi relativi allo stile dell'architettura e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{numero di violazioni dello stile architetturale di alta importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni dello stile architetturale di media importanza}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni dello stile architetturale di bassa importanza}: l'obiettivo stabilito per la metrica è il valore $0$.
+			% 	\end{itemize}
+
+			% \paragraph{Processo di costruzione del software}
+			% Il processo, corrispondente al processo 7.1.5 previsto dallo standard ISO/IEC 12207:2008, definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
+			% \\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+			% 	\subparagraph{Rispetto delle norme di codifica}
+			% 	Durante il processo di codifica vengono rispettate le norme stabilite nel documento \NdP.
+			% 	Gli obiettivi di rispetto delle norme di codifica e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{numero di violazioni di alta importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni di media importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$;
+			% 		\item \textbf{numero di violazioni di bassa importanza delle norme di codifica}: l'obiettivo stabilito per la metrica è il valore $0$.
+			% 	\end{itemize}
+
+			% \paragraph{Processo di test per la qualifica del software/sistema}
+			% Il macro-processo, derivante dall'unione dei processi 6.4.6 e 7.1.7 dello standard ISO/IEC 12207:2008, ha lo scopo che ogni requisito individuato sia stato implementato nel prodotto.
+			% \\Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+			% 	\subparagraph{Corretto funzionamento del sistema e integrazione delle componenti}
+			% 	Le funzionalità richieste sono state integrate all'interno di un prodotto software le cui diverse componenti interagiscono fra esse in modo coerente e senza criticità, a formare un sistema coeso e funzionante.
+			% 	Gli obiettivi relativi al corretto funzionamento del sistema e le metriche ad essi associate sono i seguenti:
+		 % 		\begin{itemize}
+			% 		\item \textbf{percentuale di test di unità eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
+			% 		\item \textbf{percentuale di test di integrazione eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
+			% 		\item \textbf{percentuale di test di sistema eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
+			% 		\item \textbf{percentuale di test di validazione eseguiti}: l'obiettivo stabilito per la metrica è il valore $100$;
+			% 	\end{itemize}
+
+			% 	\subparagraph{Copertura codice}
+			% 	I test effettuati sulle diverse componenti del prodotto software andranno a considerare una gran parte delle possibili casistiche d'utilizzo e ad esplorare una notevole fetta del codice sorgente ad esso relativo. Gli obiettivi relativi alla copertura del codice e le metriche ad essi associate sono i seguenti:
+			% 	\begin{itemize}
+			% 		\item \textbf{\gloss{statement} coverage}: l'obiettivo stabilito per la metrica è il valore $100$;
+			% 		\item \textbf{\gloss{branch} coverage}: l'obiettivo stabilito per la metrica è il valore $100$;
+			% 	\end{itemize}
 	
 	\subsection{Qualità di prodotto} \label{sec:qualprodotto}
 	Per garantire una buona qualità di prodotto, il gruppo \hx{} ha individuato dallo standard \gloss{ISO/IEC 9126:2001} le qualità che ritiene di maggior importanza durante il ciclo di vita del prodotto e ha individuato gli obiettivi e le metriche coerenti con i livelli di qualità stabiliti.
@@ -2019,19 +2118,19 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
 		\hline
 		Completezza									&								&							&\\
-		Numero di violazioni di alta importanza		&0								&0							&27*\\						
-		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
-		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
+
+
+
 		\hline
 		Correttezza 								&								&							&\\
-		Numero di violazioni di alta importanza		&0								&0							&0\\						
-		Numero di violazioni di media importanza	&0 - 5								&0							&0\\						
-		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
+
+
+
 		\hline
 		Stile 										&								&							&\\
-		Numero di violazioni di alta importanza		&0								&0							&0\\						
-		Numero di violazioni di media importanza	&0 - 5							&0							&13**\\						
-		Numero di violazioni di bassa importanza	&0 - 10								&0							&0\\						
+
+
+
 		\hline
 		\end{tabular}
 		\caption{Esiti del calcolo delle metriche relative alla progettazione}
@@ -2185,7 +2284,7 @@ Le misurazioni e le valutazioni risultanti dal monitoraggio dei diversi processi
 				\item \textbf{manutenibilità}: rappresenta la capacità di un prodotto software di essere modificato in tempi rapidi e a costi accessibili. Le modifiche possono riguardare correzioni o adattamenti del prodotto a variazioni negli ambienti, nei requisiti e nelle specifiche funzionali.
 				\item \textbf{portabilità}: è la capacità di un prodotto software di poter essere spostato da un ambiente all'altro velocemente. L'ambiente include sia aspetti hardware che software.
 			\end{itemize}
-			
+
 			\paragraph{Modello della qualità in uso}
 			Gli attributi presenti nel modello relativo alla qualità del software in uso sono rappresentati da quattro grandi categorie:
 			\begin{itemize}

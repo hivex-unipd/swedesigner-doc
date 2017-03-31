@@ -193,7 +193,7 @@ Per ognuna di queste due attività, ogni progettista deve definire dei test che 
 \end{itemize}
 Per disegnare i diagrammi appena esposti, i progettisti devono usare il software gratuito \gloss{Astah} ed esportare i diagrammi in formato PNG. Astah supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
 
-\paragraph{Stile di progettazione} L'architettura di \proj{} segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
+\paragraph{Stile di progettazione} \ref{sec:stile} L'architettura di \proj{} segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
 \begin{itemize}
 	\item classi Java;
 	\item prototipi di oggetti JavaScript.
@@ -205,6 +205,9 @@ Per comodità, chiameremo “classi” anche i prototipi di oggetti JavaScript, 
 \end{itemize}
 Al fine di aumentare la manutenibilità del sistema, i progettisti devono seguire le seguenti regole:
 \begin{itemize}
+	\item l'architettura deve rispettare le regole di progettazione che ne garantiscono la completezza (ad es. si evitano package senza elementi, classi non usate, parametri senza un tipo ecc.);
+	\item l'architettura deve rispettare le regole di progettazione che ne garantiscono la correttezza rispetto allo standard UML;
+	\item l'architettura non deve presentare problemi di progettazione che, pur essendo legali per lo standard UML, possano compromettere la qualità generale del sistema (ad es. si evitano dipendenze circolari tra i pacchetti, lunghe liste di parametri ecc.);
 	\item ogni libreria esterna dev'essere utilizzata come puro servizio: non è possibile modificarne il codice (questo per problemi di tempo);
 	\item quando una classe si interfaccia con un'altra, essa non deve conoscere una particolare classe concreta ma soltanto il suo \emph{tipo}, cioè un'interfaccia o una classe astratta;
 	\item ogni componente deve avere un compito ben preciso, ricavabile dal proprio nome e dai metodi che costituiscono la propria interfaccia;
@@ -328,7 +331,7 @@ I programmatori devono caricare il codice sorgente nel repository pubblico \url{
 I processi normati in questa sezione hanno la funzione di supportare gli altri processi, fornendo istruzioni utili alla stesura dei documenti e alla loro verifica.
 
 
-\subsection{Documentazione} \label{sec:doc}
+\subsection{Documentazione di progetto} \label{sec:doc}
 Il gruppo mantiene la documentazione di progetto (tutto ciò che documenta le attività del progetto) in un repository distinto da quello del codice sorgente, come motivato nella sezione \ref{sec:config}. Tale repository è reperibile all'indirizzo \url{https://github.com/hivex-unipd/swedesigner-doc}.
 
 I documenti che svilupperemo sono i seguenti:
@@ -352,34 +355,34 @@ I documenti che svilupperemo sono i seguenti:
 	\end{itemize}
 \end{itemize}
 
-Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione; quelle enunciate con il condizionale vanno interpretate come consigli.
+Riportiamo qui di seguito le norme che riguardano lo sviluppo della documentazione di progetto; quelle enunciate con il condizionale vanno interpretate come consigli.
 
 \subsubsection{Ambiente di lavoro} I documenti vanno mantenuti in una struttura ad albero ben organizzata ma non troppo profonda; il miglior compromesso tra organizzazione e profondità dell'albero è risultato essere il seguente:
 \begin{itemize}
-	\item \texttt{util} contiene librerie e script utili al gruppo per lo sviluppo della documentazione:
+	\item \texttt{util/} contiene librerie e script utili al gruppo per lo sviluppo della documentazione:
 	\begin{itemize}
 		\item \texttt{hx-ambiente.tex} --- dichiarazioni di ambiente per i documenti;
 		\item \texttt{hx-front.sty} --- frontespizio di ogni documento;
 		\item \texttt{hx-macro.sty} --- macro-istruzioni utili ai redattori;
 		\item \texttt{hx-vers.sty} --- macro-istruzioni per ottenere il nome dell'ultima versione di ogni documento;
 		\item \texttt{gloss.py} --- script che segna la prima occorrenza di ogni termine da glossario in ogni documento;
-		\item \texttt{gloss.py} --- script che aggiorna le versioni dei documenti presenti in \texttt{hx-vers.sty}.
+		\item \texttt{vers.py} --- script che aggiorna le versioni dei documenti presenti in \texttt{hx-vers.sty}.
 	\end{itemize}
-	\item \texttt{Interni} contiene cartelle con i documenti ad uso interno del gruppo:
+	\item \texttt{Interni/} contiene cartelle con i documenti ad uso interno del gruppo:
 	\begin{itemize}
-		\item \texttt{Norme_di_progetto};
-		\item \texttt{Studio_di_fattibilita};
-		\item \texttt{Verbali}.
+		\item \texttt{Norme_di_progetto/};
+		\item \texttt{Studio_di_fattibilita/};
+		\item \texttt{Verbali/}.
 	\end{itemize}
-	\item \texttt{Esterni} contiene cartelle con i documenti ad uso esterno:
+	\item \texttt{Esterni/} contiene cartelle con i documenti ad uso esterno:
 	\begin{itemize}
-		\item \texttt{Analisi_dei_requisiti};
-		\item \texttt{Glossario};
-		\item \texttt{Piano_di_progetto};
-		\item \texttt{Piano_di_qualifica};
-		\item \texttt{Specifica_tecnica};
-		\item \texttt{Definizione_di_prodotto};
-		\item \texttt{Verbali}.
+		\item \texttt{Analisi_dei_requisiti/};
+		\item \texttt{Glossario/};
+		\item \texttt{Piano_di_progetto/};
+		\item \texttt{Piano_di_qualifica/};
+		\item \texttt{Specifica_tecnica/};
+		\item \texttt{Definizione_di_prodotto/};
+		\item \texttt{Verbali/}.
 	\end{itemize}
 \end{itemize}
 
@@ -469,7 +472,10 @@ Per uniformare il testo, i redattori sono tenuti a usare le seguenti macro-istru
 	\item \texttt{\textbackslash ZU}, \ZU
 \end{itemize}
 
-\subsubsection{Accessibilità per la stampa} Un documento dev'essere fruibile anche se stampato. Per questo, i collegamenti web vanno scritti esplicitamente con \texttt{\textbackslash url\{indirizzo.del.collegamento\}} anziché nascosti da una parola del testo (come in \texttt{\textbackslash href\{indirizzo.del.collegamento\}\{clicca qui\}}). Inoltre, va minimizzato l'uso di colori, al fine di evitare ambiguità se un documento viene stampato in bassa qualità.
+\subsubsection{Leggibbilità e accessibilità} \label{sec:leggibil}
+La documentazione prodotta deve essere quanto più chiara e comprensibile a tutti gli \gloss{stakeholder} coinvolti nel progetto.
+
+Un documento dev'essere fruibile anche se stampato. Per questo, i collegamenti web vanno scritti esplicitamente con \texttt{\textbackslash url\{indirizzo.del.collegamento\}} anziché nascosti da una parola del testo (come in \texttt{\textbackslash href\{indirizzo.del.collegamento\}\{clicca qui\}}). Inoltre, va minimizzato l'uso di colori, al fine di evitare ambiguità se un documento viene stampato in bassa qualità.
 
 
 
@@ -532,7 +538,7 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\end{description}
  
 	\subsubsection{Analisi dinamica}
-	L'analisi dinamica viene effettuata tramite dei test sul software prodotto. Questi test devono verificare la correttezza del software e devono essere ripetibili.
+	I verificatori devono effettuare analisi dinamica sul codice tramite dei test . I test devono verificare la correttezza del software e devono essere ripetibili.
 	\paragraph{Test di unità}
 		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola. Vengono identificati dalla seguente sintassi:
 			\[TU[Codice Test]\]
@@ -684,48 +690,49 @@ I processi normati in questa sezione servono all'organizzazione che li istanzia 
 
 \subsubsection{Ruoli} \label{sec:ruoli}
 Verranno assegnati dei ruoli corrispondenti a quelli professionali per lo sviluppo del progetto. Ogni membro del team è tenuto a ricoprire almeno una volta tutti i ruoli sotto indicati. Sarà inoltre garantito che non si presentino conflitti di interesse se una persona è sia redattore che verificatore di uno stesso documento. È possibile ricoprire più ruoli contemporaneamente.
+Ogni attività di un processo verrà svolta da parte di colui a cui è stata assegnata, rispettando la pianificazione temporale stabilita nel documento \PdP{} e svolgendo tutti i compiti in cui essa si articola.
 \paragraph{Responsabile di progetto}
 Il responsabile di progetto detiene la responsabilità di tutto il team ed il potere decisionale. Si occupa inoltre delle comunicazione esterne del team.
 In particolare ha responsabilità riguardo a:
 \begin{itemize}
-	\item Coordinamento, pianificazione e controllo delle attività;
-	\item Gestione delle risorse;
-	\item Analisi e gestione dei rischi;
-	\item Approvazione dei documenti;
-	\item Comunicazioni esterne;
-	\item Assegnazione compiti ai vari individui;
-	\item Convocazioni riunioni interne.
+	\item coordinamento, pianificazione e controllo delle attività;
+	\item gestione delle risorse;
+	\item analisi e gestione dei rischi;
+	\item approvazione dei documenti;
+	\item comunicazioni esterne;
+	\item assegnazione compiti ai vari individui;
+	\item convocazioni riunioni interne.
 \end{itemize}
 I suoi compiti saranno quindi:
 \begin{itemize}
-	\item Redigere organigramma e il Piano di Progetto;
-	\item Collaborare nella stesura del Piano di Qualifica;
-	\item Assicurarsi che le attività svolte seguano le indicazioni delle Norme di Progetto;
-	\item Garantire che vengano rispettati i ruoli;
-	\item Evitare conflitti di interesse tra redattori e verificatori;
-	\item Assegnare e gestire task agli altri membri del gruppo;
-	\item Approvare in modo definito i documenti.
+	\item redigere organigramma e il Piano di Progetto;
+	\item collaborare nella stesura del Piano di Qualifica;
+	\item assicurarsi che le attività svolte seguano le indicazioni delle Norme di Progetto;
+	\item garantire che vengano rispettati i ruoli;
+	\item evitare conflitti di interesse tra redattori e verificatori;
+	\item assegnare e gestire task agli altri membri del gruppo;
+	\item approvare in modo definito i documenti.
 \end{itemize}
 \paragraph{Amministratore}
 L'amministratore ha la responsabilità sull'ambiente di lavoro.
 I suoi compiti sono quindi:
 \begin{itemize}
-	\item Gestione ambiente di lavoro attrezzando il team di strumenti necessari;
-	\item Aggiungere all'ambiente di lavoro strumenti di automazione del lavoro;
-	\item Gestione e versionamento della documentazione;
-	\item Controllo versioni e configurazioni del prodotto;
-	\item Risoluzione problemi riguardanti la gestione delle risorse e dei processi.
+	\item gestione ambiente di lavoro attrezzando il team di strumenti necessari;
+	\item aggiungere all'ambiente di lavoro strumenti di automazione del lavoro;
+	\item gestione e versionamento della documentazione;
+	\item controllo versioni e configurazioni del prodotto;
+	\item risoluzione problemi riguardanti la gestione delle risorse e dei processi.
 \end{itemize}
 L'amministratore è incaricato di redigere le Norme di Progetto, la parte del Piano di Qualifica riguardante metodi e strumenti di verifica e collabora alla stesura del Piano di Progetto.
 \paragraph{Analista}
 L'analista è responsabile di tutto quello che riguarda l'analisi del problema.
 In particolare dovrà:
 \begin{itemize}
-	\item Studiare a fondo natura e problematiche del prodotto che si andrà a realizzare;
-	\item Classificare requisiti;
-	\item Redigere diagrammi dei casi d'uso
-	\item Produrre una specifica di progetto precisa in ogni sui punto e comprensibile dal proponente, dal committente e dai progettisti.
-	\item Redigere lo Studio di Fattibilità e l'Analisi dei Requisiti.
+	\item studiare a fondo natura e problematiche del prodotto che si andrà a realizzare;
+	\item classificare requisiti;
+	\item redigere diagrammi dei casi d'uso
+	\item produrre una specifica di progetto precisa in ogni sui punto e comprensibile dal proponente, dal committente e dai progettisti.
+	\item redigere lo Studio di Fattibilità e l'Analisi dei Requisiti.
 \end{itemize}
 L'analista redige lo Studio di Fattibilità e l'Analisi dei Requisiti.
 \paragraph{Progettista}
@@ -740,16 +747,16 @@ Il progettista redige la specifica tecnica, la definizione di prodotto e le sezi
 Il programmatore è responsabile delle attività di codifica e delle commenti ausiliarie necessari per il processo di verifica.
 In particolare i suoi compiti sono:
 \begin{itemize}
-	\item Implementare in modo rigoroso le soluzioni descritte dal progettista;
-	\item Scrivere codice documentato e che rispetti le convenzioni e le metriche stabilite;
-	\item Implementare i test da eseguire sul codice scritto necessari per l'attività di verifica.
+	\item implementare in modo rigoroso le soluzioni descritte dal progettista;
+	\item scrivere codice documentato e che rispetti le convenzioni e le metriche stabilite;
+	\item implementare i test da eseguire sul codice scritto necessari per l'attività di verifica.
 \end{itemize}
 Il programmatore  ha il compito di redigere il manuale utente. 
 \paragraph{Verificatore}
 Il verificatore è responsabile delle attività di verifica.
 I suoi compiti sono:
 \begin{itemize}
-	\item Controllare la conformità del prodotto ad ogni stadio del sup ciclo di vita;
+	\item controllare la conformità del prodotto ad ogni stadio del sup ciclo di vita;
 	\item garantire che le attività attuate seguano le norme stabilite.
 \end{itemize}
 Il \emph{verificatore} redige la sezione del Piano di Qualifica che illustra l'esito delle verifiche effettuate.
@@ -812,8 +819,8 @@ Attualmente sono state create le seguenti colonne:
 \end{description}
 
 \paragraph{Diagrammi di pianificazione}
-InstaGantt permette di visualizzare i vari task in un asse temporale, producendo così un \gloss{diagramma di Gantt}. 
-Vanno rispettate le seguenti convenzioni:
+InstaGantt permette di visualizzare i vari task in un asse temporale, producendo così un \gloss{diagramma di Gantt}.
+Il responsabile di progetto deve rispettate le seguenti convenzioni:
 \begin{itemize}
 	\item Il nome di ogni task o sottotask deve essere univoco; per alcuni task ripetuti, come ad esempio l'incremento di un certo documento, si inserisce in coda la revisione che lo richiede (ad esempio "Incremento Piano di Qualifica [RP]" significa che il Piano di Qualifica è stato incrementato a causa della deadline della revisione di progettazione del \TV).
 	\item Ogni task di livello più basso dev'essere contrassegnato da un tag che sancisce il ruolo che una persona adotta per quel task; i ruoli sono quelli in sezione \ref{sec:ruoli}, identici a quelli definiti in \PdP.
