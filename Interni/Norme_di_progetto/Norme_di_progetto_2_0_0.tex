@@ -119,7 +119,7 @@ Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo
 Il gruppo mantiene il codice sorgente del prodotto in un \gloss{repository} pubblico su \gloss{GitHub}. Tale repository è reperibile all'indirizzo \url{https://github.com/hivex-unipd/swedesigner}.
 
 \subsubsection{Analisi dei requisiti}
-Al termine dello studio di fattibilità, gli analisti devono elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di Analisi dei Requisiti (\AdR); questo documento contiene i requisiti e i \gloss{casi d'uso} individuati nelle riunioni svolte.
+Al termine dello studio di fattibilità, gli analisti devono elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di Analisi dei Requisiti (attualmente \AdR); questo documento contiene i requisiti e i \gloss{casi d'uso} individuati nelle riunioni svolte.
 
 Per tracciare le relazioni tra casi d'uso e requisiti, gli analisti devono usare l'applicazione web \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario; inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) e consente il rispetto delle linee guida di struttura descritte in seguito.
 
@@ -173,7 +173,7 @@ dove $x$ è un numero che identifica il caso d'uso. Ogni macro-caso d'uso sarà 
 \end{description}
 
 \subsubsection{Progettazione} \label{sec:design}
-\paragraph{Attività progettuali} Il lavoro dei progettisti consiste nel progettare struttura e comportamento del software; nello specifico, questo lavoro si articola in due attività:
+\paragraph{Attività progettuali} Il lavoro dei progettisti consiste nel progettare struttura e comportamento del software in modo da implementare tutti i requisiti obbligatori individuati dagli analisti; inoltre, i progettisti dovranno prevedere anche la copertura di almeno l'80\% dei requisiti desiderabili, come fissato nel Piano di Qualifica. Nello specifico, il lavoro dei progettisti si articola in due attività:
 \begin{enumerate}
 	\item \textbf{Progettazione architetturale} (descritta in §5.3.5 di ISO/IEC 12207:1995) --- definire l'\emph{architettura} del sistema, cioè individuare e descrivere le componenti del sistema, esplicitandone ruoli e relazioni tra essi; ogni progettista documenta i prodotti di questa attività nel documento di Specifica Tecnica.
 	\item \textbf{Progettazione di dettaglio} (descritta in §5.3.6 di ISO/IEC 12207:1995) --- definire, in dettaglio, il \emph{comportamento} delle componenti del sistema; ogni progettista documenta i prodotti di questa attività nel documento di Definizione di Prodotto.
@@ -193,7 +193,7 @@ Per ognuna di queste due attività, ogni progettista deve definire dei test che 
 \end{itemize}
 Per disegnare i diagrammi appena esposti, i progettisti devono usare il software gratuito \gloss{Astah} ed esportare i diagrammi in formato PNG. Astah supporta la generazione di tutti i diagrammi che vengono usati dal gruppo (classi, attività, sequenza e package).
 
-\paragraph{Stile di progettazione} \ref{sec:stile} L'architettura di \proj{} segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
+\paragraph{Stile di progettazione} \label{sec:stile} L'architettura di \proj{} segue lo stile dell'\textbf{orientazione agli oggetti}; perciò, le componenti software descritte nei diagrammi delle classi sono:
 \begin{itemize}
 	\item classi Java;
 	\item prototipi di oggetti JavaScript.
@@ -269,8 +269,8 @@ Al fine di uniformare il codice sorgente, i programmatori devono rispettare le s
 	\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:design}, tranne che devono essere preferibilmente dei sostantivi.
 \end{itemize}
 
-\paragraph{Ricorsione}
-Il programmatore deve evitare la ricorsione. Nel caso fosse molto difficile trovare un metodo iterativo equivalente, egli è tenuto a fornire una prova di terminazione dell'algoritmo ricorsivo.
+\paragraph{Efficienza} \label{sec:efficienza}
+Il programmatore deve produrre codice sorgente efficiente. In particolare, deve evitare la ricorsione; nel caso fosse molto difficile trovare un metodo iterativo equivalente, egli è tenuto a fornire una prova di terminazione dell'algoritmo ricorsivo.
 
 \paragraph{Documentazione del codice}
 Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
@@ -537,8 +537,8 @@ La verifica è un processo analitico che va implementato in due passi successivi
 		\item[tracciabilità] l'esistenza di ogni unità del codice dev'essere tracciabile in riferimento alla progettazione.
 	\end{description}
  
-	\subsubsection{Analisi dinamica}
-	I verificatori devono effettuare analisi dinamica sul codice tramite dei test . I test devono verificare la correttezza del software e devono essere ripetibili.
+	\subsubsection{Analisi dinamica} \label{sec:an_dinam}
+	I verificatori devono effettuare analisi dinamica sul codice tramite dei test . Questi devono verificare la correttezza del software e devono essere ripetibili. Come stabilito nel Piano di Qualifica, il prodotto deve superare tutti i test implementati.
 	\paragraph{Test di unità}
 		I test di unità hanno lo scopo di verificare che ogni singola unità (parte di un componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola. Vengono identificati dalla seguente sintassi:
 			\[TU[Codice Test]\]

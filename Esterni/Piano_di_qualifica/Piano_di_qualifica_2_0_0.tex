@@ -48,7 +48,7 @@
 		\begin{itemize}
 			\item \NdP;
 			\item \textbf{Capitolato d'Appalto C6, \proj}: \\
-			\url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato il 08/02/2017;
+			\url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C6.pdf}, visitato il 08/02/2017;
 			\item \textbf{Standard ISO/IEC 12207:2008}: \\
 			\url{ieeexplore.ieee.org/document/4475826/}, visitato il 08/02/2017;
 			\item \textbf{Standard ISO/IEC 15504}: \\
@@ -95,7 +95,7 @@
 
 		Ad ogni obiettivo di qualità sono associate una o più metriche allo scopo di rendere misurabile la valutazione del suo raggiungimento o meno; ad ogni metrica, inoltre, si riferisce un valore o un range che stabilisce in senso strategico l'obiettivo qualitativo che il team si prefigge di raggiungere. Da sottolineare che anche le metriche relative alla qualità del prodotto software costituiscono un'indicazione preziosa per valutare la qualità dei processi in atto: infatti un prodotto di bassa qualità è indicativo di un processo da migliorarsi.
 
-		\subsubsection{Obiettivi di qualità di processo}
+		\subsubsection{Obiettivi di qualità di processo} \label{sec:ob_qual_proc}
 		In questa sezione vengono elencati i principali processi software identificati dal team sulla base dello standard ISO/IEC 12207:2008 e, per ognuno di essi, gli obiettivi di qualità perseguiti.
 
 \paragraph{Pianificazione di progetto, verifica e controllo}
@@ -117,7 +117,7 @@ Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 \paragraph{Gestione della documentazione}
 Il processo, corrispondente al processo 7.2.1 definito in ISO/IEC 12207:2008, ha lo scopo di produrre e gestire la documentazione relativa alle funzionalità e alle caratteristiche del sistema software prodotto.
 
-Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
+Gli obiettivi di pianificazione e le metriche ad essi associate sono i seguenti:
 \begin{center}
 \begin{tabular}{| l | l | r |}
 	\hline
@@ -284,52 +284,139 @@ Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 			\item \textbf{verifica}: il processo che stabilisce se il prodotto in uscita da una fase è consistente, corretto e completo. Per tutta la durata del progetto verranno svolte attività di verifica.
 			\item \textbf{validazione}: la conferma oggettiva che il sistema soddisfa i requisiti.
 		\end{itemize}
-		\subsubsection{Obiettivi di qualità del prodotto}
+		\subsubsection{Obiettivi di qualità del prodotto} \label{sec:ob_qual_sw}
 		Gli obiettivi di qualità del software che il gruppo \hx{} desidera raggiungere nell'arco del progetto sono un sottoinsieme di quelli enunciati nello standard ISO/IEC 9126:2001.
+
+	\paragraph{Funzionalità}
+	Intendiamo far sì che il prodotto possieda tutte le funzionalità descritte dai requisiti obbligatori e gran parte di quelle descritte dai requisiti desiderabili. I nostri obiettivi di funzionalità del prodotto e le metriche ad essi associate sono i seguenti:
+	\begin{center}
+	\begin{tabular}{| l | r |}
+		\hline
+		\textbf{metrica} & \textbf{obiettivo} \\
+		\hline
+		copertura dei requisiti obbligatori & $100$ \\
+		\hline
+		copertura dei requisiti desiderabili & $[80, 100]$ \\
+		\hline
+	\end{tabular}
+	\end{center}
+
+	\paragraph{Affidabilità}
+	Intendiamo testare il prodotto negli aspetti più importanti e in determinate situazioni nelle quali esso si può trovare. I nostri obiettivi di affidabilità e le metriche ad essi associate sono i seguenti:
+	\begin{center}
+	\begin{tabular}{| l | r |}
+		\hline
+		\textbf{metrica} & \textbf{obiettivo} \\
+		\hline
+		percentuale di test superati & $100$ \\
+		\hline
+	\end{tabular}
+	\end{center}
+
+	\paragraph{Efficienza}
+	Il codice sorgente di \proj{} non presenterà alto grado di complessità. A tal fine, i nostri obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
+	\begin{center}
+	\begin{tabular}{| l | r |}
+		\hline
+		\textbf{metrica} & \textbf{obiettivo} \\
+		\hline
+		Profondità di annidamento dei blocchi & $[0, 4]$ \\
+		\hline
+	\end{tabular}
+	\end{center}
+
+	\paragraph{Manutenibilità}
+	Il codice sorgente di \proj{} risulterà manutenibile e facilmente comprensibile. I nostri obiettivi di manutenibilità e le metriche ad essi associate sono i seguenti:
+	\begin{center}
+	\begin{tabular}{| l | r |}
+		\hline
+		\textbf{metrica} & \textbf{obiettivo} \\
+		\hline
+		Numero di linee di codice per metodo & $[0, 20]$ \\
+		\hline
+		Numero di parametri per metodo & $[0, 4]$ \\
+		\hline
+		Numero di campi dati per classe & $[0, 10]$ \\
+		\hline
+		Numero di metodi per classe & $[0, 10]$ \\
+		\hline
+		Grado di accoppiamento afferente per package & $[0, 7]$ \\
+		\hline
+		Grado di accoppiamento efferente per package & $[0, 6]$ \\
+		\hline
+		Complessità ciclomatica per metodo & $[0, 8]$ \\
+		\hline
+		Numero di tipi per package & $[0, 20]$ \\
+		\hline
+		Distanza dalla sequenza principale normalizzata & $[0, 0.5]$ \\
+		\hline
+		Instabilità & $[0, 0.3]$ e $[0.7, 1.0]$ \\
+		\hline
+		Percentuale linee di commento su linee di codice & $[20, 40]$ \\
+		\hline
+		Numero di figli diretti & $[0, 2]$ \\
+		\hline
+		Profondità nella gerarchia & $[1, 2]$ \\
+		\hline
+	\end{tabular}
+	\end{center}
+
+	\paragraph{Portabilità}
+	\proj{} dovrà poter garantire le sue funzionalità in browser differenti. Gli obiettivi di portabilità e le metriche ad essi associate sono i seguenti:
+	\begin{center}
+	\begin{tabular}{| l | r |}
+		\hline
+		\textbf{metrica} & \textbf{obiettivo} \\
+		\hline
+		Numero di errori segnalati dalla validazione \gloss{W3C} & $0$ \\
+		\hline
+	\end{tabular}
+	\end{center}
+
 		
-		 	\paragraph{Funzionalità}
-		 	Il prodotto possiede tutte le funzionalità descritte all'interno dei requisiti obbligatori e gran parte delle funzionalità descritte all'interno dei requisiti desiderabili.
-		 	Gli obiettivi di funzionalità e le metriche ad essi associate sono i seguenti:
-		 	\begin{itemize}
-				\item \textbf{copertura dei requisiti obbligatori}: l'obiettivo stabilito per la metrica è il valore $100$;
-				\item \textbf{copertura dei requisiti desiderabili}: l'obiettivo stabilito per la metrica è l'intervallo $[80, 100]$.
-			\end{itemize}
-		 	\paragraph{Affidabilità}
-		 	Il prodotto è testato negli aspetti più importanti e in determinate situazioni nelle quali esso si può trovare.
-		 	Gli obiettivi di affidabilità e le metriche ad essi associate sono i seguenti:
-		 	\begin{itemize}
-				\item \textbf{percentuale di test superati}: l'obiettivo stabilito per la metrica è il valore $100$.
-			\end{itemize}
-		 	\paragraph{Efficienza}
-		 	Il prodotto presenta codice senza elevati gradi di complessità relativamente ad alcuni vincoli definiti.
-		 	Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
-		 	\begin{itemize}
-				\item \textbf{Profondità di annidamento dei blocchi}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 4]$;
-			\end{itemize}
-		 	\paragraph{Manutenibilità}
-		 	Il codice risulta manutenibile e facilmente comprensibile.
-		 	Gli obiettivi di manutenibilità e le metriche ad essi associate sono i seguenti:
-		 	\begin{itemize}
-				\item \textbf{Numero di linee di codice per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 20]$; 
-				\item \textbf{Numero di parametri per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 4]$;
-				\item \textbf{Numero di campi dati per classe}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 10]$;
-				\item \textbf{Numero di metodi per classe}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 10]$;
-				\item \textbf{Grado di accoppiamento afferente per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 7]$;
-				\item \textbf{Grado di accoppiamento efferente per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 6]$;
-				\item \textbf{Complessità ciclomatica per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 8]$;
-				\item \textbf{Numero di tipi per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 20]$;
-				\item \textbf{Distanza dalla sequenza principale normalizzata}: l'obiettivo stabilito per la metrica è l'intervallo $[0.0, 0.5]$; 
-				\item \textbf{Instabilità}: l'obiettivo stabilito per la metrica sono gli intervalli $[0.0, 0.3]$ e $[0.7, 1.0]$; 
-				\item \textbf{Percentuale linee di commento su linee di codice}: l'obiettivo stabilito per la metrica è l'intervallo $[20, 40]$;	
-				\item \textbf{Numero di figli diretti}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 2]$;
-				\item \textbf{Profondità nella gerarchia}: l'obiettivo stabilito per la metrica è l'intervallo $[1, 2]$;
-			\end{itemize}
-			\paragraph{Portabilità}
-		 	Il prodotto deve poter garantire le sue funzionalità in browser differenti.
-		 	Gli obiettivi di portabilità e le metriche ad essi associate sono i seguenti:
-		 	\begin{itemize}
-				\item \textbf{Numero di errori segnalati dalla validazione \gloss{W3C}}: l'obiettivo stabilito per la metrica è il valore $0$.
-			\end{itemize}
+		 % 	\paragraph{Funzionalità}
+		 % 	Il prodotto possiede tutte le funzionalità descritte all'interno dei requisiti obbligatori e gran parte delle funzionalità descritte all'interno dei requisiti desiderabili.
+		 % 	Gli obiettivi di funzionalità e le metriche ad essi associate sono i seguenti:
+		 % 	\begin{itemize}
+			% 	\item \textbf{copertura dei requisiti obbligatori}: l'obiettivo stabilito per la metrica è il valore $100$;
+			% 	\item \textbf{copertura dei requisiti desiderabili}: l'obiettivo stabilito per la metrica è l'intervallo $[80, 100]$.
+			% \end{itemize}
+		 % 	\paragraph{Affidabilità}
+		 % 	Il prodotto è testato negli aspetti più importanti e in determinate situazioni nelle quali esso si può trovare.
+		 % 	Gli obiettivi di affidabilità e le metriche ad essi associate sono i seguenti:
+		 % 	\begin{itemize}
+			% 	\item \textbf{percentuale di test superati}: l'obiettivo stabilito per la metrica è il valore $100$.
+			% \end{itemize}
+		 % 	\paragraph{Efficienza}
+		 % 	Il prodotto presenta codice senza elevati gradi di complessità relativamente ad alcuni vincoli definiti.
+		 % 	Gli obiettivi di efficienza e le metriche ad essi associate sono i seguenti:
+		 % 	\begin{itemize}
+			% 	\item \textbf{Profondità di annidamento dei blocchi}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 4]$;
+			% \end{itemize}
+		 % 	\paragraph{Manutenibilità}
+		 % 	Il codice risulta manutenibile e facilmente comprensibile.
+		 % 	Gli obiettivi di manutenibilità e le metriche ad essi associate sono i seguenti:
+		 % 	\begin{itemize}
+			% 	\item \textbf{Numero di linee di codice per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 20]$; 
+			% 	\item \textbf{Numero di parametri per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 4]$;
+			% 	\item \textbf{Numero di campi dati per classe}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 10]$;
+			% 	\item \textbf{Numero di metodi per classe}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 10]$;
+			% 	\item \textbf{Grado di accoppiamento afferente per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 7]$;
+			% 	\item \textbf{Grado di accoppiamento efferente per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 6]$;
+			% 	\item \textbf{Complessità ciclomatica per metodo}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 8]$;
+			% 	\item \textbf{Numero di tipi per package}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 20]$;
+			% 	\item \textbf{Distanza dalla sequenza principale normalizzata}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 0.5]$; 
+			% 	\item \textbf{Instabilità}: l'obiettivo stabilito per la metrica sono gli intervalli $[0, 0.3]$ e $[0.7, 1.0]$; 
+			% 	\item \textbf{Percentuale linee di commento su linee di codice}: l'obiettivo stabilito per la metrica è l'intervallo $[20, 40]$;	
+			% 	\item \textbf{Numero di figli diretti}: l'obiettivo stabilito per la metrica è l'intervallo $[0, 2]$;
+			% 	\item \textbf{Profondità nella gerarchia}: l'obiettivo stabilito per la metrica è l'intervallo $[1, 2]$;
+			% \end{itemize}
+			% \paragraph{Portabilità}
+		 % 	Il prodotto deve poter garantire le sue funzionalità in browser differenti.
+		 % 	Gli obiettivi di portabilità e le metriche ad essi associate sono i seguenti:
+		 % 	\begin{itemize}
+			% 	\item \textbf{Numero di errori segnalati dalla validazione \gloss{W3C}}: l'obiettivo stabilito per la metrica è il valore $0$.
+			% \end{itemize}
 
 
 
