@@ -1,0 +1,151 @@
+% Analisi dei Requisiti
+% da compilare con il comando pdflatex Analisi_dei_requisiti_x.x.x.tex
+
+\input{../../util/hx-ambiente}
+
+\version{0.0.1}
+\creaz{2 aprile 2017}
+\author{...}
+\supervisor{...}
+\uso{esterno}
+\dest{utente}
+\title{Manuale Utente}
+
+\begin{document}
+\maketitle
+\include{diario}
+\tableofcontents
+
+
+
+
+
+%%%%%%%%%%%%%%%%
+%%  Introduzione
+%%%%%%%%%%%%%%%%
+
+\section{Introduzione}
+
+\subsection{Scopo del documento}
+Questo manuale spiega le funzionalità e le modalità d'utilizzo dell'applicazione \proj. Esso vuole essere sia una guida introduttiva sia un riferimento completo per l'utilizzo del prodotto.
+
+\subsection{Pubblico}
+Il manuale è rivolto agli utenti del prodotto. Assumiamo che l'utente di \proj{} possegga delle conoscenze almeno basilari nel campo della programmazione ad oggetti e della progettazione di software; in particolare, assumiamo che l'utente conosca il significato dei seguenti termini:
+\begin{itemize}
+	\item classe;
+	\item oggetto;
+	\item UML;
+	\item diagramma UML delle classi;
+	\item istruzione;
+	\item ciclo;
+	\item condizione.
+\end{itemize}
+
+\subsection{Scopo del prodotto}
+\scopo
+
+\subsection{Glossario}
+\presgloss
+
+\subsection{Riferimenti informativi}
+\begin{itemize}
+	\item ...
+\end{itemize}
+
+
+
+
+
+%%%%%%%%%%%%%
+%%  Requisiti
+%%%%%%%%%%%%%
+
+\section{Requisiti}
+
+\proj{} è un'applicazione web: l'utente vi accede quindi con un browser web. Assicuriamo il funzionamento del nostro prodotto sui seguenti browser (o su loro versioni successive):
+\begin{itemize}
+	\item ...
+	\item ...
+	\item ...
+	\item ...
+\end{itemize}
+Sul browser dev'essere attivato JavaScript.
+
+
+
+
+
+%%%%%%%%%%%%
+%%  Utilizzo
+%%%%%%%%%%%%
+
+\section{Utilizzo} % GUI, issues, Java, JSON, API REST, (test effettuati?), screenshot, ...
+
+
+\subsection{Interfaccia grafica}
+
+Potete accedere a \proj{} dall'indirizzo \url{\webroot}. Vi viene subito presentato un diagramma delle classi vuoto, sul quale potete iniziare un nuovo progetto. Ai lati e in alto sono presenti delle barre con dei menù, mentre al centro vi è l'area di lavoro.
+
+
+\subsection{Creare un nuovo progetto}
+
+...
+
+
+\subsection{Salvare il progetto}
+
+...
+
+
+\subsection{Caricare un progetto}
+
+...
+
+
+\subsection{Generare un eseguibile dal progetto}
+
+...
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Risoluzione dei problemi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Risoluzione dei problemi}
+
+È possibile riscontrare dei problemi nei seguenti ambiti:
+\begin{enumerate}
+	\item durante l'esecuzione del programma generato;
+	\item nel tentativo di accedere all'applicazione;
+	\item nell'utilizzo dell'applicazione stessa.
+\end{enumerate}
+
+
+\subsection{Programma generato malfunzionante}
+
+Può capitare che l'applicazione generata, mente la eseguite, si interrompa bruscamente a causa di un'eccezione o per qualche altro motivo. In questi casi la causa va ricercata principalmente nella progettazione dell'applicazione, cioè nel momento in cui voi avete disegnato i diagrammi dell'applicazione.
+
+In particolare, possibili cause di malfunzionamento della vostra applicazione posso essere (dalla più probabile alla meno probabile):
+\begin{itemize}
+	\item avete omesso di gestire qualche eccezione;
+	\item avete previsto un metodo ricorsivo che sopravvaluta la memoria della vostra macchina;
+	\item avete inserito un “blocco custom” maligno nel diagramma di qualche metodo, cioè un'istruzione legittima che però interrompe la vostra applicazione;
+	\item avete altrimenti introdotto qualche bug non segnalato in progettazione né in compilazione;
+	\item avete trovato un bug in \proj.
+\end{itemize}
+
+
+\subsection{Accesso all'applicazione non possibile}
+
+Può capitare (raramente) che non si riesca ad accedere all'indirizzo \url{\webroot}. In tal caso potete recarvi all'indirizzo \url{http://www.downforeveryoneorjustme.com} per verificare se il problema è relativo al vostro provider o al nostro server.
+
+
+\subsection{Problemi con l'utilizzo di \proj}
+
+È possibile che \proj{} contenga dei piccoli bug. Potete segnalare qualsiasi malfunzionamento all'indirizzo \url{https://github.com/hivex-unipd/swedesigner/issues}, sotto forma di \emph{GitHub issue}.
+
+
+\end{document}
