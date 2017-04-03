@@ -13,7 +13,7 @@
 
 \subsubsection{Motivazione} Grazie a questo pattern è possibile separare la responsabilità di uso e creazione di un oggetto. Il componente dipendente dovrà solo sapere come usare un servizio richiesto, mentre il compito di creare ed iniettare quest'ultimo spetta ad un injector. Questo permette al componente dipendente di essere altamente configurabile in quanto è fisso solo il suo comportamento.
 
-\subsubsection{Struttura} Sono coinvolti 3 componenti nella dependency injection:
+\subsubsection{Struttura} Sono coinvolte 3 componenti nella dependency injection:
 \begin{enumerate}
 	\item gli oggetti servizi(ossia un qualsiasi oggetto che potrebbe essere usato);
 	\item l'oggetto dipendente da questi servizi;
@@ -36,7 +36,7 @@
 
 \subsubsection{Scopo} Permette di isolare la porzione di codice che effettua un'azione dal codice che ne richiede l'esecuzione. Tale azione è incapsulata nell'oggetto Command.
 
-\subsubsection{Struttura} Sono coinvolti i seguenti componenti:
+\subsubsection{Struttura} Sono coinvolte le seguenti componenti:
 \begin{enumerate}
 	\item Client: colui che richiede il comando  ed imposta il Receiver;
 	\item Invoker: colui che effettua l'invocazione del comando;
@@ -62,7 +62,7 @@
 
 \subsubsection{Scopo} Indirizza il problema della creazione di oggetti senza specificarne la classe esatta fornendo un'interfaccia per creare l'oggetto, ma lascia che le sottoclassidecidano quale oggetto istanziare.
 
-\subsubsection{Struttura} Sono coinvolti i seguenti componenti:
+\subsubsection{Struttura} Sono coinvolte le seguenti componenti:
 \begin{enumerate}
 	\item Creator (\texttt{VehicleFactory}): dichiara la Factory che avrà il compito di ritornare l'oggetto appropriato;
 	\item Product (\texttt{Vehicle}): definisce l'interfaccia dell'oggetto che deve essere creato dalla Factory;
@@ -85,7 +85,7 @@
 
 \subsubsection{Scopo} Questo pattern viene utilizzato quando si vuole realizzare una dipendenza uno-a-molti in cui il cambiamento di stato di un soggetto venga notiifcato a tutui i soggetti che si sono mostrati interessati.
 
-\subsubsection{Struttura} Sono coinvolti i seguenti componenti:
+\subsubsection{Struttura} Sono coinvolte le seguenti componenti:
 \begin{enumerate}
 	\item Subject: espone l’interfaccia che consente agli osservatori di iscriversi e cancellarsi mantenendi una reference a tutti gli osservatori iscritti;
 	\item Observer: espone l’interfaccia che consente di aggiornare gli osservatori in caso di cambio di stato del soggetto osservato;

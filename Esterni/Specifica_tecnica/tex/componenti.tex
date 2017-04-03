@@ -29,10 +29,10 @@
 \subsubsection{server}
 --immagine package server con la classe controller che comunica con la classe Project contenuta nel package generator--
 \begin{description}
-\item[Descrizione] è il package che racchiude tutti i componenti del back-end che si occupano di soddisfare le richieste provenienti dal front-end ed elaborarle;
+\item[Descrizione] è il package che racchiude tutte le componenti del back-end che si occupano di soddisfare le richieste provenienti dal front-end ed elaborarle;
 \item[Package contenuti] 
 	\begin{itemize}
-	\item server::endpoints (in teoria nn c'è);
+	\item server::endpoints (in teoria non c'è);
 	\item server::generator;
 	\end{itemize}
 \item[Interazione con altri componenti] interagisce con il client definito nella sez xxx tramite i servizi REST offerti. (in teoria non c'è)
@@ -52,13 +52,13 @@
 \subsubsection{server::generator}
 --immagine--
 \begin{description}
-\item[Descrizione] è il package che contiene tutti i componenti che definiscono la logica necessaria per soddisfare le richieste il arrivo dal client;
+\item[Descrizione] è il package che contiene tutte le componenti che definiscono la logica necessaria per soddisfare le richieste il arrivo dal client;
 \item[Padre] server; 
 \item[Package contenuti]
 	\begin{itemize}
 	...
 	\end{itemize}
-\item[Interazione con altri componenti] 
+\item[Interazione con altre componenti] 
 	\begin{itemize}
 	\item server::Controller.
 	\end{itemize}

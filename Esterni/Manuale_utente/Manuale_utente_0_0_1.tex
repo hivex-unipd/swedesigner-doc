@@ -93,19 +93,45 @@ Potete accedere a \proj{} dall'indirizzo \url{\webroot}. Vi viene subito present
 
 \subsection{Progettare una nuova applicazione} \label{sec:new}
 
-\paragraph{Creare un nuovo progetto}
+\subsubsection{Creare un nuovo progetto}
 Un diagramma delle classi vuoto rappresenta un nuovo progetto; in questo caso potete iniziare subito a progettare una nuova applicazione, saltando questo paragrafo e continuando al paragrafo \ref{par:arch}. Invece, nel caso abbiate un diagramma delle classi già popolato ma vogliate creare un nuovo progetto da zero, cliccate sull'icona del menù in alto a sinistra; dal menù a comparsa, cliccate su \click{New Project}; vi ritroverete con un diagramma delle classi vuoto, corrispondente ad un nuovo progetto.
 
-\paragraph{Progettare l'architettura dell'applicazione} \label{par:arch}
+\subsubsection{Progettare l'architettura dell'applicazione} \label{par:arch}
+Progettare un'applicazione ad oggetti vuol dire innanzitutto specificarne l'architettura. Per fare ciò, dovete popolare il diagramma delle classi che si trova in centro alla pagina.
+
+\paragraph{Creazione di una componente} Potete creare una nuova componente cliccando su un'icona del \textbf{menù di creazione} (visibile a sinistra); ci sono tre icone che rappresentano tre tipi di componente dell'architettura:
+\begin{itemize}
+	\item \emph{Class};
+	\item \emph{Abtract Class};
+	\item \emph{Interface}.
+\end{itemize}
+Oltre a queste, altre icone permettono la creazione di commenti (l'icona \emph{Annotation}) e di relazioni tra componenti (\emph{Generalization}, \emph{Implementation} e \emph{Association}, che verranno introdotte tra poco).
+
+\paragraph{Specifica dell'interfaccia di una componente} Ogni componente è rappresentata nel diagramma da un rettangolo con tre aree, come da standard UML:
+\begin{enumerate}
+	\item un area con il nome della componente;
+	\item un area contenente i campi dati;
+	\item un area contenente i metodi.
+\end{enumerate}
+Cliccando le aree dei campi dati o dei metodi, queste si espandono per mostrare il proprio contenuto. Inizialmente esse sono vuote. Per inserire un campo dati, [...]. Per inserire un metodo, [...]; quando vorrete, potrete definire il comportamento di ogni metodo creato.
+
+\paragraph{Definizione di una relazione tra due componenti} È possibile definire una relazione tra due componenti del diagramma delle classi. Per fare questo, cercate il tipo di relazione desiderato nel menù di creazione (a sinistra) e cliccate sopra all'icona appropriata: apparirà nel diagramma una nuova freccia. Potete trascinare ognuna delle sue punte su una componente, stabilendo così una nuova relazione. Vi sono tre tipi di relazione:
+\begin{itemize}
+	\item \emph{Generalization}, per estendere l'interfaccia di una classe;
+	\item \emph{Implementation}, per implementare un'interfaccia pura;
+	\item \emph{Association}. % ??
+\end{itemize}
+
+\paragraph{Modificare campi dati e metodi} [...] % breve
+
+
+\subsubsection{Definire il comportamento delle componenti}
 ...
 
-\paragraph{Definire il comportamento delle componenti}
+\subsubsection{Modificare l'architettura}
 ...
 
-\paragraph{Modificare l'architettura}
-...
-
-\paragraph{Modificare il comportamento di un metodo}
+\subsubsection{Modificare il comportamento di un metodo}
 ...
 
 
