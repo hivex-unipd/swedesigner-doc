@@ -9,7 +9,7 @@
 \newcommand{\repodoc}{\url{https://github.com/hivex-unipd/swedesigner-doc}}
 \newcommand{\email}{\href{mailto:hivex.team@gmail.com}{hivex.team@gmail.com}}
 
-\newcommand{\scopo}{
+\newcommand{\scopo}{%
 Lo scopo del prodotto è quello di implementare un \gloss{editor} \gloss{UML} che consenta, a partire dai diagrammi realizzati dall'utente, di generare il codice dell'applicazione da esso descritta, appartenente ad uno specifico dominio applicativo: i giochi da tavolo.
 
 Il sistema offrirà le seguenti funzionalità:
@@ -22,7 +22,7 @@ Il sistema offrirà le seguenti funzionalità:
 L'editor dovrà infine essere fruibile dall'utente attraverso un browser desktop idoneo all'utilizzo delle tecnologie \gloss{HTML5}, \gloss{CSS3} e \gloss{JavaScript}.
 }
 
-\newcommand{\presgloss}{
+\newcommand{\presgloss}{%
 Per rendere più semplice e chiara la comprensione ed evitare ogni ambiguità relativa ai termini utilizzati nei documenti, viene allegato il documento \Glossario, nel quale vengono raccolte le spiegazioni di termini tecnici o ambigui, di acronimi o abbreviazioni.
 
 Per rendere più facile la lettura, la prima occorrenza di ogni termine presente nel glossario verrà marcato con il seguente pedice: \ped{$g$}.
@@ -46,12 +46,15 @@ Per rendere più facile la lettura, la prima occorrenza di ogni termine presente
 % Segnatura dei termini nel glossario:
 \newcommand{\gloss}[1]{\textsc{#1}\ped{$g$}}
 
+% Evidenziazione degli oggetti clickabili nell'applicazione:
+\newcommand{\click}[1]{\underline{#1}}
+
 % Ambiente da usare per il diario delle modifiche:
-\newenvironment{diario}{
+\newenvironment{diario}{%
 \begin{longtable}{cp{3cm}cp{5cm}}
 	\textbf{Versione} & \textbf{Autore e Ruolo} & \textbf{Data} & \textbf{Descrizione} \\ \hline
 }
-{
+{%
 	\caption{Diario delle modifiche}
 \end{longtable}
 }
@@ -80,9 +83,9 @@ Per rendere più facile la lettura, la prima occorrenza di ogni termine presente
 \newcommand{\AMx}{\emph{Amministratore}}
 
 % per organigramma
-\newcommand{\myincludegraphics}[2][]{
+\newcommand{\myincludegraphics}[2][]{%
 	\setbox0=\hbox{\phantom{X}}
-	\vtop{
+	\vtop{%
 		\hbox{\phantom{X}}
 		\vskip-\ht0
 		\hbox{\includegraphics[#1]{#2}}

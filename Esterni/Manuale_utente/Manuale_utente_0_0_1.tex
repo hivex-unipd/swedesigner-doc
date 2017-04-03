@@ -5,8 +5,8 @@
 
 \version{0.0.1}
 \creaz{2 aprile 2017}
-\author{...}
-\supervisor{...}
+\author{\LB, \GG, \AZ}
+\supervisor{\PB}
 \uso{esterno}
 \dest{utente}
 \title{Manuale Utente}
@@ -60,7 +60,7 @@ Il manuale è rivolto agli utenti del prodotto. Assumiamo che l'utente di \proj{
 %%  Requisiti
 %%%%%%%%%%%%%
 
-\section{Requisiti}
+\section{Requisiti} \label{sec:requisiti}
 
 \proj{} è un'applicazione web: l'utente vi accede quindi con un browser web. Assicuriamo il funzionamento del nostro prodotto sui seguenti browser (o su loro versioni successive):
 \begin{itemize}
@@ -79,30 +79,50 @@ Sul browser dev'essere attivato JavaScript.
 %%  Utilizzo
 %%%%%%%%%%%%
 
-\section{Utilizzo} % GUI, issues, Java, JSON, API REST, (test effettuati?), screenshot, ...
+\section{Utilizzo} \label{sec:utilizzo} % GUI, issues, Java, JSON, API REST, (test effettuati?), screenshot, ...
+
+Di seguito descriviamo come utilizzare \proj{} per progettare e generare un'applicazione. La sezione \ref{sec:gui} introduce brevemente l'\textbf{interfaccia grafica}; le sezioni \ref{sec:new}, \ref{sec:save} e \ref{sec:load} descrivono come creare, salvare e caricare l'insieme di diagrammi che rappresentano il \textbf{progetto di un'applicazione}; infine, la sezione \ref{sec:gen} spiega come generare un \textbf{programma eseguibile} a partire dai diagrammi di un progetto.
 
 
-\subsection{Interfaccia grafica}
+
+\subsection{Interfaccia grafica} \label{sec:gui}
 
 Potete accedere a \proj{} dall'indirizzo \url{\webroot}. Vi viene subito presentato un diagramma delle classi vuoto, sul quale potete iniziare un nuovo progetto. Ai lati e in alto sono presenti delle barre con dei menù, mentre al centro vi è l'area di lavoro.
 
 
-\subsection{Creare un nuovo progetto}
+
+\subsection{Progettare una nuova applicazione} \label{sec:new}
+
+\paragraph{Creare un nuovo progetto}
+Un diagramma delle classi vuoto rappresenta un nuovo progetto; in questo caso potete iniziare subito a progettare una nuova applicazione, saltando questo paragrafo e continuando al paragrafo \ref{par:arch}. Invece, nel caso abbiate un diagramma delle classi già popolato ma vogliate creare un nuovo progetto da zero, cliccate sull'icona del menù in alto a sinistra; dal menù a comparsa, cliccate su \click{New Project}; vi ritroverete con un diagramma delle classi vuoto, corrispondente ad un nuovo progetto.
+
+\paragraph{Progettare l'architettura dell'applicazione} \label{par:arch}
+...
+
+\paragraph{Definire il comportamento delle componenti}
+...
+
+\paragraph{Modificare l'architettura}
+...
+
+\paragraph{Modificare il comportamento di un metodo}
+...
+
+
+
+\subsection{Salvare il progetto} \label{sec:save} % aggiungere formato non .json ma speciale tipo .hx ?
+
+Ad ogni momento, è possibile salvare i diagrammi disegnati nel proprio computer. Per salvare un progetto (cioè un insieme di diagrammi), cliccate sull'icona del menù (in alto a sinistra) e cliccate \click{Save} dalle voci del menù. Verrà avviato download di un singolo file: questo file rappresenta il vostro progetto e contiene tutte le informazioni sui diagrammi che avete disegnato.
+
+
+
+\subsection{Caricare un progetto} \label{sec:load}
 
 ...
 
 
-\subsection{Salvare il progetto}
 
-...
-
-
-\subsection{Caricare un progetto}
-
-...
-
-
-\subsection{Generare un eseguibile dal progetto}
+\subsection{Generare un eseguibile dal progetto} \label{sec:gen}
 
 ...
 
@@ -114,7 +134,7 @@ Potete accedere a \proj{} dall'indirizzo \url{\webroot}. Vi viene subito present
 %%  Risoluzione dei problemi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Risoluzione dei problemi}
+\section{Risoluzione dei problemi} \label{sec:problemi}
 
 È possibile riscontrare dei problemi nei seguenti ambiti:
 \begin{enumerate}
@@ -122,6 +142,7 @@ Potete accedere a \proj{} dall'indirizzo \url{\webroot}. Vi viene subito present
 	\item nel tentativo di accedere all'applicazione;
 	\item nell'utilizzo dell'applicazione stessa.
 \end{enumerate}
+
 
 
 \subsection{Programma generato malfunzionante}
@@ -138,9 +159,11 @@ In particolare, possibili cause di malfunzionamento della vostra applicazione po
 \end{itemize}
 
 
+
 \subsection{Accesso all'applicazione non possibile}
 
 Può capitare (raramente) che non si riesca ad accedere all'indirizzo \url{\webroot}. In tal caso potete recarvi all'indirizzo \url{http://www.downforeveryoneorjustme.com} per verificare se il problema è relativo al vostro provider o al nostro server.
+
 
 
 \subsection{Problemi con l'utilizzo di \proj}
