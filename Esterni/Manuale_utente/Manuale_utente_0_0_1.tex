@@ -107,7 +107,7 @@ Progettare un'applicazione ad oggetti vuol dire innanzitutto specificarne l'arch
 \end{itemize}
 Oltre a queste, altre icone permettono la creazione di commenti (l'icona \emph{Annotation}) e di relazioni tra componenti (\emph{Generalization}, \emph{Implementation} e \emph{Association}, che verranno introdotte tra poco).
 
-\paragraph{Specifica dell'interfaccia di una componente} Ogni componente è rappresentata nel diagramma da un rettangolo con tre aree, come da standard UML:
+\paragraph{Specifica dell'interfaccia di una componente} \label{par:inter} Ogni componente è rappresentata nel diagramma da un rettangolo con tre aree, come da standard UML:
 \begin{enumerate}
 	\item un area con il nome della componente;
 	\item un area contenente i campi dati;
@@ -125,8 +125,23 @@ Cliccando le aree dei campi dati o dei metodi, queste si espandono per mostrare 
 \paragraph{Modificare campi dati e metodi} [...] % breve
 
 
-\subsubsection{Definire il comportamento delle componenti}
-...
+\subsubsection{Definire il comportamento delle componenti} \label{sec:activity}
+Mentre la segnatura dei metodi di una classe definisce l'interfaccia della classe, l'implementazione dei metodi definisce il \textbf{comportamento} della classe. Quando avete chiaro quale dev'essere il comportamento di una vostra classe cercate la classe nel diagramma delle classi, fate comparire l'elenco dei metodi (si veda §\ref{par:inter}) e cliccate su un metodo che volete implementare. Al posto del diagramma delle classi, comparirà il \textbf{diagramma di attività} del metodo cliccato.
+
+\paragraph{Creazione di blocchi} Ogni metodo è un algoritmo e, in quanto tale, per implementarlo dovete specificare la sequenza di passi che il metodo deve seguire. Ogni passo del metodo può essere una singola istruzione (come un'assegnazione) oppure un'istruzione composita (come un ciclo o un blocco condizionale). Ogni istruzione --- singola o composita --- è rappresentata da un \textbf{blocco}; la barra di creazione (a sinistra) offre diversi tipi di blocchi:
+\begin{itemize}
+	\item \emph{Initialization} dichiara e inizializza una nuova variabile;
+	\item \emph{Assignment} assegna un valore ad una variabile già dichiarata;
+	\item \emph{Return} esce dal metodo e ritorna il valore specificato;
+	\item \emph{For} esegue ciclicamente una sequenza di blocchi (ogni iterazione del ciclo è parametrizzata su una variabile);
+	\item \emph{While} esegue ciclicamente una sequenza di blocchi finché vale una condizione;
+	\item \emph{If} esegue una sequenza di blocchi solo se vale una condizione.
+\end{itemize}
+Cliccando su uno dei blocchi nella barra di creazione, esso verrà inserito nella sequenza di passi del metodo. Ogni nuovo blocco su cui cliccherete  verrà inserito in coda ai blocchi precedentemente inseriti.
+
+\paragraph{Spostamento di blocchi} Ovviamente potete spostare ogni blocco creato e posizionarlo dove volete nella sequenza di passi. Inoltre, potete decidere di inserire un blocco (di qualsiasi tipo) all'interno di un \emph{For}, di un \emph{While} o di un \emph{If}: questi tre tipi di blocchi possono contenerne altri. Per rimarcare che un blocco sta all'interno di un altro, esso viene “indentato”, cioè spostato leggermente a destra rispetto al blocco che lo contiene.
+
+\paragraph{Rimozione di blocchi} [...] % TODO come si fa?
 
 \subsubsection{Modificare l'architettura}
 ...
@@ -138,19 +153,19 @@ Cliccando le aree dei campi dati o dei metodi, queste si espandono per mostrare 
 
 \subsection{Salvare il progetto} \label{sec:save} % aggiungere formato non .json ma speciale tipo .hx ?
 
-Ad ogni momento, è possibile salvare i diagrammi disegnati nel proprio computer. Per salvare un progetto (cioè un insieme di diagrammi), cliccate sull'icona del menù (in alto a sinistra) e cliccate \click{Save} dalle voci del menù. Verrà avviato download di un singolo file: questo file rappresenta il vostro progetto e contiene tutte le informazioni sui diagrammi che avete disegnato.
+Ad ogni momento, è possibile salvare i diagrammi disegnati nel proprio computer. Per salvare un progetto (cioè un insieme di diagrammi), cliccate sull'icona del menù (in alto a sinistra) e selezionate \click{Save} dalle voci del menù. Verrà avviato download di un singolo file: questo file rappresenta il vostro progetto e contiene tutte le informazioni sui diagrammi che avete disegnato.
 
 
 
 \subsection{Caricare un progetto} \label{sec:load}
 
-...
+Se volete lavorare ad un progetto che avete precedentemente salvato, cliccate sull'icona del menù (in alto a sinistra) e selezionate \click{Load} dalle voci del menù. Il vostro browser vi chiederà di indicare quale file volete caricare: sceglietelo e cliccate \click{Ok}. \proj{} verrà popolato con i dati del file caricato. Potete ora continuare a lavorare sul progetto che avevate salvato e, eventualmente, salvarlo di nuovo.
 
 
 
 \subsection{Generare un eseguibile dal progetto} \label{sec:gen}
 
-...
+Quando, infine, i diagrammi che avete disegnato vi sembreranno sufficienti, potrete generare da essi un programma eseguibile. Per fare questo, cliccate sull'icona del menù (in alto a sinistra) e selezionate \click{Generate} dalle voci del menù. Il vostro browser invierà una richiesta di generazione al nostro server. La risposta del server può essere positiva (vi viene inviato il codice eseguibile) o negativa. Quest'ultimo caso si può verificare per vari motivi; il più probabile è che non abbiate progettato bene la vostra applicazione. Se è così, pensate a modificare i vostri diagrammi e riprovate. Si veda §\ref{sec:mal_gen} per gestire bene una risposta negativa del server.
 
 
 
@@ -171,7 +186,7 @@ Ad ogni momento, è possibile salvare i diagrammi disegnati nel proprio computer
 
 
 
-\subsection{Programma generato malfunzionante}
+\subsection{Programma generato malfunzionante} \label{sec:mal_gen}
 
 Può capitare che l'applicazione generata, mente la eseguite, si interrompa bruscamente a causa di un'eccezione o per qualche altro motivo. In questi casi la causa va ricercata principalmente nella progettazione dell'applicazione, cioè nel momento in cui voi avete disegnato i diagrammi dell'applicazione.
 
