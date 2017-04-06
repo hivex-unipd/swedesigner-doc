@@ -27,10 +27,10 @@
 \section{Introduzione}
 
 \subsection{Scopo del documento}
-Questo manuale spiega le funzionalità e le modalità d'utilizzo dell'applicazione \proj. Esso vuole essere sia una guida introduttiva sia un riferimento completo per l'utilizzo del prodotto.
+Questo manuale spiega le funzionalità e le modalità d'utilizzo dell'applicazione \proj. Esso è sia una guida introduttiva sia un riferimento completo per l'utilizzo del prodotto.
 
 \subsection{Pubblico}
-Il manuale è rivolto agli utenti del prodotto. Assumiamo che l'utente di \proj{} possegga delle conoscenze almeno basilari nel campo della programmazione ad oggetti e della progettazione di software; in particolare, assumiamo che l'utente conosca il significato dei seguenti termini:
+Il manuale è rivolto agli utenti del prodotto. Assumeremo che l'utente di \proj{} possegga delle conoscenze almeno basilari nel campo della programmazione ad oggetti e della progettazione di software ad oggetti; in particolare, assumiamo che l'utente conosca il significato dei seguenti termini:
 \begin{itemize}
 	\item classe;
 	\item oggetto;
@@ -77,7 +77,7 @@ Sul browser dev'essere attivato JavaScript.
 
 \section{Utilizzo} \label{sec:utilizzo} % GUI, Java, JSON, API REST, (test effettuati?), screenshot, ...
 
-Di seguito descriviamo come utilizzare \proj{} per progettare e generare un'applicazione. La sezione \ref{sec:gui} introduce brevemente l'\textbf{interfaccia grafica}; le sezioni \ref{sec:new}, \ref{sec:save} e \ref{sec:load} descrivono come creare, salvare e caricare l'insieme di diagrammi che rappresentano il \textbf{progetto di un'applicazione}; infine, la sezione \ref{sec:gen} spiega come generare un \textbf{programma eseguibile} a partire dai diagrammi di un progetto.
+Di seguito descriviamo come utilizzare \proj{} per progettare e generare un'applicazione eseguibile. La sezione \ref{sec:gui} introduce brevemente l'\textbf{interfaccia grafica}; le sezioni \ref{sec:new}, \ref{sec:save} e \ref{sec:load} descrivono come creare, salvare e caricare l'insieme di diagrammi che rappresentano il \textbf{progetto di un'applicazione}; infine, la sezione \ref{sec:gen} spiega come generare un \textbf{programma eseguibile} a partire dai diagrammi di un progetto.
 
 
 
@@ -90,7 +90,7 @@ Potete accedere a \proj{} dall'indirizzo \url{\webroot}. Vi viene subito present
 \subsection{Progettare una nuova applicazione} \label{sec:new}
 
 \subsubsection{Creare un nuovo progetto}
-Un diagramma delle classi vuoto rappresenta un nuovo progetto; in questo caso potete iniziare subito a progettare una nuova applicazione, saltando questo paragrafo e continuando al paragrafo \ref{par:arch}. Invece, nel caso abbiate un diagramma delle classi già popolato ma vogliate creare un nuovo progetto da zero, cliccate sull'icona del menù in alto a sinistra; dal menù a comparsa, cliccate su \click{New Project}; vi ritroverete con un diagramma delle classi vuoto, corrispondente ad un nuovo progetto.
+Un diagramma delle classi vuoto rappresenta un nuovo progetto; se vi trovate già davanti a un diagramma vuoto potete iniziare subito a progettare una nuova applicazione, saltando questo paragrafo e continuando al paragrafo \ref{par:arch}. Invece, nel caso abbiate un diagramma delle classi non vuoto ma vogliate creare un nuovo progetto da zero, cliccate sull'icona del menù in alto a sinistra; dal menù a comparsa, cliccate su \click{New Project}; vi ritroverete con un diagramma delle classi vuoto, corrispondente ad un nuovo progetto.
 
 \subsubsection{Progettare l'architettura dell'applicazione} \label{par:arch}
 Progettare un'applicazione ad oggetti vuol dire innanzitutto specificarne l'architettura. Per fare ciò, dovete popolare il diagramma delle classi che si trova in centro alla pagina.
@@ -105,16 +105,16 @@ Oltre a queste, altre icone permettono la creazione di commenti (l'icona \click{
 
 \paragraph{Specifica dell'interfaccia di una componente} \label{par:inter} Ogni componente è rappresentata nel diagramma da un rettangolo con tre aree, come da standard UML:
 \begin{enumerate}
-	\item un area con il nome della componente;
-	\item un area contenente i campi dati;
-	\item un area contenente i metodi.
+	\item un'area con il nome della componente;
+	\item un'area contenente i campi dati;
+	\item un'area contenente i metodi.
 \end{enumerate}
 Cliccando le aree dei campi dati o dei metodi, queste si espandono per mostrare il proprio contenuto. Inizialmente esse sono vuote. Per inserire un campo dati, fate doppio-click sulla classe; dopodiché:
 \begin{enumerate}
 	\item il \textbf{menù di dettaglio} (a destra) si riempirà con i dettagli della classe cliccata;
 	\item cliccate su \click{Attributes} per far comparire l'elenco dei campi dati (attributi);
 	\item vi verrà presentato l'elenco dei campi dati;
-	\item scorrete in basso e cliccate \click{Add Attribute};
+	\item scorrete in basso e cliccate su \click{Add Attribute};
 	\item compilate la form per i dettagli relativi al nuovo campo dati.
 \end{enumerate}
 Per inserire un metodo, fate doppio-click sulla classe; dopodiché:
@@ -122,7 +122,7 @@ Per inserire un metodo, fate doppio-click sulla classe; dopodiché:
 	\item il menù di dettaglio (a destra) si riempirà con i dettagli della classe cliccata;
 	\item cliccate su \click{Methods} per far comparire l'elenco dei metodi;
 	\item vi verrà presentato l'elenco dei metodi;
-	\item scorrete in basso e cliccate \click{Add Method};
+	\item scorrete in basso e cliccate su \click{Add Method};
 	\item compilate la form per i dettagli relativi al nuovo metodo.
 \end{enumerate}
 Per modificare il comportamento di un metodo, si veda §\ref{sec:activity}.
@@ -140,7 +140,7 @@ Per modificare il comportamento di un metodo, si veda §\ref{sec:activity}.
 	\item cliccate su \click{Attributes} (per far comparire l'elenco dei campi dati) o su \click{Methods} (per far comparire l'elenco dei metodi);
 	\item vi verrà presentato l'elenco dei campi dati o dei metodi, a seconda di ciò che avete cliccato;
 	\item cercate il campo dati o metodo che volete modificare;
-	\item modificate la form contenente i suoi dettagli.
+	\item modificate la form contenente dettagli del campo dati o metodo.
 \end{enumerate}
 
 
@@ -148,9 +148,9 @@ Per modificare il comportamento di un metodo, si veda §\ref{sec:activity}.
 Mentre la segnatura dei metodi di una classe definisce l'interfaccia della classe, l'implementazione dei metodi definisce il \textbf{comportamento} della classe. Quando avete chiaro quale dev'essere il comportamento di una vostra classe cercate la classe nel diagramma delle classi e fate doppio-click su di essa; dopodiché:
 \begin{enumerate}
 	\item il menù di dettaglio (a destra) si riempirà con i dettagli della classe cliccata;
-	\item cliccate \click{Methods} per far comparire l'elenco dei metodi;
+	\item cliccate su \click{Methods} per far comparire l'elenco dei metodi;
 	\item compilate la form con la segnatura del metodo;
-	\item in basso, cliccate \click{Go to Activity Diagram}.
+	\item in basso, cliccate su \click{Go to Activity Diagram}.
 \end{enumerate}
 Al posto del diagramma delle classi, comparirà il \textbf{diagramma di attività} del metodo cliccato.
 
