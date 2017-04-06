@@ -47,11 +47,6 @@ Il manuale è rivolto agli utenti del prodotto. Assumiamo che l'utente di \proj{
 \subsection{Glossario}
 \presgloss
 
-\subsection{Riferimenti informativi}
-\begin{itemize}
-	\item ...
-\end{itemize}
-
 
 
 
@@ -63,11 +58,12 @@ Il manuale è rivolto agli utenti del prodotto. Assumiamo che l'utente di \proj{
 \section{Requisiti} \label{sec:requisiti}
 
 \proj{} è un'applicazione web: l'utente vi accede quindi con un browser web. Assicuriamo il funzionamento del nostro prodotto sui seguenti browser (o su loro versioni successive):
-\begin{itemize}
-	\item ...
-	\item ...
-	\item ...
-	\item ...
+\begin{itemize} % ho preso quelli che hanno ecmascript 6, all'incirca...
+	\item Microsoft Edge 13;
+	\item Mozilla Firefoz 45;
+	\item Apple Safari 10;
+	\item Google Chrome 57;
+	\item Opera 44.
 \end{itemize}
 Sul browser dev'essere attivato JavaScript.
 
@@ -79,7 +75,7 @@ Sul browser dev'essere attivato JavaScript.
 %%  Utilizzo
 %%%%%%%%%%%%
 
-\section{Utilizzo} \label{sec:utilizzo} % GUI, issues, Java, JSON, API REST, (test effettuati?), screenshot, ...
+\section{Utilizzo} \label{sec:utilizzo} % GUI, Java, JSON, API REST, (test effettuati?), screenshot, ...
 
 Di seguito descriviamo come utilizzare \proj{} per progettare e generare un'applicazione. La sezione \ref{sec:gui} introduce brevemente l'\textbf{interfaccia grafica}; le sezioni \ref{sec:new}, \ref{sec:save} e \ref{sec:load} descrivono come creare, salvare e caricare l'insieme di diagrammi che rappresentano il \textbf{progetto di un'applicazione}; infine, la sezione \ref{sec:gen} spiega come generare un \textbf{programma eseguibile} a partire dai diagrammi di un progetto.
 
@@ -101,11 +97,11 @@ Progettare un'applicazione ad oggetti vuol dire innanzitutto specificarne l'arch
 
 \paragraph{Creazione di una componente} Potete creare una nuova componente cliccando su un'icona del \textbf{menù di creazione} (visibile a sinistra); ci sono tre icone che rappresentano tre tipi di componente dell'architettura:
 \begin{itemize}
-	\item \emph{Class};
-	\item \emph{Abtract Class};
-	\item \emph{Interface}.
+	\item \click{Class};
+	\item \click{Abtract Class};
+	\item \click{Interface}.
 \end{itemize}
-Oltre a queste, altre icone permettono la creazione di commenti (l'icona \emph{Annotation}) e di relazioni tra componenti (\emph{Generalization}, \emph{Implementation} e \emph{Association}, che verranno introdotte tra poco).
+Oltre a queste, altre icone permettono la creazione di commenti (l'icona \click{Annotation}) e di relazioni tra componenti (\click{Generalization}, \click{Implementation} e \click{Association}, che verranno introdotte tra poco).
 
 \paragraph{Specifica dell'interfaccia di una componente} \label{par:inter} Ogni componente è rappresentata nel diagramma da un rettangolo con tre aree, come da standard UML:
 \begin{enumerate}
@@ -113,41 +109,70 @@ Oltre a queste, altre icone permettono la creazione di commenti (l'icona \emph{A
 	\item un area contenente i campi dati;
 	\item un area contenente i metodi.
 \end{enumerate}
-Cliccando le aree dei campi dati o dei metodi, queste si espandono per mostrare il proprio contenuto. Inizialmente esse sono vuote. Per inserire un campo dati, [...]. Per inserire un metodo, [...]; quando vorrete, potrete definire il comportamento di ogni metodo creato.
+Cliccando le aree dei campi dati o dei metodi, queste si espandono per mostrare il proprio contenuto. Inizialmente esse sono vuote. Per inserire un campo dati, fate doppio-click sulla classe; dopodiché:
+\begin{enumerate}
+	\item il \textbf{menù di dettaglio} (a destra) si riempirà con i dettagli della classe cliccata;
+	\item cliccate su \click{Attributes} per far comparire l'elenco dei campi dati (attributi);
+	\item vi verrà presentato l'elenco dei campi dati;
+	\item scorrete in basso e cliccate \click{Add Attribute};
+	\item compilate la form per i dettagli relativi al nuovo campo dati.
+\end{enumerate}
+Per inserire un metodo, fate doppio-click sulla classe; dopodiché:
+\begin{enumerate}
+	\item il menù di dettaglio (a destra) si riempirà con i dettagli della classe cliccata;
+	\item cliccate su \click{Methods} per far comparire l'elenco dei metodi;
+	\item vi verrà presentato l'elenco dei metodi;
+	\item scorrete in basso e cliccate \click{Add Method};
+	\item compilate la form per i dettagli relativi al nuovo metodo.
+\end{enumerate}
+Per modificare il comportamento di un metodo, si veda §\ref{sec:activity}.
 
 \paragraph{Definizione di una relazione tra due componenti} È possibile definire una relazione tra due componenti del diagramma delle classi. Per fare questo, cercate il tipo di relazione desiderato nel menù di creazione (a sinistra) e cliccate sopra all'icona appropriata: apparirà nel diagramma una nuova freccia. Potete trascinare ognuna delle sue punte su una componente, stabilendo così una nuova relazione. Vi sono tre tipi di relazione:
 \begin{itemize}
-	\item \emph{Generalization}, per estendere l'interfaccia di una classe;
-	\item \emph{Implementation}, per implementare un'interfaccia pura;
-	\item \emph{Association}. % ??
+	\item \click{Generalization}, per estendere l'interfaccia di una classe;
+	\item \click{Implementation}, per implementare un'interfaccia pura;
+	\item \click{Association}. % ??
 \end{itemize}
 
-\paragraph{Modificare campi dati e metodi} [...] % breve
+\paragraph{Modificare campi dati e metodi} Per modificare un campo dati o un metodo di una classe, fate doppio-click sulla classe; dopodiché:
+\begin{enumerate}
+	\item il menù di dettaglio (a destra) si riempirà con i dettagli della classe cliccata;
+	\item cliccate su \click{Attributes} (per far comparire l'elenco dei campi dati) o su \click{Methods} (per far comparire l'elenco dei metodi);
+	\item vi verrà presentato l'elenco dei campi dati o dei metodi, a seconda di ciò che avete cliccato;
+	\item cercate il campo dati o metodo che volete modificare;
+	\item modificate la form contenente i suoi dettagli.
+\end{enumerate}
 
 
 \subsubsection{Definire il comportamento delle componenti} \label{sec:activity}
-Mentre la segnatura dei metodi di una classe definisce l'interfaccia della classe, l'implementazione dei metodi definisce il \textbf{comportamento} della classe. Quando avete chiaro quale dev'essere il comportamento di una vostra classe cercate la classe nel diagramma delle classi, fate comparire l'elenco dei metodi (si veda §\ref{par:inter}) e cliccate su un metodo che volete implementare. Al posto del diagramma delle classi, comparirà il \textbf{diagramma di attività} del metodo cliccato.
+Mentre la segnatura dei metodi di una classe definisce l'interfaccia della classe, l'implementazione dei metodi definisce il \textbf{comportamento} della classe. Quando avete chiaro quale dev'essere il comportamento di una vostra classe cercate la classe nel diagramma delle classi e fate doppio-click su di essa; dopodiché:
+\begin{enumerate}
+	\item il menù di dettaglio (a destra) si riempirà con i dettagli della classe cliccata;
+	\item cliccate \click{Methods} per far comparire l'elenco dei metodi;
+	\item compilate la form con la segnatura del metodo;
+	\item in basso, cliccate \click{Go to Activity Diagram}.
+\end{enumerate}
+Al posto del diagramma delle classi, comparirà il \textbf{diagramma di attività} del metodo cliccato.
 
 \paragraph{Creazione di blocchi} Ogni metodo è un algoritmo e, in quanto tale, per implementarlo dovete specificare la sequenza di passi che il metodo deve seguire. Ogni passo del metodo può essere una singola istruzione (come un'assegnazione) oppure un'istruzione composita (come un ciclo o un blocco condizionale). Ogni istruzione --- singola o composita --- è rappresentata da un \textbf{blocco}; la barra di creazione (a sinistra) offre diversi tipi di blocchi:
 \begin{itemize}
-	\item \emph{Initialization} dichiara e inizializza una nuova variabile;
-	\item \emph{Assignment} assegna un valore ad una variabile già dichiarata;
-	\item \emph{Return} esce dal metodo e ritorna il valore specificato;
-	\item \emph{For} esegue ciclicamente una sequenza di blocchi (ogni iterazione del ciclo è parametrizzata su una variabile);
-	\item \emph{While} esegue ciclicamente una sequenza di blocchi finché vale una condizione;
-	\item \emph{If} esegue una sequenza di blocchi solo se vale una condizione.
+	\item \click{Initialization} dichiara e inizializza una nuova variabile;
+	\item \click{Assignment} assegna un valore ad una variabile già dichiarata;
+	\item \click{Return} esce dal metodo e ritorna il valore specificato;
+	\item \click{For} esegue ciclicamente una sequenza di blocchi (ogni iterazione del ciclo è parametrizzata su una variabile);
+	\item \click{While} esegue ciclicamente una sequenza di blocchi finché vale una condizione;
+	\item \click{If} esegue una sequenza di blocchi solo se vale una condizione.
 \end{itemize}
 Cliccando su uno dei blocchi nella barra di creazione, esso verrà inserito nella sequenza di passi del metodo. Ogni nuovo blocco su cui cliccherete  verrà inserito in coda ai blocchi precedentemente inseriti.
 
-\paragraph{Spostamento di blocchi} Ovviamente potete spostare ogni blocco creato e posizionarlo dove volete nella sequenza di passi. Inoltre, potete decidere di inserire un blocco (di qualsiasi tipo) all'interno di un \emph{For}, di un \emph{While} o di un \emph{If}: questi tre tipi di blocchi possono contenerne altri. Per rimarcare che un blocco sta all'interno di un altro, esso viene “indentato”, cioè spostato leggermente a destra rispetto al blocco che lo contiene.
+\paragraph{Spostamento di blocchi} Ovviamente potete spostare ogni blocco creato e posizionarlo dove volete nella sequenza di passi. Inoltre, potete decidere di inserire un blocco (di qualsiasi tipo) all'interno di un \click{For}, di un \click{While} o di un \click{If}: questi tre tipi di blocchi possono contenerne altri. Per rimarcare che un blocco sta all'interno di un altro, esso viene “indentato”, cioè spostato leggermente a destra rispetto al blocco che lo contiene.
 
 \paragraph{Rimozione di blocchi} [...] % TODO come si fa?
 
 \subsubsection{Modificare l'architettura}
-...
+Una volta modificata l'implementazione di un metodo, per modificare l'architettura dell'intera applicazione dovete tornare al diagramma delle classi. Per fare ciò, cliccate sul pulsante in basso a destra \click{Back to Class Diagram}. Il diagramma di attività modificato verrà salvato e al suo posto vi verrà presentato il diagramma delle classi.
 
-\subsubsection{Modificare il comportamento di un metodo}
-...
+Dal diagramma delle classi, potete modificare l'architettura dell'applicazione in vari modi: potete spostare o rimuovere ogni relazione tra componenti dell'applicazione e potete aggiungere o rimuovere componenti.
 
 
 
