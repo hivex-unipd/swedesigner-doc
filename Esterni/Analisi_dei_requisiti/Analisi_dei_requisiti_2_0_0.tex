@@ -180,7 +180,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Precondizione}: il sistema avviato mostra la pagina iniziale dell'applicazione;
 	\item \textbf{Postcondizione}: il sistema ha caricato il progetto selezionato, mostrandone il contenuto (come salvato dopo l'ultimo utilizzo);
 	\item \textbf{Scenario principale}: l'attore carica il progetto selezionato;
-	\item \textbf{Scenario alternativo}: l'attore carica un file incompatibile con l'editor;
 	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al file inserito (UC2.1).
 \end{itemize}
 
@@ -227,54 +226,356 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Postcondizione}: il sistema visualizza il diagramma delle classi risultante dalla gestione operata dall'utente;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può inserire una classe (UC4.1);
-		\item l'attore può inserire una relazione (UC4.2);
-		\item l'attore può inserire un commento (UC4.3);
-		\item l'attore può rimuovere una classe (UC4.4);
-		\item l'attore può rimuovere una relazione (UC4.5);
-		\item l'attore può rimuovere un commento (UC4.6);
-		\item l'attore può ridurre una classe (UC4.7);
-		\item l'attore può espandere una classe (UC4.8);
-		\item l'attore può ridurre un commento (UC4.9);
-		\item l'attore può espandere un commento (UC4.10);
-		\item l'attore può modificare una classe (UC4.11);
-		\item l'attore può modificare una relazione (UC4.12);
-		\item l'attore può modificare un commento (UC4.13).
+		\item l'attore può inserire un BlocoClasse (UC4.1);
+		\item l'attore può inserire una classe (UC4.2);
+		\item l'attore può inserire un'interfaccia (UC4.3);
+		\item l'attore può inserire un BlocoRelazione (UC4.4);
+		\item l'attore può inserire un'associazione (UC4.5);
+		\item l'attore può inserire un commento (UC4.6);
+		\item l'attore può rimuovere un BloccoClasse (UC4.7);
+		\item l'attore può rimuovere un BloccoRelazione (UC4.8);
+		\item l'attore può rimuovere un commento (UC4.9);
+		\item l'attore può modificare un BlocoClasse (UC4.10);
+		\item l'attore può modificare un'associazione (UC4.11);
+		\item l'attore può modificare un commento (UC4.12).
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC4.1: Inserimento Classe}
+\subsubsection{UC4.1: Inserimento BloccoClasse}
 \label{UC4.1}
-\myimg{UC4.1 - Inserimento Classe}
+\myimg{UC4.1 - Inserimento BloccoClasse}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore inserisce una classe fornendo i dati richiesti;
-	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti gli input dall'attore sulla classe che questo ha definito e mostra il diagramma delle classi (in cui, per ogni metodo, viene mostrato un riferimento ad un diagramma delle attività vuoto);
+	\item \textbf{Descrizione}: l'attore inserisce i dati di una classe;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle classi (in cui, per ogni metodo, viene mostrato un riferimento ad un diagramma delle attività vuoto);
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può impostare la visibilità della classe (UC4.1.1);
-		\item l'attore deve inserire il nome della classe (univoco) (UC4.1.2);
-		\item l'attore può scegliere uno stereotipo tra quelli forniti e previsti (UC4.1.3);
-		\item l'attore può aggiungere un attributo (UC4.1.4);
-		\item l'attore può rimuovere un attributo (UC4.1.5);
-		\item l'attore può aggiungere un metodo (UC4.1.6);
-		\item l'attore può rimuovere un metodo (UC4.1.7);
-
-		\item l'attore può confermare i dati inseriti (UC4.1.8).
+		\item l'attore deve inserire il nome della classe/interfaccia (univoco) (UC4.1.1);
+		%%\item l'attore visualizza un messaggio d'errore per l'inserimento del nome della classe/interfaccia (UC4.1.2);
+		\item l'attore può aggiungere un metodo (UC4.1.2);
+		\item l'attore può rimuovere un metodo (UC4.1.3);
+		\item l'attore può espandere la lista dei metodi (UC4.1.4);
+		\item l'attore può ridurre la lista deii metodi (UC4.1.5).
 	\end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.1.1: Inserimento Visibilità Classe}
+\paragraph{UC4.1.1: Inserimento Nome Classe/Interfaccia}
 \label{UC4.1.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore inserisce la visibilità desiderata per la classe corrente;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
-	\item \textbf{Scenario principale}: l'attore inserisce la visibilità della classe fra l'insieme dei valori per essa possibili;
-	\item \textbf{Scenario alternativo}: l'attore non inserisce alcun valore, viene pertanto applicato il valore di default per la visibilità.
+	\item \textbf{Descrizione}: l'attore inserisce il nome (univoco) per la classe/interfaccia corrente;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe selezionata;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagramma delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce il nome della classe/interfaccia;
+	%%\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al dato inserito (UC4.1.2).
 \end{itemize}
+
+%\subparagraph{UC4.1.2: Visualizzazione Errore Inserimento Nome Classe/Interfaccia}
+%\label{UC4.1.2}
+%\begin{itemize}
+%	\item \textbf{Attori}: Utente;
+%	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi %durante la fase di inserimento del nome;
+%	\item \textbf{Precondizione}: il sistema ha ricevuto informazion errate o insufficienti per l'inserimento del nome;
+%	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
+%	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
+%\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{UC4.1.2: Inserimento Metodo BloccoClasse}
+\label{UC4.1.2}
+%%\myimg{UC4.1.2 - Inserimento Metodo}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore inserisce un metodo per la classe;
+	\item \textbf{Precondizione}:  il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza il metodo fornito dall'attore nella classe correntemente gestita dallo stesso;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può scegliere la visibilità del metodo (UC4.1.2.1);
+		\item l'attore deve inserire il nome del metodo (UC4.1.2.2);
+		%\item l'attore visualizza un messaggio d'errore per l'inserimento del nome del metodo (UC4.1.3.3);
+		\item l'attore può inserire un parametro del metodo (UC4.1.2.3);
+		\item l'attore deve inserire il tipo di ritorno del metodo (UC4.1.2.4);
+		\item l'attore può rimuovere un parametro del metodo (UC4.1.2.5).
+	\end{enumerate}
+	\item \textbf{Generalizzazioni}: Inserimento Metodo Classe (UC4.2.5).%%%%%%%%%%%%
+\end{itemize}
+
+\subparagraph{UC4.1.2.1: Inserimento Visibilità Metodo}
+\label{UC4.1.2.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può scegliere la visibilità per il metodo;
+	\item \textbf{Precondizione}:  il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore sceglie la visibilità del metodo altrimenti viene applicato il valore di default.
+\end{itemize}
+
+\subparagraph{UC4.1.2.2: Inserimento Nome Metodo}
+\label{UC4.1.2.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore deve inserire il nome del metodo, che deve essere univoco nella classe correntemente gestita rispetto ad altri metodi già inseriti con la stessa segnatura;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce il nome del metodo;
+	%\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al dato inserito (UC4.1.3.3).
+\end{itemize}
+
+%\subparagraph{UC4.1.3.3: Visualizzazione Errore Inserimento Nome Metodo}
+%\label{UC4.1.3.3}
+%\begin{itemize}
+%	\item \textbf{Attori}: Utente;
+%	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento del nome;
+%	\item \textbf{Precondizione}: il sistema ha ricevuto informazion errate o insufficienti per l'inserimento del nome;
+%	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
+%	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
+%\end{itemize}
+
+\subparagraph{UC4.1.2.3: Inserimento Parametro Metodo}
+\label{UC4.1.2.3}
+%\myimg{UC4.1.2.3 - Inserimento Parametro Metodo}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore inserisce un parametro per il metodo corrente;
+	\item \textbf{Precondizione}:  il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza il parametro fornito dall'attore nella classe correntemente gestita dallo stesso;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore deve inserire il nome del parametro (UC4.1.2.3.1);
+		\item l'attore deve inserire il tipo del parametro (UC4.1.2.3.2);
+		\item l'attore può inserire il valore di default del parametro (UC4.1.2.3.3).
+	\end{enumerate}
+\end{itemize}
+
+\subsubparagraph{UC4.1.2.3.1: Inserimento Nome Parametro}
+\label{UC4.1.2.3.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore deve inserire il nome del parametro del metodo, che deve essere univoco nel metodo correntemente gestito rispetto ad altri parametri già inseriti con lo stesso nome;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce il nome del parametro.
+\end{itemize}
+
+\subsubparagraph{UC4.1.2.3.2: Inserimento Tipo Parametro}
+\label{UC4.1.2.3.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore deve inserire il tipo del parametro;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce il tipo del parametro.
+\end{itemize}
+
+\subparagraph{UC4.1.2.3.3: Inserimento Valore Default Parametro}
+\label{UC4.1.2.3.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può inserire il valore di default del parametro;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce  il valore di default del parametro.
+\end{itemize}
+
+\subparagraph{UC4.1.2.4: Inserimento Tipo Ritorno Metodo}
+\label{UC4.1.2.4}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore deve inserire il tipo di ritorno del metodo;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce il tipo di ritorno del metodo.
+\end{itemize}
+
+\subparagraph{UC4.1.2.5: Rimozione Parametro Metodo}
+\label{UC4.1.2.5}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore rimuove un parametro del metodo;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema rimuove il parametro selezionato per la rimozione;
+	\item \textbf{Scenario principale}: l'attore rimuove il parametro selezionato.
+\end{itemize}
+
+\paragraph{UC4.1.3: Rimozione Metodo BloccoClasse}
+\label{UC4.1.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può rimuovere un metodo precedentemente inserito;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema rimuove il metodo selezionato;
+	\item \textbf{Scenario principale}: l'attore rimuove il metodo selezionato.
+\end{itemize}
+
+\paragraph{UC4.1.4: Riduzione Lista Metodi BloccoClasse}
+\label{UC4.1.4}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può ridurre la lista dei metodi;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza la lista dei metodi della classe selezionata dall'utente in formato ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce la lista dei metodi della classe.
+\end{itemize}
+
+\paragraph{UC4.1.5: Espansione Lista Metodi BloccoClasse}
+\label{UC4.1.5}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può espandere la lista dei metodi;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza la lista dei metodi della classe selezionata dall'utente in formato esteso;
+	\item \textbf{Scenario principale}: l'attore estende la lista dei metodi della classe.
+\end{itemize}
+
+\subsubsection{UC4.2: Inserimento Classe}
+\label{UC4.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore inserisce i dati di una classe;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle classi (in cui, per ogni metodo, viene mostrato un riferimento ad un diagramma delle attività vuoto);
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può aggiungere un attributo (UC4.2.1);
+		\item l'attore può rimuovere un attributo (UC4.2.2);
+		\item l'attore può espandere la lista degli attributi (UC4.2.3);
+		\item l'attore può ridurre la lista degli attributi (UC4.2.4);
+		\item l'attore può inserire dati aggiuntivi ad un metodo (UC4.2.5);
+		\item l'attore può scegliere uno stereotipo tra quelli proposti (UC4.2.6).%%switch al diagramma delle attività: come lo inserisco????
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC4.2.1: Inserimento Attributo Classe}
+\label{UC4.2.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore inserisce un attributo per la classe corrente;
+	\item \textbf{Precondizione}:  il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza l'attributo fornito dall'attore nella classe correntemente gestita dallo stesso;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore deve inserire il nome dell'attributo (UC4.2.1.1);
+		\item l'attore deve inserire il tipo dell'attributo (UC4.2.1.2);
+		\item l'attore può inserire la visibilità dell'attributo (UC4.2.1.3);
+		\item l'attore può inserire il valore di default del parametro (UC4.2.1.4).
+	\end{enumerate}
+\end{itemize}
+
+\subparagraph{UC4.2.1.1: Inserimento Nome Attributo}
+\label{UC4.2.1.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore deve inserire il nome dell'attributo del metodo;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce il nome dell'attributo.
+\end{itemize}
+
+\subparagraph{UC4.2.1.2: Inserimento Tipo Attributo}
+\label{UC4.2.1.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore deve inserire il tipo dell'attributo;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce il tipo dell'attributo.
+\end{itemize}
+
+\subparagraph{UC4.2.1.3: Inserimento Visibilità Attributo}
+\label{UC4.2.1.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può inserire la visibilità dell'attributo;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce la visibilità dell'attributo.
+
+\subparagraph{UC4.2.1.4: Inserimento Valore Default Attributo}
+\label{UC4.2.1.4}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può inserire il valore di default dell'attributo;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore inserisce  il valore di default dell'attributo.
+
+\paragraph{UC4.2.2: Rimozione Attributo Classe}
+\label{UC4.2.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore rimuove un attributo della classe;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema rimuove l'attributo selezionato per la rimozione;
+	\item \textbf{Scenario principale}: l'attore rimuove l'attributo selezionato.
+\end{itemize}
+
+\paragraph{UC4.2.3: Riduzione Lista Attributi Classe}
+\label{UC4.2.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può ridurre la lista degli attributi;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza la lista degli attributi della classe selezionata dall'utente in formato ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce la lista degli attributi della classe.
+\end{itemize}
+
+\paragraph{UC4.2.4: Espansione Lista Attributi Classe}
+\label{UC4.2.4}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può espandere la lista degli attributi;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza la lista degli attrubuti della classe selezionata dall'utente in formato esteso;
+	\item \textbf{Scenario principale}: l'attore estende la lista degli attributi della classe.
+\end{itemize}
+
+\paragraph{UC4.2.5: Inserimento Dati Aggiuntivi Metodo}
+\label{UC4.2.5}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore inserisce dei dati aggiuntivi ad un metodo per la classe corrente;
+	\item \textbf{Precondizione}:  il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema visualizza i dati forniti dall'attore nella classe correntemente gestita dallo stesso;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può specificare se il metodo è astratto (UC4.2.5.1);
+		\item l'attore può specificare se il metodo è statico (UC4.2.5.2).
+	\end{enumerate}
+\end{itemize}
+
+\subparagraph{UC4.2.5.1: Specifica Metodo Astratto}
+\label{UC4.2.5.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore specificare se il metodo è astratto;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore specifica che il metodo è astratto.
+
+\subparagraph{UC4.2.5.2: Specifica Metodo Statico}
+\label{UC4.2.5.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore specificare se il metodo è statico;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore specifica che il metodo è statico.
+
+\paragraph{UC4.2.6: Inserimento Stereotipo Classe}
+\label{UC4.2.6}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore sceglie uno stereotipo per la classe corrente fra quelli previsti dall'editor;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Scenario principale}: l'attore sceglie uno stereotipo per la classe corrente fra quelli prestabiliti.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \paragraph{UC4.1.2: Inserimento Nome Classe}
 \label{UC4.1.2}
@@ -283,7 +584,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Descrizione}: l'attore inserisce un nome univoco per la classe corrente;
 	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto visualizza il form per l'inserimento dei dati;
-	\item \textbf{Scenario principale}: l'attore inserisce un nome per identificare la classe corrente univoco all'interno del diagramma delle classi che sta gestendo.
+	\item \textbf{Scenario principale}: 
 \end{itemize}
 
 \paragraph{UC4.1.3: Inserimento Stereotipo Classe}
@@ -405,143 +706,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}: l'attore rimuove l'attributo selezionato usando l'apposito comando previsto.
 \end{itemize}
 
-\paragraph{UC4.1.6: Inserimento Metodo}
-\label{UC4.1.6}
-\myimg{UC4.1.6 - Inserimento Metodo}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore inserisce un metodo per la classe;
-	\item \textbf{Precondizione}: il sistema visualizza il diagramma delle classi, con la classe correntemente gestita dall'attore;
-	\item \textbf{Postcondizione}: il sistema visualizza il metodo fornito dall'attore nella classe correntemente gestita dallo stesso;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può scegliere la visibilità del metodo (UC4.1.6.1);
-		\item l'attore deve inserire il nome del metodo (UC4.1.6.2);
-		\item l'attore può inserire un parametro del metodo (UC4.1.6.3);
-		\item l'attore deve inserire il tipo di ritorno del metodo (UC4.1.6.4);
-		\item l'attore può confermare l'inserimento del metodo (UC4.1.6.5);
-		\item l'attore può rimuovere un parametro del metodo (UC4.1.6.6).
-	\end{enumerate}
-\end{itemize}
 
-\subparagraph{UC4.1.6.1: Inserimento Visibilità Metodo}
-\label{UC4.1.6.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può scegliere la visibilità per il metodo;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
-	\item \textbf{Scenario principale}: l'attore sceglie la visibilità del metodo altrimenti viene applicato il valore di default.
-\end{itemize}
-
-\subparagraph{UC4.1.6.2: Inserimento Nome Metodo}
-\label{UC4.1.6.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire il nome del metodo, che deve essere univoco nella classe correntemente gestita rispetto ad altri metodi già inseriti con la stessa segnatura;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
-	\item \textbf{Scenario principale}: l'attore inserisce il nome del metodo.
-\end{itemize}
-
-\subparagraph{UC4.1.6.3: Inserimento Parametro Metodo}
-\label{UC4.1.6.3}
-\myimg{UC4.1.6.3 - Inserimento Parametro Metodo}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore inserisce un parametro per il metodo corrente;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il parametro fornito fornito dall'attore nella classe correntemente gestita dallo stesso;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore deve inserire il nome del parametro (UC4.1.6.3.1);
-		\item l'attore deve inserire il tipo del parametro (UC4.1.6.3.2);
-		\item l'attore conferma l'inserimento del parametro (UC4.1.6.3.3).
-	\end{enumerate}
-\end{itemize}
-
-\subparagraph{UC4.1.6.3.1: Inserimento Nome Parametro}
-\label{UC4.1.6.3.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire il nome del parametro del metodo, che deve essere univoco nel metodo correntemente gestito rispetto ad altri parametri già inseriti con lo stesso nome;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
-	\item \textbf{Scenario principale}: l'attore inserisce il nome del parametro.
-\end{itemize}
-
-\subparagraph{UC4.1.6.3.2: Inserimento Tipo Parametro}
-\label{UC4.1.6.3.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire il tipo del parametro, scelto tra i tipi predefiniti e quelli (visibili) definiti dall'utente;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
-	\item \textbf{Scenario principale}: l'attore inserisce il tipo del parametro.
-\end{itemize}
-
-\subparagraph{UC4.1.6.3.3: Conferma Inserimento Parametro}
-\label{UC4.1.6.3.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del parametro;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il parametro inserito dall'attore nel metodo della classe correntemente gestita dallo stesso;
-	\item \textbf{Scenario principale}: l'attore visualizza il parametro inserito;
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.6.3.3.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha inserito il nome del parametro;
-		\item l'attore non ha inserito il tipo del parametro.
-	\end{itemize}
-\end{itemize}
-
-\subparagraph{UC4.1.6.3.3.1: Visualizzazione Errore Inserimento Parametro}
-\label{UC4.1.6.3.3.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un parametro;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un parametro;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
-\end{itemize}
-
-\subparagraph{UC4.1.6.4: Inserimento Tipo Ritorno Metodo}
-\label{UC4.1.6.4}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire il tipo di ritorno del metodo;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e visualizza il form per l'inserimento dei dati;
-	\item \textbf{Scenario principale}: l'attore inserisce il tipo di ritorno del metodo.
-\end{itemize}
-
-\subparagraph{UC4.1.6.5: Conferma Inserimento Metodo}
-\label{UC4.1.6.5}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del metodo;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il metodo inserito dall'attore nella classe correntemente gestita dallo stesso;
-	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del metodo;
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC4.1.6.5.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha inserito il nome del metodo;
-		\item l'attore non ha inserito il tipo di ritorno del metodo;
-		\item l'attore ha inserito un metodo con una segnatura già esistente.
-	\end{itemize}
-\end{itemize}
-
-\subparagraph{UC4.1.6.5.1: Visualizzazione Errore Inserimento Metodo}
-\label{UC4.1.6.5.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore al momento della conferma dell'inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un metodo;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto tutti i dati necessari per l'inserimento di un metodo;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
-\end{itemize}
 
 \subparagraph{UC4.1.6.6: Rimozione Parametro Metodo}
 \label{UC4.1.6.6}
