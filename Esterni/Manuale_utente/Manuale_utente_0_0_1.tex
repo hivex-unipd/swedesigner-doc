@@ -29,23 +29,11 @@
 \subsection{Scopo del documento}
 Questo manuale spiega le funzionalità e le modalità d'utilizzo dell'applicazione \proj. Esso è sia una guida introduttiva sia un riferimento completo per l'utilizzo del prodotto.
 
-\subsection{Pubblico}
-Il manuale è rivolto agli utenti del prodotto. Assumeremo che l'utente di \proj{} possegga delle conoscenze almeno basilari nel campo della programmazione ad oggetti e della progettazione di software ad oggetti; in particolare, assumiamo che l'utente conosca il significato dei seguenti termini:
-\begin{itemize}
-	\item classe;
-	\item oggetto;
-	\item UML;
-	\item diagramma UML delle classi;
-	\item istruzione;
-	\item ciclo;
-	\item condizione.
-\end{itemize}
-
 \subsection{Scopo del prodotto}
 \scopo
 
-\subsection{Glossario}
-\presgloss
+\subsection{Pubblico}
+Il manuale è rivolto agli utenti del prodotto. Assumeremo che l'utente di \proj{} possegga delle conoscenze almeno basilari nel campo della programmazione a oggetti e della progettazione di software a oggetti; per ogni evenienza, alleghiamo in appendice \ref{app:gloss} un \textbf{glossario di termini utili} riguardo alla programmazione a oggetti e alle specifiche funzionalità offerte da \proj.
 
 
 
@@ -90,7 +78,7 @@ Potete accedere a \proj{} dall'indirizzo \url{\webroot}. Vi viene subito present
 \subsection{Progettare una nuova applicazione} \label{sec:new}
 
 \subsubsection{Creare un nuovo progetto}
-Un diagramma delle classi vuoto rappresenta un nuovo progetto; se vi trovate già davanti a un diagramma vuoto potete iniziare subito a progettare una nuova applicazione, saltando questo paragrafo e continuando al paragrafo \ref{par:arch}. Invece, nel caso abbiate un diagramma delle classi non vuoto ma vogliate creare un nuovo progetto da zero, cliccate sull'icona del menù in alto a sinistra; dal menù a comparsa, cliccate su \click{New Project}; vi ritroverete con un diagramma delle classi vuoto, corrispondente ad un nuovo progetto.
+Un diagramma delle classi vuoto rappresenta un nuovo progetto; se vi trovate già davanti a un diagramma vuoto potete iniziare subito a progettare una nuova applicazione, saltando questa sezione e continuando alla sezione \ref{par:arch}. Invece, nel caso abbiate un diagramma delle classi non vuoto ma vogliate creare un nuovo progetto da zero, cliccate sull'icona del menù in alto a sinistra; dal menù a comparsa, cliccate su \click{New Project}; vi ritroverete con un diagramma delle classi vuoto, corrispondente ad un nuovo progetto.
 
 \subsubsection{Progettare l'architettura dell'applicazione} \label{par:arch}
 Progettare un'applicazione ad oggetti vuol dire innanzitutto specificarne l'architettura. Per fare ciò, dovete popolare il diagramma delle classi che si trova in centro alla pagina.
@@ -167,7 +155,7 @@ Cliccando su uno dei blocchi nella barra di creazione, esso verrà inserito nell
 
 \paragraph{Spostamento di blocchi} Ovviamente potete spostare ogni blocco creato e posizionarlo dove volete nella sequenza di passi. Inoltre, potete decidere di inserire un blocco (di qualsiasi tipo) all'interno di un \click{For}, di un \click{While} o di un \click{If}: questi tre tipi di blocchi possono contenerne altri. Per rimarcare che un blocco sta all'interno di un altro, esso viene “indentato”, cioè spostato leggermente a destra rispetto al blocco che lo contiene.
 
-\paragraph{Rimozione di blocchi} [...] % TODO come si fa?
+% \paragraph{Rimozione di blocchi} [...] % TODO come si fa?
 
 \subsubsection{Modificare l'architettura}
 Una volta modificata l'implementazione di un metodo, per modificare l'architettura dell'intera applicazione dovete tornare al diagramma delle classi. Per fare ciò, cliccate sul pulsante in basso a destra \click{Back to Class Diagram}. Il diagramma di attività modificato verrà salvato e al suo posto vi verrà presentato il diagramma delle classi.
@@ -235,6 +223,38 @@ Può capitare (raramente) che non si riesca ad accedere all'indirizzo \url{\webr
 \subsection{Problemi con l'utilizzo di \proj}
 
 È possibile che \proj{} contenga dei piccoli bug. Potete segnalare qualsiasi malfunzionamento all'indirizzo \url{https://github.com/hivex-unipd/swedesigner/issues}, sotto forma di \emph{GitHub issue}.
+
+
+
+
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Glossario dei termini utili
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Glossario dei termini utili} \label{app:gloss}
+
+\begin{description}
+	\item[applicazione web] Applicazione\marginpar{\textbf{A}} accessibile via browser.
+	\item[attributo] In programmazione a oggetti, variabile che deve appartenere ad ogni istanza di una classe.
+	\item[assegnazione] In programmazione, istruzione che imposta una variabile a un determinato valore.
+	\item[blocco] In\marginpar{\textbf{B}} un diagramma di attività \proj, rettangolo corrispondente al passo di una procedura, cioè a un'istruzione; un blocco \click{For}, \click{While} o \click{If} può contenere altri blocchi.
+	\item[campo dati] Vedi\marginpar{\textbf{C}} “attributo”.
+	\item[ciclo] In programmazione, istruzione che specifica una condizione logica e una sequenza di istruzioni da eseguire ripetutamente finché vale la condizione logica. In \proj, un ciclo è un blocco \click{For} o \click{While}.
+	\item[classe] In programmazione a oggetti, categoria di oggetti che presentano la medesima interfaccia e il medesimo comportamento.
+	\item[diagramma delle classi] Diagramma\marginpar{\textbf{D}} UML che descrive l'architettura di un sistema orientato agli oggetti, mostrando le classi, le loro proprietà, il loro comportamento e le loro relazioni.
+	\item[diagramma di attività] In \proj, diagramma che specifica i passi di una procedura rappresentando ogni passo come un blocco rettangolare (vedi “blocco”).
+	\item[estensione] In\marginpar{\textbf{E}} programmazione a oggetti, relazione tra due classi in cui una classe garantisce di offrire un sovrainsieme dell'interfaccia (vedi “interfaccia --- 1”) della classe estesa.
+	\item[interfaccia] In\marginpar{\textbf{I}} programmazione a oggetti, (1) l'insieme di servizi offerti da una classe oppure (2) una classe che specifica la segnatura dei suoi metodi ma non la loro implementazione.
+	\item[istruzione condizionale] In programmazione, istruzione che specifica una condizione logica e una sequenza di istruzioni da eseguire solo se vale la condizione logica. In \proj, un'istruzione condizionale è un blocco \click{If}.
+	\item[metodo] In\marginpar{\textbf{M}} programmazione a oggetti, servizio (procedura) offerto da ogni oggetto appartenente ad una certa classe.
+	\item[oggetto] In\marginpar{\textbf{O}} programmazione, variabile appartenente ad una classe (vedi “variabile”).
+	\item[UML] Unified\marginpar{\textbf{U}} Modelling Language: famiglia di notazioni grafiche che si basano su un singolo meta-modello e servono a descrivere e progettare sistemi software.
+	\item[variabile] In\marginpar{\textbf{V}} programmazione, entità che ha un valore e una locazione in memoria.
+\end{description}
+
 
 
 \end{document}
