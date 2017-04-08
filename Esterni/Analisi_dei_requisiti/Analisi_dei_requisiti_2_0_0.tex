@@ -269,7 +269,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce il nome (univoco) per la classe/interfaccia corrente;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe selezionata;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagramma delle classi;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle classi;
 	\item \textbf{Scenario principale}: l'attore inserisce il nome della classe/interfaccia;
 	%%\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al dato inserito (UC4.1.2).
 \end{itemize}
@@ -293,7 +293,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce un metodo per la classe;
 	\item \textbf{Precondizione}:  il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
-	\item \textbf{Postcondizione}: il sistema visualizza il metodo fornito dall'attore nella classe correntemente gestita dallo stesso;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle classi;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
 		\item l'attore può scegliere la visibilità del metodo (UC4.1.2.1);
@@ -312,7 +312,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può scegliere la visibilità per il metodo;
 	\item \textbf{Precondizione}:  il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle classi;
 	\item \textbf{Scenario principale}: l'attore sceglie la visibilità del metodo altrimenti viene applicato il valore di default.
 \end{itemize}
 
@@ -353,7 +353,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\end{enumerate}
 \end{itemize}
 
-\subsubparagraph{UC4.1.2.3.1: Inserimento Nome Parametro}
+\subparagraph{UC4.1.2.3.1: Inserimento Nome Parametro}
 \label{UC4.1.2.3.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
@@ -363,7 +363,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}: l'attore inserisce il nome del parametro.
 \end{itemize}
 
-\subsubparagraph{UC4.1.2.3.2: Inserimento Tipo Parametro}
+\subparagraph{UC4.1.2.3.2: Inserimento Tipo Parametro}
 \label{UC4.1.2.3.2}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
@@ -785,7 +785,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare il nome (univoco) per la classe/interfaccia corrente;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe selezionata;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagramma delle classi;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle classi;
 	\item \textbf{Scenario principale}: l'attore modifica il nome della classe/interfaccia;
 \end{itemize}
 
@@ -842,7 +842,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\end{enumerate}
 \end{itemize}
 
-\subsubparagraph{UC4.12.2.3.1: Modifica Nome Parametro}
+\subparagraph{UC4.12.2.3.1: Modifica Nome Parametro}
 \label{UC4.12.2.3.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
@@ -852,7 +852,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}: l'attore modifica il nome del parametro.
 \end{itemize}
 
-\subsubparagraph{UC4.12.2.3.2: Modifica Tipo Parametro}
+\subparagraph{UC4.12.2.3.2: Modifica Tipo Parametro}
 \label{UC4.12.2.3.2}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
@@ -1127,269 +1127,200 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
 		\item l'attore può inserire un blocco variabile (UC5.1);
-		\item l'attore può inserire un blocco metodo (UC5.2);
-		\item l'attore può inserire un blocco if/else (UC5.3);
+		\item l'attore può inserire un blocco if (UC5.2);
+		\item l'attore può inserire un blocco else (UC5.3);
 		\item l'attore può inserire un blocco while (UC5.4);
 		\item l'attore può inserire un blocco for (UC5.5);
 		\item l'attore può inserire un blocco custom (UC5.6);
 		\item l'attore può rimuovere un blocco variabile (UC5.7);
-		\item l'attore può rimuovere un blocco metodo (UC5.8);
-		\item l'attore può rimuovere un blocco if/else (UC5.9);
-		\item l'attore può rimuovere  un blocco while (UC5.10);
+		\item l'attore può rimuovere un blocco if (UC5.8);
+		\item l'attore può rimuovere un blocco else (UC5.9);
+		\item l'attore può rimuovere un blocco while (UC5.10);
 		\item l'attore può rimuovere un blocco for (UC5.11);
 		\item l'attore può rimuovere un blocco custom (UC5.12);
-		\item l'attore può ridurre un blocco if/else (UC5.13);
-		\item l'attore può espandere un blocco if/else (UC5.14);
-		\item l'attore può ridurre un blocco while (UC5.15);
-		\item l'attore può espandere un blocco while (UC5.16);
-		\item l'attore può ridurre un blocco for (UC5.17);
-		\item l'attore può espandere un blocco for (UC5.18);
-		\item l'attore può spostare un qualsiasi blocco già inserito (UC5.19);
-		\item l'attore può modificare un blocco variabile (UC5.20);
-		\item l'attore può modificare un blocco metodo (UC5.21);
-		\item l'attore può modificare un blocco if/else (UC5.22);
-		\item l'attore può modificare un blocco while (UC5.23);
-		\item l'attore può modificare un blocco for (UC5.24);
-		\item l'attore può modificare un blocco custom (UC5.25);
-		\item l'attore può inserire un blocco return (UC5.26).
+		\item l'attore può ridurre un blocco variabile (UC5.13);
+		\item l'attore può espandere un blocco variabile (UC5.14);
+		\item l'attore può ridurre un blocco if (UC5.15);
+		\item l'attore può espandere un blocco if (UC5.16);
+		\item l'attore può ridurre un blocco else (UC5.17);
+		\item l'attore può espandere un blocco else (UC5.18);
+		\item l'attore può ridurre un blocco while (UC5.19);
+		\item l'attore può espandere un blocco while (UC5.20);
+		\item l'attore può ridurre un blocco for (UC5.21);
+		\item l'attore può espandere un blocco for (UC5.22);
+		\item l'attore può ridurre un blocco custom (UC5.23);
+		\item l'attore può espandere un blocco custom (UC5.24);
+		\item l'attore può ridurre un blocco return (UC5.25);
+		\item l'attore può espandere un blocco return (UC5.26);
+		\item l'attore può modificare un blocco variabile (UC5.27);
+		\item l'attore può modificare un blocco if (UC5.28);
+		\item l'attore può modificare un blocco else (UC5.29);
+		\item l'attore può modificare un blocco while (UC5.30);
+		\item l'attore può modificare un blocco for (UC5.31);
+		\item l'attore può modificare un blocco custom (UC5.32);
+		\item l'attore può inserire un blocco return (UC5.33);
+		\item l'attore può modificare un blocco return (UC5.34).
 	\end{enumerate}
 \end{itemize}
 
 \subsubsection{UC5.1: Inserimento Blocco Variabile}
 \label{UC5.1}
-\myimg{UC5.1 - Inserimento Blocco Variabile}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire un blocco variabile scegliendo tra un blocco variabile di inizializzazione e un blocco variabile di assegnazione;
-	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando eventualmente il commento specificato dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+	\item \textbf{Descrizione}: l'attore può inserire un blocco variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può scegliere di creare e inizializzare una variabile (UC5.1.1);
-		\item l'attore può scegliere di assegnare un valore ad una variabile esistente da scegliere (UC5.1.2);
-		\item l'attore può scegliere di inserire un commento (UC5.1.3);
-		\item l'attore può confermare l'inserimento del blocco variabile (UC5.1.4).
+		\item l'attore deve inserire il nome della variabile (UC5.1.1);
+		\item l'attore può inserire il tipo della variabile (UC5.1.2);
+		\item l'attore può inserire l'operazione da eseguire (UC5.1.3);
+		\item l'attore può inserire il valore da assegnare alla variabile (UC5.1.4);
+		\item l'attore può inserire commento (UC5.1.5).
 	\end{enumerate}
 \end{itemize}
 
-\paragraph{UC5.1.1: Inizializzazione Variabile}
+\paragraph{UC5.1.1: Inserimento Nome Variabile}
 \label{UC5.1.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può creare ed inizializzare una variabile assegnandole un valore;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco di inizializzazione variabile da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve indicare il nome e il tipo della variabile da creare ed eventualmente un valore da assegnarle: tale valore può essere anche ritornato da un metodo che può essere scelto tra quelli proposti.
+	\item \textbf{Descrizione}: l'attore deve inserire il nome della variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore deve indicare il nome della variabile da creare.
 \end{itemize}
 
-\paragraph{UC5.1.2: Assegnazione Variabile}
+\paragraph{UC5.1.2: Inserimento Tipo Variabile}
 \label{UC5.1.2}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può assegnare un valore ad una variabile esistente e visibile;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco di assegnazione variabile da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve fornire un valore da assegnare ad una variabile esistente e visibile: tale valore può essere anche ritornato da un metodo che può essere scelto tra quelli proposti.
+	\item \textbf{Descrizione}: l'attore può inserire il tipo della variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce il tipo della variabile.
 \end{itemize}
 
-\paragraph{UC5.1.3: Inserimento Commento Blocco Variabile}
+\paragraph{UC5.1.3: Inserimento Operazione}
 \label{UC5.1.3}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire un commento per il blocco variabile selezionato;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco di assegnazione variabile da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco variabile selezionato.
+	\item \textbf{Descrizione}: l'attore può inserire l'operazione da eseguire;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce l'operazione da eseguire.
 \end{itemize}
 
-\paragraph{UC5.1.4: Conferma Inserimento Blocco Variabile}
+\paragraph{UC5.1.4: Assegnazione Variabile}
 \label{UC5.1.4}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco variabile selezionato;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco di assegnazione variabile da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
-	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco variabile selezionato;
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha indicato il nome della variabile da inizializzare;
-		\item l'attore non ha fornito un valore da assegnare alla variabile già esistente e visibile;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
+	\item \textbf{Descrizione}: l'attore può inserire un valore da assegnare alla variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce un valore da assegnare alla variabile: tale valore può essere anche ritornato da un metodo che può essere scelto tra quelli proposti.
 \end{itemize}
 
-\subparagraph{UC5.1.4.1: Visualizzazione Errore Inserimento Blocco Variabile}
-\label{UC5.1.4.1}
+\paragraph{UC5.1.5: Inserimento Commento Blocco Variabile}
+\label{UC5.1.5}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si siano verificati uno o più scenari alternativi durante la fase di inserimento di un blocco variabile;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco variabile;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
+	\item \textbf{Descrizione}: l'attore può inserire un commento per il blocco variabile selezionato;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco variabile selezionato.
 \end{itemize}
 
-\subsubsection{UC5.2: Inserimento Blocco Metodo}
+\subsubsection{UC5.2: Inserimento Blocco If}
 \label{UC5.2}
-\myimg{UC5.2 - Inserimento Blocco Metodo}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire un blocco metodo allo scopo di inserire all'interno del diagramma la chiamata ad un particolare metodo definito altrove (eventualmente nel corrispondente diagramma delle classi);
-	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando eventualmente il commento specificato dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+	\item \textbf{Descrizione}: l'attore può inserire un blocco if specificandone condizione e istruzioni del corrispondente corpo di codice;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può scegliere di inserire un metodo (UC5.2.1);
-		\item l'attore può scegliere di inserire un commento (UC5.2.2);
-		\item l'attore può confermare l'inserimento del blocco metodo (UC5.2.3).
+		\item l'attore deve di inserire la condizione da verificare (UC5.2.1);
+		\item l'attore può inserire il contenuto del blocco if (UC5.2.2);
+		\item l'attore può inserire un commento (UC5.2.3);
 	\end{enumerate}
 \end{itemize}
 
-\paragraph{UC5.2.1: Chiamata di Metodo}
+\paragraph{UC5.2.1: Condizione Blocco If}
 \label{UC5.2.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve invocare un metodo da inserire all'interno del blocco tra quelli disponibili;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco metodo da inserire e il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve scegliere un metodo da invocare tra quelli proposti.
+	\item \textbf{Descrizione}: l'attore deve inserire la condizione da verificare del blocco if;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce la condizione da verificare del blocco if.
 \end{itemize}
 
-\paragraph{UC5.2.2: Inserimento Commento Blocco Metodo}
+\paragraph{UC5.2.2: Corpo Blocco If}
 \label{UC5.2.2}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire un commento per il blocco metodo da inserirsi;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco metodo da inserire e il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco metodo selezionato.
+	\item \textbf{Descrizione}: l'attore può inserire una serie di blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco if stesso;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce uno o più blocchi tra quelli resi disponibili dall'editor.
 \end{itemize}
 
-\paragraph{UC5.2.3: Conferma Inserimento Blocco Metodo}
+\paragraph{UC5.2.3: Inserimento Commento Blocco If}
 \label{UC5.2.3}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco metodo;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco metodo da inserire e il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;	
-	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco metodo;
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha indicato un metodo da inserire;
-		\item l'attore non ha inserito un commento a corredo del blocco metodo.
-	\end{itemize}
+	\item \textbf{Descrizione}: l'attore può inserire un commento per il blocco if;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco if.
 \end{itemize}
 
-\subparagraph{UC5.2.3.1: Visualizzazione Errore Inserimento Blocco Metodo}
-\label{UC5.2.3.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si siano verificati uno o più scenari alternativi durante la fase di inserimento di un blocco metodo;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco metodo;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
-\end{itemize}
-
-\subsubsection{UC5.3: Inserimento Blocco If/Else}
+\subsubsection{UC5.3: Inserimento Blocco Else}
 \label{UC5.3}
-\myimg{UC5.3 - Inserimento Blocco If_Else}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire un blocco if/else e in caso voglia indicare semplicemente la condizione di if senza andare a specificare quella antitetica, sarà per lui sufficiente lasciare vuoto il corpo del blocco else;
-	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore a corredo e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+	\item \textbf{Descrizione}: l'attore può inserire un blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può scegliere di inserire la condizione da verificare (UC5.3.1);
-		\item l'attore può scegliere di inserire il contenuto del blocco if (UC5.3.2);
-		\item l'attore può scegliere di inserire il contenuto del blocco else (UC5.3.3);
-		\item l'attore può scegliere di inserire un commento (UC5.3.4);
-		\item l'attore può confermare l'inserimento del blocco if/else (UC5.3.5).
+		\item l'attore può inserire il contenuto del blocco else (UC5.3.1);
+		\item l'attore può inserire un commento (UC5.3.2);
 	\end{enumerate}
 \end{itemize}
 
-\paragraph{UC5.3.1: Condizione Blocco If}
+\paragraph{UC5.3.1: Condizione Blocco Else}
 \label{UC5.3.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire la condizione da verificare del blocco if; da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}:
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco if
-	l'attore deve inserire la condizione da verificare del blocco if come espressione booleana espressa con il linguaggio target di generazione del codice dell'applicazione.
+	\item \textbf{Descrizione}: l'attore deve inserire la condizione da verificare del blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce la condizione da verificare del blocco else.
 \end{itemize}
 
-\paragraph{UC5.3.2: Corpo Blocco If}
+\paragraph{UC5.3.2: Inserimento Commento Blocco Else}
 \label{UC5.3.2}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire una serie di blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco if stesso;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco if da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire uno o più blocchi tra quelli resi disponibili dall'editor.
-\end{itemize}
-
-\paragraph{UC5.3.3: Corpo Blocco Else}
-\label{UC5.3.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire una serie di blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco else stesso;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco if da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire uno o più blocchi tra quelli resi disponibili dall'editor.
-\end{itemize}
-
-\paragraph{UC5.3.4: Inserimento Commento Blocco If/Else}
-\label{UC5.3.4}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire un commento per il blocco if/else;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco if da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco if/else.
-\end{itemize}
-
-\paragraph{UC5.3.5: Conferma Inserimento Blocco If/Else}
-\label{UC5.3.5}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco if/else;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco if da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
-	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco if/else selezionato;
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.3.5.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha fornito la condizione da verificare;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
-\end{itemize}
-
-\subparagraph{UC5.3.5.1: Visualizzazione Errore Inserimento Blocco If/Else}
-\label{UC5.3.5.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si siano verificati uno o più scenari alternativi durante la fase di inserimento di un blocco if/else;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco if/else;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
+	\item \textbf{Descrizione}: l'attore può inserire un commento per il blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco else.
 \end{itemize}
 
 \subsubsection{UC5.4: Inserimento Blocco While}
 \label{UC5.4}
-\myimg{UC5.4 - Inserimento Blocco While}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco while specificandone condizione e istruzioni del corrispondente corpo di codice;
-	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può scegliere di inserire la condizione da verificare (UC5.4.1);
-		\item l'attore può scegliere di inserire il corpo del blocco while (UC5.4.2);
-		\item l'attore può scegliere di inserire un commento (UC5.4.3);
-		\item l'attore può confermare l'inserimento del blocco while (UC5.4.4).
+		\item l'attore può inserire la condizione da verificare (UC5.4.1);
+		\item l'attore può inserire il corpo del blocco while (UC5.4.2);
+		\item l'attore può inserire un commento (UC5.4.3);
 	\end{enumerate}
 \end{itemize}
 
@@ -1397,75 +1328,46 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC5.4.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire la condizione da verificare del blocco while;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco while da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire la condizione da verificare del blocco while come espressione booleana espressa con il linguaggio target di generazione del codice dell'applicazione.
+	\item \textbf{Descrizione}: l'attore deve inserire la condizione da verificare del blocco while;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce la condizione da verificare del blocco while.
 \end{itemize}
 
 \paragraph{UC5.4.2: Corpo Blocco While}
 \label{UC5.4.2}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può inserire uno o più blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco while stesso;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco while da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire uno o più blocchi tra quelli resi disponibili dall'editor.
+	\item \textbf{Descrizione}: l'attore può inserire una serie di blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco if stesso;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce uno o più blocchi tra quelli resi disponibili dall'editor.
 \end{itemize}
 
 \paragraph{UC5.4.3: Inserimento Commento Blocco While}
 \label{UC5.4.3}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire un commento per il blocco while;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco while da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Descrizione}: l'attore può inserire un commento per il blocco while;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco while.
-\end{itemize}
-
-\paragraph{UC5.4.4: Conferma Inserimento Blocco While}
-\label{UC5.4.4}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco while;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco while da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco while inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
-	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco while;
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.4.4.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha fornito la condizione da verificare;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
-\end{itemize}
-
-\subparagraph{UC5.4.4.1: Visualizzazione Errore Inserimento Blocco While}
-\label{UC5.4.4.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un blocco while;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco while;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
 \subsubsection{UC5.5: Inserimento Blocco For}
 \label{UC5.5}
-\myimg{UC5.5 - Inserimento Blocco For}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco for specificandone condizione, passo e le istruzioni che andranno a comporre il relativo corpo di codice;
-	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente
-	inserito nel diagramma delle attività corrente;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può scegliere di inserire il codice di inizializzazione (UC5.5.1);
-		\item l'attore può scegliere di inserire la condizione da verificare (UC5.5.2);
-		\item l'attore può scegliere di inserire il passo di incremento/decremento (UC5.5.3);
-		\item l'attore può scegliere di inserire il corpo del for (UC5.5.4);
-		\item l'attore può scegliere di inserire un commento (UC5.5.5);
-		\item l'attore può confermare l'inserimento del blocco for (UC5.5.6).
+		\item l'attore puòi inserire il codice di inizializzazione (UC5.5.1);
+		\item l'attore può inserire la condizione da verificare (UC5.5.2);
+		\item l'attore può inserire il passo di incremento/decremento (UC5.5.3);
+		\item l'attore può inserire il corpo del for (UC5.5.4);
+		\item l'attore può inserire un commento (UC5.5.5).
 	\end{enumerate}
 \end{itemize}
 
@@ -1474,9 +1376,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire l'inizializzazione del blocco for;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire l'inizializzazione del blocco for creando ed inizializzando una variabile o scegliendone una tra quelle disponibili.
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce l'inizializzazione del blocco for creando ed inizializzando una variabile o scegliendone una tra quelle disponibili.
 \end{itemize}
 
 \paragraph{UC5.5.2: Condizione Blocco For}
@@ -1484,9 +1386,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire la condizione da verificare all'interno blocco for;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire la condizione da verificare del blocco for come espressione booleana espressa con il linguaggio target di generazione del codice dell'applicazione.
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce la condizione da verificare del blocco for come espressione booleana espressa con il linguaggio target di generazione del codice dell'applicazione.
 \end{itemize}
 
 \paragraph{UC5.5.3: Incremento/Decremento Blocco For}
@@ -1494,9 +1396,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire il passo di incremento/decremento del blocco for;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire il passo di incremento/decremento del blocco for scegliendo una variabile tra quelle disponibili e visibili.
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce il passo di incremento/decremento del blocco for scegliendo una variabile tra quelle disponibili e visibili.
 \end{itemize}
 
 \paragraph{UC5.5.4: Corpo Blocco For}
@@ -1504,62 +1406,32 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire uno o più blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco for stesso;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire uno o più blocchi tra quelli resi disponibili dall'editor.
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce uno o più blocchi tra quelli resi disponibili dall'editor.
 \end{itemize}
 
 \paragraph{UC5.5.5: Inserimento Commento Blocco For}
 \label{UC5.5.5}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire un commento per il blocco for;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Descrizione}: l'attore può inserire un commento per il blocco for;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco for.
-\end{itemize}
-
-\paragraph{UC5.5.6: Conferma Inserimento Blocco For}
-\label{UC5.5.6}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco for;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco for da inserire e il sistema visualizza il relativo form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco for inserito posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
-	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco for;
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.5.6.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha fornito la condizione da verificare;
-		\item l'attore non ha fornito l'incremento/decremento;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
-\end{itemize}
-
-\subparagraph{UC5.5.6.1: Visualizzazione Errore Inserimento Blocco For}
-\label{UC5.5.6.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di inserimento nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento di un blocco for;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per l'inserimento di un blocco for;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
 \subsubsection{UC5.6: Inserimento Blocco Custom}
 \label{UC5.6}
-\myimg{UC5.6 - Inserimento Blocco Custom}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco custom di codice all'interno del quale inserire liberamente uno o più \gloss{statement} nel linguaggio target di generazione di codice dell'editor;
-	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito mostrando il commento inserito dall'attore e posizionandolo successivamente all'ultimo blocco generico precedentemente
-	inserito nel diagramma delle attività corrente;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item l'attore può inserisce il contenuto in codice del blocco custom (UC5.6.1);
-		\item l'attore può inserisce un commento relativo al blocco custom(UC5.6.2);
-		\item l'attore può confermare l'inserimento del blocco custom (UC5.6.3).
+		\item l'attore può inserire il contenuto in codice del blocco custom (UC5.6.1);
+		\item l'attore può inserire un commento relativo al blocco custom (UC5.6.2).
 	\end{enumerate}
 \end{itemize}
 
@@ -1567,30 +1439,20 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \label{UC5.6.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore inserisce il contenuto in codice del blocco custom;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco custom da inserire e il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
-	\item \textbf{Scenario principale}: l'attore deve inserire il contenuto in codice del blocco custom in Java, il linguaggio target di generazione del codice dell'applicativo.
+	\item \textbf{Descrizione}: l'attore può inserire il contenuto in codice del blocco custom;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce il contenuto in codice del blocco custom in Java, il linguaggio target di generazione del codice dell'applicativo.
 \end{itemize}
 
 \paragraph{UC5.6.2: Inserimento Commento Blocco Custom}
 \label{UC5.6.2}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire un commento per il blocco custom;
-	\item \textbf{Precondizione}: l'attore ha selezionato un blocco custom da inserire e il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto;
+	\item \textbf{Descrizione}: l'attore può inserire un commento per il blocco custom;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
 	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco custom che ne illustri il principale comportamento.
-\end{itemize}
-
-\paragraph{UC5.6.3: Conferma Inserimento Blocco Custom}
-\label{UC5.6.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare l'inserimento del blocco custom;
-	\item \textbf{Precondizione}: il sistema visualizza il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco custom inserito;
-	\item \textbf{Scenario principale}: l'attore conferma l'inserimento del blocco custom.
 \end{itemize}
 
 \subsubsection{UC5.7: Rimozione Blocco Variabile}
@@ -1598,29 +1460,29 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può rimuovere un blocco variabile;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco variabile precedentemente realizzato;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema rimuove il blocco variabile;
 	\item \textbf{Scenario principale}: l'attore rimuove il blocco variabile selezionato.
 \end{itemize}
 
-\subsubsection{UC5.8: Rimozione Blocco Metodo}
+\subsubsection{UC5.8: Rimozione Blocco If}
 \label{UC5.8}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può rimuovere un blocco metodo;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco metodo precedentemente realizzato;
-	\item \textbf{Postcondizione}: il sistema rimuove il blocco metodo;
-	\item \textbf{Scenario principale}: l'attore rimuove il blocco metodo selezionato.
+	\item \textbf{Descrizione}: l'attore può rimuovere un blocco if;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema rimuove il blocco if;
+	\item \textbf{Scenario principale}: l'attore rimuove il blocco if selezionato.
 \end{itemize}
 
-\subsubsection{UC5.9: Rimozione Blocco If/Else}
+\subsubsection{UC5.9: Rimozione Blocco Else}
 \label{UC5.9}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può rimuovere un blocco if/else;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco if/else precedentemente realizzato;
-	\item \textbf{Postcondizione}: il sistema rimuove il blocco if/else;
-	\item \textbf{Scenario principale}: l'attore rimuove il blocco if/else selezionato.
+	\item \textbf{Descrizione}: l'attore può rimuovere un blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema rimuove il blocco else;
+	\item \textbf{Scenario principale}: l'attore rimuove il blocco else selezionato.
 \end{itemize}
 
 \subsubsection{UC5.10: Rimozione Blocco While}
@@ -1628,7 +1490,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può rimuovere un blocco while;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco while precedentemente realizzato;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema rimuove il blocco while;
 	\item \textbf{Scenario principale}: l'attore rimuove il blocco while selezionato.
 \end{itemize}
@@ -1638,7 +1500,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può rimuovere un blocco for;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco for precedentemente realizzato;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema rimuove il blocco for;
 	\item \textbf{Scenario principale}: l'attore rimuove il blocco for selezionato.
 \end{itemize}
@@ -1648,456 +1510,461 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può rimuovere un blocco custom;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco custom precedentemente realizzato;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema rimuove il blocco custom;
 	\item \textbf{Scenario principale}: l'attore rimuove il blocco custom selezionato.
 \end{itemize}
 
-\subsubsection{UC5.13: Riduzione Blocco If/Else}
+\subsubsection{UC5.13: Riduzione Blocco Variabile}
 \label{UC5.13}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può ridurre il blocco if/else;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco if/else precedentemente realizzato ed espanso;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else ridotto;
-	\item \textbf{Scenario principale}: l'attore riduce il blocco if/else nascondendone il corpo.
+	\item \textbf{Descrizione}: l'attore può ridurre il blocco variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce il blocco variabile nascondendone il contenuto.
 \end{itemize}
 
-\subsubsection{UC5.14: Espansione Blocco If/Else}
+\subsubsection{UC5.14: Espansione Blocco Variabile}
 \label{UC5.14}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può espandere il blocco if/else;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco if/else precedentemente realizzato e ridotto;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else espanso;
-	\item \textbf{Scenario principale}: l'attore espande il blocco if/else mostrandone il corpo.
+	\item \textbf{Descrizione}: l'attore può espandere il blocco variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile espanso;
+	\item \textbf{Scenario principale}: l'attore espande il blocco variabile mostrandone il contenuto.
 \end{itemize}
 
-\subsubsection{UC5.15: Riduzione Blocco While}
+\subsubsection{UC5.15: Riduzione Blocco If}
 \label{UC5.15}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può ridurre il blocco while;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco while precedentemente realizzato ed espanso;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco while ridotto;
-	\item \textbf{Scenario principale}: l'attore riduce il blocco while nascondendone il corpo.
+	\item \textbf{Descrizione}: l'attore può ridurre il blocco if;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco if ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce il blocco if nascondendone il contenuto.
 \end{itemize}
 
-\subsubsection{UC5.16: Espansione Blocco While}
+\subsubsection{UC5.16: Espansione Blocco If}
 \label{UC5.16}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può espandere il blocco while;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco while precedentemente realizzato e ridotto;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco while espanso;
-	\item \textbf{Scenario principale}: l'attore espande il blocco while mostrandone il corpo.
+	\item \textbf{Descrizione}: l'attore può espandere il blocco if;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco if espanso;
+	\item \textbf{Scenario principale}: l'attore espande il blocco if mostrandone il contenuto.
 \end{itemize}
 
-\subsubsection{UC5.17: Riduzione Blocco For}
+\subsubsection{UC5.17: Riduzione Blocco Else}
 \label{UC5.17}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può ridurre il blocco for;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco for precedentemente realizzato ed espanso;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco for ridotto;
-	\item \textbf{Scenario principale}: l'attore riduce il blocco for nascondendone il corpo.
+	\item \textbf{Descrizione}: l'attore può ridurre il blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco else ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce il blocco else nascondendone il contenuto.
 \end{itemize}
 
-\subsubsection{UC5.18: Espansione Blocco For}
+\subsubsection{UC5.18: Espansione Blocco Else}
 \label{UC5.18}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può espandere il blocco for;
-	\item \textbf{Precondizione}: il sistema visualizza il blocco for precedentemente realizzato e ridotto;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco for espanso;
-	\item \textbf{Scenario principale}: l'attore espande il blocco for mostrandone il corpo.
+	\item \textbf{Descrizione}: l'attore può espandere il blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco else espanso;
+	\item \textbf{Scenario principale}: l'attore espande il blocco else mostrandone il contenuto.
 \end{itemize}
 
-\subsubsection{UC5.19: Spostamento Blocco}
+\subsubsection{UC5.19: Riduzione Blocco While}
 \label{UC5.19}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può spostare uno dei qualsiasi blocchi già inseriti modificandone la posizione all'interno del diagramma delle attività correntemente gestito;
-	\item \textbf{Precondizione}: il sistema visualizza il diagramma delle attività correntemente gestito dall'attore ed in particolare il blocco che sarà selezionato per lo spostamento;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco for nella nuova posizione specificata dall'utente;
-	\item \textbf{Scenario principale}: l'attore muove il blocco selezionato in una nuova posizione del diagramma delle attività correntemente gestito.
+	\item \textbf{Descrizione}: l'attore può ridurre il blocco while;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco while ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce il blocco while nascondendone il contenuto.
 \end{itemize}
 
-% \item l'attore può modificare un blocco variabile (UC5.20);
-\subsubsection{UC5.20: Modifica Blocco Variabile}
+\subsubsection{UC5.20: Espansione Blocco While}
 \label{UC5.20}
-\myimg{UC5.20 - Modifica Blocco Variabile}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare un blocco variabile;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile modificato;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può scegliere di modificare il nome della variabile (UC5.20.1);
-		\item l'attore può scegliere di modificare il tipo della variabile (UC5.20.2);
-		\item l'attore può scegliere di modificare il valore della variabile (UC5.20.3);
-		\item l'attore può confermare le modifiche apportate al blocco variabile (UC5.20.4).
-	\end{enumerate}
+	\item \textbf{Descrizione}: l'attore può espandere il blocco while;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco while espanso;
+	\item \textbf{Scenario principale}: l'attore espande il blocco while mostrandone il contenuto.
 \end{itemize}
 
-% \item l'attore può scegliere di modificare il nome della variabile (UC5.20.1);
-\paragraph{UC5.20.1: Modifica Nome Variabile}
-\label{UC5.20.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il nome della variabile selezionata per la modifica scegliendolo eventualmente fra quelli visibili nello scope in cui sta agendo;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;
-	\item \textbf{Scenario principale}: L'attore modifica il nome della variabile selezionata per la modifica.
-\end{itemize}
-
-% \item l'attore può scegliere di modificare il tipo della variabile (UC5.20.2);
-\paragraph{UC5.20.2: Modifica Tipo Variabile}
-\label{UC5.20.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il tipo della variabile selezionata per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;
-	\item \textbf{Scenario principale}: L'attore modifica il tipo della variabile selezionata per la modifica.
-	\end{itemize}
-	% \item l'attore può scegliere di modificare il valore della variabile (UC5.20.3);
-	\paragraph{UC5.20.3: Modifica Valore Variabile}
-	\label{UC5.20.3}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente;
-		\item \textbf{Descrizione}: l'attore può modificare il valore della variabile selezionata per la modifica;
-		\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;
-		\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;
-		\item \textbf{Scenario principale}: L'attore modifica il valore della variabile selezionata per la modifica.
-\end{itemize}
-
-% \item l'attore può confermare le modifiche apportate al blocco variabile (UC5.20.4).
-\paragraph{UC5.20.4: Conferma Modifica Blocco Variabile}
-\label{UC5.20.4}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco variabile selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco variabile da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco variabile modificato;
-	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco variabile.
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.1.4.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha indicato il nome della variabile da inizializzare;
-		\item l'attore non ha fornito un valore da assegnare alla variabile già esistente e visibile;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
-\end{itemize}
-
-% \item l'attore può modificare un blocco metodo (UC5.21);
-\subsubsection{UC5.21: Modifica Blocco Metodo}
+\subsubsection{UC5.21: Riduzione Blocco For}
 \label{UC5.21}
-\myimg{UC5.21 - Modifica Blocco Metodo}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;\item \textbf{Scenario principale}:
-
-	\item \textbf{Descrizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo modificato;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può scegliere di modificare un metodo (UC5.21.1);
-		\item l'attore può scegliere di modificare un commento (UC5.21.2);
-		\item l'attore può confermare le modifiche apportate al blocco metodo (UC5.21.3).
-	\end{enumerate}
-\end{itemize}
-
-% \item l'attore può scegliere di modificare un metodo (UC5.21.1);
-\paragraph{UC5.21.1: Modifica Metodo}
-\label{UC5.21.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il metodo selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;
-	\item \textbf{Scenario principale}: L'attore modifica il blocco metodo selezionato per la modifica.
+	\item \textbf{Descrizione}: l'attore può ridurre il blocco for;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco for ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce il blocco for nascondendone il contenuto.
 \end{itemize}
 
-% \item l'attore può scegliere di modificare un commento (UC5.21.2);
-\paragraph{UC5.21.2: Modifica Commento Metodo}
-\label{UC5.21.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il commento relativo al blocco metodo selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;
-	\item \textbf{Scenario principale}: L'attore modifica il commento del blocco metodo selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può confermare le modifiche apportate al blocco metodo (UC5.21.3).
-\paragraph{UC5.21.3: Conferma Modifica Blocco Metodo}
-\label{UC5.21.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco metodo selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco metodo da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco metodo modificato;
-	\item \textbf{Scenario principale}: L'attore modifica  selezionata per la modifica.
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.2.3.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha indicato un metodo da inserire;
-		\item l'attore non ha inserito un commento a corredo del blocco metodo.
-	\end{itemize}
-\end{itemize}
-
-% \item l'attore può modificare un blocco if/else (UC5.22);
-\subsubsection{UC5.22: Modifica Blocco If/Else}
+\subsubsection{UC5.22: Espansione Blocco For}
 \label{UC5.22}
-\myimg{UC5.22 - Modifica Blocco If_Else}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il blocco if/else selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco if/else da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else modificato;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può scegliere di modificare la condizione da verificare (UC5.22.1);
-		\item l'attore può scegliere di modificare il commento (UC5.22.2);
-		\item l'attore può confermare le modifiche apportate al blocco if/else (UC5.22.3).
-	\end{enumerate}
+	\item \textbf{Descrizione}: l'attore può espandere il blocco for;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco for espanso;
+	\item \textbf{Scenario principale}: l'attore espande il blocco for mostrandone il contenuto.
 \end{itemize}
 
-% \item l'attore può scegliere di modificare la condizione da verificare (UC5.22.1);
-\paragraph{UC5.22.1: Modifica Condizione Blocco If/Else}
-\label{UC5.22.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare la condizione da verificare relativa al blocco if/else selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco if/else da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;
-	\item \textbf{Scenario principale}: L'attore modifica la condizione da verificare relativa al blocco if/else selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può scegliere di modificare il commento (UC5.22.2);
-\paragraph{UC5.22.2: Modifica Contenuto Blocco If/Else}
-\label{UC5.22.2}
-\begin{itemize}
-\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il commento relativo al blocco if/else selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco if/else da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati richiesti;
-	\item \textbf{Scenario principale}: L'attore modifica il commento relativo al blocco if/else selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può confermare le modifiche apportate al blocco if/else (UC5.22.3).
-\paragraph{UC5.22.3: Conferma Modifica Blocco If/Else}
-\label{UC5.22.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco if/else selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco if/else da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco if/else modificato;
-	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco if/else selezionato per la modifica.
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.3.5.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha fornito la condizione da verificare;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
-\end{itemize}
-
-% \item l'attore può modificare un blocco while (UC5.23);
-\subsubsection{UC5.23: Modifica Blocco While}
+\subsubsection{UC5.23: Riduzione Blocco Custom}
 \label{UC5.23}
-\myimg{UC5.23 - Modifica Blocco While}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il blocco while selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco while e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco while modificato;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può scegliere di modificare la condizione da verificare (UC5.23.1);
-		\item l'attore può scegliere di inserire un commento (UC5.23.2);
-		\item l'attore può confermare le modifiche apportate al blocco while (UC5.23.3).
-	\end{enumerate}
+	\item \textbf{Descrizione}: l'attore può ridurre il blocco custom;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco custom ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce il blocco custom nascondendone il contenuto.
 \end{itemize}
 
-% \item l'attore può scegliere di modificare la condizione da verificare (UC5.23.1);
-\paragraph{UC5.23.1: Modifica Condizione Blocco While}
-\label{UC5.23.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare la condizione relativa al blocco while selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco while da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica la condizione relativa al blocco while selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può scegliere di inserire un commento (UC5.23.2);
-\paragraph{UC5.23.2: Modifica Commento Blocco While}
-\label{UC5.23.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il commento relativo al blocco while selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco while da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica il commento relativo al blocco while selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può confermare le modifiche apportate al blocco while (UC5.23.3).
-\paragraph{UC5.23.3: Conferma Modifica Blocco While}
-\label{UC5.23.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco while selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco while da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco while modificato;
-	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco while selezionato per la modifica.
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.4.4.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha fornito la condizione da verificare;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
-\end{itemize}
-
-% \item l'attore può modificare un blocco for (UC5.24);
-\subsubsection{UC5.24: Modifica Blocco For}
+\subsubsection{UC5.24: Espansione Blocco Custom}
 \label{UC5.24}
-\myimg{UC5.24 - Modifica Blocco For}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il blocco for selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco for e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco for modificato;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può scegliere di modificare il codice di inizializzazione (UC5.24.1);
-		\item l'attore può scegliere di modificare la condizione da verificare (UC5.24.2);
-		\item l'attore può scegliere di modificare il passo di incremento/decremento (UC5.24.3);
-		\item l'attore può scegliere di modificare un commento (UC5.24.4);
-		\item l'attore può scegliere di confermare le modifiche apportate al blocco for (UC5.24.5).
-	\end{enumerate}
+	\item \textbf{Descrizione}: l'attore può espandere il blocco custom;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco custom espanso;
+	\item \textbf{Scenario principale}: l'attore espande il blocco custom mostrandone il contenuto.
 \end{itemize}
 
-% \item l'attore può scegliere di modificare il codice di inizializzazione (UC5.24.1);
-\paragraph{UC5.24.1: Modifica Inizializzazione Blocco For}
-\label{UC5.24.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare l'inizializzazione del blocco for selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco for da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica l'inizializzazione del blocco for selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può scegliere di modificare la condizione da verificare (UC5.24.2);
-\paragraph{UC5.24.2: Modifica Condizione Blocco For}
-\label{UC5.24.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare la condizione del blocco for selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco for da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica la condizione del blocco for selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può scegliere di modificare il passo di incremento/decremento (UC5.24.3);
-\paragraph{UC5.24.3: Modifica Incremento/Decremento Blocco For}
-\label{UC5.24.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il passo di incremento/decremento del blocco for selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco for da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica il passo di incremento/decremento del blocco for selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può scegliere di modificare un commento (UC5.24.4);
-\paragraph{UC5.24.4: Modifica Commento Blocco For}
-\label{UC5.24.4}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il commento del blocco for selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco for da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica il commento del blocco for selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può scegliere di confermare le modifiche apportate al blocco for (UC5.24.5).
-\paragraph{UC5.24.5: Conferma Modifica Blocco For}
-\label{UC5.24.5}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco for selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco for da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco for modificato;
-	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco for selezionato per la modifica.
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati (UC5.5.6.1);
-	\item \textbf{Scenari alternativi}:
-	\begin{itemize}
-		\item l'attore non ha fornito la condizione da verificare;
-		\item l'attore non ha fornito l'incremento/decremento;
-		\item l'attore non ha inserito un commento.
-	\end{itemize}
-\end{itemize}
-
-% \item l'attore può modificare un blocco custom (UC5.25).
-\subsubsection{UC5.25: Modifica Blocco Custom}
+\subsubsection{UC5.25: Riduzione Blocco Return}
 \label{UC5.25}
-\myimg{UC5.25 - Modifica Blocco Custom}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il blocco custom selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco custom e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco custom modificato;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può modificare il contenuto in codice del blocco custom (UC5.25.1);
-		\item l'attore può modificare il commento relativo al blocco custom(UC5.25.2);
-		\item l'attore può confermare le modifiche apportate al blocco custom (UC5.25.3).
-	\end{enumerate}
+	\item \textbf{Descrizione}: l'attore può ridurre il blocco return;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco return ridotto;
+	\item \textbf{Scenario principale}: l'attore riduce il blocco return nascondendone il contenuto.
 \end{itemize}
 
-% \item l'attore può modificare il contenuto in codice del blocco custom (UC5.25.1);
-\paragraph{UC5.25.1: Modifica Contenuto Blocco Custom}
-\label{UC5.25.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il contenuto del blocco custom selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco custom da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica il contenuto del blocco custom selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può modificare il commento relativo al blocco custom(UC5.25.2);
-\paragraph{UC5.25.2: Modifica Commento Blocco Custom}
-\label{UC5.25.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare il commento del blocco custom selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco custom da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il form ha ricevuto i dati necessari;
-	\item \textbf{Scenario principale}: L'attore modifica il commento del blocco custom selezionato per la modifica.
-\end{itemize}
-
-% \item l'attore può confermare le modifiche apportate al blocco custom (UC5.25.3).
-\paragraph{UC5.25.3: Conferma Modifica Blocco Custom}
-\label{UC5.25.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può confermare le modifiche apportate al blocco custom selezionato per la modifica;
-	\item \textbf{Precondizione}: l'attore ha selezionato il blocco custom da modificare e il sistema visualizza il form di inserimento dati ;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco custom modificato;
-	\item \textbf{Scenario principale}: L'attore conferma le modifiche apportate al blocco custom selezionato per la modifica.
-\end{itemize}
-
-\subsubsection{UC5.26: Inserimento Blocco Return}
+\subsubsection{UC5.26: Espansione Blocco Return}
 \label{UC5.26}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può espandere il blocco return;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema visualizza il blocco return espanso;
+	\item \textbf{Scenario principale}: l'attore espande il blocco return mostrandone il contenuto.
+\end{itemize}
+
+\subsubsection{UC5.27: Modifica Blocco Variabile}
+\label{UC5.27}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modfiicare un blocco variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può modificare il nome della variabile (UC5.27.1);
+		\item l'attore può modificare il tipo della variabile (UC5.27.2);
+		\item l'attore può modificare l'operazione da eseguire (UC5.27.3);
+		\item l'attore può modificare il valore da assegnare alla variabile (UC5.27.4);
+		\item l'attore può modificare commento (UC5.27.5).
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.27.1: Modifica Nome Variabile}
+\label{UC5.27.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare il nome della variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica il nome della variabile da creare.
+\end{itemize}
+
+\paragraph{UC5.27.2: Modifica Tipo Variabile}
+\label{UC5.27.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare il tipo della variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica il tipo della variabile.
+\end{itemize}
+
+\paragraph{UC5.27.3: Modifica Operazione}
+\label{UC5.27.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare l'operazione da eseguire;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica l'operazione da eseguire.
+\end{itemize}
+
+\paragraph{UC5.27.4: Modifica Assegnazione Variabile}
+\label{UC5.27.4}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un valore da assegnare alla variabile;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un valore da assegnare alla variabile: tale valore può essere anche ritornato da un metodo che può essere scelto tra quelli proposti.
+\end{itemize}
+
+\paragraph{UC5.27.5: Modifica Commento Blocco Variabile}
+\label{UC5.27.5}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un commento per il blocco variabile selezionato;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un commento per il blocco variabile selezionato.
+\end{itemize}
+
+\subsubsection{UC5.28: Modifica Blocco If}
+\label{UC5.28}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un blocco if specificandone condizione e istruzioni del corrispondente corpo di codice;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può modificare la condizione da verificare (UC5.28.1);
+		\item l'attore può modificare il contenuto del blocco if (UC5.28.2);
+		\item l'attore può modificare un commento (UC5.28.3);
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.28.1: Modifica Condizione Blocco If}
+\label{UC5.28.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare la condizione da verificare del blocco if;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica la condizione da verificare del blocco if.
+\end{itemize}
+
+\paragraph{UC5.28.2: Modifica Corpo Blocco If}
+\label{UC5.28.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare una serie di blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco if stesso;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica uno o più blocchi tra quelli resi disponibili dall'editor.
+\end{itemize}
+
+\paragraph{UC5.28.3: Modifica Commento Blocco If}
+\label{UC5.28.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un commento per il blocco if;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un commento per il blocco if.
+\end{itemize}
+
+\subsubsection{UC5.29: Modifica Blocco Else}
+\label{UC5.29}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può inserire il contenuto del blocco else (UC5.29.1);
+		\item l'attore può inserire un commento (UC5.29.2);
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.29.1: Modifica Condizione Blocco Else}
+\label{UC5.29.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare la condizione da verificare del blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica la condizione da verificare del blocco else.
+\end{itemize}
+
+\paragraph{UC5.29.2: Modifica Commento Blocco Else}
+\label{UC5.29.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un commento per il blocco else;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un commento per il blocco else.
+\end{itemize}
+
+\subsubsection{UC5.30: Modifica Blocco While}
+\label{UC5.30}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un blocco while specificandone condizione e istruzioni del corrispondente corpo di codice;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può modificare la condizione da verificare (UC5.30.1);
+		\item l'attore può modificare il corpo del blocco while (UC5.30.2);
+		\item l'attore può modificare un commento (UC5.30.3);
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.30.1: Modifica Condizione Blocco While}
+\label{UC5.30.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare la condizione da verificare del blocco while;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica la condizione da verificare del blocco while.
+\end{itemize}
+
+\paragraph{UC5.30.2: Modifica Corpo Blocco While}
+\label{UC5.30.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare una serie di blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco if stesso;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica uno o più blocchi tra quelli resi disponibili dall'editor.
+\end{itemize}
+
+\paragraph{UC5.30.3: Modifica Commento Blocco While}
+\label{UC5.30.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un commento per il blocco while;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un commento per il blocco while.
+\end{itemize}
+
+\subsubsection{UC5.31: Modifica Blocco For}
+\label{UC5.31}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un blocco for specificandone condizione, passo e le istruzioni che andranno a comporre il relativo corpo di codice;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore puòi inserire il codice di inizializzazione (UC5.31.1);
+		\item l'attore può inserire la condizione da verificare (UC5.31.2);
+		\item l'attore può inserire il passo di incremento/decremento (UC5.31.3);
+		\item l'attore può inserire il corpo del for (UC5.31.4);
+		\item l'attore può inserire un commento (UC5.31.5).
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.31.1: Modifica Inizializzazione Blocco For}
+\label{UC5.31.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare l'inizializzazione del blocco for;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica l'inizializzazione del blocco for creando ed inizializzando una variabile o scegliendone una tra quelle disponibili.
+\end{itemize}
+
+\paragraph{UC5.31.2: Modifica Condizione Blocco For}
+\label{UC5.531.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare la condizione da verificare all'interno blocco for;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica la condizione da verificare del blocco for come espressione booleana espressa con il linguaggio target di generazione del codice dell'applicazione.
+\end{itemize}
+
+\paragraph{UC5.31.3: Modifica Incremento/Decremento Blocco For}
+\label{UC5.31.3}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare il passo di incremento/decremento del blocco for;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica il passo di incremento/decremento del blocco for scegliendo una variabile tra quelle disponibili e visibili.
+\end{itemize}
+
+\paragraph{UC5.31.4: Modifica Corpo Blocco For}
+\label{UC5.31.4}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare uno o più blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco for stesso;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica uno o più blocchi tra quelli resi disponibili dall'editor.
+\end{itemize}
+
+\paragraph{UC5.31.5: Modifica Commento Blocco For}
+\label{UC5.31.5}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un commento per il blocco for;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un commento per il blocco for.
+\end{itemize}
+
+\subsubsection{UC5.32: Modifica Blocco Custom}
+\label{UC5.32}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un blocco custom di codice all'interno del quale inserire liberamente uno o più \gloss{statement} nel linguaggio target di generazione di codice dell'editor;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item l'attore può modificare il contenuto in codice del blocco custom (UC5.32.1);
+		\item l'attore può modificare un commento relativo al blocco custom (UC5.32.2).
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.32.1: Modifica Contenuto Blocco Custom}
+\label{UC5.32.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare il contenuto in codice del blocco custom;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica il contenuto in codice del blocco custom in Java, il linguaggio target di generazione del codice dell'applicativo.
+\end{itemize}
+
+\paragraph{UC5.32.2: Modifica Commento Blocco Custom}
+\label{UC5.32.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un commento per il blocco custom;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un commento per il blocco custom che ne illustri il principale comportamento.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{UC5.33: Inserimento Blocco Return}
+\label{UC5.33}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco return all'interno del diagramma delle attività;
-	\item \textbf{Precondizione}: il sistema, nella sezione dell'editor dedicata alla gestione del diagramma delle attività, visualizza un diagramma delle attività (eventualmente vuoto) associato ad un particolare metodo;
-	\item \textbf{Postcondizione}: il sistema visualizza il blocco inserito e posizionandolo successivamente all'ultimo blocco generico precedentemente inserito nel diagramma delle attività corrente;
-	\item \textbf{Scenario principale}: L'attore inserisce un blocco return all'interno del diagramma delle attività.
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce un blocco return all'interno del diagramma delle attività.
+\end{itemize}
+
+\subsubsection{UC5.34: Modifica Blocco Return}
+\label{UC5.34}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un blocco return all'interno del diagramma delle attività;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica un blocco return all'interno del diagramma delle attività.
 \end{itemize}
 
 \subsection{UC6: Salvataggio}
