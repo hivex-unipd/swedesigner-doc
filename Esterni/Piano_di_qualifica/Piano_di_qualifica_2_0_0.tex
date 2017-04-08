@@ -2303,7 +2303,155 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 	
 	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
 
+\subsection{Revisione di qualifica}
+		\subsubsection{Verifica processo di documentazione}
+		Le attività di verifica svolte sui documenti prodotti durante la progettazione sono state di due tipi:
+		\begin{itemize}		
+			\item attività di verifica manuali;
+			\item attività di verifica automatizzate.
+		\end{itemize}
+		
+		Le prime sono state svolte dai verificatori assegnati ad ogni documento utilizzando la tecnica di 					analisi statica walkthrough. Grazie ad essa è stato possibile correggere una discreta quantità di errori e imprecisioni presenti all'interno dei documenti prodotti fra cui: 
+		\begin{itemize}	
+			\item nuovi termini da inserire nel glossario;
+			\item termini presenti nel glossario, ma non correttamente segnati;
+			\item violazioni delle norme tipografiche e grammaticali come definite nel documento \NdP;
+			\item refusi ed errori grammaticali;
+			\item periodi troppo lunghi e complessi da spezzare, ridurre e semplificare.
+		\end{itemize}
+		A partire dalla natura e frequenza degli errori identificati il gruppo ha integrato le liste di controllo precedentemente stilate.
 
+		Le attività di verifica automatizzate, invece, sono state svolte utilizzando gli strumenti indicati nel documento \NdP. 
+		
+		I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{table}[H]
+		\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Documento} 		&\textbf{Valutazione} &\textbf{~~~~~~Esito~~~~~~} \\
+		\hline
+		\PdQ 					&61		&~~~~~~Superato~~~~~~\\
+		\NdP 					&49		&~~~~~~Superato~~~~~~\\
+		\AdR 					&71		&~~~~~~Superato~~~~~~\\
+		\PdP 					&55		&~~~~~~Superato~~~~~~\\
+		\ST 					&69		&~~~~~~Superato~~~~~~\\
+		\DP 					&69		&~~~~~~Superato~~~~~~\\	
+		\Glossario 				&48		&~~~~~~Superato~~~~~~\\
+		\textit{VI_--.pdf} 		&57		&~~~~~~Superato~~~~~~\\
+		\textit{VI_--.pdf} 		&57		&~~~~~~Superato~~~~~~\\
+		\textit{VI_--.pdf} 		&57		&~~~~~~Superato~~~~~~\\
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo dell'indice di Gulpease dei documenti consegnati}
+		\end{table}
+		
+		\subsubsection{Verifica processo di pianificazione di progetto e processo di verifica e controllo}
+		Per verificare il soddisfacimento degli obiettivi di qualità definiti per tale processo, a partire dal consultivo redatto nel \PdP{} sono stati calcolati gli indici di budget variance e schedule variance per ognuna delle attività previste.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:	
+		\begin{table}[H]
+		\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Documento} 		&\textbf{Schedule variance} &\textbf{Budget variance} 		\\
+		\hline
+		\PdQ 					&0\%		&-105*\%\\
+		\NdP 					&0\%		&0\%\\
+		\AdR 					&0\%		&0\%\\
+		\PdP 					&0\%		&0\%\\
+		\ST						&0\%		&+11*\%\\
+		\DP						&0\%		&0\%\\
+		\Glossario 				&0\%		&0\%\\
+		\textit{VI_--.pdf} 		&0\%		&0\%\\
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo degli indici di schedule e budget variance}
+		\end{table}
+		* è stato necessario allocare un numero maggiore di ore per il piano di qualifica rispetto a quanto preventivato alla luce della valutazione negativa ottenuta in sede di revisione RR. Tali ore sono state sottratte all'attività di progettazione e quindi alla redazione del documento \ST.
+		
+		\subsubsection{Verifica processo di architettura del software}
+		La verifica del rispetto degli obiettivi stabiliti per tale processo è stata effettuata calcolando una serie di metriche specificate nel documento \NdP. Queste metriche sono d'aiuto alla comprensione del grado di completezza, correttezza e stile dell'architettura software prodotta.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{table}[H]
+		\begin{tabular}{|l|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
+		\hline
+		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
+		\hline
+		Completezza									&								&							&\\
+
+
+
+		\hline
+		Correttezza 								&								&							&\\
+
+
+
+		\hline
+		Stile 										&								&							&\\
+
+
+
+		\hline
+		\end{tabular}
+		\caption{Esiti del calcolo delle metriche relative alla progettazione}
+		\end{table}
+		
+		* l'alto valore del numero di violazioni di alta importanza relative alla completezza è dovuto al fatto che SDMetrics indica come non usate le classi che nell'attuale diagramma dei package implementano interfacce o classi astratte e che quindi a differenza della loro superclasse diretta non sono esplicitamente coinvolte in alcun tipo di associazione di dipendenza o riferimento.
+		
+		** l'alto valore del numero di violazione di media importanza relative allo stile è dovuto al fatto che nel server in alcune occasioni viene violato lo Stable-Dependencies Principle perchè alcuni package dipendono da altri package contenenti una singola classe concreta. Basta quindi che i primi abbiano una singola interfaccia affinchè la violazione venga segnalata.
+
+		\subsubsection{Verifica della qualità dell'architettura}
+		Per verificare l'osservanza degli obiettivi riguardanti la qualità dell'architettura prodotta, sono stati calcolati i valori delle metriche relative ai diagrammi dei package.
+		
+		I risultati ottenuti sono elencati nella seguente tabella:
+		\begin{longtable}{|p{5.5cm}|p{2.25cm}|p{2.25cm}|p{2.25cm}|}
+		\hline
+		\textbf{Metrica} 		 					&\textbf{Valore/range accettabile}	&\textbf{Valore/range obiettivo}	&\textbf{Valore/range effettivo}\\
+		\hline
+		\textbf{Distanza dalla sequenza principale normalizzata} & & &\\
+		client.model.utility &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.model &0.0 - 0.7 &0.0 - 0.5 &0.625\\
+		client.collection &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		client.view &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.controller &0.0 - 0.7 &0.0 - 0.5 &0.39\\
+		server.parser  &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.generator.java  &0.0 - 0.7 &0.0 - 0.5 &0\\
+		server.generator &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.stereotype  &0.0 - 0.7 &0.0 - 0.5 &0.33\\
+		server.project  &0.0 - 0.7 &0.0 - 0.5 &0.39\\
+		server.template.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
+		server.template  &0.0 - 0.7 &0.0 - 0.5 &0.16\\
+		server.compiler.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
+		server.compiler  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.utility  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		\hline
+		Numero di figli diretti &0 - 4 &0 - 2 &min0 max8* **\\
+		\hline
+		\textbf{Numero di tipi per package} & & &\\
+		client.model.utility &0 - 30 &0 - 20 &6\\
+		client.model.celltypes &0 - 30 &0 - 20 &17\\
+		client.model &0 - 30 &0 - 20 &3\\
+		client.collection &0 - 30 &0 - 20 &1\\
+		client.view &0 - 30 &0 - 20 &4\\
+		server.controller &0 - 30 &0 - 20 &1\\
+		server.parser &0 - 30 &0 - 20 &1\\
+		server.generator.java &0 - 30 &0 - 20 &1\\
+		server.generator &0 - 30 &0 - 20 &2\\
+		server.stereotype &0 - 30 &0 - 20 &1\\
+		server.project &0 - 30 &0 - 20 &16\\
+		server.template.java &0 - 30 &0 - 20 &1\\
+		server.template &0 - 30 &0 - 20 &2\\
+		server.compiler.java &0 - 30 &0 - 20 &1\\
+		server.compiler &0 - 30 &0 - 20 &2\\
+		server.utility &0 - 30 &0 - 20 &1\\
+		\hline
+		Profondità della gerarchia &0 - 4 &1 - 2 &min 0 max 2*\\
+		\hline
+		\caption{Esiti del calcolo delle metriche relative all'architettura}
+		\end{longtable}
+	* abbiamo deciso di specificare solamente i valori massimi e minimi della metrica per evitare di creare tabelle troppo prolisse e poco leggibili, a fronte di un contenuto equivalente a quello proposto.
+	
+	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
 
 
 
