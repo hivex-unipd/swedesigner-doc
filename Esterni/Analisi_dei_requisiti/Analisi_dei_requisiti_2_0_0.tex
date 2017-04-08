@@ -247,6 +247,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.1: Inserimento BloccoClasse}
 \label{UC4.1}
+\myimg{UC4.1 - Inserimento BloccoClasse}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce i dati di una classe;
@@ -255,12 +256,12 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
 		\item l'attore deve inserire il nome della classe/interfaccia (univoco) (UC4.1.1);
-		%%\item l'attore visualizza un messaggio d'errore per l'inserimento del nome della classe/interfaccia (UC4.1.2);
 		\item l'attore può aggiungere un metodo (UC4.1.2);
 		\item l'attore può rimuovere un metodo (UC4.1.3);
-		\item l'attore può espandere la lista dei metodi (UC4.1.4);
-		\item l'attore può ridurre la lista deii metodi (UC4.1.5).
+		\item l'attore può ridurre la lista dei metodi (UC4.1.4);
+		\item l'attore può espandere la lista deii metodi (UC4.1.5).
 	\end{enumerate}
+	\item \textbf{Generalizzazioni}: Inserimento Dati Aggiuntivi Metodo (UC4.2.5).%%%%%%%%%%%%
 \end{itemize}
 
 \paragraph{UC4.1.1: Inserimento Nome Classe/Interfaccia}
@@ -270,25 +271,13 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Descrizione}: l'attore inserisce il nome (univoco) per la classe/interfaccia corrente;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe selezionata;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle classi;
-	\item \textbf{Scenario principale}: l'attore inserisce il nome della classe/interfaccia;
-	%%\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al dato inserito (UC4.1.2).
+	\item \textbf{Scenario principale}: l'attore inserisce il nome della classe/interfaccia.
 \end{itemize}
 
-%\subparagraph{UC4.1.2: Visualizzazione Errore Inserimento Nome Classe/Interfaccia}
-%\label{UC4.1.2}
-%\begin{itemize}
-%	\item \textbf{Attori}: Utente;
-%	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi %durante la fase di inserimento del nome;
-%	\item \textbf{Precondizione}: il sistema ha ricevuto informazion errate o insufficienti per l'inserimento del nome;
-%	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-%	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
-%\end{itemize}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{UC4.1.2: Inserimento Metodo BloccoClasse}
 \label{UC4.1.2}
-%%\myimg{UC4.1.2 - Inserimento Metodo}
+\myimgsmall{UC4.1.2 - Inserimento Metodo BloccoClasse}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce un metodo per la classe;
@@ -298,12 +287,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\begin{enumerate}
 		\item l'attore può scegliere la visibilità del metodo (UC4.1.2.1);
 		\item l'attore deve inserire il nome del metodo (UC4.1.2.2);
-		%\item l'attore visualizza un messaggio d'errore per l'inserimento del nome del metodo (UC4.1.3.3);
 		\item l'attore può inserire un parametro del metodo (UC4.1.2.3);
 		\item l'attore deve inserire il tipo di ritorno del metodo (UC4.1.2.4);
 		\item l'attore può rimuovere un parametro del metodo (UC4.1.2.5).
 	\end{enumerate}
-	\item \textbf{Generalizzazioni}: Inserimento Metodo Classe (UC4.2.5).%%%%%%%%%%%%
 \end{itemize}
 
 \subparagraph{UC4.1.2.1: Inserimento Visibilità Metodo}
@@ -323,23 +310,12 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Descrizione}: l'attore deve inserire il nome del metodo, che deve essere univoco nella classe correntemente gestita rispetto ad altri metodi già inseriti con la stessa segnatura;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle classi. Viene visualizzata la classe;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto il dato richiesto e lo visualizza nel diagrama delle classi;
-	\item \textbf{Scenario principale}: l'attore inserisce il nome del metodo;
-	%\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al dato inserito (UC4.1.3.3).
+	\item \textbf{Scenario principale}: l'attore inserisce il nome del metodo.
 \end{itemize}
-
-%\subparagraph{UC4.1.3.3: Visualizzazione Errore Inserimento Nome Metodo}
-%\label{UC4.1.3.3}
-%\begin{itemize}
-%	\item \textbf{Attori}: Utente;
-%	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la fase di inserimento del nome;
-%	\item \textbf{Precondizione}: il sistema ha ricevuto informazion errate o insufficienti per l'inserimento del nome;
-%	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-%	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
-%\end{itemize}
 
 \subparagraph{UC4.1.2.3: Inserimento Parametro Metodo}
 \label{UC4.1.2.3}
-%\myimg{UC4.1.2.3 - Inserimento Parametro Metodo}
+\myimgsmall{UC4.1.2.3 - Inseriento Parametro Metodo}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce un parametro per il metodo corrente;
@@ -435,6 +411,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.2: Inserimento Classe}
 \label{UC4.2}
+\myimgsmall{UC4.2 - Inserimento Classe}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce i dati di una classe;
@@ -444,8 +421,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\begin{enumerate}
 		\item l'attore può aggiungere un attributo (UC4.2.1);
 		\item l'attore può rimuovere un attributo (UC4.2.2);
-		\item l'attore può espandere la lista degli attributi (UC4.2.3);
-		\item l'attore può ridurre la lista degli attributi (UC4.2.4);
+		\item l'attore può ridurre la lista degli attributi (UC4.2.3);
+		\item l'attore può espandere la lista degli attributi (UC4.2.4);
 		\item l'attore può inserire dati aggiuntivi ad un metodo (UC4.2.5);
 		\item l'attore può scegliere uno stereotipo tra quelli proposti (UC4.2.6);%%switch al diagramma delle attività: come lo inserisco????
 		\item l'attore può specificare se la classe è astratta (UC4.2.7);
@@ -455,6 +432,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \paragraph{UC4.2.1: Inserimento Attributo Classe}
 \label{UC4.2.1}
+\myimgsmall{UC4.2.1 - Inserimento Attributo Classe}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce un attributo per la classe corrente;
@@ -541,6 +519,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \paragraph{UC4.2.5: Inserimento Dati Aggiuntivi Metodo}
 \label{UC4.2.5}
+\myimgsmall{UC4.2.5 - Inserimento Dati Aggiuntivi Metodo}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce dei dati aggiuntivi ad un metodo per la classe corrente;
@@ -649,6 +628,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.5: Inserimento Associazione}
 \label{UC4.5}
+\myimgsmall{UC4.5 - Inserimento Associazione}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore inserisce un'associazione all'interno del diagramma delle classi;
@@ -703,6 +683,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.8: Inserimento Commento}
 \label{UC4.8}
+\myimgsmall{UC4.8 - Inserimento Commento}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un commento;
@@ -767,6 +748,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.12: Modifica BloccoClasse}
 \label{UC4.12}
+\myimg{UC4.12 - Modifica BloccoClasse}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore modifica i dati di una classe;
@@ -777,6 +759,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 		\item l'attore può modificare il nome della classe/interfaccia (univoco) (UC4.12.1);
 		\item l'attore può modificare un metodo (UC4.12.2).
 	\end{enumerate}
+	\item \textbf{Generalizzazioni}: Modifica Dati Aggointivi Metodo (UC4.13.2).%%%%%%%%%%%%
 \end{itemize}
 
 \paragraph{UC4.12.1: Modifica Nome Classe/Interfaccia}
@@ -791,6 +774,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \paragraph{UC4.12.2: Modifica Metodo BloccoClasse}
 \label{UC4.12.2}
+\myimgsmall{UC4.12.2 - Modifica Metodo BloccoClasse}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un metodo per la classe;
@@ -803,7 +787,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 		\item l'attore può modificare un parametro del metodo (UC4.12.2.3);
 		\item l'attore può modificare il tipo di ritorno del metodo (UC4.12.2.4).
 	\end{enumerate}
-	%%\item \textbf{Generalizzazioni}: Inserimento Metodo Classe (UC4.2.5).%%%%%%%%%%%%
 \end{itemize}
 
 \subparagraph{UC4.12.2.1: Modifica Visibilità Metodo}
@@ -829,6 +812,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subparagraph{UC4.12.2.3: Modifica Parametro Metodo}
 \label{UC4.12.2.3}
+\myimgsmall{UC4.12.2.3 - Modifica Parametro Metodo}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un parametro per il metodo corrente;
@@ -884,6 +868,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.13: Modifica Classe}
 \label{UC4.13}
+\myimgsmall{UC4.13 - Modifica Classe}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare i dati di una classe;
@@ -900,6 +885,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \paragraph{UC4.13.1: Modifica Attributo Classe}
 \label{UC4.13.1}
+\myimgsmall{UC4.13.1 - Modifica Attributo Classe}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un attributo per la classe corrente;
@@ -910,7 +896,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 		\item l'attore può modificare il nome dell'attributo (UC4.13.1.1);
 		\item l'attore può modificare il tipo dell'attributo (UC4.13.1.2);
 		\item l'attore può modificare la visibilità dell'attributo (UC4.13.1.3);
-		\item l'attore può modificare il valore di default del parametro (UC4.13.1.4).
+		\item l'attore può modificare il valore di default dell'attributo (UC4.13.1.4).
 	\end{enumerate}
 \end{itemize}
 
@@ -956,6 +942,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \paragraph{UC4.13.2: Modifica Dati Aggiuntivi Metodo}
 \label{UC4.13.2}
+\myimgsmall{UC4.13.2 - Modifica Dati Aggiuntivi Metodo}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare i dati aggiuntivi di un metodo per la classe corrente;
@@ -1010,6 +997,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.14: Modifica BloccoRelazione}
 \label{UC4.14}
+\myimgsmall{UC4.14 - Modifica BloccoRelazione}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare una relazione all'interno del diagramma delle classi;
@@ -1044,6 +1032,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.15: Modifica Associazione}
 \label{UC4.15}
+\myimgsmall{UC4.15 - Modifica Associazione}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un'associazione all'interno del diagramma delle classi;
@@ -1078,6 +1067,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC4.16: Modifica Commento}
 \label{UC4.16}
+\myimgsmall{UC4.16 - Modifica Commento}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un commento;
@@ -1113,12 +1103,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsection{UC5: Realizzazione Diagramma delle Attività}
 \label{UC5}
-%\begin{figure}[H]
-%	\makebox[\textwidth][c] {
-%		\includegraphics[width=1\textwidth]{Diagrammi casi d'uso/UC5 - Realizzazione Diagramma delle Attivita}
-%	}
-%	\caption{UC5 - Realizzazione Diagramma delle Attività}
-%\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore realizza e gestisce un diagramma delle attività per ogni metodo presente nel diagramma delle classi in modo tale da darne una implementazione più in dettaglio. Essa viene effettuata mediante blocchi specifici per ogni costrutto, per la gestione delle variabili e dei metodi. Tale diagramma quindi non è comforme allo standard UML;
@@ -1165,6 +1149,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.1: Inserimento Blocco Variabile}
 \label{UC5.1}
+\myimgsmall{UC5.1 - Inserimento Blocco Variabile}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco variabile;
@@ -1232,6 +1217,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.2: Inserimento Blocco If}
 \label{UC5.2}
+\myimgsmall{UC5.2 - Inserimento Blocco If}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco if specificandone condizione e istruzioni del corrispondente corpo di codice;
@@ -1277,6 +1263,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.3: Inserimento Blocco Else}
 \label{UC5.3}
+\myimgsmall{UC5.3 - Inserimento Blocco Else}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco else;
@@ -1289,14 +1276,14 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\end{enumerate}
 \end{itemize}
 
-\paragraph{UC5.3.1: Condizione Blocco Else}
+\paragraph{UC5.3.1: Corpo Blocco Else}
 \label{UC5.3.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire la condizione da verificare del blocco else;
+	\item \textbf{Descrizione}: l'attore può inserire una serie di blocchi tra quelli resi disponibili dall'editor per descrivere il comportamento del corpo del blocco else stesso;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
-	\item \textbf{Scenario principale}: l'attore inserisce la condizione da verificare del blocco else.
+	\item \textbf{Scenario principale}: l'attore inserisce uno o più blocchi tra quelli resi disponibili dall'editor.
 \end{itemize}
 
 \paragraph{UC5.3.2: Inserimento Commento Blocco Else}
@@ -1311,6 +1298,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.4: Inserimento Blocco While}
 \label{UC5.4}
+\myimgsmall{UC5.4 - Inserimento Blocco While}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco while specificandone condizione e istruzioni del corrispondente corpo di codice;
@@ -1356,6 +1344,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.5: Inserimento Blocco For}
 \label{UC5.5}
+\myimgsmall{UC5.5 - Inserimento Blocco For}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco for specificandone condizione, passo e le istruzioni che andranno a comporre il relativo corpo di codice;
@@ -1423,6 +1412,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.6: Inserimento Blocco Custom}
 \label{UC5.6}
+\myimgsmall{UC5.6 - Inserimento Blocco Custom}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può inserire un blocco custom di codice all'interno del quale inserire liberamente uno o più \gloss{statement} nel linguaggio target di generazione di codice dell'editor;
@@ -1657,6 +1647,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.27: Modifica Blocco Variabile}
 \label{UC5.27}
+\myimgsmall{UC5.27 - Modifica Blocco Variabile}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modfiicare un blocco variabile;
@@ -1724,6 +1715,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.28: Modifica Blocco If}
 \label{UC5.28}
+\myimgsmall{UC5.28 - Modifica Blocco If}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un blocco if specificandone condizione e istruzioni del corrispondente corpo di codice;
@@ -1769,6 +1761,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.29: Modifica Blocco Else}
 \label{UC5.29}
+\myimgsmall{UC5.29 - Modifica Blocco Else}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un blocco else;
@@ -1781,14 +1774,14 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\end{enumerate}
 \end{itemize}
 
-\paragraph{UC5.29.1: Modifica Condizione Blocco Else}
+\paragraph{UC5.29.1: Modifica Corpo Blocco Else}
 \label{UC5.29.1}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può modificare la condizione da verificare del blocco else;
+	\item \textbf{Descrizione}: l'attore può modificare il corpo del blocco else;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
-	\item \textbf{Scenario principale}: l'attore modifica la condizione da verificare del blocco else.
+	\item \textbf{Scenario principale}: l'attore modifica il corpo del blocco else.
 \end{itemize}
 
 \paragraph{UC5.29.2: Modifica Commento Blocco Else}
@@ -1803,6 +1796,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.30: Modifica Blocco While}
 \label{UC5.30}
+\myimgsmall{UC5.30 - Modifica Blocco While}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un blocco while specificandone condizione e istruzioni del corrispondente corpo di codice;
@@ -1848,6 +1842,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.31: Modifica Blocco For}
 \label{UC5.31}
+\myimgsmall{UC5.31 - Modifica Blocco For}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un blocco for specificandone condizione, passo e le istruzioni che andranno a comporre il relativo corpo di codice;
@@ -1915,6 +1910,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsubsection{UC5.32: Modifica Blocco Custom}
 \label{UC5.32}
+\myimgsmall{UC5.32 - Modifica Blocco Custom}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può modificare un blocco custom di codice all'interno del quale inserire liberamente uno o più \gloss{statement} nel linguaggio target di generazione di codice dell'editor;
