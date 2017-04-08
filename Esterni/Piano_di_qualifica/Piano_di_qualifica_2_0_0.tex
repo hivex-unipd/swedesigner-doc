@@ -20,6 +20,9 @@
 		#2%
 		\end{varwidth}}}
 
+% per neutralizzare \nogloxy:
+\newcommand{\nogloxy}[1]{#1}
+
 
 
 \begin{document}
@@ -2069,14 +2072,159 @@ I test di integrazione consentono di controllare che più moduli funzionino assi
 \subsection{Test di unità}
 I test di unità verificano che ogni singola unità (parte di una componente software) funzioni correttamente; definiamo un'unità come la più piccola quantità di software che conviene verificare da sola. Solitamente l'unità è il metodo di una classe.
 
-\subsubsection{Specifica dei test di unità}
+\subsubsection{Specifica dei test di unità} \label{sec:spec_tu}
 \normalsize
 \begin{longtable}{|c|>{}m{8cm}|c|}
 \hline 
-\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato} \\
+\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 \hline
 \endhead
-\hypertarget{TU1}{TU1} & desc & \textit{Superato} \\ \hline
+\hypertarget{TU1}{TU1} & JavaCompiler è in grado di compilare un file sorgente Java in un file eseguibile, senza generare errori di compilazione. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU2}{TU2} & Dato un ParsedProgram valido, JavaGenerator esegue senza lanciare eccezioni. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU3}{TU3} & Dato un ParsedProgram vuoto, JavaGenerator esegue senza lanciare eccezioni. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU4}{TU4} & Dato un file JSON contenente informazioni per generare un programma (quindi un array di tipi), Parser è in grado di ricavare un ParsedProgram con tanti tipi quanti dichiarati nel file JSON. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU5}{TU5} & Costruito un ParsedAttribute, questo è in grado di generare una stringa Java contenente tipo e nome passatigli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU6}{TU6} & Costruito un ParsedAttribute statico, questo è in grado di generare una stringa Java contenente la keyword ``static'' seguita dalla dichiarazione dell'attributo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU7}{TU7} & Costruito un ParsedAttribute con nome composto da sole maiuscole, questo è in grado di generare una stringa Java contenente la keyword ``final'' seguita dalla dichiarazione dell'attributo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU8}{TU8} & Costruito un ParsedAttribute, questo è in grado di generare una stringa Java contenente visibilità, tipo, nome e valore iniziale passatigli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU9}{TU9} & Costruita una ParsedClass, questa è in grado di generare una stringa Java contenente contenente la keyword ``class'' seguita dal nome della ParsedClass. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU10}{TU10} & Costruita una ParsedClass astratta, questa è in grado di generare una stringa Java contenente contenente le keyword ``abstract class'' seguite dal nome della ParsedClass. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU11}{TU11} & Costruita una ParsedClass e aggiuntole un attributo, questa è in grado di generare una stringa Java contenente la dichiarazione dell'attributo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU12}{TU12} & Costruita una ParsedClass, è possibile aggiungerle delle interfacce come supertipi. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU13}{TU13} & Costruita una ParsedClass, è possibile aggiungerle una classe come supertipo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU14}{TU14} & Costruita una ParsedClass, l'aggiunta di un supertipo che non sia né classe né interfaccia lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU15}{TU15} & Costruito un ParsedCustom, questo è in grado di generare una stringa contenente la stringa passatagli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU16}{TU16} & Costruito un ParsedElse, questo è in grado di generare una stringa Java contenente la keyword ``else'' e l'insieme di istruzioni passatogli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU17}{TU17} & Costruito un ParsedFor, questo è in grado di generare una stringa Java contenente ``for(A; B; C)'', dove A, B e C sono risp. l'inizializzazione, la condizione e l'aggiornamento passatigli nel costruttore. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
+\hypertarget{TU18}{TU18} & Costruito un ParsedFor, questo è in grado di generare una stringa Java contenente l'insieme di istruzioni passatogli nel costruttore. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
+\hypertarget{TU19}{TU19} & Costruito un ParsedIf, questo è in grado di generare una stringa Java contenente la keyword ``if'' con la condizione e l'insieme di istruzioni passatigli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU20}{TU20} & Costruita una ParsedInterface, questa è in grado di generare una stringa Java contenente la keyword ``interface'' seguita dal nome della ParsedInterface. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU21}{TU21} & Costruita una ParsedInterface e aggiuntole un attributo finale, statico e pubblico, questa è in grado di generare una stringa Java contenente la dichiarazione dell'attributo aggiunto. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
+\hypertarget{TU22}{TU22} & Costruita una ParsedInterface e aggiuntole un metodo non implementato, questa è in grado di generare una stringa Java contenente la dichiarazione del metodo aggiunto. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU23}{TU23} & Costruita una ParsedInterface e aggiuntole un supertipo, questa è in grado di generare una stringa Java contenente la keyword ``interface'' seguita dal nome della ParsedInterface, poi dalla keyword ``extends'' e infine dal nome del supertipo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU24}{TU24} & Costruita una ParsedInterface, l'aggiunta di un attributo privato lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU25}{TU25} & Costruita una ParsedInterface, l'aggiunta di un attributo non statico lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU26}{TU26} & Costruita una ParsedInterface, l'aggiunta di un attributo non finale lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU27}{TU27} & Costruita una ParsedInterface, l'aggiunta di un metodo privato lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU28}{TU28} & Costruita una ParsedInterface, l'aggiunta di un metodo implementato lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU29}{TU29} & Costruita una ParsedInterface, l'aggiunta di una classe come supertipo lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU30}{TU30} & Costruito un ParsedMethod, questo è in grado di generare una stringa Java contenente la segnatura passatagli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU31}{TU31} & Costruito un ParsedMethod, questo è in grado di generare una stringa Java contenente la sequenza di istruzioni passatagli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU32}{TU32} & Costruito un ParsedProgram e aggiuntigli dei ParsedType, un JavaGenerator è in grado di generare una stringa Java contenente i tipi aggiunti al ParsedProgram. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU33}{TU33} & Costruito un ParsedReturn, questo è in grado di generare una stringa Java contenente la keyword ``return'' seguita dal valore passatogli nel costruttore e da un punto e virgola. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU34}{TU34} & Costruito un ParsedWhile, questo è in grado di generare una stringa Java contenente la keyword ``while'' seguita dalla condizione e dalla sequenza di istruzioni passategli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU35}{TU35} & Costruito un JavaTemplate per attributi, questo è in grado di generare una stringa Java contenente la dichiarazione di un attributo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU36}{TU36} & Costruito un JavaTemplate per classi, questo è in grado di generare una stringa Java contenente la dichiarazione di una classe. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU37}{TU37} & Costruito un JavaTemplate per rami else, questo è in grado di generare una stringa Java contenente la keyword ``else'' e il corpo del ramo else. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU38}{TU38} & Costruito un JavaTemplate per cicli for, questo è in grado di generare una stringa Java contenente la dichiarazione di un ciclo for e il corpo del ciclo. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
+\hypertarget{TU39}{TU39} & Costruito un JavaTemplate per blocchi if, questo è in grado di generare una stringa Java contenente la dichiarazione di un blocco if e il corpo del blocco. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU40}{TU40} & Costruito un JavaTemplate per istruzioni, questo è in grado di generare una stringa Java corrispondente a un'istruzione. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU41}{TU41} & Costruito un JavaTemplate per interfacce, questo è in grado di generare una stringa Java contenente la dichiarazione di un'interfaccia. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU42}{TU42} & Costruito un JavaTemplate per metodi, questo è in grado di generare una stringa Java contenente la dichiarazione di un metodo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU43}{TU43} & Costruito un JavaTemplate per istruzioni return, questo è in grado di generare una stringa Java contenente la keyword ``return'' seguita dal valore da ritornare e da un punto e virgola. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU44}{TU44} & Costruito un JavaTemplate per cicli while, questo è in grado di generare una stringa Java contenente la dichiarazione di un ciclo while e il corpo del ciclo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\caption[Test di Unità]{Test di Unità}
+\label{tabella:test3}
+\end{longtable}
+\clearpage
+
+\subsubsection{Tracciamento test di unità-metodi} \label{sec:tracc_tu}
+\normalsize
+\begin{longtable}{|>{\centering}m{1cm}|m{12cm}<{\centering}|}
+\hline 
+\textbf{Test} & \textbf{Metodi}\\
+\hline
+\endhead
+\hyperlink{TU1}{TU1} & \nogloxy{\texttt{swedesigner::server::compiler::java::-\linebreak JavaCompiler::compile()}}\\ \hline
+
+\hyperlink{TU2}{TU2} & \nogloxy{\texttt{swedesigner::server::generator::java::-\linebreak JavaGenerator::generate()}}\\ \hline
+
+\hyperlink{TU3}{TU3} & \nogloxy{\texttt{swedesigner::server::generator::java::-\linebreak JavaGenerator::generate()}}\\ \hline
+
+\hyperlink{TU4}{TU4} & \nogloxy{\texttt{swedesigner::server::parser::Parser::-\linebreak createParsedProgram()}}\\ \hline
+
+\hyperlink{TU5}{TU5} & \nogloxy{\texttt{swedesigner::server::project::ParsedAttribute::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU6}{TU6} & \nogloxy{\texttt{swedesigner::server::project::ParsedAttribute::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU7}{TU7} & \nogloxy{\texttt{swedesigner::server::project::ParsedAttribute::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU8}{TU8} & \nogloxy{\texttt{swedesigner::server::project::ParsedAttribute::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU9}{TU9} & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU10}{TU10} & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU11}{TU11} & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak addField()}}\\ & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU12}{TU12} & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak addSupertype()}}\\ & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU13}{TU13} & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak addSupertype()}}\\ & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU14}{TU14} & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak addSupertype()}}\\ & \nogloxy{\texttt{swedesigner::server::project::ParsedClass::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU15}{TU15} & \nogloxy{\texttt{swedesigner::server::project::ParsedCustom::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU16}{TU16} & \nogloxy{\texttt{swedesigner::server::project::ParsedElse::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU17}{TU17} & \nogloxy{\texttt{swedesigner::server::project::ParsedFor::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU18}{TU18} & \nogloxy{\texttt{swedesigner::server::project::ParsedFor::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU19}{TU19} & \nogloxy{\texttt{swedesigner::server::project::ParsedIf::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU20}{TU20} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU21}{TU21} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU22}{TU22} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addMethod()}}\\ & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU23}{TU23} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addSupertype()}}\\ & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU24}{TU24} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addField()}}\\ \hline
+
+\hyperlink{TU25}{TU25} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addField()}}\\ \hline
+
+\hyperlink{TU26}{TU26} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addField()}}\\ \hline
+
+\hyperlink{TU27}{TU27} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addMethod()}}\\ \hline
+
+\hyperlink{TU28}{TU28} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addMethod()}}\\ \hline
+
+\hyperlink{TU29}{TU29} & \nogloxy{\texttt{swedesigner::server::project::ParsedInterface::-\linebreak addSupertype()}}\\ \hline
+
+\hyperlink{TU30}{TU30} & \nogloxy{\texttt{swedesigner::server::project::ParsedMethod::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU31}{TU31} & \nogloxy{\texttt{swedesigner::server::project::ParsedMethod::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU32}{TU32} & \nogloxy{\texttt{swedesigner::server::generator::java::-\linebreak JavaGenerator::generate()}}\\ & \nogloxy{\texttt{swedesigner::server::project::ParsedProgram::-\linebreak addType()}}\\ \hline
+
+\hyperlink{TU33}{TU33} & \nogloxy{\texttt{swedesigner::server::project::ParsedReturn::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU34}{TU34} & \nogloxy{\texttt{swedesigner::server::project::ParsedWhile::-\linebreak renderTemplate()}}\\ \hline
+
+\hyperlink{TU35}{TU35} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getAttributeTemplate()}}\\ \hline
+
+\hyperlink{TU36}{TU36} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getClassTemplate()}}\\ \hline
+
+\hyperlink{TU37}{TU37} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getElseTemplate()}}\\ \hline
+
+\hyperlink{TU38}{TU38} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getForTemplate()}}\\ \hline
+
+\hyperlink{TU39}{TU39} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getIfTemplate()}}\\ \hline
+
+\hyperlink{TU40}{TU40} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getStatementTemplate()}}\\ \hline
+
+\hyperlink{TU41}{TU41} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getInterfaceTemplate()}}\\ \hline
+
+\hyperlink{TU42}{TU42} & \nogloxy{\texttt{swedesigner::server::template::Template::-\linebreak getMethodTemplate()}}\\ \hline
+
+\hyperlink{TU43}{TU43} & \nogloxy{\texttt{swedesigner::server::template::Template::-\linebreak getReturnTemplate()}}\\ \hline
+
+\hyperlink{TU44}{TU44} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getWhileTemplate()}}\\ \hline
+
+\caption[Tracciamento Test di Unità-Metodi]{Tracciamento Test di Unità-Metodi}
+\label{tabella:tu-met}
 \end{longtable}
 
 
