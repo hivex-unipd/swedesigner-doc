@@ -1,17 +1,18 @@
-% Specifica Tecnica
+% Definizione di Prodotto
 % da compilare con il comando pdflatex Definizione_di_prodotto_x.x.x.tex
 
 \input{../../util/hx-ambiente}
+\usepackage{placeins}
 
-\version{0.0.1}
+\version{1.0.0}
 \creaz{28 febbraio 2017}
-\author{...}
-\supervisor{...}
+\author{\ALL}
+\supervisor{\AZ, \PB}
 \uso{interno}
 \dest{\ALL}
 \title{Definizione di Prodotto}
 
-% Per neutralizzare \nogloxy:
+% Per neutralizzare \nogloxy eccetera:
 \newcommand{\nogloxy}[1]{#1}
 \newcommand{\subsubsubsection}[1]{\paragraph{#1}}
 \newcommand{\textt}[1]{\texttt{#1}}
@@ -26,13 +27,13 @@
 \section{Introduzione}
 \input{tex/intro}
 
-\section{Classi e componenti del \emph{front end}}
-\input{tex/componenti_FE}
+\section{Componenti del \emph{front end}} \label{sec:front}
+\input{tex/componenti-FE}
 
-\section{Classi e componenti del \emph{back end}}
-\input{tex/componenti_BE}
+\section{Componenti del \emph{back end}} \label{sec:back}
+\input{tex/componenti-BE}
 
-\section{Tracciamento}
+\section{Tracciamento} \label{sec:tracc}
 \input{tex/tracciamento}
 
 \end{document}
