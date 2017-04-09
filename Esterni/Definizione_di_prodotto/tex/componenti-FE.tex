@@ -56,17 +56,43 @@ Questo package racchiude le classi che definiscono i principali comandi dell'app
 \FloatBarrier
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
+Questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
 \item \textbf{Utilizzo}\\
-viene utilizzata da \texttt{NewCellModel} che richiede una nuova cella (blocco o relazione) per avere un'istanza del blocco richiesto. Il design pattern descritto da questa classe è un Factory Pattern, come spiegato nel libro \emph{Learning Javascript Design Patterns} (\url{addyosmani.com/resources/essentialjsdesignpatterns/book/}).
+Viene utilizzata da \texttt{NewCellModel} che richiede una nuova cella (blocco o relazione) per avere un'istanza del blocco richiesto. Il design pattern descritto da questa classe è un Factory Pattern, come spiegato nel libro \emph{Learning Javascript Design Patterns} (\url{addyosmani.com/resources/essentialjsdesignpatterns/book/}).
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}\\
-questa classe è la base di tutte le classi che rappresentano i blocchi del diagramma delle attività.
+Questa classe è la base di tutte le classi che rappresentano i blocchi del diagramma delle attività.
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{NewCellModel}}}\\
-questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relazioni) da poter inserire nel diagramma corrente (o classi o attività).
+Questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relazioni) da poter inserire nel diagramma corrente (o classi o attività).
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{ClassDiagramElement}}}\\
-questa classe è la base di tutte le classi che rappresentano gli elementi del diagramma delle classi.
+Questa classe è la base di tutte le classi che rappresentano gli elementi del diagramma delle classi.
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{- types: object[]}}
+\\ Questo attributo indica l'array che verrà utilizzato per salvare i tipi di celle delle quali ritornare un'istanza quando richiesto
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ getCell(type: string, customization: object): object}}
+\\ Questo metodo ritorna un istanza della cella del tipo specificato
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{type: string}}
+\\ Questo parametro indica il tipo della cella della quale si richiede un'istanza
+\item \nogloxy{\texttt{customization: object}}
+\\ Questo parametro indica delle proprietà aggiuntive da poter aggiungere all'istanza della cella richiesta
+\end{itemize}
+\item \nogloxy{\texttt{+ registerCell(type: string, Cell: object): void}}
+\\ Questo metodo permette di registrare nella factory una nuova cella
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{type: string}}
+\\ Questo parametro indica il nome con cui verrà identificata la cella nella factory
+\item \nogloxy{\texttt{Cell: object}}
+\\ Questo parametro indica il prototipo della cella che verrà usato per creare le istanze
+\end{itemize}
 \end{itemize}
 \end{itemize}
 
@@ -74,15 +100,41 @@ questa classe è la base di tutte le classi che rappresentano gli elementi del d
 \label{\nogloxy{swedesigner::client::model::NewCellModel}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relazioni) da poter inserire nel diagramma corrente (o classi o attività).
+Questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relazioni) da poter inserire nel diagramma corrente (o classi o attività).
 \item \textbf{Utilizzo}\\
-utilizza \texttt{NewCellFactory} per recuperare una cell del tipo richiesto da \texttt{NewCellView}. Quest'ultima utilizza \texttt{NewCellModel} come modello da dove recuperare tutti i blocchi/relazioni che l'utente può inserire nel diagramma corrente.
+Utilizza \texttt{NewCellFactory} per recuperare una cell del tipo richiesto da \texttt{NewCellView}. Quest'ultima utilizza \texttt{NewCellModel} come modello da dove recuperare tutti i blocchi/relazioni che l'utente può inserire nel diagramma corrente.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{NewCellView}}}\\
-questa classe si occupa di visualizzare tutti i possibili blocchi e relazioni che si possono inserire nel diagramma delle classi o delle attività.
+Questa classe si occupa di visualizzare tutti i possibili blocchi e relazioni che si possono inserire nel diagramma delle classi o delle attività.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{NewCellFactory}}}\\
-questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
+Questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ str: string[]}}
+\\ Questo attributo indica l'elenco dei blocchi disponibili in base al diagramma corrente
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ addCell(type: string): void}}
+\\ Questo metodo richiede una nuova istanza della cella richiesta e la passa a \texttt{ProjectModel}
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{type: string}}
+\\ Questo parametro indica il tipo di cella della quale si richiede l'istanza
+\end{itemize}
+\item \nogloxy{\texttt{+ initialize(): void}}
+\\ Questo metodo si occupa di inizializzare la classe e richiamare la funzione di aggiornamento dell'elenco dei blocchi disponibili
+\item \nogloxy{\texttt{+ registerCells(diag: string): void}}
+\\ Questo metodo si occupa di aggiornare i blocchi disponibili in base al diagramma corrente
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{diag: string}}
+\\ Questo parametro indica il tipo del diagramma corrente
+\end{itemize}
+\item \nogloxy{\texttt{+ switchComponents(): void}}
+\\ Questo metodo si occupa di richiamare l'aggiornamento dei blocchi disponibile quando viene cambiato il tipo di diagramma
 \end{itemize}
 \end{itemize}
 
@@ -95,23 +147,38 @@ questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da
 \FloatBarrier
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
+Questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
 \item \textbf{Utilizzo}\\
-viene utilizzata da \texttt{AppView}, la quale poi chiederà comandi concreti in base all'input richiesto dall'utente.
+Viene utilizzata da \texttt{AppView}, la quale poi chiederà comandi concreti in base all'input richiesto dall'utente.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
-\item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::utility::ProjectGenerator}]{\nogloxy{\texttt{ProjectGenerator}}}\\
-questa classe si occupa di fornire il comando necessario ad inviare al server il progetto e di ricevere un archivio contenente il progetto stesso, il codice sorgente e l'eseguibile generati quando l'utente lo richiede.
-\item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::utility::ProjectInitializer}]{\nogloxy{\texttt{ProjectInitializer}}}\\
-questa classe si occupa di fornire il comando per la creazione di nuovi progetti vuoti quando l'utente lo richiede.
-\item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::utility::ProjectLoader}]{\nogloxy{\texttt{ProjectLoader}}}\\
-questa classe si occupa di fornire il comando per il caricamento di un progetto già esistente su disco dell'utente quando l'utente lo richiede. 
-\item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::utility::ProjectSaver}]{\nogloxy{\texttt{ProjectSaver}}}\\
-questa classe si occupa di fornire il comando per il salvataggio di un progetto quando l'utente lo richiede.
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{AppView}}}\\
-questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
+Questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectModel}]{\nogloxy{\texttt{ProjectModel}}}\\
-questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
+Questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ execute(name: string, [*args]: array): function}}
+\\ Questo metodo permette di eseguire un metodo all'interno di ProjectCommand in base al nome passato come parametro
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{name: string}}
+\\ Questo parametro indica il nome del metodo che si vuole eseguire
+\item \nogloxy{\texttt{[*args]: array}}
+\\ È possibile inserire una serie di parametri aggiuntivi da poter passare alle funzioni richiamate
+\end{itemize}
+\item \nogloxy{\texttt{+ loadDiagram(evt: object): void}}
+\\ Questo metodo si occupa di prendere in input un progetto in formato json e caricarlo nell'editor
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{evt: object}}
+\\ Questo parametro indica un oggetto che rappresenta l'evento di un campo input type file di html
+\end{itemize}
+\item \nogloxy{\texttt{+ saveDiagram(): void}}
+\\ Questo metodo si occupa di fornire il comando per salvare in locale il progetto in formato json
+\item \nogloxy{\texttt{+ sendDiagram(): void}}
+\\ Questo metodo si occupa di inviare al server il progetto e scaricare il codice generato
 \end{itemize}
 \end{itemize}
 
@@ -119,22 +186,22 @@ questa classe ci permette di aggiungere della logica alla collezione di tutti i 
 \label{\nogloxy{swedesigner::client::model::ProjectModel}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
+Questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
 \item \textbf{Utilizzo}\\
-essa è istanziata da \texttt{ProjectView} e possiede \texttt{DiagramCollection}. È possibile interagire con questo modello anche tramite \texttt{ProjectCommand}, per permettere l'implementazione di funzionalità globali dell'applicazione (e.g. salvataggio e caricamento).
+Essa è istanziata da \texttt{ProjectView} e possiede \texttt{DiagramCollection}. È possibile interagire con questo modello anche tramite \texttt{ProjectCommand}, per permettere l'implementazione di funzionalità globali dell'applicazione (e.g. salvataggio e caricamento).
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{ProjectCommand}}}\\
 questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{AppView}}}\\
-questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
+Questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::ProjectView}]{\nogloxy{\texttt{ProjectView}}}\\
-questa classe rappresenta l'area di disegno principale dell'applicazione, che necessita di essere cambiata tra diagramma delle classi e diagramma delle attività. 
+Questa classe rappresenta l'area di disegno principale dell'applicazione, che necessita di essere cambiata tra diagramma delle classi e diagramma delle attività. 
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
 \item \nogloxy{\texttt{- currentIndex: String}}
-\\ Rappresenta %cosa??
+\\ Rappresenta l'identificativo del diagramma corrente che può essere "class" in caso del diagramma delle classi o un id univoco in caso di un diagramma delle attività
 \item \nogloxy{\texttt{- graph: Graph}}
 \\ Rappresenta il model utilizzato per contenere tutte le celle del diagramma corrente.
 \item \nogloxy{\texttt{- graphs: Object}}
@@ -146,32 +213,34 @@ questa classe rappresenta l'area di disegno principale dell'applicazione, che ne
 \item \nogloxy{\texttt{- graphs.classes.relationshipsArray: Link[]}}
 \\ Contiene l'array di elementi usati per rappresentare le relazioni del diagramma delle classi.	
 
-\item \nogloxy{\texttt{- graphs.methods: Cell[]}}
-\\ Contiene l'array di elementi usati per rappresentare i blocchi del diagramma delle attività. %penso sia sbagliato
-
-\item \nogloxy{\texttt{- id: String}}
-\\ % no aspetta menos wtf??
+\item \nogloxy{\texttt{- graphs.methods: object}}
+\\ Contiene l'array  di oggetti che rappresentano ognuno un diagramma delle attività
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ addCell(): void}}
+\item \nogloxy{\texttt{+ addCell(cell: Cell): void}}
 \\ Aggiunge una cella generica passata in input al diagramma corrente.
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{cell: Cell}}
+\\ Questo parametro indica l'istanza della cella da aggiungere al diagramma corrente
+\end{itemize}
 \item \nogloxy{\texttt{+ deleteCell(cell: Cell): void}}
-\\ Cancella una cella generica dal diagramma corrente.
+\\ Cancella la cella passata come parametro dal diagramma corrente. Se è una cella di una classe o di una interfaccia cancella anceh i relativi diagrammi delle attività.
 \\ \textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{cell: Cell}}
 \\ Cella da rimuovere.
 \end{itemize}
 \item \nogloxy{\texttt{- deleteMethodDiagram(id: String): void}}
-\\ Rimuove il diagramma dei metodi specificato in input.
+\\ Rimuove il diagramma delle attività specificato in input.
 \\ \textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{id: String}}
-\\ Id del diagramma dei metodi da rimuovere.
+\\ Id del diagramma delle attività da rimuovere.
 \end{itemize}
 \item \nogloxy{\texttt{- getClassVisibleElements(): Object[]}}
-\\ Ritorna un array composto da elementi con attributi \emph{label} pari a [QUALCOSA] e \emph{value} pari a [ALTRO]. Questo array rappresenta... %boh
+\\ Ritorna un array composto da elementi con attributi \emph{label} pari e \emph{value}. Questo array rappresenta i metodi e gli attributi visibili da un metodo( solo di quella classe) che verranno suggeriti all'utente durante la costruzione del diagramma delle attività
 \item \nogloxy{\texttt{- getCurrentDiagramType(): String}}
 \\ Ritorna il tipo corrente di diagramma selezionato.
 \item \nogloxy{\texttt{- getIndexFromId(id: String): int}}
@@ -181,15 +250,10 @@ questa classe rappresenta l'area di disegno principale dell'applicazione, che ne
 \item \nogloxy{\texttt{id: String}}
 \\ Id del diagramma.
 \end{itemize}
-\item \nogloxy{\texttt{+ initialize(cell: Cell): void}}
+\item \nogloxy{\texttt{+ initialize(): void}}
 \\ Assegna una nuova istanza di Graph a graph appropriata.
-\\ \textbf{Parametri}:
-\begin{itemize}
-\item \nogloxy{\texttt{cell: Cell}}
-\\ Cella da aggiungere.
-\end{itemize}
-\item \nogloxy{\texttt{+ loadDiagram(diag: String): void}}
-\\ Carica il progetto passato in input. %cambiare in loadProject?
+\item \nogloxy{\texttt{+ loadProject(diag: String): void}}
+\\ Carica il progetto passato in input.
 \\ \textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{diag: String}}
@@ -197,12 +261,15 @@ questa classe rappresenta l'area di disegno principale dell'applicazione, che ne
 \end{itemize}
 \item \nogloxy{\texttt{+ saveCurrentDiagram(): void}}
 \\ Salva all'interno di graphs il diagramma corrente.
-\item \nogloxy{\texttt{+ saveDiagram(): String}}
+\item \nogloxy{\texttt{+ saveProject(): String}}
 \\ Ritorna l'intero progetto in formato JSON. % e allora chiamiamolo magari saveProject
-\item \nogloxy{\texttt{+ sendDiagram(): void}}
-\\ Invia il progetto corrente tramite REST al server in POST tramite la risorsa \emph{/generate}.
-\item \nogloxy{\texttt{+ switchToGraph(): void}}
-\\ Cambia il graph corrente. % wtf menos?
+\item \nogloxy{\texttt{+ switchToGraph(id: string): void}}
+\\ Salva il diagramma corrente e ne carica un'altro in base all'input
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{id: string}}
+\\ Questo parametro indica l'id del diagramma al quale si vuole passare
+\end{itemize}
 \end{itemize}
 \end{itemize}
 \subsection{\nogloxy{swedesigner::client::model::celltypes}}
@@ -221,126 +288,6 @@ Questo package contiene la definizione del modello degli elementi specifi del di
 \end{itemize}
 \end{itemize}
 \subsubsection{Classi}
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxClass}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxClass}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il blocco \texttt{class} del diagramma delle classi UML.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo elemento \emph{class}.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{ClassDiagramElement}}}
-\end{itemize}
-\item \textbf{Attributi}:
-\begin{itemize}
-\item \nogloxy{\texttt{+ abstract: string}}
-\\ Questo attributo indica se la classe è astratta
-\item \nogloxy{\texttt{+ attributes: object[]}}
-\\ Questo attributo indica l'array di attributi di una classe
-\item \nogloxy{\texttt{- attributesExpanded: bool}}
-\\ Questo attributo indica se il blocco dovrà visualizzare la sezione attributi per intero oppure ridotta
-\item \nogloxy{\texttt{+ methods: object[]}}
-\\ Questo attributo indica l'array di metodi di una classe
-\item \nogloxy{\texttt{- methodsExpanded: bool}}
-\\ Questo attributo indica se il blocco dovrà visualizzare la sezione metodi per intero oppure ridotta
-\item \nogloxy{\texttt{+ name: string}}
-\\ Questo attributo indica il nome della classe
-\item \nogloxy{\texttt{+ static: string}}
-\\ Questo attributo indica se la classe è statica
-\end{itemize}
-\item \textbf{Metodi}:
-\begin{itemize}
-\item \nogloxy{\texttt{- addAttribute(): void}}
-\\ Questo metodo aggiunge un attributo alla classe
-\item \nogloxy{\texttt{- addMethod(): void}}
-\\ Questo metodo aggiunge un metodo alla classe
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxComment}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxComment}}
-\begin{figure}[h]
-\centering
-\caption{\nogloxy{swedesigner::client::model::celltypes::HxComment}}
-\end{figure}
-\FloatBarrier
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta la cella di commento del diagramma delle classi UML.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo commento.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{ClassDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxCustom}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxCustom}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il blocco custom del diagramma delle attività che permette all'utente di inserire liberamente codice nel linguaggio target scelto.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco di codice personalizzato.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxFor}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxFor}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il blocco \texttt{for} del diagramma delle attività.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \texttt{for}.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxIf}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxIf}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il blocco \texttt{if} del diagramma delle attività.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \texttt{if}.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxInterface}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxInterface}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il costrutto \emph{interface} del diagramma delle classi UML.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo elemento \emph{interface}.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{ClassDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxReturn}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxReturn}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il blocco \emph{return} del diagramma delle attività.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \emph{return}.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
 \subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxStereotype}}
 \label{\nogloxy{swedesigner::client::model::celltypes::HxStereotype}}
 \begin{figure}[h]
@@ -350,59 +297,15 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \FloatBarrier
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe rappresenta le caratteristiche dello stereotipo che viene assegnato ad un \texttt{ClassDiagramElement} come i meta-attributi e meta-metodi, i quali sono essere ridefiniti dalla classe o interfaccia implementata tramite \proj{}. 
+Questa classe rappresenta le caratteristiche dello stereotipo che viene assegnato ad un \texttt{ClassDiagramElement} come i meta-attributi e meta-metodi, i quali sono essere ridefiniti dalla classe o interfaccia implementata tramite \proj{}. 
 \item \textbf{Utilizzo}\\
-ogni elemento possiederà un unico stereotipo per semplificare l'implementazione di \proj{}. Gli stereotipi disponibili sono presenti all'interno della classe \texttt{ProjectStereotypes} (all'interno di \emph{model::utility}).
+Ogni elemento possiederà un unico stereotipo per semplificare l'implementazione di \proj{}. Gli stereotipi disponibili sono presenti all'interno della classe \texttt{ProjectStereotypes} (all'interno di \emph{model::utility}).
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{ClassDiagramElement}}}\\
-questa classe è la base di tutte le classi che rappresentano gli elementi del diagramma delle classi.
+Questa classe è la base di tutte le classi che rappresentano gli elementi del diagramma delle classi.
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::utility::ProjectStereotypes}]{\nogloxy{\texttt{ProjectStereotypes}}}\\
-questa classe contiene al suo interno i possibili stereotipi utilizzabili recuperati dal server in modo asincrono. Conterrà una lista di elementi \textt{HxStereotype}.
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxVariable}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxVariable}}
-\begin{figure}[h]
-\centering
-\caption{\nogloxy{swedesigner::client::model::celltypes::HxVariable}}
-\end{figure}
-\FloatBarrier
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il blocco di assegnazione o inizializzazione di una variabile o di chiamata di un metodo del diagramma delle attività.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco variabile.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::HxWhile}}
-\label{\nogloxy{swedesigner::client::model::celltypes::HxWhile}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta il blocco \emph{while} del diagramma delle attività.
-\item \textbf{Utilizzo}\\
-la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \emph{while}.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::ImplementationCell}}
-\label{\nogloxy{swedesigner::client::model::celltypes::ImplementationCell}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe rappresenta la relazione di generalizzazione tra due celle del diagramma delle classi.
-\item \textbf{Utilizzo}\\
-eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \texttt{NewCellFactory} in quanto è anch'essa una derivata di \texttt{Cell}.
-\item \textbf{Classi ereditate}:
-\begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramLink}]{\nogloxy{\texttt{ClassDiagramLink}}}
+Questa classe contiene al suo interno i possibili stereotipi utilizzabili recuperati dal server in modo asincrono. Conterrà una lista di elementi \textt{HxStereotype}.
 \end{itemize}
 \end{itemize}
 \subsection{\nogloxy{swedesigner::client::model::celltypes::activity}}
@@ -423,22 +326,23 @@ Questo package contiene la definizione del modello degli elementi specifi del di
 \FloatBarrier
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe è la base di tutte le classi che rappresentano i blocchi del diagramma delle attività.
+Questa classe è la base di tutte le classi che rappresentano i blocchi del diagramma delle attività.
 \item \textbf{Utilizzo}\\
-eredita da sottotipi della classe \texttt{Element} (la quele deriva a sua volta da \texttt{Cell})  di \jointjs{} e viene estesa da tutte le classi specifiche di ogni blocco del diagramma delle attività. Questa classe è indirettamente correlata a \texttt{NewCellFactory}.
+Estende sottotipi della classe \texttt{Element} (la quale deriva a sua volta da \texttt{Cell})  di \jointjs{} e viene estesa da tutte le classi specifiche di ogni blocco del diagramma delle attività. Questa classe è indirettamente correlata a \texttt{NewCellFactory}.
 \item \textbf{Sottoclassi}:
 \begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxCustom}]{\nogloxy{\texttt{HxCustom}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxFor}]{\nogloxy{\texttt{HxFor}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxIf}]{\nogloxy{\texttt{HxIf}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxReturn}]{\nogloxy{\texttt{HxReturn}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxVariable}]{\nogloxy{\texttt{HxVariable}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxWhile}]{\nogloxy{\texttt{HxWhile}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxCustom}]{\nogloxy{\texttt{HxCustom}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxElse}]{\nogloxy{\texttt{HxElse}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxFor}]{\nogloxy{\texttt{HxFor}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxIf}]{\nogloxy{\texttt{HxIf}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxReturn}]{\nogloxy{\texttt{HxReturn}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxVariable}]{\nogloxy{\texttt{HxVariable}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxWhile}]{\nogloxy{\texttt{HxWhile}}}
 \end{itemize}
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{NewCellFactory}}}\\
-questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
+Questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
@@ -453,7 +357,7 @@ questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da
 \item \nogloxy{\texttt{+ type: string}}
 \\ Questo attributo indica il tipo della cella,in modo  che questa possa essere identificata facilmente da chi la usa
 \item \nogloxy{\texttt{+ xtype: string}}
-\\ Questo attributo indica il tipo della cella che verrà poi visualizzato.
+\\ Questo attributo indica il tipo della cella che verrà poi visualizzato. Verrà ridefinito da ogni classe che eredita questa
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
@@ -480,6 +384,142 @@ questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da
 \\ Questo metodo si occupa di aggiornare degli elementi utili alla visualizzazione in base ai valori di attributi come expanded ed hidden
 \end{itemize}
 \end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::activity::HxCustom}}
+\label{\nogloxy{swedesigner::client::model::celltypes::activity::HxCustom}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco custom del diagramma delle attività che permette all'utente di inserire liberamente codice nel linguaggio target scelto.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco di codice personalizzato.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ code: string}}
+\\ Questo attributo indica il blocco di codice custom che l'utente inserisce
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::activity::HxElse}}
+\label{\nogloxy{swedesigner::client::model::celltypes::activity::HxElse}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco else del diagramma delle attività
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \texttt{for}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::activity::HxFor}}
+\label{\nogloxy{swedesigner::client::model::celltypes::activity::HxFor}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco \texttt{for} del diagramma delle attività.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \texttt{for}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ increment: string}}
+\\ Questo attributo indica la parte di incremento di un for
+\item \nogloxy{\texttt{+ initialization: string}}
+\\ Questo attributo indica la parte di inizializzazione di un for
+\item \nogloxy{\texttt{+ termination: string}}
+\\ Questo attributo indica la parte di terminazione di un for
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::activity::HxIf}}
+\label{\nogloxy{swedesigner::client::model::celltypes::activity::HxIf}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco \texttt{if} del diagramma delle attività.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \texttt{if}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ condition: string}}
+\\ Questo attributo indica la condizione del blocco if
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::activity::HxReturn}}
+\label{\nogloxy{swedesigner::client::model::celltypes::activity::HxReturn}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco \emph{return} del diagramma delle attività.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \emph{return}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ value: string}}
+\\ Questo attributo indica la stringa di ritorno del blocco return
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::activity::HxVariable}}
+\label{\nogloxy{swedesigner::client::model::celltypes::activity::HxVariable}}
+\begin{figure}[h]
+\centering
+\caption{\nogloxy{swedesigner::client::model::celltypes::activity::HxVariable}}
+\end{figure}
+\FloatBarrier
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco di assegnazione o inizializzazione di una variabile o di chiamata di un metodo del diagramma delle attività.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco variabile.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ name: string}}
+\\ Questo attributo indica il nome della variabile. È opzionale
+\item \nogloxy{\texttt{+ operation: string}}
+\\ Questo attributo indica l'operazione da eseguire sulla variabile. È opzionale
+\item \nogloxy{\texttt{+ type: string}}
+\\ Questo attributo indica il tipo della variabile. È opzionale
+\item \nogloxy{\texttt{+ value: string}}
+\\ Questo attributo indica il valore che può essere un'inizializzazione,un'assegnazione od una chiamata ad un metodo. È opzionale
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::activity::HxWhile}}
+\label{\nogloxy{swedesigner::client::model::celltypes::activity::HxWhile}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco \emph{while} del diagramma delle attività.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo blocco \emph{while}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{ActivityDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ condition: string}}
+\\ Questo attributo rappresenta la condizione del while
+\end{itemize}
+\end{itemize}
 \subsection{\nogloxy{swedesigner::client::model::celltypes::class}}
 \label{\nogloxy{swedesigner::client::model::celltypes::class}}
 \subsubsection{Informazioni generali}
@@ -498,21 +538,20 @@ Questo package contiene la definizione del modello degli elementi specifi del di
 \FloatBarrier
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe è la base di tutte le classi che rappresentano gli elementi del diagramma delle classi.
+Questa classe è la base di tutte le classi che rappresentano gli elementi del diagramma delle classi.
 \item \textbf{Utilizzo}\\
-eredita da sottotipi della classe \texttt{Element} di \jointjs{} (la quale deriva a sua volta da \texttt{Cell}) e viene estesa da tutte le classi specifiche di ogni blocco del diagramma delle classi. Questa classe è indirettamente correlata con \texttt{NewCellFactory}, derivando da \texttt{Cell}.
+Eredita da sottotipi della classe \texttt{Element} di \jointjs{} (la quale deriva a sua volta da \texttt{Cell}) e viene estesa da tutte le classi specifiche di ogni blocco del diagramma delle classi. Questa classe è indirettamente correlata con \texttt{NewCellFactory}, derivando da \texttt{Cell}.
 \item \textbf{Sottoclassi}:
 \begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxClass}]{\nogloxy{\texttt{HxClass}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxComment}]{\nogloxy{\texttt{HxComment}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxInterface}]{\nogloxy{\texttt{HxInterface}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxClass}]{\nogloxy{\texttt{HxClass}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxInterface}]{\nogloxy{\texttt{HxInterface}}}
 \end{itemize}
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{NewCellFactory}}}\\
-questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
+Questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da \texttt{NewCellModel}. 
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxStereotype}]{\nogloxy{\texttt{HxStereotype}}}\\
-questa classe rappresenta le caratteristiche dello stereotipo che viene assegnato ad un \texttt{ClassDiagramElement} come i meta-attributi e meta-metodi, i quali sono essere ridefiniti dalla classe o interfaccia implementata tramite \proj{}. 
+Questa classe rappresenta le caratteristiche dello stereotipo che viene assegnato ad un \texttt{ClassDiagramElement} come i meta-attributi e meta-metodi, i quali sono essere ridefiniti dalla classe o interfaccia implementata tramite \proj{}. 
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
@@ -557,13 +596,14 @@ questa classe rappresenta le caratteristiche dello stereotipo che viene assegnat
 \FloatBarrier
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe è la base di tutte le classi che rappresentano le relazioni tra gli elementi del diagramma delle classi.
+Questa classe è la base di tutte le classi che rappresentano le relazioni tra gli elementi del diagramma delle classi.
 \item \textbf{Utilizzo}\\
-eredita dalla classe \texttt{Link} di \jointjs{} e viene estesa da tutte le classi specifiche di ogni relazione del diagramma delle classi.
+Eredita dalla classe \texttt{Link} di \jointjs{} e viene estesa da tutte le classi specifiche di ogni relazione del diagramma delle classi.
 \item \textbf{Sottoclassi}:
 \begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxAssociation}]{\nogloxy{\texttt{HxAssociation}}}
 \item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxGeneralization}]{\nogloxy{\texttt{HxGeneralization}}}
-\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::ImplementationCell}]{\nogloxy{\texttt{ImplementationCell}}}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxImplementation}]{\nogloxy{\texttt{HxImplementation}}}
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
@@ -590,16 +630,233 @@ eredita dalla classe \texttt{Link} di \jointjs{} e viene estesa da tutte le clas
 \end{itemize}
 \end{itemize}
 
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::class::HxAssociation}}
+\label{\nogloxy{swedesigner::client::model::celltypes::class::HxAssociation}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta una relazione associazione tra due blocchi del diagramma delle classi
+\item \textbf{Utilizzo}\\
+Eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \texttt{NewCellFactory} in quanto è anch'essa una derivata di \texttt{Cell}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramLink}]{\nogloxy{\texttt{ClassDiagramLink}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ attribute: string}}
+\\ Questo attributo indica l'attributo associato alla relazione
+\item \nogloxy{\texttt{+ card: string}}
+\\ Questo attributo indica la cardinalità della relazione
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{- getCard(): object}}
+\\ Questo attributo ritorna la cardinalità della relazione
+\item \nogloxy{\texttt{+ setToValue(path: string, value: string): void}}
+\\ Questo metodo si occupa di impostare un attributo passato come parametro al valore scelto \\
+
+\textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{path: string}}
+\\ Questo parametro indica l'attributo da modificare
+
+\item \nogloxy{\texttt{value: string}}
+\\ Questo parametro indica il valore da assegnare
+
+\end{itemize}
+\item \nogloxy{\texttt{+ updateLabel(): void}}
+\\ Questo metodo si occupa di aggiornare dei parametri utili per la visualizzazione
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::class::HxClass}}
+\label{\nogloxy{swedesigner::client::model::celltypes::class::HxClass}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il blocco \texttt{class} del diagramma delle classi UML.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo elemento \emph{class}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{ClassDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ abstract: string}}
+\\ Questo attributo indica se la classe è astratta
+\item \nogloxy{\texttt{+ attributes: object[]}}
+\\ Questo attributo indica l'array di attributi di una classe
+\item \nogloxy{\texttt{- attributesExpanded: bool}}
+\\ Questo attributo indica se il blocco dovrà visualizzare la sezione attributi per intero oppure ridotta
+\item \nogloxy{\texttt{+ methods: object[]}}
+\\ Questo attributo indica l'array di metodi di una classe
+\item \nogloxy{\texttt{- methodsExpanded: bool}}
+\\ Questo attributo indica se il blocco dovrà visualizzare la sezione metodi per intero oppure ridotta
+\item \nogloxy{\texttt{+ name: string}}
+\\ Questo attributo indica il nome della classe
+\item \nogloxy{\texttt{+ static: string}}
+\\ Questo attributo indica se la classe è statica
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{- addAttribute(): void}}
+\\ Questo metodo aggiunge un attributo alla classe
+\item \nogloxy{\texttt{- addMethod(): void}}
+\\ Questo metodo aggiunge un metodo alla classe
+\item \nogloxy{\texttt{- addParameter(ind: int): void}}
+\\ Questo metodo inserisce un nuovo parametro al metodo alla posizione indicata
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{ind: int}}
+\\ Questo parametro indica l'indice del metodo al quale si vuole aggiungere un nuovo parametro
+\end{itemize}
+\item \nogloxy{\texttt{- deleteAttribute(ind: int): void}}
+\\ Questo metodo elimina un attributo in base all'indice passato come parametro
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{ind: int}}
+\\ Questo parametro indica l'indice dell'attributo da rimuovere
+\end{itemize}
+\item \nogloxy{\texttt{- deleteMethod(ind: int): void}}
+\\ Questo metodo elimina il metodo alla posizione descritta dall'indice passato come parametro
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{ind: int}}
+\\ Questo parametro indica l'indice del metodo da rimuovere 
+\end{itemize}
+\item \nogloxy{\texttt{- deleteParameter(met: int[]): void}}
+\\ Questo metodo cancella un parametro al metodo specificato
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{met: int[]}}
+\\ Questo parametro indica gli indici utili per identificare il parametro da rimuovere
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::class::HxComment}}
+\label{\nogloxy{swedesigner::client::model::celltypes::class::HxComment}}
+\begin{figure}[h]
+\centering
+\caption{\nogloxy{swedesigner::client::model::celltypes::class::HxComment}}
+\end{figure}
+\FloatBarrier
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta la cella di commento del diagramma delle classi UML. Eredita da un tipo base di jointjs.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo commento.
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{- comment: string}}
+\\ Questo attributo indica la il commento che verrà visualizzato da questo blocco
+\item \nogloxy{\texttt{- type: string}}
+\\ Questo attributo indica il tipo di questa classe in modo da essere riconosciuto facilmente
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ getValues(): object}}
+\\ Questo metodo si occupa di recuperare le proprietà del blocco
+\item \nogloxy{\texttt{+ initialize(): void}}
+\\ Questo metodo si occupa di inizializzare la classe
+
+\item \nogloxy{\texttt{+ setToValue(path: string, value: string): void}}
+\\ Questo metodo si occupa di impostare un attributo passato come parametro al valore scelto \\
+
+\textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{path: string}}
+\\ Questo parametro indica l'attributo da modificare
+
+\item \nogloxy{\texttt{value: string}}
+\\ Questo parametro indica il valore da assegnare
+
+\end{itemize}
+\item \nogloxy{\texttt{+ updateContent(): void}}
+\\ Questo metodo si occupa di aggiornare degli elementi utili alla visualizzazione della cella
+
+\end{itemize}
+\end{itemize}
+
 \subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::class::HxGeneralization}}
 \label{\nogloxy{swedesigner::client::model::celltypes::class::HxGeneralization}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe rappresenta la relazione di generalizzazione tra due celle del diagramma delle classi.
+Questa classe rappresenta la relazione di generalizzazione tra due celle del diagramma delle classi.
 \item \textbf{Utilizzo}\\
-eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \texttt{NewCellFactory} in quanto è anch'essa una derivata di \texttt{Cell}.
+Eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \texttt{NewCellFactory} in quanto è anch'essa una derivata di \texttt{Cell}.
 \item \textbf{Classi ereditate}:
 \begin{itemize}
 \item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramLink}]{\nogloxy{\texttt{ClassDiagramLink}}}
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::class::HxImplementation}}
+\label{\nogloxy{swedesigner::client::model::celltypes::class::HxImplementation}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta la relazione di implementazione tra due celle del diagramma delle classi.
+\item \textbf{Utilizzo}\\
+Eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \texttt{NewCellFactory} in quanto è anch'essa una derivata di \texttt{Cell}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramLink}]{\nogloxy{\texttt{ClassDiagramLink}}}
+\end{itemize}
+\end{itemize}
+
+\subsubsubsection{\nogloxy{swedesigner::client::model::celltypes::class::HxInterface}}
+\label{\nogloxy{swedesigner::client::model::celltypes::class::HxInterface}}
+\begin{itemize}
+\item \textbf{Descrizione}\\
+Questa classe rappresenta il costrutto \emph{interface} del diagramma delle classi UML.
+\item \textbf{Utilizzo}\\
+La classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta che l'utente richiede un nuovo elemento \emph{interface}.
+\item \textbf{Classi ereditate}:
+\begin{itemize}
+\item \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{ClassDiagramElement}}}
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ methods: object[]}}
+\\ Questo attributo indica l'array di metodi di una interfaccia
+\item \nogloxy{\texttt{- methodsExpanded: bool}}
+\\ Questo attributo indica se il blocco dovrà visualizzare la sezione metodi per intero oppure ridotta
+
+\item \nogloxy{\texttt{+ name: string}}
+\\ Questo attributo indica il nome dell'interfaccia
+
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{- addMethod(): void}}
+\\ Questo metodo aggiunge un metodo all'interfaccia
+\item \nogloxy{\texttt{- addParameter(ind: int): void}}
+\\ Questo metodo inserisce un nuovo parametro al metodo alla posizione indicata \\
+
+\textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{ind: int}}
+\\ Questo parametro indica l'indice del metodo al quale si vuole aggiungere un nuovo parametro
+
+\end{itemize}
+\item \nogloxy{\texttt{- deleteMethod(ind: int): void}}
+\\ Questo metodo elimina il metodo alla posizione descritta dall'indice passato come parametro \\
+
+\textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{ind: int}}
+\\ Questo parametro indica l'indice del metodo da rimuovere
+
+\end{itemize}
+\item \nogloxy{\texttt{- deleteParameter(met: int[]): void}}
+\\ Questo metodo cancella un parametro al metodo specificato \\
+
+\textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{met: int[]}}
+\\ Questo parametro indica gli indici utili per identificare il parametro da rimuovere
+
+\end{itemize}
 \end{itemize}
 \end{itemize}
 \subsection{\nogloxy{swedesigner::client::model::utility}}
@@ -611,77 +868,20 @@ Questo package racchiude le classi che definiscono i principali comandi dell'app
 \item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::client::model}]{\nogloxy{\texttt{model}}}
 \end{itemize}
 \subsubsection{Classi}
-\subsubsubsection{\nogloxy{swedesigner::client::model::utility::ProjectGenerator}}
-\label{\nogloxy{swedesigner::client::model::utility::ProjectGenerator}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe si occupa di fornire il comando necessario ad inviare al server il progetto e di ricevere un archivio contenente il progetto stesso, il codice sorgente e l'eseguibile generati quando l'utente lo richiede.
-\item \textbf{Utilizzo}\\
-viene utilizzata da \texttt{AppView} essendo una realizzazione dell'interfaccia quando l'utente chiede di generare il codice del progetto e usa \texttt{ProjectModel} come modello su cui operare.
-\item \textbf{Relazioni con altre classi}:
-\begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{ProjectCommand}}}\\
-questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::utility::ProjectInitializer}}
-\label{\nogloxy{swedesigner::client::model::utility::ProjectInitializer}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe si occupa di fornire il comando per la creazione di nuovi progetti vuoti quando l'utente lo richiede.
-\item \textbf{Utilizzo}\\
-viene utilizzata da \texttt{AppView} essendo una realizzazione dell'interfaccia quando l'utente chiede di creare un nuovo progetto e usa \texttt{ProjectModel} come modello su cui operare.
-\item \textbf{Relazioni con altre classi}:
-\begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{ProjectCommand}}}\\
-questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::utility::ProjectLoader}}
-\label{\nogloxy{swedesigner::client::model::utility::ProjectLoader}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe si occupa di fornire il comando per il caricamento di un progetto già esistente su disco dell'utente quando l'utente lo richiede. 
-\item \textbf{Utilizzo}\\
-viene utilizzata da \texttt{AppView} essendo una realizzazione dell'interfaccia quando l'utente chiede di caricare un progetto esistente e usa \texttt{ProjectModel} come modello su cui operare.
-È possibile prevedere in futuro la modifica di questa classe per effettuare il recupero di queste informazioni anche in remoto (ad esempio, dei progetti demo forniti dal server) tramite interfaccia REST.
-\item \textbf{Relazioni con altre classi}:
-\begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{ProjectCommand}}}\\
-questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
-\end{itemize}
-\end{itemize}
-
-\subsubsubsection{\nogloxy{swedesigner::client::model::utility::ProjectSaver}}
-\label{\nogloxy{swedesigner::client::model::utility::ProjectSaver}}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-questa classe si occupa di fornire il comando per il salvataggio di un progetto quando l'utente lo richiede.
-\item \textbf{Utilizzo}\\
-viene utilizzata da \texttt{AppView} essendo una realizzazione dell'interfaccia quando l'utente chiede di salvare un progetto e usa \texttt{ProjectModel} come modello su cui operare.
-\item \textbf{Relazioni con altre classi}:
-\begin{itemize}
-\item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{ProjectCommand}}}\\
-questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
-\end{itemize}
-\end{itemize}
-
 \subsubsubsection{\nogloxy{swedesigner::client::model::utility::ProjectStereotypes}}
 \label{\nogloxy{swedesigner::client::model::utility::ProjectStereotypes}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe contiene al suo interno i possibili stereotipi utilizzabili recuperati dal server in modo asincrono. Conterrà una lista di elementi \textt{HxStereotype}.
+Questa classe contiene al suo interno i possibili stereotipi utilizzabili recuperati dal server in modo asincrono. Conterrà una lista di elementi \textt{HxStereotype}.
 \item \textbf{Utilizzo}\\
 \texttt{DetailsView} necessita degli stereotipi esistenti per permettere l'inserimento e la modifica dello stereotipo di una classe. È possibile che la \texttt{NewCellFactory} faccia una richiesta simile a questa classe, al fine di poter fornire all'utente la possibilità di inserire una classe già stereotipata. 
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{DetailsView}}}\\
-questa classe si occupa di visualizzare tutti i campi di un blocco o di una relazione (come il nome di una classe, i suoi attributi, la condizione di un blocco \texttt{if} o il blocco di partenza di una relazione) permettendone anche la modifica. È possibile anche specificare uno stereotipo per la classe.
+Questa classe si occupa di visualizzare tutti i campi di un blocco o di una relazione (come il nome di una classe, i suoi attributi, la condizione di un blocco \texttt{if} o il blocco di partenza di una relazione) permettendone anche la modifica. È possibile anche specificare uno stereotipo per la classe.
 
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxStereotype}]{\nogloxy{\texttt{HxStereotype}}}\\
-questa classe rappresenta le caratteristiche dello stereotipo che viene assegnato ad un \texttt{ClassDiagramElement} come i meta-attributi e meta-metodi, i quali sono essere ridefiniti dalla classe o interfaccia implementata tramite \proj{}. 
+Questa classe rappresenta le caratteristiche dello stereotipo che viene assegnato ad un \texttt{ClassDiagramElement} come i meta-attributi e meta-metodi, i quali sono essere ridefiniti dalla classe o interfaccia implementata tramite \proj{}. 
 \end{itemize}
 \end{itemize}
 \subsection{\nogloxy{swedesigner::client::view}}
@@ -702,22 +902,22 @@ Questo package raccoglie le classi che rappresentano i menù laterali e il \text
 \FloatBarrier
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
+Questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
 \item \textbf{Utilizzo}\\
-essa è la prima classe costruita dall'entry point del programma.
+Essa è la prima classe costruita dall'entry point del programma.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{ProjectCommand}}}\\
 questa interfaccia descrive la struttura di un comando che viene chiamato da \texttt{AppView} quando l'utente decide di creare un nuovo progetto, di caricarne uno esistente, di salvarlo o di generare il codice dal diagramma. Il pattern realizzato è il pattern Command.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectModel}]{\nogloxy{\texttt{ProjectModel}}}\\
-questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
+Questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{DetailsView}}}\\
-questa classe si occupa di visualizzare tutti i campi di un blocco o di una relazione (come il nome di una classe, i suoi attributi, la condizione di un blocco \texttt{if} o il blocco di partenza di una relazione) permettendone anche la modifica. È possibile anche specificare uno stereotipo per la classe.
+Questa classe si occupa di visualizzare tutti i campi di un blocco o di una relazione (come il nome di una classe, i suoi attributi, la condizione di un blocco \texttt{if} o il blocco di partenza di una relazione) permettendone anche la modifica. È possibile anche specificare uno stereotipo per la classe.
 
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{NewCellView}}}\\
-questa classe si occupa di visualizzare tutti i possibili blocchi e relazioni che si possono inserire nel diagramma delle classi o delle attività.
+Questa classe si occupa di visualizzare tutti i possibili blocchi e relazioni che si possono inserire nel diagramma delle classi o delle attività.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::view::ProjectView}]{\nogloxy{\texttt{ProjectView}}}\\
-questa classe rappresenta l'area di disegno principale dell'applicazione, che necessita di essere cambiata tra diagramma delle classi e diagramma delle attività. 
+Questa classe rappresenta l'area di disegno principale dell'applicazione, che necessita di essere cambiata tra diagramma delle classi e diagramma delle attività. 
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
@@ -754,17 +954,59 @@ questa classe rappresenta l'area di disegno principale dell'applicazione, che ne
 \label{\nogloxy{swedesigner::client::view::DetailsView}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di visualizzare tutti i campi di un blocco o di una relazione (come il nome di una classe, i suoi attributi, la condizione di un blocco \texttt{if} o il blocco di partenza di una relazione) permettendone anche la modifica. È possibile anche specificare uno stereotipo per la classe.
+Questa classe si occupa di visualizzare tutti i campi di un blocco o di una relazione (come il nome di una classe, i suoi attributi, la condizione di un blocco \texttt{if} o il blocco di partenza di una relazione) permettendone anche la modifica. È possibile anche specificare uno stereotipo per la classe.
 
 \item \textbf{Utilizzo}\\
-utilizza come model una tra le classi contenute nel package \texttt{celltypes}, in base alla selezione fatta dall'utente, e ne modifica i campi in base all'input. Essa eredita dalla \texttt{View} di \emph{Backbone.js} ed è una \emph{view} parallela alla \texttt{CellView} di ogni \texttt{Cell}, in quanto usa gli stessi modelli mostrando diversamente i dati.
+Utilizza come model una tra le classi contenute nel package \texttt{celltypes}, in base alla selezione fatta dall'utente, e ne modifica i campi in base all'input. Essa eredita dalla \texttt{View} di \emph{Backbone.js} ed è una \emph{view} parallela alla \texttt{CellView} di ogni \texttt{Cell}, in quanto usa gli stessi modelli mostrando diversamente i dati.
 In futuro, qualora l'implementazione di questa classe risulti troppo pesante o complicata da testare, è possibile subclassare questa classe in \emph{view} multiple e prevedere una nuova \emph{factory} di view.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{AppView}}}\\
-questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
+Questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::utility::ProjectStereotypes}]{\nogloxy{\texttt{ProjectStereotypes}}}\\
-questa classe contiene al suo interno i possibili stereotipi utilizzabili recuperati dal server in modo asincrono. Conterrà una lista di elementi \textt{HxStereotype}.
+Questa classe contiene al suo interno i possibili stereotipi utilizzabili recuperati dal server in modo asincrono. Conterrà una lista di elementi \textt{HxStereotype}.
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{- currentTemplate: object}}
+\\ Questo attributo indica il template corrente da utilizzare per visualizzare \texttt{detailsViews}
+\item \nogloxy{\texttt{- events: string[]}}
+\\ Questo attributo rappresenta gli eventi intercettati e gestiti dalla view
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ confirmEdit(e: object): void}}
+\\ Questo metodo chiama il metodo setToValue del modello in modo da modificare i valori di esso in base all'input
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{e: object}}
+\\ Questo oggetto rappresenta un evento di un elemento html che contiene anche i valori presi in input dall'utente
+\end{itemize}
+\item \nogloxy{\texttt{+ execCommand(e: object): void}}
+\\ Questo metodo si occupa di eseguire un metodo del modello(come ad esempio aggiunta o eliminazione attributi) in base al nome dell'elemento passato in input
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{e: object}}
+\\ Questo parametro rappresenta un oggetto evento di un elemento html
+\end{itemize}
+\item \nogloxy{\texttt{+ initialize(): void}}
+\\ Questo metodo si occupa di istanziare la classe e di metterla in ascolto dell'evento di cambio della cella selezionata
+\item \nogloxy{\texttt{+ render(): void}}
+\\ Questo metodo si occupa di visualizzare la view all'interno di un div in base all'attributo. \texttt{currentTemplate}
+\item \nogloxy{\texttt{+ switch(e: object): void}}
+\\ Questo metodo si occupa di chiamare il cambio di diagramma in base all'input
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{e: object}}
+\\ Questo parametro indica un oggetto evento che contiene informazioni sull'oggetto html cliccato e l'id del metodo del quale si vuole aprire il relativo diagramma delle attività
+\end{itemize}
+\item \nogloxy{\texttt{+ toggle(e: object): void}}
+\\ Questo metodo di occupa di modificare la visibilità dell'elemento passato in input
+\\ \textbf{Parametri}:
+\begin{itemize}
+\item \nogloxy{\texttt{e: object}}
+\\ Questo parametro rappresenta un evento click contentente informazioni sull'elemento che ha scatenato l'evento
+\end{itemize}
 \end{itemize}
 \end{itemize}
 
@@ -772,15 +1014,33 @@ questa classe contiene al suo interno i possibili stereotipi utilizzabili recupe
 \label{\nogloxy{swedesigner::client::view::NewCellView}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe si occupa di visualizzare tutti i possibili blocchi e relazioni che si possono inserire nel diagramma delle classi o delle attività.
+Questa classe si occupa di visualizzare tutti i possibili blocchi e relazioni che si possono inserire nel diagramma delle classi o delle attività.
 \item \textbf{Utilizzo}\\
-utilizza \texttt{NewCellModel} per recuperare i blocchi e relazioni inseribili nel diagramma corrente (che può essere o delle classi o delle attività).
+Utilizza \texttt{NewCellModel} per recuperare i blocchi e relazioni inseribili nel diagramma corrente (che può essere o delle classi o delle attività).
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{AppView}}}\\
-questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
+Questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{NewCellModel}}}\\
-questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relazioni) da poter inserire nel diagramma corrente (o classi o attività).
+Questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relazioni) da poter inserire nel diagramma corrente (o classi o attività).
+\end{itemize}
+\item \textbf{Attributi}:
+\begin{itemize}
+\item \nogloxy{\texttt{- events: Event[]}}
+\\ Coppie chiave-valore usate da \backbonejs{} per la gestione degli eventi.
+\item \nogloxy{\texttt{- str: String[]}}
+\\ Rappresenta una lista di String che contiene i componenti HTML da inserire all'interno del DOM. Ogni stringa rappresenta un elemento che può essere inserito nel diagramma corrente.
+\end{itemize}
+\item \textbf{Metodi}:
+\begin{itemize}
+\item \nogloxy{\texttt{+ addCell(): void}}
+\\ Richiama il metodo \emph{addCell} del proprio \emph{model} in modo da aggiungere una cella.
+\item \nogloxy{\texttt{+ initialize(): void}}
+\\ Assegna l'opportuno model alla view appena inizializzata e si mette in ascolto dei corretti eventi.
+\item \nogloxy{\texttt{+ render(): void}}
+\\ Genera all'interno del DOM codice HTML corretto per inserire tutte le possibili celle creabili. 
+\item \nogloxy{\texttt{+ switch(): void}}
+\\ Richiama il metodo \emph{switchComponents} del rispettivo model.
 \end{itemize}
 \end{itemize}
 
@@ -788,20 +1048,20 @@ questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relaz
 \label{\nogloxy{swedesigner::client::view::ProjectView}}
 \begin{itemize}
 \item \textbf{Descrizione}\\
-questa classe rappresenta l'area di disegno principale dell'applicazione, che necessita di essere cambiata tra diagramma delle classi e diagramma delle attività. 
+Questa classe rappresenta l'area di disegno principale dell'applicazione, che necessita di essere cambiata tra diagramma delle classi e diagramma delle attività. 
 \item \textbf{Utilizzo}\\
-seleziona l'elemento \emph{Graph} da visualizzare. esso è presente nel relativo \emph{model}, che sarà di volta in volta cambiato selezionandolo dalla sua \emph{collection}.
+Seleziona l'elemento \emph{Graph} da visualizzare. esso è presente nel relativo \emph{model}, che sarà di volta in volta cambiato selezionandolo dalla sua \emph{collection}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{AppView}}}\\
-questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
+Questa classe si occupa di gestire l'intera view dell'applicazione, componendo l'interfaccia principale e richiamando le altre view tramite il sistema a template di \backbonejs{}.
 \item \textit{OUT} \hyperref[\nogloxy{swedesigner::client::model::ProjectModel}]{\nogloxy{\texttt{ProjectModel}}}\\
-questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
+Questa classe ci permette di aggiungere della logica alla collezione di tutti i diagrammi che possediamo.
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
 \item \nogloxy{\texttt{+ paper: Paper}}
-\\ Rappresenta l'area di disegno principale, contenuta nell'elemento \emph{HTML \#paper}.
+\\ Rappresenta l'area di disegno principale, contenuta nell'elemento HTML \emph{\#paper}.
 All'interno di questo oggetto di \jointjs{} sono presenti alcuni elementi aggiuntivi.
 \item \nogloxy{\texttt{+ visibleElements: {String, String}[]}}
 \\ Contiene le variabili e i metodi visibili all'interno dello scope selezionato. Nell'implementazione corrente, a seguito dell'incontro [RIFERIMENTO] con il committente, è stato deciso di non implementare completamente tali funzionalità, tuttavia mantenendo la possibilità di una futura implementazione; nel caso specifico, sarà implementata solo la visibilità degli attributi e metodi presenti nella classe corrente.
@@ -809,7 +1069,7 @@ All'interno di questo oggetto di \jointjs{} sono presenti alcuni elementi aggiun
 \item \textbf{Metodi}:
 \begin{itemize}
 \item \nogloxy{\texttt{+ deleteCell(e: Event): void}}
-\\ Esegue la cancellazione di una cella da un diagramma tramite il tasto \emph{Canc}.\\
+\\ Esegue la cancellazione di una cella da un diagramma tramite il tasto \emph{Canc}. \\
 
 \textbf{Parametri}:
 \begin{itemize}
@@ -817,7 +1077,7 @@ All'interno di questo oggetto di \jointjs{} sono presenti alcuni elementi aggiun
 \\ L'evento che ha scatenato questo metodo.
 \end{itemize}
 \item \nogloxy{\texttt{+ deleteMethodAt(ind: int): void}}
-\\ Cancella un diagramma dei metodi.	\\
+\\ Cancella un diagramma dei metodi.	 \\
 
 \textbf{Parametri}:
 \begin{itemize}
@@ -839,7 +1099,7 @@ All'interno di questo oggetto di \jointjs{} sono presenti alcuni elementi aggiun
 \\ View della cella selezionata.
 \end{itemize}
 \item \nogloxy{\texttt{- pointerMoveFunction(cellView: CellView): void}}
-\\ Gestisce il movimento del mouse da parte dell'utente durante un drag\&drop, evidenziando la cella in cui sarà inserita la cella che l'utente sta strascinando.	\\
+\\ Gestisce il movimento del mouse da parte dell'utente durante un drag\&drop, evidenziando la cella in cui sarà inserita la cella che l'utente sta strascinando.	 \\
 
 \textbf{Parametri}:
 \begin{itemize}
@@ -848,7 +1108,7 @@ All'interno di questo oggetto di \jointjs{} sono presenti alcuni elementi aggiun
 
 \end{itemize}
 \item \nogloxy{\texttt{- pointerUpFunction(cellView: CellView, evt: Event, x: int, y: int): void}}
-\\ Gestisce il drop di una cella, occupandosi delle seguenti operazioni: \begin{itemize} \item Spostamento della cella in una nuova posizione \item Spostamento dei figli della cella nella nuova posizione (corretta) \item Operazioni di cambiamento del padre \item Aggiornare nuovamente l'area di disegno \end{itemize} Si lascia all'implementatore la possibilità di spezzare questo metodo in più componenti, nel caso questo risulti complicato da sviluppare e da testare.	\\
+\\ Gestisce il drop di una cella, occupandosi delle seguenti operazioni: \begin{itemize} \item Spostamento della cella in una nuova posizione \item Spostamento dei figli della cella nella nuova posizione (corretta) \item Operazioni di cambiamento del padre \item Aggiornare nuovamente l'area di disegno \end{itemize} Si lascia all'implementatore la possibilità di spezzare questo metodo in più componenti, nel caso questo risulti complicato da sviluppare e da testare.	 \\
 
 \textbf{Parametri}:
 \begin{itemize}
@@ -865,7 +1125,7 @@ All'interno di questo oggetto di \jointjs{} sono presenti alcuni elementi aggiun
 \\ Aggiorna l'area di disegno posizionando correttamente sullo schermo i blocchi del diagramma delle attività. Sfrutta \emph{offsetY}, \emph{hidden}, \emph{expanded} di ogni blocco.	
 
 \item \nogloxy{\texttt{+ switch(id: String): void}}
-\\ Si occupa di cambiare il diagramma corrente.	\\
+\\ Si occupa di cambiare il diagramma corrente.	 \\
 
 \textbf{Parametri}:
 \begin{itemize}
