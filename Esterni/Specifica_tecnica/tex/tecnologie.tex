@@ -98,16 +98,31 @@ Tomcat fornisce numerosi vantaggi:
 
 Allo stesso tempo manca della funzionalità che permette il recupero automatico delle funzionalita in caso di \emph{failure}.
 
-\subsubsection{Spring}
-Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source \emph{Spring} (disponibile all'indirizzo \url{spring.io}), utile per aderire ai princìpi dello stile architetturale REST.
+\subsubsection{Spring Boot}
+Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source \emph{Spring Boot} (disponibile all'indirizzo \url{spring.io}), utile per aderire ai princìpi dello stile architetturale REST.
 
 La scelta di Spring è stata guidata dalle seguenti caratteristiche proprie di questa libreria:
 \begin{itemize}
 	\item modulare: rende possibile integrare solo alcuni moduli all'interno del progetto;
-	\item leggero: diminuisce le dipendenze o le isola;
 	\item integrabile: rende facile l'utilizzazione di altri framework oper source;
-	\item portabile: permette di scrivere software facile da testare.
+	\item testabile: permette di scrivere software facile da testare.
 \end{itemize}
+
+Tuttavia Spring possiede vari difetti:
+\begin{itemize}
+	\item pesantezza: l'ambiente di Spring è tutt'altro che leggero;
+	\item complessità: sviluppare in Spring presenta una curva di apprendimento ripida;
+\end{itemize}
+
+In particolare la libreria derivata chiamata Spring Boot è stata preferita per le seguenti caratteristiche:
+\begin{itemize}
+	\item semplicità: l'ambiente di Spring Boot fornisce una suite preconfezionata e preconfigurata \emph{out-of-the-box}, in modo da semplificare l'attività di codifica;
+	\item (relativa) leggerezza: rispetto all'ambiente di Spring, Spring Boot risulta sensibilmente più leggero.
+	% \item altro?
+\end{itemize}
+
+
+I principali svantaggi nell'uso di questa 
 
 \subsubsection{StringTemplate}
 StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Come indicato sul sito ufficiale, questa libreria è particolarmente adatta alla genereazione di codice. 
@@ -125,5 +140,5 @@ Google Gson è una libreria open-source disponibile all'indirizzo \url{github.co
 Tra gli aspetti più rilevanti di Google Gson spiccano:
 \begin{itemize}
 	\item la semplicita e la velocità di utilizzo;
-	\item l'indipendenza dai file sorgenti al contrario delle librerie. simili;
+	\item l'indipendenza dai file sorgenti al contrario delle librerie simili;
 \end{itemize}
