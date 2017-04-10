@@ -1586,6 +1586,157 @@ Il consuntivo presenta una differenza di costo negativa a causa del costo divers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Consuntivo \PDC}
+\introconsuntivo{\PDC}
+
+\subsubsection{Variazioni nella pianificazione}
+
+Qualora parte dei diagrammi non vengano riportati, si intende che essi hanno rispettato la corretta pianificazione, terminando in modo identico alla pianificazione.
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/varpdc1.png}}
+\label{tab:cgen1}
+
+\caption{Variazione rispetto alla pianificazione per la \PDC{} diagramma di Gantt (parte 1)}
+\end{figure}
+
+Si è verificato un grave rallentamento delle attività di verifica delle attività di codifica, la quale ha impedito sia il raggiungimento della creazione di un prodotto completo, sia l'attuazione del modello incrementale inizialmente proposto.
+
+Tra le cause del rallentamento delle attività di codifica, passate da due a quattro settimane, si riscontra:
+\begin{itemize}
+\item stima troppo ottimistica del tempo necessario all'attività di codifica;
+\item stima troppo ottimistica del tempo necessario all'attività di formazione sulle tecnologie utilizzate;
+\item difficoltà nell'individuazione degli strumenti necessari ai test di unità;
+\end{itemize}
+
+Tale rallentamento ha portato ad uno slittamento delle attività di codifica pari a 3 settimane, prevedendo la terminazione del secondo ciclo incrementale dal preventivato 07-04-2017 al 28-04-2017.
+
+È stato deciso inoltre di eliminare il secondo ciclo incrementale, in quanto:
+\begin{itemize}
+\item poco adattabile alle esigenze delle revisioni di progetto: normalmente, collocare più di una attività di incremento all'interno di un unico periodo tra una revisione di progetto e l'altra risulta inutilmente dispersivo;
+\item difficile da conciliare con le risorse rimanenti a disposizione.
+\end{itemize}
+Il gap di una settimana pianificato dal 10-04-2017 al 17-04-2017 è stato previsto per permettere al team di svolgere altre attività di carattere accademico non inerenti al progetto.
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+\includegraphics[width=1.2\textwidth]{img/varpdc2.png}}
+\label{tab:cgen1}
+
+\caption{Variazione rispetto alla pianificazione per la \PDC{} diagramma di Gantt (parte 2)}
+\end{figure}
+
+Sono state ridotte le attività e le ore previste per la stesura della Definizione di Prodotto, in quanto presentata solo a carattere informativo e non valutabile dal \TV. Ciò ha permesso di:
+
+\begin{itemize}
+\item Ridistribuire le ore alle attività che ne necessitavano (future attività di codifica e verifica);
+\end{itemize}
+
+
+
+\pagebreak
+\subsubsection{Variazione nei costi}
+\begin{itemize}
+
+\item Sono state rilevate variazioni nei costi.
+
+\item Si riportano le tabelle di divisione oraria effettive e i relativi costi.
+
+\end{itemize}
+
+\begin{figure}[H]
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+\makebox[\textwidth][c]
+{
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot ore/persona \\ \hline
+    \PB & 0 & 0 & 0 & 18 & 30 & 7 & 55 \\ \hline
+    \LB & 0 & 5 & 0 & 8 & 30 & 13 & 56 \\ \hline
+    \GG & 0 & 5 & 0 & 10 & 30 & 3 & 48 \\ \hline
+    \MM & 2 & 0 & 0 & 0 & 30 & 8 & 40 \\ \hline
+    \LS & 0 & 3 & 0 & 10 & 30 & 9 & 52 \\ \hline
+    \AZ & 2 & 5 & 0 & 10 & 30 & 10 & 57 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale ore/ruolo & 4 & 18 & 0 & 56 & 180 & 50 & 308 \\ \hline
+    
+  \end{tabular}
+  }
+    \caption{Ore/ruolo per persona durante la \PDC.}
+
+\end{figure} 
+% i colori danno problemi di visualizzazione alle linee
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | c | c | c | c | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo / persona & \R & \AM & \AN & \PJ & \PG & \V & Tot euro/persona \\ \hline
+    \PB & 0 & 0 & 0 & 396 & 450 & 105 & 951 \\ \hline
+    \LB & 0 & 100 & 0 & 176 & 450 & 195 & 921 \\ \hline
+    \GG & 0 & 100 & 0 & 220 & 450 & 45 & 815 \\ \hline
+    \MM & 60 & 0 & 0 & 0 & 450 & 120 & 630 \\ \hline
+    \LS & 0 & 60 & 0 & 220 & 450 & 135 & 865 \\ \hline
+    \AZ & 60 & 100 & 0 & 220 & 450 & 150 & 980 \\ \hline
+    \rowcolor[gray]{.9}
+
+    Totale euro/ruolo & 120 & 360 & 0 & 1232 & 2700 & 750 & 5162 \\ \hline
+  \end{tabular}
+  
+}\label{tab:cpdc}
+
+  \caption{Tabella costo {\PDC} per ruolo e per persona, valori in euro (\euro).}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]
+{
+\definecolor{white2}{rgb}{0.95,0.95,0.95}
+\definecolor{white3}{rgb}{0.9,0.9,0.9}
+%\rowcolors{1}{white}{white2}
+
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    \rowcolor[gray]{.9}
+    Ruolo  & Ore & Costo \\ \hline
+    \R & 5 & 150 \\ \hline
+    \AM & 3 & 60 \\ \hline
+    \PJ & 189 (-19) & 4158 (-418)\\ \hline
+    \V & 45 (+23) & 675 (+345) \\ \hline
+    \rowcolor[gray]{.9}
+
+   Differenza & +4 & -73 \\ \hline
+  \end{tabular}
+  
+}
+\label{tab:car}
+\caption{Differenza preventivo-consuntivo per ruolo, \PA. Colonna \emph{Costo} in euro (\euro).}
+\end{figure}
+
+\subsubsection{Considerazioni}
+A fronte delle necessarie correzioni al \PdQ{} non previste è stato necessario rivedere la pianificazione, sottraendo risorse alla progettazione e assegnandole alla verifica. Questo ha portato ad una variazione totale delle ore/persona del gruppo ma è sempre stato rispettato il vincolo delle 105 ore rendicontabili. 
+
+\subsubsection{Preventivo a finire}
+Il consuntivo presenta una differenza di costo negativa a causa del costo diverso delle due diverse mansioni. Queste risorse risparmiate in questa fase saranno investite successivamente qualora necessario al fine di migliorare ulteriormente le attività di verifica, prevedendo l'assegnazione di più ore alla attività di verifica. L'effettiva variazione delle ore assegnate sarà presentata nei prossimi consuntivi di periodo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%%%%%%%%%%%%%
 %%  Organigramma
 %%%%%%%%%%%%%%%%
