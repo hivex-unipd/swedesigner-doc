@@ -72,10 +72,17 @@ I vantaggi principali:
 	\item caricamento dei moduli asincrono e "su richiesta".
 \end{itemize}
 
-Lo svantaggio principale risiede nella necessità di uno studio approfondito e ragionato prima di un utilizzo efficace.
+Tra gli svantaggi principali:
+\begin{itemize}
+\item necessità di uno studio approfondito e ragionato prima di un utilizzo efficace;
+\item curva di apprendimento ripida;
+\item complessità maggiore di integrazione con i test; 
+\end{itemize} 
 
 \subsubsection{\lodash}
-La libreria \lodash{} fornisce metodi di utilità non offerti da \js{} puro. Rispetto alla simile libreria \emph{Underscore}, questa fornisce più performance, più features e miglior documentazione. Essa inoltre è usata da \jointjs.
+La libreria \lodash{} fornisce metodi di utilità non offerti da \js{} puro. 
+
+Rispetto alla simile libreria \emph{Underscore}, questa fornisce più performance, più features e miglior documentazione. Essa inoltre è usata da \jointjs.
 
 % \subsubsection{qunit}
 % assertions, test di regressione
@@ -96,7 +103,7 @@ Tomcat fornisce numerosi vantaggi:
 	\item tempo di avvio immediato. 
 \end{itemize}
 
-Allo stesso tempo manca della funzionalità che permette il recupero automatico delle funzionalita in caso di \emph{failure}.
+Allo stesso tempo manca della funzionalità che permette il recupero automatico delle funzionalità in caso di \emph{failure}.
 
 \subsubsection{Spring Boot}
 Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source \emph{Spring Boot} (disponibile all'indirizzo \url{spring.io}), utile per aderire ai princìpi dello stile architetturale REST.
@@ -121,24 +128,38 @@ In particolare la libreria derivata chiamata Spring Boot è stata preferita per 
 	% \item altro?
 \end{itemize}
 
+L'utilizzo di questa tecnologia rispetto a \emph{Spring} secondo il team è preferibile e valutata positivamente dopo un breve periodo di prova di entrambe le tecnologie.
 
-I principali svantaggi nell'uso di questa 
+Si rimanda all'appendice %\ref{sec:app_spring}
+per ulteriori considerazioni sull'uso di Spring Boot nella nostra applicazione. Futuri riferimenti alla libreria Spring dovranno essere considerati come riferiti alla libreria Spring Boot, qualora non diversamente specificato.
 
 \subsubsection{StringTemplate}
-StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Come indicato sul sito ufficiale, questa libreria è particolarmente adatta alla genereazione di codice. 
+StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Come indicato sul sito ufficiale, questa libreria è particolarmente adatta alla generazione di codice. 
 
 Essa viene utilizzata per:
-\begin{enumerate}
+\begin{itemize}
 	\item creare dei template di codice Java, inframmezzati da speciali marcatori definiti da StringTemplate;
 	\item popolare tali template con i dati ricevuti dal client.
-\end{enumerate}
+\end{itemize}
 I marcatori definiti dalla libreria servono da segnaposto per ospitare i dati ottenuti analizzando il documento JSON generato dal client.
 
-\subsubsection{Google Gson}
-Google Gson è una libreria open-source disponibile all'indirizzo \url{github.com/google/gson}. Essa permette di convertire un oggetto JSON in un oggetto Java che abbia, come campi dati, un sovrainsieme delle chiavi presenti nell'oggetto JSON; l'oggetto JSON dev'essere contenuto in una stringa Java. I valori delle chiavi dell'oggetto JSON diventano i valori dei campi dati dell'oggetto Java. La libreria permette anche il procedimento inverso (da Java a JSON), che però non usiamo nella nostra applicazione.
+Le principali feature utili al progetto sono per esempio le seguenti:
 
-Tra gli aspetti più rilevanti di Google Gson spiccano:
 \begin{itemize}
-	\item la semplicita e la velocità di utilizzo;
-	\item l'indipendenza dai file sorgenti al contrario delle librerie simili;
+\item espressioni semplici, espressioni condizionali;
+\item template anonimi;
+\item funzioni;
+\item valutazione lazy;
+\item auto-indentazione;
+\item iteratori;
 \end{itemize}
+
+Molto importante è notare la filosofia sfruttata dalla libreria (consultabile al seguente indirizzo: \url{https://github.com/antlr/stringtemplate4/blob/master/doc/motivation.md}): StringTemplate, non permettendo certe operazioni come assegnazioni rende questo sistema di templating privo di \emph{side-effects}. Malgrado questo può portare a rendere la soluzione finale più complessa da sviluppare, ciò porta molti vantaggi:
+
+\begin{itemize}
+\item si favorisce il riuso di componenti;
+\item i template sono sostituibili più facilmente;
+\item i template sono più facilmente testabili;
+\item la parte del linguaggio specifico viene isolata totalmente dalla logica di gestione del template, astratta per ogni linguaggio. 
+\end{itemize}
+
