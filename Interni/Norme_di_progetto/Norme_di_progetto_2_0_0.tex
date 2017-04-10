@@ -254,14 +254,11 @@ Al fine di aumentare la manutenibilità del sistema, i progettisti devono seguir
 
 \paragraph{Risoluzione di ulteriori dubbi} Nel caso un progettista abbia ulteriori dubbi su come svolgere un proprio compito, egli deve consultare la documentazione di \emph{SDMetrics} reperibile all'indirizzo \url{http://www.sdmetrics.com/manual/LORules.html}.
 
-\subsubsection{Codifica} \label{sec:cod}
-Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
+\subsubsection{Codifica} \label{sec:cod} Scopo dell'attività di codifica è implementare in codice quanto descritto nel documento di Definizione di Prodotto. Per mantenere un alto grado di comprensione del codice sorgente, i programmatori devono seguire delle linee guida sulle tecnologie da usare, sulla nomenclatura e sulla documentazione.
 
-\paragraph{Convenzioni} \label{sec:conv}
-Il gruppo seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte \gloss{client} scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritte in \url{http://javascript.crockford.com/code.html}. La parte \gloss{server} è scritta in Java e seguirà le indicazioni JavaDoc disponibili in \url{http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
+\paragraph{Convenzioni} \label{sec:conv} Il gruppo seguirà due diverse convenzioni in base al linguaggio utilizzato. Essendo la parte \gloss{client} scritta in JavaScript, verranno seguite le indicazioni riguardo nomenclatura, regole sull'uso di spazi, indentazioni e commenti descritte in \url{http://javascript.crockford.com/code.html}. La parte \gloss{server} è scritta in Java e seguirà le indicazioni JavaDoc disponibili in \url{http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html}.
 
-\paragraph{Nomenclatura del codice}
-Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
+\paragraph{Nomenclatura del codice} Al fine di uniformare il codice sorgente, i programmatori devono rispettare le seguenti norme di codifica:
 \begin{itemize}
 	\item i nomi di classi e metodi o funzioni devono essere quelli adottati dai progettisti nei documenti di Specifica Tecnica e di Definizione di Prodotto;
 	\item i programmatori possono introdurre funzioni ausiliarie non presenti nella progettazione del software;
@@ -269,38 +266,36 @@ Al fine di uniformare il codice sorgente, i programmatori devono rispettare le s
 	\item i nomi di variabili locali devono seguire le stesse norme di nomenclatura dei metodi, definite in \ref{sec:design}, tranne che devono essere preferibilmente dei sostantivi.
 \end{itemize}
 
-\paragraph{Efficienza} \label{sec:efficienza}
-Il programmatore deve produrre codice sorgente efficiente. In particolare, deve evitare la ricorsione; nel caso fosse molto difficile trovare un metodo iterativo equivalente, egli è tenuto a fornire una prova di terminazione dell'algoritmo ricorsivo.
+\paragraph{Efficienza} \label{sec:efficienza} Il programmatore deve produrre codice sorgente efficiente. In particolare, deve evitare la ricorsione; nel caso fosse molto difficile trovare un metodo iterativo equivalente, egli è tenuto a fornire una prova di terminazione dell'algoritmo ricorsivo.
 
-\paragraph{Documentazione del codice}
-Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
+\paragraph{Documentazione del codice} Per facilitare la manutenibilità del codice, i programmatori devono rispettare le seguenti norme sulla documentazione:
 \begin{itemize}
 	\item All'inizio di ogni file sorgente (\texttt{.java} o \texttt{.js}) e prima di ogni classe, i programmatori devono inserire un commento con la seguente struttura:
 	\begin{verbatim}
 	/**
-	* Descrizione del file o della classe
-	*
-	*
-	* @author Autore
-	* @version Versione corrente del file o della classe
-	* @since Versione del prodotto dalla quale è presente il file o la classe
-	*/
+	 * Descrizione del file o della classe
+	 *
+	 *
+	 * @author Autore
+	 * @version Versione corrente del file o della classe
+	 * @since Versione del prodotto dalla quale è presente il file o la classe
+	 */
 	\end{verbatim}
 	\item All'inizio di ogni metodo Java i programmatori devono inserire un commento con la seguente struttura:
 	\begin{verbatim}
 	/** 
-	* Descrizione del metodo
-	* @param NomeParametro    Descrizione parametro
-	* @return Tiporitorno     Valore di ritorno 
-	*/
+	 * Descrizione del metodo
+	 * @param NomeParametro    Descrizione parametro
+	 * @return Tiporitorno     Valore di ritorno 
+	 */
 	\end{verbatim}
 	Il numero di \texttt{@param} dipende dal numero di parametri del metodo. Il tag \texttt{@return} si omette nel caso di metodi \texttt{void} e costruttori. Alcuni parametri aggiuntivi posso recare \texttt{@throws TipoEccezione Motivo}, nel caso di eccezioni controllate presenti nel metodo e \texttt{@since} se il metodo è stato inserito in una versione diversa rispetto al file.
 	\item All'inizio di ogni funzione JavaScript i programmatori devono inserire un commento con la seguente struttura:
 	\begin{verbatim}
 	/** 
-	* Descrizione della funzione
-	* @param {Tipoparametro} NomeParametro - Descrizione parametro
-	*/
+	 * Descrizione della funzione
+	 * @param {Tipoparametro} NomeParametro - Descrizione parametro
+	 */
 	\end{verbatim}
 	\item Quando possibile, è bene documentare con un commento in linea parti di codice non immediatamente comprensibili.
 	\item Ogni commento in linea deve recare uno spazio tra il testo e il marcatore di inizio commento.
@@ -309,15 +304,14 @@ Per facilitare la manutenibilità del codice, i programmatori devono rispettare 
 	\item In generale, i programmatori devono attenersi alle linee guida \gloss{Javadoc} e Jsdoc.
 \end{itemize}
 
-\paragraph{Tecnologie e infrastruttura}
-Ogni programmatore deve scrivere codice sorgente utilizzando i seguenti editor di testo:
+\paragraph{Tecnologie e infrastruttura} Ogni programmatore deve scrivere codice sorgente utilizzando i seguenti editor di testo:
 \begin{itemize}
 	\item \emph{Eclipse} per scrivere codice Java;
 	\item \emph{JetBrains Webstorm} per scrivere codice JavaScript.
 \end{itemize}
 Il programmatore è tenuto ad accettare la formattazione automatica proposta dall'editor.
 
-I programmatori devono caricare il codice sorgente nel repository pubblico \url{https://github.com/hivex-unipd/swedesigner}. Ogni \emph{commit} deve recare un messaggio che spiega concisamente le aggiunte o modifiche che sono state apportate al codice sorgente.
+\paragraph{Integrazione del codice} \label{sec:integraz} I programmatori devono caricare il codice sorgente nel repository pubblico \url{https://github.com/hivex-unipd/swedesigner}. Ogni \emph{commit} deve recare un messaggio che spieghi concisamente le aggiunte o modifiche che sono state apportate al codice. Gli amministratori hanno configurato un sistema di integrazione continua con \emph{Travis CI}; ogni commit scatena una \emph{build} del codice esistente da parte di \emph{Travis CI}; questo comunica il risultato della \emph{build} sul canale \texttt{\#github} di Slack (vedi \S\ref{sec:canali}). Nel caso la \emph{build} rilevi dei guasti nel codice, i programmatori devono correggere i guasti; nel caso venga invece rilevato un malfunzionamento di altro tipo, gli amministratori devono intervenire nella configurazione del repository.
 
 
 
@@ -879,7 +873,7 @@ Tra i prodotti valutati, la scelta è ricaduta su Slack, una piattaforma di comu
 	\item esistenza di app per smartphone e desktop;
 	\item integrazione con servizi esterni (ad esempio con GitHub).
 \end{itemize}
-\paragraph{Canali} La possibilità di suddividere le conversazioni in canali è molto potente ma potenzialmente anche dispersiva: avere troppi canali porta a riversare tutta la comunicazione sul canale principale, intasandolo e rendendo la lettura dello storico più complicata. Sono quindi previsti i seguenti canali, con i seguenti scopi:
+\paragraph{Canali} \label{sec:canali} La possibilità di suddividere le conversazioni in canali è molto potente ma potenzialmente anche dispersiva: avere troppi canali porta a riversare tutta la comunicazione sul canale principale, intasandolo e rendendo la lettura dello storico più complicata. Sono quindi previsti i seguenti canali, con i seguenti scopi:
 \begin{description}
 	\item[\#documents] come strutturare i documenti e problematiche relative all'uso di Latex;
 	\item[\#feasibility] discussione sulla fattibilità dei capitolati;
