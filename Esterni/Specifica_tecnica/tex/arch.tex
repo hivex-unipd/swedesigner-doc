@@ -96,12 +96,29 @@ All'interno del corpo dei blocchi while, for e if/else è inoltre possibile inse
 
 
 \subsection{Architettura del server} \label{sec:arch_server}
-Il \emph{back end} della nostra applicazione \`e un server Tomcat che esegue un'applicazione Java e basata sul framework \emph{Spring Boot}. L'applicazione Java \`e contenuta in se stessa e quindi monolitica; questa scelta ci \`e parsa naturale per i seguenti motivi:
+
+Il \emph{back end} della nostra applicazione \`e un server Tomcat che esegue un'applicazione Java e basata sul framework \emph{Spring Boot}. L'applicazione Java \`e contenuta in sé stessa e quindi monolitica; questa scelta ci \`e parsa naturale per i seguenti motivi:
 \begin{itemize}
 	\item il capitolato non richiedeva che la nostra applicazione avesse un'architettura distribuita;
 	\item il capitolato richiedeva la codifica del \emph{back end} in Java, la cui natura ad oggetti ci ha spinti a vedere sin da subito il \emph{back end} come un classico sistema gerarchico monolitico;
-	\item un server monolitico era la scelta pi\`u semplice che si potesse fare.
+	\item la struttura più essenziale di un server monolitico ha permesso di ridirigere parte delle risorse nello sviluppo di parti più interessanti per il committente.
 \end{itemize}
+
+Punti a sfavore delle architetture monolitiche sono i seguenti:
+\begin{itemize}
+\item bassa modularità;
+\item bassa manutenibilità;
+\item alta complessità del prodotto risultante.
+\end{itemize}
+
+Si è tentato di arginare il problema come segue:
+\begin{itemize}
+\item le componenti più interessanti al committente sono state sviluppate prendendo in alta considerazione la modularità (tramite dependency injection);
+\item la futura stesura della \emph{Definizione di Prodotto} e del \emph{Manuale dello sviluppatore} dovrebbero facilitare la manutenibilità;
+\item sono stati studiati svariati strumenti e metriche al fine di misurare la qualità complessiva del codice di backend prodotto (vedi \emph{Piano di Qualifica} e \emph{Norme di Progetto}).
+\end{itemize}
+
+
 
 Il server offre tre servizi:
 \begin{enumerate}
