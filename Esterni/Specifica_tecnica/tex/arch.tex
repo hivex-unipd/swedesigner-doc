@@ -96,6 +96,13 @@ All'interno del corpo dei blocchi while, for e if/else è inoltre possibile inse
 
 
 \subsection{Architettura del server} \label{sec:arch_server}
+Il \emph{back end} della nostra applicazione \`e un server Tomcat che esegue un'applicazione Java e basata sul framework \emph{Spring Boot}. L'applicazione Java \`e contenuta in se stessa e quindi monolitica; questa scelta ci \`e parsa naturale per i seguenti motivi:
+\begin{itemize}
+	\item il capitolato non richiedeva che la nostra applicazione avesse un'architettura distribuita;
+	\item il capitolato richiedeva la codifica del \emph{back end} in Java, la cui natura ad oggetti ci ha spinti a vedere sin da subito il \emph{back end} come un classico sistema gerarchico monolitico;
+	\item un server monolitico era la scelta pi\`u semplice che si potesse fare.
+\end{itemize}
+
 Il server offre tre servizi:
 \begin{enumerate}
 	\item fornisce al client la pagina HTML dove disegnare i diagrammi;
