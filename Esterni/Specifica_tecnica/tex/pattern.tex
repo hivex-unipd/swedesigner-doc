@@ -64,7 +64,7 @@ Un esempio concreto é la richesta di un oggetto Generator alla quale Spring for
 	\item supportare la transazione: un comando equivale ad un'operazione atomica.
 \end{itemize}
 \subsubsection{Utiizzo}
-Il pattern command viene sfruttato dal client per chiamare funzioni come il salvataggio del progetto e la generazione del codice. È implementato seguendo le linee guida descritte da Addy Osmani nel libro \emph{Learning JavaScript Design Patterns}. Il \texttt{ProjectCommand} è un oggetto javascript il quale contiene una funzione per ogni comando. Inoltre offre il metodo execute che permette di incapsulare le invocazioni dei metodi e permette la parametrizzazione di essi. In questo modo è possibile avere degli ggetti disccopiati e lascia libertà di cambiare l'imlementazione di ProjectCommand non avendo classi che chiama direttamente una funzione di \texttt{ProjectCommand}.
+Il pattern command viene sfruttato dal client per chiamare funzioni come il salvataggio del progetto e la generazione del codice. È implementato seguendo le linee guida descritte da Addy Osmani nel libro \emph{Learning JavaScript Design Patterns} nel capitolo \emph{JavaScript Design Patterns-Command Pattern}. Il \texttt{ProjectCommand} è un oggetto javascript il quale contiene una funzione per ogni comando. Inoltre offre il metodo execute che permette di incapsulare le invocazioni dei metodi e permette la parametrizzazione di essi. In questo modo è possibile avere degli ggetti disccopiati e lascia libertà di cambiare l'imlementazione di ProjectCommand non avendo classi che chiama direttamente una funzione di \texttt{ProjectCommand}.
 \begin{figure}[H] \label{fig:command}
 	\includegraphics[scale=0.6]{img/commandExample.png}
 	\caption{Command.}
@@ -94,8 +94,8 @@ Il pattern command viene sfruttato dal client per chiamare funzioni come il salv
 \end{itemize}
 
 \subsubsection{Utilizzo}
-Il pattern iene utilizzato dal client per richiedere un'istanza di una nuova cella da aggiungere al diagramma corrente. L'oggetto \texttt{NewCellFactory} permette di registrare i vari tipi di celle e di richiedere un istanza del tipo desiderato descritto da una stringa. La richiesta delle celle viene effettuata da \texttt{NewCellModel} in base alla scelta dell'utente.
-L'imlpementazione di questo pattern segue le linee guida descritte da Addy Osmani nel libro \emph{Learning JavaScript Design Patterns}.
+Il pattern viene utilizzato dal client per richiedere un'istanza di una nuova cella da aggiungere al diagramma corrente. L'oggetto \texttt{NewCellFactory} permette di registrare i vari tipi di celle e di richiedere un istanza del tipo desiderato descritto da una stringa. La richiesta delle celle viene effettuata da \texttt{NewCellModel} in base alla scelta dell'utente.
+L'imlpementazione di questo pattern segue le linee guida descritte da Addy Osmani nel libro \emph{Learning JavaScript Design Patterns} nel capitolo \emph{JavaScript Design Patterns-Factory Pattern}.
 \begin{figure}[H] \label{fig:factory}
 	\includegraphics[scale=0.8]{img/factoryExample.png}
 	\caption{Factory.}
