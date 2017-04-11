@@ -2530,49 +2530,132 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\hline
 		\textbf{Distanza dalla sequenza principale normalizzata} & & &\\
 		client.model.utility &0.0 - 0.7 &0.0 - 0.5 &0.5\\
-		client.model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.5\\
-		client.model &0.0 - 0.7 &0.0 - 0.5 &0.625\\
-		client.collection &0.0 - 0.7 &0.0 - 0.5 &0.5\\
-		client.view &0.0 - 0.7 &0.0 - 0.5 &0\\
+		client.model.celltypes &0.0 - 0.7 &0.0 - 0.5 &0.45\\
+		client.model &0.0 - 0.7 &0.0 - 0.5 &0.55\\
+		client.view &0.0 - 0.7 &0.0 - 0.5 &0.67\\
 		server.controller &0.0 - 0.7 &0.0 - 0.5 &0.39\\
-		server.parser  &0.0 - 0.7 &0.0 - 0.5 &0\\
-		server.generator.java  &0.0 - 0.7 &0.0 - 0.5 &0\\
-		server.generator &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.parser  &0.0 - 0.7 &0.0 - 0.5 &0.09\\
+		server.generator.java  &0.0 - 0.7 &0.0 - 0.5 &0.25\\
+		server.generator &0.0 - 0.7 &0.0 - 0.5 &0.21\\
 		server.stereotype  &0.0 - 0.7 &0.0 - 0.5 &0.33\\
-		server.project  &0.0 - 0.7 &0.0 - 0.5 &0.39\\
-		server.template.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
-		server.template  &0.0 - 0.7 &0.0 - 0.5 &0.16\\
-		server.compiler.java  &0.0 - 0.7 &0.0 - 0.5 &0.63\\
-		server.compiler  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
+		server.project  &0.0 - 0.7 &0.0 - 0.5 &0.11\\
+		server.template.java  &0.0 - 0.7 &0.0 - 0.5 &0.33\\
+		server.template  &0.0 - 0.7 &0.0 - 0.5 &0.32\\
+		server.compiler.java  &0.0 - 0.7 &0.0 - 0.5 &0.33\\
+		server.compiler  &0.0 - 0.7 &0.0 - 0.5 &0.30\\
 		server.utility  &0.0 - 0.7 &0.0 - 0.5 &0.5\\
 		\hline
-		Numero di figli diretti &0 - 4 &0 - 2 &min0 max8* **\\
+		\textbf{Grado di accoppiamento afferente per package} & & &\\
+		client.model.utility &0-7 &0-39 &5\\
+		client.model.celltypes &0-7 &0-39 &4\\
+		client.model &0-7 &0-39 &2\\
+		client.view &0-7 &0-39 &4\\
+		server.controller &0-7 &0-39 &4\\
+		server.parser  &0-7 &0-39 &1\\
+		server.generator.java  &0-7 &0-39 &1\\
+		server.generator &0-7 &0-39 &2\\
+		server.stereotype  &0-7 &0-39 &1\\
+		server.project  &0-7 &0-39 &4\\
+		server.template.java  &0-7 &0-39 &1\\
+		server.template  &0-7 &0-39 &14\\
+		server.compiler.java  &0-7 &0-39 &1\\
+		server.compiler  &0-7 &0-39 &1\\
+		server.utility  &0-7 &0-39 &1\\
+		\hline
+		\textbf{Grado di accoppiamento efferente per package} & & &\\
+		client.model.utility &0-6 &0-16 &4\\
+		client.model.celltypes &0-6 &0-16 &3\\
+		client.model &0-6 &0-16 &5\\
+		client.view &0-6 &0-16 &2\\
+		server.controller &0-6 &0-16 &6\\
+		server.parser &0-6 &0-16 &10\\
+		server.generator.java &0-6 &0-16 &3\\
+		server.generator &0-6 &0-16 &5\\
+		server.stereotype &0-6 &0-16 &2\\
+		server.project &0-6 &0-16 &10\\
+		server.template.java &0-6 &0-16 &2\\
+		server.template &0-6 &0-16 &3\\
+		server.compiler.java &0-6 &0-16 &2\\
+		server.compiler &0-6 &0-16 &4\\
+		server.utility &0-6 &0-16 &1\\
+		\hline
+		\textbf{Instabilità} & & &\\
+		client.model.utility &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.5\\
+		client.model.celltypes &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.33\\
+		client.model &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.22\\
+		client.view &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &1\\
+		server.controller &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.6\\
+		server.parser &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.9\\
+		server.generator.java &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.75\\
+		server.generator &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.71\\
+		server.stereotype &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.66\\
+		server.project &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.71\\
+		server.template.java &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.66\\
+		server.template &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.17\\
+		server.compiler.java &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.66\\
+		server.compiler &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.8\\
+		server.utility &0.0-0.3,0.7-1.0 &0.0-0.4,0.6-1.0 &0.5\\
+		\hline
+		\textbf{Numero di campi dati per classe} & & &\\
+		Classi client &0-10 &0-20 &min0 max7*\\
+		Classi server &0-10 &0-20 &min0 max7*\\
+		\hline
+		\textbf{Numero di figli diretti} & & &\\
+		Classi client &0 - 4 &0 - 2 &min0 max7* **\\
+		Classi server &0 - 4 &0 - 2 &min0 max8* **\\
+		\hline
+		\textbf{Numero di metodi per classe} & & &\\
+		Classi client &0-10 &0-20 &min0 max11*\\
+		Classi server &0-10 &0-20 &min1 max10*\\
 		\hline
 		\textbf{Numero di tipi per package} & & &\\
-		client.model.utility &0 - 30 &0 - 20 &6\\
-		client.model.celltypes &0 - 30 &0 - 20 &17\\
-		client.model &0 - 30 &0 - 20 &3\\
-		client.collection &0 - 30 &0 - 20 &1\\
-		client.view &0 - 30 &0 - 20 &4\\
-		server.controller &0 - 30 &0 - 20 &1\\
-		server.parser &0 - 30 &0 - 20 &1\\
-		server.generator.java &0 - 30 &0 - 20 &1\\
-		server.generator &0 - 30 &0 - 20 &2\\
-		server.stereotype &0 - 30 &0 - 20 &1\\
-		server.project &0 - 30 &0 - 20 &16\\
-		server.template.java &0 - 30 &0 - 20 &1\\
-		server.template &0 - 30 &0 - 20 &2\\
-		server.compiler.java &0 - 30 &0 - 20 &1\\
-		server.compiler &0 - 30 &0 - 20 &2\\
-		server.utility &0 - 30 &0 - 20 &1\\
+		client.model.utility &0-20 &0-30 &5\\
+		client.model.celltypes &0-20 &0-30 &9\\
+		client.model &0-20 &0-30 &31***\\
+		client.view &0-20 &0-30 &4\\
+		server.controller &0-20 &0-30 &1\\
+		server.parser &0-20 &0-30 &1\\
+		server.generator.java &0-20 &0-30 &1\\
+		server.generator &0-20 &0-30 &2\\
+		server.stereotype &0-20 &0-30 &1\\
+		server.project &0-20 &0-30 &16\\
+		server.template.java &0-20 &0-30 &1\\
+		server.template &0-20 &0-30 &2\\
+		server.compiler.java &0-20 &0-30 &1\\
+		server.compiler &0-20 &0-30 &2\\
+		server.utility &0-20 &0-30 &1\\
 		\hline
-		Profondità della gerarchia &0 - 4 &1 - 2 &min 0 max 2*\\
+		\textbf{Profondità della gerarchia} & & &\\
+		Classi client &0 - 4 &1 - 2 &min 0 max 2*\\
+		Classi server &0 - 4 &1 - 2 &min 0 max 1*\\
 		\hline
+		Numero violazioni della completezza architetturale di alta importanza &0 &0 &\\
+		\hline
+		Numero violazioni della completezza architetturale di media importanza &0-5 &0 &\\
+		\hline
+		Numero violazioni della completezza architetturale di bassa importanza &0-10 &0 &\\
+		\hline
+		Numero violazioni della correttezza architetturale di alta importanza &0 &0 &\\
+		\hline
+		Numero violazioni della correttezza architetturale di media importanza &0-5 &0 &\\
+		\hline
+		Numero violazioni della correttezza architetturale di bassa importanza &0-10 &0 &\\
+		\hline
+		Numero violazioni dello stile architetturale di alta importanza &0 &0 &\\
+		\hline
+		Numero violazioni dello stile architetturale di media importanza &0-5 &0 &\\
+		\hline
+		Numero violazioni dello stile architetturale di bassa importanza &0-10 &0 &\\
+		\hline
+		Profondita della gerarchia &0-4 &0 &\\
+		
 		\caption{Esiti del calcolo delle metriche relative all'architettura}
 		\end{longtable}
 	* abbiamo deciso di specificare solamente i valori massimi e minimi della metrica per evitare di creare tabelle troppo prolisse e poco leggibili, a fronte di un contenuto equivalente a quello proposto.
 	
-	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe ActivityDiagramElement.
+	** le uniche due classi che hanno un numero di figli diretti al di fuori del range d'accettazione sono le classi ActivityDiagramElement e ParsedInstruction.
+	
+	*** l'unico package contenente un numero di tipi al di fuori del range di accetazione è il package client.model.
 	
 		\subsection{System Qualification Testing Process \& Software Qualification Testing Process}
 		Per verificare l'osservanza degli obiettivi di qualità riguardanti la produzione di unità software eseguibili, sono stati calcolati i valori delle seguenti metriche.
