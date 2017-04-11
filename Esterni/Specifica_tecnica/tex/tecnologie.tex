@@ -22,73 +22,68 @@ La libreria sfrutta le seguenti tecnologie per il suo funzionamento:
 	\end{itemize}
 \end{itemize}
 
-% È reperibile un \emph{plug-in} di \jointjs{} che sarà sfruttato per realizzare diagrammi UML. Tale \emph{plug-in} offre delle forme geometriche e delle frecce che ci servono per il disegno del diagramma delle classi e dei diagrammi a blocchi di ogni metodo.
-
 L'appendice \ref{sec:app_jointjs} riporta un approfondimento su \jointjs.
+
 
 \subsubsection{\backbonejs}
 La libreria \backbonejs{} permette di strutturare applicazioni web single page (\gloss{SPA}) fornendo \textbf{modelli} con binding di chiave-valore, eventi, \textbf{collezioni} e \textbf{viste} con una gestione degli eventi dichiarativa. Essa offre inoltre una interfaccia \gloss{RESTful}.
 
-A causa della struttura data alla libreria \jointjs{}, sviluppata tramite MVC, al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà il lato client di \proj{} estendendo le funzionalità di base offerte da \jointjs{} usando il modello MVC offerto da \backbonejs.
+La struttura di \jointjs{} \`e sviluppata tramite il modello MVC offerto da \backbonejs. Al fine di ridurre il numero di librerie necessarie allo sviluppo del progetto, si costruirà il \emph{front end} di \proj{} estendendo le funzionalità di base offerte da \jointjs{}, per avvalerci cos\`i della struttura MVC di \backbonejs.
 
-Tra i pro di \backbonejs{}:
+Alcuni pro di \backbonejs{} sono i seguenti:
 \begin{itemize}
 	\item permette una facile implementazione lato client del pattern architetturale MVC;
-	\item semplice, flessibile e con un gran numero di plug-in ed estensioni disponibili;
-	\item fornisce un modello di ereditarietà semplice, ma allo stesso tempo potente basato su metodo emph{extend}.
+	\item \`e semplice, flessibile e offre un gran numero di plug-in ed estensioni;
+	\item fornisce un modello di ereditarietà semplice ma allo stesso tempo potente, basato sul metodo \texttt{extend()}.
+\end{itemize}
+Tra i contro, invece, citiamo:
+\begin{itemize}
+	\item fare test di unità sulle \emph{View} di \backbonejs{} può essere molto complicato e richiedere una gran quantità di codice di \emph{mock};
+	\item creaz di tag div ridondanti nel codice HTML generato;
+	\item rende difficile la comunicazione con un \emph{back end} non RESTful;
+	\item mancanza di una netta separazione tra \emph{View} e \emph{Controller} nell'interpretazione del pattern MVC che esso propone.
 \end{itemize}
 
-Tra i contro di \backbonejs{}:
-\begin{itemize}
-	\item fare test di unità sulle Views di \backbonejs{} può essere molto complicato e richiedere una gran quantità di codice di mock;
-	\item creazione di tag div ridondanti nel codice HTML generato;
-	\item difficoltà nel comunicare con un back-end non RESTful;
-	\item mancanza di una netta separazione tra View e Controller nell'interpretazione del pattern MVC che esso propone.
-\end{itemize}
 
 \subsubsection{\jquery}
-La libreria \jquery{} è sfruttata da \jointjs{} ed è necessaria per semplificare varie operazioni di basso livello.
+La libreria \jquery{} è sfruttata da \backbonejs{} (e quindi da \jointjs); semplifica varie operazioni di basso livello a livello grafico e di comunicazione asincrona con il server.
 
-I vantaggi più rilevanti sono:
+I vantaggi più rilevanti di \jquery{} sono i seguenti:
 \begin{itemize}
-	\item il grande supporto da parte della community;
-	\item permette di malipolare gli elementi del DOM facilmente;
+	\item grande supporto da parte della \emph{community};
+	\item permette di manipolare facilmente gli elementi del DOM;
 	\item agevola la realizzazione di animazioni elementari;
 	\item presenta un gran numero di plug-in.
 \end{itemize}
-
-Tra i contro dell'utilizzo di \jquery{}:
+Alcuni suoi contro sono:
 \begin{itemize}
-	\item lentezza nelle prestazioni in caso di complesse manipolazioni del DOM e manipolazioni;
-	\item un uso scorretto può portare alla creazione di grandi moli di codice difficile da mantenere;
+	\item lentezza nelle prestazioni, nel caso di complesse manipolazioni del DOM;
+	\item un uso scorretto può portare alla creazione di grandi moli di codice difficile da manutenere.
 \end{itemize} 
+
 
 \subsubsection{\requirejs}
-La libreria \requirejs{} è un loader di moduli e file \js{}. Esso si occuperà principalmente di risolvere dipendenze delle librerie \js{} utilizzate.
+La libreria \requirejs{} è un \emph{loader} di moduli e file \js. Nel nostro prodotto, si occuperà principalmente di risolvere dipendenze delle librerie \js{} utilizzate.
 
-I vantaggi principali:
+I vantaggi principali sono:
 \begin{itemize}
 	\item esplicita le dipendenze tra i diversi moduli;
-	\item caricamento dei moduli asincrono e "su richiesta".
+	\item \`e in grado di caricare i moduli in modo asincrono e ``su richiesta''.
 \end{itemize}
-
-Tra gli svantaggi principali:
+Tra gli svantaggi principali, invece:
 \begin{itemize}
-\item necessità di uno studio approfondito e ragionato prima di un utilizzo efficace;
-\item curva di apprendimento ripida;
-\item complessità maggiore di integrazione con i test; 
+	\item necessità di uno studio approfondito e ragionato prima di un utilizzo efficace;
+	\item curva di apprendimento ripida;
+	\item maggiore complessità di integrazione con i test, rispetto alla semplice inclusione di script con tag HTML. 
 \end{itemize} 
+
 
 \subsubsection{\lodash}
 La libreria \lodash{} fornisce metodi di utilità non offerti da \js{} puro. 
 
 Rispetto alla simile libreria \emph{Underscore}, questa fornisce più performance, più features e miglior documentazione. Essa inoltre è usata da \jointjs.
 
-% \subsubsection{qunit}
-% assertions, test di regressione
 
-% \subsubsection{sinonjs}
-% stubs, mocks, (test spies??)
 
 \subsection{Server}
 
@@ -97,41 +92,41 @@ Il \emph{back end} della nostra applicazione è ospitato su un \gloss{server} Ap
 
 Tomcat fornisce numerosi vantaggi:
 \begin{itemize}
-	\item facile da installare;
-	\item richiede poche impostazione personalizzate per poter esssere pienamente operativo;
-	\item consumo di memoria molto basso rispetto alle applicazioni concorrenti;
-	\item tempo di avvio immediato. 
+	\item \`e facile da installare;
+	\item richiede poche impostazioni personalizzate per poter esssere pienamente operativo;
+	\item comporta un consumo di memoria molto basso rispetto ad applicazioni simili.
 \end{itemize}
+Allo stesso tempo, manca della funzionalità che permette il recupero automatico delle funzionalità in caso di \emph{failure}.
 
-Allo stesso tempo manca della funzionalità che permette il recupero automatico delle funzionalità in caso di \emph{failure}.
 
 \subsubsection{Spring Boot}
 Le richieste HTTP inviate dal client al server vengono gestite tramite la libreria open-source \emph{Spring Boot} (disponibile all'indirizzo \url{spring.io}), utile per aderire ai princìpi dello stile architetturale REST.
 
 La scelta di Spring è stata guidata dalle seguenti caratteristiche proprie di questa libreria:
 \begin{itemize}
-	\item modulare: rende possibile integrare solo alcuni moduli all'interno del progetto;
-	\item integrabile: rende facile l'utilizzazione di altri framework oper source;
-	\item testabile: permette di scrivere software facile da testare.
+	\item \`e modulare: rende possibile integrare solo alcuni moduli all'interno del progetto;
+	\item \`e integrabile: rende facile l'utilizzazione di altri framework oper source;
+	\item \`e testabile: permette di scrivere software facile da testare.
 \end{itemize}
-
-Tuttavia Spring possiede vari difetti:
+Tuttavia Spring possiede alcuni difetti:
 \begin{itemize}
-	\item pesantezza: l'ambiente di Spring è tutt'altro che leggero;
-	\item complessità: sviluppare in Spring presenta una curva di apprendimento ripida;
+	\item \`e pesante: l'ambiente di Spring è tutt'altro che leggero;
+	\item \`e complesso: sviluppare in Spring presenta una curva di apprendimento ripida;
 \end{itemize}
 
-In particolare la libreria derivata chiamata Spring Boot è stata preferita per le seguenti caratteristiche:
+In particolare, abbiamo preferito la libreria derivata ``Spring Boot'' per le seguenti caratteristiche:
 \begin{itemize}
 	\item semplicità: l'ambiente di Spring Boot fornisce una suite preconfezionata e preconfigurata \emph{out-of-the-box}, in modo da semplificare l'attività di codifica;
 	\item (relativa) leggerezza: rispetto all'ambiente di Spring, Spring Boot risulta sensibilmente più leggero.
 	% \item altro?
 \end{itemize}
 
-L'utilizzo di questa tecnologia rispetto a \emph{Spring} secondo il team è preferibile e valutata positivamente dopo un breve periodo di prova di entrambe le tecnologie.
+Secondo noi l'utilizzo di questa tecnologia, rispetto a \emph{Spring}, è preferibile e l'abbiamo valutata positivamente dopo un breve periodo di prova di entrambe le tecnologie.
 
-Si rimanda all'appendice %\ref{sec:app_spring}
-per ulteriori considerazioni sull'uso di Spring Boot nella nostra applicazione. Futuri riferimenti alla libreria Spring dovranno essere considerati come riferiti alla libreria Spring Boot, qualora non diversamente specificato.
+% Si rimanda all'appendice %\ref{sec:app_spring}
+% per ulteriori considerazioni sull'uso di Spring Boot nella nostra applicazione.
+Futuri riferimenti alla libreria Spring dovranno essere considerati come riferiti alla libreria Spring Boot, qualora non diversamente specificato.
+
 
 \subsubsection{StringTemplate}
 StringTemplate è una libreria open-source scritta da Terence Parr e disponibile all'indirizzo \url{stringtemplate.org}. Come indicato sul sito ufficiale, questa libreria è particolarmente adatta alla generazione di codice. 
@@ -143,23 +138,20 @@ Essa viene utilizzata per:
 \end{itemize}
 I marcatori definiti dalla libreria servono da segnaposto per ospitare i dati ottenuti analizzando il documento JSON generato dal client.
 
-Le principali feature utili al progetto sono per esempio le seguenti:
-
+Le principali funzionalit\`a utili al progetto sono per esempio le seguenti:
 \begin{itemize}
-\item espressioni semplici, espressioni condizionali;
-\item template anonimi;
-\item funzioni;
-\item valutazione lazy;
-\item auto-indentazione;
-\item iteratori;
+	\item espressioni semplici, espressioni condizionali;
+	\item template anonimi;
+	\item funzioni;
+	\item valutazione lazy;
+	\item auto-indentazione;
+	\item iteratori;
 \end{itemize}
 
 Molto importante è notare la filosofia sfruttata dalla libreria (consultabile al seguente indirizzo: \url{https://github.com/antlr/stringtemplate4/blob/master/doc/motivation.md}): StringTemplate, non permettendo certe operazioni come assegnazioni rende questo sistema di templating privo di \emph{side-effects}. Malgrado questo può portare a rendere la soluzione finale più complessa da sviluppare, ciò porta molti vantaggi:
-
 \begin{itemize}
-\item si favorisce il riuso di componenti;
-\item i template sono sostituibili più facilmente;
-\item i template sono più facilmente testabili;
-\item la parte del linguaggio specifico viene isolata totalmente dalla logica di gestione del template, astratta per ogni linguaggio. 
+	\item si favorisce il riuso di componenti;
+	\item i template sono sostituibili più facilmente;
+	\item i template sono più facilmente testabili;
+	\item la parte del linguaggio specifico viene isolata totalmente dalla logica di gestione del template, astratta per ogni linguaggio. 
 \end{itemize}
-
