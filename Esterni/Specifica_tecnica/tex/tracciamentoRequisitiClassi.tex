@@ -1,208 +1,157 @@
-\subsection{Tracciamento requisiti-classi}
+\subsection{Tracciamento Requisiti-Classi}
 \normalsize
 \begin{longtable}{|>{\centering}m{3cm}|m{10cm}<{\centering}|}
 \hline 
 \textbf{Requisito} & \textbf{Classi}\\
 \hline
 \endhead
-RFO1 & \hyperref[\nogloxy{SWEDesigner::Client::Model::Utility::ProjectLoader}]{\nogloxy{\texttt{SWEDesigner::Client::Model::Utility::-\linebreak ProjectLoader}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::AppView}]{\nogloxy{\texttt{SWEDesigner::Client::View::AppView}}}\\ \hline
+RFO1 & \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{swedesigner::client::view::AppView}}}\\ \hline
 
-RFO1.1 & \hyperref[\nogloxy{SWEDesigner::Client::Model::ProjectModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak ProjectModel}}}\\ \hline
+RFO1.1 & \hyperref[\nogloxy{swedesigner::client::model::ProjectModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak ProjectModel}}}\\ \hline
 
-RFO2 & \hyperref[\nogloxy{SWEDesigner::Client::Model::ProjectCommand}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak ProjectCommand}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::Utility::ProjectInitializer}]{\nogloxy{\texttt{SWEDesigner::Client::Model::Utility::-\linebreak ProjectInitializer}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::AppView}]{\nogloxy{\texttt{SWEDesigner::Client::View::AppView}}}\\ \hline
+RFO2 & \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak ProjectCommand}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{swedesigner::client::view::AppView}}}\\ \hline
 
-RFO3 & \hyperref[\nogloxy{SWEDesigner::Client::Collection::DiagramCollection}]{\nogloxy{\texttt{SWEDesigner::Client::Collection::-\linebreak DiagramCollection}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramElement}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramElement}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::ProjectModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak ProjectModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::AppView}]{\nogloxy{\texttt{SWEDesigner::Client::View::AppView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::ProjectView}]{\nogloxy{\texttt{SWEDesigner::Client::View::ProjectView}}}\\ \hline
+RFO3 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramElement}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramLink}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramLink}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::ProjectModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak ProjectModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{swedesigner::client::view::AppView}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::ProjectView}]{\nogloxy{\texttt{swedesigner::client::view::ProjectView}}}\\ \hline
 
-RFO3.1 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxAbstractClass}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxAbstractClass}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxClass}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxClass}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxInterface}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxInterface}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO3.1 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxClass}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxClass}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFO3.1.3 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxStereotype}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxStereotype}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::Utility::ProjectStereotypes}]{\nogloxy{\texttt{SWEDesigner::Client::Model::Utility::-\linebreak ProjectStereotypes}}}\\ \hline
+RFO3.2.6 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::HxStereotype}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak HxStereotype}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::utility::ProjectStereotypes}]{\nogloxy{\texttt{swedesigner::client::model::utility::-\linebreak ProjectStereotypes}}}\\ \hline
 
-RFO3.1.4.6.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO3.3 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxInterface}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxInterface}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFO3.1.6.3.3.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO3.4 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramLink}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramLink}}}\\ \hline
 
-RFO3.1.6.5.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO3.5 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxAssociation}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxAssociation}}}\\ \hline
 
-RFO3.1.8.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO3.5.1 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxAssociation}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxAssociation}}}\\ \hline
 
-RFO3.2 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::GeneralizationCell}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak GeneralizationCell}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ImplementationCell}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ImplementationCell}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO3.5.2 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxAssociation}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxAssociation}}}\\ \hline
 
-RFO3.2.1 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\ \hline
+RFO3.6 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxGeneralization}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxGeneralization}}}\\ \hline
 
-RFO3.2.2 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\ \hline
+RFD3.7 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxImplementation}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxImplementation}}}\\ \hline
 
-RFO3.2.3 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\ \hline
+RFD3.8 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramElement}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::HxComment}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::HxComment}}}\\ \hline
 
-RFO3.2.4 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\ \hline
+RFD3.9 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::class::ClassDiagramElement}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramElement}}}\\ \hline
 
-RFO3.2.5 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\ \hline
+RFO3.12 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.2.6 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\ \hline
+RFO3.13 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.2.6.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO3.14 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.2.7 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramLink}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramLink}}}\\ \hline
+RFO3.15 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.3 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxAnnotation}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxAnnotation}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO3.18 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.3.3.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO4 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::ActivityDiagramElement}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::ProjectModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak ProjectModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{swedesigner::client::view::AppView}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::ProjectView}]{\nogloxy{\texttt{swedesigner::client::view::ProjectView}}}\\ \hline
 
-RFO3.4 & \hyperref[\nogloxy{SWEDesigner::Client::Collection::DiagramCollection}]{\nogloxy{\texttt{SWEDesigner::Client::Collection::-\linebreak DiagramCollection}}}\\ \hline
+RFO4.1 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxVariable}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::HxVariable}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFO3.5 & \hyperref[\nogloxy{SWEDesigner::Client::Collection::DiagramCollection}]{\nogloxy{\texttt{SWEDesigner::Client::Collection::-\linebreak DiagramCollection}}}\\ \hline
+RFO4.2 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxIf}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::HxIf}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFO3.6 & \hyperref[\nogloxy{SWEDesigner::Client::Collection::DiagramCollection}]{\nogloxy{\texttt{SWEDesigner::Client::Collection::-\linebreak DiagramCollection}}}\\ \hline
+RFO4.3 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxElse}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::HxElse}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFD3.7 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramElement}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramElement}}}\\ \hline
+RFO4.4 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxWhile}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::HxWhile}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFD3.8 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramElement}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramElement}}}\\ \hline
+RFO4.5 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxFor}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::HxFor}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFD3.9 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramElement}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramElement}}}\\ \hline
+RFO4.6 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxCustom}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::HxCustom}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellFactory}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellFactory}}}\\
+& \hyperref[\nogloxy{swedesigner::client::model::NewCellModel}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak NewCellModel}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::NewCellView}]{\nogloxy{\texttt{swedesigner::client::view::NewCellView}}}\\ \hline
 
-RFD3.10 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ClassDiagramElement}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ClassDiagramElement}}}\\ \hline
+RFO4.27 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.11 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO4.28 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.12 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO4.29 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO3.13 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO4.30 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO4 & \hyperref[\nogloxy{SWEDesigner::Client::Collection::DiagramCollection}]{\nogloxy{\texttt{SWEDesigner::Client::Collection::-\linebreak DiagramCollection}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::ActivityDiagramElement}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak ActivityDiagramElement}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::ProjectModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak ProjectModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::AppView}]{\nogloxy{\texttt{SWEDesigner::Client::View::AppView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::ProjectView}]{\nogloxy{\texttt{SWEDesigner::Client::View::ProjectView}}}\\ \hline
+RFO4.31 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO4.1 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxAssignment}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxAssignment}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxInitialization}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxInitialization}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO4.32 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO4.1.4.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO4.33 & \hyperref[\nogloxy{swedesigner::client::model::celltypes::activity::HxReturn}]{\nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::HxReturn}}}\\ \hline
 
-RFO4.2 & \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO4.34 & \hyperref[\nogloxy{swedesigner::client::view::DetailsView}]{\nogloxy{\texttt{swedesigner::client::view::DetailsView}}}\\ \hline
 
-RFO4.2.3.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO5 & \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak ProjectCommand}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{swedesigner::client::view::AppView}}}\\ \hline
 
-RFO4.3 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxIf}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxIf}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO6 & \hyperref[\nogloxy{swedesigner::client::model::ProjectCommand}]{\nogloxy{\texttt{swedesigner::client::model::-\linebreak ProjectCommand}}}\\
+& \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{swedesigner::client::view::AppView}}}\\ \hline
 
-RFO4.3.5.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO6.1 & \hyperref[\nogloxy{swedesigner::server::project::ParsedException}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedException}}}\\ \hline
 
-RFO4.4 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxWhile}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxWhile}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO7 & \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{swedesigner::server::controller::-\linebreak RequestHandlerController}}}\\ \hline
 
-RFO4.4.4.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO8 & \hyperref[\nogloxy{swedesigner::server::Application}]{\nogloxy{\texttt{swedesigner::server::Application}}}\\
+& \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{swedesigner::server::controller::-\linebreak RequestHandlerController}}}\\ \hline
 
-RFO4.5 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxFor}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxFor}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO8.1 & \hyperref[\nogloxy{swedesigner::server::parser::Parser}]{\nogloxy{\texttt{swedesigner::server::parser::Parser}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedAttribute}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedAttribute}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedClass}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedClass}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedCustom}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedCustom}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedElement}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedElement}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedElse}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedElse}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedFor}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedFor}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedIf}]{\nogloxy{\texttt{swedesigner::server::project::ParsedIf}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedInstruction}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedInstruction}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedInterface}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedInterface}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedMethod}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedMethod}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedProgram}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedProgram}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedReturn}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedReturn}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedStatement}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedStatement}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedType}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedType}}}\\
+& \hyperref[\nogloxy{swedesigner::server::project::ParsedWhile}]{\nogloxy{\texttt{swedesigner::server::project::-\linebreak ParsedWhile}}}\\ \hline
 
-RFO4.5.6.1 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO8.2 & \hyperref[\nogloxy{swedesigner::server::generator::Generator}]{\nogloxy{\texttt{swedesigner::server::generator::-\linebreak Generator}}}\\
+& \hyperref[\nogloxy{swedesigner::server::generator::java::JavaGenerator}]{\nogloxy{\texttt{swedesigner::server::generator::java::-\linebreak JavaGenerator}}}\\
+& \hyperref[\nogloxy{swedesigner::server::template::java::JavaTemplate}]{\nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate}}}\\
+& \hyperref[\nogloxy{swedesigner::server::template::Template}]{\nogloxy{\texttt{swedesigner::server::template::-\linebreak Template}}}\\ \hline
 
-RFO4.6 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxCustom}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxCustom}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellFactory}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellFactory}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::NewCellModel}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak NewCellModel}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
+RFO9 & \hyperref[\nogloxy{swedesigner::server::compiler::Compiler}]{\nogloxy{\texttt{swedesigner::server::compiler::-\linebreak Compiler}}}\\
+& \hyperref[\nogloxy{swedesigner::server::compiler::java::JavaCompiler}]{\nogloxy{\texttt{swedesigner::server::compiler::java::-\linebreak JavaCompiler}}}\\
+& \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{swedesigner::server::controller::-\linebreak RequestHandlerController}}}\\ \hline
 
-RFO4.20 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
+RFO10 & \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{swedesigner::server::controller::-\linebreak RequestHandlerController}}}\\
+& \hyperref[\nogloxy{swedesigner::server::utility::Compressor}]{\nogloxy{\texttt{swedesigner::server::utility::-\linebreak Compressor}}}\\ \hline
 
-RFO4.21 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
-
-RFO4.22 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
-
-RFO4.23 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
-
-RFO4.24 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
-
-RFO4.25 & \hyperref[\nogloxy{SWEDesigner::Client::View::DetailsView}]{\nogloxy{\texttt{SWEDesigner::Client::View::DetailsView}}}\\ \hline
-
-RFO4.26 & \hyperref[\nogloxy{SWEDesigner::Client::Model::CellTypes::HxReturn}]{\nogloxy{\texttt{SWEDesigner::Client::Model::CellTypes::-\linebreak HxReturn}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::NewCellView}]{\nogloxy{\texttt{SWEDesigner::Client::View::NewCellView}}}\\ \hline
-
-RFO5 & \hyperref[\nogloxy{SWEDesigner::Client::Model::ProjectCommand}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak ProjectCommand}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::Utility::ProjectSaver}]{\nogloxy{\texttt{SWEDesigner::Client::Model::Utility::-\linebreak ProjectSaver}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::AppView}]{\nogloxy{\texttt{SWEDesigner::Client::View::AppView}}}\\ \hline
-
-RFO6 & \hyperref[\nogloxy{SWEDesigner::Client::Model::ProjectCommand}]{\nogloxy{\texttt{SWEDesigner::Client::Model::-\linebreak ProjectCommand}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::Model::Utility::ProjectGenerator}]{\nogloxy{\texttt{SWEDesigner::Client::Model::Utility::-\linebreak ProjectGenerator}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Client::View::AppView}]{\nogloxy{\texttt{SWEDesigner::Client::View::AppView}}}\\ \hline
-
-RFO7 & \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{SWEDesigner::Server::Controller::-\linebreak RequestHandlerController}}}\\ \hline
-
-RFO8 & \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{SWEDesigner::Server::Controller::-\linebreak RequestHandlerController}}}\\ \hline
-
-RFO8.1 & \hyperref[\nogloxy{SWEDesigner::Server::Parser::Parser}]{\nogloxy{\texttt{SWEDesigner::Server::Parser::Parser}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedAssignment}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedAssignment}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedAttribute}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedAttribute}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedClass}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedClass}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedCustom}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedCustom}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedElement}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedElement}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedFor}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedFor}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedIf}]{\nogloxy{\texttt{SWEDesigner::Server::Project::ParsedIf}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInitialize}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedInitialize}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInstruction}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedInstruction}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedInterface}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedInterface}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedMethod}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedMethod}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedProgram}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedProgram}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedReturn}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedReturn}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedType}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedType}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Project::ParsedWhile}]{\nogloxy{\texttt{SWEDesigner::Server::Project::-\linebreak ParsedWhile}}}\\ \hline
-
-RFO8.2 & \hyperref[\nogloxy{SWEDesigner::Server::Generator::Generator}]{\nogloxy{\texttt{SWEDesigner::Server::Generator::-\linebreak Generator}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Generator::GeneratorAssembler}]{\nogloxy{\texttt{SWEDesigner::Server::Generator::-\linebreak GeneratorAssembler}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Generator::Java::JavaGenerator}]{\nogloxy{\texttt{SWEDesigner::Server::Generator::Java::-\linebreak JavaGenerator}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Template::Java::JavaTemplate}]{\nogloxy{\texttt{SWEDesigner::Server::Template::Java::-\linebreak JavaTemplate}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Template::Template}]{\nogloxy{\texttt{SWEDesigner::Server::Template::-\linebreak Template}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Template::TemplateAssembler}]{\nogloxy{\texttt{SWEDesigner::Server::Template::-\linebreak TemplateAssembler}}}\\ \hline
-
-RFO9 & \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Compiler}]{\nogloxy{\texttt{SWEDesigner::Server::Compiler::-\linebreak Compiler}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Compiler::CompilerAssembler}]{\nogloxy{\texttt{SWEDesigner::Server::Compiler::-\linebreak CompilerAssembler}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Compiler::Java::JavaCompiler}]{\nogloxy{\texttt{SWEDesigner::Server::Compiler::Java::-\linebreak JavaCompiler}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{SWEDesigner::Server::Controller::-\linebreak RequestHandlerController}}}\\ \hline
-
-RFO10 & \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{SWEDesigner::Server::Controller::-\linebreak RequestHandlerController}}}\\
-& \hyperref[\nogloxy{SWEDesigner::Server::Utility::Compressor}]{\nogloxy{\texttt{SWEDesigner::Server::Utility::-\linebreak Compressor}}}\\ \hline
-
-RFO11 & \hyperref[\nogloxy{SWEDesigner::Server::Controller::RequestHandlerController}]{\nogloxy{\texttt{SWEDesigner::Server::Controller::-\linebreak RequestHandlerController}}}\\ \hline
+RFO11 & \hyperref[\nogloxy{swedesigner::server::controller::RequestHandlerController}]{\nogloxy{\texttt{swedesigner::server::controller::-\linebreak RequestHandlerController}}}\\ \hline
 
 \caption[Tracciamento Requisiti-Classi]{Tracciamento Requisiti-Classi}
 \label{tabella:requi-class}
