@@ -3,7 +3,7 @@
 
 \input{../../util/hx-ambiente}
 
-\version{1.0.0}
+\version{2.0.0}
 \creaz{15 febbraio 2017}
 \author{\ALL}
 \supervisor{\MM}
@@ -15,14 +15,6 @@
 \newcommand{\nogloxy}[1]{#1}
 \newcommand{\subsubsubsection}[1]{\paragraph{#1}}
 \newcommand{\textt}[1]{\texttt{#1}}
-
-% Elenco dei design pattern utilizzati in un documento:
-% \newcommand{\listpatternname}{Elenco dei \emph{design pattern}}
-% \newlistof{pattern}{pat}{\listpatternname}
-% \newcommand{\pattern}[1]{%
-% \refstepcounter{pattern}
-% \emph{#1}
-% \addcontentsline{pat}{pattern}{\protect\numberline{\thepattern}#1}}
 
 \begin{document}
 \maketitle
@@ -51,10 +43,10 @@
 % ---> distinguere STRUTTURA (classi) da COMPORTAMENTO (procedure)?
 % - diagrammi delle classi
 % - se serve, qualche diagramma di attività/sequenza
-\section{Classi e componenti del \emph{front end}}
+\section{Componenti del \emph{front end}} \label{sec:frontend}
 \input{tex/packageClassiST-FE}
 
-\section{Classi e componenti del \emph{back end}}
+\section{Componenti del \emph{back end}} \label{sec:backend}
 \input{tex/packageClassiST-BE}
 
 % JSON, client-server... ???
