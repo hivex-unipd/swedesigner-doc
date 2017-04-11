@@ -129,6 +129,6 @@ L'imlpementazione di questo pattern segue le linee guida descritte da Addy Osman
 Il pattern Observer è utilizzato per permettere alle classi di rimanere in ascolto di eventi scatenati da altre classi e di conseguenza richiamare i propri metodi.
 L'implementazione di questo pattern è fornita da \emph{Backbone} che mette a dispozione di chi estende modelli e viste di esso i metodi \emph{trigger} e \emph{listenTo}. Oltre all'utilizzo base di ogni view che resta in ascolto di cambiamenti dei valori del proprio model e quindi l'esecuzione del metodo render di esse viene sfruttato anche ad esempio da \texttt{ProjectView} che notifica \texttt{DetailsView} che l'utente ha selzionato una cella del diagramma, permettendo quindi a \texttt{DetailsView} di visualizzare all'utente le proprietà specifiche di quella cella.
 \begin{figure}[H] \label{fig:observer}
-	\includegraphics[scale=0.6]{img/observerExample.png}
+	\includegraphics[scale=0.45]{img/observerExample.png}
 	\caption{Observer.}
 \end{figure}
