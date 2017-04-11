@@ -2628,25 +2628,27 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		Classi client &0 - 4 &1 - 2 &min 0 max 2*\\
 		Classi server &0 - 4 &1 - 2 &min 0 max 1*\\
 		\hline
-		Numero violazioni della completezza architetturale di alta importanza &0 &0 &\\
+		Numero violazioni della completezza architetturale di alta importanza &0 &0 &0\\
 		\hline
-		Numero violazioni della completezza architetturale di media importanza &0-5 &0 &\\
+		Numero violazioni della completezza architetturale di media importanza &0-5 &0 &0\\
 		\hline
-		Numero violazioni della completezza architetturale di bassa importanza &0-10 &0 &\\
+		Numero violazioni della completezza architetturale di bassa importanza &0-10 &0 &0\\
 		\hline
-		Numero violazioni della correttezza architetturale di alta importanza &0 &0 &\\
+		Numero violazioni della correttezza architetturale di alta importanza &0 &0 &3\\
 		\hline
-		Numero violazioni della correttezza architetturale di media importanza &0-5 &0 &\\
+		Numero violazioni della correttezza architetturale di media importanza &0-5 &0 &0\\
 		\hline
-		Numero violazioni della correttezza architetturale di bassa importanza &0-10 &0 &\\
+		Numero violazioni della correttezza architetturale di bassa importanza &0-10 &0 &0\\
 		\hline
-		Numero violazioni dello stile architetturale di alta importanza &0 &0 &\\
+		Numero violazioni dello stile architetturale di alta importanza &0 &0 &0\\
 		\hline
-		Numero violazioni dello stile architetturale di media importanza &0-5 &0 &\\
+		Numero violazioni dello stile architetturale di media importanza &0-5 &0 &3\\
 		\hline
-		Numero violazioni dello stile architetturale di bassa importanza &0-10 &0 &\\
+		Numero violazioni dello stile architetturale di bassa importanza &0-10 &0 &0\\
 		\hline
-		Profondita della gerarchia &0-4 &0 &\\
+		\textbf{Profondità della gerarchia} & & &\\
+		Classi client &0-4 &0 &min0 max2*\\
+		Classi server &0-4 &0 &min0 max1*\\
 		
 		\caption{Esiti del calcolo delle metriche relative all'architettura}
 		\end{longtable}
@@ -2654,7 +2656,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 	
 	** le uniche due classi che hanno un numero di figli diretti al di fuori del range d'accettazione sono le classi ActivityDiagramElement e ParsedInstruction.
 	
-	*** l'unico package contenente un numero di tipi al di fuori del range di accetazione è il package client.model.
+	*** l'unico package contenente un numero di tipi al di fuori del range di accettazione è il package client.model.
 	
 		\subsection{System Qualification Testing Process \& Software Qualification Testing Process}
 		Per verificare l'osservanza degli obiettivi di qualità riguardanti la produzione di unità software eseguibili, sono stati calcolati i valori delle seguenti metriche.
