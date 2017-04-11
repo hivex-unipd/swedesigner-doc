@@ -5,10 +5,10 @@
 \usepackage{float}
 \usepackage{varwidth}
 
-\version{2.0.0}
+\version{3.0.0}
 \creaz{28 dicembre 2016}
-\author{\LS, \AZ}
-\supervisor{\GG}
+\author{\MM}
+\supervisor{\PB}
 \uso{esterno}
 \dest{\TV, \RC, \ZU}
 \title{Piano di Qualifica}
@@ -2123,6 +2123,25 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \hypertarget{TU42}{TU42} & Costruito un JavaTemplate per metodi, questo è in grado di generare una stringa Java contenente la dichiarazione di un metodo. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU43}{TU43} & Costruito un JavaTemplate per istruzioni return, questo è in grado di generare una stringa Java contenente la keyword ``return'' seguita dal valore da ritornare e da un punto e virgola. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU44}{TU44} & Costruito un JavaTemplate per cicli while, questo è in grado di generare una stringa Java contenente la dichiarazione di un ciclo while e il corpo del ciclo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU45}{TU45} & Un Compressor è in grado di eseguire ZIP su un file nel filesystem & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU46}{TU46} & \texttt{AppView.views} è un oggetto. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU47}{TU47} & \texttt{AppView.views.project} è una \texttt{backbone.View}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU48}{TU48} & ProjectView.paper è un joint.dia.Paper & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU49}{TU49} & \texttt{AppView.views.details} è una \texttt{backbone.View}. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU50}{TU50} & \texttt{AppView.views.newCell} è una \texttt{backbone.View}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU51}{TU51} & \texttt{NewCellFactory} è in grado di fornire una \texttt{HxClass}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU52}{TU52} & \texttt{NewCellFactory} è in grado di fornire una \texttt{HxInterface}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU53}{TU53} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxComment}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU54}{TU54} & \texttt{NewCellFactory} è in grado di fornire una \texttt{HxGeneralization}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU55}{TU55} & \texttt{NewCellFactory} è in grado di fornire una \texttt{HxAssociation}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU56}{TU56} & \texttt{NewCellFactory} è in grado di fornire una \texttt{HxImplementation}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU57}{TU57} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxCustom}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU58}{TU58} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxElse}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU59}{TU59} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxFor}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU60}{TU60} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxIf}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU61}{TU61} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxVariable}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU62}{TU62} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxReturn}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU63}{TU63} & \texttt{NewCellFactory} è in grado di fornire un \texttt{HxWhile}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \caption[Test di Unità]{Test di Unità}
 \label{tabella:test3}
 \end{longtable}
@@ -2222,6 +2241,44 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \hyperlink{TU43}{TU43} & \nogloxy{\texttt{swedesigner::server::template::Template::-\linebreak getReturnTemplate()}}\\ \hline
 
 \hyperlink{TU44}{TU44} & \nogloxy{\texttt{swedesigner::server::template::java::-\linebreak JavaTemplate::getWhileTemplate()}}\\ \hline
+
+\hyperlink{TU45}{TU45} & \nogloxy{\texttt{swedesigner::server::utility::Compressor::-\linebreak zip()}}\\ \hline
+
+\hyperlink{TU46}{TU46} & \nogloxy{\texttt{swedesigner::client::view::AppView::-\linebreak initialize()}}\\ \hline
+
+\hyperlink{TU47}{TU47} & \nogloxy{\texttt{swedesigner::client::view::ProjectView::-\linebreak initialize()}}\\ \hline
+
+\hyperlink{TU48}{TU48} & \nogloxy{\texttt{swedesigner::client::view::ProjectView::-\linebreak initialize()}}\\ \hline
+
+\hyperlink{TU49}{TU49} & \nogloxy{\texttt{swedesigner::client::view::DetailsView::-\linebreak initialize()}}\\ \hline
+
+\hyperlink{TU50}{TU50} & \nogloxy{\texttt{swedesigner::client::view::NewCellView::-\linebreak initialize()}}\\ \hline
+
+\hyperlink{TU51}{TU51} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU52}{TU52} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU53}{TU53} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU54}{TU54} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU55}{TU55} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU56}{TU56} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU57}{TU57} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU58}{TU58} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU59}{TU59} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU60}{TU60} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU61}{TU61} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU62}{TU62} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
+
+\hyperlink{TU63}{TU63} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
 
 \caption[Tracciamento Test di Unità-Metodi]{Tracciamento Test di Unità-Metodi}
 \label{tabella:tu-met}

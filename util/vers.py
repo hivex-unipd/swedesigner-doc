@@ -13,7 +13,7 @@ def main():
         ('\\PdQ', 'Piano_di_qualifica'),
         ('\\Glossario', 'Glossario'),
         ('\\ST', 'Specifica_tecnica'),
-        ('\\DdP', 'Definizione_di_'),
+        ('\\DP', 'Definizione_di_'),
         ('\\MU', 'Manuale_')
     ]
     vers = open('hx-vers.sty', 'w')
