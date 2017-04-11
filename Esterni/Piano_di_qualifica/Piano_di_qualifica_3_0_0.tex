@@ -2008,11 +2008,11 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \hypertarget{TU14}{TU14} & Costruita una ParsedClass, l'aggiunta di un supertipo che non sia né classe né interfaccia lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU15}{TU15} & Costruito un ParsedCustom, questo è in grado di generare una stringa contenente la stringa passatagli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU16}{TU16} & Costruito un ParsedElse, questo è in grado di generare una stringa Java contenente la keyword ``else'' e l'insieme di istruzioni passatogli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TU17}{TU17} & Costruito un ParsedFor, questo è in grado di generare una stringa Java contenente ``for(A; B; C)'', dove A, B e C sono risp. l'inizializzazione, la condizione e l'aggiornamento passatigli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TU18}{TU18} & Costruito un ParsedFor, questo è in grado di generare una stringa Java contenente l'insieme di istruzioni passatogli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU17}{TU17} & Costruito un ParsedFor, questo è in grado di generare una stringa Java contenente ``for(A; B; C)'', dove A, B e C sono risp. l'inizializzazione, la condizione e l'aggiornamento passatigli nel costruttore. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
+\hypertarget{TU18}{TU18} & Costruito un ParsedFor, questo è in grado di generare una stringa Java contenente l'insieme di istruzioni passatogli nel costruttore. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
 \hypertarget{TU19}{TU19} & Costruito un ParsedIf, questo è in grado di generare una stringa Java contenente la keyword ``if'' con la condizione e l'insieme di istruzioni passatigli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU20}{TU20} & Costruita una ParsedInterface, questa è in grado di generare una stringa Java contenente la keyword ``interface'' seguita dal nome della ParsedInterface. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TU21}{TU21} & Costruita una ParsedInterface e aggiuntole un attributo finale, statico e pubblico, questa è in grado di generare una stringa Java contenente la dichiarazione dell'attributo aggiunto. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU21}{TU21} & Costruita una ParsedInterface e aggiuntole un attributo finale, statico e pubblico, questa è in grado di generare una stringa Java contenente la dichiarazione dell'attributo aggiunto. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
 \hypertarget{TU22}{TU22} & Costruita una ParsedInterface e aggiuntole un metodo non implementato, questa è in grado di generare una stringa Java contenente la dichiarazione del metodo aggiunto. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU23}{TU23} & Costruita una ParsedInterface e aggiuntole un supertipo, questa è in grado di generare una stringa Java contenente la keyword ``interface'' seguita dal nome della ParsedInterface, poi dalla keyword ``extends'' e infine dal nome del supertipo. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU24}{TU24} & Costruita una ParsedInterface, l'aggiunta di un attributo privato lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
@@ -2023,24 +2023,24 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \hypertarget{TU29}{TU29} & Costruita una ParsedInterface, l'aggiunta di una classe come supertipo lancia una ParsedException. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU30}{TU30} & Costruito un ParsedMethod, questo è in grado di generare una stringa Java contenente la segnatura passatagli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU31}{TU31} & Costruito un ParsedMethod, questo è in grado di generare una stringa Java contenente la sequenza di istruzioni passatagli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TU32}{TU32} & Costruito un ParsedProgram e aggiuntigli dei ParsedType, un JavaGenerator è in grado di generare una stringa Java contenente i tipi aggiunti al ParsedProgram. & \textit{Non Eseguito}\\ \hline
+\hypertarget{TU32}{TU32} & Costruito un ParsedProgram e aggiuntigli dei ParsedType, un JavaGenerator è in grado di generare una stringa Java contenente i tipi aggiunti al ParsedProgram. & \textit{Non Implementato}\\ \hline
 \hypertarget{TU33}{TU33} & Costruito un ParsedReturn, questo è in grado di generare una stringa Java contenente la keyword ``return'' seguita dal valore passatogli nel costruttore e da un punto e virgola. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU34}{TU34} & Costruito un ParsedWhile, questo è in grado di generare una stringa Java contenente la keyword ``while'' seguita dalla condizione e dalla sequenza di istruzioni passategli nel costruttore. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU35}{TU35} & Costruito un JavaTemplate per attributi, questo è in grado di generare una stringa Java contenente la dichiarazione di un attributo. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU36}{TU36} & Costruito un JavaTemplate per classi, questo è in grado di generare una stringa Java contenente la dichiarazione di una classe. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU37}{TU37} & Costruito un JavaTemplate per rami else, questo è in grado di generare una stringa Java contenente la keyword ``else'' e il corpo del ramo else. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TU38}{TU38} & Costruito un JavaTemplate per cicli for, questo è in grado di generare una stringa Java contenente la dichiarazione di un ciclo for e il corpo del ciclo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU38}{TU38} & Costruito un JavaTemplate per cicli for, questo è in grado di generare una stringa Java contenente la dichiarazione di un ciclo for e il corpo del ciclo. & \textcolor{Red}{\textit{Non Superato}}\\ \hline
 \hypertarget{TU39}{TU39} & Costruito un JavaTemplate per blocchi if, questo è in grado di generare una stringa Java contenente la dichiarazione di un blocco if e il corpo del blocco. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU40}{TU40} & Costruito un JavaTemplate per istruzioni, questo è in grado di generare una stringa Java corrispondente a un'istruzione. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU41}{TU41} & Costruito un JavaTemplate per interfacce, questo è in grado di generare una stringa Java contenente la dichiarazione di un'interfaccia. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU42}{TU42} & Costruito un JavaTemplate per metodi, questo è in grado di generare una stringa Java contenente la dichiarazione di un metodo. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU43}{TU43} & Costruito un JavaTemplate per istruzioni return, questo è in grado di generare una stringa Java contenente la keyword ``return'' seguita dal valore da ritornare e da un punto e virgola. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU44}{TU44} & Costruito un JavaTemplate per cicli while, questo è in grado di generare una stringa Java contenente la dichiarazione di un ciclo while e il corpo del ciclo. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TU45}{TU45} & Un Compressor è in grado di eseguire ZIP su un file nel filesystem & \textcolor{Red}{\textit{Non Superato}}\\ \hline
+\hypertarget{TU45}{TU45} & Un Compressor è in grado di eseguire ZIP su un file nel filesystem & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU46}{TU46} & \texttt{AppView.views} è un oggetto. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU47}{TU47} & \texttt{AppView.views.project} è una \texttt{backbone.View}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU48}{TU48} & ProjectView.paper è un joint.dia.Paper & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TU49}{TU49} & \texttt{AppView.views.details} è una \texttt{backbone.View}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU49}{TU49} & \texttt{AppView.views.details} è una \texttt{backbone.View}. & \textit{Non Implementato}\\ \hline
 \hypertarget{TU50}{TU50} & \texttt{AppView.views.newCell} è una \texttt{backbone.View}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU51}{TU51} & \texttt{NewCellFactory} è in grado di fornire una \texttt{HxClass}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU52}{TU52} & \texttt{NewCellFactory} è in grado di fornire una \texttt{HxInterface}. & \textcolor{Green}{\textit{Superato}}\\ \hline
@@ -2059,7 +2059,6 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \label{tabella:test3}
 \end{longtable}
 \clearpage
-
 
 \subsubsection{Tracciamento test di unità-metodi} \label{sec:tracc_tu}
 \normalsize
