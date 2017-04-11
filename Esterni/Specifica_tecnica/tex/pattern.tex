@@ -33,10 +33,10 @@ Questi includono Parser(il quale è configurato per accettare file json) e Gener
 Viene implementato tramite il framework \emph{Spring}, il quale fornisce dei componenti altamente versatili(chiamati bean) che permettono di creare e risolvere le dipendenze.
 Un esempio concreto é la richesta di un oggetto Generator alla quale Spring fornirà un'istanza di tipo JavaGenerator.
 
-%\begin{figure}[H] \label{fig:injector}
-%	\includegraphics[scale=0.8]{img/depExample.png}
-%	\caption{Dependency Injection.}
-%\end{figure}
+\begin{figure}[H] \label{fig:injector}
+	\includegraphics[scale=0.4]{img/depExample.png}
+	\caption{Dependency Injection.}
+\end{figure}
 
 \subsection{Command}
 
@@ -97,7 +97,7 @@ Il pattern command viene sfruttato dal client per chiamare funzioni come il salv
 Il pattern viene utilizzato dal client per richiedere un'istanza di una nuova cella da aggiungere al diagramma corrente. L'oggetto \texttt{NewCellFactory} permette di registrare i vari tipi di celle e di richiedere un istanza del tipo desiderato descritto da una stringa. La richiesta delle celle viene effettuata da \texttt{NewCellModel} in base alla scelta dell'utente.
 L'imlpementazione di questo pattern segue le linee guida descritte da Addy Osmani nel libro \emph{Learning JavaScript Design Patterns} nel capitolo \emph{JavaScript Design Patterns-Factory Pattern}.
 \begin{figure}[H] \label{fig:factory}
-	\includegraphics[scale=0.8]{img/factoryExample.png}
+	\includegraphics[scale=0.4]{img/factoryExample.png}
 	\caption{Factory.}
 \end{figure}
 
