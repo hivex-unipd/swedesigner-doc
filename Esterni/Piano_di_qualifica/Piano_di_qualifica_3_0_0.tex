@@ -2628,6 +2628,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\textbf{Profondità della gerarchia} & & &\\
 		Classi client &0-4 &0 &min0 max2*\\
 		Classi server &0-4 &0 &min0 max1*\\
+		\hline
 		
 		\caption{Esiti del calcolo delle metriche relative all'architettura}
 		\end{longtable}
@@ -2636,22 +2637,6 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 	** le uniche due classi che hanno un numero di figli diretti al di fuori del range d'accettazione sono le classi ActivityDiagramElement e ParsedInstruction.
 	
 	*** l'unico package contenente un numero di tipi al di fuori del range di accettazione è il package client.model.
-	
-	\subsubsection{Verifica Software Construction Process}	
-	Per verificare il rispetto degli obiettivi di qualità stabiliti per tale processo, abbiamo misurato le metriche riportate nella seguente tabella.
-	
-\begin{center}
-\begin{tabular}{| p{6cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} |}
-	\hline
-	\textbf{Metrica} & \textbf{Valore/range obiettivo} & \textbf{Valore/range accettabile} & \textbf{Valore/range effettivo} \\
-	\hline
-	numero di violazioni di alta importanza delle norme di codifica & $0$ & $0$ & $0$\\
-	numero di violazioni di media importanza delle norme di codifica & $0$ & $0$ & $0$\\
-	numero di violazioni di bassa importanza delle norme di codifica & $0$ & $0$ & $0$\\
-	\hline
-\end{tabular}
-\end{center}
-		
 	
 		\subsubsection{Verifica della qualità del software}
 		Per verificare l'osservanza degli obiettivi riguardanti la qualità del software prodotto, sono stati calcolati i valori delle metriche relative al linguaggio Java utilizzato nel back-end.
@@ -2724,18 +2709,20 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\textbf{Profondità della gerarchia} &0 - 4 &1 - 2 &min1 max4*\\
 		&0 &0 &0\\
 		\hline
-		\textbf{Numero di linee di codice per metodo} &0-20 &0-40 &min1 max66****\\
+		\textbf{Numero di linee di codice per metodo} &0-20 &0-40 &min1 max66* ****\\
 		\hline
-		\textbf{Numero di parametri per metodo} &0-4 &0-8 &min1 max6\\
+		\textbf{Numero di parametri per metodo} &0-4 &0-8 &min1 max6*\\
 		\hline
 		\textbf{Percentuale linee di commento su linee di codice} &20-40 &20-40 &11\\
 		\hline
+		\textbf{Profondità annidamento blocchi} &0-4 &0-8 &min0 max6*\\
+		\hline
 		
-		\caption{Esiti del calcolo delle metriche relative all'architettura}
+		\caption{Esiti del calcolo delle metriche relative al codice}
 		\end{longtable}
 	* abbiamo deciso di specificare solamente i valori massimi e minimi della metrica per evitare di creare tabelle troppo prolisse e poco leggibili, a fronte di un contenuto equivalente a quello proposto.
 	
-	** le uniche due classi che hanno un numero di figli diretti al di fuori del range d'accettazione sono le classi ActivityDiagramElement e ParsedInstruction.
+	** l'unica classe che ha un numero di figli diretti al di fuori del range d'accettazione è la classe e ParsedInstruction.
 	
 	*** i metodi che presentano una complessità cicolomatica al di fuori del valore accettabile sono relBuilder, typeBuilder, recursiveBuilder e createActivity.
 	
@@ -2745,7 +2732,17 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 	\subsection{System Qualification Testing Process \& Software Qualification Testing Process}
 		Per verificare l'osservanza degli obiettivi di qualità riguardanti la produzione di unità software eseguibili, sono stati calcolati i valori delle seguenti metriche.
 		
-
+	\begin{center}
+\begin{tabular}{| p{6cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} |}
+	\hline
+	\textbf{Metrica} & \textbf{Valore/range obiettivo} & \textbf{Valore/range accettabile} & \textbf{Valore/range effettivo} \\
+	\hline
+	percentuale test unità eseguiti & $100$ & $90-100$ & $97$\\
+	\hline
+\end{tabular}
+\end{center}
+	
+	L'implementazione dei test di validazione, integrazione e sistema avverrà nel corso della fase di revisione di accettazione.
 
 
 %%%%%%%%%%%%%%%%%%%%%
