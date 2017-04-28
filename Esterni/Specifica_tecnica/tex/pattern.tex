@@ -27,6 +27,17 @@
 	\item \textbf{interface injection:} l'iniezione viene eseguita attraverso l'interfaccia che fornirà un setter a chiunque la implementa.
 \end{itemize}
 
+\subsubsection{Utilizzo}
+Il pattern dependency injection viene applicato ai vari servizi del server in modo da poter richiedere un'istanza del servizio in base alla configurazione che cambia per linguaggio target di generazione.
+Questi includono Parser(il quale è configurato per accettare file json) e Generator,Compiler,Template(i quali sono configurati per il linguaggio Java).
+Viene implementato tramite il framework \emph{Spring}, il quale fornisce dei componenti altamente versatili(chiamati bean) che permettono di creare e risolvere le dipendenze.
+Un esempio concreto é la richesta di un oggetto Generator alla quale Spring fornirà un'istanza di tipo JavaGenerator.
+
+\begin{figure}[H] \label{fig:injector}
+	\includegraphics[scale=0.4]{img/depExample.png}
+	\caption{Dependency Injection.}
+\end{figure}
+
 \subsection{Command}
 
 \begin{figure}[H] \label{fig:command}
@@ -52,6 +63,12 @@
 	\item supportare operazioni di Undo e Redo;
 	\item supportare la transazione: un comando equivale ad un'operazione atomica.
 \end{itemize}
+\subsubsection{Utiizzo}
+Il pattern command viene sfruttato dal client per chiamare funzioni come il salvataggio del progetto e la generazione del codice. È implementato seguendo le linee guida descritte da Addy Osmani nel libro \emph{Learning JavaScript Design Patterns} nel capitolo \emph{JavaScript Design Patterns-Command Pattern}. Il \texttt{ProjectCommand} è un oggetto javascript il quale contiene una funzione per ogni comando. Inoltre offre il metodo execute che permette di incapsulare le invocazioni dei metodi e permette la parametrizzazione di essi. In questo modo è possibile avere degli ggetti disccopiati e lascia libertà di cambiare l'imlementazione di ProjectCommand non avendo classi che chiama direttamente una funzione di \texttt{ProjectCommand}.
+\begin{figure}[H] \label{fig:command}
+	\includegraphics[scale=0.6]{img/commandExample.png}
+	\caption{Command.}
+\end{figure}
 
 \subsection{Factory}
 
@@ -76,6 +93,14 @@
 	\item la gestione del ciclo di vita degli oggetti gestiti deve essere centralizzata in modo da assicurare un comportamento coerente all'interno dell'applicazione.
 \end{itemize}
 
+\subsubsection{Utilizzo}
+Il pattern viene utilizzato dal client per richiedere un'istanza di una nuova cella da aggiungere al diagramma corrente. L'oggetto \texttt{NewCellFactory} permette di registrare i vari tipi di celle e di richiedere un istanza del tipo desiderato descritto da una stringa. La richiesta delle celle viene effettuata da \texttt{NewCellModel} in base alla scelta dell'utente.
+L'imlpementazione di questo pattern segue le linee guida descritte da Addy Osmani nel libro \emph{Learning JavaScript Design Patterns} nel capitolo \emph{JavaScript Design Patterns-Factory Pattern}.
+\begin{figure}[H] \label{fig:factory}
+	\includegraphics[scale=0.4]{img/factoryExample.png}
+	\caption{Factory.}
+\end{figure}
+
 \subsection{Observer}
 
 \begin{figure}[H] \label{fig:observer}
@@ -99,3 +124,11 @@
 	\item quando il cambiamento di un oggetto provoca un cambiamento in un altro oggetto;
 	\item quando un oggetto ha la necessità di comunicare con altri oggetti, senza fare assunzioni sugli altri oggetti.
 \end{itemize}
+
+\subsubsection{Utilizzo}
+Il pattern Observer è utilizzato per permettere alle classi di rimanere in ascolto di eventi scatenati da altre classi e di conseguenza richiamare i propri metodi.
+L'implementazione di questo pattern è fornita da \emph{Backbone} che mette a dispozione di chi estende modelli e viste di esso i metodi \emph{trigger} e \emph{listenTo}. Oltre all'utilizzo base di ogni view che resta in ascolto di cambiamenti dei valori del proprio model e quindi l'esecuzione del metodo render di esse viene sfruttato anche ad esempio da \texttt{ProjectView} che notifica \texttt{DetailsView} che l'utente ha selzionato una cella del diagramma, permettendo quindi a \texttt{DetailsView} di visualizzare all'utente le proprietà specifiche di quella cella.
+\begin{figure}[H] \label{fig:observer}
+	\includegraphics[scale=0.45]{img/observerExample.png}
+	\caption{Observer.}
+\end{figure}

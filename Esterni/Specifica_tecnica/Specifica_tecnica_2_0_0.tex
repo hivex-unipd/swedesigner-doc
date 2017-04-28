@@ -1,0 +1,77 @@
+% Specifica Tecnica
+% da compilare con il comando pdflatex Specifica_tecnica_x.x.x.tex
+
+\input{../../util/hx-ambiente}
+
+\version{2.0.0}
+\creaz{15 febbraio 2017}
+\author{\ALL}
+\supervisor{\MM}
+\uso{esterno}
+\dest{\ALL}
+\title{Specifica Tecnica}
+
+% Per neutralizzare \nogloxy:
+\newcommand{\nogloxy}[1]{#1}
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+\newcommand{\textt}[1]{\texttt{#1}}
+
+\begin{document}
+\maketitle
+\include{diario}
+\tableofcontents
+% \listofpattern
+
+
+
+% - introduzione standard
+% - stime di fattibilità
+\section{Introduzione}
+\input{tex/intro}
+
+% - scelta di linguaggi, framework, librerie etc...
+% - interfacce con tali tecnologie
+\section{Tecnologie utilizzate}
+\input{tex/tecnologie}
+
+% - diagramma dei package
+% - scelte architetturali
+% - altre cose ad alto livello
+\section{Descrizione dell'architettura}
+\input{tex/arch}
+
+% ---> distinguere STRUTTURA (classi) da COMPORTAMENTO (procedure)?
+% - diagrammi delle classi
+% - se serve, qualche diagramma di attività/sequenza
+\section{Componenti del \emph{front end}} \label{sec:frontend}
+\input{tex/packageClassiST-FE}
+
+\section{Componenti del \emph{back end}} \label{sec:backend}
+\input{tex/packageClassiST-BE}
+
+% JSON, client-server... ???
+% \section{Modelli dei dati e interfacce}
+% \input{tex/modelli}
+
+% - tracciamento componenti-reqq
+% - tracciamento reqq-componenti
+\section{Tracciamento}
+\input{tex/tracciamento}
+
+
+
+\appendix
+
+\section{JointJS} \label{sec:app_jointjs}
+\input{tex/appjoint}
+
+\section{Architettura di Backbone.js}
+\input{tex/appbackbone}
+
+\section{Spring Boot}
+\input{tex/appspring}
+
+\section{Design pattern} \label{sec:app_creaz}
+\input{tex/pattern}
+
+\end{document}
