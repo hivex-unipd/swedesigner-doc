@@ -1,0 +1,41 @@
+% Riunione interna del 1 maggio 2017
+% da compilare con il comando pdflatex Esterni/Verbali/VI_17-05-01.tex
+
+\input{../../util/hx-ambiente}
+
+\version{1.0.0}
+\creaz{1 maggio 2017}
+\author{\GG}
+\supervisor{\LB}
+\uso{interno}
+\dest{\ALL}
+\title{Riunione interna del 1 maggio 2017}
+
+\begin{document}
+
+\maketitle
+
+\begin{description}
+	\item[Orario] 16:30 - 18:30;
+	\item[Durata] 2 ore;
+	\item[Luogo incontro] Skype;
+	\item[Oggetto] discussione sullo stato di avanzamento del progetto;
+	\item[Segretario] \GG;
+	\item[Partecipanti] \ALL.
+\end{description}
+
+Decisioni prese:
+\begin{enumerate}
+	\item \textbf{\emph{testing}} --- I verificatori hanno esposto lo stato di avanzamento del \emph{testing}.
+	\item \textbf{importazione di librerie} --- Nel corso della conversazione, abbiamo notato che l'utente potrebbe volere utilizzare classi di librerie esterne (ad es. creare un nuovo \texttt{File}, della libreria \texttt{java.io}); il sistema dovrebbe quindi poter gestire l'importazione di librerie esterne (ad es. con \texttt{import java.io.File}). Come soluzione provvisoria, per non spendere troppe ore di lavoro su questo problema, il sistema importerà in automatico una serie di classi utili, dalle librerie più usate.
+	\item \textbf{interfaccia grafica} --- I membri hanno parlato di errori da togliere (e migliorie da apportare) all'interfaccia grafica. In particolare, abbiamo deciso di:
+	\begin{itemize}
+		\item rendere più intuitiva la creazione di una componente, nel diagramma delle classi;
+		\item aggiustare un \emph{bug} sull'innestamento di cicli \emph{for} e \emph{while};
+		\item risolvere la sovrapposizione (grafica) tra il tasto “reset” e il tasto “Back to Class Diagram”, nel diagramma di attività.
+	\end{itemize}
+	\item \textbf{stereotipi} --- Abbiamo deciso di ampliare l'insieme di stereotipi disponibili all'utente, creando (con \proj) delle classi che abbiano dei metodi già implementati.
+	\item \textbf{riunione con il \GP} --- Abbiamo confermato la nostra intenzione di esporre al \GP{} lo stato di avanzamento del prodotto. Nello specifico, gli mostreremo le principali novità funzionali e grafiche; inoltre, gli parleremo di come intendiamo ampliare l'insieme di stereotipi disponibili all'utente.
+\end{enumerate}
+
+\end{document}
