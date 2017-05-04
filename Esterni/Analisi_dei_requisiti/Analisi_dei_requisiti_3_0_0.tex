@@ -168,7 +168,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 		\item l'attore può realizzare e gestire un diagramma delle classi (UC4);
 		\item l'attore può realizzare e gestire un diagramma delle attività per ogni metodo presente nel diagramma delle classi (UC5);
 		\item l'attore può salvare il progetto (UC6);
-		\item l'attore può generare l'applicativo realizzato (UC7).
+		\item l'attore può generare l'applicativo realizzato (UC7);
+		\item l'attore può importare un progetto all'interno di un altro già esistente (UC8);
 	\end{enumerate}
 \end{itemize}
 
@@ -1153,7 +1154,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 		\item l'attore può modificare un blocco for (UC5.31);
 		\item l'attore può modificare un blocco custom (UC5.32);
 		\item l'attore può inserire un blocco return (UC5.33);
-		\item l'attore può modificare un blocco return (UC5.34).
+		\item l'attore può modificare un blocco return (UC5.34);
+		\item l'attore può visualizzare un classtree (UC5.35).
 	\end{enumerate}
 \end{itemize}
 
@@ -1973,6 +1975,16 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}: l'attore modifica un blocco return all'interno del diagramma delle attività.
 \end{itemize}
 
+\subsubsection{UC5.35: Visualizzazione ClassTree}
+\label{UC5.35}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può visualizzare il classtree del diagramma delle classi, ovvero la gerarchia di classi con i relativi metodi e attributi;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore visualizza il classtree del diagramma delle classi.
+\end{itemize}
+
 \subsection{UC6: Salvataggio}
 \label{UC6}
 \myimg{UC6 - Salvataggio}
@@ -2050,7 +2062,16 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
-
+\subsection{UC8: Importazione Progetto}
+\label{UC8}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può importare un progetto e inserirlo all'interno di un progetto già esistente;
+	\item \textbf{Precondizione}: il sistema avviato mostra la pagina iniziale dell'applicazione con il diagramma delle classi di un progetto già esistente;
+	\item \textbf{Postcondizione}: il sistema visualizza il progetto importato assieme al progetto già esistente;
+	\item \textbf{Scenario principale}: l'attore importa un progetto;
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore riguardo al file inserito (UC2.1).
+\end{itemize}
 
 %%%%%%%%%%%%%
 %%  Requisiti
@@ -2373,7 +2394,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & &\hyperref[UC4.16]{UC4.16}\\
 & &\hyperref[UC4.16.2]{UC4.16.2}\\ \hline
 
-\hypertarget{RFO3.17}{RFO3.17} & l'attore può inserire una classe stereotipata &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+\hypertarget{RFD3.17}{RFD3.17} & l'attore può inserire una classe stereotipata &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\
 & &\hyperref[UC4]{UC4}\\
 & &\hyperref[UC4.17]{UC4.17}\\ \hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2676,6 +2697,10 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & &\hyperref[UC5]{UC5}\\
 & &\hyperref[UC5.34]{UC5.34}\\ \hline
 
+\hypertarget{RFD4.35}{RFD4.35} & l'attore può visualizzare il classtree del diagrmma delle classi & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC5]{UC5}\\
+& &\hyperref[UC5.35]{UC5.35}\\ \hline
+
 \hypertarget{RFO5}{RFO5} & l'attore può salvare il progetto &  \hyperlink{Interno}{Interno}\\
 & & \hyperref[UC6]{UC6}\\ \hline
 
@@ -2700,6 +2725,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hypertarget{RFO6.1}{RFO6.1} & il sistema deve visualizzare un messaggio d'errore se l'attore non ha rispettato i vincoli imposti dagli stereotipi scelti& \hyperlink{Interno}{Interno}\\
 & & \hyperref[UC7.1]{UC7.1}\\ \hline
+
+\hypertarget{RFD12}{RFD12} & l'attore può importare un progetto &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\
+& & \hyperref[UC8]{UC8}\\ \hline
 
 \hypertarget{RFO7}{RFO7} & il sistema riceve una richiesta http post contenente i file \gloss{JSON} generato dal programma utente & \hyperlink{Interno}{Interno}\\ \hline
 
@@ -2736,9 +2764,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hypertarget{RQO1.2.1}{RQO1.2.1} & il manuale utente contiene una sezione con le possibili operazioni di troubleshooting per l'installazione del server & \hyperlink{Interno}{Interno}\\ \hline
 
-\hypertarget{RQF1.3}{RQF1.3} & il manuale utente è fornito in lingua italiana & \hyperlink{Interno}{Interno}\\ \hline
+\hypertarget{RQO1.3}{ROF1.3} & il manuale utente è fornito in lingua italiana & \hyperlink{Interno}{Interno}\\ \hline
 
-\hypertarget{RQO1.4}{RQO1.4} & il manuale utente è fornito in lingua inglese & \hyperlink{Interno}{Interno}\\ \hline
+\hypertarget{RQF1.4}{RQF1.4} & il manuale utente è fornito in lingua inglese & \hyperlink{Interno}{Interno}\\ \hline
 
 \hypertarget{RQO2}{RQO2} & è fornito un manuale utente sviluppatore, dedicato a chiunque voglia estendere l'applicazione & \hyperlink{Capitolato}{Capitolato}\\ \hline
 
@@ -2945,7 +2973,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hyperlink{RFF3.16.2}{RFF3.16.2} &  \hyperlink{Interno}{Interno}\\ &\hyperref[UC4.16]{UC4.16}\\ &\hyperref[UC4.16.2]{UC4.16.2}\\ \hline
 
-\hyperlink{RFO3.17}{RFO3.17} &   \hyperlink{Riunione Esterna}{Riunione Esterna}\\ &\hyperref[UC4]{UC4}\\ &\hyperref[UC4.17]{UC4.17}\\ \hline
+\hyperlink{RFD3.17}{RFD3.17} &   \hyperlink{Riunione Esterna}{Riunione Esterna}\\ &\hyperref[UC4]{UC4}\\ &\hyperref[UC4.17]{UC4.17}\\ \hline
 
 \hyperlink{RFO4}{RFO4} & \hyperlink{Capitolato}{Capitolato}\\  &\hyperref[UC5]{UC5}\\ \hline
 
@@ -3097,6 +3125,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hyperlink{RFO4.34}{RFO4.34} &  \hyperlink{Interno}{Interno}\\ &\hyperref[UC5]{UC5}\\ &\hyperref[UC5.34]{UC5.34}\\ \hline
 
+\hyperlink{RFD4.35}{RFD4.35} &  \hyperlink{Interno}{Interno}\\ &\hyperref[UC5]{UC5}\\ &\hyperref[UC5.35]{UC5.35}\\ \hline
+
 \hyperlink{RFO5}{RFO5} &  \hyperlink{Interno}{Interno}\\  &\hyperref[UC6]{UC6}\\ \hline
 
 \hyperlink{RFO5.1}{RFO5.1} &\hyperlink{Interno}{Interno}\\  &\hyperref[UC6]{UC6}\\  &\hyperref[UC6.1]{UC6.1}\\ \hline
@@ -3125,6 +3155,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hyperlink{RFO11}{RFO11} &  \hyperlink{Interno}{Interno}\\ \hline
 
+\hyperlink{RFD12}{RFO12} &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\ \hline
+
 \hyperlink{RQO1}{RQO1} & \hyperlink{Capitolato}{Capitolato}\\ \hline
 \hyperlink{RQO1.1}{RQO1.1} &  \hyperlink{Interno}{Interno}\\ \hline
 
@@ -3134,9 +3166,9 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hyperlink{RQO1.2.1}{RQO1.2.1} & \hyperlink{Interno}{Interno}\\ \hline
 
-\hyperlink{RQF1.3}{RQF1.3} &  \hyperlink{Interno}{Interno}\\ \hline
+\hyperlink{RQO1.3}{RQO1.3} &  \hyperlink{Interno}{Interno}\\ \hline
 
-\hyperlink{RQO1.4}{RQO1.4} & \hyperlink{Interno}{Interno}\\ \hline
+\hyperlink{RQF1.4}{RQF1.4} & \hyperlink{Interno}{Interno}\\ \hline
 
 \hyperlink{RQO2}{RQO2} & \hyperlink{Capitolato}{Capitolato}\\ \hline
 
@@ -3313,6 +3345,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & \hyperlink{RFO4.32.2}{RFO4.32.2}\\
 & \hyperlink{RFO4.33}{RFO4.33}\\
 & \hyperlink{RFO4.34}{RFO4.34}\\
+& \hyperlink{RFD4.35}{RFD4.35}\\
 & \hyperlink{RFO5}{RFO5}\\
 & \hyperlink{RFO5.1}{RFO5.1}\\
 & \hyperlink{RFO5.2}{RFO5.2}\\
@@ -3330,8 +3363,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & \hyperlink{RQO1.1.1}{RQO1.1.1}\\
 & \hyperlink{RQO1.2}{RQO1.2}\\
 & \hyperlink{RQO1.2.1}{RQO1.2.1}\\
-& \hyperlink{RQF1.3}{RQF1.3}\\
-& \hyperlink{RQO1.4}{RQO1.4}\\
+& \hyperlink{RQO1.3}{RQO1.3}\\
+& \hyperlink{RQF1.4}{RQF1.4}\\
 & \hyperlink{RQO2.1}{RQO2.1}\\
 & \hyperlink{RQF2.2}{RQF2.2}\\
 & \hyperlink{RVO1.3}{RVO1.3}\\
@@ -3340,7 +3373,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & \hyperlink{RVO1.6}{RVO1.6}\\
 & \hyperlink{RVO1.7}{RVO1.7}\\ \hline
 \hyperlink{Riunione Esterna}{Riunione Esterna} 
-& \hyperlink{RFO3.17}{RFO3.17}\\
+& \hyperlink{RFD3.17}{RFD3.17}\\
 & \hyperlink{RFO4.1}{RFO4.1}\\
 & \hyperlink{RFO4.2}{RFO4.2}\\
 & \hyperlink{RFO4.3}{RFO4.3}\\
@@ -3361,7 +3394,8 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & \hyperlink{RFD4.24}{RFD4.24}\\
 & \hyperlink{RFD4.25}{RFD4.25}\\
 & \hyperlink{RFD4.26}{RFD4.26}\\
-& \hyperlink{RFO6}{RFO6}\\ \hline
+& \hyperlink{RFO6}{RFO6}\\ 
+& \hyperlink{RFD12}{RFD12}\\ \hline
 \caption[Tracciamento Fonti-Requisiti]{Tracciamento Fonti-Requisiti}
 \label{tabella:fonti-requi}
 \end{longtable}
@@ -3373,7 +3407,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hline
 \textbf{Tipo} & \textbf{Obbligatorio} & \textbf{Desiderabile} & \textbf{Facoltativo}\\
 \hline
-Funzionale & 143 & 14 & 11\\ \hline
+Funzionale & 142 & 17 & 11\\ \hline
 Prestazionale & 0 & 0 & 0\\ \hline
 Di Qualità & 8 & 0 & 2\\ \hline
 Di Vincolo & 7 & 2 & 0\\ \hline
