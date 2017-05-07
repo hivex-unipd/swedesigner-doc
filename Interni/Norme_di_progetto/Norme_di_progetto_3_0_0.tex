@@ -84,7 +84,7 @@ Il presente documento si divide in tre sezioni principali:
 
 \subsubsection{Riferimenti informativi}
 \begin{itemize}
-	\item L. Pantieri, \emph{L'arte di scrivere in \gloss{Latex}}: \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (appendice A), visitato in data 08/02/2017;
+	\item L. Pantieri, \emph{L'arte di scrivere in Latex}: \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf} (appendice A), visitato in data 08/02/2017;
 %	\item \emph{CodePro Analytix Help Contents}, accessibile da Eclipse;
 	\item \emph{SDMetrics User Manual}: \url{http://www.sdmetrics.com/manual/index.html}, visitato in data 30/03/2017.
 \end{itemize}
@@ -105,7 +105,7 @@ Il presente documento si divide in tre sezioni principali:
 \subsubsection{Studio di fattibilità}
 La fase antecedente alla realizzazione del progetto consiste nel fissare delle riunioni in modo che il gruppo possa discutere di esso. È poi compito degli analisti redigere lo Studio di Fattibilità (\SdF), sulla base di ciò che è emerso dalle riunioni (come ad esempio il dominio applicativo del capitolato).
 
-Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo riguardo ad ogni capitolato. Per ogni capitolato, gli analisti devono inserire le seguenti sezioni:
+Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo riguardo ad ogni capitolato d'appalto. Per ogni capitolato, gli analisti devono inserire le seguenti sezioni:
 \begin{description}
 	\item[descrizione breve] presentazione della proposta di capitolato; 
 	\item[dominio applicativo] analisi dell'ambito applicativo della proposta di capitolato; 
@@ -114,6 +114,37 @@ Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo
 	\item[valutazione finale] sunto dei principali motivi alla base dell'accettazione o del rigetto del capitolato in esame.
 \end{description}
 
+\subsubsection{Pianificazione ed esecuzione}
+Scelto un capitolato d'appalto, il gruppo deve entrare formalmente in contatto con l'ente autore del capitolato; il gruppo deve esprimere a tale ente il proprio desiderio di rispondere al capitolato. Se le parti giungono a un accordo, il responsabile di progetto deve avviare le attività dei processi di:
+\begin{itemize}
+	\item gestione di progetto;
+	\item documentazione di progetto;
+	\item gestione della configurazione;
+	\item sviluppo.
+\end{itemize}
+
+\subsubsection{Qualifica del prodotto}
+Una volta avviato il processo di sviluppo, i membri del gruppo devono affiancare ad ogni attività produttiva un'attività che verifichi ciò che è stato prodotto. La corrispondenza tra attività di produzione e attività di verifica è la seguente:
+\begin{itemize}
+	\item Analisi dei requisiti: specifica dei test di sistema;
+	\item Progettazione logica: specifica dei test di integrazione;
+	\item Progettazione di dettaglio: specifica dei test di unità;
+	\item Codifica: analisi statica del codice sorgente ed esecuzione dei test di unità e di integrazione;
+	\item Redazione della documentazione: verifica della documentazione;
+\end{itemize}
+Infine, lo sviluppo del prodotto \emph{in toto} dev'essere verificato dall'esecuzione dei test di sistema e dal collaudo finale.
+
+\subsubsection{Consegna del prodotto}
+Subito dopo il collaudo finale, il gruppo consegna il prodotto al cliente in un giorno con lui concordato. Alla consegna:
+\begin{enumerate}
+	\item il gruppo consegna concretamente (per via telematica o su supporto fisico) il prodotto al committente;
+	\item il gruppo presenta al committente il consuntivo finale;
+	\item il committente consegna al gruppo (nelle mani del responsabile di progetto) la somma di denaro pattuita;
+	\item il responsabile di progetto consegna ad ogni membro una somma di denaro proporzionale al proprio sforzo nel progetto (in ore-lavoro);
+	\item il gruppo può considerarsi libero dagli impegni presi con il committente;
+	\item ogni membro può considerarsi libero dagli impegni presi con il gruppo.
+\end{enumerate}
+
 
 \subsection{Sviluppo}
 Il gruppo mantiene il codice sorgente del prodotto in un \gloss{repository} pubblico su \gloss{GitHub}. Tale repository è reperibile all'indirizzo \url{https://github.com/hivex-unipd/swedesigner}.
@@ -121,7 +152,7 @@ Il gruppo mantiene il codice sorgente del prodotto in un \gloss{repository} pubb
 \subsubsection{Analisi dei requisiti}
 Al termine dello studio di fattibilità, gli analisti devono elencare e analizzare i requisiti del prodotto da sviluppare. Essi devono poi documentare l'analisi nel documento di Analisi dei Requisiti (attualmente \AdR); questo documento contiene i requisiti e i \gloss{casi d'uso} individuati nelle riunioni svolte.
 
-Per tracciare le relazioni tra casi d'uso e requisiti, gli analisti devono usare l'applicazione web \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario; inoltre permette l'esportazione in Latex delle varie tabelle (requisiti, casi d'uso, glossario\dots) e consente il rispetto delle linee guida di struttura descritte in seguito.
+Per tracciare le relazioni tra casi d'uso e requisiti, gli analisti devono usare l'applicazione web \gloss{PragmaDB} (\url{https://github.com/StefanoMunari/PragmaDB}), software realizzato da studenti degli anni passati. Esso consente la gestione automatizzata della gerarchia dei casi d'uso, dei requisiti e delle voci del glossario; inoltre permette l'esportazione in \gloss{Latex} delle varie tabelle (requisiti, casi d'uso, glossario\dots) e consente il rispetto delle linee guida di struttura descritte in seguito.
 
 Nelle sezioni seguenti esponiamo la struttura che gli analisti devono rispettare per specificare requisiti e casi d'uso.
 
