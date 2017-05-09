@@ -2023,7 +2023,7 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \subsubsection{Specifica dei test di unità} \label{sec:spec_tu}
 \normalsize
 \begin{longtable}{|c|>{}m{8cm}|c|}
-\hline 
+\hline
 \textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 \hline
 \endhead
@@ -2100,6 +2100,19 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \hypertarget{TU71}{TU71} & Una \texttt{NewCellFactory} è in grado di istanziare un \texttt{HxReturn}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU72}{TU72} & Una \texttt{NewCellFactory} è in grado di istanziare un \texttt{HxWhile}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \hypertarget{TU73}{TU73} & Un \texttt{Command} è in grado di creare un nuovo progetto. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU74}{TU74} & Una \texttt{HxClass} possiede nome, attributi, metodi, astrazione e staticità. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU75}{TU75} & Una \texttt{HxInterface} possiede nome e metodi. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU76}{TU76} & Un \texttt{HxComment} possiede un campo di testo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU77}{TU77} & Un \texttt{HxGeneralization} possiede un meta-tipo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU78}{TU78} & Un \texttt{HxAssociation} possiede un meta-tipo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU79}{TU79} & Un \texttt{HxImplementation} possiede un meta-tipo. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU80}{TU80} & Un \texttt{HxCustom} possiede meta-tipo, commento e una stringa. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU81}{TU81} & Un \texttt{HxElse} possiede meta-tipo e commento. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU82}{TU82} & Un \texttt{HxFor} possiede meta-tipo, commento, inizializzazione, terminazione e incremento. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU83}{TU83} & Un \texttt{HxIf} possiede meta-tipo, commento e condizione. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU84}{TU84} & Una \texttt{HxVariable} possiede meta-tipo, commento, nome, tipo, operazione e valore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU85}{TU85} & Un \texttt{HxReturn} possiede meta-tipo, commento e valore. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TU86}{TU86} & Un \texttt{HxWhile} possiede meta-tipo, commento e condizione. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \caption[Test di unità]{Test di unità}
 \label{tab:unit}
 \end{longtable}
@@ -2109,7 +2122,7 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \subsubsection{Tracciamento test di unità-metodi} \label{sec:tracc_tu}
 \normalsize
 \begin{longtable}{|>{\centering}m{1cm}|m{12cm}<{\centering}|}
-\hline 
+\hline
 \textbf{Test} & \textbf{Metodi}\\
 \hline
 \endhead
@@ -2258,6 +2271,32 @@ I test di unità verificano che ogni singola unità (parte di una componente sof
 \hyperlink{TU72}{TU72} & \nogloxy{\texttt{swedesigner::client::model::NewCellFactory::-\linebreak getCell()}}\\ \hline
 
 \hyperlink{TU73}{TU73} & \nogloxy{\texttt{swedesigner::client::model::ProjectCommand::-\linebreak execute()}}\\ \hline
+
+\hyperlink{TU74}{TU74} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU75}{TU75} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU76}{TU76} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU77}{TU77} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramLink::getValues()}}\\ \hline
+
+\hyperlink{TU78}{TU78} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramLink::getValues()}}\\ \hline
+
+\hyperlink{TU79}{TU79} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak class::ClassDiagramLink::getValues()}}\\ \hline
+
+\hyperlink{TU80}{TU80} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU81}{TU81} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU82}{TU82} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU83}{TU83} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU84}{TU84} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU85}{TU85} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement::getValues()}}\\ \hline
+
+\hyperlink{TU86}{TU86} & \nogloxy{\texttt{swedesigner::client::model::celltypes::-\linebreak activity::ActivityDiagramElement::getValues()}}\\ \hline
 
 \caption[Tracciamento test di unità-metodi]{Tracciamento test di unità-metodi}
 \label{tab:tu-met}

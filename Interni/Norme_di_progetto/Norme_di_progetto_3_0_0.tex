@@ -105,7 +105,7 @@ Il presente documento si divide in tre sezioni principali:
 \subsubsection{Studio di fattibilità}
 La fase antecedente alla realizzazione del progetto consiste nel fissare delle riunioni in modo che il gruppo possa discutere di esso. È poi compito degli analisti redigere lo Studio di Fattibilità (\SdF), sulla base di ciò che è emerso dalle riunioni (come ad esempio il dominio applicativo del capitolato).
 
-Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo riguardo ad ogni capitolato d'appalto. Per ogni capitolato, gli analisti devono inserire le seguenti sezioni:
+Lo Studio di Fattibilità deve presentare l'analisi svolta dai membri del gruppo riguardo ad ogni capitolato d'appalto; per ogni capitolato, gli analisti devono inserire le seguenti sezioni:
 \begin{description}
 	\item[descrizione breve] presentazione della proposta di capitolato; 
 	\item[dominio applicativo] analisi dell'ambito applicativo della proposta di capitolato; 
@@ -135,6 +135,12 @@ Una volta avviato il processo di sviluppo, i membri del gruppo devono affiancare
 Infine, lo sviluppo del prodotto \emph{in toto} dev'essere verificato dall'esecuzione dei test di sistema e dal collaudo finale.
 
 \subsubsection{Consegna del prodotto}
+Il gruppo deve consegnare il prodotto dopo averlo collaudato pubblicamente; il collaudo deve includere almeno i seguenti punti:
+\begin{itemize}
+	\item illustrazione delle principali funzionalità del prodotto, che riassuma almeno i requisiti giudicati obbligatori nel documento \AdR;
+	\item esempio d'uso del prodotto, dal vivo.
+\end{itemize}
+
 Subito dopo il collaudo finale, il gruppo consegna il prodotto al cliente in un giorno con lui concordato. Alla consegna:
 \begin{enumerate}
 	\item il gruppo consegna concretamente (per via telematica o su supporto fisico) il prodotto al committente;
@@ -694,10 +700,10 @@ La verifica è un processo analitico che va implementato in due passi successivi
 
 
 \subsection{Validazione}
-Ogni verifica di una parte della configurazione dev'essere vagliata dal responsabile di progetto; per questo, il responsabile deve controllare i risultati dei test. Egli può approvarli oppure chiedere ai verificatori di ripeterli. L'approvazione determina:
+Ogni verifica di una parte della configurazione dev'essere vagliata dal responsabile di progetto; per questo, il responsabile deve controllare l'esito dei test e i risultati delle verifiche sui documenti. Egli può approvare le verifiche oppure chiedere di ripeterle. L'approvazione di una parte della configurazione determina:
 \begin{itemize}
-	\item l'incremento del numero di versione, secondo le norme in sezione \ref{sec:idvers};
-	\item la pubblicazione delle componenti validate e dei test eseguiti sul ramo \texttt{master} del repository.
+	\item l'incremento del numero di versione della parte approvata, secondo le norme in sezione \ref{sec:idvers};
+	\item la pubblicazione delle componenti validate sul ramo \texttt{master} del repository.
 \end{itemize}
 
 
