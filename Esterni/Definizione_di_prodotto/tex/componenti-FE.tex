@@ -118,7 +118,7 @@ questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ str: string[]}}
+\item \nogloxy{\texttt{- str: string[]}}
 \\ Questo attributo indica l'elenco dei blocchi disponibili in base al diagramma corrente
 \end{itemize}
 \item \textbf{Metodi}:
@@ -343,17 +343,17 @@ questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ comment: string}}
+\item \nogloxy{\texttt{# comment: string}}
 \\ Questo attributo indica un commento che è possibile scrivere all'interno di ogni blocco
-\item \nogloxy{\texttt{- expanded: bool}}
+\item \nogloxy{\texttt{# expanded: bool}}
 \\ Questo attributo indica se l'elemento è ridotto oppure è visibile per intero
-\item \nogloxy{\texttt{- hidden: bool}}
+\item \nogloxy{\texttt{# hidden: bool}}
 \\ Questo attributo indica se la cella deve essere visualizzata
-\item \nogloxy{\texttt{- offsetY: int}}
+\item \nogloxy{\texttt{# offsetY: int}}
 \\ Questo attributo indica quanto deve essere spostata la cella nel diagramma delle attività. Questo valore viene gestito da /texttt{ProjectView}
-\item \nogloxy{\texttt{+ type: string}}
+\item \nogloxy{\texttt{# type: string}}
 \\ Questo attributo indica il tipo della cella,in modo  che questa possa essere identificata facilmente da chi la usa
-\item \nogloxy{\texttt{+ xtype: string}}
+\item \nogloxy{\texttt{# xtype: string}}
 \\ Questo attributo indica il tipo della cella che verrà poi visualizzato. Verrà ridefinito da ogni classe che eredita questa
 \end{itemize}
 \item \textbf{Metodi}:
@@ -395,7 +395,7 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ code: string}}
+\item \nogloxy{\texttt{- code: string}}
 \\ Questo attributo indica il blocco di codice custom che l'utente inserisce
 \end{itemize}
 \end{itemize}
@@ -426,11 +426,11 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ increment: string}}
+\item \nogloxy{\texttt{- increment: string}}
 \\ Questo attributo indica la parte di incremento di un for
-\item \nogloxy{\texttt{+ initialization: string}}
+\item \nogloxy{\texttt{- initialization: string}}
 \\ Questo attributo indica la parte di inizializzazione di un for
-\item \nogloxy{\texttt{+ termination: string}}
+\item \nogloxy{\texttt{- termination: string}}
 \\ Questo attributo indica la parte di terminazione di un for
 \end{itemize}
 \end{itemize}
@@ -448,7 +448,7 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ condition: string}}
+\item \nogloxy{\texttt{- condition: string}}
 \\ Questo attributo indica la condizione del blocco if
 \end{itemize}
 \end{itemize}
@@ -466,7 +466,7 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ value: string}}
+\item \nogloxy{\texttt{- value: string}}
 \\ Questo attributo indica la stringa di ritorno del blocco return
 \end{itemize}
 \end{itemize}
@@ -484,13 +484,13 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ name: string}}
+\item \nogloxy{\texttt{- name: string}}
 \\ Questo attributo indica il nome della variabile. È opzionale
-\item \nogloxy{\texttt{+ operation: string}}
+\item \nogloxy{\texttt{- operation: string}}
 \\ Questo attributo indica l'operazione da eseguire sulla variabile. È opzionale
-\item \nogloxy{\texttt{+ type: string}}
+\item \nogloxy{\texttt{- type: string}}
 \\ Questo attributo indica il tipo della variabile. È opzionale
-\item \nogloxy{\texttt{+ value: string}}
+\item \nogloxy{\texttt{- value: string}}
 \\ Questo attributo indica il valore che può essere un'inizializzazione,un'assegnazione od una chiamata ad un metodo. È opzionale
 \end{itemize}
 \end{itemize}
@@ -508,7 +508,7 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ condition: string}}
+\item \nogloxy{\texttt{- condition: string}}
 \\ Questo attributo rappresenta la condizione del while
 \end{itemize}
 \end{itemize}
@@ -542,7 +542,7 @@ questa classe rappresenta le caratteristiche dello stereotipo che viene assegnat
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{- type: string}}
+\item \nogloxy{\texttt{# type: string}}
 \\ Questo attributo indica il tipo della cella,in modo che questa possa essere identificata facilmente da chi la usa
 \end{itemize}
 \item \textbf{Metodi}:
@@ -589,11 +589,11 @@ eredita dalla classe \texttt{Link} di \jointjs{} e viene estesa da tutte le clas
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ source: object}}
+\item \nogloxy{\texttt{# source: object}}
 \\ Questo attributo indica la cella di partenza della relazione
-\item \nogloxy{\texttt{+ target: object}}
+\item \nogloxy{\texttt{# target: object}}
 \\ Questo attributo indica la cella di destinazione della relazione
-\item \nogloxy{\texttt{+ type: string}}
+\item \nogloxy{\texttt{# type: string}}
 \\ Questo attributo indica il tipo della relazione,in modo che questa possa essere identificata facilmente da chi la usa
 \end{itemize}
 \item \textbf{Metodi}:
@@ -625,9 +625,9 @@ eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \t
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ attribute: string}}
+\item \nogloxy{\texttt{- attribute: string}}
 \\ Questo attributo indica l'attributo associato alla relazione
-\item \nogloxy{\texttt{+ card: string}}
+\item \nogloxy{\texttt{- card: string}}
 \\ Questo attributo indica la cardinalità della relazione
 \end{itemize}
 \item \textbf{Metodi}:
@@ -664,19 +664,19 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ abstract: string}}
+\item \nogloxy{\texttt{- abstract: string}}
 \\ Questo attributo indica se la classe è astratta
-\item \nogloxy{\texttt{+ attributes: object[]}}
+\item \nogloxy{\texttt{- attributes: object[]}}
 \\ Questo attributo indica l'array di attributi di una classe
 \item \nogloxy{\texttt{- attributesExpanded: bool}}
 \\ Questo attributo indica se il blocco dovrà visualizzare la sezione attributi per intero oppure ridotta
-\item \nogloxy{\texttt{+ methods: object[]}}
+\item \nogloxy{\texttt{- methods: object[]}}
 \\ Questo attributo indica l'array di metodi di una classe
 \item \nogloxy{\texttt{- methodsExpanded: bool}}
 \\ Questo attributo indica se il blocco dovrà visualizzare la sezione metodi per intero oppure ridotta
-\item \nogloxy{\texttt{+ name: string}}
+\item \nogloxy{\texttt{- name: string}}
 \\ Questo attributo indica il nome della classe
-\item \nogloxy{\texttt{+ static: string}}
+\item \nogloxy{\texttt{- static: string}}
 \\ Questo attributo indica se la classe è statica
 \end{itemize}
 \item \textbf{Metodi}:
@@ -794,7 +794,7 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ methods: object[]}}
+\item \nogloxy{\texttt{- methods: object[]}}
 \\ Questo attributo indica l'array di metodi di una interfaccia
 \item \nogloxy{\texttt{- methodsExpanded: bool}}
 \\ Questo attributo indica se il blocco dovrà visualizzare la sezione metodi per intero oppure ridotta
@@ -899,9 +899,9 @@ questa classe rappresenta l'area di disegno principale dell'applicazione, che ne
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ events: Object[]}}
+\item \nogloxy{\texttt{- events: Object[]}}
 \\ Contiene gli eventi definiti, usando Backbone.js per la loro gestione.
-\item \nogloxy{\texttt{+ views: Object[]}}
+\item \nogloxy{\texttt{- views: Object[]}}
 \\ Contiene le view create da AppView.
 \begin{itemize}
 \item project (\emph{ProjectView})
@@ -1038,10 +1038,10 @@ questa classe ci permette di aggiungere della logica alla collezione di tutti i 
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ paper: Paper}}
+\item \nogloxy{\texttt{- paper: Paper}}
 \\ Rappresenta l'area di disegno principale, contenuta nell'elemento HTML \emph{\#paper}.
 All'interno di questo oggetto di \jointjs{} sono presenti alcuni elementi aggiuntivi.
-\item \nogloxy{\texttt{+ visibleElements: {String, String}[]}}
+\item \nogloxy{\texttt{- visibleElements: {String, String}[]}}
 \\ Contiene le variabili e i metodi visibili all'interno dello scope selezionato. Nell'implementazione corrente, a seguito dell'incontro [RIFERIMENTO] con il committente, è stato deciso di non implementare completamente tali funzionalità, tuttavia mantenendo la possibilità di una futura implementazione; nel caso specifico, sarà implementata solo la visibilità degli attributi e metodi presenti nella classe corrente.
 \end{itemize}
 \item \textbf{Metodi}:
