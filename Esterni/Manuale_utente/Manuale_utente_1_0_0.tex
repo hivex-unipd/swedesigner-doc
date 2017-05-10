@@ -94,7 +94,7 @@ Progettare un'applicazione ad oggetti vuol dire innanzitutto specificarne l'arch
 \paragraph{Creazione di una componente} \label{par:creaz_class} Potete creare una nuova componente cliccando su un'icona del \textbf{menù di creazione} (visibile a sinistra); ci sono tre icone che rappresentano tre tipi di componente dell'architettura:
 \begin{itemize}
 	\item \click{Class};
-	\item \click{Abtract Class};
+	\item \click{Abstract Class};
 	\item \click{Interface}.
 \end{itemize}
 Oltre a queste, altre icone permettono la creazione di commenti (l'icona \click{Annotation}) e di relazioni tra componenti (\click{Generalization}, \click{Implementation} e \click{Association}, che verranno introdotte tra poco).
@@ -188,7 +188,40 @@ Se volete lavorare ad un progetto che avete precedentemente salvato, cliccate su
 
 Quando, infine, i diagrammi che avete disegnato vi sembreranno sufficienti, potrete generare da essi un programma eseguibile. Per fare questo, cliccate sull'icona del menù (in alto a sinistra) e selezionate \click{Generate} dalle voci del menù. Il vostro browser invierà una richiesta di generazione al nostro server. La risposta del server può essere positiva (vi viene inviato il codice eseguibile) o negativa. Quest'ultimo caso si può verificare per vari motivi; il più probabile è che non abbiate progettato bene la vostra applicazione. Se è così, pensate a modificare i vostri diagrammi e riprovate. Si veda §\ref{sec:mal_gen} per gestire bene una risposta negativa del server.
 
+\subsection{Funzionalità accessorie}
+Di seguito vi vengono indicate le funzionalità secondarie di \proj, e come sia possibile utilizzarle.
 
+\subsubsection{Pan & Zoom (ingrandimento e riduzione)}
+È possibile ingrandire e rimpicciolire l'area di lavoro. Per farlo, è sufficiente muovere la rotellina del mouse in alto o in basso. È possibile anche muovere l'area di lavoro premendo in una zona vuota, muovendo e rilasciando il mouse. 
+
+È possibile in alternativa usare i pulsanti presenti in alto a destra \textit{+}, \textit{-}, \textif{RESET} al fine di ingrandire, ridurre e resettare il livello di zoom rispettivamente.
+
+\subsubsection{Eliminazione di un elemento grafico}
+Qualora dobbiate rimuovere un elemento disegnato sarà sufficiente passare sopra il puntatore e premere la \textit{X} rossa comparsa in alto a sinistra.
+
+\subsubsection{Visualizzazione estesa e compatta}
+Al fine di aumentare l'area di disegno disponibile è possibile passare ad una visualizzazione compatta. Per fare questo è sufficiente premere sul menù in alto a destra in corrispondenza dei tre punti verticali e selezionare \textit{Compact}.
+
+L'interfaccia disporrà dei seguenti pulsanti compatti, con le funzionalità identiche a quelle della visualizzazione estesa.
+
+\subsubsection{Treeview}
+All'interno del diagramma delle attività è possibile visualizzare sulla sinistra un albero contenente tutte le classi e i loro attributi in una visualizzazione ad albero, chiamata \textbf{Treeview}.
+
+I simboli da cui sono preceduti i nomi indicano ciò che rappresentano i vari elementi. Di seguito si riporta l'associazione tra elemento e simbolo grafico.
+
+\begin{itemize}
+\item [classe] tre elementi di colore differente;
+\item [metodo] rombo viola;
+\item [interfaccia] chiave blu;
+\item [attributo] pallino blu;
+\end{itemize}
+
+La stessa simbologia è sfruttata per la funzione di autocompletamento, riportata di seguito.
+
+\subsubsection{Autocompletamento}
+È possibile sfruttare la funzionalità di autocompletamento mentre si riempie il contenuto di un blocco del diagramma delle attività.
+
+Per procedere, è sufficiente cominciare a scrivere la variabile desiderata e automaticamente \proj{} fornirà i suggerimenti più appropriati per il testo inserito.
 
 
 
@@ -230,7 +263,7 @@ Nel caso non riusciate ad accedere al nostro server, potete recarvi all'indirizz
 
 \subsection{Problemi con l'utilizzo di \proj}
 
-È possibile che \proj{} contenga dei piccoli bug. Potete segnalare qualsiasi malfunzionamento all'indirizzo \url{https://github.com/hivex-unipd/swedesigner/issues}, sotto forma di \emph{GitHub issue}.
+È possibile che \proj{} contenga dei piccoli bug, oppure sia desiderabile una modifica del suo funzionamento. Potete segnalare qualsiasi malfunzionamento o richiesta di funzionalità all'indirizzo \url{https://github.com/hivex-unipd/swedesigner/issues}, sotto forma di \emph{GitHub Issue}.
 
 
 
