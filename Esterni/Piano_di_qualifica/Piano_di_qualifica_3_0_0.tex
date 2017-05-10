@@ -1928,29 +1928,20 @@ I test di integrazione consentono di controllare che più moduli funzionino assi
 \subsubsection{Specifica dei test di integrazione}
 \normalsize
 \begin{longtable}{|c|>{}m{8cm}|c|}
-\hline 
+\hline
 \textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 \hline
 \endhead
 \hypertarget{TI1}{TI1} & La richiesta di un client alla risorsa "/" oppure "/index.html" provoca una risposta del server con stato HTTP "200 OK" recante la pagina \emph{index.html}. & \textit{Non Implementato}\\ \hline
 \hypertarget{TI2}{TI2} & La richiesta di un client alla risorsa "/generate" (che alleghi un file JSON valido) provoca una risposta del server con stato HTTP "200 OK" recante un archivio ZIP. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI3}{TI3} & Il sistema gestisce correttamente le componenti relative al package \texttt{compiler}; in particolare, gestisce correttamente l'interazione con il Controller di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI4}{TI4} & Il sistema gestisce correttamente le componenti relative al package \texttt{controller}; in particolare, gestisce correttamente l'interazione con i package \texttt{compiler}, \texttt{utility}, \texttt{parser} e \texttt{generator} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI5}{TI5} & Il sistema gestisce correttamente le componenti relative al package \texttt{generator}; in particolare, gestisce correttamente l'interazione con i package \texttt{controller}, \texttt{project} e \texttt{template} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI6}{TI6} & Il sistema gestisce correttamente le componenti relative al package \texttt{parser}; in particolare, gestisce correttamente l'interazione con i package \texttt{controller} e \texttt{project} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI7}{TI7} & Il sistema gestisce correttamente le componenti relative al package \texttt{project}; in particolare, gestisce correttamente l'interazione con i package \texttt{generator}, \texttt{parser} e \texttt{stereotype} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI8}{TI8} & Il sistema gestisce correttamente le componenti relative al package \texttt{stereotype}; in particolare, gestisce correttamente l'interazione con il package \texttt{project} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI9}{TI9} & Il sistema gestisce correttamente le componenti relative al package \texttt{template}; in particolare, gestisce correttamente l'interazione con il package \texttt{generator} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI10}{TI10} & Il sistema gestisce correttamente le componenti relative al package \texttt{utility}; in particolare, gestisce correttamente l'interazione con il package \texttt{controller} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI11}{TI11} & Il sistema gestisce correttamente le componenti relative al package \texttt{compiler::java}; in particolare, gestisce correttamente l'interazione con gli elementi del package \texttt{compiler} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI12}{TI12} & Il sistema gestisce correttamente le componenti relative al package \texttt{generator::java}; in particolare, gestisce correttamente l'interazione con gli elementi del package \texttt{generator} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI13}{TI13} & Il sistema gestisce correttamente le componenti relative al package \texttt{semplate::java}; in particolare, gestisce correttamente l'interazione con gli elementi del package \texttt{template} di \texttt{swedesigner::server}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI14}{TI14} & Le componenti dei package \texttt{models}, \texttt{views}, \texttt{collection} di \texttt{swedesigner::client} interagiscono correttamente tra loro e con la libreria esterna \emph{JointJS}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI15}{TI15} & Il sistema gestisce correttamente le componenti relative al package \texttt{models::celltypes}; in particolare, gestisce correttamente l'interazione con il package \texttt{views} di \texttt{swedesigner::client} e la libreria esterna \emph{JointJS}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI16}{TI16} & Il sistema gestisce correttamente le componenti relative al package \texttt{collection}; in particolare, gestisce correttamente l'interazione con il package \texttt{model} di \texttt{swedesigner::client} e la libreria esterna \emph{JointJS}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI17}{TI17} & Il sistema gestisce correttamente le componenti relative al package \texttt{models}; in particolare, gestisce correttamente l'interazione con i package \texttt{collection} e \texttt{views} di \texttt{swedesigner::client} e la libreria esterna \emph{JointJS}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI18}{TI18} & Il sistema gestisce correttamente le componenti relative al package \texttt{models::utility}; in particolare, gestisce correttamente l'interazione con i package \texttt{modela::celltypes}, \texttt{models} e \texttt{views} di \texttt{swedesigner::client}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI19}{TI19} & Il sistema gestisce correttamente le componenti relative al package \texttt{views}; in particolare, gestisce correttamente l'interazione con i package \texttt{models}, \texttt{modela::celltypes} e \texttt{models::utility} di \texttt{swedesigner::client} e la libreria esterna \emph{JointJS}. & \textit{Non Implementato}\\ \hline
+\hypertarget{TI3}{TI3} & Il sistema gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e un \texttt{Compiler} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI4}{TI4} & Il sistema gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e i suoi membri di tipo \texttt{Parser}, \texttt{Generator}, \texttt{Compiler} e \texttt{Compressor} (del \texttt{swedesigner::server}). & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI5}{TI5} & Il sistema gestisce correttamente le componenti relative al package \texttt{generator}; in particolare, gestisce correttamente l'interazione tra un \texttt{Generator} e un \texttt{Template} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI6}{TI6} & Il sistema gestisce correttamente le componenti relative al package \texttt{parser}; in particolare, gestisce correttamente l'interazione tra un \texttt{Parser} e un \texttt{ParsedProgram} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI7}{TI7} & Il sistema gestisce correttamente le componenti relative al package \texttt{project}; in particolare, gestisce correttamente l'interazione tra un \texttt{ParsedElement} e uno \texttt{Stereotype} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI8}{TI8} & Il sistema gestisce correttamente le componenti relative al package \texttt{utility}; in particolare, gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e un \texttt{Compressor} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI9}{TI9} & Le componenti dei package \texttt{models} e \texttt{views} di \texttt{swedesigner::client} interagiscono correttamente tra loro e con la libreria esterna \emph{JointJS}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI10}{TI10} & Il sistema gestisce correttamente le componenti relative al package \texttt{models::celltypes}; in particolare, gestisce correttamente l'interazione con il package \texttt{models} di \texttt{swedesigner::client} e la libreria esterna \emph{JointJS}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \caption[Test di integrazione]{Test di integrazione}
 \label{tab:integr}
 \end{longtable}
@@ -1995,24 +1986,15 @@ I test di integrazione consentono di controllare che più moduli funzionino assi
 \hline
 \endhead
 \nogloxy{\texttt{swedesigner}} & \hyperlink{TI1}{TI1}\\ \hline
-\nogloxy{\texttt{swedesigner::client}} & \hyperlink{TI14}{TI14}\\ \hline
-\nogloxy{\texttt{swedesigner::client::collection}} & \hyperlink{TI16}{TI16}\\ \hline
-\nogloxy{\texttt{swedesigner::client::model}} & \hyperlink{TI17}{TI17}\\ \hline
-\nogloxy{\texttt{swedesigner::client::model::celltypes}} & \hyperlink{TI15}{TI15}\\ \hline
-\nogloxy{\texttt{swedesigner::client::model::utility}} & \hyperlink{TI18}{TI18}\\ \hline
-\nogloxy{\texttt{swedesigner::client::view}} & \hyperlink{TI19}{TI19}\\ \hline
+\nogloxy{\texttt{swedesigner::client}} & \hyperlink{TI9}{TI9}\\ \hline
+\nogloxy{\texttt{swedesigner::client::model::celltypes}} & \hyperlink{TI10}{TI10}\\ \hline
 \nogloxy{\texttt{swedesigner::server}} & \hyperlink{TI2}{TI2}\\ \hline
 \nogloxy{\texttt{swedesigner::server::compiler}} & \hyperlink{TI3}{TI3}\\ \hline
-\nogloxy{\texttt{swedesigner::server::compiler::java}} & \hyperlink{TI11}{TI11}\\ \hline
 \nogloxy{\texttt{swedesigner::server::controller}} & \hyperlink{TI4}{TI4}\\ \hline
 \nogloxy{\texttt{swedesigner::server::generator}} & \hyperlink{TI5}{TI5}\\ \hline
-\nogloxy{\texttt{swedesigner::server::generator::java}} & \hyperlink{TI12}{TI12}\\ \hline
 \nogloxy{\texttt{swedesigner::server::parser}} & \hyperlink{TI6}{TI6}\\ \hline
 \nogloxy{\texttt{swedesigner::server::project}} & \hyperlink{TI7}{TI7}\\ \hline
-\nogloxy{\texttt{swedesigner::server::stereotype}} & \hyperlink{TI8}{TI8}\\ \hline
-\nogloxy{\texttt{swedesigner::server::template}} & \hyperlink{TI9}{TI9}\\ \hline
-\nogloxy{\texttt{swedesigner::server::template::java}} & \hyperlink{TI13}{TI13}\\ \hline
-\nogloxy{\texttt{swedesigner::server::utility}} & \hyperlink{TI10}{TI10}\\ \hline
+\nogloxy{\texttt{swedesigner::server::utility}} & \hyperlink{TI8}{TI8}\\ \hline
 \caption[Tracciamento componenti-test di integrazione]{Tracciamento componenti-test di integrazione}
 \label{tab:pkg-ti}
 \end{longtable}
