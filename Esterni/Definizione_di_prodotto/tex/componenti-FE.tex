@@ -76,27 +76,27 @@ questa classe è la base di tutte le classi che rappresentano gli elementi del d
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{- types: object[]}}
+\item \nogloxy{\texttt{- types: Cell[]}}
 \\ Questo attributo indica l'array che verrà utilizzato per salvare i tipi di celle delle quali ritornare un'istanza quando richiesto
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ getCell(type: string, customization: object): object}}
+\item \nogloxy{\texttt{+ getCell(type: string, customization: list<string>): Cell}}
 \\ Questo metodo ritorna un istanza della cella del tipo specificato
 \\ \textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{type: string}}
 \\ Questo parametro indica il tipo della cella della quale si richiede un'istanza
-\item \nogloxy{\texttt{customization: object}}
+\item \nogloxy{\texttt{customization: list<string>}}
 \\ Questo parametro indica delle proprietà aggiuntive da poter aggiungere all'istanza della cella richiesta
 \end{itemize}
-\item \nogloxy{\texttt{+ registerCell(type: string, Cell: object): void}}
+\item \nogloxy{\texttt{+ registerCell(type: string, Cell: Cell): void}}
 \\ Questo metodo permette di registrare nella factory una nuova cella
 \\ \textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{type: string}}
 \\ Questo parametro indica il nome con cui verrà identificata la cella nella factory
-\item \nogloxy{\texttt{Cell: object}}
+\item \nogloxy{\texttt{Cell: Cell}}
 \\ Questo parametro indica il prototipo della cella che verrà usato per creare le istanze
 \end{itemize}
 \end{itemize}
@@ -169,11 +169,11 @@ questa classe ci permette di aggiungere della logica alla collezione di tutti i 
 \item \nogloxy{\texttt{[*args]: array}}
 \\ È possibile inserire una serie di parametri aggiuntivi da poter passare alle funzioni richiamate
 \end{itemize}
-\item \nogloxy{\texttt{+ loadDiagram(evt: object): void}}
+\item \nogloxy{\texttt{+ loadDiagram(evt: Event): void}}
 \\ Questo metodo si occupa di prendere in input un progetto in formato json e caricarlo nell'editor
 \\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{evt: object}}
+\item \nogloxy{\texttt{evt: Event}}
 \\ Questo parametro indica un oggetto che rappresenta l'evento di un campo input type file di html
 \end{itemize}
 \item \nogloxy{\texttt{+ saveDiagram(): void}}
@@ -365,7 +365,7 @@ questa classe si occupa di fornire un'istanza di una cella del tipo richiesto da
 \item \nogloxy{\texttt{+ getOffsetY(): int}}
 \\ Questo metodo ritorna il valore dell'attributo offsetY
 \item \nogloxy{\texttt{+ getValues(): object}}
-\\ Questo metodo si occupa di recuperare le proprietà di un blocco del diagramma delle attività
+\\ Questo metodo si occupa di recuperare le proprietà di un blocco del diagramma delle attività. Il tipo di ritorno  è generico in quanto varia in base al blocco.
 \item \nogloxy{\texttt{+ initialize(): void}}
 \\ Questo metodo si occupa di inizializzare la classe
 \item \nogloxy{\texttt{+ setToValue(path: string, value: string): void}}
@@ -557,7 +557,7 @@ questa classe rappresenta le caratteristiche dello stereotipo che viene assegnat
 \\ Indica una serie di parametri da passare ai metodi chiamati
 \end{itemize}
 \item \nogloxy{\texttt{+ getValues(): object}}
-\\ Questo metodo si occupa di recuperare le proprietà di un blocco del diagramma delle classi
+\\ Questo metodo si occupa di recuperare le proprietà di un blocco del diagramma delle classi. Il tipo di ritorno è generico in quanto varia in base al blocco.
 \item \nogloxy{\texttt{+ initialize(): void}}
 \\ Questo metodo si occupa di inizializzare la classe
 \item \nogloxy{\texttt{+ setToValue(path: string, value: string): void}}
@@ -589,17 +589,17 @@ eredita dalla classe \texttt{Link} di \jointjs{} e viene estesa da tutte le clas
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{# source: object}}
-\\ Questo attributo indica la cella di partenza della relazione
-\item \nogloxy{\texttt{# target: object}}
-\\ Questo attributo indica la cella di destinazione della relazione
+\item \nogloxy{\texttt{# source: string}}
+\\ Questo attributo indica l'id della cella di partenza della relazione
+\item \nogloxy{\texttt{# target: string}}
+\\ Questo attributo indica l'id della cella di destinazione della relazione
 \item \nogloxy{\texttt{# type: string}}
 \\ Questo attributo indica il tipo della relazione,in modo che questa possa essere identificata facilmente da chi la usa
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
 \item \nogloxy{\texttt{+ getValues(): object}}
-\\ Questo metodo si occupa di recuperare le proprietà di una relazione
+\\ Questo metodo si occupa di recuperare le proprietà di una relazione. Il tipo di ritorno è generico in quanto varia in base al tipo di relazione.
 \item \nogloxy{\texttt{+ setToValue(value: string, path: string): void}}
 \\ Questo metodo si occupa di impostare un attributo passato come parametro al valore scelto
 \\ \textbf{Parametri}:
@@ -632,7 +632,7 @@ eredita dalla classe \texttt{ClassDiagramLink}. È indirettamente collegata a \t
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{- getCard(): object}}
+\item \nogloxy{\texttt{- getCard(): f}}
 \\ Questo attributo ritorna la cardinalità della relazione
 \item \nogloxy{\texttt{+ setToValue(path: string, value: string): void}}
 \\ Questo metodo si occupa di impostare un attributo passato come parametro al valore scelto
@@ -666,12 +666,12 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \begin{itemize}
 \item \nogloxy{\texttt{- abstract: string}}
 \\ Questo attributo indica se la classe è astratta
-\item \nogloxy{\texttt{- attributes: object[]}}
-\\ Questo attributo indica l'array di attributi di una classe
+\item \nogloxy{\texttt{- attributes: Attribute[]}}
+\\ Questo attributo indica l'array di attributi di una classe.Il tipo è una struttura contentente stringhe
 \item \nogloxy{\texttt{- attributesExpanded: bool}}
 \\ Questo attributo indica se il blocco dovrà visualizzare la sezione attributi per intero oppure ridotta
-\item \nogloxy{\texttt{- methods: object[]}}
-\\ Questo attributo indica l'array di metodi di una classe
+\item \nogloxy{\texttt{- methods: Method[]}}
+\\ Questo attributo indica l'array di metodi di una classe.Il tipo è una struttura contentente stringhe e una lista di parametri
 \item \nogloxy{\texttt{- methodsExpanded: bool}}
 \\ Questo attributo indica se il blocco dovrà visualizzare la sezione metodi per intero oppure ridotta
 \item \nogloxy{\texttt{- name: string}}
@@ -732,8 +732,8 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ getValues(): object}}
-\\ Questo metodo si occupa di recuperare le proprietà del blocco
+\item \nogloxy{\texttt{+ getValues(): map<string,string>}}
+\\ Questo metodo si occupa di recuperare le proprietà del blocco commento.
 \item \nogloxy{\texttt{+ initialize(): void}}
 \\ Questo metodo si occupa di inizializzare la classe
 
@@ -794,8 +794,8 @@ la classe \texttt{NewCellFactory} ritorna un'istanza di questa classe ogni volta
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{- methods: object[]}}
-\\ Questo attributo indica l'array di metodi di una interfaccia
+\item \nogloxy{\texttt{- methods: Method[]}}
+\\ Questo attributo indica l'array di metodi di una interfaccia. Il tipo è una struttura contentente stringhe e una lista di parametri.
 \item \nogloxy{\texttt{- methodsExpanded: bool}}
 \\ Questo attributo indica se il blocco dovrà visualizzare la sezione metodi per intero oppure ridotta
 
@@ -899,9 +899,9 @@ questa classe rappresenta l'area di disegno principale dell'applicazione, che ne
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{- events: Object[]}}
+\item \nogloxy{\texttt{- events: string[]}}
 \\ Contiene gli eventi definiti, usando Backbone.js per la loro gestione.
-\item \nogloxy{\texttt{- views: Object[]}}
+\item \nogloxy{\texttt{- views: Backbone.View[]}}
 \\ Contiene le view create da AppView.
 \begin{itemize}
 \item project (\emph{ProjectView})
@@ -946,43 +946,43 @@ questa classe contiene al suo interno i possibili stereotipi utilizzabili recupe
 \end{itemize}
 \item \textbf{Attributi}:
 \begin{itemize}
-\item \nogloxy{\texttt{- currentTemplate: object}}
+\item \nogloxy{\texttt{- currentTemplate: Template}}
 \\ Questo attributo indica il template corrente da utilizzare per visualizzare \texttt{detailsViews}
 \item \nogloxy{\texttt{- events: string[]}}
 \\ Questo attributo rappresenta gli eventi intercettati e gestiti dalla view
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ confirmEdit(e: object): void}}
+\item \nogloxy{\texttt{+ confirmEdit(e: Event): void}}
 \\ Questo metodo chiama il metodo setToValue del modello in modo da modificare i valori di esso in base all'input
 \\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{e: object}}
+\item \nogloxy{\texttt{e: Event}}
 \\ Questo oggetto rappresenta un evento di un elemento html che contiene anche i valori presi in input dall'utente
 \end{itemize}
-\item \nogloxy{\texttt{+ execCommand(e: object): void}}
+\item \nogloxy{\texttt{+ execCommand(e: Event): void}}
 \\ Questo metodo si occupa di eseguire un metodo del modello(come ad esempio aggiunta o eliminazione attributi) in base al nome dell'elemento passato in input
 \\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{e: object}}
+\item \nogloxy{\texttt{e: Event}}
 \\ Questo parametro rappresenta un oggetto evento di un elemento html
 \end{itemize}
 \item \nogloxy{\texttt{+ initialize(): void}}
 \\ Questo metodo si occupa di istanziare la classe e di metterla in ascolto dell'evento di cambio della cella selezionata
 \item \nogloxy{\texttt{+ render(): void}}
 \\ Questo metodo si occupa di visualizzare la view all'interno di un div in base all'attributo. \texttt{currentTemplate}
-\item \nogloxy{\texttt{+ switch(e: object): void}}
+\item \nogloxy{\texttt{+ switch(e: Event): void}}
 \\ Questo metodo si occupa di chiamare il cambio di diagramma in base all'input
 \\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{e: object}}
+\item \nogloxy{\texttt{e: Event}}
 \\ Questo parametro indica un oggetto evento che contiene informazioni sull'oggetto html cliccato e l'id del metodo del quale si vuole aprire il relativo diagramma delle attività
 \end{itemize}
-\item \nogloxy{\texttt{+ toggle(e: object): void}}
+\item \nogloxy{\texttt{+ toggle(e: Event): void}}
 \\ Questo metodo di occupa di modificare la visibilità dell'elemento passato in input
 \\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{e: object}}
+\item \nogloxy{\texttt{e: Event}}
 \\ Questo parametro rappresenta un evento click contentente informazioni sull'elemento che ha scatenato l'evento
 \end{itemize}
 \end{itemize}
