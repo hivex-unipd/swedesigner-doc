@@ -159,8 +159,10 @@ Questo package contiene i vari controller che implementano il pattern Front Cont
 \label{\nogloxy{swedesigner::server::controller::RequestHandlerController}}
 \begin{figure}[h]
 \centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/HandleGenerationRequestSequence.png}}
+\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/handleGenerationRequestSequence.png}}
+\caption{\nogloxy{diagramma di sequenza per le interazioni fra classi gestite dal metodo handleGenerationRequest}}
 \end{figure}
+
 \begin{figure}[h]
 \centering
 \nogloxy{\includegraphics[scale=0.8,keepaspectratio]{img/server/RequestHandlerController.png}}
@@ -324,22 +326,6 @@ questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a
 \subsection{\nogloxy{swedesigner::server::parser}}
 \label{\nogloxy{swedesigner::server::parser}}
 \subsubsection{Informazioni generali}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/ParserActivity.png}}
-\end{figure}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneCorpiMetodiActivity.png}}
-\end{figure}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneTipiActivity.png}}
-\end{figure}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneRelazioniActivity.png}}
-\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package presenta le classi utili all'attività di parsing dei dati ricevuti dai client.
@@ -348,10 +334,30 @@ Questo package presenta le classi utili all'attività di parsing dei dati ricevu
 \subsubsection{Classi}
 \subsubsubsection{\nogloxy{swedesigner::server::parser::Parser}}
 \label{\nogloxy{swedesigner::server::parser::Parser}}
+\begin{figure}[H]
+\centering
+\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/Parser.png}}
+\caption{\nogloxy{swedesigner::server::parser::Parser}}
+\end{figure}
 \begin{figure}[h]
 \centering
-\nogloxy{\includegraphics[scale=0.8,keepaspectratio]{img/server/Parser.png}}
-\caption{\nogloxy{swedesigner::server::parser::Parser}}
+\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/ParserActivity.png}}
+\caption{\nogloxy{diagramma di attività per il flusso di esecuzione del metodo createParsedProgram della classe Parser}}
+\end{figure}
+\begin{figure}[h]
+\centering
+\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneCorpiMetodiActivity.png}}
+\caption{\nogloxy{diagramma di attività per il flusso di esecuzione del metodo methBuilder della classe Parser}}
+\end{figure}
+\begin{figure}[h]
+\centering
+\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneTipiActivity.png}}
+\caption{\nogloxy{diagramma di attività per il flusso di esecuzione del metodo typeBuilder della classe Parser}}
+\end{figure}
+\begin{figure}[h]
+\centering
+\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneRelazioniActivity.png}}
+\caption{\nogloxy{diagramma di attività per il flusso di esecuzione del metodo relBuilder della classe Parser}}
 \end{figure}
 \FloatBarrier
 \begin{itemize}
@@ -458,7 +464,7 @@ Questo package contiene al suo interno le classi utili a rappresentare un proget
 \label{\nogloxy{swedesigner::server::project::ParsedAttribute}}
 \begin{figure}[h]
 \centering
-\nogloxy{\includegraphics[scale=0.8,keepaspectratio]{img/server/ParsedAttribute.png}}
+\nogloxy{\includegraphics[scale=0.5,keepaspectratio]{img/server/ParsedAttribute.png}}
 \caption{\nogloxy{swedesigner::server::project::ParsedAttribute}}
 \end{figure}
 \FloatBarrier
@@ -799,7 +805,7 @@ questa classe estende la classe astratta \textt{ParsedType} ed ha bisogno soltan
 \label{\nogloxy{swedesigner::server::project::ParsedFor}}
 \begin{figure}[h]
 \centering
-\nogloxy{\includegraphics[scale=0.8,keepaspectratio]{img/server/ParsedFor.png}}
+\nogloxy{\includegraphics[scale=0.6,keepaspectratio]{img/server/ParsedFor.png}}
 \caption{\nogloxy{swedesigner::server::project::ParsedFor}}
 \end{figure}
 \FloatBarrier
@@ -1030,7 +1036,7 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \label{\nogloxy{swedesigner::server::project::ParsedMethod}}
 \begin{figure}[h]
 \centering
-\nogloxy{\includegraphics[scale=0.8,keepaspectratio]{img/server/ParsedMethod.png}}
+\nogloxy{\includegraphics[scale=0.5,keepaspectratio]{img/server/ParsedMethod.png}}
 \caption{\nogloxy{swedesigner::server::project::ParsedMethod}}
 \end{figure}
 \FloatBarrier
