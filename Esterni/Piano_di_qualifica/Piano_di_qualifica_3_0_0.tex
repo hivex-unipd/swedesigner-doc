@@ -5,7 +5,7 @@
 \usepackage{float}
 \usepackage{varwidth}
 
-\version{3.0.0}
+\version{4.0.0}
 \creaz{28 dicembre 2016}
 \author{\MM}
 \supervisor{\PB}
@@ -185,9 +185,6 @@ Gli obiettivi di qualità stabiliti per questo processo sono i seguenti:
 	& percentuale di test di sistema eseguiti & $100$ \\
 	& percentuale di test di validazione eseguiti & $100$ \\
 	\hline
-	\multirow{3}{*}{copertura del codice} & \gloss{statement} coverage & $100$ \\
-	& \gloss{branch} coverage & $100$ \\
-	\hline
 \end{tabular}
 \end{center}
 
@@ -365,7 +362,7 @@ I test di validazione vengono eseguiti con il proponente per collaudare il prodo
 \textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 \hline
 \endhead
-\hypertarget{TVFO1}{TVFO1} & L'utente intende caricare un progetto precedentemente salvato. All'utente è richiesto di:
+\hypertarget{TV1}{TV1} & L'utente intende caricare un progetto precedentemente salvato. All'utente è richiesto di:
 \begin{itemize}
 	\item premere sul pulsante menu;
 	\item premere sul pulsante di caricamento del progetto;
@@ -374,14 +371,14 @@ I test di validazione vengono eseguiti con il proponente per collaudare il prodo
 \end{itemize}
  & \textcolor{Green}{\textit{Superato}}\\ \hline
  
-\hypertarget{TVFO2}{TVFO2} & L'utente intende creare un  nuovo progetto.
+\hypertarget{TV2}{TV2} & L'utente intende creare un  nuovo progetto.
 All'utente è richiesto di:
 \begin{itemize}
 	\item premere sul pulsante menu;
 	\item premere sul pulsante di creazione nuovo progetto.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1}{TVFO3.1} & L'utente intende inserire una classe.
+\hypertarget{TV3}{TV3} & L'utente intende inserire una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del \gloss{diagramma delle classi} del progetto;
@@ -389,7 +386,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire la nuova classe nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.1}{TVFO3.1.1} & L'utente intende inserire il nome di una classe.
+\hypertarget{TV4}{TV4} & L'utente intende inserire il nome di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -397,7 +394,7 @@ All'utente è richiesto di:
 	\item inserire il nome della classe.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.2}{TVFO3.1.2} & L'utente intende inserire un attributo di una classe.
+\hypertarget{TV5}{TV5} & L'utente intende inserire un attributo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -405,7 +402,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di aggiunta di un attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.2.1}{TVFO3.1.2.1} & L'utente intende inserire la visibilità di un attributo.
+\hypertarget{TV6}{TV6} & L'utente intende inserire la visibilità di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -414,7 +411,7 @@ All'utente è richiesto di:
 	\item scegliere la visibilità dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.2.2}{TVFO3.1.2.2} & L'utente intende inserire il nome di un attributo.
+\hypertarget{TV7}{TV7} & L'utente intende inserire il nome di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -423,7 +420,7 @@ All'utente è richiesto di:
 	\item inserire il nome dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.4.3}{TVFO3.1.4.3} & L'utente intende inserire il tipo di un attributo.
+\hypertarget{TV3.1.4.3}{TV8} & L'utente intende inserire il tipo di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -432,7 +429,7 @@ All'utente è richiesto di:
 	\item inserire il tipo dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.4.5}{TVFO3.1.4.5} & L'utente intende inserire il valore di default  di un attributo.
+\hypertarget{TV3.1.4.5}{TV9} & L'utente intende inserire il valore di default  di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -441,7 +438,7 @@ All'utente è richiesto di:
 	\item inserire il valore di default  dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.5}{TVFO3.1.5} & L'utente intende rimuovere un attributo.
+\hypertarget{TV3.1.5}{TV10} & L'utente intende rimuovere un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -450,7 +447,7 @@ All'utente è richiesto di:
 	\item scegliere l'opzione di rimozione dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6}{TVFO3.1.6} & L'utente intende inserire un metodo di una classe.
+\hypertarget{TV3.1.6}{TV11} & L'utente intende inserire un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -458,7 +455,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di aggiunta di un metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.1}{TVFO3.1.6.1} & L'utente intende inserire la visibilità di un metodo di una classe.
+\hypertarget{TV3.1.6.1}{TV12} & L'utente intende inserire la visibilità di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -467,7 +464,7 @@ All'utente è richiesto di:
 	\item selezionare la visibilità del metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.2}{TVFO3.1.6.2} & L'utente intende inserire il nome di un metodo di una classe.
+\hypertarget{TV3.1.6.2}{TV13} & L'utente intende inserire il nome di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -476,7 +473,7 @@ All'utente è richiesto di:
 	\item inserire il nome del metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.3}{TVFO3.1.6.3} & L'utente intende inserire un parametro di un metodo di una classe.
+\hypertarget{TV3.1.6.3}{TV14} & L'utente intende inserire un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -485,7 +482,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di aggiunta di un parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.3.1}{TVFO3.1.6.3.1} & L'utente intende inserire il nome di un parametro di un metodo di una classe.
+\hypertarget{TV3.1.6.3.1}{TV15} & L'utente intende inserire il nome di un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -494,7 +491,7 @@ All'utente è richiesto di:
 	\item inserire il nome del parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.3.2}{TVFO3.1.6.3.2} & L'utente intende inserire il tipo di un parametro di un metodo di una classe.
+\hypertarget{TV3.1.6.3.2}{TV16} & L'utente intende inserire il tipo di un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -503,7 +500,7 @@ All'utente è richiesto di:
 	\item inserire il tipo del parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.3.3}{TVFO3.1.6.3.3} & L'utente intende inserire il valore di default di un parametro di un metodo di una classe.
+\hypertarget{TV3.1.6.3.3}{TV17} & L'utente intende inserire il valore di default di un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -512,7 +509,7 @@ All'utente è richiesto di:
 	\item inserire il valore di default del parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.4}{TVFO3.1.6.4} & L'utente intende inserire il tipo di ritorno di un metodo di una classe.
+\hypertarget{TV3.1.6.4}{TV18} & L'utente intende inserire il tipo di ritorno di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -521,7 +518,7 @@ All'utente è richiesto di:
 	\item inserire il tipo di ritorno del metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.6.6}{TVFO3.1.6.6} & L'utente intende rimuovere un parametro di un metodo di una classe.
+\hypertarget{TV3.1.6.6}{TV19} & L'utente intende rimuovere un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -530,7 +527,7 @@ All'utente è richiesto di:
 	\item scegliere l'opzione di rimozione del parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.7}{TVFO3.1.7} & L'utente intende rimuovere un metodo di una classe.
+\hypertarget{TV3.1.7}{TV20} & L'utente intende rimuovere un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -539,7 +536,7 @@ All'utente è richiesto di:
 	\item scegliere l'opzione di rimozione del metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.2}{TVFO3.2} & L'utente intende inserire una relazione.
+\hypertarget{TV3.2}{TV21} & L'utente intende inserire una relazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -548,7 +545,7 @@ All'utente è richiesto di:
 	\item selezionare la classe di destinazione della relazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.2.1}{TVFO3.2.1} & L'utente intende inserire il nome di una associazione.
+\hypertarget{TV3.2.1}{TV22} & L'utente intende inserire il nome di una associazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -556,7 +553,7 @@ All'utente è richiesto di:
 	\item inserire il nome dell'associazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.2.7}{TVFO3.2.7} & L'utente intende inserire la cardinalità di un'associazione.
+\hypertarget{TV3.2.7}{TV23} & L'utente intende inserire la cardinalità di un'associazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -564,40 +561,15 @@ All'utente è richiesto di:
 	\item inserire la cardinalità dell'associazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.3}{TVFO3.3} & L'utente intende inserire un commento. 
+\hypertarget{TV3.3}{TV24} & L'utente intende inserire un commento. 
 All'utente è richiesto di: 
 \begin{itemize} 
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
 	\item premere il pulsante di inserimento di un nuovo commento;
 	\item indicare la posizione di inserimento del commento nell'apposita area.
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TVFO3.3.1}{TVFO3.3.1} & L'utente intende inserire il testo di un commento. 
+\hypertarget{TV3.3.1}{TV25} & L'utente intende inserire il testo di un commento. 
 All'utente è richiesto di: 
 \begin{itemize} 
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -605,7 +577,7 @@ All'utente è richiesto di:
 	\item inserire il testo del commento.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.4}{TVFO3.4} & L'utente intende rimuovere una classe.
+\hypertarget{TV3.4}{TV26} & L'utente intende rimuovere una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -613,7 +585,7 @@ All'utente è richiesto di:
 	\item scegliere l'opzione di rimozione della classe.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.5}{TVFO3.5} & L'utente intende rimuovere una relazione.
+\hypertarget{TV3.5}{TV27} & L'utente intende rimuovere una relazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -621,7 +593,7 @@ All'utente è richiesto di:
 	\item scegliere l'opzione di rimozione della relazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.6}{TVFO3.6} & L'utente intende rimuovere un commento.
+\hypertarget{TV3.6}{TV28} & L'utente intende rimuovere un commento.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -629,7 +601,7 @@ All'utente è richiesto di:
 	\item scegliere l'opzione di rimozione del commento.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.2}{TVFO3.11.2} & L'utente intende modificare il nome di una classe.
+\hypertarget{TV3.11.2}{TV29} & L'utente intende modificare il nome di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -637,7 +609,7 @@ All'utente è richiesto di:
 	\item modificare il nome della classe.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.3.1}{TVFO3.11.3.1} & L'utente intende modificare la visibilità di un attributo.
+\hypertarget{TV3.11.3.1}{TV30} & L'utente intende modificare la visibilità di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -646,7 +618,7 @@ All'utente è richiesto di:
 	\item modificare la visibilità dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.3.2}{TVFO3.11.3.2} & L'utente intende modificare il nome di un attributo.
+\hypertarget{TV3.11.3.2}{TV31} & L'utente intende modificare il nome di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -655,7 +627,7 @@ All'utente è richiesto di:
 	\item modificare il nome dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.3.3}{TVFO3.11.3.3} & L'utente intende modificare il tipo di un attributo.
+\hypertarget{TV3.11.3.3}{TV32} & L'utente intende modificare il tipo di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -664,7 +636,7 @@ All'utente è richiesto di:
 	\item modificare il tipo dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.3.5}{TVFO3.11.3.5} & L'utente intende modificare il valore di default di un attributo.
+\hypertarget{TV3.11.3.5}{TV33} & L'utente intende modificare il valore di default di un attributo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -673,7 +645,7 @@ All'utente è richiesto di:
 	\item modificare il valore di default dell'attributo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.4.1}{TVFO3.11.4.1} & L'utente intende modificare la visibilità di un metodo di una classe.
+\hypertarget{TV3.11.4.1}{TV34} & L'utente intende modificare la visibilità di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -682,7 +654,7 @@ All'utente è richiesto di:
 	\item modificare la visibilità del metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.4.2}{TVFO3.11.4.2} & L'utente intende modificare il nome di un metodo di una classe.
+\hypertarget{TV3.11.4.2}{TV35} & L'utente intende modificare il nome di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -691,7 +663,7 @@ All'utente è richiesto di:
 	\item modificare il nome del metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.4.3.1}{TVFO3.11.4.3.1} & L'utente intende modificare il nome di un parametro di un metodo di una classe.
+\hypertarget{TV3.11.4.3.1}{TV36} & L'utente intende modificare il nome di un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -701,7 +673,7 @@ All'utente è richiesto di:
 	\item modificare il nome del parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.4.3.2}{TVFO3.11.4.3.2} & L'utente intende modificare il tipo di un parametro di un metodo di una classe.
+\hypertarget{TV3.11.4.3.2}{TV37} & L'utente intende modificare il tipo di un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -711,7 +683,7 @@ All'utente è richiesto di:
 	\item modificare il tipo del parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.4.3.3}{TVFO3.11.4.3.3} & L'utente intende modificare il valore di default un parametro di un metodo di una classe.
+\hypertarget{TV3.11.4.3.3}{TV38} & L'utente intende modificare il valore di default un parametro di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -721,7 +693,7 @@ All'utente è richiesto di:
 	\item modificare il valore di default del parametro.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.11.4.4}{TVFO3.11.4.4} & L'utente intende modificare il tipo di ritorno di un metodo di una classe.
+\hypertarget{TV3.11.4.4}{TV39} & L'utente intende modificare il tipo di ritorno di un metodo di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -730,7 +702,7 @@ All'utente è richiesto di:
 	\item modificare il tipo di ritorno del metodo.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.12.2}{TVFO3.12.2} & L'utente intende modificare il nome di un'associazione.
+\hypertarget{TV3.12.2}{TV40} & L'utente intende modificare il nome di un'associazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -738,7 +710,7 @@ All'utente è richiesto di:
 	\item modificare il nome dell'associazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.12.3}{TVFO3.12.3} & L'utente intende modificare la classe di partenza di una relazione.
+\hypertarget{TV3.12.3}{TV41} & L'utente intende modificare la classe di partenza di una relazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -746,7 +718,7 @@ All'utente è richiesto di:
 	\item modificare la classe di partenza della relazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.12.4}{TVFO3.12.4} & L'utente intende modificare la classe di destinazione di una relazione.
+\hypertarget{TV3.12.4}{TV42} & L'utente intende modificare la classe di destinazione di una relazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -754,7 +726,7 @@ All'utente è richiesto di:
 	\item modificare la classe di destinazione della relazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.12.5}{TVFO3.12.5} & L'utente intende modificare la cardinalità di un'associazione.
+\hypertarget{TV3.12.5}{TV43} & L'utente intende modificare la cardinalità di un'associazione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -762,7 +734,7 @@ All'utente è richiesto di:
 	\item modificare la cardinalità dell'associazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.13.1}{TVFO3.13.1} & L'utente intende modificare il testo di un commento. 
+\hypertarget{TV3.13.1}{TV44} & L'utente intende modificare il testo di un commento. 
 All'utente è richiesto di: 
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -770,7 +742,7 @@ All'utente è richiesto di:
 	\item modificare il testo del commento.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.8}{TVFO3.1.8} & L'utente intende specificare se una classe è astratta.
+\hypertarget{TV3.1.8}{TV45} & L'utente intende specificare se una classe è astratta.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -779,7 +751,7 @@ All'utente è richiesto di:
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
 
-\hypertarget{TVFO3.1.8}{TVFO3.1.8} & L'utente intende specificare se una classe è statica.
+\hypertarget{TV3.1.8}{TV46} & L'utente intende specificare se una classe è statica.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -787,7 +759,7 @@ All'utente è richiesto di:
 	\item selezionare il campo "Static".
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.10}{TVFO3.1.10} & L'utente intende togliere la specifica "Abstract" di una classe.
+\hypertarget{TV3.1.10}{TV47} & L'utente intende togliere la specifica "Abstract" di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -795,7 +767,7 @@ All'utente è richiesto di:
 	\item selezionare il campo "Abstract" se questo risulta già evidenziato.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.11}{TVFO3.1.11} & L'utente intende togliere la specifica "Static" di una classe.
+\hypertarget{TV3.1.11}{TV48} & L'utente intende togliere la specifica "Static" di una classe.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -803,7 +775,7 @@ All'utente è richiesto di:
 	\item selezionare il campo "Static" se questo risulta già evidenziato.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.12}{TVFO3.1.12} & L'utente intende specificare se un metodo è astratto.
+\hypertarget{TV3.1.12}{TV49} & L'utente intende specificare se un metodo è astratto.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -812,7 +784,7 @@ All'utente è richiesto di:
 	\item selezionare il campo "Abstract" del metodo desiderato.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.13}{TVFO3.1.13} & L'utente intende specificare se un metodo è statico.
+\hypertarget{TV3.1.13}{TV50} & L'utente intende specificare se un metodo è statico.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -821,7 +793,7 @@ All'utente è richiesto di:
 	\item selezionare il campo "Static" del metodo desiderato.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.14}{TVFO3.1.14} & L'utente intende togliere la specifica "Abstract" di un metodo.
+\hypertarget{TV3.1.14}{TV51} & L'utente intende togliere la specifica "Abstract" di un metodo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -830,7 +802,7 @@ All'utente è richiesto di:
 	\item selezionare il campo "Abstract" del metodo desiderato se questo è già evidenziato.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO3.1.15}{TVFO3.1.15} & L'utente intende togliere la specifica "Static" di un metodo.
+\hypertarget{TV3.1.15}{TV52} & L'utente intende togliere la specifica "Static" di un metodo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -839,7 +811,7 @@ All'utente è richiesto di:
 	\item selezionare il campo "Static" del metodo desiderato se questo è già evidenziato.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4}{TVFO4} & L'utente intende visualizzare il \gloss{diagramma delle attività} di un particolare metodo.
+\hypertarget{TV4}{TV53} & L'utente intende visualizzare il \gloss{diagramma delle attività} di un particolare metodo.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -847,7 +819,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di visualizzazione del diagramma delle attività di un metodo della classe.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.1}{TVFO4.1} & L'utente intende inserire un blocco variabile.
+\hypertarget{TV4.1}{TV54} & L'utente intende inserire un blocco variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -855,7 +827,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire il blocco variabile nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.1.1}{TVFO4.1.1} & L'utente intende inserire il nome di una variabile.
+\hypertarget{TV4.1.1}{TV55} & L'utente intende inserire il nome di una variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -863,7 +835,7 @@ All'utente è richiesto di:
 	\item indicare il nome della variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.1.2}{TVFO4.1.2} & L'utente intende inserire il tipo di una variabile.
+\hypertarget{TV4.1.2}{TV56} & L'utente intende inserire il tipo di una variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -871,7 +843,7 @@ All'utente è richiesto di:
 	\item indicare il tipo della variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.1.3}{TVFO4.1.3} & L'utente intende inserire un'operazione per una variabile.
+\hypertarget{TV4.1.3}{TV57} & L'utente intende inserire un'operazione per una variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -879,7 +851,7 @@ All'utente è richiesto di:
 	\item indicare l'operazione per la variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.1.4}{TVFO4.1.4} & L'utente intende inserire un valore per una variabile.
+\hypertarget{TV4.1.4}{TV58} & L'utente intende inserire un valore per una variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -888,7 +860,7 @@ All'utente è richiesto di:
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
 
-\hypertarget{TVFO4.1.3}{TVFO4.1.3} & L'utente intende inserire un commento per un blocco variabile.
+\hypertarget{TV4.1.3}{TV59} & L'utente intende inserire un commento per un blocco variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -896,7 +868,7 @@ All'utente è richiesto di:
 	\item inserire il commento relativo al blocco variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.3}{TVFO4.3} & L'utente intende inserire un blocco if.
+\hypertarget{TV4.3}{TV60} & L'utente intende inserire un blocco if.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -904,7 +876,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire il blocco if nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.3.1}{TVFO4.3.1} & L'utente intende inserire la condizione di un blocco if.
+\hypertarget{TV4.3.1}{TV61} & L'utente intende inserire la condizione di un blocco if.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -912,7 +884,7 @@ All'utente è richiesto di:
 	\item inserire la condizione del blocco if.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.3.2}{TVFO4.3.2} & L'utente intende completare il corpo di un blocco if inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+\hypertarget{TV4.3.2}{TV62} & L'utente intende completare il corpo di un blocco if inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -922,7 +894,7 @@ All'utente è richiesto di:
 	\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.3.3}{TVFO4.3.3} & L'utente intende completare il corpo di un blocco else inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+\hypertarget{TV4.3.3}{TV63} & L'utente intende completare il corpo di un blocco else inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -932,7 +904,7 @@ All'utente è richiesto di:
 	\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.3.4}{TVFO4.3.4} & L'utente intende inserire un commento per un blocco if.
+\hypertarget{TV4.3.4}{TV64} & L'utente intende inserire un commento per un blocco if.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -940,7 +912,7 @@ All'utente è richiesto di:
 	\item inserire il commento relativo al blocco if.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.4}{TVFO4.4} & L'utente intende inserire un blocco while.
+\hypertarget{TV4.4}{TV65} & L'utente intende inserire un blocco while.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -948,7 +920,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire il blocco while nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.4.1}{TVFO4.4.1} & L'utente intende inserire la condizione da verificare di un blocco while.
+\hypertarget{TV4.4.1}{TV66} & L'utente intende inserire la condizione da verificare di un blocco while.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -956,7 +928,7 @@ All'utente è richiesto di:
 	\item inserire la condizione da verificare del blocco while.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.4.2}{TVFO4.4.2} & L'utente intende completare il corpo di un blocco while inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+\hypertarget{TV4.4.2}{TV67} & L'utente intende completare il corpo di un blocco while inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -966,7 +938,7 @@ All'utente è richiesto di:
 	\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.4.3}{TVFO4.4.3} & L'utente intende inserire un commento per un blocco while.
+\hypertarget{TV4.4.3}{TV68} & L'utente intende inserire un commento per un blocco while.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -974,7 +946,7 @@ All'utente è richiesto di:
 	\item inserire il commento relativo al blocco while.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.5}{TVFO4.5} & L'utente intende inserire un blocco for.
+\hypertarget{TV4.5}{TV69} & L'utente intende inserire un blocco r.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -982,7 +954,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire il blocco for nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.5.1}{TVFO4.5.1} & L'utente intende inserire l'inizializzazione di un blocco for .
+\hypertarget{TV4.5.1}{TV70} & L'utente intende inserire l'inizializzazione di un blocco for .
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -990,7 +962,7 @@ All'utente è richiesto di:
 	\item inserire l'inizializzazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.5.2}{TVFO4.5.2} & L'utente intende inserire la condizione da verificare di un blocco for.
+\hypertarget{TV4.5.2}{TV71} & L'utente intende inserire la condizione da verificare di un blocco for.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -998,7 +970,7 @@ All'utente è richiesto di:
 	\item inserire la condizione da verificare del blocco for.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.5.3}{TVFO4.5.3} & L'utente intende inserire l'incremento-decremento di un blocco for .
+\hypertarget{TV4.5.3}{TV72} & L'utente intende inserire l'incremento-decremento di un blocco for .
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1006,7 +978,7 @@ All'utente è richiesto di:
 	\item inserire l'incremento-decremento del blocco for.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.5.4}{TVFO4.5.4} & L'utente intende completare il corpo di un blocco for inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
+\hypertarget{TV4.5.4}{TV73} & L'utente intende completare il corpo di un blocco for inserendo una serie di blocchi tra quelli resi disponibili dall'editor.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1016,7 +988,7 @@ All'utente è richiesto di:
 	\item eventualmente ripetere le precedenti tre istruzioni per inserire altri blocchi.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.5.5}{TVFO4.5.5} & L'utente intende inserire un commento per un blocco for.
+\hypertarget{TV4.5.5}{TV74} & L'utente intende inserire un commento per un blocco for.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1024,7 +996,7 @@ All'utente è richiesto di:
 	\item inserire il commento relativo al blocco for.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.6}{TVFO4.6} & L'utente intende inserire un blocco custom.
+\hypertarget{TV4.6}{TV75} & L'utente intende inserire un blocco custom.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1032,7 +1004,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire il blocco custom nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.6.1}{TVFO4.6.1} & L'utente intende inserire il contenuto di un blocco custom di codice.
+\hypertarget{TV4.6.1}{TV76} & L'utente intende inserire il contenuto di un blocco custom di codice.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1040,7 +1012,7 @@ All'utente è richiesto di:
 	\item inserire il contenuto del blocco custom di codice.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.6.2}{TVFO4.6.2} & L'utente intende inserire un commento per un blocco custom di codice.
+\hypertarget{TV4.6.2}{TV77} & L'utente intende inserire un commento per un blocco custom di codice.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1048,7 +1020,7 @@ All'utente è richiesto di:
 	\item inserire il commento relativo al blocco custom di codice.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.7}{TVFO4.7} & L'utente intende rimuovere un blocco variabile esistente.
+\hypertarget{TV4.7}{TV78} & L'utente intende rimuovere un blocco variabile esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1056,7 +1028,7 @@ All'utente è richiesto di:
 	\item premere sul pulsante di cancellazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.9}{TVFO4.9} & L'utente intende rimuovere un blocco if esistente.
+\hypertarget{TV4.9}{TV79} & L'utente intende rimuovere un blocco if esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1064,7 +1036,7 @@ All'utente è richiesto di:
 	\item premere sul pulsante di cancellazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.10}{TVFO4.10} & L'utente intende rimuovere un blocco while esistente.
+\hypertarget{TV4.10}{TV80} & L'utente intende rimuovere un blocco while esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1072,7 +1044,7 @@ All'utente è richiesto di:
 	\item premere sul pulsante di cancellazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.11}{TVFO4.11} & L'utente intende rimuovere un blocco for esistente.
+\hypertarget{TV4.11}{TV81} & L'utente intende rimuovere un blocco for esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1080,7 +1052,7 @@ All'utente è richiesto di:
 	\item premere sul pulsante di cancellazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.12}{TVFO4.12} & L'utente intende rimuovere un blocco custom di codice esistente.
+\hypertarget{TV4.12}{TV82} & L'utente intende rimuovere un blocco custom di codice esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1088,7 +1060,7 @@ All'utente è richiesto di:
 	\item premere sul pulsante di cancellazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.13}{TVFO4.13} & L'utente intende ridurre la dimensione di un blocco if.
+\hypertarget{TV4.13}{TV83} & L'utente intende ridurre la dimensione di un blocco if.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1096,7 +1068,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di riduzione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.14}{TVFD4.14} & L'utente intende espandere la dimensione di un blocco if.
+\hypertarget{TV4.14}{TV84} & L'utente intende espandere la dimensione di un blocco if.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1104,7 +1076,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di espansione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.15}{TVFD4.15} & L'utente intende ridurre la dimensione di un blocco while.
+\hypertarget{TV4.15}{TV85} & L'utente intende ridurre la dimensione di un blocco while.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1112,7 +1084,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di riduzione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.16}{TVFD4.16} & L'utente intende espandere la dimensione di un blocco while.
+\hypertarget{TV4.16}{TV86} & L'utente intende espandere la dimensione di un blocco while.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1120,7 +1092,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di espansione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.17}{TVFD4.17} & L'utente intende ridurre la dimensione di un blocco for.
+\hypertarget{TV4.17}{TV87} & L'utente intende ridurre la dimensione di un blocco for.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1128,7 +1100,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di riduzione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.18}{TVFD4.18} & L'utente intende espandere la dimensione di un blocco for.
+\hypertarget{TV4.18}{TV88} & L'utente intende espandere la dimensione di un blocco for.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1136,7 +1108,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di espansione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.19}{TVFD4.19} & L'utente intende spostare uno dei blocchi inseriti all’interno del diagramma delle attività gestito in una nuova posizione.
+\hypertarget{TV4.19}{TV89} & L'utente intende spostare uno dei blocchi inseriti all’interno del diagramma delle attività gestito in una nuova posizione.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1144,7 +1116,7 @@ All'utente è richiesto di:
 	\item trascinarlo in basso od in alto fino ad inserirlo nella nuova posizione desiderata.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.20.1}{TVFO4.20.1} & L'utente intende modificare il nome di una variabile relativa ad un blocco variabile esistente.
+\hypertarget{TV4.20.1}{TV90} & L'utente intende modificare il nome di una variabile relativa ad un blocco variabile esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1152,7 +1124,7 @@ All'utente è richiesto di:
 	\item modificare il nome della variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.20.2}{TVFO4.20.2} & L'utente intende modificare il tipo di una variabile relativa ad un blocco variabile esistente.
+\hypertarget{TV4.20.2}{TV91} & L'utente intende modificare il tipo di una variabile relativa ad un blocco variabile esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1160,7 +1132,7 @@ All'utente è richiesto di:
 	\item modificare il tipo della variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.20.3}{TVFO4.20.3} & L'utente intende modificare il valore di una variabile relativa ad un blocco variabile esistente.
+\hypertarget{TV4.20.3}{TV92} & L'utente intende modificare il valore di una variabile relativa ad un blocco variabile esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1168,7 +1140,7 @@ All'utente è richiesto di:
 	\item modificare il valore della variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.20.4}{TVFO4.20.4} & L'utente intende modificare l'operazione per una variabile relativa ad un blocco variabile esistente.
+\hypertarget{TV4.20.4}{TV93} & L'utente intende modificare l'operazione per una variabile relativa ad un blocco variabile esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1176,7 +1148,7 @@ All'utente è richiesto di:
 	\item modificare l'operazione per la variabile.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.22.1}{TVFO4.22.1} & L'utente intende modificare la condizione di un blocco if esistente.
+\hypertarget{TV4.22.1}{TV94} & L'utente intende modificare la condizione di un blocco if esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1184,7 +1156,7 @@ All'utente è richiesto di:
 	\item modificare la condizione del blocco if.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.22.2}{TVFO4.22.2} & L'utente intende modificare il commento relativo ad un blocco if esistente.
+\hypertarget{TV4.22.2}{TV95} & L'utente intende modificare il commento relativo ad un blocco if esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1192,7 +1164,7 @@ All'utente è richiesto di:
 	\item modificare il commento relativo al blocco if.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.23.1}{TVFO4.23.1} & L'utente intende modificare la condizione di un blocco while esistente.
+\hypertarget{TV4.23.1}{TV96} & L'utente intende modificare la condizione di un blocco while esistente.
 All'utente è richiesto di:
 \begin{itemize}
 \item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1200,7 +1172,7 @@ All'utente è richiesto di:
 \item modificare la condizione del blocco while.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.23.2}{TVFO4.23.2} & L'utente intende modificare il commento relativo ad un blocco while esistente.
+\hypertarget{TV4.23.2}{TV97} & L'utente intende modificare il commento relativo ad un blocco while esistente.
 All'utente è richiesto di:
 \begin{itemize}
 \item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1208,7 +1180,7 @@ All'utente è richiesto di:
 \item modificare il commento relativo al blocco while.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.24.1}{TVFO4.24.1} & L'utente intende modificare l'inizializzazione di un blocco for esistente.
+\hypertarget{TV4.24.1}{TV98} & L'utente intende modificare l'inizializzazione di un blocco for esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo; 
@@ -1216,7 +1188,7 @@ All'utente è richiesto di:
 	\item modificare l'inizializzazione del blocco for. 
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.24.2}{TVFO4.24.2} & L'utente intende modificare la condizione da verificare di un blocco for esistente.
+\hypertarget{TV4.24.2}{TV99} & L'utente intende modificare la condizione da verificare di un blocco for esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1224,7 +1196,7 @@ All'utente è richiesto di:
 	\item modificare la condizione da verificare del blocco for.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.24.3}{TVFO4.24.3} & L'utente intende modificare l'incremento-decremento di un blocco for .
+\hypertarget{TV4.24.3}{TV100} & L'utente intende modificare l'incremento-decremento di un blocco for .
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1232,7 +1204,7 @@ All'utente è richiesto di:
 	\item modificare l'incremento-decremento del blocco for.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.24.4}{TVFO4.24.4} & L'utente intende modificare il commento relativo ad un blocco for esistente.
+\hypertarget{TV4.24.4}{TV101} & L'utente intende modificare il commento relativo ad un blocco for esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1240,7 +1212,7 @@ All'utente è richiesto di:
 	\item modificare il commento relativo al blocco for.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.25.1}{TVFO4.25.1} & L'utente modificare il contenuto di un blocco custom di codice esistente.
+\hypertarget{TV4.25.1}{TV102} & L'utente modificare il contenuto di un blocco custom di codice esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1248,7 +1220,7 @@ All'utente è richiesto di:
 	\item modificare il contenuto del blocco custom di codice.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.25.2}{TVFO4.25.2} & L'utente intende modificare il commento relativo ad un blocco custom di codice esistente.
+\hypertarget{TV4.25.2}{TV103} & L'utente intende modificare il commento relativo ad un blocco custom di codice esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1256,7 +1228,7 @@ All'utente è richiesto di:
 	\item modificare il commento relativo al blocco custom di codice.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.26}{TVFO4.26} & L'utente intende inserire un blocco return.
+\hypertarget{TV4.26}{TV104} & L'utente intende inserire un blocco return.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1264,7 +1236,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire il blocco return nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.26.1}{TVFO4.26.1} & L'utente intende inserire un valore per il blocco return.
+\hypertarget{TV4.26.1}{TV105} & L'utente intende inserire un valore per il blocco return.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1272,7 +1244,7 @@ All'utente è richiesto di:
 	\item inserire il valore del blocco return.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.26.2}{TVFO4.26.2} & L'utente intende inserire un commento per un blocco return.
+\hypertarget{TV4.26.2}{TV106} & L'utente intende inserire un commento per un blocco return.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1280,7 +1252,7 @@ All'utente è richiesto di:
 	\item inserire il commento relativo al blocco return.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.27}{TVFO4.27} & L'utente intende rimuovere un blocco return esistente.
+\hypertarget{TV4.27}{TV107} & L'utente intende rimuovere un blocco return esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1288,7 +1260,7 @@ All'utente è richiesto di:
 	\item premere sul pulsante di cancellazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.28}{TVFO4.28} & L'utente intende ridurre la dimensione di un blocco return.
+\hypertarget{TV4.28}{TV108} & L'utente intende ridurre la dimensione di un blocco return.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1296,7 +1268,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di riduzione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.29}{TVFD4.29} & L'utente intende espandere la dimensione di un blocco return.
+\hypertarget{TV4.29}{TV109} & L'utente intende espandere la dimensione di un blocco return.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1304,7 +1276,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di espansione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.30.1}{TVFO4.30.1} & L'utente intende modificare il valore di un blocco return esistente.
+\hypertarget{TV4.30.1}{TV110} & L'utente intende modificare il valore di un blocco return esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1312,7 +1284,7 @@ All'utente è richiesto di:
 	\item modificare il valore del blocco return.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.30.2}{TVFO4.30.2} & L'utente intende modificare il commento relativo ad un blocco return esistente.
+\hypertarget{TV4.30.2}{TV111} & L'utente intende modificare il commento relativo ad un blocco return esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1320,7 +1292,7 @@ All'utente è richiesto di:
 	\item modificare il commento relativo al blocco return.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.31}{TVFO4.31} & L'utente intende inserire un blocco else.
+\hypertarget{TV4.31}{TV112} & L'utente intende inserire un blocco else.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1328,7 +1300,7 @@ All'utente è richiesto di:
 	\item indicare dove inserire il blocco else nell'apposita area.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.31.1}{TVFO4.31.1} & L'utente intende inserire un commento per un blocco else.
+\hypertarget{TV4.31.1}{TV113} & L'utente intende inserire un commento per un blocco else.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1336,7 +1308,7 @@ All'utente è richiesto di:
 	\item inserire il commento relativo al blocco else.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.32}{TVFO4.32} & L'utente intende rimuovere un blocco else esistente.
+\hypertarget{TV4.32}{TV114} & L'utente intende rimuovere un blocco else esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1344,7 +1316,7 @@ All'utente è richiesto di:
 	\item premere sul pulsante di cancellazione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.33}{TVFO4.33} & L'utente intende ridurre la dimensione di un blocco else.
+\hypertarget{TV4.33}{TV115} & L'utente intende ridurre la dimensione di un blocco else.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1352,7 +1324,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di riduzione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.34}{TVFD4.34} & L'utente intende espandere la dimensione di un blocco else.
+\hypertarget{TV4.34}{TV116} & L'utente intende espandere la dimensione di un blocco else.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1360,7 +1332,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di espansione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.35.1}{TVFO4.35.1} & L'utente intende modificare il commento relativo ad un blocco else esistente.
+\hypertarget{TV4.35.1}{TV117} & L'utente intende modificare il commento relativo ad un blocco else esistente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle attività di un particolare metodo;
@@ -1368,7 +1340,7 @@ All'utente è richiesto di:
 	\item modificare il commento relativo al blocco else.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.36}{TVFO4.36} & L'utente intende ridurre la dimensione di un blocco variabile.
+\hypertarget{TV4.36}{TV118} & L'utente intende ridurre la dimensione di un blocco variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1376,7 +1348,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di riduzione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.37}{TVFD4.37} & L'utente intende espandere la dimensione di un blocco variabile.
+\hypertarget{TV4.37}{TV119} & L'utente intende espandere la dimensione di un blocco variabile.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1384,7 +1356,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di espansione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO4.38}{TVFO4.38} & L'utente intende ridurre la dimensione di un blocco custom.
+\hypertarget{TV4.38}{TV120} & L'utente intende ridurre la dimensione di un blocco custom.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1392,7 +1364,7 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di riduzione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFD4.39}{TVFD4.39} & L'utente intende espandere la dimensione di un blocco custom.
+\hypertarget{TV4.39}{TV121} & L'utente intende espandere la dimensione di un blocco custom.
 All'utente è richiesto di:
 \begin{itemize}
 	\item trovarsi nella schermata di gestione del diagramma delle classi del progetto;
@@ -1400,13 +1372,13 @@ All'utente è richiesto di:
 	\item selezionare l'opzione di espansione dimensione.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO5}{TVFO5} & L'utente intende salvare il progetto corrente.
+\hypertarget{TV5}{TV122} & L'utente intende salvare il progetto corrente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item premere sul pulsante di salvataggio.
 \end{itemize} & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TVFO6}{TVFO6} & L'utente intende scaricare il codice relativo al progetto corrente.
+\hypertarget{TV6}{TV123} & L'utente intende scaricare il codice relativo al progetto corrente.
 All'utente è richiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante genera codice;
@@ -1428,153 +1400,151 @@ I test di sistema vengono eseguiti sul prodotto una volta che tutte le sue compo
 \textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 \hline
 \endhead
-\hypertarget{TSFO1}{TSFO1} & Verificare che il sistema permetta all'utente di caricare un progetto. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO1.1}{TSFO1.1} & Verificare che il sistema visualizzi un messaggio d'errore se l'attore cerca di caricare come progetto un file incompatibile con l'editor stesso. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO2}{TSFO2} & Verificare che il sistema permetta all'utente di creare un nuovo progetto. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1}{TSFO3.1} & Verificare che il sistema permetta all'utente di inserire una classe nel diagramma delle classi. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.2}{TSFO3.1.2} & Verificare che il sistema permetta all'utente di inserire il nome di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.4}{TSFO3.1.4} & Verificare che il sistema permetta all'utente di inserire un attributo per la classe. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.4.1}{TSFO3.1.4.1} & Verificare che il sistema permetta all'utente di scegliere la visibilità per l'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.4.2}{TSFO3.1.4.2} & Verificare che il sistema permetta all'utente di inserire il nome dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.4.3}{TSFO3.1.4.3} & Verificare che il sistema permetta all'utente di inserire il tipo dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.4.5}{TSFO3.1.4.5} & Verificare che il sistema permetta all'utente di inserire il valore di default dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.5}{TSFO3.1.5} & Verificare che il sistema permetta all'utente di rimuovere un attributo precedentemente inserito & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6}{TSFO3.1.6} & Verificare che il sistema permetta all'utente di inserire un metodo per una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.1}{TSFO3.1.6.1} & Verificare che il sistema permetta all'utente di scegliere la visibilità per un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.2}{TSFO3.1.6.2} & Verificare che il sistema permetta all'utente di inserire il nome di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.3}{TSFO3.1.6.3} & Verificare che il sistema permetta all'utente di inserire un parametro per un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.3.1}{TSFO3.1.6.3.1} & Verificare che il sistema permetta all'utente di inserire il nome di un parametro del metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.3.2}{TSFO3.1.6.3.2} & Verificare che il sistema permetta all'utente di inserire il tipo del parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.3.3}{TSFO3.1.6.3.3} & Verificare che il sistema permetta all'utente di inserire il valore di default di un parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.4}{TSFO3.1.6.4} & Verificare che il sistema permetta all'utente di inserire il tipo di ritorno di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.6.6}{TSFO3.1.6.6} & Verificare che il sistema permetta all'utente di rimuovere un parametro di un metodo precedentemente inseirito & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.1.7}{TSFO3.1.7} & Verificare che il sistema permetta all'utente di rimuovere un metodo precedentemente inserito & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.2}{TSFO3.2} & Verificare che il sistema permetta all'utente di inserire una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.2.1}{TSFO3.2.1} & Verificare che il sistema permetta all'utente di scegliere il nome di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.2.2}{TSFO3.2.2} & Verificare che il sistema permetta all'utente di inserire la classe di partenza della relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.2.3}{TSFO3.2.3} & Verificare che il sistema permetta all'utente di scegliere la classe di destinazione della relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.2.4}{TSFO3.2.4} & Verificare che il sistema permetta all'utente di scegliere la cardinalità di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.3}{TSFO3.3} & Verificare che il sistema permetta all'utente di inserire un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.3.1}{TSFO3.3.1} & Verificare che il sistema permetta all'utente di inserire il testo di un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1}{TS1} & Verificare che il sistema permetta all'utente di caricare un progetto. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS2}{TS2} & Verificare che il sistema visualizzi un messaggio d'errore se l'attore cerca di caricare come progetto un file incompatibile con l'editor stesso. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS3}{TS3} & Verificare che il sistema permetta all'utente di creare un nuovo progetto. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4}{TS4} & Verificare che il sistema permetta all'utente di inserire una classe nel diagramma delle classi. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS5}{TS5} & Verificare che il sistema permetta all'utente di inserire il nome di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS6}{TS6} & Verificare che il sistema permetta all'utente di inserire un attributo per la classe. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS7}{TS7} & Verificare che il sistema permetta all'utente di scegliere la visibilità per l'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS8}{TS8} & Verificare che il sistema permetta all'utente di inserire il nome dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS9}{TS9} & Verificare che il sistema permetta all'utente di inserire il tipo dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS10}{TS10} & Verificare che il sistema permetta all'utente di inserire il valore di default dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS11}{TS11} & Verificare che il sistema permetta all'utente di rimuovere un attributo precedentemente inserito & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS12}{TS12} & Verificare che il sistema permetta all'utente di inserire un metodo per una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS13}{TS13} & Verificare che il sistema permetta all'utente di scegliere la visibilità per un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS14}{TS14} & Verificare che il sistema permetta all'utente di inserire il nome di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS15}{TS15} & Verificare che il sistema permetta all'utente di inserire un parametro per un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS16}{TS16} & Verificare che il sistema permetta all'utente di inserire il nome di un parametro del metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS17}{TS17} & Verificare che il sistema permetta all'utente di inserire il tipo del parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS18}{TS18} & Verificare che il sistema permetta all'utente di inserire il valore di default di un parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS19}{TS19} & Verificare che il sistema permetta all'utente di inserire il tipo di ritorno di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS20}{TS20} & Verificare che il sistema permetta all'utente di rimuovere un parametro di un metodo precedentemente inseirito & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS21}{TS21} & Verificare che il sistema permetta all'utente di rimuovere un metodo precedentemente inserito & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS22}{TS22} & Verificare che il sistema permetta all'utente di inserire una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS23}{TS23} & Verificare che il sistema permetta all'utente di scegliere il nome di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS24}{TS24} & Verificare che il sistema permetta all'utente di inserire la classe di partenza della relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS25}{TS25} & Verificare che il sistema permetta all'utente di scegliere la classe di destinazione della relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS26}{TS26} & Verificare che il sistema permetta all'utente di scegliere la cardinalità di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS27}{TS27} & Verificare che il sistema permetta all'utente di inserire un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS28}{TS28} & Verificare che il sistema permetta all'utente di inserire il testo di un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TSFO3.4}{TSFO3.4} & Verificare che il sistema permetta all'utente di rimuovere una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.5}{TSFO3.5} & Verificare che il sistema permetta all'utente di rimuovere una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.6}{TSFO3.6} & Verificare che il sistema permetta all'utente di rimuovere un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS29}{TS29} & Verificare che il sistema permetta all'utente di rimuovere una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS30}{TS30} & Verificare che il sistema permetta all'utente di rimuovere una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS31}{TS31} & Verificare che il sistema permetta all'utente di rimuovere un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TSFO3.11.2}{TSFO3.11.2} & Verificare che il sistema permetta all'utente di modificare il nome di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.3.1}{TSFO3.11.3.1} & Verificare che il sistema permetta all'utente di modificare la visibilità di un attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.3.2}{TSFO3.11.3.2} & Verificare che il sistema permetta all'utente di modificare il nome di un attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.3.3}{TSFO3.11.3.3} & Verificare che il sistema permetta all'utente di modificare il tipo dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.3.5}{TSFO3.11.3.5} & Verificare che il sistema permetta all'utente di modificare il valore di default dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.4.1}{TSFO3.11.4.1} & Verificare che il sistema permetta all'utente di modificare la visibilità di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.4.2}{TSFO3.11.4.2} & Verificare che il sistema permetta all'utente di modificare il nome di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.4.3.1}{TSFO3.11.4.3.1} & Verificare che il sistema permetta all'utente di modificare il nome del parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.4.3.2}{TSFO3.11.4.3.2} & Verificare che il sistema permetta all'utente di modificare il tipo del parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.4.3.3}{TSFO3.11.4.3.3} & Verificare che il sistema permetta all'utente di modificare il valore di default di un parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.11.4.4}{TSFO3.11.4.4} & Verificare che il sistema permetta all'utente di modificare il tipo di ritorno di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.12.2}{TSFO3.12.2} & Verificare che il sistema permetta all'utente di modificare il nome di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.12.3}{TSFO3.12.3} & Verificare che il sistema permetta all'utente di modificare la classe1 di una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.12.4}{TSFO3.12.4} & Verificare che il sistema permetta all'utente di modificare la classe2 di una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.12.5}{TSFO3.12.5} & Verificare che il sistema permetta all'utente di modificare la cardinalità di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.13.1}{TSFO3.13.1} & Verificare che il sistema permetta all'utente di modificare il testo di un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.14}{TSFO3.14} & Verificare che il sistema permetta all'utente di specificare una classe come statica & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.15}{TSFO3.15} & Verificare che il sistema permetta all'utente di specificare una classe come astratta & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.16}{TSFO3.16} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Static" di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.17}{TSFO3.17} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Abstract" di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.18}{TSFO3.18} & Verificare che il sistema permetta all'utente di specificare un metodo come statico & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.19}{TSFO3.19} & Verificare che il sistema permetta all'utente di specificare un metodo come astratto & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.20}{TSFO3.20} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Static" di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO3.21}{TSFO3.21} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Abstract" di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4}{TSFO4} & Verificare che il sistema permetta all'utente di cliccare su un metodo di una classe ed aprire il relativo diagramma delle attività per quel metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.1}{TSFO4.1} & Verificare che il sistema permetta all'utente di inserire un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.1.1}{TSFO4.1.1} & Verificare che il sistema permetta all'utente di inserire il nome di una variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.1.2}{TSFO4.1.2} & Verificare che il sistema permetta all'utente di inserire il tipo di una variabile& \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.1.3}{TSFO4.1.4} & Verificare che il sistema permetta all'utente di inserire l'operazione per una variabile& \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.1.4}{TSFO4.1.4} & Verificare che il sistema permetta all'utente di inserire il valore per una variabile& \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.1.5}{TSFO4.1.5} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.3}{TSFO4.3} & Verificare che il sistema permetta all'utente di inserire un blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.3.1}{TSFO4.3.1} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.3.2}{TSFO4.3.2} & Verificare che il sistema permetta all'utente di completare il corpo del blocco if scegliendo tra una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.3.3}{TSFO4.3.3} & Verificare che il sistema permetta all'utente di completare il corpo del blocco else inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.3.4}{TSFO4.3.4} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.4}{TSFO4.4} & Verificare che il sistema permetta all'utente di inserire un blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.4.1}{TSFO4.4.1} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.4.2}{TSFO4.4.2} & Verificare che il sistema permetta all'utente di completare il corpo del blocco while inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.4.3}{TSFO4.4.3} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.5}{TSFO4.5} & Verificare che il sistema permetta all'utente di inserire un blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.5.1}{TSFO4.5.1} & Verificare che il sistema permetta all'utente di inserire l'inizializzazione del blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.5.2}{TSFO4.5.2} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.5.3}{TSFO4.5.3} & Verificare che il sistema permetta all'utente di inserire l'incremento/decremento del blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.5.4}{TSFO4.5.4} & Verificare che il sistema permetta all'utente di completare il corpo del blocco for inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.5.5}{TSFO4.5.5} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-
-
-\hypertarget{TSFO4.6}{TSFO4.6} & Verificare che il sistema permetta all'utente di inserire un blocco custom di codice & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.6.1}{TSFO4.6.1} & Verificare che il sistema permetta all'utente di inserire il contenuto del blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.6.2}{TSFO4.6.2} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.7}{TSFO4.7} & Verificare che il sistema permetta all'utente di rimuovere un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.9}{TSFO4.9} & Verificare che il sistema permetta all'utente di rimuovere un blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.10}{TSFO4.10} & Verificare che il sistema permetta all'utente di rimuovere un blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.11}{TSFO4.11} & Verificare che il sistema permetta all'utente di rimuovere un blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.12}{TSFO4.12} & Verificare che il sistema permetta all'utente di rimuovere un blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.13}{TSFO4.13} & Verificare che il sistema permetta all'utente di ridurre il blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFD4.14}{TSFD4.14} & Verificare che il sistema permetta all'utente di espandere il blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFD4.15}{TSFD4.15} & Verificare che il sistema permetta all'utente di ridurre il blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFD4.16}{TSFD4.16} & Verificare che il sistema permetta all'utente di espandere il blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFD4.17}{TSFD4.17} & Verificare che il sistema permetta all'utente di ridurre il blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFD4.18}{TSFD4.18} & Verificare che il sistema permetta all'utente di espandere il blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFD4.19}{TSFD4.19} & Verificare che il sistema permetta all'utente di spostare uno dei blocchi inseriti all'interno del diagramma delle attività gestito in una nuova posizione & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.20.1}{TSFO4.20.1} & Verificare che il sistema permetta all'utente di modificare il nome della variabile relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.20.2}{TSFO4.20.2} & Verificare che il sistema permetta all'utente di modificare il tipo della variabile relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.20.3}{TSFO4.20.3} & Verificare che il sistema permetta all'utente di modificare il valore della variabile relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.20.4}{TSFO4.20.4} & Verificare che il sistema permetta all'utente di modificare l'operazione relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.22.1}{TSFO4.22.1} & Verificare che il sistema permetta all'utente di modificare la condizione relativo al blocco if/else & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.22.2}{TSFO4.22.2} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco if/else & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.23.1}{TSFO4.23.1} & Verificare che il sistema permetta all'utente di modificare la condizione relativa al blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.23.2}{TSFO4.23.2} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.24.1}{TSFO4.24.1} & Verificare che il sistema permetta all'utente di modificare l'inizializzazione relativa al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.24.2}{TSFO4.24.2} & Verificare che il sistema permetta all'utente di modificare la condizione relativa al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.24.3}{TSFO4.24.3} & Verificare che il sistema permetta all'utente di modificare il passo d'incremento/decremento relativo al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.24.4}{TSFO4.24.4} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.25.1}{TSFO4.25.1} & Verificare che il sistema permetta all'utente di modificare il contenuto in codice relativo al blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.25.2}{TSFO4.25.2} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.26}{TSFO4.26} & Verificare che il sistema permetta all'utente di inserire un blocco return all'interno del diagramma delle attività & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.26.1}{TSFO4.26.1} & Verificare che il sistema permetta all'utente di inserire il valore di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.26.2}{TSFO4.26.2} & Verificare che il sistema permetta all'utente di inserire il commento di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.27.1}{TSFO4.27.1} & Verificare che il sistema permetta all'utente di modificare il valore di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.27.2}{TSFO4.27.2} & Verificare che il sistema permetta all'utente di modificare il commento di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.28}{TSFO4.28} & Verificare che il sistema permetta all'utente di rimuovere un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.29}{TSFO4.29} & Verificare che il sistema permetta all'utente di espandere un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.30}{TSFO4.30} & Verificare che il sistema permetta all'utente di ridurre un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS32}{TS32} & Verificare che il sistema permetta all'utente di modificare il nome di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS33}{TS33} & Verificare che il sistema permetta all'utente di modificare la visibilità di un attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS34}{TS34} & Verificare che il sistema permetta all'utente di modificare il nome di un attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS35}{TS35} & Verificare che il sistema permetta all'utente di modificare il tipo dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS36}{TS36} & Verificare che il sistema permetta all'utente di modificare il valore di default dell'attributo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS37}{TS37} & Verificare che il sistema permetta all'utente di modificare la visibilità di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS38}{TS38} & Verificare che il sistema permetta all'utente di modificare il nome di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS39}{TS39} & Verificare che il sistema permetta all'utente di modificare il nome del parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS40}{T40} & Verificare che il sistema permetta all'utente di modificare il tipo del parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS41}{TS41} & Verificare che il sistema permetta all'utente di modificare il valore di default di un parametro di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS42}{TS42} & Verificare che il sistema permetta all'utente di modificare il tipo di ritorno di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS43}{TS43} & Verificare che il sistema permetta all'utente di modificare il nome di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS44}{TS44} & Verificare che il sistema permetta all'utente di modificare la classe1 di una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS45}{TS45} & Verificare che il sistema permetta all'utente di modificare la classe2 di una relazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS46}{TS46} & Verificare che il sistema permetta all'utente di modificare la cardinalità di un'associazione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS47}{TS47} & Verificare che il sistema permetta all'utente di modificare il testo di un commento & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS48}{TS48} & Verificare che il sistema permetta all'utente di specificare una classe come statica & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS49}{TS49} & Verificare che il sistema permetta all'utente di specificare una classe come astratta & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS50}{TS50} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Static" di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS51}{TS51} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Abstract" di una classe & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS52}{TS52} & Verificare che il sistema permetta all'utente di specificare un metodo come statico & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS53}{TS53} & Verificare che il sistema permetta all'utente di specificare un metodo come astratto & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS54}{TS54} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Static" di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS55}{TS55} & Verificare che il sistema permetta all'utente di rimuovere la specifica "Abstract" di un metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS56}{TS56} & Verificare che il sistema permetta all'utente di cliccare su un metodo di una classe ed aprire il relativo diagramma delle attività per quel metodo & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS57}{TS57} & Verificare che il sistema permetta all'utente di inserire un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS58}{TS58} & Verificare che il sistema permetta all'utente di inserire il nome di una variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS59}{TS59} & Verificare che il sistema permetta all'utente di inserire il tipo di una variabile& \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS60}{TS60} & Verificare che il sistema permetta all'utente di inserire l'operazione per una variabile& \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS61}{TS61} & Verificare che il sistema permetta all'utente di inserire il valore per una variabile& \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS62}{TS62} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS63}{TS63} & Verificare che il sistema permetta all'utente di inserire un blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS64}{TS64} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.3.2}{TS65} & Verificare che il sistema permetta all'utente di completare il corpo del blocco if scegliendo tra una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.3.3}{TS66} & Verificare che il sistema permetta all'utente di completare il corpo del blocco else inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.3.4}{TS67} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.4}{TS68} & Verificare che il sistema permetta all'utente di inserire un blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.4.1}{TS69} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.4.2}{TS70} & Verificare che il sistema permetta all'utente di completare il corpo del blocco while inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.4.3}{TS71} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.5}{TS72} & Verificare che il sistema permetta all'utente di inserire un blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.5.1}{TS73} & Verificare che il sistema permetta all'utente di inserire l'inizializzazione del blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.5.2}{TS74} & Verificare che il sistema permetta all'utente di inserire la condizione da verificare del blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.5.3}{TS75} & Verificare che il sistema permetta all'utente di inserire l'incremento/decremento del blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.5.4}{TS76} & Verificare che il sistema permetta all'utente di completare il corpo del blocco for inserendo una serie di blocchi tra quelli resi disponibili dall'editor & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.5.5}{TS77} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
 
 
-\hypertarget{TSFO4.31}{TSFO4.31} & Verificare che il sistema permetta all'utente di inserire un blocco else all'interno del diagramma delle attività & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.32.1}{TSFO4.32.1} & Verificare che il sistema permetta all'utente di inserire il commento di un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.33.1}{TSFO4.33.1} & Verificare che il sistema permetta all'utente di modificare il commento di un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.34}{TSFO4.34} & Verificare che il sistema permetta all'utente di rimuovere un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.35}{TSFO4.35} & Verificare che il sistema permetta all'utente di espandere un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.36}{TSFO4.36} & Verificare che il sistema permetta all'utente di ridurre un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.37}{TSFO4.37} & Verificare che il sistema permetta all'utente di espandere un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.38}{TSFO4.38} & Verificare che il sistema permetta all'utente di ridurre un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.39}{TSFO4.39} & Verificare che il sistema permetta all'utente di espandere un blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO4.40}{TSFO4.40} & Verificare che il sistema permetta all'utente di ridurre un blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.6}{TS78} & Verificare che il sistema permetta all'utente di inserire un blocco custom di codice & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.6.1}{TS79} & Verificare che il sistema permetta all'utente di inserire il contenuto del blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.6.2}{TS80} & Verificare che il sistema permetta all'utente di inserire un commento per il blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.7}{TS81} & Verificare che il sistema permetta all'utente di rimuovere un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.9}{TS82} & Verificare che il sistema permetta all'utente di rimuovere un blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.10}{TS83} & Verificare che il sistema permetta all'utente di rimuovere un blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.11}{TS84} & Verificare che il sistema permetta all'utente di rimuovere un blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.12}{TS85} & Verificare che il sistema permetta all'utente di rimuovere un blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.13}{TS86} & Verificare che il sistema permetta all'utente di ridurre il blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.14}{TS87} & Verificare che il sistema permetta all'utente di espandere il blocco if & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.15}{TS88} & Verificare che il sistema permetta all'utente di ridurre il blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.16}{TS89} & Verificare che il sistema permetta all'utente di espandere il blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.17}{TS90} & Verificare che il sistema permetta all'utente di ridurre il blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.18}{TS91} & Verificare che il sistema permetta all'utente di espandere il blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.19}{TS92} & Verificare che il sistema permetta all'utente di spostare uno dei blocchi inseriti all'interno del diagramma delle attività gestito in una nuova posizione & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.20.1}{TS93} & Verificare che il sistema permetta all'utente di modificare il nome della variabile relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.20.2}{TS94} & Verificare che il sistema permetta all'utente di modificare il tipo della variabile relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.20.3}{TS95} & Verificare che il sistema permetta all'utente di modificare il valore della variabile relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.20.4}{TS96} & Verificare che il sistema permetta all'utente di modificare l'operazione relativa al blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.22.1}{TS97} & Verificare che il sistema permetta all'utente di modificare la condizione relativo al blocco if/else & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.22.2}{TS98} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco if/else & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.23.1}{TS99} & Verificare che il sistema permetta all'utente di modificare la condizione relativa al blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.23.2}{TS100} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco while & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.24.1}{TS101} & Verificare che il sistema permetta all'utente di modificare l'inizializzazione relativa al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.24.2}{TS102} & Verificare che il sistema permetta all'utente di modificare la condizione relativa al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.24.3}{TS103} & Verificare che il sistema permetta all'utente di modificare il passo d'incremento/decremento relativo al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.24.4}{TS104} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco for & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.25.1}{TS105} & Verificare che il sistema permetta all'utente di modificare il contenuto in codice relativo al blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.25.2}{TS106} & Verificare che il sistema permetta all'utente di modificare il commento relativo al blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.26}{TS107} & Verificare che il sistema permetta all'utente di inserire un blocco return all'interno del diagramma delle attività & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.26.1}{TS108} & Verificare che il sistema permetta all'utente di inserire il valore di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.26.2}{TS109} & Verificare che il sistema permetta all'utente di inserire il commento di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.27.1}{TS110} & Verificare che il sistema permetta all'utente di modificare il valore di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.27.2}{TS111} & Verificare che il sistema permetta all'utente di modificare il commento di un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.28}{TS112} & Verificare che il sistema permetta all'utente di rimuovere un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.29}{TS113} & Verificare che il sistema permetta all'utente di espandere un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.30}{TS114} & Verificare che il sistema permetta all'utente di ridurre un blocco return & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.31}{TS115} & Verificare che il sistema permetta all'utente di inserire un blocco else all'interno del diagramma delle attività & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.32.1}{TS116} & Verificare che il sistema permetta all'utente di inserire il commento di un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.33.1}{TS117} & Verificare che il sistema permetta all'utente di modificare il commento di un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.34}{TS118} & Verificare che il sistema permetta all'utente di rimuovere un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.35}{TS119} & Verificare che il sistema permetta all'utente di espandere un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.36}{TS120} & Verificare che il sistema permetta all'utente di ridurre un blocco else & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.37}{TS121} & Verificare che il sistema permetta all'utente di espandere un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.38}{TS122} & Verificare che il sistema permetta all'utente di ridurre un blocco variabile & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.39}{TS123} & Verificare che il sistema permetta all'utente di espandere un blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS4.40}{TS124} & Verificare che il sistema permetta all'utente di ridurre un blocco custom & \textcolor{Green}{\textit{Superato}}\\ \hline
 
-\hypertarget{TSFO5}{TSFO5} & Verificare che il sistema permetta all'utente di salvare il progretto & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO6}{TSFO6} & Verificare che il sistema permetta all'utente di ottenere automaticamente una cartella compressa contenente i diagrammi disegnati da SWEDesigner, l'applicativo generato tramite i diagrammi forniti dall'utente ed il codice sorgente nel linguaggio target & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO7}{TSFO7} & Verificare che il sistema riceva una richiesta http post contenente il file \gloss{JSON} generato dal programma utente & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO8.1}{TSFO8.1} & Verificare che il sistema traduca il file JSON in un oggetto Java corrispondente & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO8.2}{TSFO8.2} & Verificare che il sistema traduca l'oggetto Java nel corrispondente codice sorgente Java & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO9}{TSFO9} & Verificare che il sistema compili il codice sorgente Java generato & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO10}{TSFO10} & Verificare che il sistema crei una cartella compressa contenente il file JSON, il codice sorgente Java e il programmma Java compilato  & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSFO11}{TSFO11} & Verificare che il sistema elabori una risposta http contenente l'indirizzo della cartella compressa creata & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO1.1}{TSVO1.1} & Verificare che l'applicativo lato \gloss{client} sia realizzato in HTML5, CSS3 e JavaScript & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO1.2}{TSVO1.2} & verificare che l’applicativo lato \gloss{server} sia realizzato in Java con server \gloss{Tomcat} & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO1.3}{TSVO1.3} & Verificare che l’applicativo funziona su Mozilla Firefox versione 43 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO1.4}{TSVO1.4} & Verificare che l’applicativo funzioni su Google Chrome versione 47 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO1.5}{TSVO1.5} & Verificare che l’applicativo funzioni su Internet Explorer versione 11 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO1.6}{TSVO1.6} & Verificare che l’applicativo funzioni su Safari versione 9 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO1.7}{TSVO1.7} & Verificare che l’applicativo funzioni su Microsoft Edge versione 25 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TSVO2}{TSVO2} & Verificare che il progetto sia sviluppato sulla piattaforma \gloss{GitHub} in modalità pubblica & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS5}{TS125} & Verificare che il sistema permetta all'utente di salvare il progretto & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS6}{TS126} & Verificare che il sistema permetta all'utente di ottenere automaticamente una cartella compressa contenente i diagrammi disegnati da SWEDesigner, l'applicativo generato tramite i diagrammi forniti dall'utente ed il codice sorgente nel linguaggio target & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS7}{TS127} & Verificare che il sistema riceva una richiesta http post contenente il file \gloss{JSON} generato dal programma utente & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS8.1}{TS128} & Verificare che il sistema traduca il file JSON in un oggetto Java corrispondente & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS8.2}{TS129} & Verificare che il sistema traduca l'oggetto Java nel corrispondente codice sorgente Java & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS9}{TS130} & Verificare che il sistema compili il codice sorgente Java generato & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS10}{TS131} & Verificare che il sistema crei una cartella compressa contenente il file JSON, il codice sorgente Java e il programmma Java compilato  & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS11}{TS132} & Verificare che il sistema elabori una risposta http contenente l'indirizzo della cartella compressa creata & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1.1}{TS133} & Verificare che l'applicativo lato \gloss{client} sia realizzato in HTML5, CSS3 e JavaScript & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1.2}{TS134} & verificare che l’applicativo lato \gloss{server} sia realizzato in Java con server \gloss{Tomcat} & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1.3}{TS135} & Verificare che l’applicativo funziona su Mozilla Firefox versione 43 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1.4}{TS136} & Verificare che l’applicativo funzioni su Google Chrome versione 47 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1.5}{TS137} & Verificare che l’applicativo funzioni su Internet Explorer versione 11 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1.6}{TS138} & Verificare che l’applicativo funzioni su Safari versione 9 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TS1.7}{TS138} & Verificare che l’applicativo funzioni su Microsoft Edge versione 25 o superiore & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TSO2}{TS140} & Verificare che il progetto sia sviluppato sulla piattaforma \gloss{GitHub} in modalità pubblica & \textcolor{Green}{\textit{Superato}}\\ \hline
 \caption[Test di sistema]{Test di sistema}
 \label{tab:sys}
 \end{longtable}
@@ -2784,7 +2754,7 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 		\hline
 		\textbf{Copertura requisiti desiderabili} &80-100 &50-100 &0\\
 		\hline
-		\textbf{Percentuale test superati} &100 &90-100 &0\\
+		\textbf{Percentuale test superati} &100 &90-100 &100\\
 		\hline
 		\textbf{Validazione W3C} &0 &0-20 &1\\
 		\hline
@@ -2808,17 +2778,13 @@ All'interno di questa sezione vengono riportati gli esiti delle attività di ver
 	\hline
 	\textbf{Metrica} & \textbf{Valore/range obiettivo} & \textbf{Valore/range accettabile} & \textbf{Valore/range effettivo} \\
 	\hline
-	percentuale test unità eseguiti & $100$ & $90-100$ & $0$\\
+	percentuale test unità eseguiti & $100$ & $90-100$ & $100$\\
 	\hline
-	percentuale test integrazione eseguiti & $100$ & $90-100$ & $0$\\
+	percentuale test integrazione eseguiti & $100$ & $90-100$ & $100$\\
 	\hline
-	percentuale test sistema eseguiti & $100$ & $90-100$ & $0$\\
+	percentuale test sistema eseguiti & $100$ & $90-100$ & $100$\\
 	\hline
-	percentuale test validazione eseguiti & $100$ & $90-100$ & $0$\\
-	\hline
-	statement coverage &$100$&$80-100$&$0$\\
-	\hline
-	branch coverage &$100$&$80-100$&$0$\\
+	percentuale test validazione eseguiti & $100$ & $90-100$ & $100$\\
 	\hline
 \end{tabular}
 \end{center}
