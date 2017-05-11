@@ -49,7 +49,7 @@ La classe viene utilizzata per avviare l'applicazione spring
 \begin{itemize}
 \item \nogloxy{\texttt{+ main(args: String[]): void}}
 \\ Metodo principale che permette l'avvio dell'applicazione spring
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{args: String[]}}
 \\ Rappresenta gli eventuali parametri passa al programma.
@@ -94,7 +94,7 @@ questa classe si occupa di ricevere le richieste REST provenienti dal client.
 \begin{itemize}
 \item \nogloxy{\texttt{+ compile(pathFolder: String): List<String>}}
 \\ Compila un file sorgente in un eseguibile; ritorna una lista di errori di compilazione, se ce ne sono.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{pathFolder: String}}
 \\ Rappresenta la posizione della cartella nella quale sono presenti i file sorgente da compilare, relativi ad una particolare richiesta.
@@ -132,14 +132,14 @@ questa interfaccia si occupa di fornire un oggetto compiler generico a chi lo ri
 \begin{itemize}
 \item \nogloxy{\texttt{+ compile(pathFolder: String): List<String>}}
 \\ Crea i file compilati con estensione .class relativi ai file sorgente .java contenuti nella cartella che ha come percorso la stringa passata alla funzione stessa.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{pathFolder: String}}
 \\ Rappresenta la posizione della cartella nella quale sono presenti i file sorgente .java da compilare, relativi ad una particolare richiesta.
 \end{itemize}
 \item \nogloxy{\texttt{- compileFile(fileName: String): List<String>}}
 \\ Crea il file compilato con estensione .class relativo al file sorgente .java passato come parametro.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{fileName: String}}
 \\ Rappresenta il percorso di un file con estensione .java.
@@ -157,10 +157,6 @@ Questo package contiene i vari controller che implementano il pattern Front Cont
 \subsubsection{Classi}
 \subsubsubsection{\nogloxy{swedesigner::server::controller::RequestHandlerController}}
 \label{\nogloxy{swedesigner::server::controller::RequestHandlerController}}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/HandleGenerationRequestSequence.png}}
-\end{figure}
 \begin{figure}[h]
 \centering
 \nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/RequestHandlerController.png}}
@@ -188,19 +184,25 @@ questa classe si occupa di creare e salvare su disco un archivio compresso conte
 \begin{itemize}
 \item \nogloxy{\texttt{- compiler: Compiler}}
 \\ Rifermento all'istanza di Compiler da utilizzare
+\item \nogloxy{\texttt{- compressor: Compressor}}
+\\ Riferimento all'istanza di Compressor da utilizzare.
 \item \nogloxy{\texttt{- generator: Generator}}
 \\ Riferimento all'istanza di Generator da utilizzare.
+\item \nogloxy{\texttt{- parser: Parser}}
+\\ Riferimento all'istanza di Parser da utilizzare.
+\item \nogloxy{\texttt{- uploadFolder: String}}
+\\ Percorso della cartella all'interno del server nella quale memorizzare l'archivio zip da ritornare all'utente.
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
 \item \nogloxy{\texttt{- createDirectory(pathFolder: String): void}}
 \\ Gestisce la creazione di un'apposita cartella per la particolare richiesta ricevuta.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{pathFolder: String}}
 \\ Rappresenta la posizione della cartella che verrà creata relativa ad una particolare richiesta.
 \end{itemize}
-\item \nogloxy{\texttt{+ HandleGenerationRequest(json: String, IdReq: String): void}}
+\item \nogloxy{\texttt{+ handleGenerationRequest(httpEntity: HttpEntity<String>): ResponseEntity<?>}}
 \\ Il metodo riceve a partire dalla richiesta del client una stringa in formato .json ed anche l'id della richiesta stessa.
 Il suo compito è:
 \begin{itemize}
@@ -212,10 +214,8 @@ Il suo compito è:
 \end{itemize}
 \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{json: String}}
-\\ Rappresenta il contenuto del file .json in forma di stringa.
-\item \nogloxy{\texttt{IdReq: String}}
-\\ Rappresenta l'identificatore della richiesta ricevuta.
+\item \nogloxy{\texttt{httpEntity: HttpEntity<String>}}
+\\ Richiesta http contenente il file .json prodotto dall'editor.
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -259,11 +259,11 @@ questa interfaccia si occupa di fornire un oggetto template generico a chi lo ri
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ generate(IdReq: String, parsedProgram: ParsedProgram): void}}
+\item \nogloxy{\texttt{+ generate(idReq: String, parsedProgram: ParsedProgram): void}}
 \\ Crea e salva i file sorgente del programma.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{IdReq: String}}
+\item \nogloxy{\texttt{idReq: String}}
 \\ Rappresenta l'identificatore della richiesta ricevuta.
 \item \nogloxy{\texttt{parsedProgram: ParsedProgram}}
 \\ Rappresenta l'oggetto ParsedProgram che sarà trasformato nel codice di un particolare linguaggio. 
@@ -304,13 +304,13 @@ questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ generate(parsedProgram: ParsedProgram, IdReq: String): void}}
+\item \nogloxy{\texttt{+ generate(parsedProgram: ParsedProgram, idReq: String): void}}
 \\ Crea e salva i file sorgente .java del programma.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedProgram: ParsedProgram}}
 \\ Rappresenta l'oggetto ParsedProgram che sarà trasformato in codice Java. 
-\item \nogloxy{\texttt{IdReq: String}}
+\item \nogloxy{\texttt{idReq: String}}
 \\ Rappresenta l'identificatore della richiesta ricevuta.
 \end{itemize}
 \end{itemize}
@@ -318,22 +318,6 @@ questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a
 \subsection{\nogloxy{swedesigner::server::parser}}
 \label{\nogloxy{swedesigner::server::parser}}
 \subsubsection{Informazioni generali}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/ParserActivity.png}}
-\end{figure}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneCorpiMetodiActivity.png}}
-\end{figure}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneTipiActivity.png}}
-\end{figure}
-\begin{figure}[h]
-\centering
-\nogloxy{\includegraphics[scale=0.4,keepaspectratio]{img/server/CreazioneRelazioniActivity.png}}
-\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}\\
 Questo package presenta le classi utili all'attività di parsing dei dati ricevuti dai client.
@@ -369,14 +353,14 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 \begin{itemize}
 \item \nogloxy{\texttt{- attrBuilder(currentAttr: JSONObject): ParsedAttribute}}
 \\ Costruisce l'oggetto relativo ad uno dei campi dati delle classi del programma.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{currentAttr: JSONObject}}
 \\ Rappresenta un attributo/campo dato in forma JSON.
 \end{itemize}
 \item \nogloxy{\texttt{- createActivity(value: JSONObject, type: String): ParsedInstruction}}
 \\ Costruisce l'oggetto relativo ad una particolare istruzione del programma.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{value: JSONObject}}
 \\ Rappresenta un particolare blocco di istruzioni in forma JSON.
@@ -385,7 +369,7 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 \end{itemize}
 \item \nogloxy{\texttt{+ createParsedProgram(jsonString: String): ParsedProgram}}
 \\ Traduce la stringa json in una corrispondente struttura ad oggetti.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{jsonString: String}}
 \\ Rappresenta il contenuto del file .json in forma di stringa.
@@ -394,14 +378,14 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 \\ Ritorna l'attributo errors.
 \item \nogloxy{\texttt{- methBodies(jsonMethods: JSONArray): HashMap<String, List<ParsedInstruction>}}
 \\ Crea la struttura ad oggetti relativa al corpo dei metodi del programma.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{jsonMethods: JSONArray}}
 \\ Rappresenta l'insieme dei corpi dei metodi in forma JSON.
 \end{itemize}
 \item \nogloxy{\texttt{- methBuilder(method: JSONObject, methBodies: HashMap<String, List<ParsedInstruction>): ParsedMethod}}
 \\ Realizza l'oggetto contenente le informazioni relative all'intestazione di uno dei metodi del programma
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{method: JSONObject}}
 \\ Rappresenta la segnatura di un metodo in forma JSON.
@@ -410,7 +394,7 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 \end{itemize}
 \item \nogloxy{\texttt{- recursiveBuilder(instruction: JSONObject, jsonBlock: JSONArray, position: int): ParsedInstruction}}
 \\ Crea il contenuto del corpo di una delle istruzioni non atomiche del programma.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{instruction: JSONObject}}
 \\ Rappresenta un'istruzione in forma JSON.
@@ -421,7 +405,7 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 \end{itemize}
 \item \nogloxy{\texttt{- relBuilder(jsonRels: JSONArray, allTypes: HashMap<String, List<ParsedType>): void}}
 \\ Aggiunge nei tipi precedentemente creati le informazioni relative alle relazioni tra essi.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{jsonRels: JSONArray}}
 \\ Rappresenta l'insieme delle relazioni in forma JSON.
@@ -430,7 +414,7 @@ questa classe rappresenta l'entità che possiede al suo interno tutte le compone
 \end{itemize}
 \item \nogloxy{\texttt{- typeBuilder(jsonClasses: JSONArray, methBodies: HashMap<String, List<ParsedInstruction>): HashMap<String, List<ParsedType>}}
 \\ Costruisce gli oggetti relativi ai tipi del programma (classi ed intefacce).
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{jsonClasses: JSONArray}}
 \\ Rappresenta l'insieme dei tipi in forma JSON.
@@ -512,7 +496,7 @@ questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si 
 \\ Ritorna la visibilità di un oggetto ParsedAttribute.
 \item \nogloxy{\texttt{+ ParsedAttribute(isStatic: boolean, visibility: String, type: String, name: String, operation: String, value: String)}}
 \\ Costruisce un oggetto ParsedAttribute.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{isStatic: boolean}}
 \\ Indica se il ParsedAttribute che si sta creando è un oggetto statico.
@@ -529,7 +513,7 @@ questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si 
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedAttribute in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -576,21 +560,21 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \begin{itemize}
 \item \nogloxy{\texttt{+ addField(parsedAttribute: ParsedAttribute): void}}
 \\ Aggiunge all'oggetto ParsedClass un attributo rappresentato da un oggetto ParsedAttribute.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedAttribute: ParsedAttribute}}
 \\ Indica il ParsedAttribute che deve essere aggiunto alla ParsedClass.
 \end{itemize}
 \item \nogloxy{\texttt{+ addMethod(parsedMethod: ParsedMethod): void}}
 \\ Aggiunge ad un oggetto ParsedClass un metodo rappresentato da un oggetto ParsedMethod.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedMethod: ParsedMethod}}
 \\ Indica il ParsedMethod che deve essere aggiunto alla ParsedClass.
 \end{itemize}
 \item \nogloxy{\texttt{+ addSupertype(name: String, type: String): void}}
 \\ Aggiunge il nome di uno dei "supertipi" diretti dell'oggetto ParsedClass.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{name: String}}
 \\ Indica il nome del "supertipo" che deve essere implementato o esteso.
@@ -603,7 +587,7 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \\ Ritorna informazioni relative astrattezza dell'oggetto ParsedClass.
 \item \nogloxy{\texttt{+ ParsedClass(name: String, isAbstract: boolean)}}
 \\ Costruisce un oggetto ParsedClass.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{name: String}}
 \\ Rappresenta il nome del particolare oggetto ParsedClass che si sta creando.
@@ -612,7 +596,7 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedClass in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -646,14 +630,14 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \begin{itemize}
 \item \nogloxy{\texttt{+ ParsedCustom(instruction: String)}}
 \\ Costruisce un oggetto ParsedCustom.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{instruction: String}}
 \\ Indica l'insieme di istruzioni inserite dall'utente.
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedCustom in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -699,7 +683,7 @@ questa classe astratta definisce un contratto comune tra le classi \texttt{Parse
 \begin{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedElement in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -735,14 +719,14 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \\ Ritorna l'insieme di istruzioni che compongono il corpo del relativo oggetto ParsedElse.
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedElse in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
 \end{itemize}
 \item \nogloxy{\texttt{+ setBody(parsedInstructions: List<ParsedInstruction>): void}}
 \\ Inserisce nel campo dati body del ParsedElse un insieme di ParsedInstruction, ossia inserisce il corpo all'interno del body dell'istruzione \emph{else}.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedInstructions: List<ParsedInstruction>}}
 \\ Rappresenta l'insieme di istruzioni da inserire nel corpo del corrispondente oggetto ParsedElse.
@@ -781,7 +765,7 @@ questa classe estende la classe astratta \textt{ParsedType} ed ha bisogno soltan
 \\ Ritorna la descrizione testuale di un errore rilevato in fase di parsing.
 \item \nogloxy{\texttt{+ ParsedException(error: String)}}
 \\ Costruisce un oggetto ParsedException.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{error: String}}
 \\ Rappresenta il contenuto di un particolare errore.
@@ -829,7 +813,7 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \\ Ritorna il passo di incremento o decremento di un oggetto ParsedFor.
 \item \nogloxy{\texttt{+ ParsedFor(init: String, condition: String, step: String)}}
 \\ Costruisce un oggetto ParsedFor.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{init: String}}
 \\ Rappresenta l'istruzione di inizializzazione del particolare oggetto ParsedFor che si sta creando.
@@ -841,14 +825,14 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedFor in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
 \end{itemize}
 \item \nogloxy{\texttt{+ setBody(parsedInstructions: List<ParsedInstruction>): void}}
 \\ Permette di assegnare un insieme di istruzioni al corpo di un oggetto ParsedFor.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedInstructions: List<ParsedInstruction>}}
 \\ Rappresenta l'insieme di istruzioni da inserire nel corpo del corrispondente oggetto ParsedFor.
@@ -888,21 +872,21 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \\ Ritorna la condizione di un oggetto ParsedIf.
 \item \nogloxy{\texttt{+ ParsedIf(condition: String)}}
 \\ Costruisce un oggetto ParsedIf.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{condition: String}}
 \\ Rappresenta la condizione del particolare oggetto ParsedIf che si sta creando.
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedIf in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
 \end{itemize}
 \item \nogloxy{\texttt{+ setBody(parsedInstructions: List<ParsedInstruction>): void}}
 \\ Inserisce nel campo dati body del ParsedIf un insieme di ParsedInstruction, ossia inserisce il corpo all'interno del body dell'istruzione \emph{if}.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedInstructions: List<ParsedInstruction>}}
 \\ Indica l'insieme di istruzioni da inserire nel corpo del corrispondente oggetto ParsedIf.
@@ -946,7 +930,7 @@ questa classe descrive il contratto di un elemento generico \texttt{Parsed}. Si 
 \begin{itemize}
 \item \nogloxy{\texttt{+ setBody(parsedInstructions: List<ParsedInstruction>): void}}
 \\ Permette di assegnare un insieme di istruzioni al corpo di un oggetto ParsedInstruction.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedInstructions: List<ParsedInstruction>}}
 \\ Rappresenta l'insieme di istruzioni da inserire nel corpo di una particolare ParsedInstruction.
@@ -982,21 +966,21 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \begin{itemize}
 \item \nogloxy{\texttt{+ addField(parsedAttribute: ParsedAttribute): void}}
 \\ Aggiunge all'oggetto ParsedInterface un campo dati rappresentato da un oggetto ParsedAttribute.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedAttribute: ParsedAttribute}}
 \\ Rappresenta un campo dati in forma di oggetto ParsedAttribute.
 \end{itemize}
 \item \nogloxy{\texttt{+ addMethod(parsedMethod: ParsedMethod): void}}
 \\ Aggiunge ad un oggetto ParsedInterface un metodo rappresentato da un oggetto ParsedMethod.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedMethod: ParsedMethod}}
 \\ Rappresenta un metodo in forma di oggetto ParsedMethod.
 \end{itemize}
 \item \nogloxy{\texttt{+ addSupertype(name: String, type: String): void}}
 \\ Aggiunge il nome di uno dei "supertipi" diretti dell'oggetto ParsedInterface.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{name: String}}
 \\ Rappresenta il nome del "supertipo" che deve essere esteso.
@@ -1005,14 +989,14 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \end{itemize}
 \item \nogloxy{\texttt{+ ParsedInterface(name: String)}}
 \\ Costruisce un oggetto ParsedInterface.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{name: String}}
 \\ Rappresenta il nome del particolare oggetto ParsedInterface che si sta creando.
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedInterface in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -1097,7 +1081,7 @@ questa classe astratta rappresenta la singola istruzione contenuta all'interno d
 \\ Ritorna la visibilità di un oggetto ParsedMethod.
 \item \nogloxy{\texttt{+ ParsedMethod(visibility: String, isStatic: boolean, isAbstract: boolean, returnType: String, args: List<ParsedAttribute>, body: List<ParsedInstruction>, name: String)}}
 \\ Costruisce un oggetto ParsedMethod.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{visibility: String}}
 \\ Rappresenta la visibilità dell'oggetto ParsedMethod che si sta creando.
@@ -1116,7 +1100,7 @@ questa classe astratta rappresenta la singola istruzione contenuta all'interno d
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Tempate): String}}
 \\ Traduce l'oggetto ParsedMethod in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Tempate}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -1153,19 +1137,19 @@ questa classe astratta definisce un contratto comune tra le classi \texttt{Parse
 \begin{itemize}
 \item \nogloxy{\texttt{+ addType(type: ParsedType): void}}
 \\ Aggiunge un tipo (ParsedClass o ParsedInterface) al ParsedProgram, ossia aggiunge una classe o un'interfaccia al programma.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{type: ParsedType}}
 \\ Rappresenta un ParsedType (ParsedClass o ParsedInterface) che deve essere inserito nel particolare ParsedProgram, ossia la classe o l'nterfaccia da aggiungere al programma.
 \end{itemize}
 \item \nogloxy{\texttt{+ getType(position: int): ParsedType}}
 \\ Ritorna l'i-esimo elemento (ParsedClass o ParsedInterface) contenuto nella lista di ParsedType.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{position: int}}
 \\ Rappresenta la posizione di un particolare ParsedType all'interno del ParsedProgram.
 \end{itemize}
-\item \nogloxy{\texttt{+ nClasses(): int}}
+\item \nogloxy{\texttt{+ numberClasses(): int}}
 \\ Ritorna il numero complessivo di classi ed interfacce che formano il ParsedProgram.
 \end{itemize}
 \end{itemize}
@@ -1198,14 +1182,14 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \\ Ritorna il valore del corrispondente oggetto ParsedReturn.
 \item \nogloxy{\texttt{+ ParsedReturn(value: String)}}
 \\ Costruisce un oggetto ParsedReturn.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{value: String}}
 \\ Rappresenta il valore che dovrà essere assegnato al campo dati value di un oggetto ParsedReturn.
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedReturn in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -1255,7 +1239,7 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \\ Ritorna il valore dell'oggetto ParsedStatement.
 \item \nogloxy{\texttt{+ ParsedStatment(type: String, name: String, operation: String, value: String)}}
 \\ Costruisce un oggetto ParsedStatement.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{type: String}}
 \\ Rappresenta il tipo dell'oggetto ParsedStatement che si sta creando.
@@ -1268,7 +1252,7 @@ dispone della possibilità di effettuare il render di un template in ingresso.
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedStatement in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
@@ -1319,21 +1303,21 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \begin{itemize}
 \item \nogloxy{\texttt{+ addField(parsedAttribute: ParsedAttribute): void}}
 \\ Aggiunge all'oggetto ParsedType un campo dati rappresentato da un oggetto ParsedAttribute.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedAttribute: ParsedAttribute}}
 \\ Rappresenta il campo dati da inserire in un particolare oggetto ParsedType.
 \end{itemize}
 \item \nogloxy{\texttt{+ addMethod(parsedMethod: ParsedMethod): void}}
 \\ Aggiunge ad un oggetto ParsedType un metodo rappresentato da un oggetto ParsedMethod.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedMethod: ParsedMethod}}
 \\ Rappresenta il metodo da inserire in un particolare ParsedType.
 \end{itemize}
 \item \nogloxy{\texttt{+ addSupertype(name: String, type: String): void}}
 \\ Aggiunge il nome di uno dei "supertipi" diretti dell'oggetto ParsedType.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{name: String}}
 \\ Indica il nome del "supertipo" che deve essere implementato o esteso.
@@ -1350,7 +1334,7 @@ questa classe rappresenta un metodo come insieme di istruzioni \texttt{ParsedIst
 \\ Ritorna il nome di un particolare ParsedType.
 \item \nogloxy{\texttt{+ ParsedType(name: String)}}
 \\ Costruisce un oggetto ParsedType.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{name: String}}
 \\ Rappresenta il nome dell'oggetto ParsedType che si sta creando.
@@ -1390,7 +1374,7 @@ deriva da \texttt{ParsedInstruction}.
 \\ Ritorna la condizione di un oggetto ParsedWhile.
 \item \nogloxy{\texttt{+ ParsedWhile(condition: String, body: List<ParsedInstruction>)}}
 \\ Costruisce un oggetto ParsedWhile.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{condition: String}}
 \\ Rappresenta la condizione dell'oggetto ParsedWhile che si sta creando.
@@ -1399,14 +1383,14 @@ deriva da \texttt{ParsedInstruction}.
 \end{itemize}
 \item \nogloxy{\texttt{+ renderTemplate(template: Template): String}}
 \\ Traduce l'oggetto ParsedWhile in una stringa che rappresenta il codice di un particolare linguaggio di programmazione.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{template: Template}}
 \\ Riferimento alla particolare istanza di Template da utilizzare.
 \end{itemize}
 \item \nogloxy{\texttt{+ setBody(parsedInstructions: List<ParsedInstruction>): void}}
 \\ Permette di assegnare un insieme di istruzioni al corpo di un oggetto ParsedWhile.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedInstructions: List<ParsedInstruction>}}
 \\ Rappresenta l'insieme di istruzioni da inserire nel corpo del corrispondente oggetto ParsedWhile.
@@ -1565,11 +1549,11 @@ questa classe si occupa di ricevere le richieste REST provenienti dal client.
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ zip(pathFolder: String): void}}
+\item \nogloxy{\texttt{+ zip(dirPath: String): void}}
 \\ Crea una cartella zip contenente i file sorgenti e compilati del programma e la relativa stringa in formato .json.
-\\ \textbf{Parametri}:
+\textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{pathFolder: String}}
+\item \nogloxy{\texttt{dirPath: String}}
 \\ Rappresenta la posizione della cartella, relativa ad una particolare richiesta, il cui contenuto verrà compresso in un file .zip.
 \end{itemize}
 \end{itemize}
