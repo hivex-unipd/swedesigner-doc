@@ -591,8 +591,6 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	\textbf{Metrica} & \textbf{Range/Valore accettazione} & \textbf{Strumenti di misura} \\
 	\hline
 	\endhead 
-	Branch Coverage &  $[80, 100]$ &  Travis CI \\
-	\hline 
 	Budget Variance &  $[-25, 0]$ &  Asana \\
 	\hline 
 	Complessità ciclomatica per metodo &  $[0, 10]$ &  CodePro Analytix \\
@@ -662,8 +660,6 @@ La verifica è un processo analitico che va implementato in due passi successivi
 	Profondità di annidamento dei blocchi &  $[0, 8]$ &  CodePro Analytix \\
 	\hline 
 	Profondità nella gerarchia &  $[0, 4]$ &  CodePro Analytix (codifica) e SDMetrics (progettazione) \\
-	\hline 
-	Statement Coverage &  $[80, 100]$ &  Travis CI \\
 	\hline 
 	Schedule Variance &  $[-25, 0]$ &  Asana \\
 	\hline 
@@ -936,10 +932,6 @@ Il numero di canali non dev'essere più di tre volte il numero di componenti del
 \section{Definizione delle metriche}
 
 
-\subsection{Branch Coverage}
-Tale metrica indica in percentuale il numero di cammini decisionali percorsi in ambito di testing rispetto al totale presente all'interno del codice. A differenza dello \gloss{Statement} Coverage che si limita a verificare la copertura di istruzioni, nel momento in cui tutti i rami decisionali sono coperti tale metrica assicura che nessuno di essi porti ad errori o situazioni inconsistenti.
-
-
 \subsection{Budget Variance}
 Tale metrica indica quanto il costo di una particolare attività di progetto si discosta rispetto alla pianificazione originaria definita nel documento \PdP. 
 
@@ -1185,11 +1177,7 @@ La profondità di un'interfaccia è stabilita pari a (1). La profondità della c
 
 Più una classe è posizionata in profondità all'interno di una gerarchia, maggiore è il numero di metodi e campi dati che essa potenzialmente eredita, cosa che rende più difficile controllare e predire il suo comportamento. Essa diventa più specializzata e può essere difficile comprendere un sistema con più livelli di profondità. Tuttavia, bisogna anche considerare che c'è un grande potenziale nel riuso dei metodi ereditati.
 
-Pertanto se un valore troppo alto di tale metrica è indice di un grado di complessità dell'architettura da limitarsi, un valore eccessivamente basso sottolinea un potenziale sottouso dei vantaggi dell'architettura orientata agli oggetti.
-
-
-\subsection{Statement Coverage}
-La metrica indica la percentuale di istruzioni che sono eseguite durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti comporta una maggiore probabilità che le componenti testate abbiano un ridotto numero di errori. Si può aumentare tale indice evitando di considerare i metodi che non richiedono test, come i metodi getter e setter.
+Pertanto se un valore troppo alto di tale metrica è indice di un grado di complessità dell'architettura da limitarsi, un valore eccessivamente basso sottolinea un potenziale sottoutilizzo dei vantaggi dell'architettura orientata agli oggetti.
 
 
 \subsection{Schedule Variance}
