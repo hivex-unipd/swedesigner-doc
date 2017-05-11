@@ -134,7 +134,7 @@ Una volta avviato il processo di sviluppo, i membri del gruppo devono affiancare
 \end{itemize}
 Infine, lo sviluppo del prodotto \emph{in toto} dev'essere verificato dall'esecuzione dei test di sistema e dal collaudo finale.
 
-\subsubsection{Consegna del prodotto}
+\subsubsection{Consegna del prodotto} \label{sec:supply}
 Il gruppo deve consegnare il prodotto dopo averlo collaudato pubblicamente; il collaudo deve includere almeno i seguenti punti:
 \begin{itemize}
 	\item illustrazione delle principali funzionalità del prodotto, che riassuma almeno i requisiti giudicati obbligatori nel documento \AdR;
@@ -695,12 +695,12 @@ La verifica è un processo analitico che va implementato in due passi successivi
 		\end{itemize}
 
 
-\subsection{Validazione}
-Ogni verifica di una parte della configurazione dev'essere vagliata dal responsabile di progetto; per questo, il responsabile deve controllare l'esito dei test e i risultati delle verifiche sui documenti. Egli può approvare le verifiche oppure chiedere di ripeterle. L'approvazione di una parte della configurazione determina:
-\begin{itemize}
-	\item l'incremento del numero di versione della parte approvata, secondo le norme in sezione \ref{sec:idvers};
-	\item la pubblicazione delle componenti validate sul ramo \texttt{master} del repository.
-\end{itemize}
+\subsection{Validazione} \label{sec:valid}
+Il gruppo deve accertare la correttezza e completezza del prodotto. Per questo, i membri del gruppo dovranno eseguire i test di validazione specificati nel Piano di Qualifica (versione attuale: \PdQ).
+
+I verificatori devono eseguire i test prima del collaudo; inoltre, tutti i membri devono essere preparati al fatto che, durante il collaudo, il committente e/o il proponente richiedano l'esecuzione di uno qualsiasi tra i test di validazione specificati.
+
+Il gruppo, infine, deve eseguire un collaudo pubblico alla presenza del committente e, se possibile, del proponente. Questo collaudo è normato alla sezione \ref{sec:supply}.
 
 
 
