@@ -1564,16 +1564,14 @@ I test di integrazione consentono di controllare che più moduli funzionino assi
 \textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 \hline
 \endhead
-\hypertarget{TI1}{TI1} & La richiesta di un client alla risorsa "/" oppure "/index.html" provoca una risposta del server con stato HTTP "200 OK" recante la pagina \emph{index.html}. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI2}{TI2} & La richiesta di un client alla risorsa "/generate" (che alleghi un file JSON valido) provoca una risposta del server con stato HTTP "200 OK" recante un archivio ZIP. & \textit{Non Implementato}\\ \hline
-\hypertarget{TI3}{TI3} & Il sistema gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e un \texttt{Compiler} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI4}{TI4} & Il sistema gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e i suoi membri di tipo \texttt{Parser}, \texttt{Generator}, \texttt{Compiler} e \texttt{Compressor} (del \texttt{swedesigner::server}). & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI5}{TI5} & Il sistema gestisce correttamente le componenti relative al package \texttt{generator}; in particolare, gestisce correttamente l'interazione tra un \texttt{Generator} e un \texttt{Template} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI6}{TI6} & Il sistema gestisce correttamente le componenti relative al package \texttt{parser}; in particolare, gestisce correttamente l'interazione tra un \texttt{Parser} e un \texttt{ParsedProgram} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI7}{TI7} & Il sistema gestisce correttamente le componenti relative al package \texttt{project}; in particolare, gestisce correttamente l'interazione tra un \texttt{ParsedElement} e uno \texttt{Stereotype} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI8}{TI8} & Il sistema gestisce correttamente le componenti relative al package \texttt{utility}; in particolare, gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e un \texttt{Compressor} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI9}{TI9} & Le componenti dei package \texttt{models} e \texttt{views} di \texttt{swedesigner::client} interagiscono correttamente tra loro e con la libreria esterna \emph{JointJS}. & \textcolor{Green}{\textit{Superato}}\\ \hline
-\hypertarget{TI10}{TI10} & Il sistema gestisce correttamente le componenti relative al package \texttt{models::celltypes}; in particolare, gestisce correttamente l'interazione con il package \texttt{models} di \texttt{swedesigner::client} e la libreria esterna \emph{JointJS}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI1}{TI1} & Il sistema gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e un \texttt{Compiler} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI2}{TI2} & Il sistema gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e i suoi membri di tipo \texttt{Parser}, \texttt{Generator}, \texttt{Compiler} e \texttt{Compressor} (del \texttt{swedesigner::server}). & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI3}{TI3} & Il sistema gestisce correttamente le componenti relative al package \texttt{generator}; in particolare, gestisce correttamente l'interazione tra un \texttt{Generator} e un \texttt{Template} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI4}{TI4} & Il sistema gestisce correttamente le componenti relative al package \texttt{parser}; in particolare, gestisce correttamente l'interazione tra un \texttt{Parser} e un \texttt{ParsedProgram} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI5}{TI5} & Il sistema gestisce correttamente le componenti relative al package \texttt{project}; in particolare, gestisce correttamente l'interazione tra un \texttt{ParsedElement} e uno \texttt{Stereotype} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI6}{TI6} & Il sistema gestisce correttamente le componenti relative al package \texttt{utility}; in particolare, gestisce correttamente l'interazione tra un \texttt{RequestHandlerController} e un \texttt{Compressor} di \texttt{swedesigner::server}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI7}{TI7} & Le componenti dei package \texttt{models} e \texttt{views} di \texttt{swedesigner::client} interagiscono correttamente tra loro e con la libreria esterna \emph{JointJS}. & \textcolor{Green}{\textit{Superato}}\\ \hline
+\hypertarget{TI8}{TI8} & Il sistema gestisce correttamente le componenti relative al package \texttt{models::celltypes}; in particolare, gestisce correttamente l'interazione con il package \texttt{models} di \texttt{swedesigner::client} e la libreria esterna \emph{JointJS}. & \textcolor{Green}{\textit{Superato}}\\ \hline
 \caption[Test di integrazione]{Test di integrazione}
 \label{tab:integr}
 \end{longtable}
@@ -1586,25 +1584,14 @@ I test di integrazione consentono di controllare che più moduli funzionino assi
 \textbf{Test} & \textbf{Componente}\\
 \hline
 \endhead
-\hyperlink{TI1}{TI1} & \nogloxy{\texttt{swedesigner}}\\ \hline
-\hyperlink{TI2}{TI2} & \nogloxy{\texttt{swedesigner::server}}\\ \hline
-\hyperlink{TI3}{TI3} & \nogloxy{\texttt{swedesigner::server::compiler}}\\ \hline
-\hyperlink{TI4}{TI4} & \nogloxy{\texttt{swedesigner::server::controller}}\\ \hline
-\hyperlink{TI5}{TI5} & \nogloxy{\texttt{swedesigner::server::generator}}\\ \hline
-\hyperlink{TI6}{TI6} & \nogloxy{\texttt{swedesigner::server::parser}}\\ \hline
-\hyperlink{TI7}{TI7} & \nogloxy{\texttt{swedesigner::server::project}}\\ \hline
-\hyperlink{TI8}{TI8} & \nogloxy{\texttt{swedesigner::server::stereotype}}\\ \hline
-\hyperlink{TI9}{TI9} & \nogloxy{\texttt{swedesigner::server::template}}\\ \hline
-\hyperlink{TI10}{TI10} & \nogloxy{\texttt{swedesigner::server::utility}}\\ \hline
-\hyperlink{TI11}{TI11} & \nogloxy{\texttt{swedesigner::server::compiler::java}}\\ \hline
-\hyperlink{TI12}{TI12} & \nogloxy{\texttt{swedesigner::server::generator::java}}\\ \hline
-\hyperlink{TI13}{TI13} & \nogloxy{\texttt{swedesigner::server::template::java}}\\ \hline
-\hyperlink{TI14}{TI14} & \nogloxy{\texttt{swedesigner::client}}\\ \hline
-\hyperlink{TI15}{TI15} & \nogloxy{\texttt{swedesigner::client::model::celltypes}}\\ \hline
-\hyperlink{TI16}{TI16} & \nogloxy{\texttt{swedesigner::client::collection}}\\ \hline
-\hyperlink{TI17}{TI17} & \nogloxy{\texttt{swedesigner::client::model}}\\ \hline
-\hyperlink{TI18}{TI18} & \nogloxy{\texttt{swedesigner::client::model::utility}}\\ \hline
-\hyperlink{TI19}{TI19} & \nogloxy{\texttt{swedesigner::client::view}}\\ \hline
+\hyperlink{TI1}{TI1} & \nogloxy{\texttt{swedesigner::server::compiler}}\\ \hline
+\hyperlink{TI2}{TI2} & \nogloxy{\texttt{swedesigner::server::controller}}\\ \hline
+\hyperlink{TI3}{TI3} & \nogloxy{\texttt{swedesigner::server::generator}}\\ \hline
+\hyperlink{TI4}{TI4} & \nogloxy{\texttt{swedesigner::server::parser}}\\ \hline
+\hyperlink{TI5}{TI5} & \nogloxy{\texttt{swedesigner::server::project}}\\ \hline
+\hyperlink{TI6}{TI6} & \nogloxy{\texttt{swedesigner::server::utility}}\\ \hline
+\hyperlink{TI7}{TI7} & \nogloxy{\texttt{swedesigner::client}}\\ \hline
+\hyperlink{TI8}{TI8} & \nogloxy{\texttt{swedesigner::client::model::celltypes}}\\ \hline
 \caption[Tracciamento test di integrazione-componenti]{Tracciamento test di integrazione-componenti}
 \label{tab:ti-pkg}
 \end{longtable}
