@@ -3,7 +3,7 @@
 
 \input{../../util/hx-ambiente}
 
-\version{3.0.0}
+\version{4.0.0}
 \creaz{19 dicembre 2016}
 \author{\PB}
 \supervisor{\MM}
@@ -205,16 +205,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\begin{itemize} % >>> disegno con Astah? UC3.1 <<<
 		\item l'attore deve inserire il nome del progetto.
 	\end{itemize}
-\end{itemize}
-
-\subsubsection{UC3.1: Inserimento Nome Progetto}
-\label{UC3.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore deve inserire un nome da assegnare al nuovo progetto da creare;
-	\item \textbf{Precondizione}: il sistema avviato mostra il form per l'inserimento dei dati;
-	\item \textbf{Postcondizione}: il sistema crea un progetto vuoto;
-	\item \textbf{Scenario principale}: l'attore inserisce il nome del nuovo progetto.
 \end{itemize}
 
 \subsection{UC4: Realizzazione Diagramma delle Classi}
@@ -1962,7 +1952,31 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Descrizione}: l'attore può inserire un blocco return all'interno del diagramma delle attività;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
-	\item \textbf{Scenario principale}: l'attore inserisce un blocco return all'interno del diagramma delle attività.
+	\item \textbf{Scenario principale}:
+		\begin{enumerate}
+		\item l'attore può inserire il valore da ritornare (UC5.33.1);
+		\item l'attore può inserire un commento per il blocco return (UC5.33.2).
+		\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.33.1: Inserimento Valore Blocco Return}
+\label{UC5.33.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può inserire il valore da ritornare;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce il valore da ritornare.
+\end{itemize}
+
+\paragraph{UC5.33.2: Inserimento Commento Blocco Return}
+\label{UC5.33.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può inserire un commento per il blocco return;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore inserisce un commento per il blocco return.
 \end{itemize}
 
 \subsubsection{UC5.34: Modifica Blocco Return}
@@ -1972,7 +1986,31 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	\item \textbf{Descrizione}: l'attore può modificare un blocco return all'interno del diagramma delle attività;
 	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
 	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
-	\item \textbf{Scenario principale}: l'attore modifica un blocco return all'interno del diagramma delle attività.
+	\item \textbf{Scenario principale}: 
+		\begin{enumerate}
+		\item l'attore può modificare il valore da ritornare (UC5.34.1);
+		\item l'attore può modificare un commento per il blocco return (UC5.34.2).
+		\end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.34.1: Modifica Valore Blocco Return}
+\label{UC5.34.1}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare il valore da ritornare;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica il valore da ritornare.
+\end{itemize}
+
+\paragraph{UC5.34.2: Modifica Commento Blocco Return}
+\label{UC5.34.2}
+\begin{itemize}
+	\item \textbf{Attori}: Utente;
+	\item \textbf{Descrizione}: l'attore può modificare un commento per il blocco return;
+	\item \textbf{Precondizione}: il sistema è avviato, mostra il contenuto di un particolare progetto ed è nell'area per la realizzazione e gestione del diagramma delle attività;
+	\item \textbf{Postcondizione}: il sistema ha ricevuto tutti i dati dall'attore sulla classe e mostra il diagramma delle attività;
+	\item \textbf{Scenario principale}: l'attore modifica il commento per il blocco return.
 \end{itemize}
 
 \subsubsection{UC5.35: Visualizzazione ClassTree}
@@ -1987,58 +2025,12 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \subsection{UC6: Salvataggio}
 \label{UC6}
-\myimg{UC6 - Salvataggio}
 \begin{itemize}
 	\item \textbf{Attori}: Utente;
 	\item \textbf{Descrizione}: l'attore può salvare il progetto correntemente aperto;
 	\item \textbf{Precondizione}: il sistema avviato mostra il progetto realizzato fino ad ora dall'utente;
-	\item \textbf{Postcondizione}: il sistema salva il progetto in una particolare destinazione specificata dall'utente sovrascrivendo eventualmente lo stesso in una sua precedente versione;
-	\item \textbf{Scenario principale}:
-	\begin{enumerate}
-		\item l'attore può specificare il nome del file da salvare (UC6.1);
-		\item l'attore può specificare la destinazione del file da salvare (UC6.2);
-		\item l'attore può confermare il salvataggio del file (UC6.3).
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC6.1 Specifica Titolo File}
-\label{UC6.1}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore indica il nome del file attraverso cui realizzare il salvataggio;
-	\item \textbf{Precondizione}: l'utente ha selezionato il comando di salvataggio e il sistema visualizza il relativo form;
-	\item \textbf{Postcondizione}: il form ha ricevuto l'informazione di cui necessita;
-	\item \textbf{Scenario principale}: l'attore indica il nome per il file che verrà salvato.
-\end{itemize}
-
-\subsubsection{UC6.2 Specifica Percorso File}
-\label{UC6.2}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore indica il percorso di directory in cui salvare il progetto corrente;
-	\item \textbf{Precondizione}: l'utente ha selezionato il comando di salvataggio e il sistema visualizza il relativo form;
-	\item \textbf{Postcondizione}: il form ha ricevuto l'informazione di cui necessita;
-	\item \textbf{Scenario principale}: l'attore specifica la destinazione per il file che sarà salvato.
-\end{itemize}
-
-\subsubsection{UC6.3 Conferma Salvataggio File}
-\label{UC6.3}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore conferma il salvataggio del progetto corrente;
-	\item \textbf{Precondizione}: l'utente ha selezionato il comando di salvataggio e il sistema visualizza il relativo form;
-	\item \textbf{Postcondizione}: il file viene salvato secondo le specifiche indicate dall'utente;
-	\item \textbf{Scenario principale}: l'attore conferma il salvataggio del progetto corrente.
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sull'inserimento dei dati.
-\end{itemize}
-
-\paragraph{UC6.3.1 Visualizzazione Errore Salvataggio File}
-\begin{itemize}
-	\item \textbf{Attori}: Utente;
-	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore in corrispondenza della conferma di salvataggio nel caso in cui l'attore non inserisce il nome del file o non specifica un percorso di directory valido;
-	\item \textbf{Precondizione}: il sistema non ha ricevuto sufficienti informazioni per il salvataggio del progetto;
-	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi, tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
+	\item \textbf{Postcondizione}: il sistema salva il progetto nella directory di default;
+	\item \textbf{Scenario principale}:l'attore salva il progetto in formato JSON;
 \end{itemize}
 
 \subsection{UC7: Generazione Codice}
@@ -2094,10 +2086,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hypertarget{RFO2}{RFO2} & l'attore può creare un nuovo progetto &  \hyperlink{Interno}{Interno}\\
 & & \hyperref[UC3]{UC3}\\ \hline
-
-\hypertarget{RFO2.1}{RFO2.1} & l'attore deve inserire un nome da assegnare al nuovo progetto da creare&  \hyperlink{Interno}{Interno}\\
-& &\hyperref[UC3]{UC3}\\ 
-& &\hyperref[UC3.1]{UC3.1}\\ \hline
 
 \hypertarget{RFO3}{RFO3} & l'attore può realizzare e gestire un diagramma delle classi & \hyperlink{Capitolato}{Capitolato}\\
 & & \hyperref[UC4]{UC4}\\ \hline
@@ -2693,9 +2681,25 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & &\hyperref[UC5]{UC5}\\
 & &\hyperref[UC5.33]{UC5.33}\\ \hline
 
+\hypertarget{RFO4.33.1}{RFO4.33.1} & l'attore può inserire il valore da ritornare & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC5.33]{UC5.33}\\
+& &\hyperref[UC5.33.1]{UC5.33.1}\\ \hline
+
+\hypertarget{RFO4.33.2}{RFO4.33.2} & l'attore può inserire un commento per il blocco return & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC5.33]{UC5.33}\\
+& &\hyperref[UC5.33.2]{UC5.33.2}\\ \hline
+
 \hypertarget{RFO4.34}{RFO4.34} & l'attore può modificare un blocco return & \hyperlink{Interno}{Interno}\\
 & &\hyperref[UC5]{UC5}\\
 & &\hyperref[UC5.34]{UC5.34}\\ \hline
+
+\hypertarget{RFO4.34.1}{RFO4.34.1} & l'attore può modificare il valore da ritornare & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC5.34]{UC5.34}\\
+& &\hyperref[UC5.34.1]{UC5.34.1}\\ \hline
+
+\hypertarget{RFO4.34.2}{RFO4.34.2} & l'attore può modificare il commento per il blocco return & \hyperlink{Interno}{Interno}\\
+& &\hyperref[UC5.34]{UC5.34}\\
+& &\hyperref[UC5.34.2]{UC5.34.2}\\ \hline
 
 \hypertarget{RFD4.35}{RFD4.35} & l'attore può visualizzare il classtree del diagrmma delle classi & \hyperlink{Interno}{Interno}\\
 & &\hyperref[UC5]{UC5}\\
@@ -2703,22 +2707,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hypertarget{RFO5}{RFO5} & l'attore può salvare il progetto &  \hyperlink{Interno}{Interno}\\
 & & \hyperref[UC6]{UC6}\\ \hline
-
-\hypertarget{RFO5.1}{RFO5.1} & l'attore deve indicare il nome del file in cui salvare il progetto corrente&  \hyperlink{Interno}{Interno}\\
-& & \hyperref[UC6]{UC6}\\
-& & \hyperref[UC6.1]{UC6.1}\\ \hline
-
-\hypertarget{RFO5.2}{RFO5.2} & l'attore deve indicare la directory in cui salvare il progetto corrente&  \hyperlink{Interno}{Interno}\\
-& & \hyperref[UC6]{UC6}\\
-& & \hyperref[UC6.2]{UC6.2}\\ \hline
-
-\hypertarget{RFO5.3}{RFO5.3} & l'attore può confermare il salvataggio del progetto corrente &  \hyperlink{Interno}{Interno}\\
-& & \hyperref[UC6]{UC6}\\
-& & \hyperref[UC6.3]{UC6.3}\\ \hline
-
-\hypertarget{RFO5.3.1}{RFO5.3.1} & il sistema deve visualizzare un messaggio d'errore se l'attore non ha specificato il nome del file o la directory in cui salvare il progetto corrente &  \hyperlink{Interno}{Interno}\\
-& & \hyperref[UC6.3]{UC6.3}\\
-& & \hyperref[UC6.3.1]{UC6.3.1}\\ \hline
 
 \hypertarget{RFO6}{RFO6} & l'attore può ottenere (scaricare) automaticamente una cartella compressa contenente i diagrammi disegnati da \proj{}, l'applicativo generato tramite i diagrammi forniti dall'utente ed il codice sorgente nel linguaggio target & \hyperlink{Riunione Esterna}{Riunione Esterna}\\
 & & \hyperref[UC7]{UC7}\\ \hline
@@ -2741,7 +2729,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 	
 \hypertarget{RFO10}{RFO10} & il sistema crea una cartella compressa contenente il file JSON, il codice sorgente Java e il programma Java compilato & \hyperlink{Interno}{Interno}\\ \hline
 
-\hypertarget{RFO11}{RFO11} & il sistema elabora una risposta htto contenente l'indirizzo della cartella compressa creata & \hyperlink{Interno}{Interno}\\ \hline
+\hypertarget{RFO11}{RFO11} & il sistema elabora una risposta http contenente l'indirizzo della cartella compressa creata & \hyperlink{Interno}{Interno}\\ \hline
 
 \caption[Requisiti Funzionali]{Requisiti Funzionali}
 \label{tabella:req0}
@@ -2764,7 +2752,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hypertarget{RQO1.2.1}{RQO1.2.1} & il manuale utente contiene una sezione con le possibili operazioni di troubleshooting per l'installazione del server & \hyperlink{Interno}{Interno}\\ \hline
 
-\hypertarget{RQO1.3}{ROF1.3} & il manuale utente è fornito in lingua italiana & \hyperlink{Interno}{Interno}\\ \hline
+\hypertarget{RQO1.3}{RQO1.3} & il manuale utente è fornito in lingua italiana & \hyperlink{Interno}{Interno}\\ \hline
 
 \hypertarget{RQF1.4}{RQF1.4} & il manuale utente è fornito in lingua inglese & \hyperlink{Interno}{Interno}\\ \hline
 
@@ -2821,9 +2809,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hyperlink{RFO1.1}{RFO1.1} &  \hyperlink{Interno}{Interno}\\  &\hyperref[UC2.1]{UC2.1}\\ \hline
 
 \hyperlink{RFO2}{RFO2}  &  \hyperlink{Interno}{Interno}\\  &\hyperref[UC3]{UC3}\\ \hline
-
-\hyperlink{RFO2.1}{RFO2.1} &   \hyperlink{Interno}{Interno}\\ &\hyperref[UC3]{UC3}\\ 
-& \hyperref[UC3.1]{UC3.1}\\ \hline
 
 \hyperlink{RFO3}{RFO3} &  \hyperlink{Capitolato}{Capitolato}\\  &\hyperref[UC4]{UC4}\\ \hline
 
@@ -2987,7 +2972,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hyperlink{RFO4.1.4}{RFO4.1.4} & \hyperlink{Interno}{Interno}\\ &\hyperref[UC5.1]{UC5.1}\\ &\hyperref[UC5.1.4]{UC5.1.4}\\ \hline
 
-\hyperlink{RFO4.1.4}{RFO4.1.4} &\hyperlink{Interno}{Interno}\\ &\hyperref[UC5.1]{UC5.1}\\ &\hyperref[UC5.1.4]{UC5.1.4}\\ \hline
+\hyperlink{RFO4.1.5}{RFO4.1.5} &\hyperlink{Interno}{Interno}\\ &\hyperref[UC5.1]{UC5.1}\\ &\hyperref[UC5.1.4]{UC5.1.5}\\ \hline
 
 \hyperlink{RFO4.2}{RFO4.2} & \hyperlink{Riunione Esterna}{Riunione Esterna}\\ &\hyperref[UC5]{UC5}\\ &\hyperref[UC5.2]{UC5.2}\\ \hline
 
@@ -3123,19 +3108,19 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hyperlink{RFO4.33}{RFO4.33} & \hyperlink{Interno}{Interno}\\ &\hyperref[UC5]{UC5}\\ &\hyperref[UC5.33]{UC5.33}\\ \hline
 
+\hyperlink{RFO4.33.1}{RFO4.33.1} & \hyperlink{Interno}{Interno}\\ &\hyperref[UC5.33]{UC5.33}\\ &\hyperref[UC5.33.1]{UC5.33.1}\\ \hline
+
+\hyperlink{RFO4.33.2}{RFO4.33.2} &  \hyperlink{Interno}{Interno}\\ &\hyperref[UC5.33]{UC5.33}\\ &\hyperref[UC5.33.2]{UC5.33.2}\\ \hline
+
 \hyperlink{RFO4.34}{RFO4.34} &  \hyperlink{Interno}{Interno}\\ &\hyperref[UC5]{UC5}\\ &\hyperref[UC5.34]{UC5.34}\\ \hline
+
+\hyperlink{RFO4.34.1}{RFO4.34.1} & \hyperlink{Interno}{Interno}\\ &\hyperref[UC5.34]{UC5.34}\\ &\hyperref[UC5.34.1]{UC5.34.1}\\ \hline
+
+\hyperlink{RFO4.34.2}{RFO4.34.2} &  \hyperlink{Interno}{Interno}\\ &\hyperref[UC5.34]{UC5.34}\\ &\hyperref[UC5.34.2]{UC5.34.2}\\ \hline
 
 \hyperlink{RFD4.35}{RFD4.35} &  \hyperlink{Interno}{Interno}\\ &\hyperref[UC5]{UC5}\\ &\hyperref[UC5.35]{UC5.35}\\ \hline
 
 \hyperlink{RFO5}{RFO5} &  \hyperlink{Interno}{Interno}\\  &\hyperref[UC6]{UC6}\\ \hline
-
-\hyperlink{RFO5.1}{RFO5.1} &\hyperlink{Interno}{Interno}\\  &\hyperref[UC6]{UC6}\\  &\hyperref[UC6.1]{UC6.1}\\ \hline
-
-\hyperlink{RFO5.2}{RFO5.2} &  \hyperlink{Interno}{Interno}\\  &\hyperref[UC6]{UC6}\\  &\hyperref[UC6.2]{UC6.2}\\ \hline
-
-\hyperlink{RFO5.3}{RFO5.3} &  \hyperlink{Interno}{Interno}\\  &\hyperref[UC6]{UC6}\\  &\hyperref[UC6.3]{UC6.3}\\ \hline
-
-\hyperlink{RFO5.3.1}{RFO5.3.1} &  \hyperlink{Interno}{Interno}\\  &\hyperref[UC6.3]{UC6.3}\\  &\hyperref[UC6.3.1]{UC6.3.1}\\ \hline
 
 \hyperlink{RFO6}{RFO6} &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\  &\hyperref[UC7]{UC7}\\ \hline
 
@@ -3155,7 +3140,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 
 \hyperlink{RFO11}{RFO11} &  \hyperlink{Interno}{Interno}\\ \hline
 
-\hyperlink{RFD12}{RFO12} &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\ \hline
+\hyperlink{RFD12}{RFD12} &  \hyperlink{Riunione Esterna}{Riunione Esterna}\\ \hline
 
 \hyperlink{RQO1}{RQO1} & \hyperlink{Capitolato}{Capitolato}\\ \hline
 \hyperlink{RQO1.1}{RQO1.1} &  \hyperlink{Interno}{Interno}\\ \hline
@@ -3217,7 +3202,6 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hyperlink{Interno}{Interno} & \hyperlink{RFO1}{RFO1}\\
 & \hyperlink{RFO1.1}{RFO1.1}\\
 & \hyperlink{RFO2}{RFO2}\\
-& \hyperlink{RFO2.1}{RFO2.1}\\
 & \hyperlink{RFO3.1}{RFO3.1}\\
 & \hyperlink{RFO3.1.1}{RFO3.1.1}\\
 & \hyperlink{RFO3.1.2}{RFO3.1.2}\\
@@ -3344,13 +3328,13 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 & \hyperlink{RFO4.32.1}{RFO4.32.1}\\
 & \hyperlink{RFO4.32.2}{RFO4.32.2}\\
 & \hyperlink{RFO4.33}{RFO4.33}\\
+& \hyperlink{RFO4.33.1}{RFO4.33.1}\\
+& \hyperlink{RFO4.33.2}{RFO4.33.2}\\
 & \hyperlink{RFO4.34}{RFO4.34}\\
+& \hyperlink{RFO4.34.1}{RFO4.34.1}\\
+& \hyperlink{RFO4.34.2}{RFO4.34.2}\\
 & \hyperlink{RFD4.35}{RFD4.35}\\
 & \hyperlink{RFO5}{RFO5}\\
-& \hyperlink{RFO5.1}{RFO5.1}\\
-& \hyperlink{RFO5.2}{RFO5.2}\\
-& \hyperlink{RFO5.3}{RFO5.3}\\
-& \hyperlink{RFO5.3.1}{RFO5.3.1}\\
 & \hyperlink{RFO6.1}{RFO6.1}\\
 & \hyperlink{RFO7}{RFO7}\\
 & \hyperlink{RFO8}{RFO8}\\
@@ -3407,7 +3391,7 @@ Si noti che, per esigenze tipografiche, è possibile che certe figure siano stat
 \hline
 \textbf{Tipo} & \textbf{Obbligatorio} & \textbf{Desiderabile} & \textbf{Facoltativo}\\
 \hline
-Funzionale & 142 & 17 & 11\\ \hline
+Funzionale & 141 & 17 & 11\\ \hline
 Prestazionale & 0 & 0 & 0\\ \hline
 Di Qualità & 8 & 0 & 2\\ \hline
 Di Vincolo & 7 & 2 & 0\\ \hline
@@ -3455,4 +3439,404 @@ Un approccio simile si è rivelato utile allo scopo di chiarire i requisiti del 
 	\item Ora che ho modificato il colore, osservo che non è difficile modificare anche il \emph{comportamento} del mio gioco: basta ridefinire metodi, aggiungerne di nuovi (e chiamarli nel costruttore) o configurare il gioco tramite metodi già ereditati. Ad esempio, potrei decidere di modificare il numero di secondi disponibili ai giocatori per fare una mossa, tramite una chiamata a \texttt{public void setCounter(int s)} su ogni \texttt{Player}. Oppure, potrei modificare il comportamento di un particolare tipo di pezzo (il pedone, ad esempio) andando a ridefinire il suo metodo \texttt{move()}. O ancora, potrei introdurre una regola globale aggiungendo un oggetto di tipo \texttt{Rule} alla mia classe \texttt{ScacchiSpeciali}; questa classe sarà un thread il cui metodo \texttt{run}, opportunamente ridefinito, potrebbe controllare se vale una certa condizione speciale e modificare il gioco di conseguenza.
 	\item Infine, salvo il mio diagramma delle classi (che si tira dietro tutti i suo diagrammi delle attività) e l'applicazione mi restituisce un file XML e un file \emph{.jar}. Potrò usare il primo per modificare il mio programma, mentre il secondo sarà un'applicazione Java potenzialmente compilabile e, se sviluppata in modo corretto dall'utente, eseguibile.
 \end{enumerate}
+
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{verde}{rgb}{0,1,0}
+
+\appendix
+\section{Tabella Requisiti Implementati}
+\normalsize
+\begin{longtable}{|>{\centering}m{5cm}|m{5cm}<{\centering}|}
+\hline
+\textbf{Id Requisito} & \textbf{Stato}\\
+\hline
+\endhead
+\hyperlink{RFO1}{RFO1} & \textcolor{green}{Implementato} \\ \hline
+
+\hyperlink{RFO1.1}{RFO1.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO2}{RFO2}  &  \textcolor{green}{Implementato} \\ \hline
+
+\hyperlink{RFO3}{RFO3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1}{RFO3.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.1}{RFO3.1.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2}{RFO3.1.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.1}{RFO3.1.2.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.2}{RFO3.1.2.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.3}{RFO3.1.2.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.3.1}{RFO3.1.2.3.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.3.2}{RFO3.1.2.3.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.3.3}{RFO3.1.2.3.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.4}{RFO3.1.2.4} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.2.5}{RFO3.1.2.5} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.1.3}{RFO3.1.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.1.4}{RFF3.1.4} &  \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RFF3.1.5}{RFF3.1.5} &  \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RFO3.2}{RFO3.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.1}{RFO3.2.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.1.1}{RFO3.2.1.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.1.2}{RFO3.2.1.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.1.3}{RFO3.2.1.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.1.4}{RFO3.2.1.4} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.2}{RFO3.2.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.2.3}{RFF3.2.3} &  \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RFF3.2.4}{RFF3.2.4} &  \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RFO3.2.5}{RFO3.2.5} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.5.1}{RFO3.2.5.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.5.2}{RFO3.2.5.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.6}{RFO3.2.6} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.2.7}{RFO3.2.7} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.3}{RFO3.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.4}{RFO3.4} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.4.1}{RFO3.4.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.4.2}{RFO3.4.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.5}{RFO3.5} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.5.1}{RFO3.5.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.5.2}{RFO3.5.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.6}{RFO3.6} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.7}{RFO3.7} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.8}{RFF3.8} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.8.1}{RFF3.8.1} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.8.2}{RFF3.8.2} &  \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RFO3.9}{RFO3.9} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.10}{RFO3.10} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.11}{RFF3.11} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12}{RFO3.12} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.1}{RFO3.12.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2}{RFO3.12.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2.1}{RFO3.12.2.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2.2}{RFO3.12.2.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2.3}{RFO3.12.2.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2.3.1}{RFO3.12.2.3.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2.3.2}{RFO3.12.2.3.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2.3.3}{RFO3.12.2.3.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.12.2.4}{RFO3.12.2.4} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13}{RFO3.13} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.1}{RFO3.13.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.1.1}{RFO3.13.1.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.1.2}{RFO3.13.1.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.1.3}{RFO3.13.1.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.1.4}{RFO3.13.1.4} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.2}{RFO3.13.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.2.1}{RFO3.13.2.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.2.2}{RFO3.13.2.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.3}{RFO3.13.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.13.4}{RFO3.13.4} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.14}{RFO3.14} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.14.1}{RFO3.14.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.14.2}{RFO3.14.2} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.15}{RFO3.15} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.15.1}{RFO3.15.1} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO3.15.2}{RFO3.15.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.16}{RFF3.16} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.16.1}{RFF3.16.1} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFF3.16.2}{RFF3.16.2} &  \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RFD3.17}{RFD3.17} &   \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RFO4}{RFO4} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.1}{RFO4.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.1.1}{RFO4.1.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.1.2}{RFO4.1.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.1.3}{RFO4.1.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.1.4}{RFO4.1.4} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.1.5}{RFO4.1.5} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.2}{RFO4.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.2.1}{RFO4.2.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.2.2}{RFO4.2.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.2.3}{RFO4.2.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.3}{RFO4.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.3.1}{RFO4.3.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.3.2}{RFO4.3.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.4}{RFO4.4} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.4.1}{RFO4.4.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.4.2}{RFO4.4.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.4.3}{RFO4.4.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.5}{RFO4.5} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.5.1}{RFO4.5.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.5.2}{RFO4.5.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.5.3}{RFO4.5.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.5.4}{RFO4.5.4} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.5.5}{RFO4.5.5} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.6}{RFO4.6} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.6.1}{RFO4.6.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.6.2}{RFO4.6.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.7}{RFO4.7} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.8}{RFO4.8} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.9}{RFO4.9} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.10}{RFO4.10} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.11}{RFO4.11} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.12}{RFO4.12} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.13}{RFD4.13} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.14}{RFD4.14} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.15}{RFD4.15} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.16}{RFD4.16} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.17}{RFD4.17} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.18}{RFD4.18} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.19}{RFD4.19} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.20}{RFD4.20} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.21}{RFD4.21} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.22}{RFD4.22} &   \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.23}{RFD4.23} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.24}{RFD4.24} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.25}{RFD4.25} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.26}{RFD4.26}  &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.27}{RFO4.27} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.27.1}{RFO4.27.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.27.2}{RFO4.27.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.27.3}{RFO4.27.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.27.4}{RFO4.27.4}  & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.27.5}{RFO4.27.5} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.28}{RFO4.28} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.28.1}{RFO4.28.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.28.2}{RFO4.28.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.28.3}{RFO4.28.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.29}{RFO4.29} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.29.1}{RFO4.29.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.29.2}{RFO4.29.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.30}{RFO4.30} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.30.1}{RFO4.30.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.30.2}{RFO4.30.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.30.3}{RFO4.30.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.31}{RFO4.31} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.31.1}{RFO4.31.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.31.2}{RFO4.31.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.31.3}{RFO4.31.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.31.4}{RFO4.31.4} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.31.5}{RFO4.31.5} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.32}{RFO4.32} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.32.1}{RFO4.32.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.32.2}{RFO4.32.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.33}{RFO4.33} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.33.1}{RFO4.33.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.33.2}{RFO4.33.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.34}{RFO4.34} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.34.1}{RFO4.34.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO4.34.2}{RFO4.34.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD4.35}{RFD4.35} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO5}{RFO5} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO5.1}{RFO5.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO5.2}{RFO5.2} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO5.3}{RFO5.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO5.3.1}{RFO5.3.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO6}{RFO6} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO6.1}{RFO6.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO7}{RFO7} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO8}{RFO8} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO8.1}{RFO8.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO8.2}{RFO8.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO9}{RFO9} & \textcolor{green}{Implementato}\\ \hline
+	
+\hyperlink{RFO10}{RFO10} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFO11}{RFO11} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RFD12}{RFD12} &  \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RQO1}{RQO1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RQO1.1}{RQO1.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RQO1.1.1}{RQO1.1.1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RQO1.2}{RQO1.2} & \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RQO1.2.1}{RQO1.2.1} & \textcolor{red}{Non Implementato}\\ \hline
+
+\hyperlink{RQO1.3}{RQO1.3} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RQF1.4}{RQF1.4} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RQO2}{RQO2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RQO2.1}{RQO2.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RQF2.2}{RQF2.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVO1}{RVO1} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVO1.1}{RVO1.1} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVO1.2}{RVO1.2} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVO1.3}{RVO1.3} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVO1.4}{RVO1.4} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVD1.5}{RVD1.5} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVO1.6}{RVO1.6} &  \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVD1.7}{RVD1.7} & \textcolor{green}{Implementato}\\ \hline
+
+\hyperlink{RVO2}{RVO2} &  \textcolor{green}{Implementato}\\ \hline
+
+\caption[Tabella Requisiti Implementati]{Tabella Requisiti Implementati}
+\label{tabella:requisiti implementati}
+\end{longtable}
+\clearpage
 \end{document}
