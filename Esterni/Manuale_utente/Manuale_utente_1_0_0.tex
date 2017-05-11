@@ -111,18 +111,18 @@ Progettare un'applicazione ad oggetti vuol dire innanzitutto specificarne l'arch
 
 \paragraph{Creazione di una componente} \label{par:creaz_class} Potete creare una nuova componente cliccando su un'icona del menù di creazione (visibile a sinistra) e cliccando nel punto dell'area di lavoro in cui volete che si materializzi la componente; ci sono tre icone che rappresentano tre tipi di componente dell'architettura:
 \begin{itemize}
-	\item \click{Class} (1, in figura \ref{fig:creation});
-	\item \click{Abstract Class} (2, in figura \ref{fig:creation});
-	\item \click{Interface} (3, in figura \ref{fig:creation}).
+	\item \click{Class} (1, in figura \ref{fig:creation_class});
+	\item \click{Abstract Class} (2, in figura \ref{fig:creation_class});
+	\item \click{Interface} (3, in figura \ref{fig:creation_class}).
 \end{itemize}
-Oltre a queste, altre icone permettono la creazione di commenti (l'icona \click{Comment}; 4, in figura \ref{fig:creation}) e di relazioni tra componenti (\click{Generalization}, \click{Implementation} e \click{Association}, che verranno introdotte tra poco; risp. 5, 6 e 7 in figura \ref{fig:creation}).
+Oltre a queste, altre icone permettono la creazione di commenti (l'icona \click{Comment}; 4, in figura \ref{fig:creation_class}) e di relazioni tra componenti (\click{Generalization}, \click{Implementation} e \click{Association}, che verranno introdotte tra poco; risp. 5, 6 e 7 in figura \ref{fig:creation_class}).
 
 % screenshot menù di creazione
 \begin{figure}[h]
 \centering
-	\includegraphics[scale=0.4]{img/creation}
-	\caption{Il menù di creazione.}
-	\label{fig:creation}
+	\includegraphics[scale=0.4]{img/creation_class}
+	\caption{Il menù di creazione del diagramma delle classi.}
+	\label{fig:creation_class}
 \end{figure}
 
 \paragraph{Specifica dell'interfaccia di una componente} \label{par:inter} Ogni componente è rappresentata nel diagramma da un rettangolo con due o tre aree, come da standard UML:
@@ -158,6 +158,14 @@ Dopo aver specificato la segnatura di un metodo, bisognerà stabilirne anche il 
 	\item \click{Association}, per suggerire che una componente dipende da un'altra. % TODO
 \end{itemize}
 
+% screenshot esempio relazione tra componenti
+\begin{figure}[h]
+\centering
+	\includegraphics[scale=0.4]{img/relationship}
+	\caption{Esempio di relazione tra due componenti: implementazione di \texttt{Sorter} da parte di \texttt{InsertionSorter}.}
+	\label{fig:relationship}
+\end{figure}
+
 \paragraph{Modificare campi dati e metodi} Per modificare un campo dati o un metodo di una componente, cliccate su di essa; dopodiché:
 \begin{enumerate}
 	\item il menù di dettaglio (a destra) si riempirà con i dettagli della componente;
@@ -178,26 +186,42 @@ Mentre la segnatura dei metodi di una componente definisce l'interfaccia di ques
 \end{enumerate}
 Al posto del diagramma delle classi, comparirà il \textbf{diagramma di attività} del metodo selezionato.
 
-\paragraph{Creazione di blocchi} Ogni metodo è un algoritmo e, in quanto tale, per implementarlo dovete specificare la sequenza di passi che il metodo deve seguire. Ogni passo del metodo può essere una singola istruzione (come un'assegnazione) oppure un'istruzione composita (come un ciclo o un blocco condizionale). Ogni istruzione --- singola o composita --- è rappresentata da un \textbf{blocco}; la barra di creazione (a sinistra) offre diversi tipi di blocchi:
+% screenshot menù di creazione
+\begin{figure}[h]
+\centering
+	\includegraphics[scale=0.4]{img/creation_activity}
+	\caption{Il menù di creazione del diagramma di attività.}
+	\label{fig:creation_activity}
+\end{figure}
+
+\paragraph{Creazione di blocchi} Ogni metodo è un algoritmo e, in quanto tale, per implementarlo dovete specificare la sequenza di passi che il metodo deve seguire. Ogni passo del metodo può essere una singola istruzione (come un'assegnazione) oppure un'istruzione composita (come un ciclo o un blocco condizionale). Ogni istruzione --- singola o composita --- è rappresentata da un \textbf{blocco} con un riquadro colorato; la barra di creazione (a sinistra) offre diversi tipi di blocchi:
 \begin{itemize}
-	\item \click{Variable} dichiara e/o inizializza una nuova variabile, oppure esegue un'operazione su una variabile (assegnazione o chiamata di metodo);
-	\item \click{If} esegue una sequenza di blocchi solo se vale una condizione.
-	\item \click{Else} esegue una sequenza di blocchi solo se non vale la condizione di un blocco \click{If} immediatamente precedente;
-	\item \click{For} esegue ciclicamente una sequenza di blocchi (ogni iterazione del ciclo è parametrizzata su una variabile);
-	\item \click{While} esegue ciclicamente una sequenza di blocchi finché vale una condizione;
-	\item \click{Return} esce dal metodo e ritorna il valore specificato;
-	\item \click{Custom} permette di inserire manualmente del codice che verrà copiato direttamente nel codice sorgente.
+	\item \click{Variable} (1, in figura \ref{fig:creation_activity}) dichiara e/o inizializza una nuova variabile, oppure esegue un'operazione su una variabile (assegnazione o chiamata di metodo); è riconoscibile dal riquadro color giallo ocra.
+	\item \click{If} (2, in figura \ref{fig:creation_activity}) esegue una sequenza di blocchi solo se vale una condizione; è riconoscibile dal riquadro color verde smeraldo.
+	\item \click{Else} (3, in figura \ref{fig:creation_activity}) esegue una sequenza di blocchi solo se non vale la condizione di un blocco \click{If} immediatamente precedente; è riconoscibile dal riquadro color verde scuro.
+	\item \click{For} (4, in figura \ref{fig:creation_activity}) esegue ciclicamente una sequenza di blocchi (ogni iterazione del ciclo è parametrizzata su una variabile); è riconoscibile dal riquadro color rosso.
+	\item \click{While} (5, in figura \ref{fig:creation_activity}) esegue ciclicamente una sequenza di blocchi finché vale una condizione; è riconoscibile dal riquadro color blu.
+	\item \click{Return} (6, in figura \ref{fig:creation_activity}) esce dal metodo e ritorna il valore specificato; è riconoscibile dal riquadro color arancione.
+	\item \click{Custom} (7, in figura \ref{fig:creation_activity}) permette di inserire manualmente del codice che verrà copiato direttamente nel codice sorgente; è riconoscibile dal riquadro color viola.
 \end{itemize}
-Cliccando su uno dei blocchi nella barra di creazione, esso verrà inserito nella sequenza di passi del metodo. Ogni nuovo blocco su cui cliccherete verrà inserito in coda ai blocchi precedentemente inseriti.
+Cliccando su uno dei blocchi nella barra di creazione, esso verrà inserito nella sequenza di passi del metodo. Ogni nuovo blocco su cui cliccherete verrà inserito in coda ai blocchi precedentemente inseriti. In figura \ref{fig:algorithm} potete vedere un semplice esempio di come verrà il diagramma di attività di un metodo.
+
+% screenshot esempio di algoritmo
+\begin{figure}[h]
+\centering
+	\includegraphics[scale=0.4]{img/algorithm}
+	\caption{Esempio di diagramma di attività di un metodo.}
+	\label{fig:algorithm}
+\end{figure}
 
 \paragraph{Spostamento di blocchi} Ovviamente potete spostare ogni blocco creato e posizionarlo dove volete nella sequenza di passi. Inoltre, potete decidere di inserire un blocco (di qualsiasi tipo) all'interno di un \click{For}, di un \click{While}, di un \click{If} o di un \click{Else}: questi tre tipi di blocchi possono contenerne altri. Per rimarcare che un blocco sta all'interno di un altro, esso viene “indentato”, cioè spostato leggermente a destra rispetto al blocco che lo contiene.
 
-\paragraph{Rimozione di blocchi} Per rimuovere un blocco da un diagramma di attività, passate sul blocco con il mouse: comparirà una “X” rossa che potrete cliccare per rimuovere il blocco.
+\paragraph{Rimozione di blocchi} Per rimuovere un blocco da un diagramma di attività, passate sul blocco con il mouse: comparirà una “X” su sfondo rosso che potrete cliccare per rimuovere il blocco.
 
 \subsubsection{Modificare l'architettura}
 Una volta modificata l'implementazione di un metodo, per modificare l'architettura dell'intera applicazione dovete tornare al diagramma delle classi. Per fare ciò, cliccate sul pulsante in basso a destra \click{Back to Class Diagram}. Il diagramma di attività modificato verrà salvato e, al suo posto, vi verrà presentato il diagramma delle classi.
 
-Dal diagramma delle classi, potete modificare l'architettura dell'applicazione in vari modi: potete spostare o rimuovere ogni relazione tra componenti dell'applicazione e potete aggiungere o rimuovere componenti. Per aggiungere una componente, tornate alla sezione \ref{par:creaz_class}; per rimuoverla, passateci sopra con il mouse: comparirà una “X” rossa che potrete cliccare per rimuovere la componente.
+Dal diagramma delle classi, potete modificare l'architettura dell'applicazione in vari modi: potete spostare o rimuovere ogni relazione tra componenti dell'applicazione e potete aggiungere o rimuovere componenti. Per aggiungere una componente, tornate alla sezione \ref{par:creaz_class}; per rimuoverla, passateci sopra con il mouse: comparirà una “X” su sfondo rosso che potrete cliccare per rimuovere la componente.
 
 
 
@@ -229,10 +253,18 @@ Di seguito presentiamo le funzionalità secondarie di \proj{} e come sia possibi
 In alternativa alla rotella del mouse, potete usare i pulsanti presenti in alto a destra, \click{+}, \click{-} e \click{RESET}, rispettivamente al fine di ingrandire, ridurre e reimpostare il livello di zoom.
 
 \subsubsection{Visualizzazione estesa e compatta}
-Al fine di aumentare l'area di disegno disponibile, le barre laterali occupano il minor spazio possibile (“visualizzazione compatta”). Esiste, tuttavia, la possibilità di avere le barre laterali più spaziose (“visualizzazione estesa”); per fare questo è sufficiente premere sul menù in alto a destra in corrispondenza dei tre punti verticali e selezionare \click{Extended}. Per tornare alla visualizzazione compatta, basta tornare al menù in alto a destra e premere \click{Compact}.
+Al fine di aumentare l'area di disegno disponibile, le barre laterali occupano il minor spazio possibile (“visualizzazione compatta”). Esiste, tuttavia, la possibilità di avere le barre laterali più spaziose (“visualizzazione estesa”, come in figura \ref{fig:extended}); per fare questo è sufficiente premere sul menù in alto a destra in corrispondenza dei tre punti verticali (vedi sempre figura \ref{fig:extended}) e selezionare \click{Extended}. Per tornare alla visualizzazione compatta, basta tornare al menù in alto a destra e premere \click{Compact}.
+
+% screenshot visualizzazione estesa
+\begin{figure}[h]
+\centering
+	\includegraphics[scale=0.4]{img/extended}
+	\caption{Visualizzazione “estesa” di \proj.}
+	\label{fig:extended}
+\end{figure}
 
 \subsubsection{\emph{Treeview}}
-All'interno del diagramma delle attività è possibile far comparire, al posto del menù di creazione, un albero (detto \textbf{\emph{Treeview}}) contenente tutte le classi e i loro attributi.
+All'interno del diagramma delle attività è possibile far comparire, al posto del menù di creazione, un albero (detto \emph{Treeview}) contenente tutte le classi e i loro attributi.
 
 I simboli da cui i nomi sono preceduti indicano ciò che i vari elementi rappresentano. Questa è l'associazione tra elemento e simbolo grafico:
 \begin{itemize}
