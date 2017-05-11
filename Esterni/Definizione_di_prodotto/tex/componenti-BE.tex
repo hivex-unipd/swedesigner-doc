@@ -188,6 +188,12 @@ questa classe si occupa di creare e salvare su disco un archivio compresso conte
 \begin{itemize}
 \item \nogloxy{\texttt{- compiler: Compiler}}
 \\ Rifermento all'istanza di Compiler da utilizzare
+\item \nogloxy{\texttt{- compressor: Compressor}}
+\\ Riferimento all'istanza di Compressor da utilizzare.
+\item \nogloxy{\texttt{- parser: Parser}}
+\\ Riferimento all'istanza di Parser da utilizzare.
+\item \nogloxy{\texttt{- uploadFolder: String}}
+\\ Percorso della cartella all'interno del server nella quale memorizzare l'archivio zip da ritornare all'utente.
 \item \nogloxy{\texttt{- generator: Generator}}
 \\ Riferimento all'istanza di Generator da utilizzare.
 \end{itemize}
@@ -200,6 +206,8 @@ questa classe si occupa di creare e salvare su disco un archivio compresso conte
 \item \nogloxy{\texttt{pathFolder: String}}
 \\ Rappresenta la posizione della cartella che verrà creata relativa ad una particolare richiesta.
 \end{itemize}
+\item \nogloxy{\texttt{+ handleGenerationRequest(httpEntity: HttpEntity<String>): ResponseEntity<?>}}
+
 \item \nogloxy{\texttt{+ HandleGenerationRequest(json: String, IdReq: String): void}}
 \\ Il metodo riceve a partire dalla richiesta del client una stringa in formato .json ed anche l'id della richiesta stessa.
 Il suo compito è:
@@ -210,12 +218,10 @@ Il suo compito è:
 \item istanziare un oggetto Compressor ed invocare su di esso il metodo zip per realizzare la risorsa .zip da ritornare all'utente;
 \item ritornare in risposta all'utente il link a partire dal quale scaricare la risorsa .zip desiderata oppure un messaggio contenente gli errori rilevati dal Parser o dal Generator.
 \end{itemize}
-\textbf{Parametri}:
+\\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{json: String}}
-\\ Rappresenta il contenuto del file .json in forma di stringa.
-\item \nogloxy{\texttt{IdReq: String}}
-\\ Rappresenta l'identificatore della richiesta ricevuta.
+\item \nogloxy{\texttt{httpEntity: HttpEntity<String>}}
+\\ Richiesta http contenente il file .json prodotto dall'editor.
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -259,11 +265,11 @@ questa interfaccia si occupa di fornire un oggetto template generico a chi lo ri
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ generate(IdReq: String, parsedProgram: ParsedProgram): void}}
+\item \nogloxy{\texttt{+ generate(idReq: String, parsedProgram: ParsedProgram): void}}
 \\ Crea e salva i file sorgente del programma.
 \\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{IdReq: String}}
+\item \nogloxy{\texttt{idReq: String}}
 \\ Rappresenta l'identificatore della richiesta ricevuta.
 \item \nogloxy{\texttt{parsedProgram: ParsedProgram}}
 \\ Rappresenta l'oggetto ParsedProgram che sarà trasformato nel codice di un particolare linguaggio. 
@@ -304,13 +310,13 @@ questa interfaccia si occupa di fornire un oggetto \texttt{Generator} generico a
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ generate(parsedProgram: ParsedProgram, IdReq: String): void}}
+\item \nogloxy{\texttt{+ generate(parsedProgram: ParsedProgram, idReq: String): void}}
 \\ Crea e salva i file sorgente .java del programma.
 \\ \textbf{Parametri}:
 \begin{itemize}
 \item \nogloxy{\texttt{parsedProgram: ParsedProgram}}
 \\ Rappresenta l'oggetto ParsedProgram che sarà trasformato in codice Java. 
-\item \nogloxy{\texttt{IdReq: String}}
+\item \nogloxy{\texttt{idReq: String}}
 \\ Rappresenta l'identificatore della richiesta ricevuta.
 \end{itemize}
 \end{itemize}
@@ -1165,7 +1171,7 @@ questa classe astratta definisce un contratto comune tra le classi \texttt{Parse
 \item \nogloxy{\texttt{position: int}}
 \\ Rappresenta la posizione di un particolare ParsedType all'interno del ParsedProgram.
 \end{itemize}
-\item \nogloxy{\texttt{+ nClasses(): int}}
+\item \nogloxy{\texttt{+ numberClasses(): int}}
 \\ Ritorna il numero complessivo di classi ed interfacce che formano il ParsedProgram.
 \end{itemize}
 \end{itemize}
@@ -1565,11 +1571,11 @@ questa classe si occupa di ricevere le richieste REST provenienti dal client.
 \end{itemize}
 \item \textbf{Metodi}:
 \begin{itemize}
-\item \nogloxy{\texttt{+ zip(pathFolder: String): void}}
+\item \nogloxy{\texttt{+ zip(dirPath: String): void}}
 \\ Crea una cartella zip contenente i file sorgenti e compilati del programma e la relativa stringa in formato .json.
 \\ \textbf{Parametri}:
 \begin{itemize}
-\item \nogloxy{\texttt{pathFolder: String}}
+\item \nogloxy{\texttt{dirPath: String}}
 \\ Rappresenta la posizione della cartella, relativa ad una particolare richiesta, il cui contenuto verrà compresso in un file .zip.
 \end{itemize}
 \end{itemize}
