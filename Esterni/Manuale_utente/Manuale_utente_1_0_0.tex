@@ -76,14 +76,14 @@ Di seguito descriviamo come utilizzare \proj{} per progettare e generare un'appl
 
 Vi viene subito presentato un diagramma delle classi vuoto (come in figura \ref{fig:screen}) sul quale potete iniziare un nuovo progetto. Ai lati e in alto sono presenti delle barre con dei menù, mentre al centro vi è l'area di lavoro. Nell specifico:
 \begin{itemize}
-	\item A sinistra avete il \textbf{menù di creazione}, da cui potete aggiungere elementi ai vari diagrammi; a seconda del tipo di diagramma su cui starete lavorando, il menù di creazione vi permetterà di aggiungere componenti (per il diagramma delle classi) o blocchi (per il diagramma di attività). Oltre ad aggiungere elementi, questo menù vi può anche servire per visualizzare una rappresentazione ad albero del vostro progetto (funzionalità secondaria descritta in §\ref{sec:extra}).
+	\item A sinistra avete il \textbf{menù di creazione}, da cui potete aggiungere elementi ai vari diagrammi; a seconda del tipo di diagramma su cui starete lavorando, il menù di creazione vi permetterà di aggiungere componenti (per il diagramma delle classi) o blocchi (per il diagramma di attività). Oltre ad aggiungere elementi, questo menù vi può anche servire per visualizzare una rappresentazione ad albero dell'algoritmo di un particolare metodo (funzionalità secondaria descritta in §\ref{sec:extra}).
 	\item A destra è posizionato il \textbf{menù di dettaglio}; questo fornisce informazioni su una particolare cella all'interno di un diagramma. Per avere informazioni su una cella, dovrete selezionarla con il mouse.
 	\item Il menù posizionato in cima alla pagina è il \textbf{menù dei comandi}, il quale presenta i seguenti pulsanti cliccabili:
 	\begin{itemize}
 		\item \click{Create}, per creare un nuovo progetto;
 		\item \click{Open}, per caricare e aprire un progetto precedentemente salvato;
-		\item \click{Generate}, per generare il codice sorgente e l'eseguibile a partire dai diagrammi;
 		\item \click{Save}, per salvare lo stato attuale di un progetto in un file JSON (che potrà essere utilizzato per caricare nuovamente il progetto su \proj{} con il pulsante \click{Open});
+		\item \click{Generate}, per generare il codice sorgente e l'eseguibile a partire dai diagrammi;
 		\item \click{Documentation}, per visualizzare la documentazione del codice sorgente di \proj, che è un progetto \emph{open source}.
 	\end{itemize}
 	\item Infine, al centro vi è l'\textbf{area di lavoro}: in essa visualizzerete, di volta in volta, il diagramma delle classi e i vari diagrammi di attività del vostro progetto. Per muoversi nell'area di lavoro, bisogna trascinare l'area stessa con il mouse.
@@ -174,11 +174,11 @@ Mentre la segnatura dei metodi di una componente definisce l'interfaccia di ques
 	\item compilate la form con la segnatura del metodo;
 	\item in basso, cliccate su \click{Go to Activity Diagram}.
 \end{enumerate}
-Al posto del diagramma delle classi, comparirà il \textbf{diagramma di attività} del metodo cliccato.
+Al posto del diagramma delle classi, comparirà il \textbf{diagramma di attività} del metodo selezionato.
 
 \paragraph{Creazione di blocchi} Ogni metodo è un algoritmo e, in quanto tale, per implementarlo dovete specificare la sequenza di passi che il metodo deve seguire. Ogni passo del metodo può essere una singola istruzione (come un'assegnazione) oppure un'istruzione composita (come un ciclo o un blocco condizionale). Ogni istruzione --- singola o composita --- è rappresentata da un \textbf{blocco}; la barra di creazione (a sinistra) offre diversi tipi di blocchi:
 \begin{itemize}
-	\item \click{Initialization} dichiara e inizializza una nuova variabile;
+	\item \click{Variable} dichiara e/o inizializza una nuova variabile;
 	\item \click{Assignment} assegna un valore ad una variabile già dichiarata;
 	\item \click{Return} esce dal metodo e ritorna il valore specificato;
 	\item \click{For} esegue ciclicamente una sequenza di blocchi (ogni iterazione del ciclo è parametrizzata su una variabile);
@@ -226,7 +226,7 @@ In alternativa alla rotella del mouse, potete usare i pulsanti presenti in alto 
 Al fine di aumentare l'area di disegno disponibile, le barre laterali occupano il minor spazio possibile (“visualizzazione compatta”). Esiste, tuttavia, la possibilità di avere le barre laterali più spaziose (“visualizzazione estesa”); per fare questo è sufficiente premere sul menù in alto a destra in corrispondenza dei tre punti verticali e selezionare \click{Extended}. Per tornare alla visualizzazione compatta, basta tornare al menù in alto a destra e premere \click{Compact}.
 
 \subsubsection{\emph{Treeview}}
-All'interno del diagramma delle attività è possibile far comparire, sulla sinistra, un albero (detto \textbf{\emph{Treeview}}) contenente tutte le classi e i loro attributi.
+All'interno del diagramma delle attività è possibile far comparire, al posto del menù di creazione, un albero (detto \textbf{\emph{Treeview}}) contenente tutte le classi e i loro attributi.
 
 I simboli da cui i nomi sono preceduti indicano ciò che i vari elementi rappresentano. Questa è l'associazione tra elemento e simbolo grafico:
 \begin{itemize}
