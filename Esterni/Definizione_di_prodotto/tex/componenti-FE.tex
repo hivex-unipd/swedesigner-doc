@@ -13,22 +13,11 @@ Questo package descrive le componenti del \emph{front end}, scritte in JavaScrip
 \item \textbf{Padre}: \hyperref[\nogloxy{swedesigner}]{\nogloxy{\texttt{swedesigner}}}
 \item \textbf{Package contenuti}:
 \begin{itemize}
-\item \hyperref[\nogloxy{swedesigner::client::collection}]{\nogloxy{\texttt{collection}}}\\
-Questo package descrive le classi che contengono delle collection (secondo la visione di \backbonejs). 
 \item \hyperref[\nogloxy{swedesigner::client::model}]{\nogloxy{\texttt{model}}}\\
 Questo package contiene i modelli di dati usati dal client per rappresentare l'informazione manipolata dall'utente.
 \item \hyperref[\nogloxy{swedesigner::client::view}]{\nogloxy{\texttt{view}}}\\
 Questo package raccoglie le classi che rappresentano i menù laterali e il \texttt{canvas} visualizzati dal browser, che popolano template e si sottoscrivono alla view tramite un pattern Observer. (I template non sono contenuti in questo package.)
 \end{itemize}
-\end{itemize}
-
-\subsection{\nogloxy{swedesigner::client::collection}}
-\label{\nogloxy{swedesigner::client::collection}}
-\subsubsection{Informazioni generali}
-\begin{itemize}
-\item \textbf{Descrizione}\\
-Questo package descrive le classi che contengono delle collection (secondo la visione di \backbonejs).
-\item \textbf{Padre}: \hyperref[\nogloxy{swedesigner::client}]{\nogloxy{\texttt{client}}}
 \end{itemize}
 
 \subsection{\nogloxy{swedesigner::client::model}}
@@ -1028,7 +1017,7 @@ questa classe si occupa di fornire tutti i tipi di cell (tutti i blocchi e relaz
 \item \textbf{Descrizione}\\
 questa classe rappresenta l'area di disegno principale dell'applicazione, che necessita di essere cambiata tra diagramma delle classi e diagramma delle attività. 
 \item \textbf{Utilizzo}\\
-seleziona l'elemento \emph{Graph} da visualizzare. esso è presente nel relativo \emph{model}, che sarà di volta in volta cambiato selezionandolo dalla sua \emph{collection}.
+seleziona l'elemento \emph{Graph} da visualizzare; esso è presente nel relativo \emph{model}.
 \item \textbf{Relazioni con altre classi}:
 \begin{itemize}
 \item \textit{IN} \hyperref[\nogloxy{swedesigner::client::view::AppView}]{\nogloxy{\texttt{AppView}}}\\
